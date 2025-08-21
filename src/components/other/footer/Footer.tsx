@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import { Phone, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -44,7 +43,7 @@ const FooterSectionAccordion = ({ title, links }: SectionProps) => {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#003000] text-white font-sans">
+    <footer className="bg-[#003000] bg-[radial-gradient(ellipse_at_top,#D1D38C33_10%,#003000_40%)] text-white font-sans">
       <div className="max-w-[1440px] mx-auto px-4 pt-12 sm:px-10 lg:px-20 sm:py-12 flex flex-col gap-8 lg:flex-row lg:justify-between">
         {/* Column 1 */}
         <div className="hidden max-lg:flex flex-col gap-5 max-w-xs">
@@ -98,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Accordion / Columns */}
-        <div className="flex-1 max-lg:grid sm:grid-cols-3 gap-4 sm:gap-12 lg:flex lg:justify-between ">
+        <div className="flex-1 max-lg:grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-12 lg:flex lg:justify-between ">
           <div className="hidden lg:flex flex-col gap-5 max-w-xs">
             <h2 className="font-medium text-base font-poppins">
               Youth Pulse Digital™
@@ -151,6 +150,11 @@ export default function Footer() {
           <FooterSectionAccordion
             title="Explore"
             links={[
+              { label: "Home", href: "/" },
+              { label: "FAQs", href: "/" },
+              { label: "Contact Us", href: "/contact" },
+              { label: "Career Path", href: "/career-path" },
+              { label: "Pricing", href: "/pricing" },
               { label: "About Us", href: "/about" },
               { label: "YPD Brain", href: "/ypd-brain" },
               { label: "Career Vision Program™", href: "/career-vision" },
@@ -158,36 +162,33 @@ export default function Footer() {
                 label: "Career Reinvention Program™",
                 href: "/career-reinvention",
               },
-              { label: "Parent Connect™", href: "/parent-connect" },
-              { label: "Mentor Connect™", href: "/mentor-connect" },
-              { label: "Creativity Lab™", href: "/creativity-lab" },
-              { label: "Innovation Hub™", href: "/innovation-hub" },
             ]}
           />
           <FooterSectionAccordion
-            title="For Learners"
+            title="For Students"
             links={[
-              { label: "YPD Mentor Guide™", href: "#" },
-              { label: "Career Reboot Navigator™", href: "#" },
-              { label: "Career Vision Program Lite™", href: "#" },
-              { label: "Institute Connect", href: "#" },
-              { label: "Industry Connect", href: "#" },
-              { label: "Govt Connect", href: "#" },
-              { label: "MSME Connect", href: "#" },
-              { label: "Business Connect", href: "#" },
+              { label: "CVP lite™", href: "#" },
+              { label: "Career Advance™", href: "#" },
+              { label: "Career Verse™", href: "#" },
+              { label: "Cvp Challenger™", href: "#" },
+              { label: "10th - 12th CBSC Mentors™", href: "#" },
+              { label: "UPSC Mentor™", href: "#" },
+              { label: "Mission NDA™", href: "#" },
             ]}
           />
           <FooterSectionAccordion
-            title="Stay Connected"
+            title="For Parents"
             links={[
-              { label: "Register Interest", href: "#" },
-              { label: "YPD CareerVerse™", href: "#" },
-              { label: "YPD Special Stars™", href: "#" },
-              { label: "YPD Nexus", href: "#" },
-              { label: "Book A Mentor", href: "#" },
-              { label: "Schedule Demo", href: "#" },
-              { label: "Complaint & Suggestion", href: "#" },
+              { label: "Counselling Guru™", href: "#" },
               { label: "Global Navigator™", href: "#" },
+            ]}
+          />
+          <FooterSectionAccordion
+            title="For Professionals"
+            links={[
+              { label: "CRP Aptitude Trainer ™", href: "#" },
+              { label: "Career Verse Pro™", href: "#" },
+              { label: "Reinvasion Guru™", href: "#" },
             ]}
           />
         </div>
