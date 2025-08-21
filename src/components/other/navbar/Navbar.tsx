@@ -61,7 +61,7 @@ const Navbar = () => {
         <div className="max-w-[1440px] mx-auto flex justify-between items-center max-sm:p-4 sm:px-10 xl:px-20 py-8">
           {/* Left: Logo */}
           <Link href={"/"} className="flex-1 flex justify-start">
-            <Image src="/logo.png" alt="logo" width={95} height={42} />
+            <Image src="/logo.png" alt="logo" width={120} height={42} />
           </Link>
 
           {/* Desktop Nav */}

@@ -5,6 +5,7 @@ interface PricingCardProps {
   title: string;
   description: string;
   price: string;
+  priceText?: string;
   period?: string;
   features: string[];
   highlight?: boolean;
@@ -14,13 +15,14 @@ const PricingCard = ({
   title,
   description,
   price,
+  priceText = "Get Started",
   period,
   features,
   highlight = false,
 }: PricingCardProps) => {
   return (
     <div
-      className={`rounded-2xl p-4 sm:p- lg:p-10 flex flex-col items-center text-center shadow-sm transition gap-6 sm:gap-8 lg:gap-10 border w-full
+      className={`rounded-2xl p-4 sm:p- lg:p-10 flex flex-col items-center text-center shadow-sm transition gap-6 sm:gap-8 lg:gap-10 border w-full h-full
     ${
       highlight
         ? "bg-[radial-gradient(circle_at_center,white_10%,#bbf7d0_180%)] shadow-md"
@@ -51,7 +53,7 @@ const PricingCard = ({
         href={"#"}
         className="w-full rounded-lg py-2 sm:py-3 font-medium transition bg-green-50 border border-gray-300 text-sm sm:text-base hover:bg-green-100"
       >
-        Get Started
+        {priceText}
       </Link>
 
       {/* Separator */}
