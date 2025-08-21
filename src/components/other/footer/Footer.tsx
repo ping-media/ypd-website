@@ -1,0 +1,218 @@
+"use client";
+
+import Link from "next/link";
+import { Phone, ChevronDown } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import SocialLinks from "../SocialLinks";
+
+type SectionProps = {
+  title: string;
+  links: { label: string; href: string }[];
+};
+
+const FooterSectionAccordion = ({ title, links }: SectionProps) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-[#335933] last:border-none sm:border-none">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center py-3 sm:py-0"
+      >
+        <span className="font-medium text-base font-poppins">{title}</span>
+        <ChevronDown
+          size={18}
+          className={`transition-transform ${
+            open ? "rotate-180" : ""
+          } sm:hidden`}
+        />
+      </button>
+      <ul
+        className={`my-5 space-y-5 text-sm text-[#e0e0e0] sm:block ${
+          open ? "block" : "hidden"
+        }`}
+      >
+        {links.map((link, i) => (
+          <li key={i}>
+            <Link href={link.href}>{link.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default function Footer() {
+  return (
+    <footer className="bg-[#003000] text-white font-sans">
+      <div className="max-w-[1440px] mx-auto px-4 pt-12 sm:px-10 lg:px-20 sm:py-12 flex flex-col gap-8 lg:flex-row lg:justify-between">
+        {/* Column 1 */}
+        <div className="hidden max-lg:flex flex-col gap-5 max-w-xs">
+          <h2 className="font-medium text-base font-poppins">
+            Youth Pulse Digital™
+          </h2>
+          <p className="text-sm font-medium">Regd Office</p>
+          <p className="text-sm text-[#e0e0e0]">
+            1, Green Park, <br />
+            Kolkata – 700140 <br />
+            West Bengal, India <br />
+            CIN: U96010WB2023PTC263705
+          </p>
+
+          <div className="space-y-5 text-[#e0e0e0]">
+            <p className="flex items-center gap-2 text-sm">
+              <Phone size={16} /> +91 8650126521
+            </p>
+            <p className="flex items-center gap-2 text-sm">
+              <Image
+                src="/icons/wa.png"
+                alt="WhatsApp"
+                width={20}
+                height={20}
+              />
+              <a
+                href="https://wa.me/917300868536"
+                className="hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +91 7300868536 (WhatsApp)
+              </a>
+            </p>
+            <p className="flex items-center gap-2 text-sm">
+              <Image
+                src="/icons/gmail.png"
+                alt="Email"
+                width={20}
+                height={20}
+              />
+              <a
+                href="mailto:support@youthpulsedigital.com"
+                className="hover:underline"
+              >
+                support@youthpulsedigital.com
+              </a>
+            </p>
+          </div>
+          <SocialLinks />
+        </div>
+
+        {/* Accordion / Columns */}
+        <div className="flex-1 max-lg:grid sm:grid-cols-3 gap-4 sm:gap-12 lg:flex lg:justify-between ">
+          <div className="hidden lg:flex flex-col gap-5 max-w-xs">
+            <h2 className="font-medium text-base font-poppins">
+              Youth Pulse Digital™
+            </h2>
+            <p className="text-sm font-medium">Regd Office</p>
+            <p className="text-sm text-[#e0e0e0]">
+              1, Green Park, <br />
+              Kolkata – 700140 <br />
+              West Bengal, India <br />
+              CIN: U96010WB2023PTC263705
+            </p>
+
+            <div className="space-y-5 text-[#e0e0e0]">
+              <p className="flex items-center gap-2 text-sm">
+                <Phone size={16} /> +91 8650126521
+              </p>
+              <p className="flex items-center gap-2 text-sm">
+                <Image
+                  src="/icons/wa.png"
+                  alt="WhatsApp"
+                  width={20}
+                  height={20}
+                />
+                <a
+                  href="https://wa.me/917300868536"
+                  className="hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +91 7300868536 (WhatsApp)
+                </a>
+              </p>
+              <p className="flex items-center gap-2 text-sm">
+                <Image
+                  src="/icons/gmail.png"
+                  alt="Email"
+                  width={20}
+                  height={20}
+                />
+                <a
+                  href="mailto:support@youthpulsedigital.com"
+                  className="hover:underline"
+                >
+                  support@youthpulsedigital.com
+                </a>
+              </p>
+            </div>
+            <SocialLinks />
+          </div>
+          <FooterSectionAccordion
+            title="Explore"
+            links={[
+              { label: "About Us", href: "/about" },
+              { label: "YPD Brain", href: "/ypd-brain" },
+              { label: "Career Vision Program™", href: "/career-vision" },
+              {
+                label: "Career Reinvention Program™",
+                href: "/career-reinvention",
+              },
+              { label: "Parent Connect™", href: "/parent-connect" },
+              { label: "Mentor Connect™", href: "/mentor-connect" },
+              { label: "Creativity Lab™", href: "/creativity-lab" },
+              { label: "Innovation Hub™", href: "/innovation-hub" },
+            ]}
+          />
+          <FooterSectionAccordion
+            title="For Learners"
+            links={[
+              { label: "YPD Mentor Guide™", href: "#" },
+              { label: "Career Reboot Navigator™", href: "#" },
+              { label: "Career Vision Program Lite™", href: "#" },
+              { label: "Institute Connect", href: "#" },
+              { label: "Industry Connect", href: "#" },
+              { label: "Govt Connect", href: "#" },
+              { label: "MSME Connect", href: "#" },
+              { label: "Business Connect", href: "#" },
+            ]}
+          />
+          <FooterSectionAccordion
+            title="Stay Connected"
+            links={[
+              { label: "Register Interest", href: "#" },
+              { label: "YPD CareerVerse™", href: "#" },
+              { label: "YPD Special Stars™", href: "#" },
+              { label: "YPD Nexus", href: "#" },
+              { label: "Book A Mentor", href: "#" },
+              { label: "Schedule Demo", href: "#" },
+              { label: "Complaint & Suggestion", href: "#" },
+              { label: "Global Navigator™", href: "#" },
+            ]}
+          />
+        </div>
+      </div>
+
+      {/* Separator */}
+      <div className="h-[1px] bg-[#335933]"></div>
+
+      {/* Bottom Bar */}
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20 py-4 text-sm flex flex-col md:flex-row justify-between gap-3 font-sans text-center md:text-left">
+        {/* Links - on top in mobile, last in desktop */}
+        <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/terms">Terms of Use</Link>
+          <Link href="/faqs">FAQs</Link>
+        </div>
+
+        {/*middle in both mobile & desktop */}
+        <p className="order-2">Built in Bharat. Powered by Purpose.</p>
+
+        {/* Copyright - last in mobile, first in desktop */}
+        <p className="order-3 md:order-1">
+          © 2025 Youth Pulse Digital™ (Unit of CMPL) All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  );
+}
