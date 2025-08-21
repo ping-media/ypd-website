@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Briefcase, Map, Target } from "lucide-react";
 
 const sampleData = [
   {
@@ -9,18 +10,21 @@ const sampleData = [
     description:
       "Every sample is based on a unique learner’s personality, interest, and cognitive traits to show how real students find real direction.",
     image: "/about/research.png",
+    icon: Map,
   },
   {
     title: "Career Fit + Adaptive Roles",
     description:
       "Each sample pathway includes one core career and 1–3 alternative tracks — chosen for long-term alignment and flexibility across domains.",
-    image: "/about/research.png",
+    image: "/careerPath/careerPath.png",
+    icon: Briefcase,
   },
   {
     title: "Fit Score + Launch Plan",
     description:
       "Includes role-readiness signals, improvement nudges, and practical upskilling strategies tailored to each pathway’s goal.",
     image: "/about/research.png",
+    icon: Target,
   },
 ];
 

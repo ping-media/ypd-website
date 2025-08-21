@@ -4,6 +4,7 @@ import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
+import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -57,6 +58,7 @@ const page = () => {
       <CvpLiteWorks />
       <CvpJourney />
       <CvpRealworld />
+      <CvpPricing />
     </>
   );
 };

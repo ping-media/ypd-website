@@ -58,7 +58,7 @@ const CvpInside: React.FC = () => {
                 <div className="w-12 h-12 rounded-md bg-green-50 flex items-center justify-center text-brand-primary">
                   <feature.icon size={22} />
                 </div>
-                <h3 className="font-red-rose text-lg text-gray-700">
+                <h3 className="font-red-rose text-lg text-gray-700 text-start">
                   {feature.title}
                 </h3>
               </div>
