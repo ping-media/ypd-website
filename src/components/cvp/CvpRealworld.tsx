@@ -12,7 +12,7 @@ const useCases = [
     description:
       "CVP Lite helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
     icon: GraduationCap,
-    image: "/cvplite/uses.png", // 👈 Add unique image for each case
+    image: "/cvplite/uses.png",
   },
   {
     id: 2,
@@ -47,28 +47,28 @@ export default function CvpRealworld() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="p-6 sm:p-12 lg:p-20 bg-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-14 font-lato">
+    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
+      <div className="max-w-[1440px] w-full flex flex-col items-center gap-6 sm:gap-10 lg:gap-14 font-lato">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
+        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center px-2">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
             Real World Use Cases
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl">
+          <p className="text-sm sm:text-base lg:text-lg text-brand-gray max-w-4xl">
             Career clarity isn’t a quiz result it’s the first real conversation
             with your future. CVP Lite guides that conversation.
           </p>
         </div>
 
-        {/* Layout: Cards Left + Image Right */}
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-14 items-stretch w-full max-w-7xl">
+        {/* Layout */}
+        <div className="flex flex-col-reverse md:flex-row gap-6 sm:gap-10 lg:gap-14 items-stretch w-full max-w-7xl">
           {/* Left: Cards */}
           <div className="flex flex-col gap-4 w-full md:w-1/2">
             {useCases.map((item, index) => (
               <div
                 key={item.id}
                 onClick={() => setActiveIndex(index)}
-                className={`p-4 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
+                className={`p-4 sm:p-5 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
                   ${
                     index === activeIndex
                       ? "border-green-400 bg-green-50 shadow-sm"
@@ -90,7 +90,7 @@ export default function CvpRealworld() {
                 {/* Text */}
                 <div className="text-left">
                   <h3
-                    className={`text-lg sm:text-xl font-red-rose ${
+                    className={`text-base sm:text-lg lg:text-xl font-red-rose ${
                       index === activeIndex
                         ? "text-brand-primary"
                         : "text-black"
@@ -98,8 +98,10 @@ export default function CvpRealworld() {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-sm italic text-brand-gray">{item.quote}</p>
-                  <p className="text-sm sm:text-base text-brand-gray mt-1">
+                  <p className="text-xs sm:text-sm italic text-brand-gray">
+                    {item.quote}
+                  </p>
+                  <p className="text-xs sm:text-sm lg:text-base text-brand-gray mt-1">
                     {item.description}
                   </p>
                 </div>
@@ -107,8 +109,9 @@ export default function CvpRealworld() {
             ))}
           </div>
 
-          {/* Right: Dynamic Image */}
-          <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg w-full h-[300px] md:h-auto">
+          {/* Right: Image */}
+          {/* Right: Image */}
+          <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg w-full h-[300px] md:h-auto min-h-[300px]">
             <Image
               src={useCases[activeIndex].image}
               alt={useCases[activeIndex].title}

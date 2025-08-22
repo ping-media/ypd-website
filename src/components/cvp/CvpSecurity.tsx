@@ -53,7 +53,7 @@ const items: SecurityItem[] = [
 
 export default function CvpSecurity() {
   return (
-    <section className="p-6 sm:p-12 lg:p-20 flex justify-center">
+    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
       <div className="max-w-[1440px] w-full flex flex-col items-start gap-4 font-lato">
         {/* Heading */}
         <h2 className="font-red-rose text-2xl sm:text-3xl lg:text-4xl text-gray-900">
@@ -61,8 +61,8 @@ export default function CvpSecurity() {
         </h2>
 
         {/* Subheading */}
-        <p className="max-w-3xl text-left text-lg w-full">
-          <span className="text-xl">
+        <p className="max-w-3xl text-left text-base sm:text-lg w-full">
+          <span className="text-base font-bold sm:text-xl">
             We take Security Seriously so you don’t have to worry,
           </span>
           <br />
@@ -71,18 +71,14 @@ export default function CvpSecurity() {
         </p>
 
         {/* Grid with plus-style borders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full mt-12 border border-gray-200 rounded-xl overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full sm:mt-6 lg:mt-12 border border-gray-200 rounded-xl overflow-hidden">
           {items.map((item, i) => (
             <div
               key={i}
               className={`flex flex-col items-start gap-3 p-6
-                ${i < items.length - 4 ? "border-b border-gray-200" : ""} 
-                ${i % 4 !== 3 ? "lg:border-r border-gray-200" : ""} 
-                ${
-                  i % 2 === 0 && i % 4 !== 3
-                    ? "sm:border-r border-gray-200"
-                    : ""
-                }
+                ${i < items.length - 4 ? "border-b border-gray-200" : ""}
+                sm:${i % 2 !== 1 ? "border-r border-gray-200" : ""}
+                lg:${i % 4 !== 3 ? "border-r border-gray-200" : ""}
               `}
             >
               <div className="bg-green-50 p-3 rounded-lg flex items-center justify-center">

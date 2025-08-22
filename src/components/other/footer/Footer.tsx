@@ -1,8 +1,8 @@
 "use client";
-import Link from "next/link";
-import { Phone, ChevronDown } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 import SocialLinks from "../SocialLinks";
 
 type SectionProps = {
@@ -60,7 +60,13 @@ export default function Footer() {
 
           <div className="space-y-5 text-[#e0e0e0]">
             <p className="flex items-center gap-2 text-sm">
-              <Phone size={16} /> +91 8650126521
+              <Image
+                src="/icons/phone.png"
+                alt="Email"
+                width={20}
+                height={20}
+              />{" "}
+              +91 8650126521
             </p>
             <p className="flex items-center gap-2 text-sm">
               <Image
@@ -112,7 +118,13 @@ export default function Footer() {
 
             <div className="space-y-5 text-[#e0e0e0]">
               <p className="flex items-center gap-2 text-sm">
-                <Phone size={16} /> +91 8650126521
+                <Image
+                  src="/icons/phone.png"
+                  alt="Email"
+                  width={20}
+                  height={20}
+                />{" "}
+                +91 8650126521
               </p>
               <p className="flex items-center gap-2 text-sm">
                 <Image
@@ -151,7 +163,7 @@ export default function Footer() {
             title="Explore"
             links={[
               { label: "Home", href: "/" },
-              { label: "FAQs", href: "/" },
+              { label: "FAQs", href: "#" },
               { label: "Contact Us", href: "/contact" },
               { label: "Career Path", href: "/career-path" },
               { label: "Pricing", href: "/pricing" },
@@ -167,13 +179,13 @@ export default function Footer() {
           <FooterSectionAccordion
             title="For Students"
             links={[
-              { label: "CVP lite™", href: "#" },
-              { label: "Career Advance™", href: "#" },
-              { label: "Career Verse™", href: "#" },
-              { label: "Cvp Challenger™", href: "#" },
+              { label: "CVP lite™", href: "/cvp-lite" },
+              { label: "Career Advance™", href: "/career-advance" },
+              { label: "Career Verse™", href: "/career-verse" },
+              { label: "Cvp Challenger™", href: "/cvp-challenger" },
               { label: "10th - 12th CBSC Mentors™", href: "#" },
               { label: "UPSC Mentor™", href: "#" },
-              { label: "Mission NDA™", href: "#" },
+              { label: "Mission NDA™", href: "/mission-nda" },
             ]}
           />
           <FooterSectionAccordion

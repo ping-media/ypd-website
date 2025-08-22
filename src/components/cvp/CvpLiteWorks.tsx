@@ -45,8 +45,8 @@ export default function CvpLiteWorks() {
   const activeItem = audience[activeIndex];
 
   return (
-    <section className="p-6 sm:p-12 lg:p-20 bg-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-14 font-lato">
+    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
+      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
         {/* Heading */}
         <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
@@ -58,56 +58,151 @@ export default function CvpLiteWorks() {
           </p>
         </div>
 
-        {/* Text + Image Section */}
-        <div className="flex flex-col md:flex-row gap-8 lg:gap-14 items-center w-full max-w-7xl">
-          {/* Left: Dynamic Image (switches on click) */}
-          <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[280px] md:min-h-[400px] w-full">
-            <Image
-              key={activeItem.id} // ensures smooth transition when image changes
-              src={activeItem.image}
-              alt={activeItem.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover transition-opacity duration-500"
-            />
+        {/* Responsive Layout */}
+        <div className="w-full max-w-7xl">
+          {/* Desktop (lg: side by side) */}
+          <div className="hidden lg:flex gap-4 sm:gap-10 items-center">
+            {/* Left: Image */}
+            <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[400px]">
+              <Image
+                key={activeItem.id}
+                src={activeItem.image}
+                alt={activeItem.title}
+                fill
+                className="object-cover transition-opacity duration-500"
+              />
+            </div>
+
+            {/* Right: Cards */}
+            <div className="grid grid-cols-1 gap-4 flex-1">
+              {audience.map((item, index) => (
+                <div
+                  key={item.id}
+                  onClick={() => setActiveIndex(index)}
+                  className={`p-4 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
+                    ${
+                      index === activeIndex
+                        ? "border-brand-primary bg-green-50 shadow-sm"
+                        : "border-gray-200 hover:border-gray-300 bg-white"
+                    }`}
+                >
+                  {/* Icon Circle (unchanged size) */}
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
+                    ${
+                      index === activeIndex
+                        ? "bg-green-100 text-brand-primary"
+                        : "bg-gray-100 text-brand-gray"
+                    }`}
+                  >
+                    <item.icon size={20} />
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg md:text-xl font-red-rose">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm md:text-base text-brand-gray">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Right: Audience Cards */}
-          <div className="flex flex-col gap-4 w-full md:w-1/2">
-            {audience.map((item, index) => (
-              <div
-                key={item.id}
-                onClick={() => setActiveIndex(index)}
-                className={`p-4 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
-                  ${
-                    index === activeIndex
-                      ? "border-brand-primary bg-green-50 shadow-sm"
-                      : "border-gray-200 hover:border-gray-300 bg-white"
-                  }`}
-              >
-                {/* Icon */}
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                  ${
-                    index === activeIndex
-                      ? "bg-green-100 text-brand-primary"
-                      : "bg-gray-100 text-brand-gray"
-                  }`}
-                >
-                  <item.icon size={20} />
-                </div>
+          {/* Tablet (md–lg: image top + 2x2 grid) */}
+          <div className="hidden md:flex lg:hidden flex-col gap-8">
+            {/* Image */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg min-h-[300px] w-full">
+              <Image
+                key={activeItem.id}
+                src={activeItem.image}
+                alt={activeItem.title}
+                fill
+                className="object-cover transition-opacity duration-500"
+              />
+            </div>
 
-                {/* Text */}
-                <div>
-                  <h3 className="text-lg sm:text-xl font-red-rose">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-brand-gray">
-                    {item.description}
-                  </p>
+            {/* 2x2 Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              {audience.map((item, index) => (
+                <div
+                  key={item.id}
+                  onClick={() => setActiveIndex(index)}
+                  className={`p-4 rounded-lg border flex gap-3 items-start cursor-pointer transition-all duration-200
+                    ${
+                      index === activeIndex
+                        ? "border-brand-primary bg-green-50 shadow-sm"
+                        : "border-gray-200 hover:border-gray-300 bg-white"
+                    }`}
+                >
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
+                    ${
+                      index === activeIndex
+                        ? "bg-green-100 text-brand-primary"
+                        : "bg-gray-100 text-brand-gray"
+                    }`}
+                  >
+                    <item.icon size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-red-rose">{item.title}</h3>
+                    <p className="text-sm text-brand-gray">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Mobile (<md: stacked cards + image at bottom) */}
+          <div className="flex flex-col gap-6 md:hidden">
+            {/* Cards */}
+            <div className="flex flex-col gap-4">
+              <div className="relative rounded-lg overflow-hidden shadow-lg min-h-[220px] w-full">
+                <Image
+                  key={activeItem.id}
+                  src={activeItem.image}
+                  alt={activeItem.title}
+                  fill
+                  className="object-cover transition-opacity duration-500"
+                />
               </div>
-            ))}
+              {audience.map((item, index) => (
+                <div
+                  key={item.id}
+                  onClick={() => setActiveIndex(index)}
+                  className={`p-3 rounded-lg border flex gap-3 items-start cursor-pointer transition-all duration-200
+                    ${
+                      index === activeIndex
+                        ? "border-brand-primary bg-green-50 shadow-sm"
+                        : "border-gray-200 hover:border-gray-300 bg-white"
+                    }`}
+                >
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
+                    ${
+                      index === activeIndex
+                        ? "bg-green-100 text-brand-primary"
+                        : "bg-gray-100 text-brand-gray"
+                    }`}
+                  >
+                    <item.icon size={20} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-red-rose">{item.title}</h3>
+                    <p className="text-sm text-brand-gray">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Image at bottom */}
           </div>
         </div>
 

@@ -2,8 +2,8 @@ import { Zap, UserPlus } from "lucide-react";
 
 export default function CvpCta() {
   return (
-    <section className="p-6 sm:p-12 lg:p-20 flex justify-center bg-[#F3FFF8]">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 text-center font-lato">
+    <section className="p-4 sm:p-10 lg:p-20 flex justify-center bg-[#F3FFF8]">
+      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 text-center font-lato px-4 sm:px-0">
         {/* Heading */}
         <h2 className="font-red-rose text-2xl sm:text-3xl">
           Start Your Career Vision Journey
@@ -19,12 +19,12 @@ export default function CvpCta() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-2">
-          <button className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full sm:w-auto">
+          <button className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors w-full sm:w-auto">
             <Zap size={18} /> Unlock Full Access – ₹899
           </button>
 
-          <button className="inline-flex items-center justify-center gap-2 rounded-lg border border-black hover:bg-green-100 px-6 sm:px-8 py-3 sm:py-4 font-medium text-gray-800 transition-colors">
+          <button className="inline-flex items-center justify-center gap-2 rounded-lg border border-black hover:bg-green-100 px-6 sm:px-8 py-3 sm:py-4 font-medium text-gray-800 transition-colors w-full sm:w-auto">
             <UserPlus size={18} /> Create Account Now
           </button>
         </div>

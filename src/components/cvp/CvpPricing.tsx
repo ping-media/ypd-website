@@ -3,22 +3,22 @@ import PricingCard from "../pricing/PricingCard";
 
 const CvpPricing = () => {
   return (
-    <section className="p-6 sm:p-12 lg:p-2 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-14 font-lato">
+    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
+      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
+        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center px-4 sm:px-0">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
             Pricing & Access
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl">
+          <p className="text-sm sm:text-base lg:text-lg text-brand-gray max-w-4xl">
             CareerVerse™ is a premium experience made affordable.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col lg:flex-row justify-center gap-8 w-full max-w-5xl">
+        <div className="flex flex-col max-sm:flex-col sm:flex-row justify-center gap-6 sm:gap-8 w-full max-w-5xl items-stretch">
           {/* Free Plan */}
-          <div className="w-[380px] h-full flex-shrink-0">
+          <div className="w-full sm:w-1/2 flex flex-col flex-1">
             <PricingCard
               title="Free Plan"
               description="For students starting their journey"
@@ -35,7 +35,7 @@ const CvpPricing = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="w-[400px] flex-shrink-0">
+          <div className="w-full sm:w-1/2 flex flex-col flex-1">
             <PricingCard
               title="Premium Plan"
               description="Complete your full Career Persona Journey"
@@ -58,12 +58,12 @@ const CvpPricing = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col items-center gap-6">
-          <h2 className=" text-base sm:text-lg text-center font-semibold">
+        <div className="flex flex-col items-center gap-6 px-4 sm:px-0">
+          <h2 className="text-sm sm:text-base lg:text-lg text-center font-semibold">
             Institutional Pricing Available. Please{" "}
             <Link
               href={"/contact"}
-              className=" border-b-brand-primary border border-x-0 border-t-0 text-brand-primary hover:text-brand-primary/80 "
+              className="border-b border-b-brand-primary text-brand-primary hover:text-brand-primary/80"
             >
               Contact Us
             </Link>

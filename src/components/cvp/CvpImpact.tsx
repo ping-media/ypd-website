@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const CvpImpact = () => {
   return (
-    <section className="p-6 sm:p-12 lg:p-20 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-14 font-lato">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16 w-full bg-gray-50 rounded-xl p-6 sm:p-10">
+    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
+      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
+        <div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-10 lg:gap-14 w-full bg-gray-50 rounded-xl p-4 sm:p-10">
           {/* Left Column - Text */}
           <div className="flex flex-col gap-6 w-full lg:w-1/2">
             {/* Heading */}
@@ -20,7 +20,7 @@ const CvpImpact = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-4 pt-4">
               <div className="flex flex-col gap-2">
                 <h3 className="text-3xl sm:text-4xl font-red-rose border-b-2">
                   93%
@@ -56,7 +56,7 @@ const CvpImpact = () => {
           </div>
 
           {/* Right Column - Image */}
-          <div className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden shadow-md min-h-[520px]">
+          <div className="w-full lg:w-1/2 relative rounded-3xl overflow-hidden shadow-md min-h-[280px] sm:min-h-[400px] lg:min-h-[520px] mt-6 lg:mt-0">
             <Image
               src="/cvplite/impact.png"
               alt="Student and parent smiling"

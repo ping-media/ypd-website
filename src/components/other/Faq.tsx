@@ -66,7 +66,7 @@ const Faq = () => {
       <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row gap-4 sm:gap-10 lg:gap-24">
         {/* Left side */}
         <div className="flex flex-col gap-8 shrink-0 w-full lg:w-[364px]">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <h2 className="font-red-rose text-2xl sm:text-3xl">
               Frequently Asked Questions
             </h2>

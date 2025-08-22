@@ -1,5 +1,6 @@
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
+import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
 import CvpInside from "@/components/cvp/CvpInside";
@@ -9,6 +10,7 @@ import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
+import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 
@@ -41,7 +43,7 @@ const page = () => {
           "Move from uncertainty to clarity",
           "No overwhelm or pressure",
           "Built on YPD’s trusted frameworks",
-          "A powerful starting point for every learner",
+          "A powerful starting for every learner",
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
@@ -65,6 +67,8 @@ const page = () => {
       <CvpImpact />
       <CvpCta />
       <CvpSecurity />
+      <CvpFeedback />
+      <CvpSeperate />
     </>
   );
 };

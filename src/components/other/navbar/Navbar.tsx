@@ -42,7 +42,7 @@ const Navbar = () => {
   // Track scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -99,7 +99,7 @@ const Navbar = () => {
         </div>
       </header>
 
-      <div className="h-28" />
+      <div className="h-24 sm:h-28" />
       {/* Overlay */}
       {mobileOpen && (
         <div
