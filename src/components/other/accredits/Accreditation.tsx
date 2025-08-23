@@ -3,29 +3,29 @@ import AccreditationCard from "./AccreditationCard";
 
 const accreditations = [
   {
-    icon: "/icons/acc1.png",
+    icon: "/icons/acc1.svg",
     heading: "NSDC",
     subheading: "National Skill Development Corporation",
   },
   {
-    icon: "/icons/acc2.png",
+    icon: "/icons/acc2.svg",
     heading: "CBSE Empanelment",
     subheading: "For integration into Grade 9–12 skilling programs",
   },
   {
-    icon: "/icons/acc3.png",
+    icon: "/icons/acc3.svg",
     heading: "MSME Innovation Mission",
     subheading: "India’s Startup-Linked Talent Ecosystem",
   },
   {
-    icon: "/icons/acc1.png",
-    heading: "CBSE Empanelment",
-    subheading: "For integration into Grade 9–12 skilling programs",
+    icon: "/icons/acc4.svg",
+    heading: "ISO 21001",
+    subheading: "Educational Quality Systems Certification – Target 2026",
   },
   {
-    icon: "/icons/acc2.png",
-    heading: "MSME Innovation Mission",
-    subheading: "India’s Startup-Linked Talent Ecosystem",
+    icon: "/icons/acc5.svg",
+    heading: "AICTE Collaboration",
+    subheading: "Higher Ed Skill Hub Approval – Consultation Started",
   },
 ];
 

@@ -3,7 +3,7 @@ import EmpowerCard from "./EmpowerCard";
 
 const cardData = [
   {
-    icon: "/icons/ai1.png",
+    icon: "/icons/ai1.svg",
     title: "Find Your Best-Fit Career",
     description:
       "Identify your interest with CVP Lite, Decide with CVP Advance",
@@ -15,13 +15,13 @@ const cardData = [
       "Experience Your Future Before You Live It. CareerVerse™ ,India’s first AI-powered career role simulation. Not a test. Not a lecture. A real, guided journey into 'Life in a Day of a Career Role you pick.'",
   },
   {
-    icon: "/icons/ai3.png",
+    icon: "/icons/ai3.svg",
     title: "Bridge to College",
     description:
       "Meet India's first AI powered Career Counselor 'Counseling Guru' and make decisions based on your needs 100% unbiased & tailor made.",
   },
   {
-    icon: "/icons/ai1.png",
+    icon: "/icons/ai1.svg",
     title: "Find Your Best-Fit Career",
     description:
       "Identify your interest with CVP Lite, Decide with CVP Advance",

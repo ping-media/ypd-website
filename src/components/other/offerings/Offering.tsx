@@ -3,34 +3,40 @@ import OfferingCard from "./OfferingCard";
 
 const offerings = [
   {
-    icon: "/icons/o1.png",
+    icon: "/icons/o6.svg",
     heading: "Skill Gap Radar",
     subheading:
       "Evaluate your skills against industry benchmarks. Spot & fix Aptitudes. Learn what Fortune 500 does.",
   },
   {
-    icon: "/icons/o2.png",
+    icon: "/icons/o5.svg",
     heading: "Mindset Coaching",
     subheading:
       "Train with our highly trained AI Mentors for ambiguity, fluency, strategy, critical thinking, innovation what modern workplaces demand.",
   },
   {
-    icon: "/icons/o3.png",
+    icon: "/icons/o4.svg",
     heading: "Personalized Learning Plans",
     subheading:
       "Role connected & personalized learning at every step. No more Herd Training. Learn in your space 24/7.",
   },
   {
-    icon: "/icons/o1.png",
+    icon: "/icons/o1.svg",
     heading: "Career Simulations",
     subheading:
       "Practice tasks - emails, data analysis, decision making - before recruiters test you.",
   },
   {
-    icon: "/icons/o2.png",
-    heading: "Personalized Learning Plans",
+    icon: "/icons/o2.svg",
+    heading: "Resume & LinkedIn Building",
     subheading:
-      "Role connected & personalized learning at every step. No more Herd Training. Learn in your space 24/7.",
+      "Mentor-driven ATS resumes and LinkedIn profiles recruiters notice.",
+  },
+  {
+    icon: "/icons/o3.svg",
+    heading: "Portfolio Projects",
+    subheading:
+      "Short, verified projects to build your credibility — and your hiring power.",
   },
 ];
 const Offering = () => {

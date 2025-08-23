@@ -3,34 +3,40 @@ import ImpactCard from "./ImpactCard";
 
 const cardData = [
   {
-    icon: "/icons/ai1.png",
+    icon: "/icons/ai4.svg",
     title: "Student Guidance in Action",
     description:
       "Career Clarity with CVP Lite or CVP Advance helping students to make smarter decisions, make the right choices, understand the alternatives.",
   },
   {
-    icon: "/icons/ai2.png",
+    icon: "/icons/ai5.svg",
     title: "Parent Alignment Activated",
     description:
       "With our Student-Parent framework families see what otherwise resulted in waste of money, career burns.",
   },
   {
-    icon: "/icons/ai3.png",
+    icon: "/icons/ai6.svg",
     title: "Professional Reinvention",
     description:
       "Professionals embarking into personalized learning with real scenarios and unique pedagogy blending Critical Thinking, Problem Solving and Innovative Mindset.",
   },
   {
-    icon: "/icons/ai1.png",
-    title: "Parent Alignment Activated",
+    icon: "/icons/ai1.svg",
+    title: "Institutional Pilots Running",
     description:
-      "With our Student-Parent framework families see what otherwise resulted in waste of money, career burns.",
+      "Partner schools & colleges co-testing readiness dashboards and mentor-guided assessments.",
   },
   {
-    icon: "/icons/ai3.png",
-    title: "Professional Reinvention",
+    icon: "/icons/ai2.svg",
+    title: "Mentor Network Curated",
     description:
-      "Professionals embarking into personalized learning with real scenarios and unique pedagogy blending Critical Thinking, Problem Solving and Innovative Mindset.",
+      "Academicians, counselors, and experts integrated into AI-moderated guidance flows.",
+  },
+  {
+    icon: "/icons/ai3.svg",
+    title: "MSME Engagement In Progress",
+    description:
+      "Local businesses onboarded for simulation internships and career-readiness validation.",
   },
 ];
 
