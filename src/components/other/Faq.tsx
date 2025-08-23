@@ -72,7 +72,7 @@ const Faq = () => {
             </h2>
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary border border-brand-accent text-lg flex justify-center items-center px-3 py-3 sm:px-5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-lg flex justify-center items-center px-3 py-3 sm:px-5"
             >
               Still have questions? Contact Support
             </Link>

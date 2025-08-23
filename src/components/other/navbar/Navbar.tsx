@@ -13,12 +13,23 @@ const Links = [
   {
     name: "Career Vision",
     dropdown: [
-      { name: "Lorem Ipsum", href: "/#1" },
-      { name: "Dolor Lorem", href: "/#2" },
-      { name: "Lorem Ipsum", href: "/#3" },
+      { name: "CVP lite™", href: "/cpv-lite" },
+      { name: "CVP advance™", href: "/cpv-advance" },
+      { name: "Careerverse™", href: "/careerverse" },
+      { name: "10-12 CBSE Mentor™", href: "/cbse-mentor" },
+      { name: "UPSC Mentor™", href: "/upsc-mentor" },
+      { name: "Counseling Guru™", href: "/counselling-guru" },
+      { name: "Global Navigator™", href: "/global-navigator" },
     ],
   },
-  { name: "Career Reinvention", href: "/career-reinvention" },
+  {
+    name: "Career Reinvention",
+    dropdown: [
+      { name: "CRP aptitude trainer™", href: "/crp-aptitude" },
+      { name: "Reinvention Guru™", href: "/reinvention-guru" },
+      { name: "Careerverse Pro™", href: "/careerverse-pro" },
+    ],
+  },
   { name: "Contact us", href: "/contact" },
 ];
 
@@ -58,7 +69,7 @@ const Navbar = () => {
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
     ${scrolled ? "backdrop-blur-md bg-white/70 shadow-md" : "bg-white"}`}
       >
-        <div className="max-w-[1440px] mx-auto flex justify-between items-center max-sm:p-4 sm:px-10 xl:px-20 py-8">
+        <div className="max-w-[1440px] mx-auto flex justify-between items-center max-sm:p-4 sm:px-10 xl:px-20 py-2">
           {/* Left: Logo */}
           <Link href={"/"} className="flex-1 flex justify-start">
             <Image src="/logo.png" alt="logo" width={120} height={42} />
@@ -66,14 +77,14 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex flex-none">
-            <NavLinks />
+            <NavLinks links={Links} />
           </div>
 
           {/* Sign-up button */}
           <div className="hidden sm:flex flex-1 justify-end">
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary border border-brand-accent text-base uppercase flex justify-center items-center py-2.5 px-5 space-x-0.5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base uppercase flex justify-center items-center py-2.5 px-5 space-x-0.5"
             >
               <span>
                 Sign up{" "}
@@ -169,7 +180,7 @@ const Navbar = () => {
           <div className="hidden max-sm:block pt-4">
             <Link
               href="#"
-              className="w-full text-center block text-brand-fg rounded-lg bg-brand-primary border border-brand-accent text-base uppercase py-2.5"
+              className="w-full text-center block text-brand-fg rounded-lg bg-brand-primary border hover:bg-brand-primary/80 border-brand-accent text-base uppercase py-2.5"
               onClick={() => setMobileOpen(false)}
             >
               Sign up for free

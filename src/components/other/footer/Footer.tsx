@@ -27,13 +27,15 @@ const FooterSectionAccordion = ({ title, links }: SectionProps) => {
         />
       </button>
       <ul
-        className={`my-5 space-y-5 text-sm text-[#e0e0e0] sm:block ${
+        className={`my-5 space-y-5 text-sm text-white sm:block ${
           open ? "block" : "hidden"
         }`}
       >
         {links.map((link, i) => (
           <li key={i}>
-            <Link href={link.href}>{link.label}</Link>
+            <Link href={link.href} className="hover:opacity-60">
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
@@ -51,15 +53,15 @@ export default function Footer() {
             Youth Pulse Digital™
           </h2>
           <p className="text-sm font-medium">Regd Office</p>
-          <p className="text-sm text-[#e0e0e0]">
+          <p className="text-sm text-white">
             1, Green Park, <br />
             Kolkata – 700140 <br />
             West Bengal, India <br />
             CIN: U96010WB2023PTC263705
           </p>
 
-          <div className="space-y-5 text-[#e0e0e0]">
-            <p className="flex items-center gap-2 text-sm">
+          <div className="space-y-5 text-white">
+            <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
                 src="/icons/phone.png"
                 alt="Email"
@@ -68,7 +70,7 @@ export default function Footer() {
               />{" "}
               +91 8650126521
             </p>
-            <p className="flex items-center gap-2 text-sm">
+            <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
                 src="/icons/wa.png"
                 alt="WhatsApp"
@@ -84,7 +86,7 @@ export default function Footer() {
                 +91 7300868536 (WhatsApp)
               </a>
             </p>
-            <p className="flex items-center gap-2 text-sm">
+            <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
                 src="/icons/gmail.png"
                 alt="Email"
@@ -109,15 +111,15 @@ export default function Footer() {
               Youth Pulse Digital™
             </h2>
             <p className="text-sm font-medium">Regd Office</p>
-            <p className="text-sm text-[#e0e0e0]">
+            <p className="text-sm text-white">
               1, Green Park, <br />
               Kolkata – 700140 <br />
               West Bengal, India <br />
               CIN: U96010WB2023PTC263705
             </p>
 
-            <div className="space-y-5 text-[#e0e0e0]">
-              <p className="flex items-center gap-2 text-sm">
+            <div className="space-y-5 text-white">
+              <p className="flex items-center gap-2 text-sm hover:opacity-60">
                 <Image
                   src="/icons/phone.png"
                   alt="Email"
@@ -126,7 +128,7 @@ export default function Footer() {
                 />{" "}
                 +91 8650126521
               </p>
-              <p className="flex items-center gap-2 text-sm">
+              <p className="flex items-center gap-2 text-sm hover:opacity-60">
                 <Image
                   src="/icons/wa.png"
                   alt="WhatsApp"
@@ -135,24 +137,20 @@ export default function Footer() {
                 />
                 <a
                   href="https://wa.me/917300868536"
-                  className="hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   +91 7300868536 (WhatsApp)
                 </a>
               </p>
-              <p className="flex items-center gap-2 text-sm">
+              <p className="flex items-center gap-2 text-sm hover:opacity-60">
                 <Image
                   src="/icons/gmail.png"
                   alt="Email"
                   width={20}
                   height={20}
                 />
-                <a
-                  href="mailto:support@youthpulsedigital.com"
-                  className="hover:underline"
-                >
+                <a href="mailto:support@youthpulsedigital.com">
                   support@youthpulsedigital.com
                 </a>
               </p>
@@ -213,9 +211,15 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20 py-4 text-sm flex flex-col md:flex-row justify-between gap-3 font-sans text-center md:text-left">
         {/* Links - on top in mobile, last in desktop */}
         <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
-          <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/terms">Terms of Use</Link>
-          <Link href="/faqs">FAQs</Link>
+          <Link href="/privacy-policy" className="hover:opacity-60">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" className="hover:opacity-60">
+            Terms of Use
+          </Link>
+          <Link href="/faqs" className="hover:opacity-60">
+            FAQs
+          </Link>
         </div>
 
         {/*middle in both mobile & desktop */}

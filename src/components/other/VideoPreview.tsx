@@ -11,9 +11,9 @@ export default function VideoPreview() {
   const videoId = "ScMzIvxBSi4";
 
   return (
-    <div className="px-4 sm:px-10 lg:px-20">
-      <div className="relative w-full max-w-[1440px] mx-auto mt-4 sm:mt-16 rounded-xl overflow-hidden shadow-lg">
-        <div className="relative w-full aspect-video">
+    <div className="px-4 sm:px-10 lg:px-20 ">
+      <div className="relative w-full sm:w-[90%] max-w-[1440px] mx-auto mt-4 sm:mt-16 rounded-xl overflow-hidden shadow-lg">
+        <div className="relative w-full aspect-[16/9]">
           {isPlaying ? (
             <iframe
               className="absolute inset-0 w-full h-full"

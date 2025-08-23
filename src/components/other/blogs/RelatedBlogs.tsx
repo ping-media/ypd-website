@@ -76,7 +76,7 @@ const RelatedBlogs = () => {
         {/* View All Button */}
         <Link
           href="/blogs"
-          className="bg-brand-primary border border-brand-accent text-white px-4 py-2 sm:px-5 sm:py-2 rounded-lg text-sm sm:text-base"
+          className="bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-white px-4 py-2 sm:px-5 sm:py-2 rounded-lg text-sm sm:text-base"
         >
           View All
         </Link>

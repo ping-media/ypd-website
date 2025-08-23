@@ -96,7 +96,7 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
           <div className="flex justify-center py-4 sm:py-10 sm:px-14">
             <Link
               href={buttonHref}
-              className="text-brand-fg rounded-lg bg-brand-primary border border-brand-accent text-base sm:text-lg flex justify-center items-center py-2.5 sm:py-3 px-4 sm:px-5 space-x-0.5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base sm:text-lg flex justify-center items-center py-2.5 sm:py-3 px-4 sm:px-5 space-x-0.5"
             >
               {buttonIcon}
               <span className="pl-0.5 sm:pl-1">{buttonText}</span>

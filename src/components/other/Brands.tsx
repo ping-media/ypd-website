@@ -6,10 +6,8 @@ const logos = [
   "/brand2.png",
   "/brand3.png",
   "/brand4.png",
-  "/brand1.png",
-  "/brand2.png",
-  "/brand3.png",
-  "/brand4.png",
+  "/brand5.png",
+  "/brand6.png",
 ];
 
 export default function Brands() {
@@ -32,7 +30,7 @@ export default function Brands() {
         <div className="pointer-events-none absolute right-0 top-0 h-full w-10 sm:w-12 md:w-16 bg-gradient-to-l from-white to-transparent z-10" />
 
         {/* Scrolling container */}
-        <div className="flex gap-6 sm:gap-8 md:gap-10 animate-scroll hover:[animation-play-state:paused] px-4">
+        <div className="flex gap-8 sm:gap-12 md:gap-14 lg:gap-20 animate-scroll hover:[animation-play-state:paused] px-4">
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={i}

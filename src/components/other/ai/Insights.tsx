@@ -77,7 +77,7 @@ const Insights = () => {
         </div>
         <Link
           href="#"
-          className="bg-brand-primary cursor-pointer text-white px-6 py-3 rounded-lg shadow inline-flex items-center gap-2"
+          className="bg-brand-primary hover:bg-brand-primary/90 cursor-pointer text-white px-6 py-3 rounded-lg shadow inline-flex items-center gap-2"
         >
           <span className="leading-none">Read More</span>
           <ArrowRight size={20} className="shrink-0" />

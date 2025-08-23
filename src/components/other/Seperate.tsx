@@ -26,7 +26,7 @@ const Seperate = () => {
         <div className="flex justify-start w-full lg:w-auto">
           <Link
             href="#"
-            className="text-lato text-white rounded-lg bg-brand-primary border border-brand-accent text-base sm:text-lg lg:text-xl flex justify-center items-center py-1.5 px-2.5 sm:py-3 sm:px-5 gap-1"
+            className="text-lato text-white rounded-lg bg-brand-primary border border-brand-accent hover:bg-brand-primary/80 transition duration-100 text-base sm:text-lg lg:text-xl flex justify-center items-center py-1.5 px-2.5 sm:py-3 sm:px-5 gap-1"
           >
             <UserRound />
             <span>Start My Personalized Path</span>

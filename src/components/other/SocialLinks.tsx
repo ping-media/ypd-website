@@ -13,7 +13,13 @@ const SocialLinks = () => {
       <span className="text-sm">Follow us:</span>
       {socialLinks.map(({ href, src, alt, label }) => (
         <Link key={label} href={href} aria-label={label}>
-          <Image src={src} alt={alt} width={24} height={24} />
+          <Image
+            src={src}
+            alt={alt}
+            width={24}
+            height={24}
+            className="hover:opacity-60"
+          />
         </Link>
       ))}
     </div>

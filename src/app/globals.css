@@ -158,23 +158,6 @@
   }
 }
 
-
-
-/* custom css works */
-/* Hide scrollbars cleanly */
-/* .no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;    
-}
-
-html,
-body {
-  overflow-x: hidden;
-} */
-
 /* scrollbar */
 @keyframes scroll {
   0% {

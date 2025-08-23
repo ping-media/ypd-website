@@ -8,27 +8,19 @@ import {
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 
-const Links = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Pricing", href: "/pricing" },
-  {
-    name: "Career Vision",
-    dropdown: [
-      { name: "Lorem Ipsum", href: "/#1" },
-      { name: "Dolor Lorem", href: "/#2" },
-      { name: "Lorem Ipsum", href: "/#3" },
-    ],
-  },
-  { name: "Career Reinvention", href: "/career-reinvention" },
-  { name: "Contact us", href: "/contact" },
-];
+interface NavLinksProps {
+  links: {
+    name: string;
+    href?: string;
+    dropdown?: { name: string; href: string }[];
+  }[];
+}
 
-const NavLinks = () => {
+const NavLinks = ({ links }: NavLinksProps) => {
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
-        {Links.map((link) =>
+        {links.map((link) =>
           link.dropdown ? (
             <NavigationMenuItem key={link.name}>
               <NavigationMenuTrigger className="text-base font-medium flex items-center gap-2 hover:text-brand-primary">
@@ -53,7 +45,7 @@ const NavLinks = () => {
             <NavigationMenuItem key={link.href}>
               <NavigationMenuLink asChild>
                 <Link
-                  href={link.href}
+                  href={link.href!}
                   className="text-base font-medium px-4 py-2 hover:text-brand-primary"
                 >
                   {link.name}
