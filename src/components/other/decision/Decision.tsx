@@ -16,7 +16,7 @@ const cardData = [
     heading: "Why Parents Love YPD",
   },
   {
-    image: "/decision1.png",
+    image: "/decision4.png",
     heading: "Training for Better Outcomes",
   },
 ];

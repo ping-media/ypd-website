@@ -172,3 +172,30 @@
   animation: scroll 20s linear infinite;
 }
 
+/* dashed line */
+.line-element::after {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 85px;
+  height: 83%;
+  width: 2px;
+  border-left: 2px dashed #666666;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1024px) { /* Tablet */
+  .line-element::after {
+    left: 25px;
+    top: 70px;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) { /* Mobile */
+  .line-element::after {
+    left: 18px;
+    top: 66px;
+    height: 80%;
+  }
+}

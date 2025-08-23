@@ -64,7 +64,7 @@ const CvpSteps = () => {
           </div>
 
           {/* Steps */}
-          <div className="w-full lg:w-[694px] flex flex-col items-center gap-4 sm:gap-8 lg:gap-10">
+          <div className="w-full lg:w-[694px] flex flex-col items-center gap-4 sm:gap-8 lg:gap-10 line-element relative">
             {steps.map((step, i) => (
               <div
                 key={i}
@@ -78,11 +78,6 @@ const CvpSteps = () => {
                     {/* Horizontal line */}
                     <div className="hidden sm:block absolute left-full top-1/2 w-10 border-t-2 border-dashed border-brand-gray"></div>
                   </div>
-
-                  {/* Vertical dashed line */}
-                  {i !== steps.length - 1 && (
-                    <div className="w-px flex-1 border-l-2 border-dashed border-brand-gray"></div>
-                  )}
                 </div>
 
                 {/* Text content */}
