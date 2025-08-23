@@ -1,45 +1,42 @@
 import React from "react";
 import Link from "next/link";
-import {
-  Zap,
-  FileText,
-  Lightbulb,
-  Compass,
-  File,
-  GraduationCap,
-} from "lucide-react";
+import { Zap } from "lucide-react";
 
-const features = [
-  { icon: FileText, title: "Discover your true interests and strengths" },
-  {
-    icon: Lightbulb,
-    title: "Reflect on your values, preferences, and learning style",
-  },
-  {
-    icon: Compass,
-    title: "Identify career directions that align with who you are",
-  },
-  { icon: File, title: "Walk away with your Career Persona Report (PDF)" },
-  {
-    icon: GraduationCap,
-    title: "Get guidance on college subjects and stream mapping",
-  },
-];
+interface Feature {
+  icon: React.ElementType;
+  title: string;
+}
 
-const CvpInside: React.FC = () => {
+interface CvpInsideProps {
+  heading: string;
+  subheading?: string;
+  features: Feature[];
+  ctaText?: string;
+  ctaLink?: string;
+  ctaNote?: string;
+}
+
+const CvpInside: React.FC<CvpInsideProps> = ({
+  heading,
+  subheading,
+  features,
+  ctaText,
+  ctaLink,
+  ctaNote,
+}) => {
   return (
     <section className="p-4 sm:p-10 lg:p-20 flex justify-center bg-brand-bg">
-      {/* <div className="w-full max-w-[1440px] flex flex-col items-center gap-12 text-center font-lato px-4 md:px-8 lg:px-16"> */}
       <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-8 sm:gap-12 font-lato">
         {/* Heading */}
         <div className="max-w-7xl flex flex-col items-center gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl md:text-4xl">
-            online — but here’s what you’ll go through:
+            {heading}
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-brand-gray max-w-4xl">
-            What’s Inside (Without Giving It All Away 😉) We don’t reveal every
-            step
-          </p>
+          {subheading && (
+            <p className="text-base sm:text-lg md:text-xl text-brand-gray max-w-4xl">
+              {subheading}
+            </p>
+          )}
         </div>
 
         {/* === For XL and above: original 3 + 2 layout === */}
@@ -97,18 +94,23 @@ const CvpInside: React.FC = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col items-center gap-4">
-          <Link
-            href="/start"
-            className="flex items-center justify-center gap-2 rounded-xl bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors"
-          >
-            <Zap size={18} /> Start Your Journey Today
-          </Link>
-          <p className="text-sm sm:text-base text-brand-gray mt-2 text-center max-w-2xl mx-auto">
-            Each capsule is short, engaging, and designed to unlock insights no
-            more than 15–20 minutes each.
-          </p>
-        </div>
+        {(ctaText || ctaNote) && (
+          <div className="flex flex-col items-center gap-4">
+            {ctaText && ctaLink && (
+              <Link
+                href={ctaLink}
+                className="flex items-center justify-center gap-2 rounded-xl bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors"
+              >
+                <Zap size={18} /> {ctaText}
+              </Link>
+            )}
+            {ctaNote && (
+              <p className="text-sm sm:text-base text-brand-gray mt-2 text-center max-w-3xl mx-auto">
+                {ctaNote}
+              </p>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
