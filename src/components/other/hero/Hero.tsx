@@ -1,5 +1,6 @@
 import { Briefcase, GraduationCap, UserRound } from "lucide-react";
 import Link from "next/link";
+import { RotatingText } from "@/components/other/RotatingText";
 
 const Hero = () => {
   return (
@@ -14,10 +15,14 @@ const Hero = () => {
         <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
           <div className="font-red-rose text-2xl sm:text-3xl lg:text-[42px] leading-snug">
             Not Just Another Career Guidance.
-            <br className="hidden sm:block" />A Vision-Mapping System for the
-            21st-
-            {/* <br className="hidden sm:block" /> */}
-            Century Learner.
+            <br className="hidden sm:block" />
+            <RotatingText
+              words={[
+                "A Vision-Mapping System for the 21st-Century Learner.",
+                "Up-skilling India, Empowering Nation, Realizing Dreams.",
+              ]}
+              duration={3000}
+            />
           </div>
           <div className="max-w-3xl text-brand-gray text-base sm:text-lg lg:text-xl">
             Youth Pulse Digital™ creates ultra-personalized journeys that unlock
