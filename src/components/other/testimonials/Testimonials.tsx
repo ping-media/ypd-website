@@ -37,7 +37,7 @@ const Testimonials = () => {
   return (
     <div className="bg-white">
       <SectionSlider
-        title="WHAT OUR CLIENT SAY"
+        title="What Our Users Say"
         cardWidth={330} // cards fit in 1280px
         gap={20}
         buttonText="Start Your Journey"

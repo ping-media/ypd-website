@@ -35,28 +35,30 @@ const ContactUs = () => {
               <p className="font-sans text-sm leading-relaxed">
                 Youth Pulse Digital Pvt Ltd <br />
                 Astra Tower, ASO-501, Action Area-IIC, <br />
-                New Town, Kolkata-70161, West Bengal
+                New Town, Kolkata-700161, West Bengal <br />
+                CIN: U62010WB2025PTC281468 <br />
+                PAN: AACCY0548C
               </p>
             </div>
 
             {/* Contact Info */}
             <div className="flex flex-col gap-2 font-sans text-sm">
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-2 hover:opacity-60 cursor-pointer">
                 <Phone className="w-6 h-6 text-brand-primary" />
                 +91 8650126521
               </p>
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-2 hover:opacity-60 cursor-pointer">
                 <Image
-                  src="/icons/wa.png"
+                  src="/icons/wa.svg"
                   alt="Whatsapp"
                   width={24}
                   height={24}
                 />
-                +91 7300688536 (WhatsApp)
+                +91 7300688536
               </p>
-              <p className="flex items-center gap-2">
+              <p className="flex items-center gap-2 hover:opacity-60 cursor-pointer">
                 <Image
-                  src="/icons/gmail.png"
+                  src="/icons/gmail.svg"
                   alt="Gmail"
                   width={24}
                   height={24}

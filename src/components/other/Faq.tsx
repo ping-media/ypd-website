@@ -34,27 +34,27 @@ const faqs = [
       "It provides career simulations, skill assessments, and mentor guidance to align your strengths with career goals.",
   },
   {
-    question: "What is Career Reinvention Program™?",
+    question: "What are Exam Mentors?",
     answer:
       "It’s a specialized program to help individuals pivot their careers by acquiring new skills and exploring emerging opportunities.",
   },
   {
-    question: "What is CVP Advance™?",
+    question: "What are Entrance Mentors?",
     answer:
       "CVP Advance™ offers advanced assessments and career planning tools for in-depth exploration.",
   },
   {
-    question: "What should I choose CVP Lite or Advance?",
+    question: "What frameworks are used for guidance?",
     answer:
       "Choose CVP Lite for a quick overview, and Advance if you want detailed, personalized guidance.",
   },
   {
-    question: "How can CareerVerse help me understand my future role?",
+    question: "How can I explore multiple career roles?",
     answer:
       "It provides career simulations, skill assessments, and mentor guidance to align your strengths with career goals.",
   },
   {
-    question: "What is CVP Advance™?",
+    question: "Which Career Pathway is good for me?",
     answer:
       "CVP Advance™ offers advanced assessments and career planning tools for in-depth exploration.",
   },

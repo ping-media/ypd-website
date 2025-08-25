@@ -12,7 +12,7 @@ export default function VideoPreview() {
 
   return (
     <div className="px-4 pb-4 sm:px-10 sm:pb-5 lg:pb-10 lg:px-20 ">
-      <div className="relative w-full sm:w-[90%] max-w-[1440px] mx-auto mt-4 sm:mt-16 rounded-xl overflow-hidden shadow-lg">
+      <div className="relative w-full max-w-[1000px] mx-auto mt-4 sm:mt-16 rounded-xl overflow-hidden shadow-lg">
         <div className="relative w-full aspect-[16/9]">
           {isPlaying ? (
             <iframe

@@ -39,12 +39,10 @@ const Feedbacks: React.FC = () => {
         {/* Heading */}
         <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
           <div className="font-red-rose text-2xl sm:text-3xl">
-            Your Path, Your Way: Programs for Every Stage
+            What Students & Parents Say
           </div>
           <div className="text-base sm:text-lg text-brand-gray max-w-4xl">
-            Start your journey with the program that matches your readiness.
-            From high school discovery to professional reinvention Youth Pulse
-            Digital™ has a track built for you.
+            We believe our journeys should empower students & parents equally.
           </div>
         </div>
 

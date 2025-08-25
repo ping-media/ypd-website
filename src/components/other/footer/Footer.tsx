@@ -54,10 +54,11 @@ export default function Footer() {
           </h2>
           <p className="text-sm font-medium">Regd Office</p>
           <p className="text-sm text-white">
-            1, Green Park, <br />
-            Kolkata – 700140 <br />
-            West Bengal, India <br />
-            CIN: U96010WB2023PTC263705
+            Youth Pulse Digital Pvt Ltd <br />
+            Astra Tower, ASO-501, Action Area-IIC, <br />
+            New Town, Kolkata-700161, West Bengal <br />
+            CIN: U62010WB2025PTC281468 <br />
+            PAN: AACCY0548C
           </p>
 
           <div className="space-y-5 text-white">
@@ -72,7 +73,7 @@ export default function Footer() {
             </p>
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
-                src="/icons/wa.png"
+                src="/icons/wa.svg"
                 alt="WhatsApp"
                 width={20}
                 height={20}
@@ -83,12 +84,12 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                +91 7300868536 (WhatsApp)
+                +91 7300868536
               </a>
             </p>
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
-                src="/icons/gmail.png"
+                src="/icons/gmail.svg"
                 alt="Email"
                 width={20}
                 height={20}
@@ -112,14 +113,15 @@ export default function Footer() {
             </h2>
             <p className="text-sm font-medium">Regd Office</p>
             <p className="text-sm text-white">
-              1, Green Park, <br />
-              Kolkata – 700140 <br />
-              West Bengal, India <br />
-              CIN: U96010WB2023PTC263705
+              Youth Pulse Digital Pvt Ltd <br />
+              Astra Tower, ASO-501, Action Area-IIC, <br />
+              New Town, Kolkata-700161, West Bengal <br />
+              CIN: U62010WB2025PTC281468 <br />
+              PAN: AACCY0548C
             </p>
 
             <div className="space-y-5 text-white">
-              <p className="flex items-center gap-2 text-sm hover:opacity-60">
+              <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
                 <Image
                   src="/icons/phone.png"
                   alt="Email"
@@ -128,9 +130,9 @@ export default function Footer() {
                 />{" "}
                 +91 8650126521
               </p>
-              <p className="flex items-center gap-2 text-sm hover:opacity-60">
+              <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
                 <Image
-                  src="/icons/wa.png"
+                  src="/icons/wa.svg"
                   alt="WhatsApp"
                   width={20}
                   height={20}
@@ -140,12 +142,12 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +91 7300868536 (WhatsApp)
+                  +91 7300868536
                 </a>
               </p>
               <p className="flex items-center gap-2 text-sm hover:opacity-60">
                 <Image
-                  src="/icons/gmail.png"
+                  src="/icons/gmail.svg"
                   alt="Email"
                   width={20}
                   height={20}
@@ -161,42 +163,44 @@ export default function Footer() {
             title="Explore"
             links={[
               { label: "Home", href: "/" },
-              { label: "FAQs", href: "#" },
-              { label: "Contact Us", href: "/contact" },
-              { label: "Career Path", href: "/career-path" },
+              { label: "About", href: "/about" },
+              { label: "Career", href: "/career" },
               { label: "Pricing", href: "/pricing" },
-              { label: "About Us", href: "/about" },
-              { label: "YPD Brain", href: "/ypd-brain" },
-              { label: "Career Vision Program™", href: "/career-vision" },
-              {
-                label: "Career Reinvention Program™",
-                href: "/career-reinvention",
-              },
+              { label: "Mentor Connect", href: "/mentor-connect" },
+              { label: "Contact Us", href: "/contact" },
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "Terms of Use", href: "/terms" },
             ]}
           />
           <FooterSectionAccordion
             title="For Students"
             links={[
+              { label: "CVP Vision Program™", href: "/cvp-vision" },
               { label: "CVP lite™", href: "/cvp-lite" },
-              { label: "Career Advance™", href: "/career-advance" },
+              { label: "CVP Advance™", href: "/cvp-advance" },
               { label: "Career Verse™", href: "/career-verse" },
-              { label: "Cvp Challenger™", href: "/cvp-challenger" },
-              { label: "10th - 12th CBSC Mentors™", href: "#" },
-              { label: "UPSC Mentor™", href: "#" },
-              { label: "Mission NDA™", href: "/mission-nda" },
+              { label: "Exam Mentors™", href: "/exam-mentors" },
+              { label: "Entrance Mentors™", href: "/entrance-mentors" },
+              { label: "Counselling Mentors™", href: "/counselling-mentors" },
             ]}
           />
           <FooterSectionAccordion
             title="For Parents"
             links={[
-              { label: "Counselling Guru™", href: "#" },
-              { label: "Global Navigator™", href: "#" },
+              {
+                label: "Couselling Guru™",
+                href: "/counselling-guru",
+              },
+              { label: "Global Navigator™", href: "/global-navigator" },
             ]}
           />
           <FooterSectionAccordion
             title="For Professionals"
             links={[
-              { label: "CRP Aptitude Trainer ™", href: "#" },
+              {
+                label: "Career Reinvention Program ™",
+                href: "/career-reinvention",
+              },
               { label: "Career Verse Pro™", href: "#" },
               { label: "Reinvasion Guru™", href: "#" },
             ]}
@@ -210,7 +214,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20 py-4 text-sm flex flex-col md:flex-row justify-between gap-3 font-sans text-center md:text-left">
         {/* Links - on top in mobile, last in desktop */}
-        <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
+        {/* <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
           <Link href="/privacy-policy" className="hover:opacity-60">
             Privacy Policy
           </Link>
@@ -220,14 +224,14 @@ export default function Footer() {
           <Link href="/faqs" className="hover:opacity-60">
             FAQs
           </Link>
-        </div>
+        </div> */}
 
         {/*middle in both mobile & desktop */}
         <p className="order-2">Built in Bharat. Powered by Purpose.</p>
 
         {/* Copyright - last in mobile, first in desktop */}
         <p className="order-3 md:order-1">
-          © 2025 Youth Pulse Digital™ (Unit of CMPL) All Rights Reserved
+          © 2025 Youth Pulse Digital™ All Rights Reserved
         </p>
       </div>
     </footer>

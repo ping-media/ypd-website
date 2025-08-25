@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="container font-lato max-w-5xl pt-4 mx-auto flex flex-col justify-center items-center gap-4 sm:gap-5 px-4 sm:px-6 min-h-[57vh] sm:min-h-0">
+    <div className="container font-lato max-w-4xl pt-4 mx-auto flex flex-col justify-center items-center gap-4 sm:gap-5 px-4 sm:px-6 min-h-[57vh] sm:min-h-0">
       {/* Tagline */}
       <div className="bg-[#F6F7F9] border border-[#E1E4EB] text-xs sm:text-sm rounded-sm w-fit py-1 px-2 text-center">
         ✨ Backed by AI. Guided by Mentors. Built for Bharat.
@@ -12,10 +12,12 @@ const Hero = () => {
       <div className="flex flex-col gap-6 sm:gap-10">
         {/* Heading & subtext */}
         <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
-          <div className="font-red-rose text-2xl sm:text-3xl lg:text-5xl leading-snug">
+          <div className="font-red-rose text-2xl sm:text-3xl lg:text-[42px] leading-snug">
             Not Just Another Career Guidance.
             <br className="hidden sm:block" />A Vision-Mapping System for the
-            21st- Century Learner.
+            21st-
+            {/* <br className="hidden sm:block" /> */}
+            Century Learner.
           </div>
           <div className="max-w-3xl text-brand-gray text-base sm:text-lg lg:text-xl">
             Youth Pulse Digital™ creates ultra-personalized journeys that unlock

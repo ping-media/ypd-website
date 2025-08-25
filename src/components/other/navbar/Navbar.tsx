@@ -13,11 +13,11 @@ const Links = [
   {
     name: "Career Vision",
     dropdown: [
-      { name: "CVP lite™", href: "/cpv-lite" },
-      { name: "CVP advance™", href: "/cpv-advance" },
-      { name: "Careerverse™", href: "/careerverse" },
-      { name: "10-12 CBSE Mentor™", href: "/cbse-mentor" },
-      { name: "UPSC Mentor™", href: "/upsc-mentor" },
+      { name: "Career Clarity™", href: "/career-clarity" },
+      { name: "Exam Mentors™", href: "/exam-mentors" },
+      { name: "Entrance Mentors™", href: "/entrance-mentors" },
+      { name: "Counselling Mentors™", href: "/counselling-mentors" },
+      { name: "Mentor Connect™", href: "/mentor-connect" },
       { name: "Counseling Guru™", href: "/counselling-guru" },
       { name: "Global Navigator™", href: "/global-navigator" },
     ],
@@ -25,9 +25,8 @@ const Links = [
   {
     name: "Career Reinvention",
     dropdown: [
-      { name: "CRP aptitude trainer™", href: "/crp-aptitude" },
-      { name: "Reinvention Guru™", href: "/reinvention-guru" },
-      { name: "Careerverse Pro™", href: "/careerverse-pro" },
+      { name: "Professional Clarity™", href: "/professional-clarity" },
+      { name: "Skilling Mentors™", href: "/skilling-mentors" },
     ],
   },
   { name: "Contact us", href: "/contact" },
@@ -84,7 +83,7 @@ const Navbar = () => {
           <div className="hidden sm:flex flex-1 justify-end">
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base uppercase flex justify-center items-center py-2.5 px-5 space-x-0.5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base capitalize flex justify-center items-center py-2 px-4 space-x-0.5"
             >
               <span>
                 Sign up{" "}
@@ -109,7 +108,6 @@ const Navbar = () => {
           </button>
         </div>
       </header>
-
       <div className="h-24 sm:h-28" />
       {/* Overlay */}
       {mobileOpen && (
