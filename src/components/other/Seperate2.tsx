@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Seperate2 = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
       {/* wrapper */}
-      <div className="max-w-[1440px] w-full min-h-[400px] rounded-2xl flex flex-col md:flex-row items-center justify-between max-sm:mt-8 p-4 sm:p-10 lg:p-20 bg-gradient-to-r from-brand-accent via-brand-primary to-brand-accent">
+      <div className="max-w-7xl w-full min-h-[400px] rounded-2xl flex flex-col md:flex-row items-center justify-between p-4 sm:p-10 bg-gradient-to-r from-brand-accent via-brand-primary to-brand-accent">
         {/* Left Content */}
         <div className="flex flex-col justify-center max-w-xl text-left">
           <h2 className="text-white font-red-rose font-bold text-2xl sm:text-3xl md:text-4xl leading-snug">

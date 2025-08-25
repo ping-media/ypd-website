@@ -41,8 +41,8 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
 
   return (
     <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      {/* Header */}
       <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
+        {/* Header */}
         <div className="space-y-2 lg:space-y-4">
           <div className="font-red-rose text-2xl sm:text-3xl">{title}</div>
           <div className="text-base sm:text-lg text-brand-gray">
