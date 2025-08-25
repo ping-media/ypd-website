@@ -4,17 +4,17 @@ import NewsCard from "./NewsCard";
 const News = () => {
   const cardData = [
     {
-      icon: "/icons/n1.png",
+      icon: "/icons/n1.svg",
       description:
         "Enabling Tier 2/3 youth with clarity-first career guidance.",
     },
     {
-      icon: "/icons/n2.png",
+      icon: "/icons/n2.svg",
       description:
         "Feature story on YPD's Intelligent model and its impact in Indian learning system",
     },
     {
-      icon: "/icons/n3.png",
+      icon: "/icons/n3.svg",
       description:
         "Highlight from pilots how students are using Career Verse to decide on emerging careers.",
     },

@@ -12,7 +12,7 @@ const AccreditationCard: React.FC<AccreditationCardProps> = ({
   subheading,
 }) => {
   return (
-    <div className="p-4 sm:p-8 rounded-xl border bg-white shadow-sm sm:h-56 h-full ">
+    <div className="p-4 sm:p-8 rounded-xl border bg-white shadow-sm sm:h-56 h-full mx-1">
       <div className="flex flex-col items-center gap-3 sm:gap-6 text-center">
         <div className="w-14 h-14 bg-[#ECFDF5] flex items-center justify-center rounded-md shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
           <Image src={image} alt={heading} width={36} height={36} />

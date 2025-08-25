@@ -22,16 +22,22 @@ const growthData = [
       "Our journeys leads to readiness career clarity, real job simulations, learning paths, all aligned with future needs & employer milestones.",
   },
   {
-    image: "/growth1.png",
-    heading: "Youth-Centered by Design",
+    image: "/growth4.png",
+    heading: "India + Bharat First",
     description:
-      "We obsess over student clarity, not complexity. Every feature, report, and experience is built around the learner.",
+      "Our ecosystem is built to serve students in Tier 2/3/4 towns, MSMEs, family systems, and under-resourced schools.",
   },
   {
-    image: "/growth2.png",
-    heading: "Clarity Over Confusion",
+    image: "/growth5.png",
+    heading: "Investor Transparent",
     description:
-      "YPD doesn’t just guide. It helps students make decisions with data, self-awareness, and direction that sticks.",
+      "YImpact-led, capital-efficient, growth-modelled. Built to scale with clarity — not flash. Focused on value creation over vanity.",
+  },
+  {
+    image: "/growth6.png",
+    heading: "System Collaborative",
+    description:
+      "YPD works with schools, colleges, CSR, trainers, corporates, and gov bodies — as an integrative clarity engine, not a siloed product.",
   },
 ];
 
