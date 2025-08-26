@@ -21,6 +21,8 @@ import {
   Users,
   School,
   HelpCircle,
+  Zap,
+  ArrowRight,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 import { User, BookOpen, Award } from "lucide-react";
@@ -131,6 +133,20 @@ const audience = [
     image: "/cvplite/uses.png",
   },
 ];
+const journeySteps = [
+  {
+    id: "01",
+    text: "A clear sense of who you are  and what fits you",
+  },
+  {
+    id: "02",
+    text: "Your top 2–3 career directions with skill-action plans",
+  },
+  {
+    id: "03",
+    text: "Newfound confidence in your decision-making, learning, and future",
+  },
+];
 
 const page = () => {
   return (
@@ -232,14 +248,70 @@ const page = () => {
         ctaLink="/#"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
-      <CvpJourney />
+      <CvpJourney
+        heading="What You'll Walk Away With"
+        description="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
+        steps={journeySteps}
+        imageSrc="/cvplite/journey.png"
+        imageAlt="CVP Journey"
+        ctaText="Start CVP Advance™"
+        ctaHref="/start"
+        ctaIcon={<Zap size={18} />}
+        footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
+      />
       <CvpRealworld />
-      <CvpPricing />
+      <CvpPricing
+        heading="Pricing & Access"
+        subheading="CareerVerse™ is a premium experience made affordable."
+        plans={[
+          {
+            title: "Free Plan",
+            description: "For students starting their journey",
+            price: "₹0",
+            features: [
+              "Basic profile setup (Step 0)",
+              "Interest Preview (Step 1 – partial access)",
+              "AI summary of interest clusters",
+              "No report or stream recommendation",
+              "Locked after preview, upgrade anytime",
+              "Best for students who want to 'try before they trust.'",
+            ],
+          },
+          {
+            title: "Premium Plan",
+            description: "Complete your full Career Persona Journey",
+            price: "₹2,499",
+            priceText: "Start My Career Simulation",
+            features: [
+              "Full 7-day journey",
+              "AI-driven capsules",
+              "Personalized final report",
+              "Lifetime access via your YPD login",
+              "Personal Action Plan",
+              "Optional mentor review available at additional cost",
+            ],
+            highlight: true,
+          },
+        ]}
+        footerText="For Institutions: Custom packages available for 50+ students. Please "
+        footerLink={{ text: "Contact Us", href: "/contact" }}
+      />
       <CvpImpact />
       <CvpCta />
       <CvpSecurity />
       <CvpFeedback />
-      <CvpSeperate />
+      <CvpSeperate
+        bgImage="/cvplite/cvpBg.png"
+        heading={
+          <>
+            <span className="font-bold">Get Started Now</span>
+          </>
+        }
+        subheading="This isn’t psychometric rehash. This is future-ready, emotionally intelligent career building in just one week."
+        ctaText="Start My 7-Day Journey"
+        ctaHref="/start"
+        ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
+      />
     </>
   );
 };

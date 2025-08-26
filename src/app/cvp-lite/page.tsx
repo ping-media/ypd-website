@@ -22,6 +22,8 @@ import {
   Users,
   School,
   HelpCircle,
+  Zap,
+  ArrowRight,
 } from "lucide-react";
 import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { User, BookOpen, Award } from "lucide-react";
@@ -130,6 +132,20 @@ const audience = [
     image: "/cvplite/uses.png",
   },
 ];
+const journeySteps = [
+  {
+    id: "01",
+    text: "The CVP Lite™ doesn’t throw options at you. It walks with you, helping you unlock who you are, how you think, how you dream, and where your natural strengths want to grow.",
+  },
+  {
+    id: "02",
+    text: "Through human-structured AI conversations, reflective journaling moments, and dynamic career mapping, we help you build not just a choice  but a vision.",
+  },
+  {
+    id: "03",
+    text: "Every step is designed to be warm, personalized, and structured ensuring that you don’t just explore careers randomly but architect your future thoughtfully, courageously, and joyfully.",
+  },
+];
 
 const page = () => {
   return (
@@ -225,14 +241,74 @@ const page = () => {
         ctaLink="/#"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
-      <CvpJourney />
+      <CvpJourney
+        heading="Why This Journey is Unique"
+        description="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
+        steps={journeySteps}
+        imageSrc="/cvplite/journey.png"
+        imageAlt="CVP Journey"
+        ctaText="Start CVP Lite™"
+        ctaHref="/start"
+        ctaIcon={<Zap size={18} />}
+        footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
+      />
       <CvpRealworld />
-      <CvpPricing />
+      <CvpPricing
+        heading="Pricing & Access"
+        subheading="CareerVerse™ is a premium experience made affordable."
+        plans={[
+          {
+            title: "Free Plan",
+            description: "For students starting their journey",
+            price: "₹0",
+            features: [
+              "Basic profile setup (Step 0)",
+              "Interest Preview (Step 1 – partial access)",
+              "AI summary of interest clusters",
+              "No report or stream recommendation",
+              "Locked after preview, upgrade anytime",
+              "Best for students who want to 'try before they trust.'",
+            ],
+          },
+          {
+            title: "Premium Plan",
+            description: "Complete your full Career Persona Journey",
+            price: "₹899",
+            priceText: "Start My Career Simulation",
+            features: [
+              "Full access",
+              "Strengths, learning style & thinking profile",
+              "Passion & fit analysis",
+              "Cognitive & ethical intelligence insights",
+              "Career direction bridge & education roadmap",
+              "Personal Action Plan",
+              "Downloadable Final Career Persona Report (Step 10)",
+              "Lifetime access via your YPD login",
+              "Built for Class 9–12 students who want trusted, structured clarity",
+            ],
+            highlight: true,
+          },
+        ]}
+        footerText="Institutional Pricing Available. Please"
+        footerLink={{ text: "Contact Us", href: "/contact" }}
+      />
       <CvpImpact />
       <CvpCta />
       <CvpSecurity />
       <CvpFeedback />
-      <CvpSeperate />
+      <CvpSeperate
+        bgImage="/cvplite/cvpBg.png"
+        heading={
+          <>
+            <span className="font-bold">CVP Lite™</span> → Your Gateway to
+            Future-Ready Decision-Making
+          </>
+        }
+        subheading="Because when you know what fits, you grow with purpose."
+        ctaText="Start Your Career Journey Today"
+        ctaHref="/start"
+        ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
+      />
     </>
   );
 };
