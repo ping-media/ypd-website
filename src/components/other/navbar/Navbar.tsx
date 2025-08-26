@@ -13,13 +13,13 @@ const Links = [
   {
     name: "Career Vision",
     dropdown: [
-      { name: "Career Clarity™", href: "/career-clarity" },
-      { name: "Exam Mentors™", href: "/exam-mentors" },
-      { name: "Entrance Mentors™", href: "/entrance-mentors" },
-      { name: "Counselling Mentors™", href: "/counselling-mentors" },
-      { name: "Mentor Connect™", href: "/mentor-connect" },
-      { name: "Counseling Guru™", href: "/counselling-guru" },
-      { name: "Global Navigator™", href: "/global-navigator" },
+      { name: "Career Clarity", href: "/career-clarity" },
+      { name: "Exam Mentors", href: "/exam-mentors" },
+      { name: "Entrance Mentors", href: "/entrance-mentors" },
+      { name: "Counselling Mentors", href: "/counselling-mentors" },
+      { name: "Mentor Connect", href: "/mentor-connect" },
+      { name: "Counseling Guru", href: "/counselling-guru" },
+      { name: "Global Navigator", href: "/global-navigator" },
     ],
   },
   {

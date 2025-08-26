@@ -19,7 +19,7 @@ const programsData = [
     description:
       "A self-paced experience to discover career inclinations, build early self-awareness, and align choices without pressure. Ideal for high school clarity & parent alignment.",
     image: "/lite.png",
-    buttonText: "Start Career Lite",
+    buttonText: "Start CVP Lite",
     icon: GraduationCap,
     buttonIcon: GraduationCap,
   },
@@ -34,7 +34,7 @@ const programsData = [
     buttonIcon: Compass,
   },
   {
-    title: "Career Vision Program™ - Challenger",
+    title: "Careerverse™",
     target: "Final-Year UG/PG & Fresh Graduates ",
     description:
       "Complete blueprint with 3 pathway maps, EQ + cognition analytics, mentor coaching, certification roadmap, resume-building & launch readiness.",

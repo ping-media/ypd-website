@@ -64,6 +64,7 @@ export default function Footer() {
           <div className="space-y-5 text-white">
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
+                className="invert"
                 src="/icons/phone.svg"
                 alt="Email"
                 width={20}
@@ -123,11 +124,12 @@ export default function Footer() {
             <div className="space-y-5 text-white">
               <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
                 <Image
+                  className="invert"
                   src="/icons/phone.svg"
-                  alt="Email"
+                  alt="Phone"
                   width={20}
                   height={20}
-                />{" "}
+                />
                 +91 8650126521
               </p>
               <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
