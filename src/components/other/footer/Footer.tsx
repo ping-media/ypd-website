@@ -166,45 +166,55 @@ export default function Footer() {
             links={[
               { label: "Home", href: "/" },
               { label: "About", href: "/about" },
-              { label: "Career", href: "/career" },
               { label: "Pricing", href: "/pricing" },
-              { label: "Mentor Connect", href: "/mentor-connect" },
+              { label: "Career", href: "/career" },
               { label: "Contact Us", href: "/contact" },
+              { label: "Mentor Connect", href: "/mentor-connect" },
               { label: "Privacy Policy", href: "/privacy-policy" },
               { label: "Terms of Use", href: "/terms" },
+              { label: "Subscribe to Newsletters ", href: "/newsletter" },
             ]}
           />
           <FooterSectionAccordion
-            title="For Students"
+            title="Students"
             links={[
-              { label: "CVP Vision Program™", href: "/cvp-vision" },
-              { label: "CVP lite™", href: "/cvp-lite" },
-              { label: "CVP Advance™", href: "/cvp-advance" },
-              { label: "Career Verse™", href: "/career-verse" },
-              { label: "Exam Mentors™", href: "/exam-mentors" },
-              { label: "Entrance Mentors™", href: "/entrance-mentors" },
-              { label: "Counselling Mentors™", href: "/counselling-mentors" },
+              { label: "CVP Vision Program", href: "/cvp-vision" },
+              { label: "CVP lite", href: "/cvp-lite" },
+              { label: "CVP Advance", href: "/cvp-advance" },
+              { label: "CareerVerse", href: "/career-verse" },
+              { label: "Exam Mentors", href: "/exam-mentors" },
+              { label: "Entrance Mentors", href: "/entrance-mentors" },
+              { label: "Counselling Mentors", href: "/counselling-mentors" },
+              { label: "Creativity Lab", href: "/counselling-mentors" },
+              { label: "Blogs", href: "/counselling-mentors" },
             ]}
           />
           <FooterSectionAccordion
-            title="For Parents"
-            links={[
-              {
-                label: "Couselling Guru™",
-                href: "/counselling-guru",
-              },
-              { label: "Global Navigator™", href: "/global-navigator" },
-            ]}
-          />
-          <FooterSectionAccordion
-            title="For Professionals"
+            title="Professionals"
             links={[
               {
-                label: "Career Reinvention Program ™",
+                label: "Career Reinvention Program",
                 href: "/career-reinvention",
               },
-              { label: "Career Verse Pro™", href: "#" },
-              { label: "Reinvasion Guru™", href: "#" },
+              { label: "Aptitude Trainer", href: "/aptitude-trainer" },
+              { label: "Reboot Navigator", href: "/reboot-navigator" },
+              { label: "Reinvention Guru", href: "/reinvention-guru" },
+              { label: "Innovartion Hub", href: "/innovation-hub" },
+              { label: "Pulse Nexus", href: "/pulse-nexus" },
+              { label: "Industry Expert Connect", href: "/industry-expert" },
+              { label: "Book A Demo", href: "/book-demo" },
+            ]}
+          />
+          <FooterSectionAccordion
+            title="Businesses"
+            links={[
+              { label: "Admission Test", href: "/admission-test" },
+              { label: "Hiring & Onboarding", href: "/hiring-onboarding" },
+              { label: "School / Institute OS", href: "/school-institute" },
+              { label: "Institute Connect", href: "/institute-connect" },
+              { label: "MSME Connect", href: "/msme-connect" },
+              { label: "Corporate Connect", href: "/corporate-connect" },
+              { label: "Govt Connect", href: "/govt-connect" },
             ]}
           />
         </div>
