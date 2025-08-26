@@ -123,7 +123,7 @@ export default function Footer() {
             <div className="space-y-5 text-white">
               <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
                 <Image
-                  src="/icons/phone.png"
+                  src="/icons/phone.svg"
                   alt="Email"
                   width={20}
                   height={20}

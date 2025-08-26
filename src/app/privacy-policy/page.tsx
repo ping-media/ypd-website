@@ -1,12 +1,12 @@
 const Page = () => {
   return (
-    <div className="p-4 sm:p-10 sm:py-5 lg:px-20 lg:py-10 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <div className="p-4 sm:p-10 lg:px-20 lg:py-10 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
       <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
         <div className="flex-1">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             Privacy Policy Youth Pulse Digital™
           </h1>
-          <p className="mb-4">Last Updated: 25/08/2025</p>
+          <p className="mb-4">Last Updated: 25/08/25</p>
           <p className="mb-4">
             Welcome to Youth Pulse Digital™. We are committed to protecting your
             personal data and respecting your privacy rights in compliance with
@@ -75,11 +75,9 @@ const Page = () => {
             </li>
           </ul>
 
-          {/* 3. How We Use Your Information */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             3. How We Use Your Information
           </h2>
-
           <p className="mb-2 font-semibold">Core Services:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>
@@ -113,11 +111,9 @@ const Page = () => {
             <li>Service optimization and new feature development</li>
           </ul>
 
-          {/* 4. AI Technology Disclaimer */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             4. AI Technology Disclaimer
           </h2>
-
           <p className="mb-2 font-semibold">Important Notice:</p>
           <p className="mb-4">
             Our platform uses proprietary AI models and large language models
@@ -159,42 +155,58 @@ const Page = () => {
             </li>
           </ul>
 
-          {/* 5. Information Sharing and Disclosure */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             5. Information Sharing and Disclosure
           </h2>
-          <p className="mb-2">
+          <p className="mb-4">
             We do not sell, rent, or trade your personal information. Limited
             sharing occurs only in these circumstances:
           </p>
 
+          <p className="mb-2 font-semibold">With Your Consent:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>
-              <strong>With Your Consent:</strong> Sharing progress reports with
-              parents/guardians (for users under 18); Connecting with
-              educational institutions or employers (when explicitly requested)
+              Sharing progress reports with parents/guardians (for users under
+              18)
             </li>
             <li>
-              <strong>Service Providers:</strong> Trusted technology partners
-              under strict data protection agreements; Cloud storage and
-              security service providers with Indian data residency
-            </li>
-            <li>
-              <strong>Legal Requirements:</strong> Compliance with Indian laws,
-              court orders, or government requests; Protection of our rights,
-              safety, and security
-            </li>
-            <li>
-              <strong>Institutional Clients:</strong> Aggregated analytics may
-              be shared with schools or businesses without personal identifiers
+              Connecting with educational institutions or employers (when
+              explicitly requested)
             </li>
           </ul>
 
-          {/* 6. Data Security and Storage */}
+          <p className="mb-2 font-semibold">Service Providers:</p>
+          <ul className="list-disc ml-6 mb-4">
+            <li>
+              Trusted technology partners operating under strict data protection
+              agreements
+            </li>
+            <li>
+              Cloud storage and security service providers with Indian data
+              residency
+            </li>
+          </ul>
+
+          <p className="mb-2 font-semibold">Legal Requirements:</p>
+          <ul className="list-disc ml-6 mb-4">
+            <li>
+              Compliance with Indian laws, court orders, or government requests
+            </li>
+            <li>Protection of our rights, safety, and security</li>
+          </ul>
+
+          <p className="mb-2 font-semibold">Institutional Clients:</p>
+          <ul className="list-disc ml-6 mb-4">
+            <li>
+              For SaaS products, aggregated analytics may be shared with
+              institutional clients (schools, businesses) without personal
+              identifiers
+            </li>
+          </ul>
+
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             6. Data Security and Storage
           </h2>
-
           <p className="mb-2 font-semibold">Security Measures:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>End-to-end encryption for sensitive data transmission</li>
@@ -214,10 +226,12 @@ const Page = () => {
             </li>
           </ul>
 
-          {/* 7. Your Rights and Choices */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             7. Your Rights and Choices
           </h2>
+          <p className="mb-4">
+            Under Indian data protection laws, you have the right to:
+          </p>
 
           <p className="mb-2 font-semibold">Access and Control:</p>
           <ul className="list-disc ml-6 mb-4">
@@ -240,8 +254,9 @@ const Page = () => {
             <li>Withdraw consent for data processing (where applicable)</li>
           </ul>
 
-          <p className="mb-2">
-            How to Exercise Rights: Contact our Data Protection Office at{" "}
+          <p className="mb-4 font-semibold">How to Exercise Rights:</p>
+          <p className="mb-4">
+            Contact our Data Protection Office at{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
               className="font-bold cursor-pointer hover:underline"
@@ -250,10 +265,10 @@ const Page = () => {
             </a>
           </p>
 
-          {/* 8. Children's Data Protection */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             8. Children&apos;s Data Protection
           </h2>
+          <p className="mb-2 font-semibold">Age Requirements:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>Users under 18 require parental/guardian consent</li>
             <li>
@@ -276,10 +291,10 @@ const Page = () => {
             </li>
           </ul>
 
-          {/* 9. Cookies and Tracking */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             9. Cookies and Tracking
           </h2>
+          <p className="mb-4">We use cookies and similar technologies to:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>Maintain user sessions and preferences</li>
             <li>Analyze platform usage and improve services</li>
@@ -290,7 +305,6 @@ const Page = () => {
             may limit some platform functionality.
           </p>
 
-          {/* 10. Data Retention */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             10. Data Retention
           </h2>
@@ -313,81 +327,82 @@ const Page = () => {
             </li>
           </ul>
 
-          {/* 11. Grievance Redressal */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             11. Grievance Redressal
           </h2>
-          <ul className="list-disc ml-6 mb-4">
-            <li>
-              Grievance Contact: Email:{" "}
-              <a
-                href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
-              >
-                support@youthpulsedigital.com
-              </a>
-            </li>
-            <li>
-              Response Time: We aim to acknowledge complaints within 72 hours
-              and resolve within 15 working days
-            </li>
-            <li>
-              Escalation: If unsatisfied, you may approach the Data Protection
-              Board or relevant authorities under Indian law
-            </li>
-          </ul>
+          <p className="mb-2 font-semibold">Grievance Contact:</p>
+          <p className="mb-2">
+            Email:{" "}
+            <a
+              href="mailto:support@youthpulsedigital.com"
+              className="font-bold cursor-pointer hover:underline"
+            >
+              support@youthpulsedigital.com
+            </a>
+          </p>
+          <p className="mb-2">
+            Response Time: We aim to acknowledge complaints within 72 hours and
+            resolve within 15 working days
+          </p>
+          <p className="mb-4 font-semibold">Escalation:</p>
+          <p className="mb-4">
+            If unsatisfied with our response, you may approach the Data
+            Protection Board or relevant authorities under Indian law.
+          </p>
 
-          {/* 12. Updates to This Policy */}
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             12. Updates to This Policy
           </h2>
+          <p className="mb-4">We may update this Privacy Policy to reflect:</p>
           <ul className="list-disc ml-6 mb-4">
             <li>Changes in our services or business practices</li>
             <li>Updates to Indian data protection laws</li>
             <li>Enhanced security measures or technology improvements</li>
           </ul>
-          <p className="mb-4">
-            Notification Process: Email notification for material changes;
-            Platform notifications for all users; Updated policy posted on our
-            website with revision date
-          </p>
 
-          {/* 13. Contact Information */}
+          <p className="mb-2 font-semibold">Notification Process:</p>
+          <ul className="list-disc ml-6 mb-4">
+            <li>Email notification for material changes</li>
+            <li>Platform notifications for all users</li>
+            <li>Updated policy posted on our website with revision date</li>
+          </ul>
+
           <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
             13. Contact Information
           </h2>
-          <ul className="list-disc ml-6 mb-4">
-            <li>
-              General Support:{" "}
-              <a
-                href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
-              >
-                support@youthpulsedigital.com
-              </a>
-            </li>
-            <li>
-              Legal Matters:{" "}
-              <a
-                href="mailto:legal@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
-              >
-                legal@youthpulsedigital.com
-              </a>
-            </li>
-            <li>
-              Business Address: Youth Pulse Digital™
-              <br />
-              Astra Tower, ASO-501,
-              <br />
-              Action Area-IIC, New Town, Kolkata-700161, West Bengal
-              {/* <br />
-              CIN:U62010WB2025PTC281468
-              <br />
-              PAN: AACCY0548C */}
-            </li>
-            <li>Contact No: +91 8650126521</li>
-          </ul>
+          <p className="mb-2 font-semibold">Data Protection Queries:</p>
+          <p className="mb-2">
+            General Support:{" "}
+            <a
+              href="mailto:support@youthpulsedigital.com"
+              className="font-bold cursor-pointer hover:underline"
+            >
+              support@youthpulsedigital.com
+            </a>
+          </p>
+          <p className="mb-2">
+            Legal Matters:{" "}
+            <a
+              href="mailto:legal@youthpulsedigital.com"
+              className="font-bold cursor-pointer hover:underline"
+            >
+              legal@youthpulsedigital.com
+            </a>
+          </p>
+
+          <p className="mb-2 font-semibold">Business Address:</p>
+          <p className="mb-2">Youth Pulse Digital™</p>
+          <p className="mb-2">
+            Astra Tower, ASO-501,
+            <br />
+            Action Area-IIC, New Town,
+            <br />
+            Kolkata – 700161, West Bengal, India
+            {/* <br /> CIN: U62010WB2025PTC281468
+              <br /> PAN: AACCY0548C */}
+          </p>
+          <p className="mb-4">Phone Number: +91 8650126521</p>
+
           <p className="mb-4">
             This Privacy Policy is governed by Indian law. By using our
             services, you acknowledge that you have read, understood, and agree
