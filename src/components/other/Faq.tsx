@@ -11,52 +11,52 @@ const faqs = [
   {
     question: "What is Career Vision Program™?",
     answer:
-      "CareerVerse™ is an interactive career discovery and planning platform designed to help students identify their strengths, explore career options, and build a personalized growth plan.",
+      "It helps students find their strengths, choose streams, and match careers using AI + mentor logic, with clear step-by-step guidance.",
   },
   {
     question: "What is Career Reinvention Program™?",
     answer:
-      "It’s a specialized program to help individuals pivot their careers by acquiring new skills and exploring emerging opportunities.",
+      "It supports college students and working professionals to restart or switch careers through skillgap mapping, role-based plans, and guided upskilling.",
   },
   {
     question: "What is CVP Advance™?",
     answer:
-      "CVP Advance™ offers advanced assessments and career planning tools for in-depth exploration.",
+      "It’s a deeper career clarity program with adaptive tests, alternate role suggestions, and a detailed career report for student and parent alignment.",
   },
   {
     question: "What should I choose CVP Lite or Advance?",
     answer:
-      "Choose CVP Lite for a quick overview, and Advance if you want detailed, personalized guidance.",
+      "Lite is for early clarity on streams and roles. Advance is for detailed career options, alternates, and deeper guidance with reports.",
   },
   {
     question: "How can CareerVerse help me understand my future role?",
     answer:
-      "It provides career simulations, skill assessments, and mentor guidance to align your strengths with career goals.",
+      "CareerVerse simulates real-world job journeys, showing challenges, decisions, and skills needed, so you feel the reality of careers before choosing.",
   },
   {
     question: "What are Exam Mentors?",
     answer:
-      "It’s a specialized program to help individuals pivot their careers by acquiring new skills and exploring emerging opportunities.",
+      "Exam Mentors guide Class 10, 12 students of various boards. You study, revise, test with AI Mentor built to personalize your journey towards preparing you for your board exams with clarity & strategy.",
   },
   {
     question: "What are Entrance Mentors?",
     answer:
-      "CVP Advance™ offers advanced assessments and career planning tools for in-depth exploration.",
+      "AI Mentors coach students to prepare for competitive exams like NDA, UPSC, NEET, CUET with structured study capsules, past papers, and adaptive tracking dashboards.",
   },
   {
     question: "What frameworks are used for guidance?",
     answer:
-      "Choose CVP Lite for a quick overview, and Advance if you want detailed, personalized guidance.",
+      "YPD uses Indian and global frameworks like RIASEC, Vark, MBTI, tested psychometric frameworks, aptitude clusters, and adaptive tests to ensure future-ready career pathways.",
   },
   {
     question: "How can I explore multiple career roles?",
     answer:
-      "It provides career simulations, skill assessments, and mentor guidance to align your strengths with career goals.",
+      "You can simulate different roles and compare them for greater clarity on skills, pathways, and job market outlook in CareerVerse.",
   },
   {
     question: "Which Career Pathway is good for me?",
     answer:
-      "CVP Advance™ offers advanced assessments and career planning tools for in-depth exploration.",
+      "It depends on your profile. YPD Frameworks and AI Models combine to suggest best-fit pathways based on your skills, interests, passion, strengths, social & emotional needs, trends and employability needs",
   },
 ];
 
