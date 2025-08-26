@@ -9,7 +9,7 @@ type BenchCardProps = {
 
 const BenchCard = ({ image, heading, subheading }: BenchCardProps) => {
   return (
-    <div className="p-6 sm:p-8 rounded-xl border bg-white shadow-sm max-sm:h-[220px] sm:h-[250px] flex flex-col m-1">
+    <div className="p-6 sm:p-8 rounded-xl border bg-white drop-shadow-md max-sm:h-[220px] sm:h-[250px] flex flex-col m-1">
       <div className="flex flex-col gap-5 flex-grow">
         <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#ECFDF5] flex items-center justify-center rounded-md shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
           <Image src={image} alt={heading} width={36} height={36} />

@@ -2,7 +2,7 @@
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 interface SectionSliderProps {
   title: string;
@@ -26,18 +26,53 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
   buttonHref = "#",
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const scrollLeft = () =>
+  const checkScroll = () => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    const tolerance = 4; // fix for p-1 padding (~4px)
+
+    const scrollLeft = Math.round(el.scrollLeft);
+    const clientWidth = Math.round(el.clientWidth);
+    const scrollWidth = Math.round(el.scrollWidth);
+
+    setCanScrollLeft(scrollLeft > tolerance);
+    setCanScrollRight(scrollLeft + clientWidth < scrollWidth - tolerance);
+  };
+
+  const scrollLeft = () => {
     scrollContainerRef.current?.scrollBy({
       left: -cardWidth,
       behavior: "smooth",
     });
+  };
 
-  const scrollRight = () =>
+  const scrollRight = () => {
     scrollContainerRef.current?.scrollBy({
       left: cardWidth,
       behavior: "smooth",
     });
+  };
+
+  useEffect(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    // initial checks
+    checkScroll();
+    setTimeout(checkScroll, 100); // mobile needs a little delay
+
+    el.addEventListener("scroll", checkScroll);
+    window.addEventListener("resize", checkScroll);
+
+    return () => {
+      el.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, []);
 
   return (
     <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
@@ -54,13 +89,26 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
         <div className="flex gap-3 sm:mt-2 lg:mt-0 self-end">
           <button
             onClick={scrollLeft}
-            className="p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 hover:text-white hover:border-brand-accent hover:bg-brand-primary flex items-center justify-center transition-colors"
+            disabled={!canScrollLeft}
+            className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
+              ${
+                canScrollLeft
+                  ? "bg-brand-primary text-white border-brand-accent"
+                  : "opacity-50 cursor-not-allowed"
+              }`}
           >
             <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
+
           <button
             onClick={scrollRight}
-            className="p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 hover:text-white hover:border-brand-accent hover:bg-brand-primary flex items-center justify-center transition-colors"
+            disabled={!canScrollRight}
+            className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
+              ${
+                canScrollRight
+                  ? "bg-brand-primary text-white border-brand-accent"
+                  : "opacity-50 cursor-not-allowed"
+              }`}
           >
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>

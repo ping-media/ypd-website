@@ -1,4 +1,3 @@
-import { GraduationCap } from "lucide-react";
 import ClarityCard, { ClarityCardProps } from "./ClarityCard";
 
 const clarityCards: ClarityCardProps[] = [
@@ -6,17 +5,19 @@ const clarityCards: ClarityCardProps[] = [
     image: "/clarity1.png",
     text: "Career Vision Program™",
     href: "/#",
-    Icon: GraduationCap,
+    icon: "/icons/c1.svg",
   },
   {
     image: "/clarity2.png",
-    text: "👀 Sneak Peek",
+    text: "Sneak Peek",
     href: "/#",
+    icon: "/icons/c2.svg",
   },
   {
     image: "/clarity3.png",
-    text: "🤖 Career Reinvention Program™",
+    text: "Career Reinvention Program™",
     href: "/#",
+    icon: "/icons/c3.svg",
   },
 ];
 
