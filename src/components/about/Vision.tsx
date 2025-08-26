@@ -50,7 +50,7 @@ const Vision = () => {
             </div>
             <Link
               href="#"
-              className="bg-brand-primary border border-brand-accent text-white px-6 py-3 rounded-md shadow-md"
+              className="bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-white px-6 py-3 rounded-md shadow-md"
             >
               Explore YPD&apos;s Vision
             </Link>

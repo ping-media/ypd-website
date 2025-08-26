@@ -44,7 +44,7 @@ export default function Hero() {
         {/* CTA Button */}
         <Link
           href={"/#"}
-          className="flex justify-center items-center gap-2 rounded-lg text-brand-fg bg-brand-primary border border-brand-accent py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto"
+          className="flex justify-center items-center gap-2 rounded-lg text-brand-fg bg-brand-primary border hover:bg-brand-primary/90 border-brand-accent py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto"
         >
           <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
           Try the CVP Demo

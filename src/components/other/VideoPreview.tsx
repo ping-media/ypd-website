@@ -38,7 +38,7 @@ export default function VideoPreview() {
                 <button
                   onClick={() => setIsPlaying(true)}
                   aria-label="Play video"
-                  className="group flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full hover:bg-brand-primary transition"
+                  className="group flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full cursor-pointer hover:bg-brand-primary transition"
                 >
                   <Play
                     size={32}

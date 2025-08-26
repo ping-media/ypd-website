@@ -10,7 +10,7 @@ const PricingPage = () => {
   const [program, setProgram] = useState<string>("");
 
   return (
-    <section className="w-full flex justify-center p-4 sm:p-10 lg:p-20">
+    <section className="w-full flex justify-center p-4 sm:px-10 lg:px-20">
       <div className="w-full max-w-[1440px] flex flex-col items-center gap-6 sm:gap-10">
         {/* Program Selector */}
         <div className="w-full max-w-7xl flex flex-col items-center gap-4">

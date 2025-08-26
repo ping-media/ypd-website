@@ -7,7 +7,7 @@ import SocialLinks from "../other/SocialLinks";
 
 const ContactUs = () => {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
+    <section className="p-4 sm:px-10 lg:px-20 bg-white flex justify-center">
       <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-14 font-lato">
         {/* Heading */}
         <div className="max-w-7xl flex flex-col justify-between items-center gap-4">
