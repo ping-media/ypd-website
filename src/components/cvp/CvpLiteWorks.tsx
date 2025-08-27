@@ -198,7 +198,7 @@ export default function CvpLiteWorks({
           {ctaLink && (
             <Link
               href={ctaLink}
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white px-6 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium shadow-sm transition-colors"
             >
               <Zap size={18} /> {ctaText}
             </Link>

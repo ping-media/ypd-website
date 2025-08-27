@@ -38,7 +38,7 @@ export default function CvpCta({
           {buttons.map((btn, index) => (
             <button
               key={index}
-              className={`inline-flex items-center justify-center gap-2 rounded-lg px-6 sm:px-8 py-3 sm:py-4 font-medium transition-colors w-full sm:w-auto ${
+              className={`inline-flex items-center justify-center gap-2 rounded-lg text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium transition-colors w-full sm:w-auto ${
                 btn.variant === "primary"
                   ? "bg-brand-primary hover:bg-brand-primary/90 text-white shadow-sm"
                   : "border border-black hover:bg-green-100 text-gray-800"

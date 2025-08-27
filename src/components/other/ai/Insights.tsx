@@ -77,10 +77,10 @@ const Insights = () => {
         </div>
         <Link
           href="#"
-          className="bg-brand-primary hover:bg-brand-primary/90 cursor-pointer text-white px-6 py-3 rounded-lg shadow inline-flex items-center gap-2"
+          className="flex justify-center items-center gap-2 rounded-lg text-brand-fg text-sm sm:text-base lg:text-lg bg-brand-primary border border-brand-accent py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto hover:bg-brand-primary/90"
         >
-          <span className="leading-none">Read More</span>
-          <ArrowRight size={20} className="shrink-0" />
+          Read More
+          <ArrowRight size={24} className="shrink-0" />
         </Link>
       </div>
     </section>

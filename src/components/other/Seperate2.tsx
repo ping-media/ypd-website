@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const Seperate2 = () => {
   return (
@@ -20,9 +21,10 @@ const Seperate2 = () => {
 
           <Link
             href="/#"
-            className="mt-4 sm:mt-6 inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-white text-black rounded-md w-fit text-sm sm:text-base"
+            className="mt-4 sm:mt-6 flex justify-center items-center  gap-2 rounded-lg py-3 px-4 sm:py-3.5 sm:px-5 bg-white text-black hover:bg-white/90 w-fit text-sm sm:text-base lg:text-lg"
           >
-            View More →
+            View More
+            <ArrowRight size={24} className="shrink-0" />
           </Link>
         </div>
 

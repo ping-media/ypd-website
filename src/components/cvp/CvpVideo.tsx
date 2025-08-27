@@ -31,8 +31,8 @@ const CvpVideo: React.FC<CvpVideoProps> = ({
         </div>
 
         {/* Video Section */}
-        <div className="relative w-full max-w-7xl rounded-xl overflow-hidden shadow-lg">
-          <div className="relative w-full aspect-video">
+        <div className="relative w-full max-w-[1000px] mx-auto rounded-xl overflow-hidden shadow-lg">
+          <div className="relative w-full aspect-[16/9]">
             {isPlaying ? (
               <iframe
                 className="absolute inset-0 w-full h-full"

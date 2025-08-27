@@ -60,7 +60,7 @@ export default function CvpHero({
           {buttonText && (
             <Link
               href={buttonLink}
-              className="inline-flex items-center gap-2 bg-brand-primary text-white px-5 sm:px-6 py-3 rounded-lg shadow hover:bg-brand-primary/90 transition"
+              className="inline-flex items-center gap-2 bg-brand-primary text-white text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 rounded-lg shadow hover:bg-brand-primary/90 transition"
             >
               <Sparkles className="w-5 h-5" />
               {buttonText}

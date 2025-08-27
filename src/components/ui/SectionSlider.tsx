@@ -86,14 +86,14 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex gap-3 sm:mt-2 lg:mt-0 self-end">
+        <div className="flex gap-4 sm:mt-2 lg:mt-0 self-end">
           <button
             onClick={scrollLeft}
             disabled={!canScrollLeft}
             className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
               ${
                 canScrollLeft
-                  ? "bg-brand-primary text-white border-brand-accent"
+                  ? "bg-brand-primary text-white border-brand-accent cursor-pointer"
                   : "opacity-50 cursor-not-allowed"
               }`}
           >
@@ -106,7 +106,7 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
             className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
               ${
                 canScrollRight
-                  ? "bg-brand-primary text-white border-brand-accent"
+                  ? "bg-brand-primary text-white border-brand-accent cursor-pointer"
                   : "opacity-50 cursor-not-allowed"
               }`}
           >
@@ -144,7 +144,7 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
           <div className="flex justify-center py-4 sm:py-10 sm:px-14">
             <Link
               href={buttonHref}
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base sm:text-lg flex justify-center items-center py-2.5 sm:py-3 px-4 sm:px-5 space-x-0.5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5 space-x-0.5"
             >
               {buttonIcon}
               <span className="pl-0.5 sm:pl-1">{buttonText}</span>

@@ -51,7 +51,7 @@ const PricingCard = ({
       {/* Button */}
       <Link
         href={"#"}
-        className="w-full rounded-lg py-2 sm:py-3 font-medium transition bg-green-50 border border-gray-300 text-sm sm:text-base hover:bg-green-100"
+        className="w-full rounded-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium transition bg-green-50 border border-gray-300 text-sm sm:text-base lg:text-lg hover:bg-green-100"
       >
         {priceText}
       </Link>

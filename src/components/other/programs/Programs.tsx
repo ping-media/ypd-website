@@ -108,8 +108,8 @@ export default function Programs() {
                 <p className="text-white/80 text-base font-light">
                   {activeProgram.description}
                 </p>
-                <button className="mt-2 flex items-center justify-center gap-2 bg-brand-primary text-white px-4 py-2 rounded-md w-full border border-brand-accent hover:bg-green-800 transition-colors">
-                  {ButtonIcon && <ButtonIcon size={18} />}
+                <button className="mt-2 flex items-center justify-center gap-2 bg-brand-primary text-white py-3 px-4 sm:py-3.5 sm:px-5 rounded-lg w-full border border-brand-accent hover:bg-brand-primary/90 transition-colors text-sm sm:text-base lg:text-lg">
+                  {ButtonIcon && <ButtonIcon size={24} />}
                   {activeProgram.buttonText}
                 </button>
               </div>

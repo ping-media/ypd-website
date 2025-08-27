@@ -23,11 +23,11 @@ const ClarityCard: React.FC<ClarityCardProps> = ({
 
       <Link
         href={href}
-        className="mt-auto inline-flex items-center justify-center text-base font-base rounded-lg border border-black bg-transparent hover:bg-brand-primary hover:border-brand-accent hover:text-white group transition px-5 py-3.5 w-full truncate"
+        className="mt-auto inline-flex items-center justify-center text-sm sm:text-base lg:text-lg font-base rounded-lg border border-black bg-transparent hover:bg-brand-primary hover:border-brand-accent hover:text-white group transition px-5 py-3.5 w-full truncate"
         title={text}
       >
         {icon && (
-          <div className="mr-2 w-6 h-6 relative shrink-0">
+          <div className="mr-2 w-5 h-5 sm:w-6 sm:h-6 relative shrink-0">
             <Image
               src={icon}
               alt="icon"

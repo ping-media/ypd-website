@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#f0fff7] pb-4 sm:pb-10 lg:pb-20">
       {/* Sparkle Decorations */}
       <Image
         src="/icons/elements.svg"
@@ -13,7 +13,7 @@ const Hero = () => {
         width={100}
         height={100}
         className="hidden sm:block absolute pointer-events-none"
-        style={{ top: "50%", left: "10%" }}
+        style={{ top: "45%", left: "10%" }}
       />
 
       <Image

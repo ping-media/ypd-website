@@ -83,7 +83,7 @@ const Faq = ({ faqs }: FaqProps) => {
             </h2>
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-lg flex justify-center items-center px-3 py-3 sm:px-5"
+              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5"
             >
               Still have questions? Contact Support
             </Link>
