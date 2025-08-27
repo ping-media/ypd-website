@@ -21,6 +21,7 @@ import Testimonials from "@/components/other/testimonials/Testimonials";
 import Seperate2 from "@/components/other/Seperate2";
 import Brands from "@/components/other/Brands";
 import VideoPreview from "@/components/other/VideoPreview";
+import Faq from "@/components/other/Faq";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       <Testimonials />
       <Seperate2 />
       <Brands />
+      <Faq />
     </>
   );
 }

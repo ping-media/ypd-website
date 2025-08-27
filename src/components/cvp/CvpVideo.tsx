@@ -25,7 +25,7 @@ const CvpVideo: React.FC<CvpVideoProps> = ({
         {/* Heading */}
         <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl">
+          <p className="text-base sm:text-lg text-brand-gray max-w-5xl">
             {subheading}
           </p>
         </div>

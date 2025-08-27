@@ -7,7 +7,16 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqs = [
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FaqProps {
+  faqs?: FAQItem[]; // optional prop
+}
+
+const defaultFaqs: FAQItem[] = [
   {
     question: "What is Career Vision Program™?",
     answer:
@@ -60,7 +69,9 @@ const faqs = [
   },
 ];
 
-const Faq = () => {
+const Faq = ({ faqs }: FaqProps) => {
+  const items = faqs && faqs.length > 0 ? faqs : defaultFaqs;
+
   return (
     <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
       <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row gap-4 sm:gap-10 lg:gap-24">
@@ -97,7 +108,7 @@ const Faq = () => {
             defaultValue="item-0"
             className="w-full space-y-6"
           >
-            {faqs.map((faq, index) => (
+            {items.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}

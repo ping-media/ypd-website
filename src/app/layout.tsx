@@ -3,7 +3,6 @@ import { Lato, Poppins, Red_Rose } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/other/navbar/Navbar";
 import Footer from "@/components/other/footer/Footer";
-import Faq from "@/components/other/Faq";
 import CookieConsent from "@/components/other/CookieConsent";
 
 // Custom fonts
@@ -51,9 +50,8 @@ export default function RootLayout({
         <Navbar />
         {children}
 
-        <Faq />
         <Footer />
-        {/* <CookieConsent /> */}
+        <CookieConsent />
       </body>
     </html>
   );

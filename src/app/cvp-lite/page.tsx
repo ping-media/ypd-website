@@ -13,6 +13,7 @@ import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import Faq from "@/components/other/Faq";
 // imports for components
 import {
   FileText,
@@ -306,7 +307,6 @@ const page = () => {
         ctaText="Try the CVP Lite™"
         ctaLink="/#"
       />
-
       <CvpLiteSteps
         heading="How it Works"
         subheading="The CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
@@ -436,6 +436,7 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
       />
+      <Faq />
     </>
   );
 };

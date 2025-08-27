@@ -13,6 +13,7 @@ import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import Faq from "@/components/other/Faq";
 import {
   Lightbulb,
   Compass,
@@ -232,7 +233,53 @@ const ReviewsData = [
     image: "/cvplite/user3.png",
   },
 ];
-
+const cvpAdvanceFaqs = [
+  {
+    question: "What is the CVP Advance Program?",
+    answer:
+      "CVP Advance™ is a premium, multi-layered career clarity and planning platform. It maps your strengths, learning style, and cognitive abilities, matches you to high-potential career paths, and builds a semester-by-semester action plan with skill gap closure strategies, real-world projects, and future role alignment.",
+  },
+  {
+    question: "I’m in Grade 10. Is CVP Advance right for me?",
+    answer:
+      "Yes—especially if you want deeper clarity, long-term planning, and guidance that covers both Indian and global career opportunities.",
+  },
+  {
+    question: "How is CVP Advance different from basic career tests?",
+    answer:
+      "It goes far beyond aptitude scores. CVP Advance combines AI insights with human expert review, skill gap mapping, industry role validation, and a multi-year personalised roadmap.",
+  },
+  {
+    question: "How much time does it take to finish?",
+    answer:
+      "About 150–180 minutes for the assessments and discussions. Your personalised final report arrives within 48 hours.",
+  },
+  {
+    question: "Will I get a career report after the session?",
+    answer:
+      "Yes—your CVP Advance report is highly detailed, with role matches, alternate pathways, bridge certifications, internships, and action milestones.",
+  },
+  {
+    question: "Can parents view the report too?",
+    answer:
+      "Absolutely. There’s a dedicated parent section explaining role alignment, employability focus, and how to support the student’s journey.",
+  },
+  {
+    question: "Is this based on real research?",
+    answer:
+      "Yes—it uses validated psychometric frameworks, global employability standards, and real job market data updated regularly.",
+  },
+  {
+    question: "Is CVP Advance useful if I already have a career in mind?",
+    answer:
+      "Yes—it validates your choice against your aptitude, emotional readiness, and market trends, while suggesting optimisations for success.",
+  },
+  {
+    question: "What if I want ongoing guidance after CVP Advance?",
+    answer:
+      "You can opt for YPD’s Career Vision Challenger track for continuous mentorship, internship guidance, and industry networking.",
+  },
+];
 const page = () => {
   return (
     <>
@@ -441,6 +488,7 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
       />
+      <Faq faqs={cvpAdvanceFaqs} />
     </>
   );
 };
