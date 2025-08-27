@@ -19,11 +19,9 @@ import {
   Layers,
   BarChart3,
   Brain,
-  Users,
-  School,
-  HelpCircle,
   Zap,
   ArrowRight,
+  UserPlus,
 } from "lucide-react";
 import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { User, BookOpen, Award } from "lucide-react";
@@ -104,7 +102,7 @@ const audience = [
     title: "Students in Class 8–12 thinking about stream/college fit",
     description:
       "CVP Lite helps match your strengths, interests, and learning style to the right stream and future study options—without peer or family pressure.",
-    icon: <GraduationCap size={20} />,
+    icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
@@ -112,7 +110,7 @@ const audience = [
     title: "Parents who want to guide their children confidently",
     description:
       "CVP Lite provides a clear, parent-friendly report so you can support choices with facts, not guesswork.",
-    icon: <Users size={20} />,
+    icon: "/cvplite/r2.svg",
     image: "/cvplite/uses.png",
   },
   {
@@ -120,7 +118,7 @@ const audience = [
     title: "Schools looking for a structured but flexible clarity tool",
     description:
       "CVP Lite is easy to run in batches, offering guided sessions and reports that fit into school schedules.",
-    icon: <School size={20} />,
+    icon: "/cvplite/r3.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
@@ -128,7 +126,7 @@ const audience = [
     title: "Any student unsure about “what comes next”",
     description:
       "CVP Lite narrows options to 2–3 career paths that align with who you are and what excites you.",
-    icon: <HelpCircle size={20} />,
+    icon: "/cvplite/r4.svg",
     image: "/cvplite/uses.png",
   },
 ];
@@ -144,6 +142,91 @@ const journeySteps = [
   {
     id: "03",
     text: "Every step is designed to be warm, personalized, and structured ensuring that you don’t just explore careers randomly but architect your future thoughtfully, courageously, and joyfully.",
+  },
+];
+const useCases = [
+  {
+    id: 1,
+    title: "Stream Confusion",
+    quote: `"I don’t know if I should take Science, Commerce, or Arts."`,
+    description:
+      "CVP Lite helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
+    icon: "/cvplite/r1.svg",
+    image: "/cvplite/uses.png",
+  },
+  {
+    id: 2,
+    title: "Too Many Options",
+    quote: `"There are too many career paths I’m lost."`,
+    description:
+      "CVP Lite narrows it down to 2–3 career matches that actually align with the student’s profile and mindset.",
+    icon: "/cvplite/r2.svg",
+    image: "/cvplite/cvpworks.png",
+  },
+  {
+    id: 3,
+    title: "Parent Support Needed",
+    quote: `"I’m the first in my family aiming for higher studies."`,
+    description:
+      "CVP Lite builds a parent-ready report that explains student choices clearly, making the family part of the decision.",
+    icon: "/cvplite/r3.svg",
+    image: "/cvplite/uses.png",
+  },
+  {
+    id: 4,
+    title: "Marks ≠ Clarity",
+    quote: `"I score well but still don’t know what fits me."`,
+    description:
+      "CVP Lite helps high performers discover what excites them not just what they’re good at.",
+    icon: "/cvplite/r4.svg",
+    image: "/cvplite/cvpworks.png",
+  },
+];
+const highlight = (content: string) => (
+  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
+);
+const ReviewsData = [
+  {
+    id: 1,
+    name: "Rishabh Mehta",
+    education: "Class 11 Student, Nagpur",
+    text: (
+      <>
+        I Never Thought Career Guidance Could Feel So Personal. The{" "}
+        {highlight(
+          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher"
+        )}{" "}
+        I Finally Figured Out Why I Enjoy Solving Logic Puzzles!
+      </>
+    ),
+    image: "/cvplite/feedback.png",
+  },
+  {
+    id: 2,
+    name: "Sangeeta Raghavan",
+    education: "Parent, Bengaluru",
+    text: (
+      <>
+        {highlight("We Were Overwhelmed With Career Choices For Our Daughter")}.
+        CVP Lite Helped Us Match Her Creative Side With Real Job Paths.
+      </>
+    ),
+    image: "/cvplite/feedback1.png",
+  },
+  {
+    id: 3,
+    name: "Priyank Joshi",
+    education: "B.Com Final Year, Jaipur",
+    text: (
+      <>
+        &quot;The Emotional Intelligence part opened my eyes
+        {highlight(
+          "it’s not just marks, it's mindset. I now have a clear action plan"
+        )}
+        to build the skills my dream job actually needs. Total game-changer!
+      </>
+    ),
+    image: "/cvplite/feedback2.png",
   },
 ];
 
@@ -252,7 +335,11 @@ const page = () => {
         ctaIcon={<Zap size={18} />}
         footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
-      <CvpRealworld />
+      <CvpRealworld
+        heading="Real World Use Cases"
+        subheading="Career clarity isn’t a quiz result — it’s the first real conversation with your future."
+        items={useCases}
+      />
       <CvpPricing
         heading="Pricing & Access"
         subheading="CareerVerse™ is a premium experience made affordable."
@@ -292,10 +379,50 @@ const page = () => {
         footerText="Institutional Pricing Available. Please"
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      <CvpImpact />
-      <CvpCta />
+      <CvpImpact
+        heading="Real Impact, Real Results"
+        description="Since its pilot rollout in early 2023, Youth Pulse Digital™ has empowered over 2,000 students from Tier 1 to Tier 4 cities across India to gain their first real sense of career clarity without pressure, without jargon, and without bias."
+        stats={[
+          {
+            value: "93%",
+            description:
+              "of students said CVP Lite helped them understand their own interests better than any school-level career lecture or test.",
+          },
+          {
+            value: "89%",
+            description:
+              "of parents reported feeling more confident supporting their child’s stream or college decisions after seeing the final report.",
+          },
+          {
+            value: "92%",
+            description:
+              "of students said they would recommend CVP Lite to their juniors, cousins, or friends especially those who feel lost or under pressure.",
+          },
+        ]}
+        image={{
+          src: "/cvplite/impact.png",
+          alt: "Student and parent smiling",
+        }}
+      />
+      <CvpCta
+        heading="Start Your Career Vision Journey"
+        subheading="You’ve reflected. You’re ready."
+        description="Now it’s time to unlock your personalized career vision and take your first step into a future built with clarity, confidence, and purpose."
+        buttons={[
+          {
+            label: "Unlock Full Access – ₹899",
+            icon: <Zap size={18} />,
+            variant: "primary",
+          },
+          {
+            label: "Create Account Now",
+            icon: <UserPlus size={18} />,
+            variant: "outline",
+          },
+        ]}
+      />
       <CvpSecurity />
-      <CvpFeedback />
+      <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
         bgImage="/cvplite/cvpBg.png"
         heading={

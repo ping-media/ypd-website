@@ -18,11 +18,9 @@ import {
   Compass,
   File,
   GraduationCap,
-  Users,
-  School,
-  HelpCircle,
   Zap,
   ArrowRight,
+  UserPlus,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 import { User, BookOpen, Award } from "lucide-react";
@@ -105,7 +103,7 @@ const audience = [
     title: "Students in Class 8–12 thinking about stream/college fit",
     description:
       "Explore your strengths, skills, and passions through AI-guided profiling. Get a clear, personalized path for streams, colleges, and future careers.",
-    icon: <GraduationCap size={20} />,
+    icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
@@ -113,7 +111,7 @@ const audience = [
     title: "Parents who want to guide their children confidently",
     description:
       "Gain research-backed insights, reports, and roadmaps that help you make informed, future-proof decisions for your child’s career journey.",
-    icon: <Users size={20} />,
+    icon: "/cvplite/r2.svg",
     image: "/cvplite/uses.png",
   },
   {
@@ -121,7 +119,7 @@ const audience = [
     title: "Schools looking for a structured but flexible clarity tool",
     description:
       "Offer students an adaptive, non-generic career clarity program that aligns with board curriculum while preparing them for real-world opportunities.",
-    icon: <School size={20} />,
+    icon: "/cvplite/r3.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
@@ -129,7 +127,7 @@ const audience = [
     title: "Any student unsure about “what comes next”",
     description:
       "Turn uncertainty into clarity with a guided process that transforms confusion into a confident, actionable plan for the years ahead.",
-    icon: <HelpCircle size={20} />,
+    icon: "/cvplite/r4.svg",
     image: "/cvplite/uses.png",
   },
 ];
@@ -145,6 +143,93 @@ const journeySteps = [
   {
     id: "03",
     text: "Newfound confidence in your decision-making, learning, and future",
+  },
+];
+const useCases = [
+  {
+    id: 1,
+    title: "Stream Confusion",
+    quote: `“I’m unsure if Science, Commerce, Arts, or another path is right for me.”`,
+    description:
+      "CVP Advance identifies the most suitable stream using AI-driven profiling—factoring in skills, mindset, and career vision, not just peer trends.",
+    icon: "/cvplite/r1.svg",
+    image: "/cvplite/uses.png",
+  },
+  {
+    id: 2,
+    title: "Too Many Options",
+    quote: `“I feel lost with so many possible careers.”`,
+    description:
+      "CVP Advance filters the noise, presenting 2–3 high-fit career pathways that align with your personality, strengths, and future goals.",
+    icon: "/cvplite/r2.svg",
+    image: "/cvplite/cvpworks.png",
+  },
+  {
+    id: 3,
+    title: "Parent Support Needed",
+    quote: `“My family wants clarity before making career decisions.”`,
+    description:
+      "CVP Advance provides a detailed, parent-ready report that explains choices, outcomes, and learning plans—making the decision a shared journey.",
+    icon: "/cvplite/r3.svg",
+    image: "/cvplite/uses.png",
+  },
+  {
+    id: 4,
+    title: "Marks ≠ Clarity",
+    quote: `“I score well but still don’t know my direction.”`,
+    description:
+      "CVP Advance helps top scorers and average students alike discover careers that excite and suit them—beyond just academic grades.",
+    icon: "/cvplite/r4.svg",
+    image: "/cvplite/cvpworks.png",
+  },
+];
+
+const highlight = (content: string) => (
+  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
+);
+const ReviewsData = [
+  {
+    id: 1,
+    name: " Neha Arora",
+    education: "Parent, Jaipur",
+    text: (
+      <>
+        &quot;The parent section in the final report was gold.
+        {highlight(
+          "It helped us understand our son’s decision without the endless arguments."
+        )}{" "}
+        We’re now supporting him fully in pursuing Design.&quot;
+      </>
+    ),
+    image: "/cvplite/user1.png",
+  },
+  {
+    id: 2,
+    name: "Rajat Verma",
+    education: "BBA 3rd Year, Ahmedabad",
+    text: (
+      <>
+        &quot;The employability focus was spot on. I realised my degree alone
+        wouldn’t make me job-ready.
+        {highlight(" CVP Advance built me a plan with industry projects,")}.
+        soft skill training, and placement targets.&quot;
+      </>
+    ),
+    image: "/cvplite/user2.png",
+  },
+  {
+    id: 3,
+    name: "Tanvi Kulkarni",
+    education: "Class 11, Na",
+    text: (
+      <>
+        &quot;What impressed me most was the adaptability. I switched my target
+        role mid-way,
+        {highlight("and CVP Advance recalibrated my entire plan instantly.")}.
+        No wasted effort, only a sharper path.&quot;
+      </>
+    ),
+    image: "/cvplite/user3.png",
   },
 ];
 
@@ -259,7 +344,11 @@ const page = () => {
         ctaIcon={<Zap size={18} />}
         footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
-      <CvpRealworld />
+      <CvpRealworld
+        heading="Real World Use Cases"
+        subheading="Career clarity isn’t a guess—it’s a guided, data-backed journey with your future. CVP Advance turns that journey into a precise, adaptive plan."
+        items={useCases}
+      />
       <CvpPricing
         heading="Pricing & Access"
         subheading="CareerVerse™ is a premium experience made affordable."
@@ -296,10 +385,50 @@ const page = () => {
         footerText="For Institutions: Custom packages available for 50+ students. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      <CvpImpact />
-      <CvpCta />
+      <CvpImpact
+        heading="Real Impact, Real Results"
+        description="Since its launch, Youth Pulse Digital™’s CVP Advance has empowered students across India to go beyond basic career clarity—crafting precise, multi-year career roadmaps backed by adaptive AI, real-world role mapping, and targeted skill gap analysis. It’s helped learners from Tier 1 to Tier 4 cities gain confidence, direction, and a future-proof action plan—without jargon, pressure, or bias."
+        stats={[
+          {
+            value: "94%",
+            description:
+              "of students said CVP Advance gave them a clearer, longer-term vision of their career path compared to any other guidance they had received.",
+          },
+          {
+            value: "91%",
+            description:
+              "of parents reported feeling more confident about their child’s higher education and career direction after reviewing the final multi-year roadmap.",
+          },
+          {
+            value: "95%",
+            description:
+              "of students said they would recommend CVP Advance to peers preparing for entrance exams, competitive careers, or those feeling uncertain about their next step.",
+          },
+        ]}
+        image={{
+          src: "/cvplite/impact.png",
+          alt: "Student and parent smiling",
+        }}
+      />
+      <CvpCta
+        heading="Start Your Career Vision Journey"
+        subheading="You’ve reflected. You’re ready."
+        description="Now it’s time to unlock your personalized career vision and take your first step into a future built with clarity, confidence, and purpose."
+        buttons={[
+          {
+            label: "Unlock Full Access – ₹2499",
+            icon: <Zap size={18} />,
+            variant: "primary",
+          },
+          {
+            label: "Create Account Now",
+            icon: <UserPlus size={18} />,
+            variant: "outline",
+          },
+        ]}
+      />
       <CvpSecurity />
-      <CvpFeedback />
+      <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
         bgImage="/cvplite/cvpBg.png"
         heading={

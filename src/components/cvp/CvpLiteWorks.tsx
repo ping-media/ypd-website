@@ -9,7 +9,7 @@ export interface AudienceItem {
   id: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
   image: string;
 }
 
@@ -76,13 +76,19 @@ export default function CvpLiteWorks({
                 >
                   <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                    ${
-                      index === activeIndex
-                        ? "bg-green-100 text-brand-primary"
-                        : "bg-gray-100 text-brand-gray"
-                    }`}
+                                      ${
+                                        index === activeIndex
+                                          ? "bg-green-100 text-brand-primary"
+                                          : "bg-gray-100 text-brand-gray"
+                                      }`}
                   >
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="text-lg md:text-xl font-red-rose">

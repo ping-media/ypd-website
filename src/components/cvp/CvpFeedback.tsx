@@ -8,58 +8,10 @@ import React from "react";
 interface Review {
   id: number;
   name: string;
-  education: string; // added for role/education line
+  education: string;
   text: React.ReactNode;
   image: string;
 }
-
-const highlight = (content: string) => (
-  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
-);
-
-const Reviews: Review[] = [
-  {
-    id: 1,
-    name: "Rishabh Mehta",
-    education: "Class 11 Student, Nagpur",
-    text: (
-      <>
-        I Never Thought Career Guidance Could Feel So Personal. The{" "}
-        {highlight(
-          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher Who Knows Me. I Finally Figured Out"
-        )}{" "}
-        Why I Enjoy Solving Logic Puzzles I’m Now Exploring Data Analytics!
-      </>
-    ),
-    image: "/cvplite/feedback.png",
-  },
-  {
-    id: 2,
-    name: "Sangeeta Raghavan",
-    education: "Parent, Bengaluru",
-    text: (
-      <>
-        {highlight("We Were Overwhelmed With Career Choices For Our Daughter")}.
-        CVP Lite Helped Us Match Her Creative Side With Real Job Paths. The
-        Detailed Final Report Gave Us Clarity And Peace As Parents.
-      </>
-    ),
-    image: "/cvplite/feedback1.png",
-  },
-  {
-    id: 3,
-    name: "Priyanka Joshi",
-    education: "B.Com Final Year, Jaipur",
-    text: (
-      <>
-        The Emotional Intelligence Part Opened My Eyes It’s Not Just Marks, It’s
-        Mindset. {highlight("I Now Have A Clear Action Plan")} To Build The
-        Skills My Dream Job Actually Needs. Total Game-Changer!
-      </>
-    ),
-    image: "/cvplite/feedback2.png",
-  },
-];
 
 function ReviewCard({ name, education, text, image }: Review) {
   return (
@@ -88,14 +40,18 @@ function ReviewCard({ name, education, text, image }: Review) {
   );
 }
 
-export default function CvpFeedback() {
+interface CvpFeedbackProps {
+  reviews: Review[];
+}
+
+export default function CvpFeedback({ reviews }: CvpFeedbackProps) {
   return (
     <SectionSlider
       title="New Success Stories Everyday"
       cardWidth={460}
       gap={24}
     >
-      {Reviews.map((t) => (
+      {reviews.map((t) => (
         <ReviewCard key={t.id} {...t} />
       ))}
     </SectionSlider>

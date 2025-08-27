@@ -53,7 +53,7 @@ export default function RootLayout({
 
         <Faq />
         <Footer />
-        <CookieConsent />
+        {/* <CookieConsent /> */}
       </body>
     </html>
   );
