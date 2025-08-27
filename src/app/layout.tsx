@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/other/navbar/Navbar";
 import Footer from "@/components/other/footer/Footer";
 import CookieConsent from "@/components/other/CookieConsent";
+import ContactFloating from "@/components/other/ContactFloating";
 
 // Custom fonts
 const lato = Lato({
@@ -51,7 +52,9 @@ export default function RootLayout({
         {children}
 
         <Footer />
-        {/* <CookieConsent /> */}
+        <CookieConsent />
+
+        <ContactFloating />
       </body>
     </html>
   );

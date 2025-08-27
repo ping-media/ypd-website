@@ -29,7 +29,6 @@ const Links = [
       { name: "Skilling Mentors™", href: "/skilling-mentors" },
     ],
   },
-  { name: "Contact us", href: "/contact" },
 ];
 
 const Navbar = () => {
