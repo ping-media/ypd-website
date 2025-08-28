@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { useState } from "react";
 import {
   NavigationMenu,
@@ -26,7 +26,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
 
   return (
-    <NavigationMenu viewport={false}>
+    <NavigationMenu viewport={false} className="!overflow-visible">
       <NavigationMenuList>
         {links.map((link) =>
           link.dropdown ? (
@@ -34,7 +34,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
               <NavigationMenuTrigger className="hover:text-brand-primary flex items-center gap-2 text-base font-medium">
                 {link.name}
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="relative !overflow-visible">
                 <ul className="grid w-[200px]">
                   {link.dropdown.map((item) => (
                     <li key={item.name} className="group relative">
@@ -42,39 +42,31 @@ const NavLinks = ({ links }: NavLinksProps) => {
                         <div
                           onMouseEnter={() => setOpenSubDropdown(item.name)}
                           onMouseLeave={() => setOpenSubDropdown(null)}
+                          className="relative"
                         >
                           <div className="hover:text-brand-primary flex w-full cursor-default items-center justify-between px-3 py-2">
                             {item.name}
-                            <ChevronDown
-                              size={16}
-                              className={`transition-transform ${
-                                openSubDropdown === item.name
-                                  ? "rotate-180"
-                                  : ""
-                              }`}
-                            />
+                            <ChevronRight size={16} />
                           </div>
                           {/* Sub-dropdown */}
-                          <div
-                            className={`border-brand-primary mt-1 origin-top transform border-l-2 bg-gray-50 transition-all duration-200 ease-in-out ${
-                              openSubDropdown === item.name
-                                ? "max-h-96 scale-y-100 opacity-100"
-                                : "max-h-0 scale-y-0 overflow-hidden opacity-0"
-                            }`}
-                          >
-                            <ul className="py-1">
-                              {item.subDropdown.map((subItem) => (
-                                <li key={subItem.href}>
-                                  <Link
-                                    href={subItem.href}
-                                    className="hover:text-brand-primary block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100"
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                          {openSubDropdown === item.name && (
+                            <div className="absolute top-0 left-full z-50 ml-1">
+                              <div className="min-w-[180px] rounded-md border border-gray-200 bg-white shadow-lg">
+                                <ul className="py-1">
+                                  {item.subDropdown.map((subItem) => (
+                                    <li key={subItem.href}>
+                                      <Link
+                                        href={subItem.href}
+                                        className="hover:text-brand-primary block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100"
+                                      >
+                                        {subItem.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <NavigationMenuLink
