@@ -472,7 +472,7 @@ const page = () => {
       <CvpSecurity />
       <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
-        bgImage="/cvplite/cvpBg.png"
+        bgImage="/cvplite/cvpbg.png"
         heading={
           <>
             <span className="font-bold">CVP Lite™</span> → Your Gateway to
