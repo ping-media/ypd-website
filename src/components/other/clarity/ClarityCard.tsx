@@ -21,13 +21,9 @@ const ClarityCard: React.FC<ClarityCardProps> = ({
         <Image src={image} alt={text} fill className="object-cover" />
       </div>
 
-      <Link
-        href={href}
-        className="font-base hover:bg-brand-primary hover:border-brand-accent group mt-auto inline-flex w-full items-center justify-center truncate rounded-lg border border-black bg-transparent px-5 py-3.5 text-sm transition hover:text-white sm:text-base lg:text-lg"
-        title={text}
-      >
+      <Link href={href} className="btn-hover-brand btn-size group" title={text}>
         {icon && (
-          <div className="relative mr-2 h-5 w-5 shrink-0 sm:h-6 sm:w-6">
+          <div className="relative h-5 w-5 shrink-0 sm:h-6 sm:w-6">
             <Image
               src={icon}
               alt="icon"

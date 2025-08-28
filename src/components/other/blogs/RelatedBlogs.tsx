@@ -74,10 +74,7 @@ const RelatedBlogs = () => {
         <h2 className="font-red-rose text-2xl sm:text-3xl">Related Blogs</h2>
 
         {/* View All Button */}
-        <Link
-          href="/blogs"
-          className="bg-brand-primary hover:bg-brand-primary/90 border-brand-accent rounded-lg border px-4 py-3 text-sm text-white sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-        >
+        <Link href="/blogs" className="btn-primary btn-size">
           View All
         </Link>
       </div>

@@ -35,7 +35,7 @@ const Decision = () => {
         }
         cardWidth={390}
         gap={20}
-        buttonIcon={<UsersRound />}
+        buttonIcon={<UsersRound size={20} />}
         buttonText="Explore Counseling Guru™"
         buttonHref="/counseling"
       >

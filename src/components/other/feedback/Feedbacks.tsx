@@ -78,10 +78,7 @@ const Feedbacks: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <Link
-                href="#"
-                className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center gap-1 rounded-lg border px-4 py-3 text-sm sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-              >
+              <Link href="#" className="btn-primary btn-size">
                 <Search className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span>Explore Career Verse™</span>
               </Link>

@@ -75,10 +75,7 @@ const Insights = () => {
             </div>
           </div>
         </div>
-        <Link
-          href="#"
-          className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-        >
+        <Link href="#" className="btn-primary btn-size">
           Read More
           <ArrowRight size={24} className="shrink-0" />
         </Link>

@@ -121,7 +121,7 @@ const Navbar = () => {
           <div className="hidden flex-1 justify-end sm:flex">
             <Link
               href="#"
-              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center space-x-0.5 rounded-lg border px-4 py-2 text-base capitalize"
+              className="btn-primary btn-size space-x-0.5 capitalize"
             >
               <span>
                 Sign up{" "}
@@ -245,7 +245,7 @@ const Navbar = () => {
           <div className="hidden pt-4 max-sm:block">
             <Link
               href="#"
-              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/80 border-brand-accent block w-full rounded-lg border py-2.5 text-center text-base uppercase"
+              className="btn-primary btn-size block w-full text-center uppercase"
               onClick={() => setMobileOpen(false)}
             >
               Sign up for free

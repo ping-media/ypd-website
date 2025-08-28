@@ -21,7 +21,7 @@ const Seperate2 = () => {
 
           <Link
             href="/#"
-            className="mt-4 flex w-fit items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm text-black hover:bg-white/90 sm:mt-6 sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
+            className="btn-size mt-4 w-fit bg-white text-black hover:bg-white/90 sm:mt-6"
           >
             View More
             <ArrowRight size={24} className="shrink-0" />

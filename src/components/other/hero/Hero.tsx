@@ -62,24 +62,21 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex w-full flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-5 sm:text-base lg:text-lg">
+          <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
             <Link
               href={"/#"}
-              className="flex w-full items-center justify-center gap-2 rounded-lg border border-black px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
+              className="btn-transparent btn-size max-sm:w-full"
             >
               <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Student
             </Link>
-            <Link
-              href={"/#"}
-              className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
-            >
+            <Link href={"/#"} className="btn-primary btn-size max-sm:w-full">
               <UserRound className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Parent
             </Link>
             <Link
               href={"/#"}
-              className="flex w-full items-center justify-center gap-2 rounded-lg border border-black px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
+              className="btn-transparent btn-size max-sm:w-full"
             >
               <Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Professional

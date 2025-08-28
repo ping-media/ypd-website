@@ -38,15 +38,12 @@ const Possibilities = () => {
 
         {/* Buttons */}
         <div className="flex w-full flex-col justify-center gap-4 sm:mt-6 sm:w-auto sm:flex-row">
-          <Link
-            href="/vision"
-            className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-2 rounded-xl border px-3 py-3 font-medium text-white shadow-sm transition-colors sm:px-8 sm:py-4"
-          >
-            <Zap size={18} /> Launch Career Vision Program
+          <Link href="/vision" className="btn-size btn-primary shadow-sm">
+            <Zap /> Launch Career Vision Program
           </Link>
           <Link
             href="/readiness"
-            className="flex items-center justify-center gap-2 rounded-xl border border-black bg-white px-3 py-3 font-medium transition-colors hover:bg-black/10 sm:px-8 sm:py-4"
+            className="btn-size border-black bg-white hover:bg-black/10"
           >
             <Zap size={18} /> Career Readiness Analyst
           </Link>

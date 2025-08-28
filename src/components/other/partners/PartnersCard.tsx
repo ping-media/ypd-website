@@ -16,7 +16,7 @@ const PartnersCard = ({ image, title, buttonText, href }: CardProps) => {
       <div className="absolute inset-0 bg-black/30" />
       <Link
         href={href}
-        className="bg-brand-primary hover:bg-brand-primary/90 border-brand-accent absolute top-3 right-3 cursor-pointer rounded-lg border px-4 py-2 text-base text-white"
+        className="btn-primary btn-size absolute top-3 right-3 cursor-pointer"
       >
         {buttonText}
       </Link>

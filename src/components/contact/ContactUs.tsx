@@ -21,7 +21,7 @@ const ContactUs = () => {
         </div>
 
         {/* Contact Info + Form */}
-        <div className="flex w-full max-w-7xl flex-col gap-10 sm:px-10 lg:flex-row lg:gap-14 lg:px-14">
+        <div className="flex w-full max-w-7xl flex-col gap-10 pb-4 sm:px-10 sm:pb-10 lg:flex-row lg:gap-14 lg:px-14 lg:pb-14">
           {/* Left Section */}
           <div className="flex w-full flex-col gap-6 lg:w-1/2">
             {/* Company Name */}
@@ -42,7 +42,7 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="flex flex-col gap-2 font-sans text-sm">
+            <div className="flex w-fit flex-col gap-2 font-sans text-sm">
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Phone className="text-brand-primary h-6 w-6" />
                 +91 8650126521

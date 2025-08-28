@@ -24,10 +24,7 @@ const Seperate = () => {
 
         {/* Button */}
         <div className="flex w-full justify-start lg:w-auto">
-          <Link
-            href="#"
-            className="text-lato bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-1 rounded-lg border px-4 py-3 text-sm text-white transition duration-100 sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-          >
+          <Link href="#" className="text-lato btn-primary btn-size">
             <UserRound size={24} />
             <span>Start My Personalized Path</span>
           </Link>

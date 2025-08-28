@@ -81,10 +81,7 @@ const Faq = ({ faqs }: FaqProps) => {
             <h2 className="font-red-rose text-2xl sm:text-3xl">
               Frequently Asked Questions
             </h2>
-            <Link
-              href="#"
-              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center rounded-lg border px-4 py-3 text-sm sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-            >
+            <Link href="#" className="btn-primary btn-size">
               Still have questions? Contact Support
             </Link>
           </div>
