@@ -3,7 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import NavLinks from "@/components/other/navbar/Navlinks";
-import { ArrowRight, X, ChevronDown, AlignJustify } from "lucide-react";
+import {
+  ArrowRight,
+  X,
+  ChevronDown,
+  ChevronRight,
+  AlignJustify,
+} from "lucide-react";
 import Link from "next/link";
 
 const Links = [
@@ -13,9 +19,27 @@ const Links = [
   {
     name: "Career Vision",
     dropdown: [
-      { name: "Career Clarity", href: "/career-clarity" },
-      { name: "Exam Mentors", href: "/exam-mentors" },
-      { name: "Entrance Mentors", href: "/entrance-mentors" },
+      {
+        name: "Career Clarity",
+        subDropdown: [
+          { name: "Cvp Lite™", href: "/cvp-lite" },
+          { name: "Cvp Advance™", href: "/cvp-advance" },
+          { name: "CareerVerse™", href: "/careerverse" },
+        ],
+      },
+      {
+        name: "Exam Mentors",
+        subDropdown: [
+          { name: "10th-12th CBSE Mentor™", href: "/cbse-mentor" },
+        ],
+      },
+      {
+        name: "Entrance Mentors",
+        subDropdown: [
+          { name: "Mission NDA™", href: "/mission-nda" },
+          { name: "UPSC Mentor™", href: "/upsc-mentor" },
+        ],
+      },
       { name: "Counselling Mentors", href: "/counselling-mentors" },
       { name: "Mentor Connect", href: "/mentor-connect" },
       { name: "Counseling Guru", href: "/counselling-guru" },
@@ -34,6 +58,7 @@ const Links = [
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   // Stop background scrolling when menu is open
@@ -60,6 +85,21 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Close dropdowns when clicking outside
+  const handleDropdownToggle = (linkName: string) => {
+    if (openDropdown === linkName) {
+      setOpenDropdown(null);
+      setOpenSubDropdown(null);
+    } else {
+      setOpenDropdown(linkName);
+      setOpenSubDropdown(null);
+    }
+  };
+
+  const handleSubDropdownToggle = (itemName: string) => {
+    setOpenSubDropdown(openSubDropdown === itemName ? null : itemName);
+  };
 
   return (
     <div className="font-lato relative mx-auto max-w-[1440px]">
@@ -125,16 +165,12 @@ const Navbar = () => {
           </button>
         </div>
 
-        <div className="space-y-4 px-6 pt-4 pb-6 text-gray-800">
+        <div className="max-h-[calc(100vh-100px)] space-y-4 overflow-y-auto px-6 pt-4 pb-6 text-gray-800">
           {Links.map((link) =>
             link.dropdown ? (
               <div key={link.name}>
                 <button
-                  onClick={() =>
-                    setOpenDropdown(
-                      openDropdown === link.name ? null : link.name,
-                    )
-                  }
+                  onClick={() => handleDropdownToggle(link.name)}
                   className="flex w-full items-center justify-between border-b border-gray-200 py-2 text-left font-medium"
                 >
                   {link.name}
@@ -148,14 +184,48 @@ const Navbar = () => {
                 {openDropdown === link.name && (
                   <div className="mt-2 space-y-2 pl-4 text-sm">
                     {link.dropdown.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="hover:text-brand-primary block"
-                        onClick={() => setMobileOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
+                      <div key={item.name || item.href}>
+                        {item.subDropdown ? (
+                          <div>
+                            <button
+                              onClick={() => handleSubDropdownToggle(item.name)}
+                              className="hover:text-brand-primary flex w-full items-center justify-between py-1 text-left"
+                            >
+                              {item.name}
+                              <ChevronRight
+                                size={16}
+                                className={`transition-transform ${
+                                  openSubDropdown === item.name
+                                    ? "rotate-90"
+                                    : ""
+                                }`}
+                              />
+                            </button>
+                            {openSubDropdown === item.name && (
+                              <div className="mt-1 space-y-1 pl-4">
+                                {item.subDropdown.map((subItem) => (
+                                  <Link
+                                    key={subItem.href}
+                                    href={subItem.href}
+                                    className="hover:text-brand-primary block py-1"
+                                    onClick={() => setMobileOpen(false)}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <Link
+                            href={item.href}
+                            className="hover:text-brand-primary block py-1"
+                            onClick={() => setMobileOpen(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        )}
+                      </div>
                     ))}
                   </div>
                 )}
