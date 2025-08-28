@@ -477,7 +477,7 @@ const page = () => {
       <CvpSecurity />
       <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
-        bgImage="/cvplite/cvpbg.png"
+        bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
             <span className="font-bold">Get Started Now</span>
