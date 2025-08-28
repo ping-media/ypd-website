@@ -32,23 +32,25 @@ const featuresData = [
     icon: FileText,
     title: "Deep Clarity",
     description:
-      "Discover your true career fit through a structured 10-step experience.",
+      "Discover your true career fit through a structured 10-step experience. Interest, strength, stream, and mindset all mapped clearly, all in one place.",
   },
   {
     icon: Layers,
     title: "Adaptive Journey",
-    description: "Every student is different so is their path...",
+    description:
+      "Every student is different so is their path.CVP Lite adjusts to your learning style, pace, and academic stage without forcing a fixed template.",
   },
   {
     icon: BarChart3,
     title: "Instant Insights",
     description:
-      "No waiting, no confusion. Get your personalized report instantly.",
+      "No waiting, no confusion.Get your personalized CVP Lite Report the moment you finish clear, action-ready, and parent-friendly.",
   },
   {
     icon: Brain,
     title: "True AI",
-    description: "Not just a quiz, but a real-time framework-driven engine.",
+    description:
+      "This isn’t just a chatbot or quiz.Our engine uses real frameworks, real-time logic, and your real inputs not scraped suggestions or generic lists.",
   },
 ];
 const insideData = [
@@ -230,6 +232,52 @@ const ReviewsData = [
     image: "/cvplite/feedback2.png",
   },
 ];
+const cvpLiteFaqs = [
+  {
+    question: "What is CVP Lite™?",
+    answer:
+      "It’s YPD’s entry-level program that helps students in Classes 7–12 choose the right stream and career direction.",
+  },
+  {
+    question: "Who should use CVP Lite™?",
+    answer:
+      "Students facing confusion between Science, Commerce, Arts, or multiple career options, and parents seeking clarity.",
+  },
+  {
+    question: "What do I get at the end of CVP Lite™?",
+    answer:
+      "A personalized Career Persona Report to make data backed decisions.",
+  },
+  {
+    question: "How is CVP Lite™ different from Advance?",
+    answer:
+      "Lite gives core stream/career clarity. Advance is deeper assessments, cognitive skills, and future pathways.",
+  },
+  {
+    question: "Does CVP Lite™ include aptitude testing?",
+    answer:
+      "Yes. It includes guided aptitude assessments, learning style insights, interest & passion mapping.",
+  },
+  {
+    question: "How much time does it take?",
+    answer: "1–2 sessions, typically completed within 1–2 days.",
+  },
+  {
+    question: "Can parents also see the results?",
+    answer:
+      "Yes. Career Persona Report help families make clear and confident choices.",
+  },
+  {
+    question: "Is CVP Lite™ useful if I already know my stream?",
+    answer:
+      "Yes. It validates your choice and shows alternate career options you may not have considered.",
+  },
+  {
+    question: "What makes CVP Lite™ unique?",
+    answer:
+      "It’s not just a test — it’s an adaptive, AI + mentor guided journey built for Indian students.",
+  },
+];
 
 const page = () => {
   return (
@@ -248,7 +296,7 @@ const page = () => {
             self-discovery experience built for{" "}
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                Grade 9 to 12 students
+                Grade 7 to 12 students
               </span>
               <span className="absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm bg-green-100"></span>
             </span>
@@ -280,7 +328,7 @@ const page = () => {
         ctaLink="/#"
       />
       <CvpInside
-        heading="What’s Inside (Without Giving It All Away 😉)"
+        heading="What’s Inside"
         subheading="We don’t reveal every step online — but here’s what you’ll go through:"
         features={insideData}
         ctaText="Start Your Journey Today"
@@ -342,7 +390,7 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CareerVerse™ is a premium experience made affordable."
+        subheading="CVP Lite™ is a premium experience made affordable"
         plans={[
           {
             title: "Free Plan",
@@ -361,7 +409,7 @@ const page = () => {
             title: "Premium Plan",
             description: "Complete your full Career Persona Journey",
             price: "₹899",
-            priceText: "Start My Career Simulation",
+            priceText: "Start My Career Clarity",
             features: [
               "Full access",
               "Strengths, learning style & thinking profile",
@@ -371,7 +419,7 @@ const page = () => {
               "Personal Action Plan",
               "Downloadable Final Career Persona Report (Step 10)",
               "Lifetime access via your YPD login",
-              "Built for Class 9–12 students who want trusted, structured clarity",
+              "Built for Class 7-12 students who want trusted, structured clarity",
             ],
             highlight: true,
           },
@@ -436,7 +484,7 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <Faq />
+      <Faq faqs={cvpLiteFaqs} />
     </>
   );
 };

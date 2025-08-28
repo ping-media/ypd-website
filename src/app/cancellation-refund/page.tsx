@@ -4,7 +4,7 @@ const Page = () => {
       <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         <div className="flex-1">
           <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
-            Terms of Cancellation & Refund Youth Pulse Digital™
+            Terms of Cancellation & Refund
           </h1>
           <p className="mb-4">Last Updated: 25/08/2025</p>
           <p className="mb-4">
@@ -654,9 +654,7 @@ const Page = () => {
               </a>
             </li>
             <li>Phone Support: +91 8650126521 (Mon-Fri, 9 AM - 6 PM IST)</li>
-            <li className="font-extrabold">
-              WhatsApp Support: [WhatsApp Number] (Business hours only)
-            </li>
+            <li>WhatsApp Support: +91 7300868536 (Business hours only)</li>
           </ul>
 
           <p className="mb-2 font-semibold">Escalation Contacts:</p>
@@ -691,7 +689,7 @@ const Page = () => {
             <br />
             Kolkata – 700161, West Bengal, India
           </p>
-          <p className="mb-2 font-extrabold">GST Number: XXXXXXXXXXXXX</p>
+          <p className="mb-2">GST Number: XXXXXXXXXXXXX</p>
           <p className="mb-4">PAN: AACCY0548C</p>
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">

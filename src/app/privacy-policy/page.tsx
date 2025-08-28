@@ -4,7 +4,7 @@ const Page = () => {
       <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         <div className="flex-1">
           <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
-            Privacy Policy Youth Pulse Digital™
+            Privacy Policy
           </h1>
           <p className="mb-4">Last Updated: 25/08/25</p>
           <p className="mb-4">

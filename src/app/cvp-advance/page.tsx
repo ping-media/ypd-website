@@ -303,7 +303,7 @@ const page = () => {
             For students from{" "}
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                Class 11 to UG Final Year
+                Class 9 to UG Final Year
               </span>
               <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
