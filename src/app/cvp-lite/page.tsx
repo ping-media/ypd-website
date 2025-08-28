@@ -184,7 +184,7 @@ const useCases = [
   },
 ];
 const highlight = (content: string) => (
-  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
+  <span className="rounded bg-[#ebf3eb] px-1">{content}</span>
 );
 const ReviewsData = [
   {
@@ -195,7 +195,7 @@ const ReviewsData = [
       <>
         I Never Thought Career Guidance Could Feel So Personal. The{" "}
         {highlight(
-          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher"
+          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher",
         )}{" "}
         I Finally Figured Out Why I Enjoy Solving Logic Puzzles!
       </>
@@ -222,7 +222,7 @@ const ReviewsData = [
       <>
         &quot;The Emotional Intelligence part opened my eyes
         {highlight(
-          "it’s not just marks, it's mindset. I now have a clear action plan"
+          "it’s not just marks, it's mindset. I now have a clear action plan",
         )}
         to build the skills my dream job actually needs. Total game-changer!
       </>
@@ -239,18 +239,18 @@ const page = () => {
         subtitle={
           <>
             <span className="relative inline-block px-1">
-              <span className="relative z-10 font-semibold text-brand-primary">
+              <span className="text-brand-primary relative z-10 font-semibold">
                 YPD’s CVP Lite
               </span>
-              <span className="absolute inset-0 bg-brand-bg rounded-sm rotate-[-2deg] scale-y-110 z-0"></span>
+              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
             is your first step toward real career clarity a guided, AI-powered
             self-discovery experience built for{" "}
             <span className="relative inline-block px-1">
-              <span className="relative z-10 font-semibold text-brand-primary">
+              <span className="text-brand-primary relative z-10 font-semibold">
                 Grade 9 to 12 students
               </span>
-              <span className="absolute inset-0 bg-green-100 rounded-sm rotate-[-2deg] scale-y-110 z-0"></span>
+              <span className="absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm bg-green-100"></span>
             </span>
             .
           </>
@@ -434,7 +434,7 @@ const page = () => {
         subheading="Because when you know what fits, you grow with purpose."
         ctaText="Start Your Career Journey Today"
         ctaHref="/start"
-        ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
+        ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq />
     </>

@@ -23,34 +23,31 @@ function FeatureSection({
       } items-center gap-4 sm:gap-10 lg:gap-14`}
     >
       {/* Text Content */}
-      <div className="flex flex-1 flex-col gap-4 sm:gap-6 w-full">
+      <div className="flex w-full flex-1 flex-col gap-4 sm:gap-6">
         <h3 className="font-red-rose text-lg sm:text-2xl">{title}</h3>
-        <ul className="flex flex-col items-start gap-4 text-brand-gray text-base sm:text-lg leading-relaxed">
+        <ul className="text-brand-gray flex flex-col items-start gap-4 text-base leading-relaxed sm:text-lg">
           {content.map((text, i) =>
             checklist ? (
-              <li key={i} className="flex justify-center items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 mt-1 flex-shrink-0 text-brand-primary" />
-                <span className="text-sm sm:text-lg text-brand-gray">
+              <li key={i} className="flex items-start justify-center gap-3">
+                <CheckCircle2 className="text-brand-primary mt-1 h-6 w-6 flex-shrink-0" />
+                <span className="text-brand-gray text-sm sm:text-lg">
                   {text}
                 </span>
               </li>
             ) : (
               <li
                 key={i}
-                className="list-disc list-inside text-sm sm:text-lg text-brand-gray"
+                className="text-brand-gray list-inside list-disc text-sm sm:text-lg"
               >
                 {text}
               </li>
-            )
+            ),
           )}
         </ul>
       </div>
 
       {/* Image */}
-      <div
-        className="
-        relative w-full h-[240px] sm:h-[300px] lg:h-[360px] rounded-2xl overflow-hidden shadow-md lg:flex-1 flex-shrink-0"
-      >
+      <div className="relative h-[240px] w-full flex-shrink-0 overflow-hidden rounded-2xl shadow-md sm:h-[300px] lg:h-[360px] lg:flex-1">
         <Image
           src={imageSrc}
           alt={title}
@@ -65,14 +62,14 @@ function FeatureSection({
 
 export default function Features() {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center font-lato">
-      <div className="max-w-[1440px] w-full flex flex-col gap-4 sm:gap-10 lg:gap-14">
+    <section className="font-lato flex justify-center bg-white p-4 sm:p-10 lg:p-20">
+      <div className="flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
         {/* Heading + Intro */}
-        <div className="text-center flex flex-col gap-4 max-w-5xl mx-auto">
-          <h2 className="font-red-rose text-2xl sm:text-3xl text-center">
+        <div className="mx-auto flex max-w-5xl flex-col gap-4 text-center">
+          <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             Youth Pulse Digital™ Your Complete AI-Powered Learning Companion
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl text-center">
+          <p className="text-brand-gray max-w-4xl text-center text-base sm:text-lg">
             We help students and professionals go from &quot;I&apos;m confused
             about my future&quot; to &quot;I know exactly what to do next&quot;
             through India’s most advanced Self-Serve AI Platform.

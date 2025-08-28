@@ -9,9 +9,9 @@ type GrowthCardProps = {
 
 const GrowthCard = ({ image, heading, description }: GrowthCardProps) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-sm border border-white m-1">
+    <div className="m-1 overflow-hidden rounded-lg border border-white shadow-sm">
       {/* Image */}
-      <div className="w-full h-48 relative">
+      <div className="relative h-48 w-full">
         <Image
           src={image}
           alt={heading}
@@ -25,7 +25,7 @@ const GrowthCard = ({ image, heading, description }: GrowthCardProps) => {
       {/* Text */}
       <div className="p-4">
         <div className="font-red-rose text-lg">{heading}</div>
-        <div className="mt-2 text-sm text-brand-gray leading-snug">
+        <div className="text-brand-gray mt-2 text-sm leading-snug">
           {description}
         </div>
       </div>

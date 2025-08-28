@@ -22,7 +22,7 @@ const CvpSeperate = ({
   ctaIcon,
 }: CvpSeperateProps) => {
   return (
-    <div className="relative max-w-[2560px] mx-auto px-4 sm:px-10 lg:px-20 py-12 sm:py-16 lg:py-10">
+    <div className="relative mx-auto max-w-[2560px] px-4 py-12 sm:px-10 sm:py-16 lg:px-20 lg:py-10">
       {/* Background image */}
       <Image
         src={bgImage}
@@ -36,15 +36,15 @@ const CvpSeperate = ({
       <div className="absolute inset-0 bg-black/30"></div>
 
       {/* Overlay content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col justify-between items-start gap-2 sm:gap-4 lg:gap-8">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start justify-between gap-2 sm:gap-4 lg:gap-8">
         {/* Heading + Subheading */}
         <div className="space-y-3">
-          <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug max-w-full sm:max-w-3xl font-red-rose">
+          <h2 className="font-red-rose max-w-full text-2xl leading-snug font-semibold text-white sm:max-w-3xl sm:text-3xl lg:text-4xl">
             {heading}
           </h2>
 
           {subheading && (
-            <p className="text-gray-200 text-base sm:text-lg max-w-full sm:max-w-2xl">
+            <p className="max-w-full text-base text-gray-200 sm:max-w-2xl sm:text-lg">
               {subheading}
             </p>
           )}
@@ -54,7 +54,7 @@ const CvpSeperate = ({
         <div className="w-full sm:w-auto">
           <Link
             href={ctaHref}
-            className="inline-flex items-center justify-center gap-2 bg-white rounded-md py-3 px-4 sm:py-3.5 sm:px-5 text-sm sm:text-base lg:text-lg font-medium shadow hover:bg-gray-200 transition w-full sm:w-auto text-center"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white px-4 py-3 text-center text-sm font-medium shadow transition hover:bg-gray-200 sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
           >
             {ctaText}
             {ctaIcon}

@@ -68,15 +68,15 @@ const RelatedBlogs = () => {
   //   scrollRef.current?.scrollBy({ left: 400, behavior: "smooth" });
 
   return (
-    <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-6 sm:gap-10 lg:gap-14 font-lato">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-6 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:p-20">
       {/* Header */}
-      <div className="flex justify-between items-center max-w-7xl w-full">
-        <h2 className="text-2xl sm:text-3xl font-red-rose">Related Blogs</h2>
+      <div className="flex w-full max-w-7xl items-center justify-between">
+        <h2 className="font-red-rose text-2xl sm:text-3xl">Related Blogs</h2>
 
         {/* View All Button */}
         <Link
           href="/blogs"
-          className="bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-white py-3 px-4 sm:py-3.5 sm:px-5 rounded-lg text-sm sm:text-base lg:text-lg"
+          className="bg-brand-primary hover:bg-brand-primary/90 border-brand-accent rounded-lg border px-4 py-3 text-sm text-white sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
         >
           View All
         </Link>
@@ -88,13 +88,13 @@ const RelatedBlogs = () => {
         {/* <div className="absolute -top-14 right-0 flex gap-2">
           <button
             onClick={scrollLeft}
-            className="p-2 border rounded-lg w-10 h-10 hover:text-white hover:border-brand-accent hover:bg-brand-primary flex items-center justify-center transition-colors"
+            className="hover:border-brand-accent hover:bg-brand-primary flex h-10 w-10 items-center justify-center rounded-lg border p-2 transition-colors hover:text-white"
           >
             <ArrowLeft size={20} />
           </button>
           <button
             onClick={scrollRight}
-            className="p-2 border rounded-lg w-10 h-10 hover:text-white hover:border-brand-accent hover:bg-brand-primary flex items-center justify-center transition-colors"
+            className="hover:border-brand-accent hover:bg-brand-primary flex h-10 w-10 items-center justify-center rounded-lg border p-2 transition-colors hover:text-white"
           >
             <ArrowRight size={20} />
           </button>
@@ -103,16 +103,16 @@ const RelatedBlogs = () => {
         {/* Blog Cards Slider */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory gap-6 sm:gap-8"
+          className="scrollbar-hide flex snap-x snap-mandatory gap-6 overflow-x-auto sm:gap-8"
         >
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="flex-none w-[90%] sm:w-[60%] md:w-[45%] lg:w-[380px] snap-start"
+              className="w-[90%] flex-none snap-start sm:w-[60%] md:w-[45%] lg:w-[380px]"
             >
-              <div className="flex flex-col gap-4 h-full">
+              <div className="flex h-full flex-col gap-4">
                 {/* Image */}
-                <div className="w-full h-56 sm:h-64 md:h-72 relative rounded-lg overflow-hidden">
+                <div className="relative h-56 w-full overflow-hidden rounded-lg sm:h-64 md:h-72">
                   <Image
                     src={blog.image}
                     alt={blog.title}
@@ -122,15 +122,15 @@ const RelatedBlogs = () => {
                 </div>
 
                 {/* Text Content */}
-                <div className="flex flex-col gap-3 flex-1">
+                <div className="flex flex-1 flex-col gap-3">
                   <div>
-                    <p className="text-sm sm:text-base text-brand-gray">
+                    <p className="text-brand-gray text-sm sm:text-base">
                       {blog.author} • {blog.date}
                     </p>
-                    <h3 className="text-lg sm:text-xl font-red-rose mt-1">
+                    <h3 className="font-red-rose mt-1 text-lg sm:text-xl">
                       {blog.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-brand-gray mt-2 line-clamp-3">
+                    <p className="text-brand-gray mt-2 line-clamp-3 text-sm sm:text-base">
                       {blog.description}
                     </p>
                   </div>
@@ -139,7 +139,7 @@ const RelatedBlogs = () => {
                   <div className="mt-auto">
                     <Link
                       href={blog.link}
-                      className="text-brand-primary font-semibold inline-block text-sm sm:text-base"
+                      className="text-brand-primary inline-block text-sm font-semibold sm:text-base"
                     >
                       Read More
                     </Link>

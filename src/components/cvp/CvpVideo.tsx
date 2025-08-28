@@ -20,22 +20,22 @@ const CvpVideo: React.FC<CvpVideoProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-5xl">
+          <p className="text-brand-gray max-w-5xl text-base sm:text-lg">
             {subheading}
           </p>
         </div>
 
         {/* Video Section */}
-        <div className="relative w-full max-w-[1000px] mx-auto rounded-xl overflow-hidden shadow-lg">
-          <div className="relative w-full aspect-[16/9]">
+        <div className="relative mx-auto w-full max-w-[1000px] overflow-hidden rounded-xl shadow-lg">
+          <div className="relative aspect-[16/9] w-full">
             {isPlaying ? (
               <iframe
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 h-full w-full"
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&modestbranding=1&rel=0`}
                 title={heading}
                 frameBorder="0"
@@ -53,15 +53,15 @@ const CvpVideo: React.FC<CvpVideoProps> = ({
                   className="object-cover"
                 />
                 {/* Overlay + Play */}
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                   <button
                     onClick={() => setIsPlaying(true)}
                     aria-label="Play video"
-                    className="group cursor-pointer flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full hover:bg-brand-primary transition"
+                    className="group hover:bg-brand-primary flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white/90 transition sm:h-20 sm:w-20"
                   >
                     <Play
                       size={32}
-                      className="sm:size-[40px] text-black ml-1 transition-colors duration-200 group-hover:text-white"
+                      className="ml-1 text-black transition-colors duration-200 group-hover:text-white sm:size-[40px]"
                     />
                   </button>
                 </div>

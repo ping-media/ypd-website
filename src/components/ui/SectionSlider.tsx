@@ -75,42 +75,40 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
   }, []);
 
   return (
-    <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:p-20">
+      <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         {/* Header */}
         <div className="space-y-2 lg:space-y-4">
           <div className="font-red-rose text-2xl sm:text-3xl">{title}</div>
-          <div className="text-base sm:text-lg text-brand-gray">
+          <div className="text-brand-gray text-base sm:text-lg">
             {description}
           </div>
         </div>
 
         {/* Navigation Buttons */}
-        <div className="flex gap-4 sm:mt-2 lg:mt-0 self-end">
+        <div className="flex gap-4 self-end sm:mt-2 lg:mt-0">
           <button
             onClick={scrollLeft}
             disabled={!canScrollLeft}
-            className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
-              ${
-                canScrollLeft
-                  ? "bg-brand-primary text-white border-brand-accent cursor-pointer"
-                  : "opacity-50 cursor-not-allowed"
-              }`}
+            className={`flex h-10 w-10 items-center justify-center rounded-lg border p-2 transition-colors sm:h-12 sm:w-12 ${
+              canScrollLeft
+                ? "bg-brand-primary border-brand-accent cursor-pointer text-white"
+                : "cursor-not-allowed opacity-50"
+            }`}
           >
-            <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
 
           <button
             onClick={scrollRight}
             disabled={!canScrollRight}
-            className={`p-2 border rounded-lg w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors
-              ${
-                canScrollRight
-                  ? "bg-brand-primary text-white border-brand-accent cursor-pointer"
-                  : "opacity-50 cursor-not-allowed"
-              }`}
+            className={`flex h-10 w-10 items-center justify-center rounded-lg border p-2 transition-colors sm:h-12 sm:w-12 ${
+              canScrollRight
+                ? "bg-brand-primary border-brand-accent cursor-pointer text-white"
+                : "cursor-not-allowed opacity-50"
+            }`}
           >
-            <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+            <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
         </div>
       </div>
@@ -119,7 +117,7 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
       <div className="relative overflow-hidden">
         <div
           ref={scrollContainerRef}
-          className="flex overflow-x-auto scrollbar-hide snap-x snap-mandatory p-1"
+          className="scrollbar-hide flex snap-x snap-mandatory overflow-x-auto p-1"
           style={{
             gap: `${gap}px`,
             scrollbarWidth: "none",
@@ -141,10 +139,10 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
 
         {/* Optional Button */}
         {buttonIcon && buttonText && (
-          <div className="flex justify-center py-4 sm:py-10 sm:px-14">
+          <div className="flex justify-center py-4 sm:px-14 sm:py-10">
             <Link
               href={buttonHref}
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5 space-x-0.5"
+              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center space-x-0.5 rounded-lg border px-4 py-3 text-sm sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
             >
               {buttonIcon}
               <span className="pl-0.5 sm:pl-1">{buttonText}</span>

@@ -10,11 +10,11 @@ const PricingPage = () => {
   const [program, setProgram] = useState<string>("");
 
   return (
-    <section className="w-full flex justify-center p-4 sm:px-10 lg:px-20">
-      <div className="w-full max-w-[1440px] flex flex-col items-center gap-6 sm:gap-10">
+    <section className="flex w-full justify-center p-4 sm:px-10 lg:px-20">
+      <div className="flex w-full max-w-[1440px] flex-col items-center gap-6 sm:gap-10">
         {/* Program Selector */}
-        <div className="w-full max-w-7xl flex flex-col items-center gap-4">
-          <h2 className="text-2xl sm:text-3xl font-red-rose text-center">
+        <div className="flex w-full max-w-7xl flex-col items-center gap-4">
+          <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             Select Your Program
           </h2>
           <p className="text-brand-gray text-center text-base sm:text-lg">
@@ -25,7 +25,7 @@ const PricingPage = () => {
             <select
               value={program}
               onChange={(e) => setProgram(e.target.value)}
-              className="appearance-none w-full rounded-lg border border-gray-300 p-3 pr-10 text-brand-gray"
+              className="text-brand-gray w-full appearance-none rounded-lg border border-gray-300 p-3 pr-10"
             >
               <option value="">Select Program</option>
               <option value="highschool">High School</option>
@@ -35,7 +35,7 @@ const PricingPage = () => {
             {/* Icon */}
             <ChevronDown
               size={20}
-              className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-brand-gray"
+              className="text-brand-gray pointer-events-none absolute top-1/2 right-3 -translate-y-1/2"
             />
           </div>
         </div>
@@ -43,7 +43,7 @@ const PricingPage = () => {
         {/* Billing Toggle */}
         {program && (
           <div className="flex flex-col items-center gap-4">
-            <h2 className="text-2xl sm:text-3xl font-red-rose text-center">
+            <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
               Choose Your Plan
             </h2>
             <p className="text-brand-gray text-center text-base sm:text-lg">
@@ -51,23 +51,23 @@ const PricingPage = () => {
               ready.
             </p>
 
-            <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+            <div className="flex items-center overflow-hidden rounded-lg border border-gray-300">
               <button
                 onClick={() => setBilling("monthly")}
-                className={`px-6 py-2 text-sm sm:text-base font-medium transition ${
+                className={`px-6 py-2 text-sm font-medium transition sm:text-base ${
                   billing === "monthly"
                     ? "bg-brand-primary text-white"
-                    : "bg-white "
+                    : "bg-white"
                 }`}
               >
                 Monthly
               </button>
               <button
                 onClick={() => setBilling("annually")}
-                className={`px-6 py-2 text-sm sm:text-base font-medium transition ${
+                className={`px-6 py-2 text-sm font-medium transition sm:text-base ${
                   billing === "annually"
                     ? "bg-brand-primary text-white"
-                    : "bg-white "
+                    : "bg-white"
                 }`}
               >
                 Annually
@@ -78,7 +78,7 @@ const PricingPage = () => {
 
         {/* Pricing Cards OR Fallback */}
         {program ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-6xl sm:mt-6">
+          <div className="grid w-full max-w-6xl grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             <PricingCard
               title="Basic"
               description="Perfect to explore and get started"

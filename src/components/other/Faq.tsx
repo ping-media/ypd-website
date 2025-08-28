@@ -73,35 +73,35 @@ const Faq = ({ faqs }: FaqProps) => {
   const items = faqs && faqs.length > 0 ? faqs : defaultFaqs;
 
   return (
-    <div className="p-4 sm:p-10 lg:p-20 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row gap-4 sm:gap-10 lg:gap-24">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:p-20">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-10 lg:flex-row lg:gap-24">
         {/* Left side */}
-        <div className="flex flex-col gap-8 shrink-0 w-full lg:w-[364px]">
+        <div className="flex w-full shrink-0 flex-col gap-8 lg:w-[364px]">
           <div className="flex flex-col gap-4 sm:gap-6">
             <h2 className="font-red-rose text-2xl sm:text-3xl">
               Frequently Asked Questions
             </h2>
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5"
+              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center rounded-lg border px-4 py-3 text-sm sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
             >
               Still have questions? Contact Support
             </Link>
           </div>
 
           {/* Image - hidden below lg */}
-          <div className="relative w-full flex-1 min-h-[400px] hidden lg:block">
+          <div className="relative hidden min-h-[400px] w-full flex-1 lg:block">
             <Image
               src="/faq.png"
               alt="FAQ Illustration"
               fill
-              className="object-contain rounded-lg"
+              className="rounded-lg object-contain"
             />
           </div>
         </div>
 
         {/* Right side */}
-        <div className="flex-1 min-w-0 w-full lg:max-w-[856px]">
+        <div className="w-full min-w-0 flex-1 lg:max-w-[856px]">
           <Accordion
             type="single"
             collapsible
@@ -114,10 +114,10 @@ const Faq = ({ faqs }: FaqProps) => {
                 value={`item-${index}`}
                 className="rounded-lg border border-gray-200 bg-white shadow-sm"
               >
-                <AccordionTrigger className="px-4 py-3 text-left text-xl font-red-rose hover:bg-gray-50">
+                <AccordionTrigger className="font-red-rose px-4 py-3 text-left text-xl hover:bg-gray-50">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-4 pb-4 text-brand-gray font-lato text-base">
+                <AccordionContent className="text-brand-gray font-lato px-4 pb-4 text-base">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -33,20 +33,20 @@ const Samples = () => {
   const activeSample = sampleData[activeIndex];
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto flex flex-col gap-3 sm:gap-4">
+        <div className="mx-auto flex max-w-4xl flex-col gap-3 text-center sm:gap-4">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
             What Our Career Samples Reveal
           </h2>
         </div>
 
         {/* Content */}
-        <div className="flex justify-center w-full">
-          <div className="flex max-w-7xl w-full bg-gray-50 rounded-xl p-4 gap-6 sm:gap-10 flex-col md:flex-row">
+        <div className="flex w-full justify-center">
+          <div className="flex w-full max-w-7xl flex-col gap-6 rounded-xl bg-gray-50 p-4 sm:gap-10 md:flex-row">
             {/* Right Column (Dynamic Image) - moved first for reverse layout */}
-            <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[300px] order-1 md:order-none">
+            <div className="relative order-1 min-h-[300px] flex-1 overflow-hidden rounded-lg shadow-lg md:order-none">
               <Image
                 src={activeSample.image}
                 alt={activeSample.title}
@@ -58,31 +58,30 @@ const Samples = () => {
             </div>
 
             {/* Left Column (Cards with Icon, Heading & Subheading) */}
-            <div className="flex flex-col justify-center w-full md:w-2/5 gap-4">
+            <div className="flex w-full flex-col justify-center gap-4 md:w-2/5">
               {sampleData.map((item, index) => {
                 const isActive = index === activeIndex;
                 return (
                   <div
                     key={index}
                     onClick={() => setActiveIndex(index)}
-                    className={`p-4 rounded-lg cursor-pointer transition-all duration-200 border flex gap-3 items-start
-              ${
-                isActive
-                  ? "border-brand-primary bg-green-50 shadow-sm"
-                  : "border-transparent hover:border-gray-300"
-              }`}
+                    className={`flex cursor-pointer items-start gap-3 rounded-lg border p-4 transition-all duration-200 ${
+                      isActive
+                        ? "border-brand-primary bg-green-50 shadow-sm"
+                        : "border-transparent hover:border-gray-300"
+                    }`}
                   >
                     {/* Icon */}
-                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary shrink-0">
+                    <div className="text-brand-primary flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100">
                       <item.icon size={20} />
                     </div>
 
                     {/* Text */}
                     <div>
-                      <h3 className="text-lg sm:text-xl font-red-rose">
+                      <h3 className="font-red-rose text-lg sm:text-xl">
                         {item.title}
                       </h3>
-                      <p className="text-sm leading-tight sm:text-base text-brand-gray">
+                      <p className="text-brand-gray text-sm leading-tight sm:text-base">
                         {item.description}
                       </p>
                     </div>

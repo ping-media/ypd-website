@@ -31,20 +31,20 @@ const CvpPricing = ({
   footerLink,
 }: CvpPricingProps) => {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center px-4 sm:px-0">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4 px-4 text-center sm:px-0">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
-          <p className="text-sm sm:text-base lg:text-lg text-brand-gray max-w-4xl">
+          <p className="text-brand-gray max-w-4xl text-sm sm:text-base lg:text-lg">
             {subheading}
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="flex flex-col max-sm:flex-col sm:flex-row justify-center gap-6 sm:gap-8 w-full max-w-5xl items-stretch">
+        <div className="flex w-full max-w-5xl flex-col items-stretch justify-center gap-6 max-sm:flex-col sm:flex-row sm:gap-8">
           {plans.map((plan, index) => (
-            <div key={index} className="w-full sm:w-1/2 flex flex-col flex-1">
+            <div key={index} className="flex w-full flex-1 flex-col sm:w-1/2">
               <PricingCard
                 title={plan.title}
                 description={plan.description}
@@ -60,12 +60,12 @@ const CvpPricing = ({
         {/* Footer */}
         {(footerText || footerLink) && (
           <div className="flex flex-col items-center gap-6 px-4 sm:px-0">
-            <h2 className="text-sm sm:text-base lg:text-lg text-center font-semibold">
+            <h2 className="text-center text-sm font-semibold sm:text-base lg:text-lg">
               {footerText}{" "}
               {footerLink && (
                 <Link
                   href={footerLink.href}
-                  className="border-b border-b-brand-primary text-brand-primary hover:text-brand-primary/80"
+                  className="border-b-brand-primary text-brand-primary hover:text-brand-primary/80 border-b"
                 >
                   {footerLink.text}
                 </Link>

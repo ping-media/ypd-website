@@ -15,15 +15,15 @@ interface Review {
 
 function ReviewCard({ name, education, text, image }: Review) {
   return (
-    <div className="rounded-xl shadow-md border bg-white flex flex-col justify-between h-full">
+    <div className="flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
       {/* Quote + Text */}
-      <div className="p-6 flex-1">
-        <Quote className="w-6 h-6 text-[#9ec89e] rotate-180 fill-[#9ec89e]" />
-        <p className="text-gray-700 mt-3 leading-relaxed">{text}</p>
+      <div className="flex-1 p-6">
+        <Quote className="h-6 w-6 rotate-180 fill-[#9ec89e] text-[#9ec89e]" />
+        <p className="mt-3 leading-relaxed text-gray-700">{text}</p>
       </div>
 
       {/* Footer */}
-      <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-b-xl border-t-2 border-dashed">
+      <div className="flex items-center gap-3 rounded-b-xl border-t-2 border-dashed bg-gray-50 p-4">
         <Image
           src={image}
           alt={name}
@@ -32,8 +32,8 @@ function ReviewCard({ name, education, text, image }: Review) {
           className="rounded-full object-cover"
         />
         <div>
-          <p className="font-medium font-red-rose">{name}</p>
-          <p className="text-xs text-brand-gray">{education}</p>
+          <p className="font-red-rose font-medium">{name}</p>
+          <p className="text-brand-gray text-xs">{education}</p>
         </div>
       </div>
     </div>

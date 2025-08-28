@@ -7,10 +7,10 @@ interface DecisionCardItemProps {
 
 const DecisionCard: React.FC<DecisionCardItemProps> = ({ image, heading }) => {
   return (
-    <div className="border p-2.5 sm:p-3 rounded-lg bg-white border-gray-200 shadow-sm flex flex-col m-1">
-      <div className="rounded-lg overflow-hidden border border-gray-200 flex flex-col h-full">
+    <div className="m-1 flex flex-col rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm sm:p-3">
+      <div className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200">
         {/* Image */}
-        <div className="w-full h-48 sm:h-56 md:h-64 relative">
+        <div className="relative h-48 w-full sm:h-56 md:h-64">
           <Image
             src={image}
             alt={heading}
@@ -22,8 +22,8 @@ const DecisionCard: React.FC<DecisionCardItemProps> = ({ image, heading }) => {
         </div>
 
         {/* Text */}
-        <div className="p-4 flex-1 flex items-center justify-center">
-          <div className="font-red-rose text-lg text-center sm:text-left break-words min-h-[56px] flex items-center">
+        <div className="flex flex-1 items-center justify-center p-4">
+          <div className="font-red-rose flex min-h-[56px] items-center text-center text-lg break-words sm:text-left">
             {heading}
           </div>
         </div>

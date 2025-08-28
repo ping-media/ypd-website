@@ -26,14 +26,14 @@ const Insights = () => {
   ];
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-14 font-lato">
+    <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4">
-          <h2 className="font-red-rose text-2xl sm:text-3xl text-center">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4">
+          <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             Blending Artificial Intelligence With Human Wisdom
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl text-center">
+          <p className="text-brand-gray max-w-4xl text-center text-base sm:text-lg">
             Artificial Intelligence that works with proprietary frameworks,
             logic designs, knowledge base &amp; years of research. Guidance
             becomes personal, data driven, logical, culturally sensitive,
@@ -41,9 +41,9 @@ const Insights = () => {
           </p>
         </div>
         {/* Content */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-12 max-w-7xl w-full">
+        <div className="flex w-full max-w-7xl flex-col items-center justify-center gap-6 sm:gap-12 lg:flex-row">
           {/* Left - Steps */}
-          <div className="flex flex-col gap-4 sm:gap-6 w-full lg:w-[60%]">
+          <div className="flex w-full flex-col gap-4 sm:gap-6 lg:w-[60%]">
             {insightData.map((insight) => (
               <InsightCard
                 key={insight.number}
@@ -55,7 +55,7 @@ const Insights = () => {
           </div>
 
           {/* Right Image */}
-          <div className="relative w-full lg:w-[40%] rounded-xl overflow-hidden shadow-lg h-[440px]">
+          <div className="relative h-[440px] w-full overflow-hidden rounded-xl shadow-lg lg:w-[40%]">
             <Image
               src="/ai.png"
               alt="Happy Students"
@@ -64,11 +64,11 @@ const Insights = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-black/30 flex flex-col justify-end gap-2 p-10 text-white text-center">
-              <h3 className="font-semibold text-base sm:text-lg">
+            <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/30 p-10 text-center text-white">
+              <h3 className="text-base font-semibold sm:text-lg">
                 Why Students Love It
               </h3>
-              <p className="text-xs sm:text-sm max-w-sm mx-auto">
+              <p className="mx-auto max-w-sm text-xs sm:text-sm">
                 &quot;I liked that the AI gave me fast insights — but the mentor
                 made it make sense to me. I felt seen, not just sorted.&quot;
               </p>
@@ -77,7 +77,7 @@ const Insights = () => {
         </div>
         <Link
           href="#"
-          className="flex justify-center items-center gap-2 rounded-lg text-brand-fg text-sm sm:text-base lg:text-lg bg-brand-primary border border-brand-accent py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto hover:bg-brand-primary/90"
+          className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
         >
           Read More
           <ArrowRight size={24} className="shrink-0" />

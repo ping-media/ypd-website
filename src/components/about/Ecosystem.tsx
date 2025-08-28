@@ -10,43 +10,43 @@ import {
 
 const features = [
   {
-    icon: <GraduationCap className="w-8 h-8 text-brand-primary" />,
+    icon: <GraduationCap className="text-brand-primary h-8 w-8" />,
     title: "Students",
     description:
       "From Class 9 to mid-career professionals each building clarity, confidence, and a custom roadmap.",
   },
   {
-    icon: <Users className="w-8 h-8 text-brand-primary" />,
+    icon: <Users className="text-brand-primary h-8 w-8" />,
     title: "Parents",
     description:
       "Critical decision allies, supporting emotional readiness and future mapping through Parent Connect™.",
   },
   {
-    icon: <BookOpen className="w-8 h-8 text-brand-primary" />,
+    icon: <BookOpen className="text-brand-primary h-8 w-8" />,
     title: "Mentors & Educators",
     description:
       "Certified guides delivering personalized learning journeys and adaptive nudges.",
   },
   {
-    icon: <Building2 className="w-8 h-8 text-brand-primary" />,
+    icon: <Building2 className="text-brand-primary h-8 w-8" />,
     title: "Institutions",
     description:
       "Schools, colleges, and skilling hubs implementing structured guidance across grades and streams.",
   },
   {
-    icon: <Briefcase className="w-8 h-8 text-brand-primary" />,
+    icon: <Briefcase className="text-brand-primary h-8 w-8" />,
     title: "Industry & Hiring Partners",
     description:
       "Co-creating role-to-skill bridges, career exposure, and workplace preparedness.",
   },
   {
-    icon: <Lightbulb className="w-8 h-8 text-brand-primary" />,
+    icon: <Lightbulb className="text-brand-primary h-8 w-8" />,
     title: "Innovation & Research Teams",
     description:
       "Continuously evolving AI logic, frameworks, and learner models for relevance and scale.",
   },
   {
-    icon: <Handshake className="w-8 h-8 text-brand-primary" />,
+    icon: <Handshake className="text-brand-primary h-8 w-8" />,
     title: "Government Collaborations",
     description:
       "Integrating with national skilling missions, NEP objectives, and outcome-linked programs.",
@@ -55,14 +55,14 @@ const features = [
 
 export default function Ecosystem() {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto flex flex-col gap-3 sm:gap-4">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-red-rose">
+        <div className="mx-auto flex max-w-4xl flex-col gap-3 text-center sm:gap-4">
+          <h2 className="font-red-rose text-xl sm:text-2xl lg:text-3xl">
             The YPD Ecosystem
           </h2>
-          <p className="text-brand-gray text-sm sm:text-base lg:text-lg leading-relaxed">
+          <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
             At Youth Pulse Digital™, we’re building a transformative career
             ecosystem where learners, mentors, families, and institutions all
             play an active role. Career clarity isn’t a solo journey, but a
@@ -72,19 +72,19 @@ export default function Ecosystem() {
         </div>
 
         {/* Features Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-10 lg:gap-14">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-14">
           {features.map((f, i) => (
             <div
               key={i}
-              className="p-5 sm:p-6 lg:p-8 bg-white rounded-xl shadow-md flex flex-col gap-3 sm:gap-4 hover:shadow-lg transition"
+              className="flex flex-col gap-3 rounded-xl bg-white p-5 shadow-md transition hover:shadow-lg sm:gap-4 sm:p-6 lg:p-8"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center bg-green-50 rounded-lg">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-50 sm:h-12 sm:w-12">
                 {f.icon}
               </div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-red-rose">
+              <h3 className="font-red-rose text-lg sm:text-xl lg:text-2xl">
                 {f.title}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base lg:text-lg leading-relaxed">
+              <p className="text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
                 {f.description}
               </p>
             </div>

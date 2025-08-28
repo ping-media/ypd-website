@@ -10,7 +10,7 @@ const socialLinks = [
 
 const SocialLinks = () => {
   return (
-    <div className="flex gap-3 font-sans items-center">
+    <div className="flex items-center gap-3 font-sans">
       <span className="text-sm">Follow us:</span>
       {socialLinks.map(({ href, src, alt, label }) => (
         <Link key={label} href={href} aria-label={label}>

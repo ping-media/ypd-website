@@ -28,30 +28,30 @@ export default function CvpHero({
   reverse = false,
 }: CvpHeroProps) {
   return (
-    <div className="px-4 py-6 sm:py-10 sm:px-10 lg:px-20 max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16 font-lato">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-8 px-4 py-6 sm:gap-12 sm:px-10 sm:py-10 lg:gap-16 lg:px-20">
       <div
-        className={`w-full flex flex-col md:flex-row items-center gap-6 sm:gap-10 lg:gap-20 ${
+        className={`flex w-full flex-col items-center gap-6 sm:gap-10 md:flex-row lg:gap-20 ${
           reverse ? "lg:flex-row-reverse" : ""
         }`}
       >
         {/* Text Content */}
-        <div className="flex-1 space-y-5 sm:space-y-6 text-center lg:text-left">
-          <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-red-rose leading-snug">
+        <div className="flex-1 space-y-5 text-center sm:space-y-6 lg:text-left">
+          <h2 className="font-red-rose text-2xl leading-snug sm:text-3xl lg:text-[42px]">
             {title}
           </h2>
 
-          <p className="text-base sm:text-lg text-brand-gray">{subtitle}</p>
+          <p className="text-brand-gray text-base sm:text-lg">{subtitle}</p>
 
           {description && (
-            <p className="text-sm sm:text-base text-brand-gray">
+            <p className="text-brand-gray text-sm sm:text-base">
               {description}
             </p>
           )}
 
           <ul className="space-y-3 text-sm sm:text-base">
             {features.map((feature, idx) => (
-              <li key={idx} className="flex items-start gap-3 justify-start">
-                <SquareCheck className="text-brand-primary bg-brand-bg w-5 h-5 shrink-0 mt-1" />
+              <li key={idx} className="flex items-start justify-start gap-3">
+                <SquareCheck className="text-brand-primary bg-brand-bg mt-1 h-5 w-5 shrink-0" />
                 <span>{feature}</span>
               </li>
             ))}
@@ -60,23 +60,23 @@ export default function CvpHero({
           {buttonText && (
             <Link
               href={buttonLink}
-              className="inline-flex items-center gap-2 bg-brand-primary text-white text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 rounded-lg shadow hover:bg-brand-primary/90 transition"
+              className="bg-brand-primary hover:bg-brand-primary/90 inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm text-white shadow transition sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
             >
-              <Sparkles className="w-5 h-5" />
+              <Sparkles className="h-5 w-5" />
               {buttonText}
             </Link>
           )}
         </div>
 
         {/* Image Section */}
-        <div className="flex-1 w-full max-w-full self-stretch">
-          <div className="w-full h-[300px] sm:h-[400px] md:h-full">
+        <div className="w-full max-w-full flex-1 self-stretch">
+          <div className="h-[300px] w-full sm:h-[400px] md:h-full">
             <Image
               src={image}
               alt={imageAlt}
               width={800}
               height={600}
-              className="w-full h-full object-fill rounded-lg shadow"
+              className="h-full w-full rounded-lg object-fill shadow"
             />
           </div>
         </div>

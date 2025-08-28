@@ -30,22 +30,22 @@ const items: SecurityItem[] = [
     desc: "Process your Payment Certified to Securely handle and information.",
   },
   {
-    icon: <ShieldCheck className="w-10 h-10 text-brand-primary" />,
+    icon: <ShieldCheck className="text-brand-primary h-10 w-10" />,
     title: "Access & Permission",
     desc: "Control Who gets access with robust permission and two factor authentication",
   },
   {
-    icon: <Lock className="w-10 h-10 text-brand-primary" />,
+    icon: <Lock className="text-brand-primary h-10 w-10" />,
     title: "Encryption Everywhere",
     desc: "Your data is encrypted in transit and reset.",
   },
   {
-    icon: <BrainCircuit className="w-10 h-10 text-brand-primary" />,
+    icon: <BrainCircuit className="text-brand-primary h-10 w-10" />,
     title: "AI models we use",
     desc: "Complete protection for healthcare organizations",
   },
   {
-    icon: <Database className="w-10 h-10 text-brand-primary" />,
+    icon: <Database className="text-brand-primary h-10 w-10" />,
     title: "Data Storage",
     desc: "AWS Encrypted Servers",
   },
@@ -53,15 +53,15 @@ const items: SecurityItem[] = [
 
 export default function CvpSecurity() {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-start gap-4 font-lato">
+    <section className="flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-start gap-4">
         {/* Heading */}
-        <h2 className="font-red-rose text-2xl sm:text-3xl lg:text-4xl text-gray-900">
+        <h2 className="font-red-rose text-2xl text-gray-900 sm:text-3xl lg:text-4xl">
           Your Data always kept private and protected
         </h2>
 
         {/* Subheading */}
-        <p className="max-w-3xl text-left text-base sm:text-lg w-full">
+        <p className="w-full max-w-3xl text-left text-base sm:text-lg">
           <span className="text-base font-bold sm:text-xl">
             We take Security Seriously so you don’t have to worry,
           </span>
@@ -71,17 +71,13 @@ export default function CvpSecurity() {
         </p>
 
         {/* Grid with plus-style borders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full sm:mt-6 lg:mt-12 border border-gray-200 rounded-xl overflow-hidden">
+        <div className="grid w-full grid-cols-1 overflow-hidden rounded-xl border border-gray-200 sm:mt-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
           {items.map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col items-start gap-3 p-6
-                ${i < items.length - 4 ? "border-b border-gray-200" : ""}
-                sm:${i % 2 !== 1 ? "border-r border-gray-200" : ""}
-                lg:${i % 4 !== 3 ? "border-r border-gray-200" : ""}
-              `}
+              className={`flex flex-col items-start gap-3 p-6 ${i < items.length - 4 ? "border-b border-gray-200" : ""} sm:${i % 2 !== 1 ? "border-r border-gray-200" : ""} lg:${i % 4 !== 3 ? "border-r border-gray-200" : ""} `}
             >
-              <div className="bg-green-50 p-3 rounded-lg flex items-center justify-center">
+              <div className="flex items-center justify-center rounded-lg bg-green-50 p-3">
                 {typeof item.icon === "string" ? (
                   <Image
                     src={item.icon}
@@ -94,10 +90,10 @@ export default function CvpSecurity() {
                   item.icon
                 )}
               </div>
-              <h3 className="font-red-rose text-lg text-brand-primary">
+              <h3 className="font-red-rose text-brand-primary text-lg">
                 {item.title}
               </h3>
-              <p className="text-sm text-brand-gray">{item.desc}</p>
+              <p className="text-brand-gray text-sm">{item.desc}</p>
             </div>
           ))}
         </div>

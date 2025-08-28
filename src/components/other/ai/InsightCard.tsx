@@ -6,14 +6,14 @@ interface InsightCardProps {
 
 const InsightCard = ({ number, title, description }: InsightCardProps) => {
   return (
-    <div className="flex gap-4 p-6 bg-white rounded-lg shadow-sm border border-[#CCE0CC] h-full">
+    <div className="flex h-full gap-4 rounded-lg border border-[#CCE0CC] bg-white p-6 shadow-sm">
       {/* Number */}
-      <div className="font-red-rose text-5xl font-bold text-[#CCE0CC] shrink-0">
+      <div className="font-red-rose shrink-0 text-5xl font-bold text-[#CCE0CC]">
         {number}
       </div>
 
       {/* Text Content */}
-      <div className="flex flex-col gap-2 min-w-0">
+      <div className="flex min-w-0 flex-col gap-2">
         <h3 className="font-red-rose text-lg">{title}</h3>
         <p className="text-brand-gray text-base break-words hyphens-auto">
           {description}

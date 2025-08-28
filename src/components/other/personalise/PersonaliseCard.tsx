@@ -7,15 +7,15 @@ type PersonaliseCardProps = {
 
 const PersonaliseCard = ({ title, description }: PersonaliseCardProps) => {
   return (
-    <div className="p-0.5 rounded-lg border border-gray-100">
-      <div className="p-5 sm:p-10 rounded-lg border border-gray-100 shadow-sm flex flex-col justify-center items-center text-center h-56 m-1 bg-gradient-to-tr from-green-100/50 via-green-100/20  to-white">
+    <div className="rounded-lg border border-gray-100 p-0.5">
+      <div className="m-1 flex h-56 flex-col items-center justify-center rounded-lg border border-gray-100 bg-gradient-to-tr from-green-100/50 via-green-100/20 to-white p-5 text-center shadow-sm sm:p-10">
         {/* Title */}
-        <h3 className="font-red-rose text-base sm:text-lg text-black mb-2">
+        <h3 className="font-red-rose mb-2 text-base text-black sm:text-lg">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-brand-gray leading-snug">
+        <p className="text-brand-gray text-sm leading-snug sm:text-base">
           {description}
         </p>
       </div>

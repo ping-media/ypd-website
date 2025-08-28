@@ -34,15 +34,15 @@ const Reviews: Review[] = [
 
 function ReviewCard({ name, text, image }: Review) {
   return (
-    <div className="rounded-xl shadow-md border bg-white flex flex-col justify-between h-full">
+    <div className="flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
       {/* Quote */}
-      <div className="p-6 flex-1">
-        <Quote className="w-6 h-6 text-brand-primary transform rotate-180 fill-brand-primary" />
+      <div className="flex-1 p-6">
+        <Quote className="text-brand-primary fill-brand-primary h-6 w-6 rotate-180 transform" />
         <p className="text-brand-gray mt-3">{text}</p>
       </div>
 
       {/* Footer */}
-      <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-b-xl">
+      <div className="flex items-center gap-3 rounded-b-xl bg-gray-50 p-4">
         <Image
           src={image}
           alt={name}

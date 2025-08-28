@@ -34,13 +34,13 @@ export default function CvpLiteWorks({
   const activeItem = audience[activeIndex];
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
           {subheading && (
-            <p className="text-base sm:text-lg text-brand-gray max-w-4xl">
+            <p className="text-brand-gray max-w-4xl text-base sm:text-lg">
               {subheading}
             </p>
           )}
@@ -49,9 +49,9 @@ export default function CvpLiteWorks({
         {/* Responsive Layout */}
         <div className="w-full max-w-7xl">
           {/* Desktop */}
-          <div className="hidden lg:flex gap-4 sm:gap-10 items-center">
+          <div className="hidden items-center gap-4 sm:gap-10 lg:flex">
             {/* Left: Image */}
-            <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[400px]">
+            <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
                 key={activeItem.id}
                 src={activeItem.image}
@@ -62,25 +62,23 @@ export default function CvpLiteWorks({
             </div>
 
             {/* Right: Cards */}
-            <div className="grid grid-cols-1 gap-4 flex-1">
+            <div className="grid flex-1 grid-cols-1 gap-4">
               {audience.map((item, index) => (
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`p-4 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
-                    ${
-                      index === activeIndex
-                        ? "border-brand-primary bg-green-50 shadow-sm"
-                        : "border-gray-200 hover:border-gray-300 bg-white"
-                    }`}
+                  className={`flex cursor-pointer items-start gap-4 rounded-lg border p-4 transition-all duration-200 ${
+                    index === activeIndex
+                      ? "border-brand-primary bg-green-50 shadow-sm"
+                      : "border-gray-200 bg-white hover:border-gray-300"
+                  }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                                      ${
-                                        index === activeIndex
-                                          ? "bg-green-100 text-brand-primary"
-                                          : "bg-gray-100 text-brand-gray"
-                                      }`}
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+                      index === activeIndex
+                        ? "text-brand-primary bg-green-100"
+                        : "text-brand-gray bg-gray-100"
+                    }`}
                   >
                     <Image
                       src={item.icon}
@@ -91,10 +89,10 @@ export default function CvpLiteWorks({
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-red-rose">
+                    <h3 className="font-red-rose text-lg md:text-xl">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-brand-gray">
+                    <p className="text-brand-gray text-sm">
                       {item.description}
                     </p>
                   </div>
@@ -104,8 +102,8 @@ export default function CvpLiteWorks({
           </div>
 
           {/* Tablet */}
-          <div className="hidden md:flex lg:hidden flex-col gap-8">
-            <div className="relative rounded-lg overflow-hidden shadow-lg min-h-[500px] w-full">
+          <div className="hidden flex-col gap-8 md:flex lg:hidden">
+            <div className="relative min-h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
               <Image
                 key={activeItem.id}
                 src={activeItem.image}
@@ -120,26 +118,24 @@ export default function CvpLiteWorks({
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`p-4 rounded-lg border flex gap-3 items-start cursor-pointer transition-all duration-200
-                    ${
-                      index === activeIndex
-                        ? "border-brand-primary bg-green-50 shadow-sm"
-                        : "border-gray-200 hover:border-gray-300 bg-white"
-                    }`}
+                  className={`flex cursor-pointer items-start gap-3 rounded-lg border p-4 transition-all duration-200 ${
+                    index === activeIndex
+                      ? "border-brand-primary bg-green-50 shadow-sm"
+                      : "border-gray-200 bg-white hover:border-gray-300"
+                  }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                    ${
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
                       index === activeIndex
-                        ? "bg-green-100 text-brand-primary"
-                        : "bg-gray-100 text-brand-gray"
+                        ? "text-brand-primary bg-green-100"
+                        : "text-brand-gray bg-gray-100"
                     }`}
                   >
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-red-rose">{item.title}</h3>
-                    <p className="text-sm text-brand-gray">
+                    <h3 className="font-red-rose text-base">{item.title}</h3>
+                    <p className="text-brand-gray text-sm">
                       {item.description}
                     </p>
                   </div>
@@ -151,7 +147,7 @@ export default function CvpLiteWorks({
           {/* Mobile */}
           <div className="flex flex-col gap-6 md:hidden">
             <div className="flex flex-col gap-4">
-              <div className="relative rounded-lg overflow-hidden shadow-lg min-h-[350px] w-full">
+              <div className="relative min-h-[350px] w-full overflow-hidden rounded-lg shadow-lg">
                 <Image
                   key={activeItem.id}
                   src={activeItem.image}
@@ -164,26 +160,24 @@ export default function CvpLiteWorks({
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`p-3 rounded-lg border flex gap-3 items-start cursor-pointer transition-all duration-200
-                    ${
-                      index === activeIndex
-                        ? "border-brand-primary bg-green-50 shadow-sm"
-                        : "border-gray-200 hover:border-gray-300 bg-white"
-                    }`}
+                  className={`flex cursor-pointer items-start gap-3 rounded-lg border p-3 transition-all duration-200 ${
+                    index === activeIndex
+                      ? "border-brand-primary bg-green-50 shadow-sm"
+                      : "border-gray-200 bg-white hover:border-gray-300"
+                  }`}
                 >
                   <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                    ${
+                    className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
                       index === activeIndex
-                        ? "bg-green-100 text-brand-primary"
-                        : "bg-gray-100 text-brand-gray"
+                        ? "text-brand-primary bg-green-100"
+                        : "text-brand-gray bg-gray-100"
                     }`}
                   >
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="text-base font-red-rose">{item.title}</h3>
-                    <p className="text-sm text-brand-gray">
+                    <h3 className="font-red-rose text-base">{item.title}</h3>
+                    <p className="text-brand-gray text-sm">
                       {item.description}
                     </p>
                   </div>
@@ -198,13 +192,13 @@ export default function CvpLiteWorks({
           {ctaLink && (
             <Link
               href={ctaLink}
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium shadow-sm transition-colors"
+              className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
             >
               <Zap size={18} /> {ctaText}
             </Link>
           )}
           {ctaSubtext && (
-            <h2 className="font-red-rose text-base sm:text-lg text-center">
+            <h2 className="font-red-rose text-center text-base sm:text-lg">
               {ctaSubtext}
             </h2>
           )}

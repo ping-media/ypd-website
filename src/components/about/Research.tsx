@@ -47,14 +47,14 @@ export default function Research() {
   const activeResearch = researchData[activeIndex];
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-gradient-to-br from-[#5a8d50] via-brand-primary to-brand-accent flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-8 sm:gap-12 lg:gap-16 font-lato text-white">
+    <section className="via-brand-primary to-brand-accent flex justify-center bg-gradient-to-br from-[#5a8d50] p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-8 text-white sm:gap-12 lg:gap-16">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4">
-          <h2 className="font-red-rose text-2xl sm:text-3xl text-center">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4">
+          <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             R&D and Innovation at Youth Pulse Digital™
           </h2>
-          <p className="text-base sm:text-lg opacity-90 text-center">
+          <p className="text-center text-base opacity-90 sm:text-lg">
             At Youth Pulse Digital™, research and innovation aren’t support
             functions—they’re the engine driving everything we do. Our core
             belief is simple: the future of career guidance must evolve as fast
@@ -63,25 +63,24 @@ export default function Research() {
         </div>
 
         {/* Research Section */}
-        <div className="flex justify-center w-full">
-          <div className="flex max-w-7xl w-full bg-white/10 rounded-lg p-4 gap-6 sm:gap-10 flex-col-reverse md:flex-row">
+        <div className="flex w-full justify-center">
+          <div className="flex w-full max-w-7xl flex-col-reverse gap-6 rounded-lg bg-white/10 p-4 sm:gap-10 md:flex-row">
             {/* Left Column (Research List) */}
-            <div className="flex flex-col justify-center w-full md:w-4/10 gap-4">
+            <div className="flex w-full flex-col justify-center gap-4 md:w-4/10">
               {researchData.map((research, index) => {
                 const isActive = activeIndex === index;
                 return (
                   <div
                     key={research.title}
                     onClick={() => setActiveIndex(index)}
-                    className={`p-4 sm:p-5 rounded-lg cursor-pointer flex flex-col transition-all duration-200 border-l-4
-          ${
-            isActive
-              ? "border-white bg-white/40 shadow-md"
-              : "border-transparent"
-          }`}
+                    className={`flex cursor-pointer flex-col rounded-lg border-l-4 p-4 transition-all duration-200 sm:p-5 ${
+                      isActive
+                        ? "border-white bg-white/40 shadow-md"
+                        : "border-transparent"
+                    }`}
                   >
                     <span
-                      className={`text-base sm:text-lg lg:text-xl font-red-rose font-medium text-white`}
+                      className={`font-red-rose text-base font-medium text-white sm:text-lg lg:text-xl`}
                     >
                       {research.title}
                     </span>
@@ -94,7 +93,7 @@ export default function Research() {
             </div>
 
             {/* Right Column (Image + Active Description) */}
-            <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[400px]">
+            <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
                 src={activeResearch.image}
                 alt={activeResearch.title}
@@ -103,7 +102,7 @@ export default function Research() {
                 sizes="(max-width: 500px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6 gap-2"></div>
+              <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/40 p-6"></div>
             </div>
           </div>
         </div>

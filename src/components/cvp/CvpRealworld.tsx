@@ -22,39 +22,37 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-6 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-6 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center px-2">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4 px-2 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
-          <p className="text-sm sm:text-base lg:text-lg text-brand-gray max-w-4xl">
+          <p className="text-brand-gray max-w-4xl text-sm sm:text-base lg:text-lg">
             {subheading}
           </p>
         </div>
 
         {/* Layout */}
-        <div className="flex flex-col-reverse md:flex-row gap-6 sm:gap-10 lg:gap-14 items-stretch w-full max-w-7xl">
+        <div className="flex w-full max-w-7xl flex-col-reverse items-stretch gap-6 sm:gap-10 md:flex-row lg:gap-14">
           {/* Left: Cards */}
-          <div className="flex flex-col gap-4 w-full md:w-1/2">
+          <div className="flex w-full flex-col gap-4 md:w-1/2">
             {items.map((item, index) => (
               <div
                 key={item.id}
                 onClick={() => setActiveIndex(index)}
-                className={`p-4 sm:p-5 rounded-lg border flex gap-4 items-start cursor-pointer transition-all duration-200
-                  ${
-                    index === activeIndex
-                      ? "border-brand-accent bg-green-50 shadow-sm"
-                      : "border-gray-200 hover:border-gray-300 bg-white"
-                  }`}
+                className={`flex cursor-pointer items-start gap-4 rounded-lg border p-4 transition-all duration-200 sm:p-5 ${
+                  index === activeIndex
+                    ? "border-brand-accent bg-green-50 shadow-sm"
+                    : "border-gray-200 bg-white hover:border-gray-300"
+                }`}
               >
                 {/* Icon Image */}
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0
-                    ${
-                      index === activeIndex
-                        ? "bg-green-100 text-brand-primary"
-                        : "bg-gray-100 text-brand-gray"
-                    }`}
+                  className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+                    index === activeIndex
+                      ? "text-brand-primary bg-green-100"
+                      : "text-brand-gray bg-gray-100"
+                  }`}
                 >
                   <Image
                     src={item.icon}
@@ -68,7 +66,7 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
                 {/* Text */}
                 <div className="text-left">
                   <h3
-                    className={`text-base sm:text-lg lg:text-xl font-red-rose ${
+                    className={`font-red-rose text-base sm:text-lg lg:text-xl ${
                       index === activeIndex
                         ? "text-brand-primary"
                         : "text-black"
@@ -76,10 +74,10 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm italic text-brand-gray">
+                  <p className="text-brand-gray text-xs italic sm:text-sm">
                     {item.quote}
                   </p>
-                  <p className="text-xs sm:text-sm lg:text-base text-brand-gray mt-1">
+                  <p className="text-brand-gray mt-1 text-xs sm:text-sm lg:text-base">
                     {item.description}
                   </p>
                 </div>
@@ -88,7 +86,7 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
           </div>
 
           {/* Right: Big Image */}
-          <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg w-full h-[300px] md:h-auto min-h-[300px]">
+          <div className="relative h-[300px] min-h-[300px] w-full flex-1 overflow-hidden rounded-lg shadow-lg md:h-auto">
             <Image
               src={items[activeIndex].image}
               alt={items[activeIndex].title}

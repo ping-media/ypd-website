@@ -16,13 +16,11 @@ export default function ProgramCard({
   return (
     <div
       onClick={onClick}
-      className={`p-4 sm:p-5 rounded-lg cursor-pointer flex items-center gap-3 transition-all duration-200
-        border-l-4 shadow-md
-        ${
-          isActive
-            ? "border-brand-primary bg-white"
-            : "border-transparent bg-white hover:bg-white/80 shadow-transparent"
-        }`}
+      className={`flex cursor-pointer items-center gap-3 rounded-lg border-l-4 p-4 shadow-md transition-all duration-200 sm:p-5 ${
+        isActive
+          ? "border-brand-primary bg-white"
+          : "border-transparent bg-white shadow-transparent hover:bg-white/80"
+      }`}
     >
       {Icon && (
         <Icon
@@ -31,10 +29,10 @@ export default function ProgramCard({
         />
       )}
       <span
-        className={`text-base sm:text-lg lg:text-xl font-poppins ${
+        className={`font-poppins text-base sm:text-lg lg:text-xl ${
           isActive
             ? "text-brand-primary font-semibold"
-            : "text-black font-medium"
+            : "font-medium text-black"
         }`}
       >
         {title}

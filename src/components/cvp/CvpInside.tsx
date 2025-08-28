@@ -25,33 +25,33 @@ const CvpInside: React.FC<CvpInsideProps> = ({
   ctaNote,
 }) => {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center bg-brand-bg">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-8 sm:gap-12 font-lato">
+    <section className="bg-brand-bg flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-8 sm:gap-12">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col items-center gap-4 text-center">
+        <div className="flex max-w-7xl flex-col items-center gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl md:text-4xl">
             {heading}
           </h2>
           {subheading && (
-            <p className="text-base sm:text-lg md:text-xl text-brand-gray max-w-4xl">
+            <p className="text-brand-gray max-w-4xl text-base sm:text-lg md:text-xl">
               {subheading}
             </p>
           )}
         </div>
 
         {/* === For XL and above: original 3 + 2 layout === */}
-        <div className="w-full hidden xl:flex flex-col gap-10">
+        <div className="hidden w-full flex-col gap-10 xl:flex">
           {/* First 3 cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full">
+          <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
             {features.slice(0, 3).map((feature, index) => (
               <div
                 key={index}
-                className="border border-brand-primary rounded-lg bg-white shadow-sm p-6 sm:p-8 flex flex-col gap-4 items-start hover:shadow-md transition w-full"
+                className="border-brand-primary flex w-full flex-col items-start gap-4 rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md sm:p-8"
               >
-                <div className="w-12 h-12 rounded-md bg-green-50 flex items-center justify-center text-brand-primary">
+                <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                   <feature.icon size={22} />
                 </div>
-                <h3 className="font-red-rose text-lg sm:text-xl text-gray-700 text-start">
+                <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
                   {feature.title}
                 </h3>
               </div>
@@ -59,16 +59,16 @@ const CvpInside: React.FC<CvpInsideProps> = ({
           </div>
 
           {/* Last 2 cards centered */}
-          <div className="flex justify-center gap-6 sm:gap-8 flex-wrap">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {features.slice(3).map((feature, index) => (
               <div
                 key={index}
-                className="border border-brand-primary rounded-lg bg-white shadow-sm p-6 sm:p-8 flex flex-col gap-4 items-start hover:shadow-md transition w-full sm:w-[320px] md:w-[360px]"
+                className="border-brand-primary flex w-full flex-col items-start gap-4 rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md sm:w-[320px] sm:p-8 md:w-[360px]"
               >
-                <div className="w-12 h-12 rounded-md bg-green-50 flex items-center justify-center text-brand-primary">
+                <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                   <feature.icon size={22} />
                 </div>
-                <h3 className="font-red-rose text-lg sm:text-xl text-gray-700 text-start">
+                <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
                   {feature.title}
                 </h3>
               </div>
@@ -77,16 +77,16 @@ const CvpInside: React.FC<CvpInsideProps> = ({
         </div>
 
         {/* === For below XL: single responsive grid === */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 xl:hidden">
+        <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 xl:hidden">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="border border-brand-primary rounded-lg bg-white shadow-sm p-6 sm:p-8 flex flex-col gap-4 items-start hover:shadow-md transition w-full"
+              className="border-brand-primary flex w-full flex-col items-start gap-4 rounded-lg border bg-white p-6 shadow-sm transition hover:shadow-md sm:p-8"
             >
-              <div className="w-12 h-12 rounded-md bg-green-50 flex items-center justify-center text-brand-primary">
+              <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                 <feature.icon size={22} />
               </div>
-              <h3 className="font-red-rose text-lg sm:text-xl text-gray-700 text-start">
+              <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
                 {feature.title}
               </h3>
             </div>
@@ -99,13 +99,13 @@ const CvpInside: React.FC<CvpInsideProps> = ({
             {ctaText && ctaLink && (
               <Link
                 href={ctaLink}
-                className="flex items-center justify-center gap-2 rounded-lg bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium shadow-sm transition-colors"
+                className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
               >
                 <Zap size={18} /> {ctaText}
               </Link>
             )}
             {ctaNote && (
-              <p className="text-sm sm:text-base text-brand-gray mt-2 text-center max-w-3xl mx-auto">
+              <p className="text-brand-gray mx-auto mt-2 max-w-3xl text-center text-sm sm:text-base">
                 {ctaNote}
               </p>
             )}

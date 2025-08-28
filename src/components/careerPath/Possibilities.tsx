@@ -5,21 +5,21 @@ import Link from "next/link";
 
 const Possibilities = () => {
   return (
-    <section className="w-full flex justify-center bg-emerald-50 p-4 sm:p-10 lg:p-20 font-lato">
-      <div className="max-w-6xl w-full flex flex-col items-center text-center gap-6 sm:gap-8">
+    <section className="font-lato flex w-full justify-center bg-emerald-50 p-4 sm:p-10 lg:p-20">
+      <div className="flex w-full max-w-6xl flex-col items-center gap-6 text-center sm:gap-8">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-red-rose leading-snug">
+        <h2 className="font-red-rose text-2xl leading-snug sm:text-3xl lg:text-4xl">
           Unlock Endless Possibilities with YPD
         </h2>
 
         {/* Subheading */}
-        <p className="text-brand-gray max-w-3xl text-sm sm:text-base leading-relaxed">
+        <p className="text-brand-gray max-w-3xl text-sm leading-relaxed sm:text-base">
           Where career clarity meets personalization powered by logic, language,
           and lived experience.
         </p>
 
         {/* Description Block */}
-        <div className="leading-relaxed max-w-4xl text-sm sm:text-base space-y-4 text-gray-700">
+        <div className="max-w-4xl space-y-4 text-sm leading-relaxed text-gray-700 sm:text-base">
           <p>
             With the power of the{" "}
             <span className="font-semibold">YPD Framework™</span>, our
@@ -30,23 +30,23 @@ const Possibilities = () => {
           </p>
           <p>
             Through adaptive learning flows, continuous feedback loops, and AI
-            Mentor Guides, Youth Pulse Digital™ ensures where every other EdTech
-            leaves you, we begin — precisely when maximum support, motivation,
-            and hand-holding are needed for launching your career.
+            Mentor Guides, Youth Pulse Digital™ ensures where every other
+            EdTech leaves you, we begin — precisely when maximum support,
+            motivation, and hand-holding are needed for launching your career.
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 sm:mt-6 w-full sm:w-auto justify-center">
+        <div className="flex w-full flex-col justify-center gap-4 sm:mt-6 sm:w-auto sm:flex-row">
           <Link
             href="/vision"
-            className="flex items-center justify-center gap-2 rounded-xl bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 text-white px-3 sm:px-8 py-3 sm:py-4 font-medium shadow-sm transition-colors"
+            className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-2 rounded-xl border px-3 py-3 font-medium text-white shadow-sm transition-colors sm:px-8 sm:py-4"
           >
             <Zap size={18} /> Launch Career Vision Program
           </Link>
           <Link
             href="/readiness"
-            className="flex items-center justify-center gap-2 rounded-xl border border-black bg-white hover:bg-black/10 px-3 sm:px-8 py-3 sm:py-4 font-medium transition-colors"
+            className="flex items-center justify-center gap-2 rounded-xl border border-black bg-white px-3 py-3 font-medium transition-colors hover:bg-black/10 sm:px-8 sm:py-4"
           >
             <Zap size={18} /> Career Readiness Analyst
           </Link>

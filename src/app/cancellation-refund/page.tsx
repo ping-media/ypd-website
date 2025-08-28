@@ -1,9 +1,9 @@
 const Page = () => {
   return (
-    <div className="p-4 sm:p-10 lg:px-20 lg:py-10 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:px-20 lg:py-10">
+      <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         <div className="flex-1">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
             Terms of Cancellation & Refund Youth Pulse Digital™
           </h1>
           <p className="mb-4">Last Updated: 25/08/2025</p>
@@ -15,11 +15,11 @@ const Page = () => {
             regulations.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             1. Policy Scope and Applicability
           </h2>
           <p className="mb-2 font-semibold">Covered Services:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               AI-Powered Individual Services: Career guidance, exam preparation,
               professional training, entrepreneurship coaching
@@ -43,7 +43,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">User Categories:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Individual Consumers: Students, professionals, job seekers,
               entrepreneurs
@@ -62,14 +62,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             2. Cancellation Terms by Service Type
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             2.1 Individual AI Services
           </h3>
           <p className="mb-2 font-semibold">Premium Monthly Subscriptions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Cancellation Window: Cancel anytime before next billing cycle
             </li>
@@ -84,7 +84,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Annual Subscriptions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Grace Period: 7-day full refund window from purchase date</li>
             <li>
               Pro-rata Refunds: Available for unused months after 7-day window
@@ -99,7 +99,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Career Assessment Packages:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               One-time Purchases: 48-hour cancellation window before assessment
               completion
@@ -113,11 +113,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             2.2 Educational Institution Services
           </h3>
           <p className="mb-2 font-semibold">School Admission Test Systems:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Setup Phase: Full refund if cancelled within 15 days of contract
               signing
@@ -137,7 +137,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Bulk Student Licenses:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Volume Discounts: Refunds calculated on original per-user pricing
             </li>
@@ -150,11 +150,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             2.3 Corporate HR Solutions
           </h3>
           <p className="mb-2 font-semibold">Hiring Platform Subscriptions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Trial Period: 15-day free trial with full cancellation rights
             </li>
@@ -173,20 +173,20 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Employee Onboarding Systems:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Per-employee Pricing: Refunds for unused employee slots</li>
             <li>Fixed-term Licenses: Refunds based on remaining term length</li>
             <li>Training Modules: Non-refundable once accessed by employees</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             3. Refund Eligibility and Conditions
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             3.1 Eligible Refund Scenarios
           </h3>
           <p className="mb-2 font-semibold">Technical Issues:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Platform unavailability for more than 48 consecutive hours</li>
             <li>Critical feature failures preventing service usage</li>
             <li>Data loss or corruption due to our system errors</li>
@@ -194,7 +194,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Service Dissatisfaction:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Individual Services: 7-day money-back guarantee for first-time
               users
@@ -210,18 +210,18 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Billing Errors:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Duplicate charges processed due to technical errors</li>
             <li>Incorrect pricing applied to accounts</li>
             <li>Unauthorized renewals or upgrades</li>
             <li>Currency conversion errors</li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             3.2 Non-Refundable Items
           </h3>
           <p className="mb-2 font-semibold">Completed Services:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Generated assessment reports and career recommendations</li>
             <li>Completed training modules or certification programs</li>
             <li>AI coaching sessions that have been conducted</li>
@@ -229,7 +229,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Third-Party Costs:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Payment gateway processing fees</li>
             <li>Integration development by external vendors</li>
             <li>Third-party software licenses procured for your use</li>
@@ -237,7 +237,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Promotional Pricing:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Services purchased during special offers or discounts</li>
             <li>
               Free trial upgrades to paid plans (beyond standard refund window)
@@ -247,14 +247,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             4. Cancellation Procedures
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             4.1 Self-Service Cancellation
           </h3>
           <p className="mb-2 font-semibold">Individual Users:</p>
-          <ol className="list-decimal ml-6 mb-4">
+          <ol className="mb-4 ml-6 list-decimal">
             <li>
               Account Dashboard: Navigate to &apos;Subscription Management&apos;
               section
@@ -272,7 +272,7 @@ const Page = () => {
           </ol>
 
           <p className="mb-2 font-semibold">Institutional Clients:</p>
-          <ol className="list-decimal ml-6 mb-4">
+          <ol className="mb-4 ml-6 list-decimal">
             <li>
               Admin Portal: Use institutional admin dashboard cancellation
               feature
@@ -284,16 +284,16 @@ const Page = () => {
             <li>Transition Period: Maintain access during notice period</li>
           </ol>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             4.2 Customer Support Cancellation
           </h3>
           <p className="mb-2 font-semibold">Contact Methods:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Email:{" "}
               <a
                 href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
+                className="cursor-pointer font-bold hover:underline"
               >
                 support@youthpulsedigital.com
               </a>
@@ -304,7 +304,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Required Information:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Account email address or user ID</li>
             <li>Purchase order number or transaction reference</li>
             <li>Reason for cancellation (helps us improve services)</li>
@@ -314,21 +314,21 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Processing Timeline:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Acknowledgment: Within 24 hours of cancellation request</li>
             <li>Review: 2-3 business days for eligibility verification</li>
             <li>Refund Processing: 5-7 business days after approval</li>
             <li>Bank Credit: Additional 3-5 business days depending on bank</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             5. Refund Processing and Methods
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             5.1 Refund Calculation
           </h3>
           <p className="mb-2 font-semibold">Pro-rata Calculations:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Monthly Services: Daily rate calculation for unused days</li>
             <li>Annual Services: Monthly rate calculation for unused months</li>
             <li>Usage-based: Refund based on actual feature utilization</li>
@@ -339,7 +339,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Example Calculation:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Annual Subscription: ₹12,000 (12 months)</li>
             <li>Cancellation after: 4 months of usage</li>
             <li>
@@ -349,11 +349,11 @@ const Page = () => {
             <li>Less processing fee: ₹8,000 - ₹100 = ₹7,900 refund</li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             5.2 Refund Methods
           </h3>
           <p className="mb-2 font-semibold">Primary Method:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Original Payment Source: Credit/debit card, UPI, net banking used
               for purchase
@@ -366,7 +366,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Alternative Methods:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Bank Transfer: For failed card refunds or upon request</li>
             <li>
               Digital Wallets: Paytm, PhonePe, Google Pay (where originally
@@ -378,11 +378,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             5.3 International Transactions
           </h3>
           <p className="mb-2 font-semibold">Foreign Cards:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Currency Conversion: Refunds in original transaction currency
             </li>
@@ -393,14 +393,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             6. Special Circumstances and Exceptions
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             6.1 Force Majeure Events
           </h3>
           <p className="mb-2 font-semibold">Service Disruptions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Natural disasters affecting service delivery</li>
             <li>Government regulatory changes impacting operations</li>
             <li>Internet infrastructure failures beyond our control</li>
@@ -410,13 +410,13 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             6.2 Educational Institution Specific
           </h3>
           <p className="mb-2 font-semibold">
             Academic Calendar Considerations:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Mid-semester Cancellations: Refunds calculated considering
               academic impact
@@ -432,7 +432,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Compliance Requirements:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Educational Regulations: Refunds subject to state education board
               policies
@@ -447,11 +447,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             6.3 Corporate Client Exceptions
           </h3>
           <p className="mb-2 font-semibold">Contract Modifications:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               User Volume Changes: Adjustments allowed monthly with pro-rata
               billing
@@ -465,19 +465,19 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             7. Dispute Resolution for Refunds
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             7.1 Internal Resolution Process
           </h3>
           <p className="mb-2 font-semibold">Step 1 - Customer Support:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Initial Contact:{" "}
               <a
                 href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
+                className="cursor-pointer font-bold hover:underline"
               >
                 support@youthpulsedigital.com
               </a>
@@ -489,7 +489,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Step 2 - Escalation:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Supervisor Review: Unresolved cases escalated within 72 hours
             </li>
@@ -500,11 +500,11 @@ const Page = () => {
             <li>Final Decision: Communicated within 7 business days</li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             7.2 External Resolution
           </h3>
           <p className="mb-2 font-semibold">Consumer Forums:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               National Consumer Helpline: 1915 (for consumer rights issues)
             </li>
@@ -516,7 +516,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Banking Channels:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Chargeback Process: Through issuing bank for payment disputes
             </li>
@@ -530,14 +530,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             8. Refund Timeline and Processing
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             8.1 Standard Processing Times
           </h3>
           <p className="mb-2 font-semibold">Service Type-wise Timelines:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Individual AI Services: 3-5 business days after approval</li>
             <li>
               Educational Institution Services: 7-10 business days (due to
@@ -552,11 +552,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             8.2 Factors Affecting Processing Time
           </h3>
           <p className="mb-2 font-semibold">Verification Requirements:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Identity Verification: For high-value refunds above ₹50,000</li>
             <li>
               Authorization Checks: Institutional refunds require proper
@@ -569,7 +569,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Banking Dependencies:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Weekend/Holiday Processing: Bank processing delays during
               non-working days
@@ -584,14 +584,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             9. Policy Updates and Communication
           </h2>
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             9.1 Policy Modifications
           </h3>
           <p className="mb-2 font-semibold">Change Notification:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Email Updates: All active subscribers notified of policy changes
             </li>
@@ -606,7 +606,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Significant Changes:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Refund Window Changes: 60-day advance notice for major timeline
               modifications
@@ -621,11 +621,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h3 className="text-lg sm:text-xl font-semibold mt-4 mb-2">
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
             9.2 Customer Communication
           </h3>
           <p className="mb-2 font-semibold">Refund Status Updates:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Email Notifications: Automatic updates on refund processing status
             </li>
@@ -639,16 +639,16 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             10. Contact Information
           </h2>
           <p className="mb-2 font-semibold">Cancellation and Refund Support:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Primary Contact:{" "}
               <a
                 href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
+                className="cursor-pointer font-bold hover:underline"
               >
                 support@youthpulsedigital.com
               </a>
@@ -660,12 +660,12 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Escalation Contacts:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Legal Team:{" "}
               <a
                 href="mailto:legal@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
+                className="cursor-pointer font-bold hover:underline"
               >
                 legal@youthpulsedigital.com
               </a>
@@ -674,7 +674,7 @@ const Page = () => {
               Grievance Office:{" "}
               <a
                 href="mailto:support@youthpulsedigital.com"
-                className="font-bold cursor-pointer hover:underline"
+                className="cursor-pointer font-bold hover:underline"
               >
                 support@youthpulsedigital.com
               </a>
@@ -694,11 +694,11 @@ const Page = () => {
           <p className="mb-2 font-extrabold">GST Number: XXXXXXXXXXXXX</p>
           <p className="mb-4">PAN: AACCY0548C</p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             11. Legal Compliance and Consumer Rights
           </h2>
           <p className="mb-2">This policy complies with:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Consumer Protection Act, 2019: Right to refund for defective
               services
@@ -717,7 +717,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Your Rights:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Right to cancel services as per this policy</li>
             <li>Right to refund for non-delivery or defective services</li>
             <li>Right to approach consumer forums for dispute resolution</li>

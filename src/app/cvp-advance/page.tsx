@@ -186,7 +186,7 @@ const useCases = [
 ];
 
 const highlight = (content: string) => (
-  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
+  <span className="rounded bg-[#ebf3eb] px-1">{content}</span>
 );
 const ReviewsData = [
   {
@@ -197,7 +197,7 @@ const ReviewsData = [
       <>
         &quot;The parent section in the final report was gold.
         {highlight(
-          "It helped us understand our son’s decision without the endless arguments."
+          "It helped us understand our son’s decision without the endless arguments.",
         )}{" "}
         We’re now supporting him fully in pursuing Design.&quot;
       </>
@@ -288,10 +288,10 @@ const page = () => {
         subtitle={
           <>
             <span className="relative inline-block px-1">
-              <span className="relative z-10 font-semibold text-brand-primary">
+              <span className="text-brand-primary relative z-10 font-semibold">
                 YPD’s CVP Advance
               </span>
-              <span className="absolute inset-0 bg-brand-bg rounded-sm rotate-[-2deg] scale-y-110 z-0"></span>
+              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
             is a 7-day, AI-powered journey that builds your complete career
             persona blending your interests, strengths, learning style, and
@@ -302,10 +302,10 @@ const page = () => {
           <>
             For students from{" "}
             <span className="relative inline-block px-1">
-              <span className="relative z-10 font-semibold text-brand-primary">
+              <span className="text-brand-primary relative z-10 font-semibold">
                 Class 11 to UG Final Year
               </span>
-              <span className="absolute inset-0 bg-brand-bg rounded-sm rotate-[-2deg] scale-y-110 z-0"></span>
+              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
             who want direction without confusion and skills that matter in the
             real world.
@@ -486,7 +486,7 @@ const page = () => {
         subheading="This isn’t psychometric rehash. This is future-ready, emotionally intelligent career building in just one week."
         ctaText="Start My 7-Day Journey"
         ctaHref="/start"
-        ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
+        ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={cvpAdvanceFaqs} />
     </>

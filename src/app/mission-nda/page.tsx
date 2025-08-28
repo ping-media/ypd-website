@@ -200,7 +200,7 @@ const useCases = [
 ];
 
 const highlight = (content: string) => (
-  <span className="bg-[#ebf3eb] px-1 rounded">{content}</span>
+  <span className="rounded bg-[#ebf3eb] px-1">{content}</span>
 );
 const ReviewsData = [
   {
@@ -211,7 +211,7 @@ const ReviewsData = [
       <>
         &quot;I never thought career guidance could feel so personal. The
         {highlight(
-          "AI mentor actually made me think deeper like a real teacher who knows me. I finally figured out"
+          "AI mentor actually made me think deeper like a real teacher who knows me. I finally figured out",
         )}{" "}
         why I enjoy solving logic puzzles I’m now exploring Data
         Analytics!&quot;
@@ -287,7 +287,8 @@ const missionNdaFaqs = [
       "Yes. Mission NDA™ combines official NDA syllabus mapping, SSB assessment standards, and proven OLQ frameworks.",
   },
   {
-    question: "Is Mission NDA™ useful if I’ve already joined another coaching?",
+    question:
+      "Is Mission NDA™ useful if I’ve already joined another coaching?",
     answer:
       "Definitely. It acts as a precision supplement—pinpointing gaps and making your existing prep sharper.",
   },
@@ -307,10 +308,10 @@ const page = () => {
           <>
             The only AI-powered
             <span className="relative inline-block px-1">
-              <span className="relative z-10 font-semibold text-brand-primary">
+              <span className="text-brand-primary relative z-10 font-semibold">
                 NDA preparation system
               </span>
-              <span className="absolute inset-0 bg-brand-bg rounded-sm rotate-[-2deg] scale-y-110 z-0"></span>
+              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
             built for India’s toughest defense aspirants. Full syllabus mastery,
             SSB readiness, and real-time feedbackon your terms.
@@ -493,7 +494,7 @@ const page = () => {
         With the power of data, psychology, and defense insight—welcome to the future of NDA prep."
         ctaText="Join Mission NDA Now"
         ctaHref="/start"
-        ctaIcon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />}
+        ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={missionNdaFaqs} />
     </>

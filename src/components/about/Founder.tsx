@@ -3,28 +3,28 @@ import Image from "next/image";
 export default function Founder() {
   return (
     <section className="bg-gray-50 p-4 sm:p-10 lg:p-20">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-12 lg:gap-16 font-lato">
+      <div className="font-lato mx-auto flex max-w-7xl flex-col gap-8 sm:gap-12 lg:gap-16">
         {/* Top Vision Statement */}
-        <div className="text-center max-w-4xl mx-auto flex flex-col gap-4">
-          <h2 className="text-2xl sm:text-3xl font-red-rose">
+        <div className="mx-auto flex max-w-4xl flex-col gap-4 text-center">
+          <h2 className="font-red-rose text-2xl sm:text-3xl">
             Founder&apos;s Vision
           </h2>
-          <p className="text-brand-gray text-base sm:text-xl leading-relaxed">
-            At Youth Pulse Digital™, we don’t believe career success is found we
-            believe it’s architected. In a world overwhelmed by noise,
+          <p className="text-brand-gray text-base leading-relaxed sm:text-xl">
+            At Youth Pulse Digital™, we don’t believe career success is found
+            we believe it’s architected. In a world overwhelmed by noise,
             complexity, and algorithmic distraction, clarity is the rarest form
             of power.
           </p>
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+        <div className="flex flex-col-reverse items-center gap-8 sm:gap-12 lg:flex-row lg:gap-16">
           {/* Text */}
-          <div className="flex-1 flex flex-col gap-4 sm:gap-6">
-            <h3 className="text-2xl sm:text-3xl font-red-rose">
+          <div className="flex flex-1 flex-col gap-4 sm:gap-6">
+            <h3 className="font-red-rose text-2xl sm:text-3xl">
               That’s why we built YPD
             </h3>
-            <div className="flex flex-col gap-4 text-base text-brand-gray sm:text-xl leading-relaxed">
+            <div className="text-brand-gray flex flex-col gap-4 text-base leading-relaxed sm:text-xl">
               <p>
                 Not as another EdTech app, but as a purpose-led intelligent
                 ecosystem. One that fuses AI, behavioral science, and lived
@@ -54,7 +54,7 @@ export default function Founder() {
           </div>
 
           {/* Image */}
-          <div className="relative flex-1 w-full max-w-sm sm:max-w-md lg:max-w-lg aspect-[3/4] rounded-xl overflow-hidden shadow-lg">
+          <div className="relative aspect-[3/4] w-full max-w-sm flex-1 overflow-hidden rounded-xl shadow-lg sm:max-w-md lg:max-w-lg">
             <Image
               src="/about/founder.png"
               alt="Founder"

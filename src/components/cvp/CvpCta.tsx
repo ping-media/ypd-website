@@ -22,26 +22,26 @@ export default function CvpCta({
   buttons,
 }: CvpCtaProps) {
   return (
-    <section className="p-4 sm:p-10 lg:p-20 flex justify-center bg-[#F3FFF8]">
-      <div className="max-w-[1440px] w-full flex flex-col items-center gap-4 text-center font-lato px-4 sm:px-0">
+    <section className="flex justify-center bg-[#F3FFF8] p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-4 px-4 text-center sm:px-0">
         {/* Heading */}
         <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
-        <p className="text-sm sm:text-base text-brand-gray">{subheading}</p>
+        <p className="text-brand-gray text-sm sm:text-base">{subheading}</p>
 
         {/* Description */}
-        <p className="text-lg sm:text-xl max-w-3xl font-red-rose">
+        <p className="font-red-rose max-w-3xl text-lg sm:text-xl">
           {description}
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full sm:w-auto">
+        <div className="mt-4 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
           {buttons.map((btn, index) => (
             <button
               key={index}
-              className={`inline-flex items-center justify-center gap-2 rounded-lg text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium transition-colors w-full sm:w-auto ${
+              className={`inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg ${
                 btn.variant === "primary"
                   ? "bg-brand-primary hover:bg-brand-primary/90 text-white shadow-sm"
-                  : "border border-black hover:bg-green-100 text-gray-800"
+                  : "border border-black text-gray-800 hover:bg-green-100"
               }`}
             >
               {btn.icon}

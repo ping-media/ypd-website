@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Seperate = () => {
   return (
-    <div className="relative max-w-[2560px] mx-auto px-5 sm:px-10 lg:px-20 py-20 overflow-hidden">
+    <div className="relative mx-auto max-w-[2560px] overflow-hidden px-5 py-20 sm:px-10 lg:px-20">
       {/* Background image */}
       <Image
         src="/seperate.png"
@@ -16,17 +16,17 @@ const Seperate = () => {
       />
 
       {/* Overlay content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col justify-between items-start gap-10 sm:gap-14">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 sm:gap-14">
         {/* Heading */}
-        <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-red-rose leading-snug max-w-full lg:max-w-xl">
+        <h2 className="font-red-rose max-w-full text-2xl leading-snug text-white sm:text-3xl lg:max-w-xl lg:text-4xl">
           Ready to Experience Your Own Career Journey with YPD?
         </h2>
 
         {/* Button */}
-        <div className="flex justify-start w-full lg:w-auto">
+        <div className="flex w-full justify-start lg:w-auto">
           <Link
             href="#"
-            className="text-lato text-white rounded-lg bg-brand-primary border border-brand-accent hover:bg-brand-primary/90 transition duration-100 text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5 gap-1"
+            className="text-lato bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-1 rounded-lg border px-4 py-3 text-sm text-white transition duration-100 sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
           >
             <UserRound size={24} />
             <span>Start My Personalized Path</span>

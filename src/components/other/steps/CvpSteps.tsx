@@ -35,14 +35,14 @@ const CvpSteps = () => {
   ];
 
   return (
-    <div className="p-4 sm:p-10 lg:p-20 bg-[#FAFAFA] flex justify-center font-lato">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-10 lg:gap-14">
+    <div className="font-lato flex justify-center bg-[#FAFAFA] p-4 sm:p-10 lg:p-20">
+      <div className="flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col items-center gap-4 text-center">
+        <div className="flex max-w-7xl flex-col items-center gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
             The Career Vision Program™: 5 Steps to Career Pathway
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl">
+          <p className="text-brand-gray max-w-4xl text-base sm:text-lg">
             YPD doesn&apos;t just assess. It takes you through a 360° mapping
             process through its framework, Trained AI Mentors, Active User
             participation using adaptive & personalized journey to build what
@@ -51,41 +51,41 @@ const CvpSteps = () => {
         </div>
 
         {/* Content */}
-        <div className="max-w-7xl w-full flex flex-col lg:flex-row justify-between gap-4 sm:gap-10 lg:gap-14">
+        <div className="flex w-full max-w-7xl flex-col justify-between gap-4 sm:gap-10 lg:flex-row lg:gap-14">
           {/* Image */}
-          <div className="flex-shrink-0 w-full lg:w-[526px] flex justify-center">
+          <div className="flex w-full flex-shrink-0 justify-center lg:w-[526px]">
             <Image
               src="/step.png"
               alt="Steps"
               width={526}
               height={726}
-              className="w-full max-w-[400px] lg:max-w-none h-auto object-center"
+              className="h-auto w-full max-w-[400px] object-center lg:max-w-none"
             />
           </div>
 
           {/* Steps */}
-          <div className="w-full lg:w-[694px] flex flex-col items-center gap-4 sm:gap-8 lg:gap-10 line-element relative">
+          <div className="line-element relative flex w-full flex-col items-center gap-4 sm:gap-8 lg:w-[694px] lg:gap-10">
             {steps.map((step, i) => (
               <div
                 key={i}
-                className="flex items-center w-full gap-4 sm:gap-10 relative"
+                className="relative flex w-full items-center gap-4 sm:gap-10"
               >
                 {/* Number + connector */}
-                <div className="flex flex-col items-center relative">
+                <div className="relative flex flex-col items-center">
                   {/* Number block */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-brand-primary flex items-center justify-center text-white relative z-10 text-sm sm:text-base">
+                  <div className="bg-brand-primary relative z-10 flex h-10 w-10 items-center justify-center rounded-lg text-sm text-white sm:h-12 sm:w-12 sm:text-base">
                     {step.number}
                     {/* Horizontal line */}
-                    <div className="hidden sm:block absolute left-full top-1/2 w-10 border-t-2 border-dashed border-brand-gray"></div>
+                    <div className="border-brand-gray absolute top-1/2 left-full hidden w-10 border-t-2 border-dashed sm:block"></div>
                   </div>
                 </div>
 
                 {/* Text content */}
-                <div className="bg-white w-full p-4 sm:p-5 rounded-lg shadow-sm flex flex-col gap-1 sm:gap-2">
-                  <h3 className="text-lg sm:text-2xl font-red-rose">
+                <div className="flex w-full flex-col gap-1 rounded-lg bg-white p-4 shadow-sm sm:gap-2 sm:p-5">
+                  <h3 className="font-red-rose text-lg sm:text-2xl">
                     {step.title}
                   </h3>
-                  <p className="text-sm sm:text-lg text-brand-gray">
+                  <p className="text-brand-gray text-sm sm:text-lg">
                     {step.description}
                   </p>
                 </div>

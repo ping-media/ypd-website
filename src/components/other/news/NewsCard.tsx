@@ -8,9 +8,9 @@ type NewsCardProps = {
 
 const NewsCard = ({ icon, description }: NewsCardProps) => {
   return (
-    <div className="p-5 rounded-lg bg-brand-primary/5 gap-10 flex flex-col h-full">
+    <div className="bg-brand-primary/5 flex h-full flex-col gap-10 rounded-lg p-5">
       {/* Icon */}
-      <div className="w-10 h-10 relative">
+      <div className="relative h-10 w-10">
         <Image src={icon} alt="icons" fill className="object-contain" />
       </div>
 

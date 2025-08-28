@@ -16,23 +16,23 @@ const ClarityCard: React.FC<ClarityCardProps> = ({
   icon,
 }) => {
   return (
-    <div className="flex flex-col p-3 sm:p-6 rounded-lg border border-[#D3E4D4] bg-[#E1F4E3] gap-3 sm:gap-6 h-full">
-      <div className="aspect-square w-full relative overflow-hidden rounded-lg">
+    <div className="flex h-full flex-col gap-3 rounded-lg border border-[#D3E4D4] bg-[#E1F4E3] p-3 sm:gap-6 sm:p-6">
+      <div className="relative aspect-square w-full overflow-hidden rounded-lg">
         <Image src={image} alt={text} fill className="object-cover" />
       </div>
 
       <Link
         href={href}
-        className="mt-auto inline-flex items-center justify-center text-sm sm:text-base lg:text-lg font-base rounded-lg border border-black bg-transparent hover:bg-brand-primary hover:border-brand-accent hover:text-white group transition px-5 py-3.5 w-full truncate"
+        className="font-base hover:bg-brand-primary hover:border-brand-accent group mt-auto inline-flex w-full items-center justify-center truncate rounded-lg border border-black bg-transparent px-5 py-3.5 text-sm transition hover:text-white sm:text-base lg:text-lg"
         title={text}
       >
         {icon && (
-          <div className="mr-2 w-5 h-5 sm:w-6 sm:h-6 relative shrink-0">
+          <div className="relative mr-2 h-5 w-5 shrink-0 sm:h-6 sm:w-6">
             <Image
               src={icon}
               alt="icon"
               fill
-              className="object-contain  group-hover:invert"
+              className="object-contain group-hover:invert"
             />
           </div>
         )}

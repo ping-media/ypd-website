@@ -12,7 +12,7 @@ const Hero = () => {
         alt="decoration"
         width={100}
         height={100}
-        className="hidden sm:block absolute pointer-events-none"
+        className="pointer-events-none absolute hidden sm:block"
         style={{ top: "45%", left: "10%" }}
       />
 
@@ -21,7 +21,7 @@ const Hero = () => {
         alt="decoration"
         width={50}
         height={50}
-        className="hidden sm:block absolute pointer-events-none"
+        className="pointer-events-none absolute hidden sm:block"
         style={{ top: "3%", left: "78%" }}
       />
 
@@ -30,20 +30,20 @@ const Hero = () => {
         alt="decoration"
         width={120}
         height={120}
-        className="hidden sm:block absolute pointer-events-none"
+        className="pointer-events-none absolute hidden sm:block"
         style={{ top: "60%", left: "83%" }}
       />
       {/* Main Content */}
-      <div className="container font-lato max-w-4xl pt-4 mx-auto flex flex-col justify-center items-center gap-4 sm:gap-5 px-4 sm:px-6 min-h-[57vh] sm:min-h-0 relative z-10">
+      <div className="font-lato relative z-10 container mx-auto flex min-h-[57vh] max-w-4xl flex-col items-center justify-center gap-4 px-4 pt-4 sm:min-h-0 sm:gap-5 sm:px-6">
         {/* Tagline */}
-        <div className="bg-[#F6F7F9] border border-[#E1E4EB] text-xs sm:text-sm rounded-sm w-fit py-1 px-2 text-center">
+        <div className="w-fit rounded-sm border border-[#E1E4EB] bg-[#F6F7F9] px-2 py-1 text-center text-xs sm:text-sm">
           ✨ Backed by AI. Guided by Mentors. Built for Bharat.
         </div>
 
         <div className="flex flex-col gap-6 sm:gap-10">
           {/* Heading & subtext */}
-          <div className="text-center space-y-3 sm:space-y-4 flex flex-col items-center">
-            <div className="font-red-rose text-2xl sm:text-3xl lg:text-[42px] leading-snug">
+          <div className="flex flex-col items-center space-y-3 text-center sm:space-y-4">
+            <div className="font-red-rose text-2xl leading-snug sm:text-3xl lg:text-[42px]">
               Not Just Another Career Guidance.
               <br className="hidden sm:block" />
               <RotatingText
@@ -54,7 +54,7 @@ const Hero = () => {
                 duration={3000}
               />
             </div>
-            <div className="max-w-3xl text-brand-gray text-base sm:text-lg lg:text-xl">
+            <div className="text-brand-gray max-w-3xl text-base sm:text-lg lg:text-xl">
               Youth Pulse Digital™ creates ultra-personalized journeys that
               unlock clarity, career readiness, and critical thinking in every
               learner.
@@ -62,26 +62,26 @@ const Hero = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 text-sm sm:text-base lg:text-lg w-full">
+          <div className="flex w-full flex-col items-center justify-center gap-3 text-sm sm:flex-row sm:gap-5 sm:text-base lg:text-lg">
             <Link
               href={"/#"}
-              className="flex justify-center items-center gap-2 border border-black rounded-lg py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto hover:bg-green-100"
+              className="flex w-full items-center justify-center gap-2 rounded-lg border border-black px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
             >
-              <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+              <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Student
             </Link>
             <Link
               href={"/#"}
-              className="flex justify-center items-center gap-2 rounded-lg text-brand-fg bg-brand-primary border border-brand-accent py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto hover:bg-brand-primary/90"
+              className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
             >
-              <UserRound className="w-5 h-5 sm:w-6 sm:h-6" />
+              <UserRound className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Parent
             </Link>
             <Link
               href={"/#"}
-              className="flex justify-center items-center gap-2 border border-black rounded-lg py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto hover:bg-green-100"
+              className="flex w-full items-center justify-center gap-2 rounded-lg border border-black px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
             >
-              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Professional
             </Link>
           </div>

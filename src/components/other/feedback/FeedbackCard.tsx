@@ -24,7 +24,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
 }) => {
   return (
     <div
-      className={`border border-brand-gray/10 bg-white shadow-[inset_0_0_30px_#eeeeee] rounded-lg p-6 sm:p-10 flex flex-col justify-between gap-3 w-full h-full ${className}`}
+      className={`border-brand-gray/10 flex h-full w-full flex-col justify-between gap-3 rounded-lg border bg-white p-6 shadow-[inset_0_0_30px_#eeeeee] sm:p-10 ${className}`}
     >
       {/* Header + Details */}
       <div className="flex flex-col gap-10">
@@ -39,12 +39,12 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
           />
           <div>
             <div className="font-red-rose text-xl">{name}</div>
-            <div className="text-base text-brand-gray">{classInfo}</div>
+            <div className="text-brand-gray text-base">{classInfo}</div>
           </div>
         </div>
 
         {/* Details */}
-        <div className="text-brand-gray text-sm space-y-4">
+        <div className="text-brand-gray space-y-4 text-sm">
           <div>{traits}</div>
           <div>{recommendation}</div>
           {parentNote && <div>{parentNote}</div>}
@@ -52,7 +52,7 @@ const FeedbackCard: React.FC<FeedbackCardProps> = ({
       </div>
 
       {/* Verdict */}
-      <div className="text-sm font-semibold text-brand-primary">{verdict}</div>
+      <div className="text-brand-primary text-sm font-semibold">{verdict}</div>
     </div>
   );
 };

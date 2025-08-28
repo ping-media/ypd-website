@@ -1,20 +1,20 @@
 const Page = () => {
   return (
-    <div className="p-4 sm:p-10 lg:px-20 lg:py-10 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:px-20 lg:py-10">
+      <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         <div className="flex-1">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
             Privacy Policy Youth Pulse Digital™
           </h1>
           <p className="mb-4">Last Updated: 25/08/25</p>
           <p className="mb-4">
-            Welcome to Youth Pulse Digital™. We are committed to protecting your
-            personal data and respecting your privacy rights in compliance with
-            Indian data protection laws, including the Digital Personal Data
-            Protection Act, 2023 and the Information Technology Act, 2000.
+            Welcome to Youth Pulse Digital™. We are committed to protecting
+            your personal data and respecting your privacy rights in compliance
+            with Indian data protection laws, including the Digital Personal
+            Data Protection Act, 2023 and the Information Technology Act, 2000.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             1. About This Policy
           </h2>
           <p className="mb-4">
@@ -26,11 +26,11 @@ const Page = () => {
             institutions and small businesses.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             2. Information We Collect
           </h2>
           <p className="mb-2 font-semibold">Personal Information:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Contact Details: Name, email address, phone number, postal address
             </li>
@@ -53,7 +53,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Technical Information:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Device information, IP address, browser type, usage patterns
             </li>
@@ -64,7 +64,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">AI Interaction Data:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Questions asked to our AI mentors, chat transcripts, feedback on
               AI-generated recommendations
@@ -75,11 +75,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             3. How We Use Your Information
           </h2>
           <p className="mb-2 font-semibold">Core Services:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Career Guidance: AI-powered career pathway recommendations and
               mentoring
@@ -103,7 +103,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Platform Improvement:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Enhancing AI algorithms and recommendation accuracy</li>
             <li>
               Research and analytics (using anonymized, aggregated data only)
@@ -111,7 +111,7 @@ const Page = () => {
             <li>Service optimization and new feature development</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             4. AI Technology Disclaimer
           </h2>
           <p className="mb-2 font-semibold">Important Notice:</p>
@@ -121,7 +121,7 @@ const Page = () => {
           </p>
 
           <p className="mb-2 font-semibold">AI Limitations:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               AI-generated content is for informational purposes only and should
               not replace professional advice
@@ -141,7 +141,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Data Protection in AI Systems:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Your personal conversations with AI mentors are processed securely
               and not stored permanently
@@ -155,7 +155,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             5. Information Sharing and Disclosure
           </h2>
           <p className="mb-4">
@@ -164,7 +164,7 @@ const Page = () => {
           </p>
 
           <p className="mb-2 font-semibold">With Your Consent:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Sharing progress reports with parents/guardians (for users under
               18)
@@ -176,7 +176,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Service Providers:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Trusted technology partners operating under strict data protection
               agreements
@@ -188,7 +188,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Legal Requirements:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Compliance with Indian laws, court orders, or government requests
             </li>
@@ -196,7 +196,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Institutional Clients:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               For SaaS products, aggregated analytics may be shared with
               institutional clients (schools, businesses) without personal
@@ -204,11 +204,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             6. Data Security and Storage
           </h2>
           <p className="mb-2 font-semibold">Security Measures:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>End-to-end encryption for sensitive data transmission</li>
             <li>Secure servers with regular security audits and monitoring</li>
             <li>Access controls and authentication protocols</li>
@@ -216,7 +216,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Data Localization:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Primary data storage within India to comply with local regulations
             </li>
@@ -226,7 +226,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             7. Your Rights and Choices
           </h2>
           <p className="mb-4">
@@ -234,7 +234,7 @@ const Page = () => {
           </p>
 
           <p className="mb-2 font-semibold">Access and Control:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Access: Request copies of your personal data</li>
             <li>Correction: Update or correct inaccurate information</li>
             <li>
@@ -248,7 +248,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Communication Preferences:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Opt-out of marketing communications</li>
             <li>Control notification settings</li>
             <li>Withdraw consent for data processing (where applicable)</li>
@@ -259,17 +259,17 @@ const Page = () => {
             Contact our Data Protection Office at{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             8. Children&apos;s Data Protection
           </h2>
           <p className="mb-2 font-semibold">Age Requirements:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Users under 18 require parental/guardian consent</li>
             <li>
               Special protections for users under 16 as per Indian regulations
@@ -278,7 +278,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Parental Rights:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Parents can access, modify, or delete their child&apos;s data
             </li>
@@ -291,11 +291,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             9. Cookies and Tracking
           </h2>
           <p className="mb-4">We use cookies and similar technologies to:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Maintain user sessions and preferences</li>
             <li>Analyze platform usage and improve services</li>
             <li>Provide personalized recommendations</li>
@@ -305,10 +305,10 @@ const Page = () => {
             may limit some platform functionality.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             10. Data Retention
           </h2>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Personal Data: Retained as long as your account is active or as
               needed for service delivery
@@ -327,7 +327,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             11. Grievance Redressal
           </h2>
           <p className="mb-2 font-semibold">Grievance Contact:</p>
@@ -335,7 +335,7 @@ const Page = () => {
             Email:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
@@ -350,24 +350,24 @@ const Page = () => {
             Protection Board or relevant authorities under Indian law.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             12. Updates to This Policy
           </h2>
           <p className="mb-4">We may update this Privacy Policy to reflect:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Changes in our services or business practices</li>
             <li>Updates to Indian data protection laws</li>
             <li>Enhanced security measures or technology improvements</li>
           </ul>
 
           <p className="mb-2 font-semibold">Notification Process:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Email notification for material changes</li>
             <li>Platform notifications for all users</li>
             <li>Updated policy posted on our website with revision date</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             13. Contact Information
           </h2>
           <p className="mb-2 font-semibold">Data Protection Queries:</p>
@@ -375,7 +375,7 @@ const Page = () => {
             General Support:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
@@ -384,7 +384,7 @@ const Page = () => {
             Legal Matters:{" "}
             <a
               href="mailto:legal@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               legal@youthpulsedigital.com
             </a>

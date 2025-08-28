@@ -11,12 +11,12 @@ export default function VideoPreview() {
   const videoId = "ScMzIvxBSi4";
 
   return (
-    <div className="px-4 pb-4 sm:px-10 sm:pb-5 lg:pb-10 lg:px-20">
-      <div className="relative w-full max-w-[1000px] mx-auto rounded-xl overflow-hidden shadow-lg">
-        <div className="relative w-full aspect-[16/9]">
+    <div className="px-4 pb-4 sm:px-10 sm:pb-5 lg:px-20 lg:pb-10">
+      <div className="relative mx-auto w-full max-w-[1000px] overflow-hidden rounded-xl shadow-lg">
+        <div className="relative aspect-[16/9] w-full">
           {isPlaying ? (
             <iframe
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 h-full w-full"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&modestbranding=1&rel=0`}
               title="YouTube video player"
               frameBorder="0"
@@ -34,15 +34,15 @@ export default function VideoPreview() {
                 className="object-cover"
               />
               {/* Dark overlay + Play button */}
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40">
                 <button
                   onClick={() => setIsPlaying(true)}
                   aria-label="Play video"
-                  className="group flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/90 rounded-full cursor-pointer hover:bg-brand-primary transition"
+                  className="group hover:bg-brand-primary flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-white/90 transition sm:h-20 sm:w-20"
                 >
                   <Play
                     size={32}
-                    className="sm:size-[40px] text-black ml-1 transition-colors duration-200 group-hover:text-white"
+                    className="ml-1 text-black transition-colors duration-200 group-hover:text-white sm:size-[40px]"
                   />
                 </button>
               </div>

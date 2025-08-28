@@ -23,7 +23,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
         {links.map((link) =>
           link.dropdown ? (
             <NavigationMenuItem key={link.name}>
-              <NavigationMenuTrigger className="text-base font-medium flex items-center gap-2 hover:text-brand-primary">
+              <NavigationMenuTrigger className="hover:text-brand-primary flex items-center gap-2 text-base font-medium">
                 {link.name}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -46,13 +46,13 @@ const NavLinks = ({ links }: NavLinksProps) => {
               <NavigationMenuLink asChild>
                 <Link
                   href={link.href!}
-                  className="text-base font-medium px-4 py-2 hover:text-brand-primary"
+                  className="hover:text-brand-primary px-4 py-2 text-base font-medium"
                 >
                   {link.name}
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
-          )
+          ),
         )}
       </NavigationMenuList>
     </NavigationMenu>

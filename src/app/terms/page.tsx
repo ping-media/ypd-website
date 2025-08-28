@@ -1,9 +1,9 @@
 const Page = () => {
   return (
-    <div className="p-4 sm:p-10 lg:px-20 lg:py-10 max-w-[1440px] mx-auto flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
-      <div className="max-w-7xl flex flex-col lg:flex-row justify-between gap-4 sm:gap-6">
+    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:px-20 lg:py-10">
+      <div className="flex max-w-7xl flex-col justify-between gap-4 sm:gap-6 lg:flex-row">
         <div className="flex-1">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h1 className="mb-4 text-2xl font-bold sm:text-3xl lg:text-4xl">
             Terms of Use Youth Pulse Digital™
           </h1>
           <p className="mb-4">Last Updated: 25/08/25</p>
@@ -15,7 +15,7 @@ const Page = () => {
             of our platform, services, and products available in India.
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             1. Acceptance and Scope
           </h2>
           <p className="mb-2 font-semibold">Agreement to Terms:</p>
@@ -29,7 +29,7 @@ const Page = () => {
           <p className="mb-2">
             These Terms apply to all our offerings including:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               AI-Powered Services: Career guidance tools, exam preparation
               systems, professional clarity assessments, personalized training
@@ -46,11 +46,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             2. Eligibility and User Categories
           </h2>
           <p className="mb-2 font-semibold">General Eligibility:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>You must be at least 13 years of age to create an account</li>
             <li>Users between 13-17 years require parental/guardian consent</li>
             <li>
@@ -60,7 +60,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">User Categories:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Students: Individual learners seeking career guidance and
               educational support
@@ -87,11 +87,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             3. Service Descriptions and Usage Rights
           </h2>
           <p className="mb-2 font-semibold">AI-Powered Career Services:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Career Guidance: Personalized career pathway recommendations,
               skill assessments, industry insights
@@ -111,7 +111,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">SaaS Business Solutions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Admission Systems: Standardized testing platforms, application
               management, candidate evaluation
@@ -127,7 +127,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Usage Rights:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Limited, non-exclusive, non-transferable right to access and use
               services for intended purposes
@@ -142,7 +142,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Usage Restrictions:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Services are for personal, educational, or legitimate business use
               only
@@ -160,7 +160,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             4. AI Technology Terms and Disclaimers
           </h2>
           <p className="mb-2 font-semibold">AI Service Nature:</p>
@@ -172,7 +172,7 @@ const Page = () => {
           <p className="mb-2 font-semibold">
             AI Limitations and User Responsibilities:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Career Decisions: AI recommendations are based on data patterns
               and should not be your sole decision-making factor
@@ -192,7 +192,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">AI Interaction Guidelines:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Provide accurate information to receive relevant recommendations
             </li>
@@ -208,7 +208,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">AI Data Processing:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Conversations with AI tools are processed to improve
               recommendations
@@ -220,7 +220,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             5. Intellectual Property Rights
           </h2>
           <p className="mb-2 font-semibold">Our Proprietary Assets:</p>
@@ -228,7 +228,7 @@ const Page = () => {
             All content, technologies, and innovations are protected
             intellectual property, including:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Proprietary Frameworks: Adaptive Growth Index™, Emotional
               Readiness Matrix™, Career Vision Program™, Career Reinvention
@@ -247,7 +247,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Your Content:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               You retain ownership of content you submit (profiles, responses,
               uploads)
@@ -263,7 +263,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Third-Party Content:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Some services may include licensed third-party content or
               integrations
@@ -274,11 +274,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             6. Account Management and Responsibilities
           </h2>
           <p className="mb-2 font-semibold">Account Creation:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Provide accurate, current, and complete information during
               registration
@@ -291,7 +291,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Account Security:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               You are responsible for maintaining confidentiality of login
               credentials
@@ -307,7 +307,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Institutional Accounts:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Authorized representatives can manage multiple user accounts
             </li>
@@ -321,11 +321,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             7. Payment Terms and Service Plans
           </h2>
           <p className="mb-2 font-semibold">Service Tiers:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Free Services: Basic career assessments, limited AI interactions,
               trial features
@@ -345,7 +345,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Payment Obligations:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Pay all applicable fees as specified in your service plan</li>
             <li>
               Prices displayed in Indian Rupees (INR) include applicable taxes
@@ -355,7 +355,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Automatic Renewals:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Subscriptions renew automatically unless cancelled before renewal
               date
@@ -367,11 +367,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             8. Service Availability and Support
           </h2>
           <p className="mb-2 font-semibold">Service Levels:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               We strive for 99% uptime but do not guarantee uninterrupted
               service
@@ -384,7 +384,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Technical Support:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Free Users: Community forums, knowledge base, email support (48-72
               hour response)
@@ -400,7 +400,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Geographic Limitations:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Services optimized for Indian users and educational systems</li>
             <li>
               Some features may not be available in all Indian states or
@@ -411,11 +411,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             9. User Conduct and Prohibited Activities
           </h2>
           <p className="mb-2 font-semibold">Acceptable Use:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Use services for their intended educational, professional, or
               business purposes
@@ -430,7 +430,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Prohibited Activities:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Content Violations: Uploading offensive, discriminatory, or
               illegal content
@@ -454,7 +454,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Consequences of Violations:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Warning and account review for minor violations</li>
             <li>Temporary suspension for repeated or serious violations</li>
             <li>
@@ -465,11 +465,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             10. Third-Party Integrations and External Links
           </h2>
           <p className="mb-2 font-semibold">Third-Party Services:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Integration with external educational platforms, job boards, and
               assessment tools
@@ -484,7 +484,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">External Links:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Links to relevant educational resources, career websites, and
               professional platforms
@@ -500,7 +500,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">API and Integration Terms:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Institutional clients may access APIs subject to separate
               technical agreements
@@ -514,11 +514,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             11. Disclaimers and Limitation of Liability
           </h2>
           <p className="mb-2 font-semibold">Service Disclaimers:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Services provided &quot;as is&quot; without warranties of any kind
             </li>
@@ -537,7 +537,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Limitation of Liability:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Our liability limited to the amount paid for services in the 12
               months preceding the claim
@@ -559,7 +559,7 @@ const Page = () => {
           <p className="mb-2 font-semibold">
             Educational Institution Disclaimers:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               School admission test results are tools for evaluation, not
               guarantees of admission
@@ -573,7 +573,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             12. Indemnification
           </h2>
           <p className="mb-4">
@@ -582,7 +582,7 @@ const Page = () => {
             agents from any claims, damages, costs, or expenses (including legal
             fees) arising from:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Your violation of these Terms or applicable laws</li>
             <li>
               Your misuse of our services or breach of intellectual property
@@ -592,11 +592,11 @@ const Page = () => {
             <li>Your negligent or wrongful conduct while using our platform</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             13. Termination and Account Closure
           </h2>
           <p className="mb-2 font-semibold">Termination by You:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Cancel subscriptions through account settings or customer support
             </li>
@@ -605,7 +605,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Termination by Us:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Right to suspend or terminate accounts for Terms violations</li>
             <li>
               Right to discontinue services with reasonable advance notice
@@ -617,7 +617,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Effect of Termination:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Loss of access to platform features and stored data</li>
             <li>
               Survival of payment obligations, indemnification, and limitation
@@ -629,11 +629,11 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             14. Modifications and Updates
           </h2>
           <p className="mb-2 font-semibold">Terms Updates:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Right to modify these Terms with reasonable notice</li>
             <li>
               Material changes communicated via email and platform notifications
@@ -645,7 +645,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Service Changes:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Right to add, modify, or discontinue features with appropriate
               notice
@@ -660,14 +660,14 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             15. Dispute Resolution and Governing Law
           </h2>
           <p className="mb-2 font-semibold">Governing Law:</p>
           <p className="mb-2">
             These Terms are governed by the laws of India, specifically:
           </p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Indian Contract Act, 1872</li>
             <li>Information Technology Act, 2000 and related rules</li>
             <li>Consumer Protection Act, 2019 (where applicable)</li>
@@ -675,7 +675,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Dispute Resolution Process:</p>
-          <ol className="list-decimal ml-6 mb-4">
+          <ol className="mb-4 ml-6 list-decimal">
             <li>
               Direct Resolution: Contact support@youthpulsedigital.com for
               immediate assistance
@@ -699,7 +699,7 @@ const Page = () => {
           </ol>
 
           <p className="mb-2 font-semibold">Consumer Rights:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>Consumer protection laws apply where relevant</li>
             <li>
               Right to approach consumer forums for service-related disputes
@@ -707,11 +707,11 @@ const Page = () => {
             <li>Compliance with applicable consumer grievance mechanisms</li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             16. Special Provisions for Educational Institutions
           </h2>
           <p className="mb-2 font-semibold">Institutional Licensing:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Bulk licenses available for schools, colleges, and training
               institutes
@@ -724,7 +724,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Student Data Handling:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               FERPA-equivalent protections for student educational records
             </li>
@@ -738,7 +738,7 @@ const Page = () => {
           </ul>
 
           <p className="mb-2 font-semibold">Educator Access Rights:</p>
-          <ul className="list-disc ml-6 mb-4">
+          <ul className="mb-4 ml-6 list-disc">
             <li>
               Teacher and counselor accounts with appropriate supervision tools
             </li>
@@ -752,7 +752,7 @@ const Page = () => {
             </li>
           </ul>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             17. Contact Information and Legal Notices
           </h2>
           <p className="mb-2 font-semibold">General Support:</p>
@@ -760,7 +760,7 @@ const Page = () => {
             Email:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
@@ -774,7 +774,7 @@ const Page = () => {
             Legal Matters:{" "}
             <a
               href="mailto:legal@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               legal@youthpulsedigital.com
             </a>
@@ -783,7 +783,7 @@ const Page = () => {
             Terms Questions:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
@@ -792,7 +792,7 @@ const Page = () => {
             IP Concerns:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
@@ -819,13 +819,13 @@ const Page = () => {
             Email:{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
-              className="font-bold cursor-pointer hover:underline"
+              className="cursor-pointer font-bold hover:underline"
             >
               support@youthpulsedigital.com
             </a>
           </p>
 
-          <h2 className="text-xl sm:text-2xl font-semibold mt-6 mb-2">
+          <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             18. Effective Date and Acknowledgment
           </h2>
           <p className="mb-4">
@@ -836,8 +836,8 @@ const Page = () => {
           </p>
           <p className="mb-4">
             For the most current version of these Terms, please visit our
-            website. Thank you for choosing Youth Pulse Digital™ for your career
-            development and educational needs.
+            website. Thank you for choosing Youth Pulse Digital™ for your
+            career development and educational needs.
           </p>
           <p className="mb-4">
             This agreement is governed by Indian law. If any provision is found

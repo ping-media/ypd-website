@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <>
       <section className="flex justify-center">
-        <div className="max-w-[1440px] w-full flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
+        <div className="font-lato flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
           {/* Image Wrapper */}
           <div className="overflow-hidden shadow-sm">
             <Image
@@ -16,7 +16,7 @@ const Page = () => {
               alt="Career Path"
               width={1440}
               height={600}
-              className="w-full h-[50vh] lg:h-[60vh] object-cover object-center"
+              className="h-[50vh] w-full object-cover object-center lg:h-[60vh]"
               priority
             />
           </div>

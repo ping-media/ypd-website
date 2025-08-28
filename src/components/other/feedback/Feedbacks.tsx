@@ -34,21 +34,21 @@ const Feedbacks: React.FC = () => {
   ];
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="flex justify-center bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 text-center">
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">
           <div className="font-red-rose text-2xl sm:text-3xl">
             What Students & Parents Say
           </div>
-          <div className="text-base sm:text-lg text-brand-gray max-w-4xl">
+          <div className="text-brand-gray max-w-4xl text-base sm:text-lg">
             We believe our journeys should empower students & parents equally.
           </div>
         </div>
 
         {/* Cards */}
-        <div className="flex max-w-7xl flex-col items-center gap-4 w-full">
-          <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="flex w-full max-w-7xl flex-col items-center gap-4">
+          <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {feedbackData.map((item, idx) => (
               <FeedbackCard
                 key={idx}
@@ -65,12 +65,12 @@ const Feedbacks: React.FC = () => {
           </div>
 
           {/* Last Lines & Button */}
-          <div className="w-full border border-brand-gray/10 bg-white shadow-[inset_0_0_30px_#eeeeee] rounded-lg p-4 sm:p-8 md:p-10 flex flex-col justify-center items-center gap-4 sm:gap-8 md:gap-10">
+          <div className="border-brand-gray/10 flex w-full flex-col items-center justify-center gap-4 rounded-lg border bg-white p-4 shadow-[inset_0_0_30px_#eeeeee] sm:gap-8 sm:p-8 md:gap-10 md:p-10">
             <div className="flex flex-col gap-2 text-center">
               <div className="font-red-rose text-2xl sm:text-3xl">
                 Experience your Aspired Career Roles
               </div>
-              <div className="text-sm sm:text-base text-brand-gray max-w-5xl">
+              <div className="text-brand-gray max-w-5xl text-sm sm:text-base">
                 Start your immersive journey to experience a real career role
                 with real-life like scenarios, tasks, challenges & get a Career
                 Role Fit score — World&apos;s first Fully AI Driven, Adaptive,
@@ -80,9 +80,9 @@ const Feedbacks: React.FC = () => {
             <div className="flex justify-center">
               <Link
                 href="#"
-                className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-sm sm:text-base lg:text-lg flex justify-center items-center py-3 px-4 sm:py-3.5 sm:px-5 gap-1"
+                className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center gap-1 rounded-lg border px-4 py-3 text-sm sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
               >
-                <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+                <Search className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span>Explore Career Verse™</span>
               </Link>
             </div>

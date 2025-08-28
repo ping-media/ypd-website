@@ -6,14 +6,14 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="p-4 sm:p-10 lg:px-20 lg:py-10  bg-gradient-to-t from-green-50 to-white flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col justify-center items-center gap-4 sm:gap-14 font-lato">
+    <section className="flex justify-center bg-gradient-to-t from-green-50 to-white p-4 sm:p-10 lg:px-20 lg:py-10">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl flex flex-col justify-between items-center gap-4 w-full">
-          <h2 className="font-red-rose text-2xl sm:text-3xl lg:text-[42px] leading-snug text-center">
+        <div className="flex w-full max-w-7xl flex-col items-center justify-between gap-4">
+          <h2 className="font-red-rose text-center text-2xl leading-snug sm:text-3xl lg:text-[42px]">
             About Youth Pulse Digital™
           </h2>
-          <p className="text-brand-gray text-base sm:text-lg lg:text-xl text-center">
+          <p className="text-brand-gray text-center text-base sm:text-lg lg:text-xl">
             Born from an idea in 2023, Youth Pulse Digital™ (YPD) is India’s
             first truly integrated AI-Human career ecosystem — designed to
             empower students, parents, professionals, and institutions with
@@ -22,7 +22,7 @@ export default function Hero() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative w-full max-w-7xl h-[280px] sm:h-[360px] lg:h-[420px] rounded-3xl overflow-hidden shadow-md">
+        <div className="relative h-[280px] w-full max-w-7xl overflow-hidden rounded-3xl shadow-md sm:h-[360px] lg:h-[420px]">
           <Image
             src="/about/hero.png"
             alt="Youth Pulse Digital"
@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
 
         {/* Supporting Text */}
-        <p className="text-brand-gray text-base sm:text-lg lg:text-xl text-center">
+        <p className="text-brand-gray text-center text-base sm:text-lg lg:text-xl">
           YPD brings together psychometrics, behavioral science, cognitive
           diagnostics, skill mapping, employability needs, professional skills,
           critical thinking, problem solving, innovative mindset and AI led
@@ -44,9 +44,9 @@ export default function Hero() {
         {/* CTA Button */}
         <Link
           href={"/#"}
-          className="flex justify-center items-center gap-2 rounded-lg text-brand-fg bg-brand-primary border hover:bg-brand-primary/90 border-brand-accent text-sm sm:text-base lg:text-lg py-3 px-4 sm:py-3.5 sm:px-5 w-full sm:w-auto"
+          className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
         >
-          <Zap className="w-5 h-5 sm:w-6 sm:h-6" />
+          <Zap className="h-5 w-5 sm:h-6 sm:w-6" />
           Try the CVP Demo
         </Link>
       </div>

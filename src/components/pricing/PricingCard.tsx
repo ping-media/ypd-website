@@ -22,25 +22,24 @@ const PricingCard = ({
 }: PricingCardProps) => {
   return (
     <div
-      className={`rounded-2xl p-4 sm:p- lg:p-10 flex flex-col items-center text-center shadow-sm transition gap-6 sm:gap-8 lg:gap-10 border w-full h-full
-    ${
-      highlight
-        ? "bg-[radial-gradient(circle_at_center,white_10%,#bbf7d0_180%)] shadow-md"
-        : "bg-gradient-to-b from-white to-gray-50"
-    }`}
+      className={`sm:p- flex h-full w-full flex-col items-center gap-6 rounded-2xl border p-4 text-center shadow-sm transition sm:gap-8 lg:gap-10 lg:p-10 ${
+        highlight
+          ? "bg-[radial-gradient(circle_at_center,white_10%,#bbf7d0_180%)] shadow-md"
+          : "bg-gradient-to-b from-white to-gray-50"
+      }`}
     >
       {/* Title + Description */}
-      <div className="text-start w-full flex flex-col gap-6 sm:gap-8">
+      <div className="flex w-full flex-col gap-6 text-start sm:gap-8">
         <div>
-          <h3 className="text-base sm:text-lg lg:text-xl font-red-rose">
+          <h3 className="font-red-rose text-base sm:text-lg lg:text-xl">
             {title}
           </h3>
-          <p className="text-xs sm:text-sm mb-2 sm:mb-4">{description}</p>
+          <p className="mb-2 text-xs sm:mb-4 sm:text-sm">{description}</p>
         </div>
-        <p className="text-3xl sm:text-4xl lg:text-5xl font-red-rose">
+        <p className="font-red-rose text-3xl sm:text-4xl lg:text-5xl">
           {price}
           {period && (
-            <span className="text-xs sm:text-sm lg:text-base font-red-rose text-brand-gray align-baseline">
+            <span className="font-red-rose text-brand-gray align-baseline text-xs sm:text-sm lg:text-base">
               {" "}
               / {period}
             </span>
@@ -51,23 +50,23 @@ const PricingCard = ({
       {/* Button */}
       <Link
         href={"#"}
-        className="w-full rounded-lg py-3 px-4 sm:py-3.5 sm:px-5 font-medium transition bg-green-50 border border-gray-300 text-sm sm:text-base lg:text-lg hover:bg-green-100"
+        className="w-full rounded-lg border border-gray-300 bg-green-50 px-4 py-3 text-sm font-medium transition hover:bg-green-100 sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
       >
         {priceText}
       </Link>
 
       {/* Separator */}
-      <div className="w-full border-t border-gray-200 my-3 sm:my-4"></div>
+      <div className="my-3 w-full border-t border-gray-200 sm:my-4"></div>
 
       {/* Features */}
-      <div className="w-full flex flex-col gap-3 sm:gap-4 text-start">
-        <h4 className="text-xs sm:text-sm font-semibold text-gray-700">
+      <div className="flex w-full flex-col gap-3 text-start sm:gap-4">
+        <h4 className="text-xs font-semibold text-gray-700 sm:text-sm">
           What you’ll get
         </h4>
-        <ul className="text-xs sm:text-sm lg:text-base text-gray-600 flex flex-col gap-2 sm:gap-3">
+        <ul className="flex flex-col gap-2 text-xs text-gray-600 sm:gap-3 sm:text-sm lg:text-base">
           {features.map((f, i) => (
             <li key={i} className="flex items-start gap-2">
-              <Check className="w-3 h-3 sm:w-4 sm:h-4 text-brand-primary mt-0.5 flex-shrink-0" />
+              <Check className="text-brand-primary mt-0.5 h-3 w-3 flex-shrink-0 sm:h-4 sm:w-4" />
               <span>{f}</span>
             </li>
           ))}

@@ -62,27 +62,26 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto font-lato relative">
+    <div className="font-lato relative mx-auto max-w-[1440px]">
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
-    ${scrolled ? "backdrop-blur-md bg-white/70 shadow-md" : "bg-white"}`}
+        className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${scrolled ? "bg-white/70 shadow-md backdrop-blur-md" : "bg-white"}`}
       >
-        <div className="max-w-[1440px] mx-auto flex justify-between items-center max-sm:p-4 sm:px-10 xl:px-20 py-2">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between py-2 max-sm:p-4 sm:px-10 xl:px-20">
           {/* Left: Logo */}
-          <Link href={"/"} className="flex-1 flex justify-start">
+          <Link href={"/"} className="flex flex-1 justify-start">
             <Image src="/logo.png" alt="logo" width={120} height={42} />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex flex-none">
+          <div className="hidden flex-none lg:flex">
             <NavLinks links={Links} />
           </div>
 
           {/* Sign-up button */}
-          <div className="hidden sm:flex flex-1 justify-end">
+          <div className="hidden flex-1 justify-end sm:flex">
             <Link
               href="#"
-              className="text-brand-fg rounded-lg bg-brand-primary hover:bg-brand-primary/90 border border-brand-accent text-base capitalize flex justify-center items-center py-2 px-4 space-x-0.5"
+              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex items-center justify-center space-x-0.5 rounded-lg border px-4 py-2 text-base capitalize"
             >
               <span>
                 Sign up{" "}
@@ -97,7 +96,7 @@ const Navbar = () => {
           {/* Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden flex items-center pl-4"
+            className="flex items-center pl-4 lg:hidden"
           >
             {mobileOpen ? (
               <X size={28} className="text-gray-800" />
@@ -111,33 +110,32 @@ const Navbar = () => {
       {/* Overlay */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity"
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-72 bg-white border-l border-gray-200 shadow-2xl transform transition-transform duration-300 ease-in-out z-50
-        ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 z-50 h-full w-72 transform border-l border-gray-200 bg-white shadow-2xl transition-transform duration-300 ease-in-out lg:hidden ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
       >
-        <div className="flex items-center justify-end px-6 pt-6 pb-4 border-b border-gray-200">
+        <div className="flex items-center justify-end border-b border-gray-200 px-6 pt-6 pb-4">
           <button onClick={() => setMobileOpen(false)}>
             <X size={28} className="text-gray-700" />
           </button>
         </div>
 
-        <div className="px-6 pt-4 pb-6 space-y-4 text-gray-800">
+        <div className="space-y-4 px-6 pt-4 pb-6 text-gray-800">
           {Links.map((link) =>
             link.dropdown ? (
               <div key={link.name}>
                 <button
                   onClick={() =>
                     setOpenDropdown(
-                      openDropdown === link.name ? null : link.name
+                      openDropdown === link.name ? null : link.name,
                     )
                   }
-                  className="w-full flex justify-between items-center text-left font-medium py-2 border-b border-gray-200"
+                  className="flex w-full items-center justify-between border-b border-gray-200 py-2 text-left font-medium"
                 >
                   {link.name}
                   <ChevronDown
@@ -148,12 +146,12 @@ const Navbar = () => {
                   />
                 </button>
                 {openDropdown === link.name && (
-                  <div className="pl-4 mt-2 space-y-2 text-sm">
+                  <div className="mt-2 space-y-2 pl-4 text-sm">
                     {link.dropdown.map((item) => (
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block hover:text-brand-primary"
+                        className="hover:text-brand-primary block"
                         onClick={() => setMobileOpen(false)}
                       >
                         {item.name}
@@ -166,18 +164,18 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block font-medium py-2 border-b border-gray-200 hover:text-brand-primary"
+                className="hover:text-brand-primary block border-b border-gray-200 py-2 font-medium"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.name}
               </Link>
-            )
+            ),
           )}
 
-          <div className="hidden max-sm:block pt-4">
+          <div className="hidden pt-4 max-sm:block">
             <Link
               href="#"
-              className="w-full text-center block text-brand-fg rounded-lg bg-brand-primary border hover:bg-brand-primary/80 border-brand-accent text-base uppercase py-2.5"
+              className="text-brand-fg bg-brand-primary hover:bg-brand-primary/80 border-brand-accent block w-full rounded-lg border py-2.5 text-center text-base uppercase"
               onClick={() => setMobileOpen(false)}
             >
               Sign up for free

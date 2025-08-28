@@ -61,14 +61,14 @@ export default function Programs() {
   const ButtonIcon = activeProgram.buttonIcon;
 
   return (
-    <section className="p-4 sm:p-10 lg:p-20 bg-brand-bg flex justify-center">
-      <div className="max-w-[1440px] w-full flex flex-col gap-4 sm:gap-10 lg:gap-14 font-lato">
+    <section className="bg-brand-bg flex justify-center p-4 sm:p-10 lg:p-20">
+      <div className="font-lato flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
-        <div className="max-w-7xl mx-auto flex flex-col gap-4 text-center">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">
             Your Path, Your Way: Programs for <br /> Every Stage
           </h2>
-          <p className="text-base sm:text-lg text-brand-gray max-w-4xl mx-auto">
+          <p className="text-brand-gray mx-auto max-w-4xl text-base sm:text-lg">
             Start your journey with the program that matches your readiness.
             From high school discovery to professional reinvention, Youth Pulse
             Digital™ has a track built for you.
@@ -76,10 +76,10 @@ export default function Programs() {
         </div>
 
         {/* Program Section */}
-        <div className="flex justify-center w-full">
-          <div className="flex max-w-7xl w-full bg-brand-primary/10 rounded-lg p-4 gap-4 sm:gap-10 flex-col-reverse md:flex-row">
+        <div className="flex w-full justify-center">
+          <div className="bg-brand-primary/10 flex w-full max-w-7xl flex-col-reverse gap-4 rounded-lg p-4 sm:gap-10 md:flex-row">
             {/* Left Column */}
-            <div className="flex flex-col justify-center w-full md:w-4/10 gap-4">
+            <div className="flex w-full flex-col justify-center gap-4 md:w-4/10">
               {programsData.map((program, index) => (
                 <ProgramCard
                   key={program.title}
@@ -92,7 +92,7 @@ export default function Programs() {
             </div>
 
             {/* Right Column */}
-            <div className="flex-1 relative rounded-lg overflow-hidden shadow-lg min-h-[400px]">
+            <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
                 src={activeProgram.image}
                 alt={activeProgram.title}
@@ -101,14 +101,14 @@ export default function Programs() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-4 sm:p-6 gap-2">
-                <h3 className="text-white text-2xl font-medium">
+              <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/30 p-4 sm:p-6">
+                <h3 className="text-2xl font-medium text-white">
                   {activeProgram.target}
                 </h3>
-                <p className="text-white/80 text-base font-light">
+                <p className="text-base font-light text-white/80">
                   {activeProgram.description}
                 </p>
-                <button className="mt-2 flex items-center justify-center gap-2 bg-brand-primary text-white py-3 px-4 sm:py-3.5 sm:px-5 rounded-lg w-full border border-brand-accent hover:bg-brand-primary/90 transition-colors text-sm sm:text-base lg:text-lg">
+                <button className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 mt-2 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm text-white transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg">
                   {ButtonIcon && <ButtonIcon size={24} />}
                   {activeProgram.buttonText}
                 </button>

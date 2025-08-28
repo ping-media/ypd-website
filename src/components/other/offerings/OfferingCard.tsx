@@ -12,17 +12,17 @@ const OfferingCard: React.FC<OfferingCardProps> = ({
   subheading,
 }) => {
   return (
-    <div className="p-6 sm:p-10 rounded-xl border bg-white shadow-sm max-sm:h-[220px] sm:h-[250px] hover:border-[#A7DCBB] hover:bg-[#F0FFF7] flex flex-col m-1">
-      <div className="flex flex-col gap-5 flex-grow">
-        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#ECFDF5] flex items-center justify-center rounded-md shadow-[1px_1px_2px_rgba(0,0,0,0.1)]">
+    <div className="m-1 flex flex-col rounded-xl border bg-white p-6 shadow-sm hover:border-[#A7DCBB] hover:bg-[#F0FFF7] max-sm:h-[220px] sm:h-[250px] sm:p-10">
+      <div className="flex flex-grow flex-col gap-5">
+        <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#ECFDF5] shadow-[1px_1px_2px_rgba(0,0,0,0.1)] sm:h-14 sm:w-14">
           <Image src={image} alt={heading} width={36} height={36} />
         </div>
 
         <div className="space-y-1">
-          <h3 className="font-red-rose text-lg sm:text-[22px] leading-tight">
+          <h3 className="font-red-rose text-lg leading-tight sm:text-[22px]">
             {heading}
           </h3>
-          <p className="text-sm sm:text-base text-brand-gray leading-snug line-clamp-3">
+          <p className="text-brand-gray line-clamp-3 text-sm leading-snug sm:text-base">
             {subheading}
           </p>
         </div>

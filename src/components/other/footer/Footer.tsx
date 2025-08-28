@@ -16,9 +16,9 @@ const FooterSectionAccordion = ({ title, links }: SectionProps) => {
     <div className="border-b border-[#335933] last:border-none sm:border-none">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center py-3 sm:py-0"
+        className="flex w-full items-center justify-between py-3 sm:py-0"
       >
-        <span className="font-medium text-base font-poppins">{title}</span>
+        <span className="font-poppins text-base font-medium">{title}</span>
         <ChevronDown
           size={18}
           className={`transition-transform ${
@@ -45,11 +45,11 @@ const FooterSectionAccordion = ({ title, links }: SectionProps) => {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#003000] bg-[radial-gradient(ellipse_at_top,#D1D38C33_10%,#003000_40%)] text-white font-sans">
-      <div className="max-w-[1440px] mx-auto px-4 pt-12 sm:px-10 lg:px-20 sm:py-12 flex flex-col gap-8 lg:flex-row lg:justify-between">
+    <footer className="bg-[#003000] bg-[radial-gradient(ellipse_at_top,#D1D38C33_10%,#003000_40%)] font-sans text-white">
+      <div className="mx-auto flex max-w-[1440px] flex-col gap-8 px-4 pt-12 sm:px-10 sm:py-12 lg:flex-row lg:justify-between lg:px-20">
         {/* Column 1 */}
-        <div className="hidden max-lg:flex flex-col gap-5 max-w-xs">
-          <h2 className="font-medium text-base font-poppins">
+        <div className="hidden max-w-xs flex-col gap-5 max-lg:flex">
+          <h2 className="font-poppins text-base font-medium">
             Youth Pulse Digital™
           </h2>
           <p className="text-sm font-medium">Regd Office</p>
@@ -107,9 +107,9 @@ export default function Footer() {
         </div>
 
         {/* Accordion / Columns */}
-        <div className="flex-1 max-lg:grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-12 lg:flex lg:justify-between ">
-          <div className="hidden lg:flex flex-col gap-5 max-w-xs">
-            <h2 className="font-medium text-base font-poppins">
+        <div className="flex-1 gap-4 max-lg:grid sm:grid-cols-2 sm:gap-12 md:grid-cols-4 lg:flex lg:justify-between">
+          <div className="hidden max-w-xs flex-col gap-5 lg:flex">
+            <h2 className="font-poppins text-base font-medium">
               Youth Pulse Digital™
             </h2>
             <p className="text-sm font-medium">Regd Office</p>
@@ -122,7 +122,7 @@ export default function Footer() {
             </p>
 
             <div className="space-y-5 text-white">
-              <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
+              <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
                 <Image
                   className="invert"
                   src="/icons/phone.svg"
@@ -132,7 +132,7 @@ export default function Footer() {
                 />
                 +91 8650126521
               </p>
-              <p className="flex items-center gap-2 text-sm hover:opacity-60 cursor-pointer">
+              <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
                 <Image
                   src="/icons/wa.svg"
                   alt="WhatsApp"
@@ -224,7 +224,7 @@ export default function Footer() {
       <div className="h-[1px] bg-[#335933]"></div>
 
       {/* Bottom Bar */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-10 lg:px-20 py-4 text-sm flex flex-col md:flex-row justify-between gap-3 font-sans text-center md:text-left">
+      <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-3 px-4 py-4 text-center font-sans text-sm sm:px-10 md:flex-row md:text-left lg:px-20">
         {/* Links - on top in mobile, last in desktop */}
         {/* <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
           <Link href="/privacy-policy" className="hover:opacity-60">
