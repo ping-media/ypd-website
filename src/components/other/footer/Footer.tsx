@@ -181,7 +181,7 @@ export default function Footer() {
               { label: "CVP Vision Program", href: "/cvp-vision" },
               { label: "CVP lite", href: "/cvp-lite" },
               { label: "CVP Advance", href: "/cvp-advance" },
-              { label: "CareerVerse", href: "/career-verse" },
+              { label: "CareerVerse", href: "/careerverse" },
               { label: "Exam Mentors", href: "/exam-mentors" },
               { label: "Entrance Mentors", href: "/entrance-mentors" },
               { label: "Counselling Mentors", href: "/counselling-mentors" },

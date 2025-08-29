@@ -47,7 +47,7 @@ export default function RootLayout({
         {children}
 
         <Footer />
-        <CookieConsent />
+        {/* <CookieConsent /> */}
 
         <ContactFloating />
       </body>
