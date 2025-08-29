@@ -40,12 +40,6 @@ const features = [
       "Co-creating role-to-skill bridges, career exposure, and workplace preparedness.",
   },
   {
-    icon: <Lightbulb className="text-brand-primary h-8 w-8" />,
-    title: "Innovation & Research Teams",
-    description:
-      "Continuously evolving AI logic, frameworks, and learner models for relevance and scale.",
-  },
-  {
     icon: <Handshake className="text-brand-primary h-8 w-8" />,
     title: "Government Collaborations",
     description:

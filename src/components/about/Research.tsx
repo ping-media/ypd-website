@@ -52,7 +52,7 @@ export default function Research() {
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center justify-between gap-4">
           <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
-            R&D and Innovation at Youth Pulse Digital™
+            R&D and Innovation
           </h2>
           <p className="text-center text-base opacity-90 sm:text-lg">
             At Youth Pulse Digital™, research and innovation aren’t support
@@ -105,6 +105,16 @@ export default function Research() {
               <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/40 p-6"></div>
             </div>
           </div>
+        </div>
+
+        <div className="flex max-w-7xl flex-col items-center justify-between gap-4">
+          <p className="text-center text-base opacity-90 sm:text-lg">
+            Our innovation is not about keeping up it&apos;s about staying
+            ahead. From students to institutions, we empower every stakeholder
+            to anticipate change, respond with agility, and shape their future
+            with intention. Because we don&apos;t just study the future of
+            careers, we help invent it.
+          </p>
         </div>
       </div>
     </section>

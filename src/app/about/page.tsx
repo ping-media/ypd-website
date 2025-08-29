@@ -8,6 +8,7 @@ import Founder from "@/components/about/Founder";
 import Research from "@/components/about/Research";
 import Review from "@/components/about/Review";
 import Vision from "@/components/about/Vision";
+import Differentiators from "@/components/about/Differentiators";
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
       <Hero />
       <Brands />
       <Features />
+      <Differentiators />
       <Ecosystem />
       <Benchmark />
       <Founder />

@@ -37,7 +37,7 @@ function FeatureSection({
             ) : (
               <li
                 key={i}
-                className="text-brand-gray list-inside list-disc text-sm sm:text-lg"
+                className="text-brand-gray list-inside text-sm sm:text-lg"
               >
                 {text}
               </li>
@@ -95,18 +95,23 @@ export default function Features() {
 
         {/* Section 2 */}
         <FeatureSection
-          title="How YPD Goes Beyond Traditional EdTech?"
-          imageSrc="/about/info.png"
+          title="Our Unique Approach:"
+          imageSrc="/about/info1.png"
           reverse
           content={[
-            "Real-time feedback and career redirection powered by behavioral inputs",
-            "AI-Powered Mentor Guides that evolve with your growth",
-            "Alternate career pathway mapping using agility & transferable skills",
-            "Skill-building nudges, portfolio milestones, and innovation challenges",
-            "Support during board prep, entrance readiness, interviews, and transitions",
+            "We blend critical thinking, problem-solving, and innovative mindset into every conversation. Whether you're studying for exams or planning your career, our platform builds these essential skills naturally through experiential learning methods.",
+            "Built for India, Global Standards:",
+            "Aligned with NEP 2020 guidelines, our Al mentors understand Indian family dynamics, cultural values, and educational pressures while maintaining international quality standards. Every interaction is designed with emotional integrity and cultural sensitivity.",
+            "Simple Promise: Advanced Al technology + Deep Indian context + 24/7 personal support = Your success, guaranteed.",
+            " No more confusion. No more walking alone. Just clear, personalized guidance whenever you need it",
           ]}
         />
       </div>
     </section>
   );
 }
+
+//
+//
+//
+//.
