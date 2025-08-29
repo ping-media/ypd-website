@@ -1,5 +1,5 @@
 "use client";
-import { Sparkles, SquareCheck } from "lucide-react";
+import { BriefcaseBusiness, Sparkles, SquareCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -11,6 +11,8 @@ interface CvpHeroProps {
   features: string[];
   buttonText?: string;
   buttonLink?: string;
+  secondaryButtonText?: string; // ✅ new optional button text
+  secondaryButtonLink?: string; // ✅ new optional button link
   image: string;
   imageAlt?: string;
   reverse?: boolean;
@@ -23,6 +25,8 @@ export default function CvpHero({
   features,
   buttonText,
   buttonLink = "#",
+  secondaryButtonText, // ✅ destructure new props
+  secondaryButtonLink = "#",
   image,
   imageAlt = "Feature Image",
   reverse = false,
@@ -57,15 +61,25 @@ export default function CvpHero({
             ))}
           </ul>
 
-          {buttonText && (
-            <Link
-              href={buttonLink}
-              className="bg-brand-primary hover:bg-brand-primary/90 inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm text-white shadow transition sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-            >
-              <Sparkles className="h-5 w-5" />
-              {buttonText}
-            </Link>
-          )}
+          {/* ✅ Buttons Section */}
+          <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+            {buttonText && (
+              <Link href={buttonLink} className="btn-size btn-primary shadow">
+                <Sparkles className="h-5 w-5" />
+                {buttonText}
+              </Link>
+            )}
+
+            {secondaryButtonText && (
+              <Link
+                href={secondaryButtonLink}
+                className="btn-size btn-transparent shadow"
+              >
+                <BriefcaseBusiness className="h-5 w-5" />
+                {secondaryButtonText}
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Image Section */}

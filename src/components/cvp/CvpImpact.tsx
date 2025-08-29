@@ -13,9 +13,16 @@ interface CvpImpactProps {
     src: string;
     alt: string;
   };
+  footerLine?: string;
 }
 
-const CvpImpact = ({ heading, description, stats, image }: CvpImpactProps) => {
+const CvpImpact = ({
+  heading,
+  description,
+  stats,
+  image,
+  footerLine,
+}: CvpImpactProps) => {
   return (
     <section className="flex justify-center p-4 sm:p-10 lg:p-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-4 sm:gap-10 lg:gap-14">
@@ -44,6 +51,12 @@ const CvpImpact = ({ heading, description, stats, image }: CvpImpactProps) => {
                 </div>
               ))}
             </div>
+
+            {footerLine && (
+              <p className="text-brand-gray pt-4 text-sm sm:text-base">
+                {footerLine}
+              </p>
+            )}
           </div>
 
           {/* Right Column - Image */}

@@ -25,7 +25,6 @@ import {
   UserPlus,
 } from "lucide-react";
 import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
-import { User, BookOpen, Award } from "lucide-react";
 
 const featuresData = [
   {
@@ -75,28 +74,28 @@ const steps = [
     title: "Discover Your Career Energy",
     description:
       "Through ultra-personalized guided reflections, scenarios, questions, and early vision exploration, you begin to surface hidden interests, skills, and thought patterns, absolutely in a private space with no Judgment.",
-    icon: <User size={22} />,
+    icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
     title: "Captures Your Learning Style and Thinking Style",
     description:
       "Adaptive insights help you understand how you absorb, process, and reflect on career-related information — mapping your personal preferences aligned with your passion & interests.",
-    icon: <BookOpen size={22} />,
+    icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
     title: "Connects Your Cognitive profile, Emotional & Social Quotient",
     description:
       "Each Step in CVP Lite™ is connected and works in closed-loop, unlike static Psychometric assessments — all dynamically linked to your real passion, interests & strengths, as well to the reflections & journals making it the only active assessment available.",
-    icon: <Brain size={22} />,
+    icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
     title: "Celebrate Your Personalized CVP Lite™ Report",
     description:
       "Once your CVP Lite™ journey is complete, you will be emailed your Career Pathway Report within a short while.",
-    icon: <Award size={22} />,
+    icon: "/careerverse/s4.svg",
   },
 ];
 const audience = [

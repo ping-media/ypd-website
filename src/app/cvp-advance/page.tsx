@@ -24,7 +24,6 @@ import {
   UserPlus,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
-import { User, BookOpen, Award } from "lucide-react";
 
 const features = [
   {
@@ -74,28 +73,28 @@ const steps = [
     title: "Map Your Complete Career DNA",
     description:
       "Dive into AI-guided reflections, assessments, and career exploration. Uncover your inclination, mindset, and motivation triggers — all in a secure, judgment-free space.",
-    icon: <User size={22} />,
+    icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
     title: "Decode Your Learning, Thinking & Cognitive Style",
     description:
       "Profile your learning style, cognitive strengths, and decision patterns. AI adapts role recommendations to your pace, skill depth, and future growth needs.",
-    icon: <BookOpen size={22} />,
+    icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
     title: "Lock Your Career Role & Skill Gap Map",
     description:
       "AI matches you to best-fit roles — including cross-stream opportunities — and generates a gap analysis with skill-bridging pathways.",
-    icon: <Brain size={22} />,
+    icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
     title: "Receive Your Multi-Year Career Roadmap",
     description:
       "Get a detailed, parent-ready plan with upskilling, certifications, and entry strategies.",
-    icon: <Award size={22} />,
+    icon: "/careerverse/s4.svg",
   },
 ];
 const audience = [

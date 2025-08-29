@@ -24,7 +24,6 @@ import {
   UserPlus,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
-import { User, BookOpen, Award } from "lucide-react";
 
 const features = [
   {
@@ -80,28 +79,28 @@ const steps = [
     title: "Assess Your Officer Potential",
     description:
       "Through realistic NDA-level questions, OLQ-based reflections, and service-specific scenarios, you begin to identify strengths, weaknesses, and leadership traits — all in a secure, private training environment.",
-    icon: <User size={22} />,
+    icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
     title: "Adapt to Your Learning & Performance Style",
     description:
       "Our AI observes how you process information under pressure, your problem-solving speed, and decision-making approach. It then adjusts your preparation plan — balancing written exam mastery with SSB readiness — without forcing a one-size-fits-all method.",
-    icon: <BookOpen size={22} />,
+    icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
     title: "Build Your Cognitive, Emotional & OLQ Strength",
     description:
       "Every stage of Mission NDA™ is tied to actual selection criteria — from cognitive skills and situational judgment to emotional intelligence and group dynamics. These are mapped directly to real SSB tasks like GTO, interviews, and psych tests.",
-    icon: <Brain size={22} />,
+    icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
     title: "Progress Tracking with On-Demand Syllabus & Topics",
     description:
       "Track your NDA preparation in real time — see which subjects, topics, and OLQ areas you’ve mastered, and which need more work. Instantly access targeted practice modules, revision capsules, and topic-specific drills whenever you need them.",
-    icon: <Award size={22} />,
+    icon: "/careerverse/s4.svg",
   },
 ];
 const audience = [
@@ -341,6 +340,7 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/#"
       />
+      {/* SECTION TO MODIFY */}
       <WhyCvpLite
         heading="Why It Works (When Others Don’t)"
         subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
@@ -368,6 +368,7 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/#"
       />
+      {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="Mission NDA™ is a precision-driven AI mentor designed to prepare you for both the NDA written exam and the SSB interview with military-grade rigor. Its adaptive journey is built to transform raw ambition into disciplined, officer-level readiness. Here’s how your training unfolds:"
@@ -377,6 +378,7 @@ const page = () => {
           second: "/cvplite/cvplite2.png",
         }}
       />
+      {/* SECTION TO MODIFY (IMAGE FULL WIDTH) */}
       <CvpLiteWorks
         heading="Who Should Join Mission NDA™"
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
@@ -385,6 +387,9 @@ const page = () => {
         ctaLink="/#"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
+      {/*  */}
+      {/* SECTION TO ADD (STRUCTURED JOURNEY ONE DASHBOARD) */}
+      {/*  */}
       <CvpJourney
         heading="Built by Defense Officers, Psychologists, and AI Experts"
         description="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
@@ -401,6 +406,9 @@ const page = () => {
         subheading="Career clarity isn’t a quiz result it’s the first real conversation with your future. CVP Lite guides that conversation."
         items={useCases}
       />
+      {/*  */}
+      {/* SECTION TO ADD (YOUR MISSION,BROKEN DOWN) */}
+      {/*  */}
       <CvpPricing
         heading="Pricing & Access"
         subheading="Mission NDA™ is a premium experience made affordable."
@@ -468,7 +476,7 @@ const page = () => {
         description="Now it’s time to unlock your complete NDA Written & SSB preparation plan and take your first step towards serving the nation with discipline, confidence, and officer-like qualities."
         buttons={[
           {
-            label: "Subscribe Full Access",
+            label: "Subscribe Full Access (₹4999 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
           },

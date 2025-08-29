@@ -51,7 +51,7 @@ const CvpInside: React.FC<CvpInsideProps> = ({
                 <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                   <feature.icon size={22} />
                 </div>
-                <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
+                <h3 className="font-red-rose text-start text-lg sm:text-xl">
                   {feature.title}
                 </h3>
               </div>
@@ -68,7 +68,7 @@ const CvpInside: React.FC<CvpInsideProps> = ({
                 <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                   <feature.icon size={22} />
                 </div>
-                <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
+                <h3 className="font-red-rose text-start text-lg sm:text-xl">
                   {feature.title}
                 </h3>
               </div>
@@ -86,7 +86,7 @@ const CvpInside: React.FC<CvpInsideProps> = ({
               <div className="text-brand-primary flex h-12 w-12 items-center justify-center rounded-md bg-green-50">
                 <feature.icon size={22} />
               </div>
-              <h3 className="font-red-rose text-start text-lg text-gray-700 sm:text-xl">
+              <h3 className="font-red-rose text-start text-lg sm:text-xl">
                 {feature.title}
               </h3>
             </div>
