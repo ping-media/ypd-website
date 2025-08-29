@@ -54,7 +54,7 @@ const CvpSeperate = ({
         <div className="w-full sm:w-auto">
           <Link
             href={ctaHref}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-white px-4 py-3 text-center text-sm font-medium shadow transition hover:bg-gray-200 sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
+            className="btn-size w-full bg-white text-center font-medium shadow hover:bg-gray-200"
           >
             {ctaText}
             {ctaIcon}

@@ -46,7 +46,7 @@ export default function Founder() {
                 here to walk that journey with you every step of the way.
               </p>
               <p className="font-semibold">
-                — A Biswas
+                — Ayan Biswas
                 <br />
                 Founder, Youth Pulse Digital™
               </p>

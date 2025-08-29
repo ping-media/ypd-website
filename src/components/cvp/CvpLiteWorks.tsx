@@ -67,7 +67,7 @@ export default function CvpLiteWorks({
                 <div
                   key={item.id}
                   onClick={() => setActiveIndex(index)}
-                  className={`flex cursor-pointer items-start gap-4 rounded-lg border p-4 transition-all duration-200 ${
+                  className={`flex cursor-pointer items-start gap-4 rounded-lg border p-4 transition-all duration-200 sm:p-5 ${
                     index === activeIndex
                       ? "border-brand-primary bg-green-50 shadow-sm"
                       : "border-gray-200 bg-white hover:border-gray-300"
@@ -131,7 +131,13 @@ export default function CvpLiteWorks({
                         : "text-brand-gray bg-gray-100"
                     }`}
                   >
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="font-red-rose text-base">{item.title}</h3>
@@ -173,7 +179,13 @@ export default function CvpLiteWorks({
                         : "text-brand-gray bg-gray-100"
                     }`}
                   >
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
                   </div>
                   <div>
                     <h3 className="font-red-rose text-base">{item.title}</h3>

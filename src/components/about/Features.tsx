@@ -66,11 +66,14 @@ export default function Features() {
       <div className="flex w-full max-w-[1440px] flex-col gap-4 sm:gap-10 lg:gap-14">
         {/* Heading + Intro */}
         <div className="mx-auto flex max-w-5xl flex-col gap-4 text-center">
+          <h1 className="font-red-rose text-center text-3xl font-semibold sm:text-4xl">
+            Vision & Mission
+          </h1>
           <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             Youth Pulse Digital™ Your Complete AI-Powered Learning Companion
           </h2>
           <p className="text-brand-gray max-w-4xl text-center text-base sm:text-lg">
-            We help students and professionals go from &quot;I&apos;m confused
+            Help students and professionals go from &quot;I&apos;m confused
             about my future&quot; to &quot;I know exactly what to do next&quot;
             through India’s most advanced Self-Serve AI Platform.
           </p>

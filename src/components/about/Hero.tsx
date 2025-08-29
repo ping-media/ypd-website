@@ -42,12 +42,9 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <Link
-          href={"/#"}
-          className="text-brand-fg bg-brand-primary hover:bg-brand-primary/90 border-brand-accent flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-        >
+        <Link href={"/#"} className="btn-primary btn-size max-sm:w-full">
           <Zap className="h-5 w-5 sm:h-6 sm:w-6" />
-          Try the CVP Demo
+          Try the CVP Advance
         </Link>
       </div>
     </section>

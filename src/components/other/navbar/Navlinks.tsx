@@ -26,12 +26,16 @@ const NavLinks = ({ links }: NavLinksProps) => {
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
 
   return (
-    <NavigationMenu viewport={false} className="!overflow-visible">
+    <NavigationMenu
+      viewport={false}
+      className="!overflow-visible"
+      onValueChange={() => setOpenSubDropdown(null)} // reset when menu closes/changes
+    >
       <NavigationMenuList>
         {links.map((link) =>
           link.dropdown ? (
             <NavigationMenuItem key={link.name}>
-              <NavigationMenuTrigger className="hover:text-brand-primary flex items-center gap-2 text-base font-medium">
+              <NavigationMenuTrigger className="hover:text-brand-primary flex cursor-pointer items-center gap-2 text-base font-medium">
                 {link.name}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="relative !overflow-visible">
@@ -41,23 +45,27 @@ const NavLinks = ({ links }: NavLinksProps) => {
                       {item.subDropdown ? (
                         <div
                           onMouseEnter={() => setOpenSubDropdown(item.name)}
-                          onMouseLeave={() => setOpenSubDropdown(null)}
-                          className="relative"
+                          className="relative cursor-pointer"
                         >
-                          <div className="hover:text-brand-primary flex w-full cursor-default items-center justify-between px-3 py-2">
+                          {/* Parent Item */}
+                          <div className="hover:text-brand-primary flex w-full cursor-pointer items-center justify-between px-3 py-2">
                             {item.name}
                             <ChevronRight size={16} />
                           </div>
+
                           {/* Sub-dropdown */}
                           {openSubDropdown === item.name && (
                             <div className="absolute top-0 left-full z-50 ml-1">
                               <div className="min-w-[180px] rounded-md border border-gray-200 bg-white shadow-lg">
                                 <ul className="py-1">
                                   {item.subDropdown.map((subItem) => (
-                                    <li key={subItem.href}>
+                                    <li
+                                      key={subItem.href}
+                                      className="cursor-pointer"
+                                    >
                                       <Link
                                         href={subItem.href}
-                                        className="hover:text-brand-primary block px-4 py-2 text-sm text-gray-700 transition-colors hover:bg-gray-100"
+                                        className="hover:text-brand-primary block cursor-pointer px-4 py-2 text-base transition-colors hover:bg-gray-100"
                                       >
                                         {subItem.name}
                                       </Link>
@@ -71,7 +79,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
                       ) : (
                         <NavigationMenuLink
                           asChild
-                          className="hover:text-brand-primary"
+                          className="hover:text-brand-primary cursor-pointer"
                         >
                           <Link href={item.href!} className="block px-3 py-2">
                             {item.name}
@@ -88,7 +96,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
               <NavigationMenuLink asChild>
                 <Link
                   href={link.href!}
-                  className="hover:text-brand-primary px-4 py-2 text-base font-medium"
+                  className="hover:text-brand-primary cursor-pointer px-4 py-2 text-base font-medium"
                 >
                   {link.name}
                 </Link>

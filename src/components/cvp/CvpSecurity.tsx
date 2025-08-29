@@ -72,10 +72,11 @@ export default function CvpSecurity() {
 
         {/* Grid with plus-style borders */}
         <div className="grid w-full grid-cols-1 overflow-hidden rounded-xl border border-gray-200 sm:mt-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4">
+          {" "}
           {items.map((item, i) => (
             <div
               key={i}
-              className={`flex flex-col items-start gap-3 p-6 ${i < items.length - 4 ? "border-b border-gray-200" : ""} sm:${i % 2 !== 1 ? "border-r border-gray-200" : ""} lg:${i % 4 !== 3 ? "border-r border-gray-200" : ""} `}
+              className={`/* Small screens (1 col) → bottom except last */ flex flex-col items-start gap-3 border border-gray-200 p-6 ${i !== items.length - 1 ? "border-b" : ""} /* Medium screens (2 cols) */ sm:border-b sm:${i % 2 === 0 ? "border-r" : ""} /* Large screens (4 cols) */ lg:border-b lg:${i % 4 !== 3 ? "border-r" : ""} `}
             >
               <div className="flex items-center justify-center rounded-lg bg-green-50 p-3">
                 {typeof item.icon === "string" ? (
