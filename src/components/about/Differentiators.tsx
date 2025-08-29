@@ -81,7 +81,7 @@ export default function Differentiators() {
             </p>
           </div>
 
-          <div className="mt-8 border-t border-gray-200 pt-6 text-center">
+          <div className="mt-4 border-t border-gray-200 pt-4 text-center sm:mt-8 sm:pt-6">
             <p className="text-sm font-medium sm:text-base">
               <span className="font-bold">Youth Pulse Digital</span> isn&apos;t
               just another platform. It&apos;s your career clarity engine -
