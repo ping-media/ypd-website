@@ -1,8 +1,32 @@
+import CrpBenefit from "@/components/career-reinvention/crpBenefit";
 import Hero from "@/components/career-reinvention/Hero";
+import UserSay from "@/components/careerPath/UserSay";
+import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
+import { ArrowRight } from "lucide-react";
 
+const reviews = [
+  {
+    id: 1,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c1.png",
+  },
+  {
+    id: 2,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c2.png",
+  },
+  {
+    id: 3,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c1.png",
+  },
+];
 const crpFaqs = [
   {
     question: "What is the Career Reinvention Program™?",
@@ -53,7 +77,6 @@ const crpFaqs = [
       "Yes. All modules are designed for Indian learners, workplaces, and cultural realities, but globally relevant too.",
   },
 ];
-
 const page = () => {
   return (
     <>
@@ -90,6 +113,27 @@ const page = () => {
         ]}
         ctaText="Try the Career Verse™"
         ctaLink="/#"
+      />
+      {/*  */}
+      {/* SECTION TO ADD (YOUR COMPLETE CR SUITE) */}
+      {/*  */}
+
+      <CrpBenefit />
+      <CvpSeperate
+        bgImage="/cvplite/cvpbg.svg"
+        heading={
+          <>
+            <span className="font-bold">Ready to Reinvent?</span>
+          </>
+        }
+        subheading="Let’s start your real journey back to the career you deserve. Powered by Youth Pulse Digital™. Personalized. Practical. Proven."
+        ctaText="Enquire Now"
+        ctaHref="/start"
+        ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+      />
+      <UserSay
+        title="WHAT USERS ACROSS INDIA SAY ABOUT YPD"
+        reviews={reviews}
       />
       <Faq faqs={crpFaqs} />
     </>

@@ -4,7 +4,6 @@ import {
   BookOpen,
   Building2,
   Briefcase,
-  Lightbulb,
   Handshake,
 } from "lucide-react";
 
@@ -78,7 +77,7 @@ export default function Ecosystem() {
               <h3 className="font-red-rose text-lg sm:text-xl lg:text-2xl">
                 {f.title}
               </h3>
-              <p className="text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
+              <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
                 {f.description}
               </p>
             </div>

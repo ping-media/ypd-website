@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import SectionSlider from "../ui/SectionSlider";
@@ -11,26 +9,12 @@ interface Review {
   image: string;
 }
 
-const Reviews: Review[] = [
-  {
-    id: 1,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
-    image: "/about/c1.png",
-  },
-  {
-    id: 2,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
-    image: "/about/c2.png",
-  },
-  {
-    id: 3,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
-    image: "/about/c1.png",
-  },
-];
+interface UserSayProps {
+  title: string;
+  reviews: Review[];
+  cardWidth?: number;
+  gap?: number;
+}
 
 function ReviewCard({ name, text, image }: Review) {
   return (
@@ -56,14 +40,15 @@ function ReviewCard({ name, text, image }: Review) {
   );
 }
 
-export default function Review() {
+export default function UserSay({
+  title,
+  reviews,
+  cardWidth = 460,
+  gap = 24,
+}: UserSayProps) {
   return (
-    <SectionSlider
-      title=" WHAT USERS ACROSS INDIA SAY ABOUT YPD"
-      cardWidth={460}
-      gap={24}
-    >
-      {Reviews.map((t) => (
+    <SectionSlider title={title} cardWidth={cardWidth} gap={gap}>
+      {reviews.map((t) => (
         <ReviewCard key={t.id} {...t} />
       ))}
     </SectionSlider>

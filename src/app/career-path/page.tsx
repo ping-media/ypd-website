@@ -4,6 +4,26 @@ import Possibilities from "@/components/careerPath/Possibilities";
 import Samples from "@/components/careerPath/Samples";
 import Image from "next/image";
 
+const reviews = [
+  {
+    id: 1,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c1.png",
+  },
+  {
+    id: 2,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c2.png",
+  },
+  {
+    id: 3,
+    name: "Courtney Henry",
+    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    image: "/about/c1.png",
+  },
+];
 const Page = () => {
   return (
     <>
@@ -26,7 +46,10 @@ const Page = () => {
       <Samples />
       <Pathways />
       <Possibilities />
-      <UserSay />
+      <UserSay
+        title="WHAT USERS ACROSS INDIA SAY ABOUT YPD"
+        reviews={reviews}
+      />
       {/* <Review /> */}
     </>
   );
