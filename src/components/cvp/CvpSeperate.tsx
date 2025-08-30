@@ -9,6 +9,7 @@ interface CvpSeperateProps {
   ctaText: string;
   ctaHref: string;
   ctaIcon?: React.ReactNode;
+  subtext?: string;
 }
 
 const CvpSeperate = ({
@@ -18,6 +19,7 @@ const CvpSeperate = ({
   ctaText,
   ctaHref,
   ctaIcon,
+  subtext,
 }: CvpSeperateProps) => {
   return (
     <div className="relative mx-auto max-w-[2560px] px-4 py-12 sm:px-10 sm:py-16 lg:px-20 lg:py-10">
@@ -57,6 +59,9 @@ const CvpSeperate = ({
             {ctaText}
             {ctaIcon}
           </Link>
+          {subtext && (
+            <p className="mt-4 text-sm text-white sm:text-base">{subtext}</p>
+          )}
         </div>
       </div>
     </div>
