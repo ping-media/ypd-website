@@ -26,7 +26,7 @@ const CvpInside: React.FC<CvpInsideProps> = ({
   ctaNote,
 }) => {
   return (
-    <section className="bg-brand-bg flex justify-center p-4 sm:p-10 lg:p-20">
+    <section className="flex justify-center p-4 sm:p-10 lg:p-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-8 sm:gap-12">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center gap-4 text-center">

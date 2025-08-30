@@ -7,6 +7,8 @@ interface Review {
   name: string;
   text: string;
   image: string;
+  heading?: string;
+  education?: string;
 }
 
 interface UserSayProps {
@@ -16,12 +18,15 @@ interface UserSayProps {
   gap?: number;
 }
 
-function ReviewCard({ name, text, image }: Review) {
+function ReviewCard({ name, text, image, heading, education }: Review) {
   return (
     <div className="flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
       {/* Quote */}
       <div className="flex-1 p-6">
         <Quote className="text-brand-primary fill-brand-primary h-6 w-6 rotate-180 transform" />
+        {heading && (
+          <p className="text-brand-gray mt-3 font-semibold">{heading}</p>
+        )}
         <p className="text-brand-gray mt-3">{text}</p>
       </div>
 
@@ -34,7 +39,10 @@ function ReviewCard({ name, text, image }: Review) {
           height={40}
           className="rounded-full object-cover"
         />
-        <p className="font-medium text-gray-800">{name}</p>
+        <div>
+          <p className="font-medium text-gray-800">{name}</p>
+          <p className="text-brand-gray text-xs">{education}</p>
+        </div>
       </div>
     </div>
   );

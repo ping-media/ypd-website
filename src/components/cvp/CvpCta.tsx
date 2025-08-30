@@ -1,6 +1,5 @@
-"use client";
-
 import { ReactNode } from "react";
+import { SquareCheck } from "lucide-react";
 
 interface ButtonProps {
   label: string;
@@ -11,7 +10,8 @@ interface ButtonProps {
 interface CvpCtaProps {
   heading: string;
   subheading: string;
-  description: string;
+  description?: string; // optional now
+  features?: string[]; // optional list of features
   buttons: ButtonProps[];
 }
 
@@ -19,6 +19,7 @@ export default function CvpCta({
   heading,
   subheading,
   description,
+  features,
   buttons,
 }: CvpCtaProps) {
   return (
@@ -28,10 +29,24 @@ export default function CvpCta({
         <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
         <p className="text-brand-gray text-sm sm:text-base">{subheading}</p>
 
-        {/* Description */}
-        <p className="font-red-rose max-w-3xl text-lg sm:text-xl">
-          {description}
-        </p>
+        {/* Description OR Features */}
+        {description ? (
+          <p className="font-red-rose max-w-3xl text-lg sm:text-xl">
+            {description}
+          </p>
+        ) : features ? (
+          <ul className="flex flex-wrap justify-center gap-6 py-4 text-left sm:py-10">
+            {features.map((feature, idx) => (
+              <li
+                key={idx}
+                className="flex items-center gap-2 text-base sm:text-lg"
+              >
+                <SquareCheck className="text-brand-primary bg-brand-bg h-5 w-5 shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         {/* CTA Buttons */}
         <div className="mt-4 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">

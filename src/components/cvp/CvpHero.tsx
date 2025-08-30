@@ -1,4 +1,3 @@
-"use client";
 import { BriefcaseBusiness, Sparkles, SquareCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

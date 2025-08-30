@@ -117,7 +117,6 @@ const page = () => {
       {/*  */}
       {/* SECTION TO ADD (YOUR COMPLETE CR SUITE) */}
       {/*  */}
-
       <CrpBenefit />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"
