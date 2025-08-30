@@ -36,26 +36,30 @@ export default function WhyCvpLite({
         </div>
 
         {/* Comparison Card */}
-        <div className="grid w-full max-w-3xl grid-cols-1 overflow-hidden rounded-xl shadow sm:grid-cols-2">
+        <div className="grid w-full max-w-3xl grid-cols-1 items-stretch overflow-hidden rounded-xl shadow sm:grid-cols-2">
           {/* Avoid column */}
-          <div className="flex flex-col overflow-hidden rounded-t-xl border border-gray-100 sm:rounded-l-xl sm:rounded-tr-none">
+          <div className="flex h-full min-h-full flex-col rounded-t-xl border border-gray-100 sm:rounded-l-xl sm:rounded-tr-none sm:border-r-0">
             {/* Header */}
             <div className="bg-gray-100 px-3 py-2 sm:px-6 sm:py-4">
               <h3 className="font-red-rose text-left text-lg">{avoidTitle}</h3>
             </div>
             {/* Rows */}
-            {avoid.map((item, i) => (
-              <div
-                key={i}
-                className={`bg-white px-3 py-2 text-left sm:px-6 sm:py-4 ${i !== avoid.length - 1 ? "border-b border-gray-100" : ""}`}
-              >
-                {item}
-              </div>
-            ))}
+            <div className="flex flex-1 flex-col">
+              {avoid.map((item, i) => (
+                <div
+                  key={i}
+                  className={`flex-1 bg-white px-3 py-2 text-left sm:px-6 sm:py-4 ${
+                    i !== avoid.length - 1 ? "border-b border-gray-100" : ""
+                  }`}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Experience column */}
-          <div className="border-brand-primary flex flex-col overflow-hidden rounded-b-xl border sm:rounded-tl-none sm:rounded-r-xl sm:rounded-bl-none">
+          <div className="border-brand-primary flex h-full min-h-full flex-col overflow-hidden rounded-b-xl border sm:rounded-r-xl sm:rounded-bl-none">
             {/* Header */}
             <div className="bg-brand-primary px-3 py-2 sm:px-6 sm:py-4">
               <h3 className="font-red-rose text-left text-lg text-white">
@@ -63,19 +67,28 @@ export default function WhyCvpLite({
               </h3>
             </div>
             {/* Rows */}
-            {experience.map((item, i) => (
-              <div
-                key={i}
-                className={`bg-brand-bg flex items-start gap-2 px-3 py-2 text-left sm:px-6 sm:py-4 ${
-                  i !== experience.length - 1
-                    ? "border-brand-primary/40 border-b"
-                    : ""
-                }`}
-              >
-                <CheckSquare size={18} className="text-brand-primary mt-1" />
-                <span>{item}</span>
-              </div>
-            ))}
+            <div className="flex flex-1 flex-col">
+              {experience.map((item, i) => (
+                <div
+                  key={i}
+                  className={`bg-brand-bg flex flex-1 items-start gap-2 px-3 py-2 text-left sm:px-6 sm:py-4 ${
+                    i !== experience.length - 1
+                      ? "border-brand-primary/40 border-b"
+                      : ""
+                  } ${
+                    i === experience.length - 1
+                      ? "rounded-b-xl sm:rounded-br-xl sm:rounded-bl-none"
+                      : ""
+                  }`}
+                >
+                  <CheckSquare
+                    size={18}
+                    className="text-brand-primary mt-1 flex-shrink-0"
+                  />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

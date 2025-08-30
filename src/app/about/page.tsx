@@ -1,6 +1,4 @@
 import Hero from "@/components/about/Hero";
-import Benchmark from "@/components/other/benchmark/Benchmark";
-import Brands from "@/components/other/Brands";
 import React from "react";
 import Features from "@/components/about/Features";
 import Ecosystem from "@/components/about/Ecosystem";
@@ -13,14 +11,13 @@ import Differentiators from "@/components/about/Differentiators";
 const About = () => {
   return (
     <>
+      <Founder />
       <Hero />
-      <Brands />
       <Features />
       <Differentiators />
-      <Ecosystem />
-      <Benchmark />
-      <Founder />
+      {/* SECTION TO ADD (OUR IMPACT GOALS 2027) */}
       <Research />
+      <Ecosystem />
       <Review />
       <Vision />
     </>

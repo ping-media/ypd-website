@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Founder() {
   return (
-    <section className="bg-gray-50 p-4 sm:p-10 lg:p-20">
+    <section className="px-4 pb-4 sm:px-10 sm:pb-10 lg:px-20 lg:pb-20">
       <div className="font-lato mx-auto flex max-w-7xl flex-col gap-8 sm:gap-12 lg:gap-16">
         {/* Top Vision Statement */}
         <div className="mx-auto flex max-w-4xl flex-col gap-4 text-center">
