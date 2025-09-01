@@ -7,7 +7,7 @@ interface CvpHeroProps {
   title: string;
   subtitle: ReactNode;
   description?: ReactNode;
-  features: string[];
+  features?: string[];
   buttonText?: string;
   buttonLink?: string;
   secondaryButtonText?: string; // ✅ new optional button text
@@ -15,6 +15,7 @@ interface CvpHeroProps {
   image: string;
   imageAlt?: string;
   reverse?: boolean;
+  featuresTwoCols?: boolean;
 }
 
 export default function CvpHero({
@@ -29,6 +30,7 @@ export default function CvpHero({
   image,
   imageAlt = "Feature Image",
   reverse = false,
+  featuresTwoCols = false,
 }: CvpHeroProps) {
   return (
     <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-8 px-4 py-6 sm:gap-12 sm:px-10 sm:py-10 lg:gap-16 lg:px-20">
@@ -51,8 +53,14 @@ export default function CvpHero({
             </p>
           )}
 
-          <ul className="space-y-3 text-sm sm:text-base">
-            {features.map((feature, idx) => (
+          <ul
+            className={`text-sm sm:text-base ${
+              featuresTwoCols
+                ? "grid grid-cols-1 gap-y-3 sm:grid-cols-2"
+                : "space-y-3"
+            }`}
+          >
+            {features?.map((feature, idx) => (
               <li key={idx} className="flex items-start justify-start gap-3">
                 <SquareCheck className="text-brand-primary bg-brand-bg mt-1 h-5 w-5 shrink-0" />
                 <span>{feature}</span>

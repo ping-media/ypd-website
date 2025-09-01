@@ -41,7 +41,7 @@ const CvpJourney = ({
         </div>
 
         {/* Steps + Image Section */}
-        <div className="flex w-full max-w-7xl flex-col-reverse items-center gap-4 sm:gap-10 lg:flex-row">
+        <div className="flex w-full max-w-7xl flex-col-reverse items-stretch gap-4 sm:gap-10 lg:flex-row">
           {/* Left: Numbered steps */}
           <div className="grid w-full flex-1 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-1">
             {steps.map((step) => (

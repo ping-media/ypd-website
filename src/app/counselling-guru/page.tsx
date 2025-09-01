@@ -422,35 +422,6 @@ const page = () => {
           second: "/cvplite/cvplite2.png",
         }}
       />
-      <CvpCta
-        heading="What You Receive"
-        subheading="Built by experts. Powered by AI. Grounded in empathy."
-        features={[
-          "One-on-one mentor-led counseling",
-          "Personalized stream & role confirmation",
-          "College shortlisting with real cutoffs",
-          "Entrance test insights + eligibility",
-          "Fee + scholarship planning",
-          "ROI & career safety analysis",
-          "Alternate role mapping",
-          "Skill gap + certification advice",
-          "Final Report + Session Transcript (PDF)",
-          "Parent Summary Report (Optional) ",
-          "Product Re-Access via YPD Dashboard",
-        ]}
-        buttons={[
-          {
-            label: "Take the First Step Simulate Your Future Career ",
-            icon: <Zap size={18} />,
-            variant: "primary",
-          },
-          {
-            label: "Request a Demo for Schools / Partners",
-            icon: <UserPlus size={18} />,
-            variant: "outline",
-          },
-        ]}
-      />
       <CvpLiteWorks
         heading="Who It's For"
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."

@@ -49,7 +49,7 @@ export default function CvpLiteWorks({
         {/* Responsive Layout */}
         <div className="w-full max-w-7xl">
           {/* Desktop */}
-          <div className="hidden items-center gap-4 sm:gap-10 lg:flex">
+          <div className="hidden items-stretch gap-4 sm:gap-10 lg:flex">
             {/* Left: Image */}
             <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
