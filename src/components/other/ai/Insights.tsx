@@ -75,7 +75,7 @@ const Insights = () => {
             </div>
           </div>
         </div>
-        <Link href="#" className="btn-primary btn-size">
+        <Link href="/about" className="btn-primary btn-size">
           Read More
           <ArrowRight size={24} className="shrink-0" />
         </Link>

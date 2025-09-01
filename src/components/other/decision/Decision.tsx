@@ -13,7 +13,7 @@ const cardData = [
   },
   {
     image: "/decision3.png",
-    heading: "Why Parents Love YPD",
+    heading: "Parents Loving YPD",
   },
   {
     image: "/decision4.png",
@@ -37,7 +37,7 @@ const Decision = () => {
         gap={20}
         buttonIcon={<UsersRound size={20} />}
         buttonText="Explore Counseling Guru™"
-        buttonHref="/counseling"
+        buttonHref="/counselling-guru"
       >
         {cardData.map((item, index) => (
           <DecisionCard key={index} image={item.image} heading={item.heading} />

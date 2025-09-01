@@ -4,7 +4,7 @@ const clarityCards: ClarityCardProps[] = [
   {
     image: "/clarity1.png",
     text: "Career Vision Program™",
-    href: "/#",
+    href: "/career-vision",
     icon: "/icons/c1.svg",
   },
   {
@@ -16,7 +16,7 @@ const clarityCards: ClarityCardProps[] = [
   {
     image: "/clarity3.png",
     text: "Career Reinvention Program™",
-    href: "/#",
+    href: "/career-reinvention",
     icon: "/icons/c3.svg",
   },
 ];

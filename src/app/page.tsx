@@ -15,7 +15,7 @@ import Growth from "@/components/other/growth/Growth";
 import Empower from "@/components/other/empower/Empower";
 import Personalise from "@/components/other/personalise/Personalise";
 import Seperate from "@/components/other/Seperate";
-import News from "@/components/other/news/News";
+// import News from "@/components/other/news/News";
 import RelatedBlogs from "@/components/other/blogs/RelatedBlogs";
 import Testimonials from "@/components/other/testimonials/Testimonials";
 import Seperate2 from "@/components/other/Seperate2";
@@ -44,7 +44,7 @@ export default function Home() {
       <Empower />
       <Personalise />
       <Seperate />
-      <News />
+      {/* <News /> */}
       <RelatedBlogs />
       <Testimonials />
       <Seperate2 />

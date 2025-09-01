@@ -29,7 +29,7 @@ const programsData = [
     description:
       "Mentor-led guidance, deep assessments, skill mapping, and career alignment tools for students building toward internships or early direction clarity.",
     image: "/advance.png",
-    buttonText: "Start Advance Track",
+    buttonText: "Start CVP Advance",
     icon: Rocket,
     buttonIcon: Compass,
   },
@@ -39,7 +39,7 @@ const programsData = [
     description:
       "Complete blueprint with 3 pathway maps, EQ + cognition analytics, mentor coaching, certification roadmap, resume-building & launch readiness.",
     image: "/professional.png",
-    buttonText: "Start Challenger Track",
+    buttonText: "Start CareerVerse™",
     icon: Briefcase,
     buttonIcon: Target,
   },
@@ -49,7 +49,7 @@ const programsData = [
     description:
       "For those at a pivot point — leverage the Reinvention Framework™ to reassess your value, reposition your skillset, and relaunch into a more aligned future role.",
     image: "/reinvention.png",
-    buttonText: "Start Reinvention",
+    buttonText: "Start CRP",
     icon: RefreshCw,
     buttonIcon: RefreshCw,
   },

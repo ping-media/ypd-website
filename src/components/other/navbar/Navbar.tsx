@@ -30,7 +30,8 @@ const Links = [
       {
         name: "Exam Mentors",
         subDropdown: [
-          { name: "10th-12th CBSE Mentor™", href: "/cbse-mentor" },
+          { name: "10th CBSE Mentor™", href: "/10-cbse" },
+          { name: "12th CBSE Mentor™", href: "/12-cbse" },
         ],
       },
       {
@@ -40,14 +41,36 @@ const Links = [
           { name: "UPSC Mentor™", href: "/upsc-mentor" },
         ],
       },
-      { name: "Counselling Mentors", href: "/counselling-mentors" },
+      {
+        name: "Counselling Mentors",
+        subDropdown: [
+          { name: "Counselling Guru™", href: "/counselling-guru" },
+          { name: "Global Navigator™", href: "/global-navigator" },
+          { name: "Spark Path", href: "/#" },
+          { name: "Special Stars", href: "/#" },
+        ],
+      },
       { name: "Mentor Connect", href: "/mentor-connect" },
-      { name: "Counseling Guru", href: "/counselling-guru" },
-      { name: "Global Navigator", href: "/global-navigator" },
     ],
   },
   {
     name: "Career Reinvention",
+    dropdown: [
+      {
+        name: "Professional Clarity",
+        subDropdown: [{ name: "Reboot Navigator™", href: "/career-reboot" }],
+      },
+      {
+        name: "Skilled Mentors",
+        subDropdown: [
+          { name: "Aptitude Trainer™", href: "/crp-aptitude" },
+          { name: "Reinvention Guru™", href: "/career-reinvention" },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Businesses",
     dropdown: [
       { name: "Professional Clarity™", href: "/professional-clarity" },
       { name: "Skilling Mentors™", href: "/skilling-mentors" },
@@ -124,10 +147,11 @@ const Navbar = () => {
               className="btn-primary btn-size space-x-0.5 capitalize"
             >
               <span>
-                Sign up{" "}
+                Register
+                {/* Sign up{" "}
                 <span className="hidden max-lg:inline-block xl:inline-block">
                   for free{" "}
-                </span>
+                </span> */}
               </span>
               <ArrowRight className="hidden xl:block" />
             </Link>

@@ -23,19 +23,19 @@ const growthData = [
   },
   {
     image: "/growth4.png",
-    heading: "India + Bharat First",
+    heading: "Bharat First",
     description:
-      "Our ecosystem is built to serve students in Tier 2/3/4 towns, MSMEs, family systems, and under-resourced schools.",
+      "Our ecosystem is built to serve students in Tier 1-4 towns, MSMEs, family systems, and under-resourced schools.",
   },
   {
     image: "/growth5.png",
     heading: "Investor Transparent",
     description:
-      "YImpact-led, capital-efficient, growth-modelled. Built to scale with clarity — not flash. Focused on value creation over vanity.",
+      "Impact-led, capital-efficient, growth-modelled. Built to scale with clarity — not flash. Focused on value creation over vanity.",
   },
   {
     image: "/growth6.png",
-    heading: "System Collaborative",
+    heading: "Ecosystem",
     description:
       "YPD works with schools, colleges, CSR, trainers, corporates, and gov bodies — as an integrative clarity engine, not a siloed product.",
   },
