@@ -49,7 +49,10 @@ export default function StepSection({
       className="relative flex h-full w-full items-start gap-3 sm:gap-4"
     >
       {/* Number Circle */}
-      <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6">
+      <div
+        className="relative z-10 mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6"
+        id={`step-${step.id}`}
+      >
         {step.id}
       </div>
 
@@ -83,7 +86,7 @@ export default function StepSection({
       key={index}
       className={`flex w-full flex-col items-center gap-8 sm:gap-10 md:gap-12 ${
         reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-      } lg:gap-16 xl:gap-20 2xl:gap-30`}
+      } relative lg:gap-16 xl:gap-20 2xl:gap-30`}
     >
       {/* Cards */}
       <div className="flex w-full flex-col items-stretch gap-6 sm:gap-8 lg:w-[45%] xl:w-[40%]">
@@ -116,9 +119,36 @@ export default function StepSection({
 
   return (
     <section className="flex justify-center bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-10 lg:px-10 lg:py-16 xl:px-20 xl:py-20">
-      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-8 text-center sm:gap-10 md:gap-12 lg:gap-16">
+      <div className="font-lato relative flex w-full max-w-[1440px] flex-col items-center gap-8 text-center sm:gap-10 md:gap-12 lg:gap-16">
+        {/* Dashed connecting line - hidden on mobile, visible on lg+ */}
+        <svg
+          className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          {/* LG to XL screens */}
+          <path
+            d="M 2 18 L 2 54 Q 2 56 4 56 L 58 56 Q 60 56 60 58 L 60 82"
+            className="lg:block xl:hidden"
+            stroke="#006400"
+            strokeWidth="0.3"
+            strokeDasharray="1,0.5"
+            fill="none"
+          />
+
+          {/* XL+ screens */}
+          <path
+            d="M 2 18 L 2 54 Q 2 56 4 56 L 63 56 Q 65 56 65 58 L 65 82"
+            className="hidden xl:block"
+            stroke="#006400"
+            strokeWidth="0.3"
+            strokeDasharray="1,0.5"
+            fill="none"
+          />
+        </svg>
+
         {/* Heading */}
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-center sm:gap-4">
+        <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-center sm:gap-4">
           <h2 className="font-red-rose text-xl sm:text-2xl md:text-3xl lg:text-4xl">
             {heading}
           </h2>
@@ -130,9 +160,16 @@ export default function StepSection({
         </div>
 
         {/* Sections */}
-        {stepGroups.map((group, i) =>
-          renderSection(group, allImages[i % allImages.length], i % 2 === 1, i),
-        )}
+        <div className="relative z-10 flex w-full flex-col gap-8 sm:gap-10 md:gap-16 lg:gap-24">
+          {stepGroups.map((group, i) =>
+            renderSection(
+              group,
+              allImages[i % allImages.length],
+              i % 2 === 1,
+              i,
+            ),
+          )}
+        </div>
       </div>
     </section>
   );

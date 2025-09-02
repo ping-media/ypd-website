@@ -12,7 +12,8 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import NumberCards from "@/components/mission-nda/NumberCards";
+import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
 import {
   Lightbulb,
@@ -106,9 +107,9 @@ const steps = [
 const audience = [
   {
     id: 1,
-    title: "Class 11–12 aspirants preparing for NDA",
+    title: "Aspirants from Class 11-UG  preparing for NDA",
     description:
-      "Students aiming to clear NDA written & SSB in their first attempt with structured, mentor-led guidance.",
+      "Aspirant and Professionals preparing for NDA & SSB in their first attempt with structured, mentor-led guidance.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -317,11 +318,10 @@ const page = () => {
           </>
         }
         features={[
-          "Guided, adaptive career journey",
-          "Move from uncertainty to clarity",
-          "No overwhelm or pressure",
-          "Built on YPD’s trusted frameworks",
-          "A powerful starting for every learner",
+          "NDA & SSB Full Mastery",
+          "AI-Powered Adaptive Prep Confidence",
+          "No Overwhelm",
+          "Trusted YPD Success Framework",
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
@@ -340,30 +340,29 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY */}
-      <WhyCvpLite
-        heading="Why It Works (When Others Don’t)"
-        subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
-        avoidTitle="Others Offer"
-        experienceTitle="Others Offer CVP Advance Delivers"
+      <Tables
+        heading="Structured Journey One Dashboard. Three Tracks."
+        subheading="Because you shouldn't choose learning for competitive entrance exams on guesswork"
+        trackTitle="Track"
+        avoidTitle="Focus"
+        experienceTitle="What You Get"
+        track={["Written Prep", "SSB Mastery", "Interview & GD"]}
         avoid={[
-          "Long forms, generic advice",
-          "Static career lists",
-          "No real learning insight",
-          "No emotional dimension",
+          "Full syllabus, revision, testing ",
+          "OLQ Mapping, Situational Response, GTO",
+          "Officer-like personality, AI coach, feedback",
         ]}
         experience={[
-          "Precision-crafted insights in just 7 days",
-          "Role-fit simulations + humanized AI logic",
-          "VARK-driven learning style adaptation",
-          "EQ, SQ, critical thinking, and mindset mapping",
+          "Study Capsules, Revision Pathways, Mock Tests",
+          "Real-time reflections, simulations, feedback",
+          "Mock interviews, GD prep, real response tracking",
         ]}
-        ctaText="Try the CVP Advance™"
+        ctaText="Try the Mission NDA™"
         ctaLink="/#"
       />
       <CvpInside
         heading="Why Mission NDA™ Is a Game Changer"
-        subheading="Over 7 tightly curated days, you’ll go through"
+        subheading="Prepare with strategy & planning"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/#"
@@ -378,37 +377,60 @@ const page = () => {
           second: "/cvplite/cvplite2.png",
         }}
       />
-      {/* SECTION TO MODIFY (IMAGE FULL WIDTH) */}
       <CvpLiteWorks
         heading="Who Should Join Mission NDA™"
-        subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
+        subheading="Build to ensure a focused preparation in your own space"
         audience={audience}
         ctaText="Start Your Journey Today"
         ctaLink="/#"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
-      {/*  */}
-      {/* SECTION TO ADD (STRUCTURED JOURNEY ONE DASHBOARD) */}
-      {/*  */}
+      <Tables
+        heading="Structured Journey One Dashboard. Three Tracks."
+        subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
+        trackTitle="Feature"
+        avoidTitle="What Others Do"
+        experienceTitle="Mission NDA™ Offers"
+        track={[
+          "Real AI Reflections",
+          "OLQ-Linked Progress",
+          "Mentor Guardrails ",
+          "Weakness Radar™",
+          "True Mock SSB Sim",
+        ]}
+        avoid={[
+          "None or static scores",
+          "No behavior linkage",
+          "AI-only MCQ’s or mentor only",
+          "Generic chapter tests",
+          "Absent or scripted",
+        ]}
+        experience={[
+          "Your actions are evaluated, not just scored",
+          "Every task maps to officer-like behavior",
+          "Human-validated tracks & feedback",
+          "Pinpoints knowledge + personality gaps ",
+          "Full simulation with voice & judgment paths",
+        ]}
+        ctaText="Try the Mission NDA™"
+        ctaLink="/#"
+      />
       <CvpJourney
         heading="Built by Defense Officers, Psychologists, and AI Experts"
-        description="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
+        description="Youth Pulse Digital™ believes that learning should be strategic and Implementable"
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start Mission NDA™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our Mission NDA™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
       <CvpRealworld
         heading="Real World Use Cases"
-        subheading="Career clarity isn’t a quiz result it’s the first real conversation with your future. CVP Lite guides that conversation."
+        subheading="Through the eyes of our users, who chose precision preparation"
         items={useCases}
       />
-      {/*  */}
-      {/* SECTION TO ADD (YOUR MISSION,BROKEN DOWN) */}
-      {/*  */}
+      <NumberCards />
       <CvpPricing
         heading="Pricing & Access"
         subheading="Mission NDA™ is a premium experience made affordable."
