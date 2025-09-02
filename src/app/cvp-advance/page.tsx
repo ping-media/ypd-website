@@ -397,7 +397,7 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CareerVerse™ is a premium experience made affordable."
+        subheading="CVP Advance™ is a premium experience made affordable."
         plans={[
           {
             title: "Free Plan",
@@ -416,7 +416,7 @@ const page = () => {
             title: "Premium Plan",
             description: "Complete your full Career Persona Journey",
             price: "₹2,499",
-            priceText: "Start My Career Simulation",
+            priceText: "Start My Career Clarity",
             features: [
               "Full 7-day journey",
               "AI-driven capsules",

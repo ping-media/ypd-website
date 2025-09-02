@@ -50,7 +50,7 @@ const insideData = [
 const audience = [
   {
     id: 1,
-    title: "Students in Class 8–12 thinking about stream/college fit",
+    title: "Students from Class 9 to UG Final Year",
     description:
       "Whether you're exploring streams or deciding between placements and higher studies — CareerVerse™ meets you where you are, and guides you forward with confidence.",
     icon: "/cvplite/r1.svg",
@@ -58,7 +58,7 @@ const audience = [
   },
   {
     id: 2,
-    title: "Parents who want to guide their children confidently",
+    title: "Anyone confused between multiple career options",
     description:
       "Torn between commerce or coding? Unsure about government vs private? Let our real-world role simulations and report-based suggestions help you choose wisely.",
     icon: "/cvplite/r2.svg",
@@ -66,7 +66,7 @@ const audience = [
   },
   {
     id: 3,
-    title: "Schools looking for a structured but flexible clarity tool",
+    title: "Curious learners who want real clarity, not hype",
     description:
       "Skip the YouTube noise and vague advice. CareerVerse™ gives you practical, relatable simulations that match your thinking style and future goals.",
     icon: "/cvplite/r3.svg",
@@ -74,7 +74,7 @@ const audience = [
   },
   {
     id: 4,
-    title: "Any student unsure about “what comes next”",
+    title: "Parents seeking structured career testing that feels real",
     description:
       "No more guesswork or hearsay. See your child walk through actual job scenarios — and get a full report to make decisions together.",
     icon: "/cvplite/r4.svg",
@@ -86,37 +86,36 @@ const useCases = [
   {
     id: 1,
     title: "Role Reality Feel the Job Before You Choose It",
-    quote: `CareerVerse™ lets students simulate what a day, a month, or a journey feels like in real roles — from Design Architect to Wildlife Conservationist to Blockchain Analyst. It adapts the tasks, pressure, and soft skills to the student’s profile.`,
+    quote: `A Class 11 Humanities student curious about Journalism enters a simulation as a regional news reporter in Kerala covering a flood rescue story — understanding ground pressure, ethical dilemmas, and communication skills needed.`,
     description:
-      " Indian Scenario: A Class 11 Humanities student curious about Journalism enters a simulation as a regional news reporter in Kerala covering a flood rescue story — understanding ground pressure, ethical dilemmas, and communication skills needed.",
+      "CareerVerse™ lets students simulate what a day, a month, or a journey feels like in real roles — from Design Architect to Wildlife Conservationist to Blockchain Analyst. It adapts the tasks, pressure, and soft skills to the student’s profile.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 2,
     title: "Stream Fit Reimagined Test Your Stream, Not Just Your Grades",
-    quote: `Think Science is your stream, but hate labs? CareerVerse™ shows you how your current stream fits into 10+ roles — and if a switch or bridge path is better. It’s not about marks — it’s about mindset, interests, and practical fit.
-`,
+    quote: `A Science student simulates a day as a Food Technologist and as a Public Health Officer, realizing they enjoy field-based work but not research, prompting a switch to Allied Health Management.`,
     description:
-      " Indian Scenario: A Science student simulates a day as a Food Technologist and as a Public Health Officer, realizing they enjoy field-based work but not research, prompting a switch to Allied Health Management.",
+      "Think Science is your stream, but hate labs? CareerVerse™ shows you how your current stream fits into 10+ roles — and if a switch or bridge path is better. It’s not about marks — it’s about mindset, interests, and practical fit.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
     id: 3,
     title: "Cross-Stream Career Mapping Your Stream Doesn’t Limit You",
-    quote: `Unlike static career maps, CareerVerse™ shows how different streams lead to the same career — with different skills. Explore roles like Game Developer, Business Analyst, or Social Entrepreneur from your stream’s angle.`,
+    quote: `A Commerce student simulates “UX Designer” vs “Product Marketer” paths. The simulation shows what entry from a Commerce background would feel like vs a Design background — allowing real decisions with no guesswork.`,
     description:
-      " Indian Scenario: A Commerce student simulates “UX Designer” vs “Product Marketer” paths. The simulation shows what entry from a Commerce background would feel like vs a Design background — allowing real decisions with no guesswork.",
+      "Unlike static career maps, CareerVerse™ shows how different streams lead to the same career — with different skills. Explore roles like Game Developer, Business Analyst, or Social Entrepreneur from your stream’s angle.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 4,
     title: "Emerging Roles, Real Work Go Beyond Outdated Job Lists",
-    quote: `CareerVerse™ simulates fast-growing careers that textbooks don’t cover — like AI Ethics Researcher, Climate Risk Analyst, or Urban Mobility Planner. You don’t just read about these roles — you experience their world.`,
+    quote: `A B.Sc. graduate confused about career direction simulates the life of a “Carbon Credit Strategist” — working with farmers and industries — and finds a new career direction that aligns with interest in sustainability.`,
     description:
-      " Indian Scenario: A B.Sc. graduate confused about career direction simulates the life of a “Carbon Credit Strategist” — working with farmers and industries — and finds a new career direction that aligns with interest in sustainability.",
+      "CareerVerse™ simulates fast-growing careers that textbooks don’t cover — like AI Ethics Researcher, Climate Risk Analyst, or Urban Mobility Planner. You don’t just read about these roles — you experience their world.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -127,42 +126,68 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: "Rishabh Mehta",
-    education: "Class 11 Student, Nagpur",
+    name: "Aarav Joshi",
+    education: "Class 11 Science Student",
     text: (
       <>
-        I Never Thought Career Guidance Could Feel So Personal. The{" "}
+        CareerVerse let me experience a day as a Data Scientist{" "}
         {highlight(
-          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher",
+          "The role simulation, manager tasks, and real-world challenges ",
         )}{" "}
-        I Finally Figured Out Why I Enjoy Solving Logic Puzzles!
+        felt so real that I knew exactly what skills I need to work on.
       </>
     ),
     image: "/cvplite/feedback.png",
   },
   {
     id: 2,
-    name: "Sangeeta Raghavan",
-    education: "Parent, Bengaluru",
+    name: "Ishita Gupta",
+    education: "B.Com Undergraduate",
     text: (
       <>
-        {highlight("We Were Overwhelmed With Career Choices For Our Daughter")}.
-        CVP Lite Helped Us Match Her Creative Side With Real Job Paths.
+        No generic advice — everything in CareerVerse was personalized.From my
+        Role Fit Score to the Learning Plan,
+        {highlight(" I felt the program was designed only for me.")}.
       </>
     ),
     image: "/cvplite/feedback1.png",
   },
   {
-    id: 3,
-    name: "Priyank Joshi",
-    education: "B.Com Final Year, Jaipur",
+    id: 4,
+    name: "Simran Kaur",
+    education: "Tier 2 City Student",
     text: (
       <>
-        &quot;The Emotional Intelligence part opened my eyes
-        {highlight(
-          "it’s not just marks, it's mindset. I now have a clear action plan",
-        )}
-        to build the skills my dream job actually needs. Total game-changer!
+        &quot;The surprise challenge in my simulation made me realize how I
+        react under pressure. By the end,
+        {highlight(" I was more confident about my decision-making")}
+        and career direction.&quot;
+      </>
+    ),
+    image: "/cvplite/feedback2.png",
+  },
+  {
+    id: 5,
+    name: "Rohan Verma",
+    education: "B.Tech Undergraduate",
+    text: (
+      <>
+        &quot;I locked my role as a UX Designer, but
+        {highlight("with CareerVerse i also tried alternate careers.")}
+        That flexibility gave me clarity and options for the future.&quot;
+      </>
+    ),
+    image: "/cvplite/feedback2.png",
+  },
+  {
+    id: 6,
+    name: "Nidhi Singh",
+    education: "Class 10 Student",
+    text: (
+      <>
+        &quot;CareerVerse didn’t just stop at today’s roles.
+        {highlight(" It showed me how AI and technology")}
+        might change my chosen career — and how I can prepare right now.&quot;
       </>
     ),
     image: "/cvplite/feedback2.png",
@@ -276,13 +301,6 @@ const page = () => {
             all in a gamified, emotionally intelligent experience.
           </>
         }
-        features={[
-          "Guided, adaptive career journey",
-          "Move from uncertainty to clarity",
-          "No overwhelm or pressure",
-          "Built on YPD’s trusted frameworks",
-          "A powerful starting for every learner",
-        ]}
         buttonText="Start Program Now"
         buttonLink="/#"
         secondaryButtonText="See How It Works"
@@ -327,6 +345,7 @@ const page = () => {
         heading="CareerVerse™ Real World Use Cases"
         subheading="Career discovery is no longer about watching videos or taking a quiz — it’s about stepping into the role and living it. These are real use cases of how Indian students use CareerVerse™ to make life-changing career decisions."
         items={useCases}
+        quoteOverlay
       />
       <CvpPricing
         heading="Pricing & Access"
@@ -338,9 +357,10 @@ const page = () => {
             price: "Free",
             priceText: "Start My Career Simulation",
             features: [
-              "10 AI chat messages/day",
-              "Basic AI response model",
-              "Limited access to features",
+              "Account Creation",
+              "Dashboard View",
+              "Profile Setting",
+              "Role Selection",
             ],
           },
           {
@@ -349,9 +369,10 @@ const page = () => {
             price: "₹1,999",
             priceText: "Start My Career Simulation",
             features: [
-              "Takes ~4-5 hours to complete",
-              "Session-locked, progress-saved, resume anytime",
-              "Final Report + Certificate Included",
+              "Account Creation",
+              "Dashboard View",
+              "Profile Setup",
+              "Simulate 3 Chosen Roles",
             ],
             highlight: true,
           },

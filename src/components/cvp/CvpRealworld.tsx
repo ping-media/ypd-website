@@ -6,19 +6,25 @@ import Image from "next/image";
 interface UseCase {
   id: number;
   title: string;
-  quote: string;
+  quote?: string;
   description: string;
-  icon: string; // will be an image path now
-  image: string; // right-hand preview image
+  icon: string; // image path
+  image: string; // preview image
 }
 
 interface Props {
   heading: string;
   subheading: string;
   items: UseCase[];
+  quoteOverlay?: boolean; // NEW prop
 }
 
-export default function CvpRealworld({ heading, subheading, items }: Props) {
+export default function CvpRealworld({
+  heading,
+  subheading,
+  items,
+  quoteOverlay = false, // default: false (quote on card)
+}: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
@@ -46,7 +52,7 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
                     : "border-gray-200 bg-white hover:border-gray-300"
                 }`}
               >
-                {/* Icon Image */}
+                {/* Icon */}
                 <div
                   className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
                     index === activeIndex
@@ -74,9 +80,14 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-brand-gray text-xs italic sm:text-sm">
-                    {item.quote}
-                  </p>
+
+                  {/* Quote inside card (only if not using overlay mode) */}
+                  {!quoteOverlay && item.quote && (
+                    <p className="text-brand-gray text-xs italic sm:text-sm">
+                      {item.quote}
+                    </p>
+                  )}
+
                   <p className="text-brand-gray mt-1 text-xs sm:text-sm lg:text-base">
                     {item.description}
                   </p>
@@ -85,7 +96,7 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
             ))}
           </div>
 
-          {/* Right: Big Image */}
+          {/* Right: Big Image with optional Quote Overlay */}
           <div className="relative h-[300px] min-h-[300px] w-full flex-1 overflow-hidden rounded-lg shadow-lg md:h-auto">
             <Image
               src={items[activeIndex].image}
@@ -94,6 +105,14 @@ export default function CvpRealworld({ heading, subheading, items }: Props) {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-all duration-500"
             />
+
+            {quoteOverlay && items[activeIndex].quote && (
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 via-black/60 to-transparent px-3 py-4 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
+                <p className="mx-auto max-w-2xl text-center text-sm leading-snug font-normal text-white drop-shadow-md sm:text-base sm:leading-relaxed lg:text-lg lg:leading-relaxed">
+                  {items[activeIndex].quote}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </div>
