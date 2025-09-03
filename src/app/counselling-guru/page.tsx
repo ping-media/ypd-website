@@ -1,9 +1,9 @@
+import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
@@ -15,14 +15,9 @@ import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 import {
-  Lightbulb,
-  Compass,
-  File,
-  Venus,
   Zap,
   ArrowRight,
   UserPlus,
-  PersonStanding,
   Layers,
   BarChart3,
   Brain,
@@ -55,49 +50,6 @@ const features = [
       "Our AI runs on real frameworks, local data, and mentor guidance—no random  results or recycled internet lists.",
   },
 ];
-const insideData = [
-  {
-    icon: FileText,
-    title: "Your Admission Eligibility",
-    description: "based on academics, boards, test scores",
-  },
-  {
-    icon: Lightbulb,
-    title: "Top Courses by Country & Stream",
-    description: "AI-suggested with real rankings",
-  },
-  {
-    icon: Compass,
-    title: "Matched Universities",
-    description: "Shortlisted by intake, test fit, and cost",
-  },
-  {
-    icon: File,
-    title: "Admissions Timeline",
-    description: "SOP, LOR, deadlines, portals",
-  },
-  {
-    icon: Venus,
-    title: "Tuition & Living Cost Estimator",
-    description: "Visual comparison by region",
-  },
-  {
-    icon: PersonStanding,
-    title: "Scholarship Engine",
-    description: "Merit, need-based, and external funding",
-  },
-  {
-    icon: PersonStanding,
-    title: "Student Life Snapshot",
-    description: "Safety, weather, diaspora, support",
-  },
-  {
-    icon: PersonStanding,
-    title: "Career Scope & PG Options",
-    description: "Internships, job roles, ROI",
-  },
-];
-
 const steps = [
   {
     id: 1,
@@ -251,40 +203,37 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: "Neha Arora",
-    education: "Parent, Jaipur",
+    name: "Rishabh Mehta",
+    education: "Class 11 Student, Nagpur",
     text: (
       <>
-        &quot;I never thought career guidance could feel so personal. The
-        {highlight(
-          "AI mentor actually made me think deeper like a real teacher who knows me. I finally figured out",
-        )}{" "}
-        why I enjoy solving logic puzzles I’m now exploring Data
-        Analytics!&quot;
+        {highlight("This felt like having a career coach")} who truly
+        understands both me and the market.!&quot;
       </>
     ),
     image: "/cvplite/user1.png",
   },
   {
     id: 2,
-    name: "Rajat Verma",
-    education: "BBA 3rd Year, Ahmedabad",
+    name: "Rohit Sharma",
+    education: "Patna",
     text: (
       <>
-        {highlight("“I’ve used expensive coaching before but nothing matches")}.
-        this level of feedback. It’s like having an SSB officer with me 24/7.”
+        {highlight("“The college shortlist + entrance readiness plan")}. saved
+        us weeks of research.”
       </>
     ),
     image: "/cvplite/user2.png",
   },
   {
     id: 3,
-    name: "Tanvi Kulkarni",
-    education: "Class 11, Na",
+    name: "Aditya",
+    education: "Grade 12",
     text: (
       <>
-        “Mission NDA helped my son in a small town gain officer-
-        {highlight("like clarity and confidence.”")}
+        “No generic reports.
+        {highlight("Just one solid roadmap")}
+        we could act on the next day.”
       </>
     ),
     image: "/cvplite/user3.png",
@@ -362,12 +311,13 @@ const page = () => {
           "College Matching & Career Roles",
           "One-Time Session · Lasting Clarity",
         ]}
+        featuresTwoCols
         buttonText="Book Your Slot Now"
         buttonLink="/program"
         secondaryButtonText="View Sample Report"
         secondaryButtonLink="/report"
         image="/career-reboot/hero.png"
-        imageAlt="mission nda"
+        imageAlt="counselling guru"
       />
       <CvpVideo
         heading="Step Inside the Experience of Counseling Guru™"
@@ -394,7 +344,7 @@ const page = () => {
           "AI + Human Synergy for unmatched accuracy",
           "Multi-stream pathways + ROI-driven decision logic",
         ]}
-        ctaText="Try the Global Navigator™"
+        ctaText="Try the Counselling Guru™"
         ctaLink="/#"
       />
       <CvpFeature
@@ -403,16 +353,6 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/#"
       />
-      <CvpInside
-        heading="Your Personalized Global Journey Powered by AI + Mentor"
-        subheading="In just one structured session, you’ll explore:"
-        features={insideData}
-        ctaText="Start Your Journey Today"
-        ctaLink="/#"
-      />
-      {/*  */}
-      {/* SECTION TO ADD (STRUCTURED JOURNEY ONE DASHBOARD) */}
-      {/*  */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="We don’t reveal the full backend flow. But here’s what makes Counseling Guru™ unlike anything else."
@@ -439,10 +379,10 @@ const page = () => {
             description: "Starter Demo",
             price: "₹0",
             features: [
-              "Limited Preview",
-              "Dashboard Peek",
-              "Sample Study Capsule",
-              "No report or stream recommendation",
+              "Account Creation",
+              "Session Booking",
+              "Dashboard View",
+              "Unlock to Counseling Session with Premium Plan",
             ],
           },
           {
@@ -454,7 +394,7 @@ const page = () => {
               "Book Your Slot all sessions are mentor-assigned",
               "Decision-Making or Casual Mode available at checkout",
               "Includes all final reports, resume access, and re-login feature",
-              "60–90 min guided session",
+              "30-60 min guided session",
             ],
             highlight: true,
           },
@@ -465,6 +405,48 @@ const page = () => {
       {/*  */}
       {/* SECTION TO ADD (CR VS OTHERS) */}
       {/*  */}
+      <Vs
+        heading="Counseling Guru™ vs Others"
+        subheading="Because you shouldn't plan your career comeback based on guesswork or generic advice."
+        leftTitle="Feature"
+        midLeftTitle="Traditional Counselors"
+        midRightTitle="EdTech Platforms"
+        rightTitle="Counseling Guru™"
+        leftItems={[
+          "Human Mentor",
+          "AI-Powered Decision Support",
+          "College Ranking + ROI Integration",
+          "Skill Gap + Upskilling Advice",
+          "Parent Summary",
+          "Final Report + Resume Access",
+        ]}
+        midLeftItems={[
+          { label: "Yes (but no AI)", type: "tick" },
+          { label: "No", type: "cross" },
+          { label: "Rarely", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "PDF Only", type: "text" },
+        ]}
+        midRightItems={[
+          { label: "No", type: "cross" },
+          { label: "Limited", type: "tick" },
+          { label: "Generic", type: "cross" },
+          { label: "Generic", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "PDF Only", type: "text" },
+        ]}
+        rightItems={[
+          "Verified Experts",
+          "Advanced Logic",
+          "Role & ROI Mapped",
+          "Personalized Plan",
+          "Optional",
+          "+ Product Reaccess",
+        ]}
+        ctaText="Try the Counseling Guru™"
+        ctaLink="/get-started"
+      />
       <CvpImpact
         heading="Real Impact, Real Results"
         description="Since its launch, Counseling Guru™ has guided students, parents, and professionals from Tier 1 to Tier 4 cities in India to make confident career and education choices—without jargon, pressure, or guesswork."
@@ -499,7 +481,7 @@ const page = () => {
         }
         subtext="Start Light, Upgrade Anytime"
         subheading="Choose Casual Mode at checkout to explore a preview journey. Get basic stream guidance, sample role mapping, and budget insights.Then upgrade to unlock full report, college list, and personal mentorship."
-        ctaText="Preview Mode"
+        ctaText="SneakPeak View"
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />

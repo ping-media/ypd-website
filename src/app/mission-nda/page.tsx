@@ -410,7 +410,6 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="Mission NDA™ is a precision-driven AI mentor designed to prepare you for both the NDA written exam and the SSB interview with military-grade rigor. Its adaptive journey is built to transform raw ambition into disciplined, officer-level readiness. Here’s how your training unfolds:"

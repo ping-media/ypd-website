@@ -12,7 +12,8 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import NumberCards from "@/components/mission-nda/NumberCards";
+import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
 import {
   Lightbulb,
@@ -22,6 +23,10 @@ import {
   Zap,
   ArrowRight,
   UserPlus,
+  BookOpen,
+  Monitor,
+  TrendingUp,
+  MessageCircle,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
@@ -197,6 +202,50 @@ const useCases = [
       "UPSC Mentor offers realistic mock interview simulations with panel-style feedback to build confidence and articulation.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
+  },
+];
+const numbersteps = [
+  {
+    id: 1,
+    title: "Study",
+    description:
+      "Topic-wise smart capsules covering Prelims & Mains with active recall techniques.",
+    icon: BookOpen,
+  },
+  {
+    id: 2,
+    title: "Revise",
+    description:
+      "Structured revision schedules with integrated PYQs and UPSC-standard case references.",
+    icon: Monitor,
+  },
+  {
+    id: 3,
+    title: "Test",
+    description:
+      "Sectional + full-length Prelims and Mains mock tests (auto-graded & evaluated).",
+    icon: FileText,
+  },
+  {
+    id: 4,
+    title: "Track",
+    description:
+      "Daily, weekly & stage-level performance dashboards to monitor readiness.",
+    icon: TrendingUp,
+  },
+  {
+    id: 5,
+    title: "Prepare (Interview)",
+    description:
+      "Personality Test simulations with panel-style feedback and DAF-based questions.",
+    icon: Brain,
+  },
+  {
+    id: 6,
+    title: "Answer Writing Lab",
+    description:
+      "Daily and weekly Mains answer writing practice with UPSC evaluation rubrics.",
+    icon: MessageCircle,
   },
 ];
 
@@ -375,12 +424,17 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY (FIRST MAKE ACCORDING NDA) */}
-      <WhyCvpLite
+      <Tables
         heading="Why It Works (When Others Don’t)"
         subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
+        trackTitle="Track"
         avoidTitle="Focus"
         experienceTitle="What You Get"
+        track={[
+          "Prelims Mastery",
+          "Mains Excellence",
+          "Interview & Personality",
+        ]}
         avoid={[
           "Full GS + CSAT coverage, revision cycles, test series integration",
           "GS & Essay frameworks, answer writing drills, current affairs integration",
@@ -401,7 +455,6 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="The UPSC Mentor™ is a structured, AI-powered preparation journey covering Prelims, Mains, and Interview stages. It blends syllabus mastery, real-time performance analytics, and role-based personality readiness to help aspirants approach the exam with precision, clarity, and officer-like confidence. Here’s a glimpse of your guided experience:"
@@ -411,7 +464,6 @@ const page = () => {
           second: "/cvplite/cvplite2.png",
         }}
       />
-      {/* SECTION TO MODIFY (IMAGE FULL WIDTH) */}
       <CvpLiteWorks
         heading="Who Should Join UPSC Mentor™"
         subheading="Youth Pulse Digital™ believes UPSC success is not just about syllabus completion — it’s a guided evolution towards becoming an impactful civil servant."
@@ -436,9 +488,11 @@ const page = () => {
         subheading="UPSC preparation isn’t just about covering the syllabus — it’s about strategic readiness for a high-stakes, multi-stage exam. UPSC Mentor addresses the real challenges aspirants face."
         items={useCases}
       />
-      {/*  */}
-      {/* SECTION TO ADD (YOUR MISSION,BROKEN DOWN) */}
-      {/*  */}
+      <NumberCards
+        steps={numbersteps}
+        heading="Your Mission, Broken Down"
+        subheading="UPSC Mentor™ is a premium preparation experience designed for serious aspirants."
+      />
       <CvpPricing
         heading="Pricing & Access"
         subheading="UPSC Mentor™ — a premium preparation experience made affordable."
