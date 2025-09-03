@@ -1,5 +1,6 @@
 import CrCards from "@/components/career-reboot/CrCards";
 import CrSteps from "@/components/career-reboot/CrSteps";
+import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
@@ -13,6 +14,7 @@ import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import NumberCards from "@/components/mission-nda/NumberCards";
 import Faq from "@/components/other/Faq";
 import {
   Lightbulb,
@@ -24,6 +26,10 @@ import {
   UserPlus,
   PersonStanding,
   GraduationCap,
+  BookOpen,
+  Brain,
+  Monitor,
+  TrendingUp,
 } from "lucide-react";
 import { FileText } from "lucide-react";
 
@@ -204,6 +210,43 @@ const useCases = [
     image: "/cvplite/cvpworks.png",
   },
 ];
+const numbersteps = [
+  {
+    id: 1,
+    title: "Select Free / Lite / Pro",
+    description:
+      "Pick your subscription and unlock matching features for your career reboot journey.",
+    icon: BookOpen,
+  },
+  {
+    id: 2,
+    title: "Choose your Job Role Cluster",
+    description:
+      "Select an Role Cluster to access sector-specific training capsules.",
+    icon: Monitor,
+  },
+  {
+    id: 3,
+    title: "Start your Capsule Training",
+    description:
+      "Begin interactive, scenario-based learning with real-world skill challenges",
+    icon: FileText,
+  },
+  {
+    id: 4,
+    title: "Get AI Reflection + Progress Badge",
+    description:
+      "Receive AI feedback and earn badges as you complete skill levels.",
+    icon: TrendingUp,
+  },
+  {
+    id: 5,
+    title: "Retry, Reflect & Improve",
+    description:
+      "Revisit weak areas, retry capsules, and strengthen your core and role skills.",
+    icon: Brain,
+  },
+];
 
 const highlight = (content: string) => (
   <span className="rounded bg-[#ebf3eb] px-1">{content}</span>
@@ -327,7 +370,6 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY (IMAGE FULL WIDTH) */}
       <CvpLiteWorks
         heading="Who is this for?"
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal — it’s a guided evolution."
@@ -336,7 +378,6 @@ const page = () => {
         ctaLink="/#"
         ctaSubtext="Hindi + Simple English  • Mobile Friendly  • Voice-guided Mentoring Coming Soon"
       />
-      {/* SECTION TO MODIFY */}
       <CrSteps
         heading="How it Works"
         subheading="We don’t reveal the full backend flow. But here’s what makes Counseling Guru™ unlike anything else."
@@ -419,9 +460,12 @@ const page = () => {
         ctaText="Try the Career Reboot Navigator™"
         ctaLink="/#"
       />
-      {/*  */}
-      {/* SECTION TO ADD (HOW TO START) */}
-      {/*  */}
+      <NumberCards
+        steps={numbersteps}
+        heading="How to Start"
+        subheading="CVP Advance™ is a premium experience made affordable."
+        bgClassName="bg-gray-50"
+      />
       <CvpCta
         heading="Want to Partner?"
         subheading=" Built by experts. Powered by AI. Grounded in empathy."
@@ -497,9 +541,53 @@ const page = () => {
         ctaText="Try the Career Reboot Navigator™"
         ctaLink="/#"
       />
-      {/*  */}
-      {/* SECTION TO ADD (CR VS OTHERS) */}
-      {/*  */}
+      <Vs
+        heading="Career Reboot Navigator™ vs Others"
+        subheading="Because you shouldn't plan your career comeback based on guesswork or generic advice."
+        leftTitle="Feature"
+        midLeftTitle="Career Coaches"
+        midRightTitle="Online Platforms"
+        rightTitle="Career Reboot Navigator™"
+        leftItems={[
+          "Human Mentor + AI Integration",
+          "Role & Skill Gap Mapping",
+          "Adaptive Career Pathways",
+          "Industry-Specific Upskilling",
+          "Personalized Career Reset Plan",
+          "Progress Dashboard & Analytics",
+          "Final Report + Continuous Access",
+        ]}
+        midLeftItems={[
+          { label: "Yes (no AI logic)", type: "tick" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "Rarely", type: "text" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "PDF Only", type: "text" },
+        ]}
+        midRightItems={[
+          { label: "No", type: "cross" },
+          { label: "Generic", type: "text" },
+          { label: "Limited", type: "text" },
+          { label: "Generic", type: "text" },
+          { label: "No", type: "cross" },
+          { label: "Limited", type: "text" },
+          { label: "PDF Only", type: "text" },
+        ]}
+        rightItems={[
+          "Verified Experts + AI-Driven System",
+          "Role-Validated + Skill Capsule Linked",
+          "Dynamic, Performance-Linked Pathways",
+          "Market-Aligned Skill Roadmaps",
+          "Tailored Plan with Readiness Milestones",
+          "Real-Time Dashboard + Employability Score",
+          "Interactive Report + Ongoing Access",
+        ]}
+        ctaText="Try the Career Reboot Navigator™"
+        ctaLink="/get-started"
+      />
+
       <CvpImpact
         heading="Real Impact, Real Results"
         description="Since its launch, Career Reboot Navigator™ has guided mid-career professionals, returning workforce members, and career shifters across industries to successfully reset their career paths with clarity, confidence, and market-aligned skills—without generic advice, guesswork, or overwhelming jargon."

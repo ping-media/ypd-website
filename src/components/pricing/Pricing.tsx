@@ -9,6 +9,180 @@ const PricingPage = () => {
   const [billing, setBilling] = useState<"monthly" | "annually">("monthly");
   const [program, setProgram] = useState<string>("");
 
+  // 💡 Full pricing data per program
+  const pricingData: Record<
+    string,
+    {
+      [key in "monthly" | "annually"]: {
+        basic: {
+          title: string;
+          description: string;
+          price: string;
+          features: string[];
+        };
+        pro: {
+          title: string;
+          description: string;
+          price: string;
+          features: string[];
+        };
+        premium: {
+          title: string;
+          description: string;
+          price: string;
+          features: string[];
+        };
+      };
+    }
+  > = {
+    "Cvp Lite": {
+      monthly: {
+        basic: {
+          title: "Basic",
+          description: "Get started with essentials",
+          price: "Free",
+          features: [
+            "5 AI chat messages/day",
+            "Basic response model",
+            "Community support",
+          ],
+        },
+        pro: {
+          title: "Pro",
+          description: "Unlock full student support",
+          price: "$10",
+          features: [
+            "Unlimited chat messages",
+            "Study plan generator",
+            "Priority AI model",
+            "Basic analytics",
+          ],
+        },
+        premium: {
+          title: "Premium",
+          description: "Best for ambitious students",
+          price: "$50",
+          features: [
+            "Everything in Pro",
+            "Mentor guidance sessions",
+            "Email support",
+            "Progress tracking",
+          ],
+        },
+      },
+      annually: {
+        basic: {
+          title: "Basic",
+          description: "Get started with essentials",
+          price: "Free",
+          features: [
+            "5 AI chat messages/day",
+            "Basic response model",
+            "Community support",
+          ],
+        },
+        pro: {
+          title: "Pro",
+          description: "Unlock full student support",
+          price: "$100",
+          features: [
+            "Unlimited chat messages",
+            "Study plan generator",
+            "Priority AI model",
+            "Basic analytics",
+          ],
+        },
+        premium: {
+          title: "Premium",
+          description: "Best for ambitious students",
+          price: "$500",
+          features: [
+            "Everything in Pro",
+            "Mentor guidance sessions",
+            "Email support",
+            "Progress tracking",
+          ],
+        },
+      },
+    },
+
+    "Cvp Advance": {
+      monthly: {
+        basic: {
+          title: "Basic",
+          description: "Explore career planning tools",
+          price: "Free",
+          features: [
+            "10 AI chat messages/day",
+            "Access to limited modules",
+            "Community support",
+          ],
+        },
+        pro: {
+          title: "Pro",
+          description: "For serious career explorers",
+          price: "$20",
+          features: [
+            "Unlimited chat messages",
+            "Career mentor modules",
+            "Document upload",
+            "Basic analytics",
+          ],
+        },
+        premium: {
+          title: "Premium",
+          description: "Complete career advancement suite",
+          price: "$120",
+          features: [
+            "Everything in Pro",
+            "Advanced mentor tools",
+            "1:1 mentor sessions",
+            "Email + chat support",
+          ],
+        },
+      },
+      annually: {
+        basic: {
+          title: "Basic",
+          description: "Explore career planning tools",
+          price: "Free",
+          features: [
+            "10 AI chat messages/day",
+            "Access to limited modules",
+            "Community support",
+          ],
+        },
+        pro: {
+          title: "Pro",
+          description: "For serious career explorers",
+          price: "$200",
+          features: [
+            "Unlimited chat messages",
+            "Career mentor modules",
+            "Document upload",
+            "Basic analytics",
+          ],
+        },
+        premium: {
+          title: "Premium",
+          description: "Complete career advancement suite",
+          price: "$1200",
+          features: [
+            "Everything in Pro",
+            "Advanced mentor tools",
+            "1:1 mentor sessions",
+            "Email + chat support",
+          ],
+        },
+      },
+    },
+
+    // You can continue adding for CareerVerse, Mission NDA, UPSC Mentor, Counselling Guru, Global Navigator...
+  };
+
+  const selectedPricing =
+    program && pricingData[program] ? pricingData[program][billing] : null;
+
   return (
     <section className="flex w-full justify-center p-4 pb-4 sm:px-10 sm:pb-10 lg:px-20 lg:pb-20">
       <div className="flex w-full max-w-[1440px] flex-col items-center gap-6 sm:gap-10">
@@ -28,11 +202,14 @@ const PricingPage = () => {
               className="text-brand-gray w-full appearance-none rounded-lg border border-gray-300 p-3 pr-10"
             >
               <option value="">Select Program</option>
-              <option value="highschool">High School</option>
-              <option value="college">College</option>
-              <option value="professional">Professional</option>
+              <option value="Cvp Lite">Cvp Lite™</option>
+              <option value="Cvp Advance">Cvp Advance™</option>
+              <option value="CareerVerse">CareerVerse™</option>
+              <option value="Mission NDA">Mission NDA™</option>
+              <option value="UPSC Mentor">UPSC Mentor™</option>
+              <option value="Counselling Guru">Counselling Guru™</option>
+              <option value="Global Navigator">Global Navigator™</option>
             </select>
-            {/* Icon */}
             <ChevronDown
               size={20}
               className="text-brand-gray pointer-events-none absolute top-1/2 right-3 -translate-y-1/2"
@@ -77,49 +254,31 @@ const PricingPage = () => {
         )}
 
         {/* Pricing Cards OR Fallback */}
-        {program ? (
+        {program && selectedPricing ? (
           <div className="grid w-full max-w-6xl grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             <PricingCard
-              title="Basic"
-              description="Perfect to explore and get started"
-              price="Free"
-              features={[
-                "10 AI chat messages/day",
-                "Basic AI response model",
-                "Limited access to features",
-                "Community support",
-                "No customization",
-              ]}
+              title={selectedPricing.basic.title}
+              description={selectedPricing.basic.description}
+              price={selectedPricing.basic.price}
+              features={selectedPricing.basic.features}
             />
 
             <PricingCard
-              title="Pro"
-              description="For regular users who need more power"
-              price={billing === "monthly" ? "$20" : "$200"}
+              title={selectedPricing.pro.title}
+              description={selectedPricing.pro.description}
+              price={selectedPricing.pro.price}
               period={billing === "monthly" ? "month" : "year"}
               highlight
-              features={[
-                "Unlimited chat messages",
-                "Priority AI response model",
-                "Image and document upload",
-                "Access to career mentor modules",
-                "Basic analytics",
-              ]}
+              features={selectedPricing.pro.features}
             />
 
             <PricingCard
-              title="Premium"
-              description="For professionals, schools, or heavy users"
-              price={billing === "monthly" ? "$120" : "$1200"}
+              title={selectedPricing.premium.title}
+              description={selectedPricing.premium.description}
+              price={selectedPricing.premium.price}
               period={billing === "monthly" ? "month" : "year"}
               highlight
-              features={[
-                "Unlimited chat messages",
-                "Priority AI response model",
-                "Image and document upload",
-                "Access to career mentor modules",
-                "Email support",
-              ]}
+              features={selectedPricing.premium.features}
             />
           </div>
         ) : (

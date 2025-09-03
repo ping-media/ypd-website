@@ -25,7 +25,33 @@ export default function CrSteps({
 }: StepSectionProps) {
   return (
     <section className="flex justify-center bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-10 lg:px-10 lg:py-16 xl:px-20 xl:py-20">
-      <div className="font-lato flex w-full max-w-[1440px] flex-col items-center gap-8 text-center sm:gap-10 md:gap-12 lg:gap-16">
+      <div className="font-lato relative flex w-full max-w-[1440px] flex-col items-center gap-8 text-center sm:gap-10 md:gap-12 lg:gap-20">
+        {/* Dashed connecting line - hidden on mobile, visible on lg+ */}
+        <svg
+          className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
+          {/* LG to XL screens */}
+          <path
+            d="M 2 20 L 2 37 Q 2 39 4 39 L 57 39 Q 59 39 59 41 L 59 69 Q 59 71 57 71 L 4 71 Q 2 71 2 73 L 2 85"
+            className="lg:block xl:hidden"
+            stroke="#006400"
+            strokeWidth="0.3"
+            strokeDasharray="1,0.5"
+            fill="none"
+          />
+
+          {/* XL+ screens */}
+          <path
+            d="M 2 20 L 2 36 Q 2 38 4 38 L 63 38 Q 65 38 65 40 L 65 68 Q 65 70 63 70 L 4 70 Q 2 70 2 72 L 2 83"
+            className="hidden xl:block"
+            stroke="#006400"
+            strokeWidth="0.3"
+            strokeDasharray="1,0.5"
+            fill="none"
+          />
+        </svg>
         {/* Heading */}
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-center sm:gap-4">
           <h2 className="font-red-rose text-xl sm:text-2xl md:text-3xl lg:text-4xl">

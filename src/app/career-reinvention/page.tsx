@@ -1,29 +1,47 @@
 import CrpBenefit from "@/components/career-reinvention/crpBenefit";
+import CrSuite from "@/components/career-reinvention/CrSuite";
 import Hero from "@/components/career-reinvention/Hero";
 import UserSay from "@/components/careerPath/UserSay";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Briefcase, GraduationCap, Users } from "lucide-react";
 
 const reviews = [
   {
     id: 1,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    name: "Ravi Menon",
+    education: "Mid-level Engineer",
+    text: "The Aptitude Trainer helped me identify my hidden strengths. The structured sessions improved my decision-making and problem-solving, which gave me clarity to plan my next career move.",
     image: "/about/c1.png",
   },
   {
     id: 2,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    name: "Ananya Sharma",
+    education: "Marketing Professional",
+    text: "Reboot Navigator guided me step by step to re-align my career path. The reflection exercises and skill-gap insights showed me exactly where to focus for sustainable growth.",
     image: "/about/c2.png",
   },
   {
     id: 3,
-    name: "Courtney Henry",
-    text: "The Team Truly Understood My Financial Goals As An Expat. Their Personalized Advice Made Me Feel Confident And Secure About My Future.",
+    name: "Arjun Patel",
+    education: "Finance Executive",
+    text: "Reinvention Guru gave me a realistic action plan to transition into a new role. The process wasn’t overwhelming — it was practical, encouraging, and perfectly aligned with my background.",
+    image: "/about/c1.png",
+  },
+  {
+    id: 4,
+    name: "Meera Iyer",
+    education: "Customer Support Specialist",
+    text: "Through the Aptitude Trainer, I realized my core aptitude is customer-facing. With Reinvention support, I’m now preparing for a career shift into business development with confidence",
+    image: "/about/c1.png",
+  },
+  {
+    id: 5,
+    name: "Pooja Kumari",
+    education: "Home Maker",
+    text: "As someone from a smaller city, I always thought my options were limited. Reboot Navigator opened my eyes and showed me practical ways to upskill without leaving my hometown.",
     image: "/about/c1.png",
   },
 ];
@@ -77,6 +95,44 @@ const crpFaqs = [
       "Yes. All modules are designed for Indian learners, workplaces, and cultural realities, but globally relevant too.",
   },
 ];
+const featureData = [
+  {
+    icon: <GraduationCap className="text-brand-primary h-12 w-12" />,
+    title: "Aptitude Trainer",
+    subtitle: "Early Professionals | 1-3 Months",
+    features: [
+      "Build 51 aptitudes with Indian Job context",
+      "Scenario-based problem solving & reflection tasks",
+      "Apply Critical thinking & strategies for solving challenges",
+      "Adaptive progression with retry and feedback",
+    ],
+    ctaText: "Try the Aptitude Trainer",
+  },
+  {
+    icon: <Users className="text-brand-primary h-12 w-12" />,
+    title: "Reboot Navigator",
+    subtitle: "Working Professionals | 1–2 Months",
+    features: [
+      "Sector Specific Role Cluster + Real like scenario simulations",
+      "Introduces Core Skills for career success",
+      "AI-guided employability skills",
+      "Tier 2-4 Jobs & Micro-Entrepreneur Fit",
+    ],
+    ctaText: "Try the Reboot Navigator",
+  },
+  {
+    icon: <Briefcase className="text-brand-primary h-12 w-12" />,
+    title: "Reinvention Guru",
+    subtitle: "Graduates & Mid-Career | 2–3.5 Months",
+    features: [
+      "Tailored restart coaching with mindset & confidence building",
+      "Career transition playbooks + upskilling pathways",
+      "Personalized Career Coach AI guidance with adaptive logic",
+      "Structured re-entry for break returners & career shifters",
+    ],
+    ctaText: "Try the Reinvention Guru",
+  },
+];
 const page = () => {
   return (
     <>
@@ -114,9 +170,11 @@ const page = () => {
         ctaText="Try the Career Verse™"
         ctaLink="/#"
       />
-      {/*  */}
-      {/* SECTION TO ADD (YOUR COMPLETE CR SUITE) */}
-      {/*  */}
+      <CrSuite
+        heading="Your Complete Career Reinvention Suite"
+        subheading="Sharpen your skills and decision-making through tailored aptitude and competency training designed for high-performance roles."
+        features={featureData}
+      />
       <CrpBenefit />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"

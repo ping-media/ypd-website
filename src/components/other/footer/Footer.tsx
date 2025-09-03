@@ -215,6 +215,7 @@ export default function Footer() {
               { label: "MSME Connect", href: "/msme-connect" },
               { label: "Corporate Connect", href: "/corporate-connect" },
               { label: "Govt Connect", href: "/govt-connect" },
+              { label: "Refund Policy", href: "/cancellation-refund" },
             ]}
           />
         </div>

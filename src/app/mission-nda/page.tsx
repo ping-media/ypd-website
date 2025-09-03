@@ -23,6 +23,10 @@ import {
   Zap,
   ArrowRight,
   UserPlus,
+  BookOpen,
+  Monitor,
+  TrendingUp,
+  MessageCircle,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
@@ -196,6 +200,45 @@ const useCases = [
       "Mission NDA™ pinpoints weak areas and gives targeted practice to boost your score.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
+  },
+];
+
+const numbersteps = [
+  {
+    id: 1,
+    title: "Study",
+    description: "Topic-wise smart capsules with active recall",
+    icon: BookOpen,
+  },
+  {
+    id: 2,
+    title: "Revise",
+    description: "AI nudges and real-world SSB case links",
+    icon: Monitor,
+  },
+  {
+    id: 3,
+    title: "Test",
+    description: "Sectional + full NDA mock tests (tutor-graded)",
+    icon: FileText,
+  },
+  {
+    id: 4,
+    title: "Track",
+    description: "Daily, Weekly & Mission-level dashboards",
+    icon: TrendingUp,
+  },
+  {
+    id: 5,
+    title: "Prepare (SSB)",
+    description: "Reflective capsule + OLQ linked SRT + GTO",
+    icon: Brain,
+  },
+  {
+    id: 6,
+    title: "Interview Mode",
+    description: "YPO Mentor simulates & evaluates you",
+    icon: MessageCircle,
   },
 ];
 
@@ -430,7 +473,11 @@ const page = () => {
         subheading="Through the eyes of our users, who chose precision preparation"
         items={useCases}
       />
-      <NumberCards />
+      <NumberCards
+        steps={numbersteps}
+        heading="Your Mission, Broken Down"
+        subheading="Misson NDA™ is a premium experience made affordable."
+      />
       <CvpPricing
         heading="Pricing & Access"
         subheading="Mission NDA™ is a premium experience made affordable."

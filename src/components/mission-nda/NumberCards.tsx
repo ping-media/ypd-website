@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  BookOpen,
-  Monitor,
-  FileText,
-  TrendingUp,
-  Brain,
-  MessageCircle,
-} from "lucide-react";
 
 interface Step {
   id: number;
@@ -15,70 +7,48 @@ interface Step {
   icon: React.ElementType;
 }
 
-const steps: Step[] = [
-  {
-    id: 1,
-    title: "Study",
-    description: "Topic-wise smart capsules with active recall",
-    icon: BookOpen,
-  },
-  {
-    id: 2,
-    title: "Revise",
-    description: "AI nudges and real-world SSB case links",
-    icon: Monitor,
-  },
-  {
-    id: 3,
-    title: "Test",
-    description: "Sectional + full NDA mock tests (tutor-graded)",
-    icon: FileText,
-  },
-  {
-    id: 4,
-    title: "Track",
-    description: "Daily, Weekly & Mission-level dashboards",
-    icon: TrendingUp,
-  },
-  {
-    id: 5,
-    title: "Prepare (SSB)",
-    description: "Reflective capsule + OLQ linked SRT + GTO",
-    icon: Brain,
-  },
-  {
-    id: 6,
-    title: "Interview Mode",
-    description: "YPO Mentor simulates & evaluates you",
-    icon: MessageCircle,
-  },
-];
+interface NumberCardsProps {
+  steps: Step[];
+  heading: string;
+  subheading?: string;
+  bgClassName?: string; // customizable background
+}
 
-const NumberCards: React.FC = () => {
+const NumberCards: React.FC<NumberCardsProps> = ({
+  steps,
+  heading,
+  subheading,
+  bgClassName = "bg-brand-bg",
+}) => {
   return (
-    <section className="bg-brand-bg flex justify-center p-4 sm:p-10 lg:p-20">
+    <section
+      className={`${bgClassName} flex justify-center p-4 sm:p-10 lg:p-20`}
+    >
       <div className="font-lato flex w-full max-w-[1440px] flex-col gap-12">
         {/* Heading */}
         <div className="mx-auto flex max-w-4xl flex-col gap-3 text-center sm:gap-4">
           <h2 className="font-red-rose text-xl sm:text-2xl lg:text-3xl">
-            Your Mission, Broken Down
+            {heading}
           </h2>
-          <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
-            Mission NDA™ is a premium experience made affordable
-          </p>
+          {subheading && (
+            <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
+              {subheading}
+            </p>
+          )}
         </div>
 
         <div className="relative mx-auto w-full max-w-6xl">
-          {/* Central dashed line - only between numbers */}
-          <div className="absolute left-1/2 hidden w-0.5 -translate-x-px transform border-l-2 border-dashed border-gray-300 md:top-[90px] md:bottom-[90px] md:block lg:top-[76px] lg:bottom-[76px]" />
-
           <div className="space-y-4 md:space-y-6 lg:space-y-8">
-            {steps.map((step) => (
+            {steps.map((step, index) => (
               <div key={step.id} className="relative flex items-center">
+                {/* Vertical line segment - only show between current and next step */}
+                {index < steps.length - 1 && (
+                  <div className="absolute top-28 left-1/2 hidden h-[calc(100%+1rem)] w-0.5 -translate-x-px transform border-l-2 border-dashed border-gray-300 md:block lg:top-24 lg:h-[calc(100%+1.5rem)]" />
+                )}
+
                 {/* Mobile Layout */}
                 <div className="flex w-full items-center md:hidden">
                   {/* Number Circle */}
-                  {/* <div className="z-10 mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-sm font-semibold text-white"> */}
                   <div className="bg-brand-primary relative z-10 mr-4 flex h-10 w-10 items-center justify-center rounded-lg text-sm text-white sm:h-12 sm:w-12 sm:text-base">
                     {step.id}
                   </div>
