@@ -35,9 +35,9 @@ const programsData = [
   },
   {
     title: "Careerverse™",
-    target: "Final-Year UG/PG & Fresh Graduates ",
+    target: "Students from Class 9 to UG Final Year",
     description:
-      "Complete blueprint with 3 pathway maps, EQ + cognition analytics, mentor coaching, certification roadmap, resume-building & launch readiness.",
+      "Whether you're exploring streams or deciding between placements and higher studies — CareerVerse™ meets you where you are, and guides you forward with confidence.",
     image: "/professional.png",
     buttonText: "Start CareerVerse™",
     icon: Briefcase,
