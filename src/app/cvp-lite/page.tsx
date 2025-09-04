@@ -85,17 +85,17 @@ const steps = [
   },
   {
     id: 3,
-    title: "Connects Your Cognitive profile, Emotional & Social Quotient",
-    description:
-      "Each Step in CVP Lite™ is connected and works in closed-loop, unlike static Psychometric assessments — all dynamically linked to your real passion, interests & strengths, as well to the reflections & journals making it the only active assessment available.",
-    icon: "/careerverse/s3.svg",
-  },
-  {
-    id: 4,
     title: "Celebrate Your Personalized CVP Lite™ Report",
     description:
       "Once your CVP Lite™ journey is complete, you will be emailed your Career Pathway Report within a short while.",
     icon: "/careerverse/s4.svg",
+  },
+  {
+    id: 4,
+    title: "Connects Your Cognitive profile, Emotional & Social Quotient",
+    description:
+      "Each Step in CVP Lite™ is connected and works in closed-loop, unlike static Psychometric assessments — all dynamically linked to your real passion, interests & strengths, as well to the reflections & journals making it the only active assessment available.",
+    icon: "/careerverse/s3.svg",
   },
 ];
 const audience = [

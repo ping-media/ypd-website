@@ -89,7 +89,7 @@ const steps = [
 const crData = [
   {
     icon: FileText,
-    title: "20+ Role Clusters",
+    title: "18+ Role Clusters",
     description:
       "Master diverse job skills through realistic, scenario-based training capsules.",
   },
@@ -254,40 +254,84 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: "Neha Arora",
-    education: "Parent, Jaipur",
+    name: "Vikram Sethi",
+    education: "Operations Manager, Pune",
     text: (
       <>
-        &quot;I never thought career guidance could feel so personal. The
+        &quot;I was stuck in the same role for 3 years.{" "}
         {highlight(
-          "AI mentor actually made me think deeper like a real teacher who knows me. I finally figured out",
-        )}{" "}
-        why I enjoy solving logic puzzles I’m now exploring Data
-        Analytics!&quot;
+          "Reboot Navigator showed me employability skills and gave me a fresh understanding.",
+        )}
+        &quot;
       </>
     ),
     image: "/cvplite/user1.png",
   },
   {
     id: 2,
-    name: "Rajat Verma",
-    education: "BBA 3rd Year, Ahmedabad",
+    name: "Ritu Malhotra",
+    education: "Teacher, Indore",
     text: (
       <>
-        {highlight("“I’ve used expensive coaching before but nothing matches")}.
-        this level of feedback. It’s like having an SSB officer with me 24/7.”
+        &quot;The structured skill tasks helped me realise my strengths beyond
+        my current job.{" "}
+        {highlight("Now I’m preparing for a role in digital marketing.")}&quot;
       </>
     ),
     image: "/cvplite/user2.png",
   },
   {
     id: 3,
-    name: "Tanvi Kulkarni",
-    education: "Class 11, Na",
+    name: "Aakash Nair",
+    education: "Sales Executive, Kochi",
     text: (
       <>
-        “Mission NDA helped my son in a small town gain officer-
-        {highlight("like clarity and confidence.”")}
+        &quot;Reboot Navigator broke my career confusion into simple steps.{" "}
+        {highlight("The Core skills gave me clarity on what was missing.")}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user3.png",
+  },
+  {
+    id: 4,
+    name: "Shalini Verma",
+    education: "HR Specialist, Noida",
+    text: (
+      <>
+        &quot;I didn’t want random advice.{" "}
+        {highlight(
+          "This program gave me a 3-month action plan that felt practical and achievable.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user1.png",
+  },
+  {
+    id: 5,
+    name: "Prakash Yadav",
+    education: "Accountant, Varanasi",
+    text: (
+      <>
+        &quot;As a Tier-3 city professional, I thought options were limited.{" "}
+        {highlight(
+          "Reboot Navigator opened new thoughts I can pursue remotely.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user2.png",
+  },
+  {
+    id: 6,
+    name: "Farheen Khan",
+    education: "Customer Service, Hyderabad",
+    text: (
+      <>
+        &quot;The combination of reflection + AI mentor feedback gave me
+        confidence{" "}
+        {highlight("to shift careers without fear of starting over.")}&quot;
       </>
     ),
     image: "/cvplite/user3.png",
@@ -346,7 +390,12 @@ const page = () => {
     <>
       <CvpHero
         title="Real Skills. Real Scenarios. Real Change."
-        subtitle={<>A job-readiness mentor for India’s next-gen workforce</>}
+        subtitle={
+          <>
+            Reboot Navigator™ A job-readiness mentor for India’s next-gen
+            workforce
+          </>
+        }
         features={[
           "Built for 10th pass to graduates",
           "Covers 18+ job clusters office, retail, field, digital",
@@ -380,7 +429,7 @@ const page = () => {
       />
       <CrSteps
         heading="How it Works"
-        subheading="We don’t reveal the full backend flow. But here’s what makes Counseling Guru™ unlike anything else."
+        subheading="We don’t reveal the full backend flow. But here’s what makes Reboot Navigator™ unlike anything else."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -457,7 +506,7 @@ const page = () => {
           "No Need for Laptop",
           "AI with Emotion + Reflection",
         ]}
-        ctaText="Try the Career Reboot Navigator™"
+        ctaText="Try Reboot Navigator™"
         ctaLink="/#"
       />
       <NumberCards
@@ -538,7 +587,7 @@ const page = () => {
           "Role-to-skill pathways tailored to your chosen sector, ensuring relevance to current market demands.",
           "Real-time dashboard metrics to monitor skill mastery, role readiness, and employability score.",
         ]}
-        ctaText="Try the Career Reboot Navigator™"
+        ctaText="Try Reboot Navigator™"
         ctaLink="/#"
       />
       <Vs
@@ -584,7 +633,7 @@ const page = () => {
           "Real-Time Dashboard + Employability Score",
           "Interactive Report + Ongoing Access",
         ]}
-        ctaText="Try the Career Reboot Navigator™"
+        ctaText="Try Reboot Navigator™"
         ctaLink="/get-started"
       />
 

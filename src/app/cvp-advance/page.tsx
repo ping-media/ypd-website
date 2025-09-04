@@ -86,7 +86,7 @@ const steps = [
     id: 3,
     title: "Lock Your Career Role & Skill Gap Map",
     description:
-      "AI matches you to best-fit roles — including cross-stream opportunities — and generates a gap analysis with skill-bridging pathways.",
+      "AI matches you to best-fit roles — including cross-stream opportunities — and generates a gap analysis.",
     icon: "/careerverse/s3.svg",
   },
   {

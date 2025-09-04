@@ -225,7 +225,7 @@ export default function Footer() {
       <div className="h-[1px] bg-[#335933]"></div>
 
       {/* Bottom Bar */}
-      <div className="mx-auto flex max-w-[1440px] flex-col justify-between gap-3 px-4 py-4 text-center font-sans text-sm sm:px-10 md:flex-row md:text-left lg:px-20">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center gap-3 px-4 py-4 text-center font-sans text-sm sm:px-10 md:flex-row md:text-left lg:px-20">
         {/* Links - on top in mobile, last in desktop */}
         {/* <div className="flex gap-4 justify-center md:justify-start order-1 md:order-3">
           <Link href="/privacy-policy" className="hover:opacity-60">
@@ -240,12 +240,13 @@ export default function Footer() {
         </div> */}
 
         {/*middle in both mobile & desktop */}
-        <p className="order-2">Built in Bharat. Powered by Purpose.</p>
+        <p>
+          Built in Bharat. Powered by Purpose © 2025 Youth Pulse Digital™ All
+          Rights Reserved.
+        </p>
 
         {/* Copyright - last in mobile, first in desktop */}
-        <p className="order-3 md:order-1">
-          © 2025 Youth Pulse Digital™ All Rights Reserved
-        </p>
+        {/* <p className="order-3 md:order-1"></p> */}
       </div>
     </footer>
   );
