@@ -50,7 +50,7 @@ const insideData = [
 const audience = [
   {
     id: 1,
-    title: "Students from Class 9 to UG Final Year",
+    title: "Students from Class 9 to UG",
     description:
       "Whether you're exploring streams or deciding between placements and higher studies — CareerVerse™ meets you where you are, and guides you forward with confidence.",
     icon: "/cvplite/r1.svg",
@@ -130,7 +130,7 @@ const ReviewsData = [
     education: "Class 11 Science Student",
     text: (
       <>
-        CareerVerse let me experience a day as a Data Scientist{" "}
+        CareerVerse™ let me experience a day as a Data Scientist{" "}
         {highlight(
           "The role simulation, manager tasks, and real-world challenges ",
         )}{" "}
@@ -145,7 +145,7 @@ const ReviewsData = [
     education: "B.Com Undergraduate",
     text: (
       <>
-        No generic advice — everything in CareerVerse was personalized.From my
+        No generic advice — everything in CareerVerse™ was personalized.From my
         Role Fit Score to the Learning Plan,
         {highlight(" I felt the program was designed only for me.")}.
       </>
@@ -173,7 +173,7 @@ const ReviewsData = [
     text: (
       <>
         &quot;I locked my role as a UX Designer, but
-        {highlight("with CareerVerse i also tried alternate careers.")}
+        {highlight("with CareerVerse™ i also tried alternate careers.")}
         That flexibility gave me clarity and options for the future.&quot;
       </>
     ),
@@ -185,7 +185,7 @@ const ReviewsData = [
     education: "Class 10 Student",
     text: (
       <>
-        &quot;CareerVerse didn’t just stop at today’s roles.
+        &quot;CareerVerse™ didn’t just stop at today’s roles.
         {highlight(" It showed me how AI and technology")}
         might change my chosen career — and how I can prepare right now.&quot;
       </>
@@ -273,7 +273,7 @@ const page = () => {
           <>
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                Career Verse™
+                CareerVerse™
               </span>
               <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
@@ -281,11 +281,10 @@ const page = () => {
             journey for students in{" "}
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                Grade 9 to UG final year.
+                Grade 9 to UG.
               </span>
               <span className="absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm bg-green-100"></span>
             </span>
-            .
           </>
         }
         description={
@@ -304,21 +303,21 @@ const page = () => {
         buttonText="Start Program Now"
         buttonLink="/#"
         secondaryButtonText="See How It Works"
-        secondaryButtonLink="/#"
+        secondaryButtonLink="/careerverse/#video"
         image="/careerverse/hero.png"
         imageAlt="Student learning"
       />
       <CvpVideo
-        heading="Step Inside the Experience of the Career Verse™"
+        heading="Step Inside the Experience of the CareerVerse™"
         subheading="Take a quick look at how our AI-driven journey helps you discover your strengths, map career paths, and make smarter choices."
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
       <WhyCvpLite
-        heading="Why Career Verse™?"
+        heading="Why CareerVerse™?"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         avoidTitle="Most Platforms Do This..."
-        experienceTitle="Career Verse™ Does This Instead..."
+        experienceTitle="CareerVerse™ Does This Instead..."
         avoid={[
           "Give you static personality tests",
           "Show generic career lists",
@@ -331,7 +330,7 @@ const page = () => {
           "Gives you confidence insights & skill gaps",
           "Asks “Can you handle a day in a hospital?”",
         ]}
-        ctaText="Try the Career Verse™"
+        ctaText="Try CareerVerse™"
         ctaLink="/#"
       />
       <CvpInside
@@ -349,7 +348,7 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CareerVerse™ is a premium experience made affordable."
+        subheading="Innovation that feels premium, priced for you."
         plans={[
           {
             title: "Basic",

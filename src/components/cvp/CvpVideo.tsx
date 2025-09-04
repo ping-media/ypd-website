@@ -20,7 +20,10 @@ const CvpVideo: React.FC<CvpVideoProps> = ({
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="flex justify-center bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] p-4 sm:p-10 lg:p-20">
+    <section
+      id="video"
+      className="flex justify-center bg-gradient-to-b from-[#f0fff7] via-white to-[#f0fff7] p-4 sm:p-10 lg:p-20"
+    >
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">

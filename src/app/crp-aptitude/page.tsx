@@ -545,7 +545,6 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <Faq faqs={crpaptitudefaqs} />
       <CvpSecurity />
 
       {/*  */}
@@ -585,6 +584,7 @@ const page = () => {
       />
 
       <CvpFeedback reviews={ReviewsData} />
+      <Faq faqs={crpaptitudefaqs} imglink="/faq1.png" />
     </>
   );
 };

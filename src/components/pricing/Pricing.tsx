@@ -35,7 +35,7 @@ const PricingPage = () => {
       };
     }
   > = {
-    "Cvp Lite": {
+    "CVP Lite": {
       monthly: {
         basic: {
           title: "Basic",
@@ -106,7 +106,7 @@ const PricingPage = () => {
       },
     },
 
-    "Cvp Advance": {
+    "CVP Advance": {
       monthly: {
         basic: {
           title: "Basic",
@@ -202,13 +202,17 @@ const PricingPage = () => {
               className="text-brand-gray w-full appearance-none rounded-lg border border-gray-300 p-3 pr-10"
             >
               <option value="">Select Program</option>
-              <option value="Cvp Lite">Cvp Lite™</option>
-              <option value="Cvp Advance">Cvp Advance™</option>
+              <option value="CVP Lite">CVP Lite™</option>
+              <option value="CVP Advance">CVP Advance™</option>
               <option value="CareerVerse">CareerVerse™</option>
-              <option value="Mission NDA">Mission NDA™</option>
-              <option value="UPSC Mentor">UPSC Mentor™</option>
+              {/* <option value="Mission NDA">Mission NDA™</option> */}
+              {/* <option value="UPSC Mentor">UPSC Mentor™</option> */}
               <option value="Counselling Guru">Counselling Guru™</option>
               <option value="Global Navigator">Global Navigator™</option>
+              <option value="Reboot Navigator">Reboot Navigator™</option>
+              <option value="Aptitude Trainer">Aptitude Trainer™</option>
+              <option value="Admission Test">Admission Test</option>
+              <option value="Hiring & Boarding">Hiring & Boarding™</option>
             </select>
             <ChevronDown
               size={20}

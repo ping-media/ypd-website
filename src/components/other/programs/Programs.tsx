@@ -34,8 +34,8 @@ const programsData = [
     buttonIcon: Compass,
   },
   {
-    title: "Careerverse™",
-    target: "Students from Class 9 to UG Final Year",
+    title: "CareerVerse™",
+    target: "Students from Class 9 to UG",
     description:
       "Whether you're exploring streams or deciding between placements and higher studies — CareerVerse™ meets you where you are, and guides you forward with confidence.",
     image: "/professional.png",
@@ -45,7 +45,7 @@ const programsData = [
   },
   {
     title: "Career Reinvention Program™",
-    target: "Mid-Career Professionals ",
+    target: "Fresher Or Mid-Career Professionals ",
     description:
       "For those at a pivot point — leverage the Reinvention Framework™ to reassess your value, reposition your skillset, and relaunch into a more aligned future role.",
     image: "/reinvention.png",

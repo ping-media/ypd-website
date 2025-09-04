@@ -690,7 +690,7 @@ const Page = () => {
             Kolkata – 700161, West Bengal, India
           </p>
           <p className="mb-2">GST Number: 19AACCY0548C1ZG</p>
-          <p className="mb-4">PAN: AACCY0548C</p>
+          {/* <p className="mb-4">PAN: AACCY0548C</p> */}
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             11. Legal Compliance and Consumer Rights

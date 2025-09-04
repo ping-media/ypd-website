@@ -14,6 +14,7 @@ interface FAQItem {
 
 interface FaqProps {
   faqs?: FAQItem[]; // optional prop
+  imglink?: string;
 }
 
 const defaultFaqs: FAQItem[] = [
@@ -69,9 +70,9 @@ const defaultFaqs: FAQItem[] = [
   },
 ];
 
-const Faq = ({ faqs }: FaqProps) => {
+const Faq = ({ faqs, imglink }: FaqProps) => {
   const items = faqs && faqs.length > 0 ? faqs : defaultFaqs;
-
+  const imageSrc = imglink || "/faq.png";
   return (
     <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-4 p-4 sm:gap-10 sm:p-10 lg:gap-14 lg:p-20">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 sm:gap-10 lg:flex-row lg:gap-24">
@@ -81,7 +82,7 @@ const Faq = ({ faqs }: FaqProps) => {
             <h2 className="font-red-rose text-2xl sm:text-3xl">
               Frequently Asked Questions
             </h2>
-            <Link href="#" className="btn-primary btn-size">
+            <Link href="/contact" className="btn-primary btn-size">
               Still have questions? Contact Support
             </Link>
           </div>
@@ -89,7 +90,7 @@ const Faq = ({ faqs }: FaqProps) => {
           {/* Image - hidden below lg */}
           <div className="relative hidden min-h-[400px] w-full flex-1 lg:block">
             <Image
-              src="/faq.png"
+              src={imageSrc}
               alt="FAQ Illustration"
               fill
               className="rounded-lg object-contain"

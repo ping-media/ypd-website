@@ -100,7 +100,7 @@ const steps = [
 const audience = [
   {
     id: 1,
-    title: "Students in Class 8–12 thinking about stream/college fit",
+    title: "Students in Class 9 to UG thinking about stream/college fit",
     description:
       "Explore your strengths, skills, and passions through AI-guided profiling. Get a clear, personalized path for streams, colleges, and future careers.",
     icon: "/cvplite/r1.svg",
@@ -151,7 +151,7 @@ const useCases = [
     title: "Stream Confusion",
     quote: `“I’m unsure if Science, Commerce, Arts, or another path is right for me.”`,
     description:
-      "CVP Advance identifies the most suitable stream using AI-driven profiling—factoring in skills, mindset, and career vision, not just peer trends.",
+      "CVP Advance™ identifies the most suitable stream using AI-driven profiling—factoring in skills, mindset, and career vision, not just peer trends.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
@@ -160,7 +160,7 @@ const useCases = [
     title: "Too Many Options",
     quote: `“I feel lost with so many possible careers.”`,
     description:
-      "CVP Advance filters the noise, presenting 2–3 high-fit career pathways that align with your personality, strengths, and future goals.",
+      "CVP Advance™ filters the noise, presenting 2–3 high-fit career pathways that align with your personality, strengths, and future goals.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -169,7 +169,7 @@ const useCases = [
     title: "Parent Support Needed",
     quote: `“My family wants clarity before making career decisions.”`,
     description:
-      "CVP Advance provides a detailed, parent-ready report that explains choices, outcomes, and learning plans—making the decision a shared journey.",
+      "CVP Advance™ provides a detailed, parent-ready report that explains choices, outcomes, and learning plans—making the decision a shared journey.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/uses.png",
   },
@@ -178,7 +178,7 @@ const useCases = [
     title: "Marks ≠ Clarity",
     quote: `“I score well but still don’t know my direction.”`,
     description:
-      "CVP Advance helps top scorers and average students alike discover careers that excite and suit them—beyond just academic grades.",
+      "CVP Advance™ helps top scorers and average students alike discover careers that excite and suit them—beyond just academic grades.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -211,7 +211,7 @@ const ReviewsData = [
       <>
         &quot;The employability focus was spot on. I realised my degree alone
         wouldn’t make me job-ready.
-        {highlight(" CVP Advance built me a plan with industry projects,")}.
+        {highlight(" CVP Advance™ built me a plan with industry projects,")}.
         soft skill training, and placement targets.&quot;
       </>
     ),
@@ -225,7 +225,7 @@ const ReviewsData = [
       <>
         &quot;What impressed me most was the adaptability. I switched my target
         role mid-way,
-        {highlight("and CVP Advance recalibrated my entire plan instantly.")}.
+        {highlight("and CVP Advance™ recalibrated my entire plan instantly.")}.
         No wasted effort, only a sharper path.&quot;
       </>
     ),
@@ -234,19 +234,19 @@ const ReviewsData = [
 ];
 const cvpAdvanceFaqs = [
   {
-    question: "What is the CVP Advance Program?",
+    question: "What is CVP Advance™ Program?",
     answer:
       "CVP Advance™ is a premium, multi-layered career clarity and planning platform. It maps your strengths, learning style, and cognitive abilities, matches you to high-potential career paths, and builds a semester-by-semester action plan with skill gap closure strategies, real-world projects, and future role alignment.",
   },
   {
-    question: "I’m in Grade 10. Is CVP Advance right for me?",
+    question: "I’m in Grade 10. Is CVP Advance™ right for me?",
     answer:
       "Yes—especially if you want deeper clarity, long-term planning, and guidance that covers both Indian and global career opportunities.",
   },
   {
-    question: "How is CVP Advance different from basic career tests?",
+    question: "How is CVP Advance™ different from basic career tests?",
     answer:
-      "It goes far beyond aptitude scores. CVP Advance combines AI insights with human expert review, skill gap mapping, industry role validation, and a multi-year personalised roadmap.",
+      "It goes far beyond aptitude scores. CVP Advance™ combines AI insights with human expert review, skill gap mapping, industry role validation, and a multi-year personalised roadmap.",
   },
   {
     question: "How much time does it take to finish?",
@@ -256,7 +256,7 @@ const cvpAdvanceFaqs = [
   {
     question: "Will I get a career report after the session?",
     answer:
-      "Yes—your CVP Advance report is highly detailed, with role matches, alternate pathways, bridge certifications, internships, and action milestones.",
+      "Yes—your CVP Advance™ report is highly detailed, with role matches, alternate pathways, bridge certifications, internships, and action milestones.",
   },
   {
     question: "Can parents view the report too?",
@@ -269,7 +269,7 @@ const cvpAdvanceFaqs = [
       "Yes—it uses validated psychometric frameworks, global employability standards, and real job market data updated regularly.",
   },
   {
-    question: "Is CVP Advance useful if I already have a career in mind?",
+    question: "Is CVP Advance™ useful if I already have a career in mind?",
     answer:
       "Yes—it validates your choice against your aptitude, emotional readiness, and market trends, while suggesting optimisations for success.",
   },
@@ -283,12 +283,12 @@ const page = () => {
   return (
     <>
       <CvpHero
-        title="CVP Advance Your Career. Your Clarity. In 7 Days."
+        title="CVP Advance™ Your Career. Your Clarity. In 7 Days."
         subtitle={
           <>
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                YPD’s CVP Advance
+                YPD’s CVP Advance™
               </span>
               <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
@@ -302,7 +302,7 @@ const page = () => {
             For students from{" "}
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                Class 9 to UG Final Year
+                Class 9 to UG
               </span>
               <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
             </span>{" "}
@@ -343,10 +343,10 @@ const page = () => {
         ctaNote="All without feeling like you’re just “taking another test.”"
       />
       <WhyCvpLite
-        heading="Why It Works (When Others Don’t)"
+        heading="Why It Works"
         subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
         avoidTitle="Others Offer"
-        experienceTitle="Others Offer CVP Advance Delivers"
+        experienceTitle="Others Offer CVP Advance™ Delivers"
         avoid={[
           "Long forms, generic advice",
           "Static career lists",
@@ -359,12 +359,12 @@ const page = () => {
           "VARK-driven learning style adaptation",
           "EQ, SQ, critical thinking, and mindset mapping",
         ]}
-        ctaText="Try the CVP Advance™"
+        ctaText="Try CVP Advance™"
         ctaLink="/#"
       />
       <CvpLiteSteps
         heading="How it Works"
-        subheading="The CVP Advance™ is an in-depth career visioning journey that layers advanced profiling, skill mapping, and global role-pathway insights. It transforms clarity into an actionable, future-proof career blueprint."
+        subheading="CVP Advance™ is an in-depth career visioning journey that layers advanced profiling, skill mapping, and global role-pathway insights. It transforms clarity into an actionable, future-proof career blueprint."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -388,16 +388,15 @@ const page = () => {
         ctaText="Start CVP Advance™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
       <CvpRealworld
         heading="Real World Use Cases"
-        subheading="Career clarity isn’t a guess—it’s a guided, data-backed journey with your future. CVP Advance turns that journey into a precise, adaptive plan."
+        subheading="Career clarity isn’t a guess—it’s a guided, data-backed journey with your future. CVP Advance™ turns that journey into a precise, adaptive plan."
         items={useCases}
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CVP Advance™ is a premium experience made affordable."
+        subheading="Innovation that feels premium, priced for you."
         plans={[
           {
             title: "Free Plan",
@@ -433,12 +432,12 @@ const page = () => {
       />
       <CvpImpact
         heading="Real Impact, Real Results"
-        description="Since its launch, Youth Pulse Digital™’s CVP Advance has empowered students across India to go beyond basic career clarity—crafting precise, multi-year career roadmaps backed by adaptive AI, real-world role mapping, and targeted skill gap analysis. It’s helped learners from Tier 1 to Tier 4 cities gain confidence, direction, and a future-proof action plan—without jargon, pressure, or bias."
+        description="Since its launch, Youth Pulse Digital™’s CVP Advance™ has empowered students across India to go beyond basic career clarity—crafting precise, multi-year career roadmaps backed by adaptive AI, real-world role mapping, and targeted skill gap analysis. It’s helped learners from Tier 1 to Tier 4 cities gain confidence, direction, and a future-proof action plan—without jargon, pressure, or bias."
         stats={[
           {
             value: "94%",
             description:
-              "of students said CVP Advance gave them a clearer, longer-term vision of their career path compared to any other guidance they had received.",
+              "of students said CVP Advance™ gave them a clearer, longer-term vision of their career path compared to any other guidance they had received.",
           },
           {
             value: "91%",
@@ -448,7 +447,7 @@ const page = () => {
           {
             value: "95%",
             description:
-              "of students said they would recommend CVP Advance to peers preparing for entrance exams, competitive careers, or those feeling uncertain about their next step.",
+              "of students said they would recommend CVP Advance™ to peers preparing for entrance exams, competitive careers, or those feeling uncertain about their next step.",
           },
         ]}
         image={{

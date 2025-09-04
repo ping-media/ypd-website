@@ -20,7 +20,7 @@ const Seperate2 = () => {
           </p>
 
           <Link
-            href="/#"
+            href="/counseling-guru"
             className="btn-size mt-4 w-fit bg-white text-black hover:bg-white/90 sm:mt-6"
           >
             View More

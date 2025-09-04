@@ -17,45 +17,48 @@ const Links = [
   { name: "About", href: "/about" },
   { name: "Pricing", href: "/pricing" },
   {
-    name: "Career Vision",
+    name: "Students",
     dropdown: [
+      { name: "Career Vision Program™", href: "/career-vision" },
       {
         name: "Career Clarity",
         subDropdown: [
-          { name: "Cvp Lite™", href: "/cvp-lite" },
-          { name: "Cvp Advance™", href: "/cvp-advance" },
+          { name: "CVP Lite™", href: "/cvp-lite" },
+          { name: "CVP Advance™", href: "/cvp-advance" },
           { name: "CareerVerse™", href: "/careerverse" },
         ],
       },
+      // hidden for now
+      // {
+      //   name: "Exam Mentors",
+      //   subDropdown: [
+      //     { name: "CBSE 10th Mentor™", href: "/10-cbse" },
+      //     { name: "CBSE 12th Mentor™", href: "/12-cbse" },
+      //   ],
+      // },
+      // {
+      //   name: "Entrance Mentors",
+      //   subDropdown: [
+      //     { name: "Mission NDA™", href: "/mission-nda" },
+      //     { name: "UPSC Mentor™", href: "/upsc-mentor" },
+      //   ],
+      // },
       {
-        name: "Exam Mentors",
+        name: "Counseling Mentors",
         subDropdown: [
-          { name: "10th CBSE Mentor™", href: "/10-cbse" },
-          { name: "12th CBSE Mentor™", href: "/12-cbse" },
-        ],
-      },
-      {
-        name: "Entrance Mentors",
-        subDropdown: [
-          { name: "Mission NDA™", href: "/mission-nda" },
-          { name: "UPSC Mentor™", href: "/upsc-mentor" },
-        ],
-      },
-      {
-        name: "Counselling Mentors",
-        subDropdown: [
-          { name: "Counselling Guru™", href: "/counselling-guru" },
+          { name: "Counseling Guru™", href: "/counseling-guru" },
           { name: "Global Navigator™", href: "/global-navigator" },
-          { name: "Spark Path", href: "/#" },
-          { name: "Special Stars", href: "/#" },
+          { name: "SparkPath™", href: "/#" },
+          { name: "SpecialStars™", href: "/#" },
         ],
       },
       { name: "Mentor Connect", href: "/mentor-connect" },
     ],
   },
   {
-    name: "Career Reinvention",
+    name: "Professionals",
     dropdown: [
+      { name: "Career Reinvention Program™", href: "/career-reinvention" },
       {
         name: "Professional Clarity",
         subDropdown: [{ name: "Reboot Navigator™", href: "/career-reboot" }],
@@ -70,10 +73,15 @@ const Links = [
     ],
   },
   {
-    name: "Businesses",
+    name: "Corporate",
     dropdown: [
-      { name: "Professional Clarity™", href: "/professional-clarity" },
-      { name: "Skilling Mentors™", href: "/skilling-mentors" },
+      { name: "Admission Test", href: "/#" },
+      { name: "Hiring & Onboarding", href: "/#" },
+      { name: "School / Institute OS", href: "/#" },
+      { name: "Institute Connect", href: "/#" },
+      { name: "MSME Connect", href: "/#" },
+      { name: "Corporate Connect", href: "/#" },
+      { name: "Govt Connect", href: "/#" },
     ],
   },
 ];
@@ -147,7 +155,7 @@ const Navbar = () => {
               className="btn-primary btn-size space-x-0.5 capitalize"
             >
               <span>
-                Register
+                Create Account
                 {/* Sign up{" "}
                 <span className="hidden max-lg:inline-block xl:inline-block">
                   for free{" "}
@@ -272,7 +280,7 @@ const Navbar = () => {
               className="btn-primary btn-size block w-full text-center uppercase"
               onClick={() => setMobileOpen(false)}
             >
-              Sign up for free
+              Create Account
             </Link>
           </div>
         </div>

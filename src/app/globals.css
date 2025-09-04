@@ -177,6 +177,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* scrollbar */
 @keyframes scroll {
   0% {

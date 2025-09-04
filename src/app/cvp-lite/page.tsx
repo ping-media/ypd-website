@@ -37,13 +37,13 @@ const featuresData = [
     icon: Layers,
     title: "Adaptive Journey",
     description:
-      "Every student is different so is their path.CVP Lite adjusts to your learning style, pace, and academic stage without forcing a fixed template.",
+      "Every student is different so is their path.CVP Lite™ adjusts to your learning style, pace, and academic stage without forcing a fixed template.",
   },
   {
     icon: BarChart3,
     title: "Instant Insights",
     description:
-      "No waiting, no confusion.Get your personalized CVP Lite Report the moment you finish clear, action-ready, and parent-friendly.",
+      "No waiting, no confusion.Get your personalized CVP Lite™ Report the moment you finish clear, action-ready, and parent-friendly.",
   },
   {
     icon: Brain,
@@ -101,9 +101,9 @@ const steps = [
 const audience = [
   {
     id: 1,
-    title: "Students in Class 8–12 thinking about stream/college fit",
+    title: "Students in Class 7–12 thinking about stream/college fit",
     description:
-      "CVP Lite helps match your strengths, interests, and learning style to the right stream and future study options—without peer or family pressure.",
+      "CVP Lite™ helps match your strengths, interests, and learning style to the right stream and future study options—without peer or family pressure.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -111,7 +111,7 @@ const audience = [
     id: 2,
     title: "Parents who want to guide their children confidently",
     description:
-      "CVP Lite provides a clear, parent-friendly report so you can support choices with facts, not guesswork.",
+      "CVP Lite™ provides a clear, parent-friendly report so you can support choices with facts, not guesswork.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/uses.png",
   },
@@ -119,7 +119,7 @@ const audience = [
     id: 3,
     title: "Schools looking for a structured but flexible clarity tool",
     description:
-      "CVP Lite is easy to run in batches, offering guided sessions and reports that fit into school schedules.",
+      "CVP Lite™ is easy to run in batches, offering guided sessions and reports that fit into school schedules.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -127,7 +127,7 @@ const audience = [
     id: 4,
     title: "Any student unsure about “what comes next”",
     description:
-      "CVP Lite narrows options to 2–3 career paths that align with who you are and what excites you.",
+      "CVP Lite™ narrows options to 2–3 career paths that align with who you are and what excites you.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/uses.png",
   },
@@ -135,7 +135,7 @@ const audience = [
 const journeySteps = [
   {
     id: "01",
-    text: "The CVP Lite™ doesn’t throw options at you. It walks with you, helping you unlock who you are, how you think, how you dream, and where your natural strengths want to grow.",
+    text: "CVP Lite™ doesn’t throw options at you. It walks with you, helping you unlock who you are, how you think, how you dream, and where your natural strengths want to grow.",
   },
   {
     id: "02",
@@ -152,7 +152,7 @@ const useCases = [
     title: "Stream Confusion",
     quote: `"I don’t know if I should take Science, Commerce, or Arts."`,
     description:
-      "CVP Lite helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
+      "CVP Lite™ helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
@@ -161,7 +161,7 @@ const useCases = [
     title: "Too Many Options",
     quote: `"There are too many career paths I’m lost."`,
     description:
-      "CVP Lite narrows it down to 2–3 career matches that actually align with the student’s profile and mindset.",
+      "CVP Lite™ narrows it down to 2–3 career matches that actually align with the student’s profile and mindset.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -170,7 +170,7 @@ const useCases = [
     title: "Parent Support Needed",
     quote: `"I’m the first in my family aiming for higher studies."`,
     description:
-      "CVP Lite builds a parent-ready report that explains student choices clearly, making the family part of the decision.",
+      "CVP Lite™ builds a parent-ready report that explains student choices clearly, making the family part of the decision.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/uses.png",
   },
@@ -179,7 +179,7 @@ const useCases = [
     title: "Marks ≠ Clarity",
     quote: `"I score well but still don’t know what fits me."`,
     description:
-      "CVP Lite helps high performers discover what excites them not just what they’re good at.",
+      "CVP Lite™ helps high performers discover what excites them not just what they’re good at.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -210,7 +210,7 @@ const ReviewsData = [
     text: (
       <>
         {highlight("We Were Overwhelmed With Career Choices For Our Daughter")}.
-        CVP Lite Helped Us Match Her Creative Side With Real Job Paths.
+        CVP Lite™ Helped Us Match Her Creative Side With Real Job Paths.
       </>
     ),
     image: "/cvplite/feedback1.png",
@@ -315,7 +315,7 @@ const page = () => {
         imageAlt="Student learning"
       />
       <CvpVideo
-        heading="Step Inside the Experience of CVP Lite™"
+        heading="Step Inside the Experience of CVP Lite"
         subheading="Take a quick look at how our AI-driven journey helps you discover your interests, passions, your choices and maps it with potential career pathways, not static, not generic — all personalized & adaptive"
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
@@ -335,7 +335,7 @@ const page = () => {
         ctaNote="Each capsule is short, engaging, and designed to unlock insights no more than 15–20 minutes each."
       />
       <WhyCvpLite
-        heading="Why CVP Lite Works"
+        heading="Why CVP Lite™ Works"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         avoidTitle="You’ll Avoid..."
         experienceTitle="You’ll Experience..."
@@ -351,12 +351,12 @@ const page = () => {
           "An engaging capsule-based interface",
           "Personalized AI-driven feedback",
         ]}
-        ctaText="Try the CVP Lite™"
+        ctaText="Try CVP Lite™"
         ctaLink="/#"
       />
       <CvpLiteSteps
         heading="How it Works"
-        subheading="The CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
+        subheading="CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -380,7 +380,6 @@ const page = () => {
         ctaText="Start CVP Lite™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our CVP Advance™ a 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
       <CvpRealworld
         heading="Real World Use Cases"
@@ -433,7 +432,7 @@ const page = () => {
           {
             value: "93%",
             description:
-              "of students said CVP Lite helped them understand their own interests better than any school-level career lecture or test.",
+              "of students said CVP Lite™ helped them understand their own interests better than any school-level career lecture or test.",
           },
           {
             value: "89%",
@@ -443,7 +442,7 @@ const page = () => {
           {
             value: "92%",
             description:
-              "of students said they would recommend CVP Lite to their juniors, cousins, or friends especially those who feel lost or under pressure.",
+              "of students said they would recommend CVP Lite™ to their juniors, cousins, or friends especially those who feel lost or under pressure.",
           },
         ]}
         image={{

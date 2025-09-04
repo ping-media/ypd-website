@@ -41,7 +41,7 @@ const items: SecurityItem[] = [
   },
   {
     icon: <BrainCircuit className="text-brand-primary h-10 w-10" />,
-    title: "AI models we use",
+    title: "Proprietary AI",
     desc: "Complete protection for healthcare organizations",
   },
   {

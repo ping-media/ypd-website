@@ -58,7 +58,7 @@ export default function Footer() {
             Astra Tower, ASO-501, Action Area-IIC, <br />
             New Town, Kolkata-700161, West Bengal <br />
             CIN: U62010WB2025PTC281468 <br />
-            PAN: AACCY0548C
+            GST: 19AACCY0548C1ZG
           </p>
 
           <div className="space-y-5 text-white">
@@ -118,7 +118,7 @@ export default function Footer() {
               Astra Tower, ASO-501, Action Area-IIC, <br />
               New Town, Kolkata-700161, West Bengal <br />
               CIN: U62010WB2025PTC281468 <br />
-              PAN: AACCY0548C
+              GST: 19AACCY0548C1ZG
             </p>
 
             <div className="space-y-5 text-white">
@@ -167,7 +167,7 @@ export default function Footer() {
               { label: "Home", href: "/" },
               { label: "About", href: "/about" },
               { label: "Pricing", href: "/pricing" },
-              { label: "Career", href: "/career" },
+              { label: "Careers", href: "/careers" },
               { label: "Contact Us", href: "/contact" },
               { label: "Mentor Connect", href: "/mentor-connect" },
               { label: "Privacy Policy", href: "/privacy-policy" },
@@ -178,43 +178,45 @@ export default function Footer() {
           <FooterSectionAccordion
             title="Students"
             links={[
-              { label: "CVP Vision Program", href: "/cvp-vision" },
+              { label: "Career Vision Program™", href: "/career-vision" },
               { label: "CVP lite", href: "/cvp-lite" },
               { label: "CVP Advance", href: "/cvp-advance" },
-              { label: "CareerVerse", href: "/careerverse" },
-              { label: "Exam Mentors", href: "/exam-mentors" },
-              { label: "Entrance Mentors", href: "/entrance-mentors" },
-              { label: "Counselling Mentors", href: "/counselling-mentors" },
-              { label: "Creativity Lab", href: "/counselling-mentors" },
-              { label: "Blogs", href: "/counselling-mentors" },
+              { label: "CareerVerse™", href: "/careerverse" },
+              { label: "Counseling Guru™", href: "/counseling-guru" },
+              { label: "Global Navigator™", href: "/global-navigator" },
+              // { label: "Exam Mentors", href: "/exam-mentors" },
+              // { label: "Entrance Mentors", href: "/entrance-mentors" },
+              { label: "Counseling Mentors", href: "/counseling-guru" },
+              // { label: "Creativity Lab", href: "/#" },
+              { label: "Blogs", href: "/#" },
             ]}
           />
           <FooterSectionAccordion
             title="Professionals"
             links={[
               {
-                label: "Career Reinvention Program",
+                label: "Career Reinvention Program™",
                 href: "/career-reinvention",
               },
-              { label: "Aptitude Trainer", href: "/aptitude-trainer" },
-              { label: "Reboot Navigator", href: "/reboot-navigator" },
-              { label: "Reinvention Guru", href: "/reinvention-guru" },
-              { label: "Innovartion Hub", href: "/innovation-hub" },
-              { label: "Pulse Nexus", href: "/pulse-nexus" },
-              { label: "Industry Expert Connect", href: "/industry-expert" },
-              { label: "Book A Demo", href: "/book-demo" },
+              { label: "Aptitude Trainer", href: "/crp-aptitude" },
+              { label: "Reboot Navigator", href: "/career-reboot" },
+              // { label: "Reinvention Guru", href: "/reinvention-guru" },
+              // { label: "Innovation Hub", href: "/innovation-hub" },
+              // { label: "Pulse Nexus", href: "/pulse-nexus" },
+              { label: "Industry Expert Connect", href: "/#" },
+              { label: "Book A Demo", href: "/#" },
             ]}
           />
           <FooterSectionAccordion
             title="Businesses"
             links={[
-              { label: "Admission Test", href: "/admission-test" },
-              { label: "Hiring & Onboarding", href: "/hiring-onboarding" },
-              { label: "School / Institute OS", href: "/school-institute" },
-              { label: "Institute Connect", href: "/institute-connect" },
-              { label: "MSME Connect", href: "/msme-connect" },
-              { label: "Corporate Connect", href: "/corporate-connect" },
-              { label: "Govt Connect", href: "/govt-connect" },
+              { label: "Admission Test", href: "/#" },
+              { label: "Hiring & Onboarding", href: "/#" },
+              // { label: "School / Institute OS", href: "/school-institute" },
+              { label: "Institute Connect", href: "/#" },
+              { label: "MSME Connect", href: "/#" },
+              { label: "Corporate Connect", href: "/#" },
+              { label: "Govt Connect", href: "/#" },
               { label: "Refund Policy", href: "/cancellation-refund" },
             ]}
           />

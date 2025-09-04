@@ -479,7 +479,7 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="Mission NDA™ is a premium experience made affordable."
+        subheading="Innovation that feels premium, priced for you."
         plans={[
           {
             title: "Basic",

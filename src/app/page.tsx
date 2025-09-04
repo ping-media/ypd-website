@@ -17,9 +17,9 @@ import Personalise from "@/components/other/personalise/Personalise";
 import Seperate from "@/components/other/Seperate";
 // import News from "@/components/other/news/News";
 import RelatedBlogs from "@/components/other/blogs/RelatedBlogs";
-import Testimonials from "@/components/other/testimonials/Testimonials";
+// import Testimonials from "@/components/other/testimonials/Testimonials";
 import Seperate2 from "@/components/other/Seperate2";
-import Brands from "@/components/other/Brands";
+// import Brands from "@/components/other/Brands";
 import VideoPreview from "@/components/other/VideoPreview";
 import Faq from "@/components/other/Faq";
 
@@ -46,9 +46,9 @@ export default function Home() {
       <Seperate />
       {/* <News /> */}
       <RelatedBlogs />
-      <Testimonials />
+      {/* <Testimonials /> Removed */}
       <Seperate2 />
-      <Brands />
+      {/* <Brands /> Hidden for now */}
       <Faq />
     </>
   );

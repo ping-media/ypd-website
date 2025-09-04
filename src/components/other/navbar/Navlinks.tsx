@@ -45,6 +45,7 @@ const NavLinks = ({ links }: NavLinksProps) => {
                       {item.subDropdown ? (
                         <div
                           onMouseEnter={() => setOpenSubDropdown(item.name)}
+                          onMouseLeave={() => setOpenSubDropdown(null)}
                           className="relative cursor-pointer"
                         >
                           {/* Parent Item */}

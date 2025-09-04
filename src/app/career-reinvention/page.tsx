@@ -192,7 +192,7 @@ const page = () => {
         title="WHAT USERS ACROSS INDIA SAY ABOUT YPD"
         reviews={reviews}
       />
-      <Faq faqs={crpFaqs} />
+      <Faq faqs={crpFaqs} imglink="/faq1.png" />
     </>
   );
 };

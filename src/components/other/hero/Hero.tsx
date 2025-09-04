@@ -34,7 +34,7 @@ const Hero = () => {
         style={{ top: "60%", left: "83%" }}
       />
       {/* Main Content */}
-      <div className="font-lato relative z-10 container mx-auto flex min-h-[57vh] max-w-4xl flex-col items-center justify-center gap-4 px-4 pt-4 sm:min-h-0 sm:gap-5 sm:px-6">
+      <div className="font-lato relative z-10 container mx-auto flex min-h-[48vh] max-w-4xl flex-col items-center justify-center gap-4 px-4 pt-4 sm:min-h-0 sm:gap-5 sm:px-6">
         {/* Tagline */}
         <div className="w-fit rounded-sm border border-[#E1E4EB] bg-[#F6F7F9] px-2 py-1 text-center text-xs sm:text-sm">
           ✨ Backed by AI. Guided by Mentors. Built for Bharat.

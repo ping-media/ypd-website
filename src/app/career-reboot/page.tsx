@@ -512,7 +512,7 @@ const page = () => {
       <NumberCards
         steps={numbersteps}
         heading="How to Start"
-        subheading="CVP Advance™ is a premium experience made affordable."
+        subheading="Innovation that feels premium, priced for you."
         bgClassName="bg-gray-50"
       />
       <CvpCta
@@ -549,7 +549,6 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <Faq faqs={crFaqs} />
       <CvpJourney
         heading="Built by Career Strategists, Industry Experts, and AI Specialists"
         description="Youth Pulse Digital™ believes that career clarity is not just a goal — it’s a guided evolution."
@@ -663,6 +662,7 @@ const page = () => {
         }}
       />
       <CvpSecurity />
+      <Faq faqs={crFaqs} imglink="/faq1.png" />
     </>
   );
 };

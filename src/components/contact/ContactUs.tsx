@@ -37,7 +37,7 @@ const ContactUs = () => {
                 Astra Tower, ASO-501, Action Area-IIC, <br />
                 New Town, Kolkata-700161, West Bengal <br />
                 CIN: U62010WB2025PTC281468 <br />
-                PAN: AACCY0548C
+                GST: 19AACCY0548C1ZG
               </p>
             </div>
 
