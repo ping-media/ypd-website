@@ -101,11 +101,8 @@ const steps = [
   },
   {
     id: 6,
-    title: "Transcript & Revisit Access",
-    description: [
-      "Full session transcript & PDF reports ,Parent summary (optional)",
-      "Re-access product page anytime via your account",
-    ],
+    title: "Summary & Revisit Access",
+    description: ["Full session summary PDF", "Access your account anytime"],
     icon: "/careerverse/s3.svg",
   },
 ];
@@ -129,7 +126,7 @@ const audience = [
   },
   {
     id: 3,
-    title: "Professionals needing career reinvention",
+    title: "Professionals needing support for upskilling pathway.",
     description:
       "Navigate job shifts, upskilling, or complete career changes with a roadmap built for the Indian market realities.",
     icon: "/cvplite/r3.svg",
@@ -147,7 +144,7 @@ const audience = [
 const journeySteps = [
   {
     id: "01",
-    text: "20+ years of combined counselling experience across school, college, and professional levels.",
+    text: "20+ years of combined counseling experience across school, college, and professional levels.",
   },
   {
     id: "02",
@@ -241,7 +238,7 @@ const ReviewsData = [
 ];
 const cgFaqs = [
   {
-    question: "Is this better than generic counselling?",
+    question: "Is this better than generic counseling?",
     answer:
       "Yes. If you want personalised, AI-guided, and India-specific career advice, it’s unmatched.",
   },
@@ -314,10 +311,10 @@ const page = () => {
         featuresTwoCols
         buttonText="Book Your Slot Now"
         buttonLink="/program"
-        secondaryButtonText="View Sample Report"
-        secondaryButtonLink="/report"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/counseling-guru/#video"
         image="/career-reboot/hero.png"
-        imageAlt="counselling guru"
+        imageAlt="counseling guru"
       />
       <CvpVideo
         heading="Step Inside the Experience of Counseling Guru™"
@@ -344,7 +341,7 @@ const page = () => {
           "AI + Human Synergy for unmatched accuracy",
           "Multi-stream pathways + ROI-driven decision logic",
         ]}
-        ctaText="Try the Counselling Guru™"
+        ctaText="Try Counseling Guru™"
         ctaLink="/#"
       />
       <CvpFeature
@@ -391,9 +388,11 @@ const page = () => {
             price: "₹1499-3499",
             priceText: "Book My Session Now",
             features: [
-              "Book Your Slot all sessions are mentor-assigned",
-              "Decision-Making or Casual Mode available at checkout",
-              "Includes all final reports, resume access, and re-login feature",
+              "Account Creation",
+              "Session Booking",
+              "Dashboard View",
+              "Decision-Making Journey",
+              "Final Summary",
               "30-60 min guided session",
             ],
             highlight: true,
@@ -444,7 +443,7 @@ const page = () => {
           "Optional",
           "+ Product Reaccess",
         ]}
-        ctaText="Try the Counseling Guru™"
+        ctaText="Try Counseling Guru™"
         ctaLink="/get-started"
       />
       <CvpImpact
@@ -480,20 +479,19 @@ const page = () => {
           </>
         }
         subtext="Start Light, Upgrade Anytime"
-        subheading="Choose Casual Mode at checkout to explore a preview journey. Get basic stream guidance, sample role mapping, and budget insights.Then upgrade to unlock full report, college list, and personal mentorship."
+        subheading="Choose Casual Mode at checkout to. explore a preview journey. Get basic stream guidance, sample role mapping, and budget insights.Then upgrade to unlock full report, college list, and personal mentorship."
         ctaText="SneakPeak View"
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpFeedback reviews={ReviewsData} />
-      <Faq faqs={cgFaqs} />
       <CvpJourney
         heading="Built by Career Mentors, Psychologists, and Industry Experts"
         description="Youth Pulse Digital™ believes career clarity is not just advice — it’s a guided, practical journey."
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start Global Navigator™"
+        ctaText="Start Counseling Guru™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
         footerText="Try our 7-day exploration into Career Pathway for deeper insights into Career Pathways."
@@ -521,6 +519,7 @@ const page = () => {
         ]}
       />
       <CvpSecurity />
+      <Faq faqs={cgFaqs} />
     </>
   );
 };
