@@ -384,7 +384,7 @@ const page = () => {
           },
           {
             title: "Premium",
-            description: "One-Time Session Price",
+            description: "One-Time Session",
             price: "₹1499-3499",
             priceText: "Book My Session Now",
             features: [

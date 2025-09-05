@@ -26,7 +26,7 @@ export default function CvpLiteWorks({
   heading = "Why CVP Lite Works",
   subheading = "Because you shouldn’t choose your career based on guesswork or generic quizzes.",
   audience,
-  ctaText = "Start Your Journey Today",
+  ctaText,
   ctaLink = "/start",
   ctaSubtext,
 }: CvpLiteWorksProps) {

@@ -38,7 +38,7 @@ const features = [
     icon: Layers,
     title: "Adaptive Pathway Guidance",
     description:
-      "Every professional’s path is unique. The CRP Aptitude Trainer adjusts to your career stage, role interests, and learning style without forcing a standard template.",
+      "Every professional’s path is unique. The CRP Aptitude Trainer™ adjusts to your career stage, role interests, and learning style without forcing a standard template.",
   },
   {
     icon: BarChart3,
@@ -169,7 +169,7 @@ const audience = [
     id: 5,
     title: " Anyone seeking role clarity and growth",
     description:
-      "Use Aptitude Trainer to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
+      "Use Aptitude Trainer™ to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/uses.png",
   },
@@ -193,7 +193,7 @@ const useCases = [
     id: 1,
     title: "Real-world practice, not theory",
     description:
-      "Aptitude Trainer gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
+      "Aptitude Trainer™ gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
@@ -263,7 +263,7 @@ const ReviewsData = [
     education: "Parent, Nashik",
     text: (
       <>
-        &quot;Aptitude Trainer showed my daughter exactly where she needed to
+        &quot;Aptitude Trainer™ showed my daughter exactly where she needed to
         improve.
         {highlight(" Her confidence in interviews has grown in just a month.")}
         &quot;
@@ -322,7 +322,7 @@ const crpaptitudefaqs = [
   {
     question: "Is this just another aptitude test?",
     answer:
-      "No. Aptitude Trainer is not a one-time test. It’s a guided practice system with real-world scenarios, reflection, and retry options.",
+      "No. Aptitude Trainer™ is not a one-time test. It’s a guided practice system with real-world scenarios, reflection, and retry options.",
   },
   {
     question: "Will I get a personalized report?",
@@ -357,7 +357,7 @@ const crpaptitudefaqs = [
   {
     question: "What if I want deeper career direction after this?",
     answer:
-      "Aptitude Trainer connects smoothly to other YPD programs like Reboot Navigator, Reinvention Guru, or Real Mentors & Industry Experts.",
+      "Aptitude Trainer™ connects smoothly to other YPD programs like Reboot Navigator, Reinvention Guru, or Real Mentors & Industry Experts.",
   },
 ];
 
@@ -419,7 +419,7 @@ const page = () => {
       {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How It Works"
-        subheading="Aptitude Trainer guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
+        subheading="Aptitude Trainer™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -489,7 +489,7 @@ const page = () => {
         ctaIcon={<Zap size={18} />}
       />
       <Vs
-        heading="Aptitude Trainer Outperforms Generic Aptitude Tests"
+        heading="Aptitude Trainer™ Outperforms Generic Aptitude Tests"
         subheading="Because you shouldn’t train for skills using random questions or one-size-fits-all methods"
         leftTitle="Feature"
         midLeftTitle="Generic Test"
@@ -522,7 +522,7 @@ const page = () => {
       />
       <CvpRealworld
         heading="Why It’s Different"
-        subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer makes every step count."
+        subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer™ makes every step count."
         items={useCases}
       />
       <CvpPricing

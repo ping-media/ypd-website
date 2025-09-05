@@ -473,6 +473,7 @@ const page = () => {
       <CvpCta
         heading="What You’ll Receive"
         subheading=" Built by experts. Powered by AI. Grounded in empathy."
+        expandableFeatures={true}
         features={[
           "Verified Admission Eligibility Check",
           "Scholarship Matching & Cost Planning",

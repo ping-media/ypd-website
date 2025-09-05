@@ -392,8 +392,13 @@ const page = () => {
         title="Real Skills. Real Scenarios. Real Change."
         subtitle={
           <>
-            Reboot Navigator™ A job-readiness mentor for India’s next-gen
-            workforce
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                Reboot Navigator™
+              </span>
+              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
+            </span>{" "}
+            A job-readiness mentor for India’s next-gen workforce
           </>
         }
         features={[
@@ -407,7 +412,7 @@ const page = () => {
         imageAlt="mission nda"
       />
       <CvpVideo
-        heading="What is Career Reboot Navigator?"
+        heading="What is Reboot Navigator?"
         subheading="See how this AI mentor prepares you for real-world work challenges."
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
@@ -558,21 +563,21 @@ const page = () => {
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start Career Reboot Navigator™"
+        ctaText="Start Reboot Navigator™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our Career Reboot Navigator™ a 7-day intensive to design your next career chapter with clarity and confidence."
+        footerText="Try our Reboot Navigator™ a 7-day intensive to design your next career chapter with clarity and confidence."
       />
       <CvpRealworld
         heading="Real World Use Cases"
-        subheading="Career reinvention isn’t guesswork — it’s structured discovery. Career Reboot Navigator identifies your barriers, maps your transferable skills, and guides you into roles where you can thrive."
+        subheading="Career reinvention isn’t guesswork — it’s structured discovery. Reboot Navigator identifies your barriers, maps your transferable skills, and guides you into roles where you can thrive."
         items={useCases}
       />
       <WhyCvpLite
         heading="Structured Journey. One Dashboard. Full Career Comeback."
         subheading="Revive your career with clarity — not guesswork. Reboot Navigator maps skills, aligns roles, and delivers industry-specific capsules in one dashboard. Track progress, unlock adaptive learning, and re-enter with confidence"
         avoidTitle="Feature"
-        experienceTitle="What Career Reboot Navigator Offers"
+        experienceTitle="What Reboot Navigator Offers"
         avoid={[
           "Structured Career Reset",
           "One Unified Dashboard",
@@ -598,7 +603,7 @@ const page = () => {
         leftTitle="Feature"
         midLeftTitle="Career Coaches"
         midRightTitle="Online Platforms"
-        rightTitle="Career Reboot Navigator™"
+        rightTitle="Reboot Navigator™"
         leftItems={[
           "Human Mentor + AI Integration",
           "Role & Skill Gap Mapping",
@@ -641,12 +646,12 @@ const page = () => {
 
       <CvpImpact
         heading="Real Impact, Real Results"
-        description="Since its launch, Career Reboot Navigator™ has guided mid-career professionals, returning workforce members, and career shifters across industries to successfully reset their career paths with clarity, confidence, and market-aligned skills—without generic advice, guesswork, or overwhelming jargon."
+        description="Since its launch, Reboot Navigator™ has guided mid-career professionals, returning workforce members, and career shifters across industries to successfully reset their career paths with clarity, confidence, and market-aligned skills—without generic advice, guesswork, or overwhelming jargon."
         stats={[
           {
             value: "91%",
             description:
-              "of users said Career Reboot Navigator™ helped them identify realistic, high-potential career paths aligned to their skills, industry trends, and personal aspirations.",
+              "of users said Reboot Navigator™ helped them identify realistic, high-potential career paths aligned to their skills, industry trends, and personal aspirations.",
           },
           {
             value: "87%",
@@ -656,7 +661,7 @@ const page = () => {
           {
             value: "89%",
             description:
-              "said they would recommend Career Reboot Navigator™ to peers facing career stagnation, redundancy, or uncertainty about industry shifts.",
+              "said they would recommend Reboot Navigator™ to peers facing career stagnation, redundancy, or uncertainty about industry shifts.",
           },
         ]}
         image={{
