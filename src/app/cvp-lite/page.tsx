@@ -388,7 +388,7 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CVP Lite™ is a premium experience made affordable"
+        subheading="Innovation that feels premium, priced for you."
         plans={[
           {
             title: "Free Plan",

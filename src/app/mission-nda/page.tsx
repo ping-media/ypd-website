@@ -519,7 +519,7 @@ const page = () => {
       <NumberCards
         steps={numbersteps}
         heading="Your Mission, Broken Down"
-        subheading="Misson NDA™ is a premium experience made affordable."
+        subheading="Innovation that feels premium, priced for you."
       />
       <CvpPricing
         heading="Pricing & Access"
