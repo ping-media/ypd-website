@@ -40,9 +40,12 @@ export default function Hero() {
         </p>
 
         {/* CTA Button */}
-        <Link href={"/#"} className="btn-primary btn-size max-sm:w-full">
+        <Link
+          href={"/cvp-advance"}
+          className="btn-primary btn-size max-sm:w-full"
+        >
           <Zap className="h-5 w-5 sm:h-6 sm:w-6" />
-          Try the CVP Advance
+          Explore CVP
         </Link>
       </div>
     </section>

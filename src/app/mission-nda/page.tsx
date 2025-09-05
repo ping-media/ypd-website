@@ -111,9 +111,9 @@ const steps = [
 const audience = [
   {
     id: 1,
-    title: "Aspirants from Class 11-UG  preparing for NDA",
+    title: "Aspirants from Class 11-UG, Professionals preparing for SSB",
     description:
-      "Aspirant and Professionals preparing for NDA & SSB in their first attempt with structured, mentor-led guidance.",
+      "Aspirants aiming to clear NDA written & SSB in their first attempt with structured, mentor-led guidance.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -248,40 +248,84 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: "Neha Arora",
-    education: "Parent, Jaipur",
+    name: "Aditya Singh",
+    education: "Class 12 Student, Lucknow",
     text: (
       <>
-        &quot;I never thought career guidance could feel so personal. The
-        {highlight(
-          "AI mentor actually made me think deeper like a real teacher who knows me. I finally figured out",
-        )}{" "}
-        why I enjoy solving logic puzzles I’m now exploring Data
-        Analytics!&quot;
+        &quot;Mission NDA gave me a clear, step-by-step plan for both NDA
+        syllabus and SSB prep.
+        {highlight(" No confusion anymore.")}&quot;
       </>
     ),
     image: "/cvplite/user1.png",
   },
   {
     id: 2,
-    name: "Rajat Verma",
-    education: "BBA 3rd Year, Ahmedabad",
+    name: "Rohit Sharma",
+    education: "NDA Aspirant, Patna",
     text: (
       <>
-        {highlight("“I’ve used expensive coaching before but nothing matches")}.
-        this level of feedback. It’s like having an SSB officer with me 24/7.”
+        &quot;The OLQ capsules were eye-opening.
+        {highlight(
+          " I finally understood how leadership and teamwork are tested in SSB.",
+        )}
+        &quot;
       </>
     ),
     image: "/cvplite/user2.png",
   },
   {
     id: 3,
-    name: "Tanvi Kulkarni",
-    education: "Class 11, Na",
+    name: "Priyanka Joshi",
+    education: "Parent, Nashik",
     text: (
       <>
-        “Mission NDA helped my son in a small town gain officer-
-        {highlight("like clarity and confidence.”")}
+        &quot;As a parent, I saw my son transform.
+        {highlight(
+          " Mission NDA built his discipline, confidence, and clarity.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user3.png",
+  },
+  {
+    id: 4,
+    name: "Vikas Menon",
+    education: "Class 11 Student, Kochi",
+    text: (
+      <>
+        &quot;I had joined coaching earlier but felt lost. Mission NDA’s
+        adaptive AI
+        {highlight(" made me practice with focus and purpose.")}&quot;
+      </>
+    ),
+    image: "/cvplite/user1.png",
+  },
+  {
+    id: 5,
+    name: "Karan Thakur",
+    education: "Repeater Candidate, Chandigarh",
+    text: (
+      <>
+        &quot;The SSB simulations felt so real.
+        {highlight(
+          " Handling challenges here gave me confidence to face the actual board.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user2.png",
+  },
+  {
+    id: 6,
+    name: "Ritu Yadav",
+    education: "Class 12 Student, Gwalior",
+    text: (
+      <>
+        &quot;I live in a Tier-3 town, but Mission NDA gave me access to
+        structured prep
+        {highlight(" just like top academies.")}&quot;
       </>
     ),
     image: "/cvplite/user3.png",
@@ -373,7 +417,7 @@ const page = () => {
       />
       <CvpVideo
         heading="Step Inside the Mission NDA™ Experience"
-        subheading="Take a quick look at how our AI-powered NDA journey prepares you for the Services Selection Board (SSB) with precision and discipline — from written exams to OLQ-based officer readiness. No generic tips, no outdated coaching — fully personalized, adaptive, and rooted in real SSB protocols."
+        subheading="Take a quick look at how our AI-powered NDA journey prepares you for the Services Selection Board (SSB) with precision and discipline — from written exams to OLQ-based officer readiness. No generic tips, no outdated coaching — fully personalized, adaptive, and rooted in real SSB protocols"
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
@@ -400,7 +444,7 @@ const page = () => {
           "Real-time reflections, simulations, feedback",
           "Mock interviews, GD prep, real response tracking",
         ]}
-        ctaText="Try the Mission NDA™"
+        ctaText="Try Mission NDA™"
         ctaLink="/#"
       />
       <CvpInside
@@ -425,7 +469,7 @@ const page = () => {
         audience={audience}
         ctaText="Start Your Journey Today"
         ctaLink="/#"
-        ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
+        ctaSubtext="Perfect Step for serious Aspirants who wants clarity over confusion"
       />
       <Tables
         heading="Structured Journey One Dashboard. Three Tracks."
@@ -454,7 +498,7 @@ const page = () => {
           "Pinpoints knowledge + personality gaps ",
           "Full simulation with voice & judgment paths",
         ]}
-        ctaText="Try the Mission NDA™"
+        ctaText="Try Mission NDA™"
         ctaLink="/#"
       />
       <CvpJourney

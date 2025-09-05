@@ -178,7 +178,7 @@ const useCases = [
     title: " Career Direction Unclear",
     quote: `“I’m not sure where my current skills fit in today’s market.”`,
     description:
-      "Career Reboot Navigator runs a skill-to-role scan to identify industries and functions where your experience translates directly — cutting through uncertainty with data-backed matches.",
+      "Reboot Navigator gives a skill-to-role cluster specific skills in your identified industries and guides you through real scenario based learning.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
@@ -187,7 +187,7 @@ const useCases = [
     title: "Skill Gaps Blocking Progress",
     quote: `“I keep getting interviews but never the offer.”`,
     description:
-      "The Navigator pinpoints missing competencies and delivers targeted capsules from industry tools to workplace communication ensuring you close the exact gaps holding you back.",
+      "The Career Navigator delivers targeted capsules — from industry tools to workplace communication — ensuring you close the exact gaps holding you back.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -196,7 +196,7 @@ const useCases = [
     title: "Industry in Decline",
     quote: `“My sector is shrinking, I need a future-proof path.”`,
     description:
-      "AI-powered market mapping highlights emerging sectors and growing niches, along with bridge skills to help you transition without starting over.",
+      "AI-powered market mapping, emerging sectors and growing niches, along with bridge skills to help you transition without starting over.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/uses.png",
   },
@@ -205,7 +205,7 @@ const useCases = [
     title: "Confidence Rebuild Needed",
     quote: `“After a break, I don’t know if I’m still competitive.”`,
     description:
-      "The Navigator pairs role simulations with mentor feedback to restore confidence and sharpen decision-making for high-stakes workplace scenarios.",
+      "The Career Navigator simulations with mentor feedback restores confidence and sharpen decision-making for high-stakes workplace scenarios.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/cvpworks.png",
   },
@@ -453,6 +453,7 @@ const page = () => {
             title: "Pro (Recommended)",
             description: "All Clusters, retry + reflection",
             price: "₹1,499",
+            period: "month",
             priceText: "Subscribe Now",
             features: [
               "Core Skills",
@@ -460,7 +461,6 @@ const page = () => {
               "3 Retries per skill",
               "Weakness Zones",
               "AI Reflection",
-              "Role Switch",
               "Summary Report",
               "Certificate",
             ],
@@ -470,12 +470,13 @@ const page = () => {
             title: "Lite",
             description: "Full 1 Cluster + Limited Retry",
             price: "₹799",
+            period: "month",
             priceText: "Start Lite",
             features: [
               "Core Skills",
-              "Mentor Reflection",
-              "Limited Retries",
-              "Progress Tracker + Badges",
+              "AI Reflection",
+              "1 X Retry",
+              "Progress Tracking",
               "Report",
             ],
           },
@@ -512,7 +513,7 @@ const page = () => {
       <NumberCards
         steps={numbersteps}
         heading="How to Start"
-        subheading="Innovation that feels premium, priced for you."
+        subheading="Reboot Navigator™ is a premium experience made affordable."
         bgClassName="bg-gray-50"
       />
       <CvpCta
@@ -567,7 +568,7 @@ const page = () => {
       />
       <WhyCvpLite
         heading="Structured Journey. One Dashboard. Full Career Comeback."
-        subheading="Plan your career revival with precision — not guesswork or recycled advice. Career Reboot Navigator guides you step-by-step through targeted skill mapping, role alignment, and industry-specific capsules, all within a single, intuitive dashboard. Track progress, unlock adaptive learning, and access real-world pathways built for professionals ready to reset, re-skill, and re-enter with confidence."
+        subheading="Revive your career with clarity — not guesswork. Reboot Navigator maps skills, aligns roles, and delivers industry-specific capsules in one dashboard. Track progress, unlock adaptive learning, and re-enter with confidence"
         avoidTitle="Feature"
         experienceTitle="What Career Reboot Navigator Offers"
         avoid={[
@@ -590,8 +591,8 @@ const page = () => {
         ctaLink="/#"
       />
       <Vs
-        heading="Career Reboot Navigator™ vs Others"
-        subheading="Because you shouldn't plan your career comeback based on guesswork or generic advice."
+        heading="Reboot Navigator™ vs Others"
+        subheading="Because you shouldn’t plan your career comeback based on guesswork or generic advice."
         leftTitle="Feature"
         midLeftTitle="Career Coaches"
         midRightTitle="Online Platforms"

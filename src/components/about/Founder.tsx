@@ -18,9 +18,9 @@ export default function Founder() {
         </div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col-reverse items-center gap-8 sm:gap-12 lg:flex-row lg:gap-16">
+        <div className="flex flex-col-reverse items-start gap-8 sm:gap-12 lg:flex-row lg:items-stretch lg:gap-16">
           {/* Text */}
-          <div className="flex flex-1 flex-col gap-4 sm:gap-6">
+          <div className="flex flex-1 flex-col gap-4 bg-white sm:gap-6">
             <h3 className="font-red-rose text-2xl sm:text-3xl">
               That’s why we built YPD
             </h3>
@@ -54,7 +54,7 @@ export default function Founder() {
           </div>
 
           {/* Image */}
-          <div className="relative aspect-[3/4] w-full max-w-sm flex-1 overflow-hidden rounded-xl shadow-lg sm:max-w-md lg:max-w-lg">
+          <div className="relative h-80 w-full overflow-hidden rounded-xl shadow-lg sm:h-[28rem] lg:h-auto lg:flex-1">
             <Image
               src="/about/founder.png"
               alt="Founder"

@@ -46,11 +46,8 @@ const Vision = () => {
                 Purposeful, Personalized Journeys
               </h2>
             </div>
-            <Link
-              href="#"
-              className="bg-brand-primary hover:bg-brand-primary/90 border-brand-accent rounded-md border px-4 py-3 text-sm text-white shadow-md sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
-            >
-              Explore YPD&apos;s Vision
+            <Link href="#" className="btn-primary btn-size shadow-md">
+              Explore CRP
             </Link>
           </div>
         </div>

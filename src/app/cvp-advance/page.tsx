@@ -190,7 +190,97 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: " Neha Arora",
+    name: "Arjun Malhotra",
+    education: "Class 12, Indore",
+    text: (
+      <>
+        &quot;The multi-year roadmap was a revelation. CVP Advance didn’t just
+        tell me my career fit—
+        {highlight("it gave me a semester-by-semester action plan.")} I now know
+        exactly which internships, certifications, and projects to take.&quot;
+      </>
+    ),
+    image: "/cvplite/user1.png",
+  },
+  {
+    id: 2,
+    name: "Rekha & Suresh Pillai",
+    education: "Parents, Kochi",
+    text: (
+      <>
+        &quot;Our daughter had multiple scholarship options abroad but no clear
+        career focus. CVP Advance helped us align her passions with market
+        demand and created a detailed 5-year track.
+        {highlight("Now, every step is purposeful.")}&quot;
+      </>
+    ),
+    image: "/cvplite/user2.png",
+  },
+  {
+    id: 3,
+    name: "Meenal Shah",
+    education: "B.Tech 2nd Year, Pune",
+    text: (
+      <>
+        &quot;The skill gap analysis changed everything for me. I used to think
+        coding alone was enough for a tech career.
+        {highlight(
+          "CVP Advance showed me I needed communication and problem-solving skills too",
+        )}
+        —and told me how to get them.&quot;
+      </>
+    ),
+    image: "/cvplite/user3.png",
+  },
+  {
+    id: 4,
+    name: "Sameer Gupta",
+    education: "Parent, Lucknow",
+    text: (
+      <>
+        &quot;We had career counselling before, but it was generic. CVP Advance
+        was different—AI-driven, but deeply personal.
+        {highlight(
+          "The alternate role mapping was a lifesaver when my son’s preferred career didn’t align with his aptitude.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user1.png",
+  },
+  {
+    id: 5,
+    name: "Shivani Iyer",
+    education: "Class 12, Chennai",
+    text: (
+      <>
+        &quot;I was preparing for NEET but constantly doubting my choice. CVP
+        Advance’s cognitive and emotional mapping helped me see
+        {highlight(
+          "I was better suited for Biomedical Engineering. Now, I’m motivated again.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/user2.png",
+  },
+  {
+    id: 6,
+    name: "Prateek Sharma",
+    education: "B.Com Final Year, Delhi",
+    text: (
+      <>
+        &quot;CVP Advance gave me an international perspective. It not only
+        matched me to roles in India but also outlined global career paths with
+        exact entry requirements.
+        {highlight("I’m applying abroad with confidence.")}&quot;
+      </>
+    ),
+    image: "/cvplite/user3.png",
+  },
+  {
+    id: 7,
+    name: "Neha Arora",
     education: "Parent, Jaipur",
     text: (
       <>
@@ -204,34 +294,35 @@ const ReviewsData = [
     image: "/cvplite/user1.png",
   },
   {
-    id: 2,
+    id: 8,
     name: "Rajat Verma",
     education: "BBA 3rd Year, Ahmedabad",
     text: (
       <>
         &quot;The employability focus was spot on. I realised my degree alone
         wouldn’t make me job-ready.
-        {highlight(" CVP Advance™ built me a plan with industry projects,")}.
-        soft skill training, and placement targets.&quot;
+        {highlight("CVP Advance built me a plan with industry projects,")} soft
+        skill training, and placement targets.&quot;
       </>
     ),
     image: "/cvplite/user2.png",
   },
   {
-    id: 3,
+    id: 9,
     name: "Tanvi Kulkarni",
-    education: "Class 11, Na",
+    education: "Class 11, Nagpur",
     text: (
       <>
         &quot;What impressed me most was the adaptability. I switched my target
         role mid-way,
-        {highlight("and CVP Advance™ recalibrated my entire plan instantly.")}.
-        No wasted effort, only a sharper path.&quot;
+        {highlight("and CVP Advance recalibrated my entire plan instantly.")} No
+        wasted effort, only a sharper path.&quot;
       </>
     ),
     image: "/cvplite/user3.png",
   },
 ];
+
 const cvpAdvanceFaqs = [
   {
     question: "What is CVP Advance™ Program?",

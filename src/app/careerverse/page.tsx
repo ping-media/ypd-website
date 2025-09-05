@@ -130,11 +130,11 @@ const ReviewsData = [
     education: "Class 11 Science Student",
     text: (
       <>
-        CareerVerse™ let me experience a day as a Data Scientist{" "}
+        &quot;CareerVerse™ let me experience a day as a Data Scientist.
         {highlight(
-          "The role simulation, manager tasks, and real-world challenges ",
-        )}{" "}
-        felt so real that I knew exactly what skills I need to work on.
+          " The role simulation, manager tasks, and real-world challenges ",
+        )}
+        felt so real that I knew exactly what skills I need to work on.&quot;
       </>
     ),
     image: "/cvplite/feedback.png",
@@ -145,12 +145,28 @@ const ReviewsData = [
     education: "B.Com Undergraduate",
     text: (
       <>
-        No generic advice — everything in CareerVerse™ was personalized.From my
-        Role Fit Score to the Learning Plan,
-        {highlight(" I felt the program was designed only for me.")}.
+        &quot;No generic advice — everything in CareerVerse™ was personalized.
+        From my Role Fit Score to the Learning Plan,
+        {highlight(" I felt the program was designed only for me.")}&quot;
       </>
     ),
     image: "/cvplite/feedback1.png",
+  },
+  {
+    id: 3,
+    name: "Kabir Mehta",
+    education: "Class 12 Humanities Student",
+    text: (
+      <>
+        &quot;Through CareerVerse™, I tried out Climate Risk Analyst — a role I
+        had never even heard of before.
+        {highlight(
+          " The simulation showed me how my skills could match a career of the future.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/cvplite/feedback2.png",
   },
   {
     id: 4,
@@ -164,7 +180,7 @@ const ReviewsData = [
         and career direction.&quot;
       </>
     ),
-    image: "/cvplite/feedback2.png",
+    image: "/cvplite/feedback.png",
   },
   {
     id: 5,
@@ -173,11 +189,11 @@ const ReviewsData = [
     text: (
       <>
         &quot;I locked my role as a UX Designer, but
-        {highlight("with CareerVerse™ i also tried alternate careers.")}
-        That flexibility gave me clarity and options for the future.&quot;
+        {highlight(" with CareerVerse™ I also tried alternate careers.")} That
+        flexibility gave me clarity and options for the future.&quot;
       </>
     ),
-    image: "/cvplite/feedback2.png",
+    image: "/cvplite/feedback1.png",
   },
   {
     id: 6,
@@ -186,13 +202,16 @@ const ReviewsData = [
     text: (
       <>
         &quot;CareerVerse™ didn’t just stop at today’s roles.
-        {highlight(" It showed me how AI and technology")}
-        might change my chosen career — and how I can prepare right now.&quot;
+        {highlight(
+          " It showed me how AI and technology might change my chosen career",
+        )}
+        — and how I can prepare right now.&quot;
       </>
     ),
     image: "/cvplite/feedback2.png",
   },
 ];
+
 const careerversefaq = [
   {
     question: "What is CareerVerse™?",
@@ -358,7 +377,7 @@ const page = () => {
             features: [
               "Account Creation",
               "Dashboard View",
-              "Profile Setting",
+              "Profile Setup",
               "Role Selection",
             ],
           },

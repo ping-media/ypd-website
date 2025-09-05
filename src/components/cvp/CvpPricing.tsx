@@ -6,6 +6,7 @@ interface PricingPlan {
   description: string;
   price: string;
   priceText?: string;
+  period?: string;
   features: string[];
   highlight?: boolean;
 }
@@ -47,6 +48,7 @@ const CvpPricing = ({
                 title={plan.title}
                 description={plan.description}
                 price={plan.price}
+                period={plan.period}
                 priceText={plan.priceText}
                 features={plan.features}
                 highlight={plan.highlight}
