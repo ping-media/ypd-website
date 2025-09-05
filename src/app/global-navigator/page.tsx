@@ -1,3 +1,4 @@
+import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
@@ -13,6 +14,7 @@ import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
 import {
   Lightbulb,
@@ -368,11 +370,11 @@ const page = () => {
         features={["UG & PG", "USA", "UK", "Canada", "Australia", "Everywhere"]}
         featuresTwoCols
         buttonText="Book Your Slot Now"
-        buttonLink="/#"
+        buttonLink="/global-navigator/#video"
         secondaryButtonLink="/#"
-        secondaryButtonText="View Sample Report"
+        secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
-        imageAlt="crp aptitude"
+        imageAlt="global navigator"
       />
       <CvpVideo
         heading="Step Inside the Experience of Global Navigator™"
@@ -389,6 +391,28 @@ const page = () => {
       {/*  */}
       {/* SECTION TO ADD (What Makes Global Navigator™ the First of Its Kind?) */}
       {/*  */}
+      <WhyCvpLite
+        heading="What Makes Global Navigator™ the First of Its Kind?"
+        subheading="The only career + college guidance system that blends global knowledge with Indian student realities."
+        avoidTitle="Old-Style Overseas Counseling"
+        experienceTitle="YPD Global Navigator™"
+        avoid={[
+          "Consultant-led, generic advice",
+          "Only about “which country to pick”",
+          "Pushy agency agendas",
+          "No structured session logic",
+          "No revisit or reuse",
+        ]}
+        experience={[
+          "AI-powered + mentor-driven data-backed clarity",
+          "Includes admissions, test prep, visa, career ROI",
+          "100% student-first, unbiased & transparent",
+          "Capsule-based 10-step journey with locked insights",
+          "Lifetime re-access to your personalized journey",
+        ]}
+        ctaText="Try Global Navigator™"
+        ctaLink="/#"
+      />
       <CvpInside
         heading="Your Personalized Global Journey Powered by AI + Mentor"
         subheading="In just one structured session, you’ll explore:"
@@ -396,11 +420,41 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/#"
       />
-      {/* SECTION TO MODIFY (Structured Journey One Dashboard. Three Tracks.) */}
+      <Tables
+        heading="Structured Journey One Dashboard. Three Tracks."
+        subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
+        trackTitle="Feature"
+        avoidTitle="What Others Do"
+        experienceTitle="Global Navigator™ Offers"
+        track={[
+          "Real AI Reflections",
+          "OLQ-Linked Progress",
+          "Mentor Guardrails",
+          "Weakness Radar™",
+          "True Mock SSB Sim",
+        ]}
+        avoid={[
+          "None or static scores",
+          "No behavior linkage",
+          "AI-only MCQ’s or mentor only",
+          "Generic chapter tests",
+          "Absent or scripted",
+        ]}
+        experience={[
+          "Your actions are evaluated, not just scored",
+          "Every task maps to officer-like behavior",
+          "Human-validated tracks & feedback",
+          "Pinpoints knowledge + personality gaps",
+          "Full simulation with voice & judgment paths",
+        ]}
+        ctaText="Try Global Navigator™"
+        ctaLink="/#"
+      />
+
       {/* SECTION TO MODIFY (Lines) */}
       <CvpLiteSteps
         heading="How it Works"
-        subheading="The CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
+        subheading="Global Navigator™ is a structured and adaptive journey to help you find Global Careers"
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -432,43 +486,50 @@ const page = () => {
         ]}
         buttons={[
           {
-            label: "Take the First Step Simulate Your Future Career",
+            label: "Simulate Your Future Career",
             icon: <Zap size={18} />,
             variant: "primary",
             href: "/#",
           },
           {
-            label: "Request a Demo for Schools / Partners",
+            label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
             href: "/#",
           },
         ]}
       />
-      {/* SECTION TO MODIFY (Why YPD Global Navigator™ Beats Traditional Counseling) */}
-      <WhyCvpLite
-        heading="What Makes CRP Aptitude Trainer™ the First of Its Kind?"
-        subheading="The only AI-powered aptitude system that blends workplace realities with adaptive, role-specific skill building."
-        avoidTitle="Old-Style Aptitude Testing"
-        experienceTitle="YPD CRP Aptitude Trainer™"
-        avoid={[
-          "One-time static test with generic report",
-          "Only measures basic IQ or reasoning",
-          "No real-world application mapping",
-          "Fixed question sets, no adaptivity",
-          "No guidance on skill improvement",
-          "No progress tracking or re-testing",
+      <Vs
+        heading="Why YPD Global Navigator™ Beats Traditional Counseling"
+        subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
+        leftTitle="Feature"
+        midLeftTitle="Education Agents"
+        midRightTitle="Edtechs"
+        rightTitle="YPD Global Navigator™"
+        leftItems={[
+          "Neutral, student-first guidance",
+          "AI-powered decision engine",
+          "Global + Indian stream understanding",
+          "One-time session + lifetime access",
+          "Test + Visa + Career in one journey",
         ]}
-        experience={[
-          "AI-powered & mentor-backed adaptive journey",
-          "Covers 50+ workplace-relevant aptitudes",
-          "Links results to real job roles & growth paths",
-          "Adaptive, scenario-based simulations",
-          "Actionable skill-building plan with resources",
-          "Revisit, retest & track improvement anytime",
+        midLeftItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
         ]}
-        ctaText="Try the Global Navigator™"
-        ctaLink="/#"
+        midRightItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+        ]}
+        rightItems={["", "", "", "", ""]}
+        ctaText="Try Global Navigator™"
+        ctaLink="/get-started"
       />
       <CvpJourney
         heading="Built by Global Admissions Experts, Data Scientists, and AI Strategists"
@@ -482,12 +543,9 @@ const page = () => {
       />
       <CvpRealworld
         heading="Real World Use Cases"
-        subheading="Career clarity isn’t a quiz result it’s the first real conversation with your future. CVP Lite guides that conversation."
+        subheading="Finding the Best College isn’t a guess work it’s the first real conversation with your future. Global Navigator guides that conversation."
         items={useCases}
       />
-      {/*  */}
-      {/* SECTION TO ADD (Sneak Peek: What’s Inside the Final Report) */}
-      {/*  */}
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
@@ -568,15 +626,6 @@ const page = () => {
       />
       <CvpSecurity />
       <CvpFeedback reviews={ReviewsData} />
-
-      {/*  */}
-      {/*  */}
-      {/*  */}
-
-      {/*  */}
-      {/* SECTION TO ADD (Why YPD Global Navigator™ Beats Traditional Counseling) */}
-      {/*  */}
-
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"
         heading={
@@ -585,7 +634,7 @@ const page = () => {
           </>
         }
         subheading="YPD Global Navigator™ isn’t just about applying abroad it’s about choosing the right path for who you are, what you value, and where you want to go."
-        ctaText="Book My Session Now"
+        ctaText="SneakPeak View"
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />

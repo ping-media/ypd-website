@@ -526,13 +526,13 @@ const page = () => {
         ]}
         buttons={[
           {
-            label: "Take the First Step Simulate Your Future Career ",
+            label: "Simulate Your Future Career ",
             icon: <Zap size={18} />,
             variant: "primary",
             href: "/#",
           },
           {
-            label: "Request a Demo for Schools / Partners",
+            label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
             href: "/#",
