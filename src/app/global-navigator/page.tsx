@@ -435,11 +435,13 @@ const page = () => {
             label: "Take the First Step Simulate Your Future Career",
             icon: <Zap size={18} />,
             variant: "primary",
+            href: "/#",
           },
           {
             label: "Request a Demo for Schools / Partners",
             icon: <UserPlus size={18} />,
             variant: "outline",
+            href: "/#",
           },
         ]}
       />
@@ -554,11 +556,13 @@ const page = () => {
             label: "Subscribe Full Access (₹3,499 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
+            href: "/#",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
+            href: "/#",
           },
         ]}
       />

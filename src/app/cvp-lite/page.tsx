@@ -459,11 +459,13 @@ const page = () => {
             label: "Unlock Full Access – ₹899",
             icon: <Zap size={18} />,
             variant: "primary",
+            href: "/#",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
+            href: "/#",
           },
         ]}
       />

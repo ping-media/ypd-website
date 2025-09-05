@@ -564,11 +564,13 @@ const page = () => {
             label: "Subscribe Full Access (₹7,999 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
+            href: "/#",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
+            href: "/#",
           },
         ]}
       />
