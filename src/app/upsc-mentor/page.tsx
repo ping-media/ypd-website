@@ -59,8 +59,7 @@ const features = [
 const insideData = [
   {
     icon: FileText,
-    title:
-      "Built for India’s future officers not casual exam-takerBuilt for India’s future civil servants, not casual aspirants",
+    title: "Built for India’s future civil servants, not casual aspirants",
   },
   {
     icon: Lightbulb,
@@ -425,8 +424,8 @@ const page = () => {
         ctaLink="/#"
       />
       <Tables
-        heading="Why It Works (When Others Don’t)"
-        subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
+        heading="Structured Journey. One Dashboard. Three Tracks."
+        subheading="Because you shouldn’t prepare for UPSC with scattered notes or generic study plans."
         trackTitle="Track"
         avoidTitle="Focus"
         experienceTitle="What You Get"
@@ -445,7 +444,7 @@ const page = () => {
           "Structured Answer Templates, Daily Writing Feedback, Role-Aligned Notes",
           "One-on-One Mock Panels, Real-Time Feedback, Improvement Tracking",
         ]}
-        ctaText="Try the UPSC Mentors™"
+        ctaText="Try UPSC Mentors™"
         ctaLink="/#"
       />
       <CvpInside
