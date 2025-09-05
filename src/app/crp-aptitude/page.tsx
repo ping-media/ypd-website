@@ -1,8 +1,8 @@
+import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
-import CvpImpact from "@/components/cvp/CvpImpact";
 import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
@@ -98,85 +98,78 @@ const insideData = [
 const steps = [
   {
     id: 1,
-    title: "Choose your career role or goal",
+    title: "Select your focus area",
     description:
-      "Through ultra-personalized guided reflections, scenarios, questions, and early vision exploration, you begin to surface hidden interests, skills, and thought patterns, absolutely in a private space with no Judgment.",
+      "Choose whether you want to strengthen problem-solving, communication, decision-making, leadership, or customer-facing aptitudes.",
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Get personalized tasks based on real scenarios",
+    title: "Get targeted tasks",
     description:
-      "Adaptive insights help you understand how you absorb, process, and reflect on career-related information — mapping your personal preferences aligned with your passion & interests.",
+      "Receive curated challenges and micro-scenarios mapped to real workplace contexts, aligned with your chosen focus.",
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Learn needed aptitudes",
+    title: "Build aptitudes step by step",
     description:
-      "Each Step in CVP Lite™ is connected and works in closed-loop, unlike static Psychometric assessments — all dynamically linked to your real passion, interests & strengths, as well to the reflections & journals making it the only active assessment available.",
+      "Engage in scenario-based exercises — from logic puzzles to role-simulations — designed to sharpen your specific aptitude.",
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Complete them in sequence, with timely guidance",
+    title: "Practice, reflect, and retry",
     description:
-      "Once your CVP Lite™ journey is complete, you will be emailed your Career Pathway Report within a short while.",
+      "Review your performance, reflect on your responses, and retry with adaptive variations until you gain mastery.",
     icon: "/careerverse/s4.svg",
   },
   {
     id: 5,
-    title: "Reflect, retry, and improve",
+    title: "Receive a personalized aptitude map",
     description:
-      "Through ultra-personalized guided reflections, scenarios, questions, and early vision exploration, you begin to surface hidden interests, skills, and thought patterns, absolutely in a private space with no Judgment.",
+      "Get a structured summary highlighting your aptitudes, growth areas",
     icon: "/careerverse/s3.svg",
-  },
-  {
-    id: 6,
-    title: "Receive a personalized aptitude report",
-    description:
-      "Adaptive insights help you understand how you absorb, process, and reflect on career-related information — mapping your personal preferences aligned with your passion & interests.",
-    icon: "/careerverse/s4.svg",
   },
 ];
 const audience = [
   {
     id: 1,
-    title: "Students preparing for competitive or entrance exams",
+    title: "Students building foundational skills",
     description:
-      "Identify strengths, weaknesses, and role-fit before committing to a career pathway.",
+      "Gain clarity on your strengths in problem-solving, reasoning, and decision-making to prepare for higher studies and careers.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
     id: 2,
-    title: "Early-career professionals seeking role clarity",
+    title: "Early professionals shaping careers",
     description:
-      "Pinpoint aptitudes that align with industry demand and fast-track your progression.",
+      "Discover your core aptitudes, match them with workplace roles, and develop confidence in communication and adaptability.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 3,
-    title: "Mid-career professionals planning a shift",
+    title: "People returning to work after a breaks",
     description:
-      "Assess transferable skills, discover alternate roles, and close gaps with targeted learning.",
+      "Rebuild confidence with structured aptitude sessions that highlight transferable skills and identify new opportunities.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
     id: 4,
-    title: "Team leads or managers upskilling for leadership",
+    title: "Team leaders and aspiring managers",
     description:
-      "Evaluate decision-making, adaptability, and strategic thinking to move into bigger roles.",
+      "Strengthen leadership, critical thinking, and people skills with targeted aptitude exercises tailored to professional growth.",
     icon: "/cvplite/r5.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 5,
-    title: "Anyone wanting measurable growth, not just training",
+    title: " Anyone seeking role clarity and growth",
     description:
-      "Go beyond certifications — get role-mapped insights that drive tangible career advancement.",
+      "Use Aptitude Trainer to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
     icon: "/cvplite/r4.svg",
     image: "/cvplite/uses.png",
   },
@@ -198,47 +191,33 @@ const journeySteps = [
 const useCases = [
   {
     id: 1,
-    title: "Real-world learning, not rote answers",
-    quote: `“I know the theory but struggle in real work.”`,
+    title: "Real-world practice, not theory",
     description:
-      "Trainer uses real scenarios to build decision-making and problem-solving, not just theory.",
+      "Aptitude Trainer gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
     icon: "/cvplite/r1.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 2,
-    title: "Contextualized for Indian careers",
-    quote: `“Global tests miss our work reality.”`,
+    title: "Contextualized for Indian professionals",
     description:
-      "Trainer maps skills to Indian workplace needs while staying globally relevant.",
+      "It connected my strengths to roles actually growing in India, not just generic profiles. I could see clear job relevance.",
     icon: "/cvplite/r2.svg",
     image: "/cvplite/cvpworks.png",
   },
   {
     id: 3,
-    title: "Adaptive tasks and real-time nudges",
-    quote: `“Some parts were easy, some pushed me.”`,
+    title: "Adaptive tasks with retry & reflection",
     description:
-      "Difficulty adapts instantly with feedback to strengthen weak areas.",
+      "When I struggled, it didn’t fail me. It nudged me to reflect and retry, so I improved with every step.",
     icon: "/cvplite/r3.svg",
     image: "/cvplite/uses.png",
   },
   {
     id: 4,
-    title: "Helps you understand what you need to grow",
-    quote: `“I’m logical but need better communication.”`,
-    description:
-      "Trainer shows exactly which skills to improve for employability.",
+    title: "Aptitude map with growth clarity",
+    description: "The final report showed my strengths, blind spots.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
-  },
-  {
-    id: 5,
-    title: "No fluff, only value",
-    quote: `“Every task linked to my goals.”`,
-    description:
-      "Role-specific modules that boost readiness — no generic questions.",
-    icon: "/cvplite/r3.svg",
     image: "/cvplite/cvpworks.png",
   },
 ];
@@ -249,13 +228,15 @@ const highlight = (content: string) => (
 const ReviewsData = [
   {
     id: 1,
-    name: "Ananya Verma",
-    education: "UPSC Aspirant, Lucknow",
+    name: "Rishabh Mehta",
+    education: "Final Year B.Com, Nagpur",
     text: (
       <>
-        &quot;I never imagined UPSC preparation could feel so personal. The
-        {highlight("AI Mentor™ helped me focus on my weak GS areas")} and gave
-        a clear strategy to follow daily.&quot;
+        &quot;I never thought skill training could be this personal.
+        {highlight(
+          " The AI Mentor made me see why I solve problems the way I do.",
+        )}{" "}
+        Now I’m building my strengths for a Product Management role!&quot;
       </>
     ),
     image: "/cvplite/user1.png",
@@ -263,12 +244,15 @@ const ReviewsData = [
   {
     id: 2,
     name: "Rohit Sharma",
-    education: "UPSC Aspirant, Patna",
+    education: "Patna",
     text: (
       <>
-        “Even after joining a big coaching, I was lost.
-        {highlight("UPSC Mentor™ gave me a realistic plan")} based on my
-        preparation stage, not a generic schedule.”
+        &quot;I’ve tried online courses before but nothing matched this
+        real-time feedback.
+        {highlight(
+          " It’s like having a mentor who tracks my growth and keeps me on track every day.",
+        )}
+        &quot;
       </>
     ),
     image: "/cvplite/user2.png",
@@ -279,48 +263,55 @@ const ReviewsData = [
     education: "Parent, Nashik",
     text: (
       <>
-        “The interview simulations felt exactly like a
-        {highlight("UPSC Board room. My confidence")}
-        for the Personality Test went through the roof.”
+        &quot;Aptitude Trainer showed my daughter exactly where she needed to
+        improve.
+        {highlight(" Her confidence in interviews has grown in just a month.")}
+        &quot;
       </>
     ),
     image: "/cvplite/user3.png",
   },
   {
     id: 4,
-    name: "Karan Mehta",
-    education: "UPSC Aspirant, Jaipur",
+    name: "Aditi Verma",
+    education: "MBA Student, Pune",
     text: (
       <>
-        {highlight("“UPSC Mentor™ taught me how to balance Prelims")}
-        revision with answer writing for Mains. No other platform tracked my
-        progress this closely.”
+        &quot;The sessions felt like a personal coach was guiding me.
+        {highlight(
+          " I now know which roles suit my strengths and where I need to sharpen my skills.",
+        )}
+        &quot;
       </>
     ),
     image: "/cvplite/user1.png",
   },
   {
     id: 5,
-    name: "Sneha Gupta",
-    education: "UPSC Aspirant, Pune",
+    name: "Sandeep Rao",
+    education: "B.Tech Final Year, Hyderabad",
     text: (
       <>
-        “As a working professional, I had limited hours to study.
-        {highlight("The mentor created a plan")}
-        that made every hour count.”
+        &quot;In just two weeks, the trainer helped me move from vague career
+        ideas to a clear action plan.
+        {highlight(" I’ve already started applying for targeted internships.")}
+        &quot;
       </>
     ),
     image: "/cvplite/user2.png",
   },
   {
     id: 6,
-    name: "Aditya Rao",
-    education: "UPSC Aspirant, Hyderabad",
+    name: "Neha Singh",
+    education: "Job Seeker, Delhi",
     text: (
       <>
-        “I was overwhelmed by optional subject prep.
-        {highlight("UPSC Mentor™ broke it")}
-        into monthly, weekly, and daily milestones I could actually follow.”
+        &quot;The AI didn’t just test me — it explained every result and how to
+        improve.
+        {highlight(
+          " I feel more prepared for both corporate tests and real work challenges.",
+        )}
+        &quot;
       </>
     ),
     image: "/cvplite/user3.png",
@@ -329,44 +320,44 @@ const ReviewsData = [
 
 const crpaptitudefaqs = [
   {
-    question: "Is this better than generic aptitude tests?",
+    question: "Is this just another aptitude test?",
     answer:
-      "Depends. If you want adaptive, AI-backed, skill-gap linked prep, this is unmatched.",
+      "No. Aptitude Trainer is not a one-time test. It’s a guided practice system with real-world scenarios, reflection, and retry options.",
   },
   {
-    question: "Can I prepare fully for competitive exams with this?",
+    question: "Will I get a personalized report?",
     answer:
-      "Yes — it builds the aptitude base you need for any exam or job role.",
+      "Yes. At the end, you receive an aptitude map showing your strengths, blind spots, and growth pathways.",
   },
   {
-    question: "Can I get feedback from a real mentor?",
+    question: "Does this help in real jobs?",
     answer:
-      "Yes — optionally your results can be reviewed with actionable improvement tips.",
+      "Absolutely. The exercises are linked to workplace skills like decision-making, leadership, and communication — not abstract puzzles.",
   },
   {
-    question: "Does this work on mobile?",
-    answer: "Absolutely — learn and track progress anytime, anywhere.",
-  },
-  {
-    question: "Will I get a detailed skill gap report after the session?",
-    answer: "Yes — it’s included with role-based upskilling suggestions.",
-  },
-  {
-    question: "Can parents view the report too?",
-    answer: "Yes — perfect for guiding students in career and skill decisions.",
-  },
-  {
-    question: "Is this based on real research?",
-    answer: "Yes — built on proven psychometric and industry skill frameworks.",
-  },
-  {
-    question: "Is it useful if I already know my career path?",
+    question: "Can working professionals use it too?",
     answer:
-      "Yes — it fine-tunes strengths and closes role-specific skill gaps.",
+      "Yes. Whether you’re a student, mid-career, or returning professional, the tool adapts tasks to your context.",
   },
   {
-    question: "What if I want deeper guidance after this test?",
-    answer: "You can opt for an advanced program with step-by-step upskilling.",
+    question: "What if I struggle in some tasks?",
+    answer:
+      "That’s part of the design. You can reflect, retry, and improve until you build confidence.",
+  },
+  {
+    question: "Is this research-backed?",
+    answer:
+      "Yes. It’s built on YPD’s validated aptitude frameworks, aligned with employability skills and role-readiness.",
+  },
+  {
+    question: "Can parents or mentors view my results?",
+    answer:
+      "If you choose, your report can be shared with parents or mentors for guidance discussions.",
+  },
+  {
+    question: "What if I want deeper career direction after this?",
+    answer:
+      "Aptitude Trainer connects smoothly to other YPD programs like Reboot Navigator, Reinvention Guru, or Real Mentors & Industry Experts.",
   },
 ];
 
@@ -393,8 +384,8 @@ const page = () => {
         }
         buttonText="Start Free"
         buttonLink="/#"
-        secondaryButtonLink="/#"
-        secondaryButtonText="View Sample Report"
+        secondaryButtonLink="/crp-aptitude/#video"
+        secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
         imageAlt="crp aptitude"
       />
@@ -412,12 +403,11 @@ const page = () => {
       />
       {/* SECTION TO MODIFY (BUILT FOR INDIA POWERED BY AI) */}
       <CvpLiteWorks
-        heading="Who Can Use This?"
-        subheading="Youth Pulse Digital™ believes that career decisions aren’t guesses — they’re informed, guided, and actionable."
+        heading="Who Can Use Aptitude Trainer?"
+        subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
         audience={audience}
         ctaText="Start Your Journey Today"
         ctaLink="/#"
-        ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
       <CvpInside
         heading="What You Train On"
@@ -429,7 +419,7 @@ const page = () => {
       {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How It Works"
-        subheading="The CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
+        subheading="Aptitude Trainer guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -437,7 +427,7 @@ const page = () => {
         }}
       />
       <CvpCta
-        heading="What You’ll Receive"
+        heading="What You'll Receive"
         subheading="Built for growth. Backed by AI. Designed for real workplace impact."
         features={[
           "Personalized Aptitude Profile",
@@ -451,14 +441,16 @@ const page = () => {
         ]}
         buttons={[
           {
-            label: "Take the First Step Simulate Your Future Career",
+            label: "Simulate Your Future Career",
             icon: <Zap size={18} />,
             variant: "primary",
+            href: "/#",
           },
           {
-            label: "Request a Demo for Schools / Partners",
+            label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
+            href: "/#",
           },
         ]}
       />
@@ -483,7 +475,7 @@ const page = () => {
           "Actionable skill-building plan with resources",
           "Revisit, retest & track improvement anytime",
         ]}
-        ctaText="Try the Global Navigator™"
+        ctaText="Try Aptitude Trainer"
         ctaLink="/#"
       />
       <CvpJourney
@@ -492,14 +484,42 @@ const page = () => {
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start UPSC Mentor™"
+        ctaText="Start Aptitude Trainer"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our UPSC Mentor™ — a structured journey with curated strategies, role-based practice, and data-backed performance tracking."
       />
-      {/*  */}
-      {/* SECTION TO ADD (Why YPD Global Navigator™ Beats Traditional Counseling) */}
-      {/*  */}
+      <Vs
+        heading="Aptitude Trainer Outperforms Generic Aptitude Tests"
+        subheading="Because you shouldn’t train for skills using random questions or one-size-fits-all methods"
+        leftTitle="Feature"
+        midLeftTitle="Generic Test"
+        midRightTitle="Edtech Platforms"
+        rightTitle="CRP Aptitude Trainer™"
+        leftItems={[
+          "Neutral, role-specific skill focus",
+          "Al-powered adaptive testing",
+          "Indian + global workplace alignment",
+          "One-time setup + lifetime access",
+          "Test + Insights + Improvement Plan ",
+        ]}
+        midLeftItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+        ]}
+        midRightItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+        ]}
+        rightItems={["", "", "", "", ""]}
+        ctaText="Try Aptitude Trainer"
+        ctaLink="/get-started"
+      />
       <CvpRealworld
         heading="Why It’s Different"
         subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer makes every step count."
@@ -517,7 +537,7 @@ const page = () => {
           },
           {
             title: "Premium Plan",
-            description: "Deep Career Training",
+            description: "Train On 40+ Aptitudes",
             price: "₹2,499",
             priceText: "Book Now",
             features: [
@@ -546,43 +566,6 @@ const page = () => {
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpSecurity />
-
-      {/*  */}
-      {/*  */}
-      {/*  */}
-
-      {/* SECTION TO MODIFY (IMAGE FULL WIDTH) */}
-
-      {/*  */}
-      {/* SECTION TO ADD (YOUR MISSION,BROKEN DOWN) */}
-      {/*  */}
-
-      <CvpImpact
-        heading="Real Impact, Real Results"
-        description="Since its early 2024 pilot, Youth Pulse Digital™ UPSC Mentor™ has supported aspirants from Tier 1 to Tier 4 cities in building exam-ready skills for Prelims, Mains, and the Interview stage—removing guesswork, over-reliance on coaching, and preparation fatigue."
-        stats={[
-          {
-            value: "94%",
-            description:
-              "of aspirants said UPSC Mentor™ helped them understand how to approach the syllabus strategically rather than randomly reading books or notes.",
-          },
-          {
-            value: "88%",
-            description:
-              "of parents reported feeling more confident supporting their child’s preparation journey after receiving mentor feedback and performance tracking reports.",
-          },
-          {
-            value: "91%",
-            description:
-              "of aspirants said they would recommend UPSC Mentor™ to peers—especially those preparing without expensive coaching or who struggle with answer-writing structure.",
-          },
-        ]}
-        image={{
-          src: "/cvplite/impact.png",
-          alt: "Student and parent smiling",
-        }}
-      />
-
       <CvpFeedback reviews={ReviewsData} />
       <Faq faqs={crpaptitudefaqs} imglink="/faq1.png" />
     </>

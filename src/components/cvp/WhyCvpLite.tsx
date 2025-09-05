@@ -96,7 +96,7 @@ export default function WhyCvpLite({
         {ctaText && ctaLink && (
           <Link
             href={ctaLink}
-            className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
+            className="btn-size btn-primary font-medium shadow-sm"
           >
             <Zap size={18} /> {ctaText}
           </Link>

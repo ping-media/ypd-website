@@ -28,7 +28,7 @@ export default function CvpLiteWorks({
   audience,
   ctaText = "Start Your Journey Today",
   ctaLink = "/start",
-  ctaSubtext = "Perfect first step before college, entrance exams, or big decisions.",
+  ctaSubtext,
 }: CvpLiteWorksProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = audience[activeIndex];
@@ -204,7 +204,7 @@ export default function CvpLiteWorks({
           {ctaLink && (
             <Link
               href={ctaLink}
-              className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
+              className="btn-size btn-primary font-medium shadow-sm"
             >
               <Zap size={18} /> {ctaText}
             </Link>

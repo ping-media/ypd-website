@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
 import { SquareCheck } from "lucide-react";
+import Link from "next/link";
 
 interface ButtonProps {
   label: string;
   icon?: ReactNode;
   variant?: "primary" | "outline";
+  href: string;
 }
 
 interface CvpCtaProps {
   heading: string;
   subheading: string;
   description?: string; // optional now
-  features?: string[]; // optional list of features
+  features?: string[]; // optional list
   buttons: ButtonProps[];
 }
 
@@ -35,7 +37,7 @@ export default function CvpCta({
             {description}
           </p>
         ) : features ? (
-          <ul className="flex flex-wrap justify-center gap-6 py-4 text-left sm:py-10">
+          <ul className="flex flex-col items-start gap-4 py-4 text-left sm:flex-row sm:flex-wrap sm:justify-center sm:gap-6 sm:py-10">
             {features.map((feature, idx) => (
               <li
                 key={idx}
@@ -49,19 +51,20 @@ export default function CvpCta({
         ) : null}
 
         {/* CTA Buttons */}
-        <div className="mt-4 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row">
+        <div className="mt-4 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-stretch">
           {buttons.map((btn, index) => (
-            <button
+            <Link
+              href={btn.href}
               key={index}
-              className={`inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-medium transition-colors sm:w-auto sm:px-5 sm:py-3.5 sm:text-base lg:text-lg ${
+              className={`btn-size flex cursor-pointer items-center justify-center gap-2 px-4 py-2 font-medium whitespace-nowrap ${
                 btn.variant === "primary"
-                  ? "bg-brand-primary hover:bg-brand-primary/90 text-white shadow-sm"
+                  ? "btn-primary shadow-sm"
                   : "border border-black text-gray-800 hover:bg-green-100"
-              }`}
+              } sm:flex-1`}
             >
               {btn.icon}
               {btn.label}
-            </button>
+            </Link>
           ))}
         </div>
       </div>
