@@ -12,9 +12,9 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import NumberCards from "@/components/mission-nda/NumberCards";
 import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
+import CvpSteps from "@/components/other/steps/CvpSteps";
 import {
   Lightbulb,
   Compass,
@@ -487,7 +487,7 @@ const page = () => {
         subheading="UPSC preparation isn’t just about covering the syllabus — it’s about strategic readiness for a high-stakes, multi-stage exam. UPSC Mentor addresses the real challenges aspirants face."
         items={useCases}
       />
-      <NumberCards
+      <CvpSteps
         steps={numbersteps}
         heading="Your Mission, Broken Down"
         subheading="UPSC Mentor™ is a premium preparation experience designed for serious aspirants."

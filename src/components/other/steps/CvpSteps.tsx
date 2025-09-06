@@ -1,7 +1,20 @@
 import Image from "next/image";
 
-const CvpSteps = () => {
-  const steps = [
+interface Step {
+  number?: number;
+  id?: number;
+  title: string;
+  description: string;
+}
+
+interface CvpStepsProps {
+  steps?: Step[];
+  heading?: string;
+  subheading?: string;
+}
+
+const CvpSteps = ({
+  steps = [
     {
       number: 1,
       title: "Intent Mapping",
@@ -32,21 +45,18 @@ const CvpSteps = () => {
       description:
         "Unlocks your career needs, required courses, certifications with highest accuracy.",
     },
-  ];
-
+  ],
+  heading = "The Career Vision Program™: 5 Steps to Career Pathway",
+  subheading = "YPD doesn&apos;t just assess. It takes you through a 360° mapping process through its framework, Trained AI Mentors, Active User participation using adaptive & personalized journey to build what truly fits you.",
+}: CvpStepsProps) => {
   return (
     <div className="font-lato flex justify-center bg-[#FAFAFA] p-4 sm:p-10 lg:p-20">
       <div className="flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center gap-4 text-center">
-          <h2 className="font-red-rose text-2xl sm:text-3xl">
-            The Career Vision Program™: 5 Steps to Career Pathway
-          </h2>
+          <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
           <p className="text-brand-gray max-w-4xl text-base sm:text-lg">
-            YPD doesn&apos;t just assess. It takes you through a 360° mapping
-            process through its framework, Trained AI Mentors, Active User
-            participation using adaptive & personalized journey to build what
-            truly fits you.
+            {subheading}
           </p>
         </div>
 
@@ -74,7 +84,7 @@ const CvpSteps = () => {
                 <div className="relative flex flex-col items-center">
                   {/* Number block */}
                   <div className="bg-brand-primary relative z-10 flex h-10 w-10 items-center justify-center rounded-lg text-sm text-white sm:h-12 sm:w-12 sm:text-base">
-                    {step.number}
+                    {step.number ?? step.id ?? i + 1}
                     {/* Horizontal line */}
                     <div className="border-brand-gray absolute top-1/2 left-full hidden w-10 border-t-2 border-dashed sm:block"></div>
                   </div>

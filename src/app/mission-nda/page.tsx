@@ -12,9 +12,9 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import NumberCards from "@/components/mission-nda/NumberCards";
 import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
+import CvpSteps from "@/components/other/steps/CvpSteps";
 import {
   Lightbulb,
   Compass,
@@ -23,10 +23,6 @@ import {
   Zap,
   ArrowRight,
   UserPlus,
-  BookOpen,
-  Monitor,
-  TrendingUp,
-  MessageCircle,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
@@ -208,37 +204,31 @@ const numbersteps = [
     id: 1,
     title: "Study",
     description: "Topic-wise smart capsules with active recall",
-    icon: BookOpen,
   },
   {
     id: 2,
     title: "Revise",
     description: "AI nudges and real-world SSB case links",
-    icon: Monitor,
   },
   {
     id: 3,
     title: "Test",
     description: "Sectional + full NDA mock tests (tutor-graded)",
-    icon: FileText,
   },
   {
     id: 4,
     title: "Track",
     description: "Daily, Weekly & Mission-level dashboards",
-    icon: TrendingUp,
   },
   {
     id: 5,
     title: "Prepare (SSB)",
     description: "Reflective capsule + OLQ linked SRT + GTO",
-    icon: Brain,
   },
   {
     id: 6,
     title: "Interview Mode",
     description: "YPO Mentor simulates & evaluates you",
-    icon: MessageCircle,
   },
 ];
 
@@ -516,7 +506,7 @@ const page = () => {
         subheading="Through the eyes of our users, who chose precision preparation"
         items={useCases}
       />
-      <NumberCards
+      <CvpSteps
         steps={numbersteps}
         heading="Your Mission, Broken Down"
         subheading="Innovation that feels premium, priced for you."
