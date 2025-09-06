@@ -13,7 +13,7 @@ interface Review {
 
 function ReviewCard({ name, education, text, image }: Review) {
   return (
-    <div className="flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
+    <div className="mx-1 flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
       {/* Quote + Text */}
       <div className="flex-1 p-6">
         <Quote className="h-6 w-6 rotate-180 fill-[#9ec89e] text-[#9ec89e]" />
