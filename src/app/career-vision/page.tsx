@@ -162,61 +162,125 @@ const cvFaqs = [
       "Yes. CVP maps Indian education streams, but also includes global role pathways where relevant.",
   },
 ];
-const featureData = [
+const featureSections = [
   {
-    icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
-    title: "CVP Lite",
-    subtitle: "Grade 7–12 | 1–2 Days",
-    features: [
-      "Discover natural strengths early",
-      "Beginner-level career simulations",
-      "Identify learning style & gaps",
-      "Journal-based self-reflection tasks",
-      "Career Fit Report included",
+    sectionTitle: "Career Clarity Programs",
+    items: [
+      {
+        icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
+        title: "CVP Lite",
+        subtitle: "Grade 7–12 | 1–2 Days",
+        features: [
+          "Discover natural strengths early",
+          "Beginner-level career simulations",
+          "Identify learning style & gaps",
+          "Journal-based self-reflection tasks",
+          "Career Fit Report included",
+        ],
+        ctaText: "Register Now",
+        href: "/cvp-lite",
+      },
+      {
+        icon: <Users className="text-brand-primary h-12 w-12" />,
+        title: "CVP Advance",
+        subtitle: "Grade 11 – UG | 7 Days",
+        features: [
+          "Advanced career simulations",
+          "Job readiness skill mapping",
+          "PG planning cues",
+          "Career Action Plan",
+          "Industry-fitment & gap analysis",
+        ],
+        ctaText: "Register Now",
+        href: "/cvp-advance",
+      },
+      {
+        icon: <GraduationCap className="text-brand-primary h-12 w-12" />,
+        title: "CareerVerse",
+        subtitle: "Grade 9 – UG | 4–5 Days",
+        features: [
+          "Explore Real Roles",
+          "Practice Decisions",
+          "Test Job Skills",
+          "Boost Career Clarity",
+        ],
+        ctaText: "Explore Now",
+        href: "/careerverse",
+      },
     ],
-    ctaText: "Register Now",
-    href: "/cvp-lite",
   },
   {
-    icon: <Users className="text-brand-primary h-12 w-12" />,
-    title: "CVP Advance",
-    subtitle: "Grade 11 – UG | 7 Days",
-    features: [
-      "Advanced career simulations",
-      "Job readiness skill mapping",
-      "PG planning cues",
-      "Career Action Plan",
-      "Industry-fitment & gap analysis",
+    sectionTitle: "Exam Mentors",
+    items: [
+      {
+        icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
+        title: "CBSE 10th Mentor",
+        subtitle: "Grade 10 | Subject Mastery",
+        features: ["Focused guidance", "Exam strategies"],
+        ctaText: "Join Now",
+        href: "/cbse-10",
+      },
+      {
+        icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
+        title: "CBSE 12th Mentor",
+        subtitle: "Grade 12 | Subject Mastery",
+        features: ["Stream-specific support", "Exam prep roadmaps"],
+        ctaText: "Join Now",
+        href: "/cbse-12",
+      },
     ],
-    ctaText: "Register Now",
-    href: "/cvp-advance",
   },
   {
-    icon: <GraduationCap className="text-brand-primary h-12 w-12" />,
-    title: "CVP Verse",
-    subtitle: "Grade 9 – UG | 4–5 Days",
-    features: [
-      "Explore Real Roles",
-      "Practice Decisions",
-      "Test Job Skills",
-      "Boost Career Clarity",
+    sectionTitle: "Entrance Mentors",
+    items: [
+      {
+        icon: <Shield className="text-brand-primary h-12 w-12" />,
+        title: "Mission NDA",
+        subtitle: "Grade 11–12 | Subscription",
+        features: [
+          "Written Exam Preparation",
+          "Officer-Like Qualities DNA",
+          "Real SSB Simulation",
+          "Mindset + Response Conditioning",
+          "Dynamic Progress-Based Preparation",
+        ],
+        ctaText: "Subscribe Now",
+        href: "/mission-nda",
+      },
+      {
+        icon: <Shield className="text-brand-primary h-12 w-12" />,
+        title: "UPSC Mentor",
+        subtitle: "Post UG | Civil Services",
+        features: [
+          "UPSC prep structure",
+          "Answer writing",
+          "Strategy coaching",
+        ],
+        ctaText: "Join Now",
+        href: "/upsc-mentor",
+      },
     ],
-    ctaText: "Explore Now",
-    href: "/careerverse",
   },
   {
-    icon: <Shield className="text-brand-primary h-12 w-12" />,
-    title: "Mission NDA",
-    subtitle: "Grade 11–12 | Subscription",
-    features: [
-      "Written Exam Preparation",
-      "Officer-Like Qualities DNA",
-      "Real SSB Simulation",
-      "Mindset + Response Conditioning",
-      "Dynamic Progress-Based Preparation",
+    sectionTitle: "Counseling Mentors",
+    items: [
+      {
+        icon: <Users className="text-brand-primary h-12 w-12" />,
+        title: "Counseling Guru",
+        subtitle: "Expert Career Guidance",
+        features: ["Personalized sessions", "Career roadmap"],
+        ctaText: "Book Now",
+        href: "/counseling-guru",
+      },
+      {
+        icon: <Users className="text-brand-primary h-12 w-12" />,
+        title: "Global Navigator",
+        subtitle: "Study Abroad Mentor",
+        features: ["University shortlisting", "Visa guidance"],
+        ctaText: "Book Now",
+        href: "/global-navigator",
+      },
     ],
-    ctaText: "Subscribe Now",
-    href: "/mission-nda",
   },
 ];
 const features = [
@@ -267,7 +331,7 @@ const page = () => {
       <CrSuite
         heading="Your Complete Career Vision Suite"
         subheading="Sharpen your skills and decision-making through tailored aptitude and competency training designed for high-performance roles."
-        features={featureData}
+        features={featureSections}
       />
       <CvpFeature
         heading="Why Families Like Career Vision Program™"
