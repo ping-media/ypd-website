@@ -247,6 +247,26 @@ const Page = () => {
             </li>
           </ul>
 
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
+            3.3 Cooling-Off Period
+          </h3>
+          <p className="mb-4">
+            Cooling-Off Period (Digital Services) In compliance with the
+            Consumer Protection (E-Commerce) Rules, 2020, individual consumers
+            purchasing digital services from Youth Pulse Digital™ are entitled
+            to a 7-day cooling-off period from the date of purchase. During this
+            period, you may cancel your subscription or service for a full
+            refund, provided that:
+          </p>
+          <p className="mb-4">
+            The service has not been substantially used, and
+          </p>
+          <p className="mb-4">
+            No final report, certification, or deliverable has been generated
+            under your account. Once services are substantially consumed or
+            reports delivered, the cooling-off refund is not applicable.
+          </p>
+
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             4. Cancellation Procedures
           </h2>
@@ -464,6 +484,19 @@ const Page = () => {
               Merger/Acquisition: Special provisions for organizational changes
             </li>
           </ul>
+
+          <h3 className="mt-4 mb-2 text-lg font-semibold sm:text-xl">
+            6.4 Parental Refund Rights
+          </h3>
+          <p className="mb-4">
+            Parental Refund Rights for Minors Where services are purchased by a
+            school, guardian, or parent on behalf of a minor, refund requests
+            must be initiated by the paying institution or parent/guardian.
+            Youth Pulse Digital™ will not process individual refund requests
+            directly from minors. All such cases will be routed through the
+            parent/guardian or the institutional administrator, ensuring
+            compliance with parental consent requirements under Indian law.
+          </p>
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             7. Dispute Resolution for Refunds

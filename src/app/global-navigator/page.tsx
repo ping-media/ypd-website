@@ -421,31 +421,31 @@ const page = () => {
         ctaLink="/#"
       />
       <Tables
-        heading="Structured Journey One Dashboard. Three Tracks."
-        subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
+        heading="Structured Journey. One Dashboard. Global Pathways."
+        subheading="Because studying abroad or choosing global careers shouldn’t rely on random Google searches or expensive agents."
         trackTitle="Feature"
         avoidTitle="What Others Do"
         experienceTitle="Global Navigator™ Offers"
         track={[
-          "Real AI Reflections",
-          "OLQ-Linked Progress",
-          "Mentor Guardrails",
-          "Weakness Radar™",
-          "True Mock SSB Sim",
+          "Real Global Path Insights",
+          "Personalized Affordability Mapping",
+          "Visa & Career Readiness Linkage",
+          "Adaptive Guidance Tracks",
+          "Parent + Student Clarity Reports",
         ]}
         avoid={[
-          "None or static scores",
-          "No behavior linkage",
-          "AI-only MCQ’s or mentor only",
-          "Generic chapter tests",
-          "Absent or scripted",
+          "Static country brochures or paid agent advice",
+          "Generic cost estimates",
+          "One-off consultancy calls",
+          "Same advice for all students",
+          "Parents left out of loop",
         ]}
         experience={[
-          "Your actions are evaluated, not just scored",
-          "Every task maps to officer-like behavior",
-          "Human-validated tracks & feedback",
-          "Pinpoints knowledge + personality gaps",
-          "Full simulation with voice & judgment paths",
+          "Contextualized, AI-driven insights on study + work options across top destinations",
+          "Tailored budget planning with tuition, living costs, and scholarship pathways",
+          "End-to-end linkage: visa prep, housing, career outlook after graduation",
+          "Tracks based on profile: Ivy League aspirant, affordable global degree, or skill-first migration",
+          "Transparent reports for families with side-by-side options and clear action plans",
         ]}
         ctaText="Try Global Navigator™"
         ctaLink="/#"

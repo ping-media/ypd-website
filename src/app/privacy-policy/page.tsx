@@ -290,6 +290,11 @@ const Page = () => {
               student data
             </li>
           </ul>
+          <p className="mb-4">
+            All advertising and promotional communications involving minors
+            comply with our Minors Advertising Policy, ASCI guidelines, and CBSE
+            regulations.
+          </p>
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             9. Cookies and Tracking
@@ -308,31 +313,136 @@ const Page = () => {
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             10. Data Retention
           </h2>
-          <ul className="mb-4 ml-6 list-disc">
-            <li>
-              Personal Data: Retained as long as your account is active or as
-              needed for service delivery
-            </li>
-            <li>
-              Educational Records: Maintained for academic continuity (typically
-              1-2 years after course completion)
-            </li>
-            <li>
-              AI Interaction Logs: Temporary storage for service improvement,
-              then anonymized or deleted
-            </li>
-            <li>
-              Legal Compliance: Some data may be retained longer to meet
-              regulatory requirements
-            </li>
-          </ul>
+
+          <div className="mb-4 overflow-x-auto">
+            <table className="w-full border border-gray-200 text-sm sm:text-base">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="border px-3 py-2 text-left font-medium">
+                    Data Type
+                  </th>
+                  <th className="border px-3 py-2 text-left font-medium">
+                    Retention Period
+                  </th>
+                  <th className="border px-3 py-2 text-left font-medium">
+                    Notes
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Personal details (name, email, phone, address)
+                  </td>
+                  <td className="border px-3 py-2">
+                    Until account closure + 90 days
+                  </td>
+                  <td className="border px-3 py-2">
+                    Deleted after user account is closed
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Educational records (scores, preferences, academic history)
+                  </td>
+                  <td className="border px-3 py-2">
+                    1–2 years after service completion
+                  </td>
+                  <td className="border px-3 py-2">
+                    Retained for academic continuity
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Professional data (work experience, skills, training)
+                  </td>
+                  <td className="border px-3 py-2">
+                    2 years after service completion
+                  </td>
+                  <td className="border px-3 py-2">
+                    Helps with career tracking
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Assessment data (aptitude, personality, learning tests)
+                  </td>
+                  <td className="border px-3 py-2">
+                    Until report generated + 1 year
+                  </td>
+                  <td className="border px-3 py-2">
+                    Then anonymized for research
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    AI interaction logs (chat transcripts, feedback)
+                  </td>
+                  <td className="border px-3 py-2">30–90 days</td>
+                  <td className="border px-3 py-2">
+                    Only for system improvement, then anonymized
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Technical data (device info, cookies, IP address)
+                  </td>
+                  <td className="border px-3 py-2">Up to 12 months</td>
+                  <td className="border px-3 py-2">
+                    Used for analytics and security
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Institutional data (school/college student or employee
+                    records)
+                  </td>
+                  <td className="border px-3 py-2">
+                    Contract duration + 90 days
+                  </td>
+                  <td className="border px-3 py-2">
+                    Removed after contract ends
+                  </td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Financial data (payments, invoices, GST records)
+                  </td>
+                  <td className="border px-3 py-2">8 years</td>
+                  <td className="border px-3 py-2">As per Indian tax laws</td>
+                </tr>
+                <tr>
+                  <td className="border px-3 py-2">
+                    Grievance and legal records (complaints, disputes)
+                  </td>
+                  <td className="border px-3 py-2">3 years</td>
+                  <td className="border px-3 py-2">
+                    For compliance with DPDP & consumer laws
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
             11. Grievance Redressal
           </h2>
-          <p className="mb-2 font-semibold">Grievance Contact:</p>
+          <p className="mb-2 font-semibold">
+            Grievance Contact (Data Protection Officer): Aniruddha Basu
+            Choudhari – Director & Data Protection Officer, Youth Pulse
+            Digital™
+          </p>
           <p className="mb-2">
             Email:{" "}
+            <a
+              href="mailto:dpo@youthpulsedigital.com"
+              className="cursor-pointer font-bold hover:underline"
+            >
+              dpo@youthpulsedigital.com (for privacy-related matters)
+            </a>
+          </p>
+          <p className="mb-2">
+            Support Queries{" "}
             <a
               href="mailto:support@youthpulsedigital.com"
               className="cursor-pointer font-bold hover:underline"
@@ -341,13 +451,27 @@ const Page = () => {
             </a>
           </p>
           <p className="mb-2">
-            Response Time: We aim to acknowledge complaints within 72 hours and
-            resolve within 15 working days
+            Response Time: We aim to acknowledge all grievances within 72 hours
+            and resolve them within 15 working days.
           </p>
-          <p className="mb-4 font-semibold">Escalation:</p>
           <p className="mb-4">
-            If unsatisfied with our response, you may approach the Data
-            Protection Board or relevant authorities under Indian law.
+            Escalation:
+            <span>
+              If you are unsatisfied with our response, you may approach the
+              Data Protection Board of India or other relevant authorities under
+              applicable Indian law.
+            </span>
+          </p>
+          <p className="mb-4">
+            This grievance mechanism is maintained in compliance with the
+            Digital Personal Data Protection Act, 2023 and the Consumer
+            Protection Act, 2019.
+          </p>
+          <p className="mb-4">
+            The Data Protection Officer role is currently discharged by a
+            Director of the Company to ensure accountability at the highest
+            level. As we scale, this function will transition to a dedicated
+            officer for greater independence.
           </p>
 
           <h2 className="mt-6 mb-2 text-xl font-semibold sm:text-2xl">
