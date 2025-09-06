@@ -14,8 +14,8 @@ import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
-import NumberCards from "@/components/mission-nda/NumberCards";
 import Faq from "@/components/other/Faq";
+import CvpSteps from "@/components/other/steps/CvpSteps";
 import {
   Lightbulb,
   Compass,
@@ -26,10 +26,6 @@ import {
   UserPlus,
   PersonStanding,
   GraduationCap,
-  BookOpen,
-  Brain,
-  Monitor,
-  TrendingUp,
 } from "lucide-react";
 import { FileText } from "lucide-react";
 
@@ -216,35 +212,30 @@ const numbersteps = [
     title: "Select Free / Lite / Pro",
     description:
       "Pick your subscription and unlock matching features for your career reboot journey.",
-    icon: BookOpen,
   },
   {
     id: 2,
     title: "Choose your Job Role Cluster",
     description:
       "Select an Role Cluster to access sector-specific training capsules.",
-    icon: Monitor,
   },
   {
     id: 3,
     title: "Start your Capsule Training",
     description:
       "Begin interactive, scenario-based learning with real-world skill challenges",
-    icon: FileText,
   },
   {
     id: 4,
     title: "Get AI Reflection + Progress Badge",
     description:
       "Receive AI feedback and earn badges as you complete skill levels.",
-    icon: TrendingUp,
   },
   {
     id: 5,
     title: "Retry, Reflect & Improve",
     description:
       "Revisit weak areas, retry capsules, and strengthen your core and role skills.",
-    icon: Brain,
   },
 ];
 
@@ -515,11 +506,10 @@ const page = () => {
         ctaText="Try Reboot Navigator™"
         ctaLink="/#"
       />
-      <NumberCards
+      <CvpSteps
         steps={numbersteps}
         heading="How to Start"
         subheading="Reboot Navigator™ is a premium experience made affordable."
-        bgClassName="bg-gray-50"
       />
       <CvpCta
         heading="Want to Partner?"

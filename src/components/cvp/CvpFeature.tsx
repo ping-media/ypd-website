@@ -9,6 +9,7 @@ interface Feature {
 
 interface CvpFeatureProps {
   heading: string;
+  subheading?: string;
   features: Feature[];
   ctaText?: string;
   ctaLink?: string;
@@ -19,6 +20,7 @@ const CvpFeature = ({
   features,
   ctaText,
   ctaLink,
+  subheading,
 }: CvpFeatureProps) => {
   return (
     <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
@@ -26,6 +28,11 @@ const CvpFeature = ({
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">
           <h2 className="font-red-rose text-2xl sm:text-3xl">{heading}</h2>
+          {subheading && (
+            <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
+              {subheading}
+            </p>
+          )}
         </div>
 
         {/* Features Grid */}

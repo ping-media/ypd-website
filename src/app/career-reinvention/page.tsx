@@ -6,7 +6,7 @@ import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, Briefcase, GraduationCap, Users } from "lucide-react";
+import { ArrowRight, Briefcase, GraduationCap, Users, Zap } from "lucide-react";
 
 const reviews = [
   {
@@ -107,6 +107,7 @@ const featureData = [
       "Adaptive progression with retry and feedback",
     ],
     ctaText: "Try the Aptitude Trainer",
+    href: "/aptitude-trainer", // ✅ link added
   },
   {
     icon: <Users className="text-brand-primary h-12 w-12" />,
@@ -119,6 +120,7 @@ const featureData = [
       "Tier 2-4 Jobs & Micro-Entrepreneur Fit",
     ],
     ctaText: "Try the Reboot Navigator",
+    href: "/reboot-navigator", // ✅ link added
   },
   {
     icon: <Briefcase className="text-brand-primary h-12 w-12" />,
@@ -131,12 +133,22 @@ const featureData = [
       "Structured re-entry for break returners & career shifters",
     ],
     ctaText: "Try the Reinvention Guru",
+    href: "/reinvention-guru", // ✅ link added
   },
 ];
+
 const page = () => {
   return (
     <>
-      <Hero />
+      <Hero
+        heading="Reinvent Your Career. Redefine Your Future."
+        subheading="The Career Reinvention Program™ helps you rediscover your strengths, uncover new opportunities, and create a future you’re excited to live."
+        imageSrc="/career-reinvention/hero.png"
+        imageAlt="Youth Pulse Digital"
+        ctaLabel="Try Career Reinvention"
+        ctaHref="/#"
+        ctaIcon={<Zap className="h-5 w-5 sm:h-6 sm:w-6" />}
+      />
       {/*  */}
       {/* SECTION TO ADD (CRP SECTION) */}
       {/*  */}

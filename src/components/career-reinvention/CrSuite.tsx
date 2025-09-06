@@ -1,6 +1,5 @@
-"use client";
-
 import { Zap } from "lucide-react";
+import Link from "next/link";
 
 interface Feature {
   icon: React.ReactNode;
@@ -8,6 +7,7 @@ interface Feature {
   subtitle: string;
   features: string[];
   ctaText: string;
+  href: string; // ✅ added href
 }
 
 interface CrSuiteProps {
@@ -37,7 +37,7 @@ export default function CrSuite({
         </div>
 
         {/* Features Grid */}
-        <div className="mx-auto grid max-w-7xl grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-14">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-stretch gap-4 sm:grid-cols-2 sm:gap-10 lg:grid-cols-3 lg:gap-14">
           {features.map((f, i) => (
             <div
               key={i}
@@ -72,10 +72,13 @@ export default function CrSuite({
               </div>
 
               {/* Bottom CTA */}
-              <button className="btn-size btn-primary mt-6 flex items-center justify-center gap-2">
+              <Link
+                href={f.href} // ✅ uses href from data
+                className="btn-size btn-primary mt-6 flex items-center justify-center gap-2"
+              >
                 <Zap size={18} className="text-white" />
                 {f.ctaText}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

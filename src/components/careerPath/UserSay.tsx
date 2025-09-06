@@ -20,7 +20,7 @@ interface UserSayProps {
 
 function ReviewCard({ name, text, image, heading, education }: Review) {
   return (
-    <div className="flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
+    <div className="mx-1 flex h-full flex-col justify-between rounded-xl border bg-white shadow-md">
       {/* Quote */}
       <div className="flex-1 p-6">
         <Quote className="text-brand-primary fill-brand-primary h-6 w-6 rotate-180 transform" />

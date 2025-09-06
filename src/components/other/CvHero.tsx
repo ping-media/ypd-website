@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-interface CvpHeroProps {
+interface CvHeroProps {
   title: string;
   subtitle: ReactNode;
   description?: ReactNode;
@@ -18,7 +18,7 @@ interface CvpHeroProps {
   featuresTwoCols?: boolean;
 }
 
-export default function CvpHero({
+export default function CvHero({
   title,
   subtitle,
   description,
@@ -31,21 +31,23 @@ export default function CvpHero({
   imageAlt = "Feature Image",
   reverse = false,
   featuresTwoCols = false,
-}: CvpHeroProps) {
+}: CvHeroProps) {
   return (
     <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-8 px-4 py-6 sm:gap-12 sm:px-10 sm:py-10 lg:gap-16 lg:px-20">
       <div
-        className={`flex w-full flex-col items-center gap-6 sm:gap-10 md:flex-row lg:gap-20 ${
+        className={`l flex w-full flex-col items-center gap-6 sm:gap-10 md:flex-row ${
           reverse ? "lg:flex-row-reverse" : ""
         }`}
       >
         {/* Text Content */}
         <div className="flex-1 space-y-5 text-center sm:space-y-6 lg:text-left">
-          <h2 className="font-red-rose text-2xl leading-snug sm:text-3xl lg:text-[42px]">
+          <h2 className="font-red-rose text-xl leading-snug sm:text-2xl lg:text-3xl">
             {title}
           </h2>
 
-          <p className="text-brand-gray text-base sm:text-lg">{subtitle}</p>
+          <p className="text-brand-gray text-sm leading-relaxed sm:text-base lg:text-lg">
+            {subtitle}
+          </p>
 
           {description && (
             <p className="text-brand-gray text-sm sm:text-base">
