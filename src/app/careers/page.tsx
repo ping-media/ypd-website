@@ -1,3 +1,4 @@
+import CareersContact from "@/components/careers/CareersContact";
 import CareersFeature from "@/components/careers/CareersFeature";
 import CareersGallery from "@/components/careers/CareersGallery";
 import Hero from "@/components/careers/Hero";
@@ -122,6 +123,7 @@ const page = () => {
         subheading="It's a dynamic and engaging environment where creativity thrives, collaboration encouraged and every achievement celebrated."
         images={galleryImages}
       />
+      <CareersContact />
     </>
   );
 };

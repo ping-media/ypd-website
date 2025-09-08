@@ -42,7 +42,7 @@ const CareersGallery = ({
         )}
 
         {/* Image Gallery */}
-        <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid w-full max-w-7xl grid-cols-2 gap-4 max-[400px]:grid-cols-1 lg:grid-cols-3 lg:gap-6">
           {images.map((image, index) => (
             <div
               key={index}
