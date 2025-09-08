@@ -1,22 +1,58 @@
+"use client";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "@/components/ui/form";
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import SocialLinks from "../other/SocialLinks";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+
+const formSchema = z.object({
+  firstName: z.string().min(1, "First name is required"),
+  lastName: z.string().optional(),
+  email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(1, "Message is required"),
+  newsletter: z.boolean().default(false),
+});
 
 const ContactUs = () => {
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
+      newsletter: false,
+    },
+  });
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    console.log(values);
+    // Handle form submission here
+  };
+
   return (
     <section className="flex justify-center bg-white p-4 sm:px-10 lg:px-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center justify-between gap-4">
           <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
-            Have Questions? We’re Here to Help.
+            Have Questions? We&apos;re Here to Help.
           </h2>
           <p className="text-brand-gray max-w-4xl text-center text-base sm:text-lg">
-            Whether you’re a student, parent, mentor, or partner we’re just a
-            message away.
+            Whether you&apos;re a student, parent, mentor, or partner we&apos;re
+            just a message away.
           </p>
         </div>
 
@@ -73,60 +109,135 @@ const ContactUs = () => {
 
           {/* Right Section - Form */}
           <div className="w-full lg:w-1/2">
-            <form className="font-lato flex flex-col gap-4">
-              <div className="flex gap-4">
-                <Input
-                  name="firstName"
-                  placeholder="First Name*"
-                  className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 flex-1 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                />
-                <Input
-                  name="lastName"
-                  placeholder="Last Name"
-                  className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 flex-1 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                />
-              </div>
-
-              <Input
-                name="email"
-                type="email"
-                placeholder="Email*"
-                className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-              />
-
-              <Input
-                name="subject"
-                placeholder="Subject*"
-                className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-              />
-
-              <Textarea
-                name="message"
-                placeholder="Questions or Message*"
-                className="focus:border-brand-accent focus:ring-brand-accent/40 min-h-[150px] rounded-md border border-gray-300 bg-gray-100 py-3 focus:ring-2 sm:px-4"
-              />
-
-              {/* Checkbox */}
-              <div className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  id="newsletter"
-                  name="newsletter"
-                  className="accent-brand-primary h-4 w-4 rounded border-gray-300"
-                />
-                <label htmlFor="newsletter" className="text-brand-gray text-sm">
-                  Sign up for news and updates
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <Button
-                type="submit"
-                className="bg-brand-primary hover:bg-brand-primary/90 rounded-md px-6 py-3 text-white shadow-sm"
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="font-lato flex flex-col gap-4"
               >
-                Send
-              </Button>
-            </form>
+                <div className="flex gap-4">
+                  <FormField
+                    control={form.control}
+                    name="firstName"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormControl>
+                          <Input
+                            placeholder="First Name*"
+                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="lastName"
+                    render={({ field }) => (
+                      <FormItem className="flex-1">
+                        <FormControl>
+                          <Input
+                            placeholder="Last Name"
+                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          type="email"
+                          placeholder="Email*"
+                          className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="Subject*"
+                          className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Textarea
+                          placeholder="Questions or Message*"
+                          className="focus:border-brand-accent focus:ring-brand-accent/40 min-h-[150px] rounded-md border border-gray-300 bg-gray-100 py-3 focus:ring-2 sm:px-4"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Checkbox */}
+                <FormField
+                  control={form.control}
+                  name="newsletter"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="flex items-center gap-2">
+                        <FormControl>
+                          <input
+                            type="checkbox"
+                            id="newsletter"
+                            className="accent-brand-primary h-4 w-4 rounded border-gray-300"
+                            checked={field.value}
+                            onChange={field.onChange}
+                          />
+                        </FormControl>
+                        <label
+                          htmlFor="newsletter"
+                          className="text-brand-gray text-sm"
+                        >
+                          Sign up for news and updates
+                        </label>
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="btn-size btn-primary shadow-sm"
+                >
+                  Send
+                </button>
+              </form>
+            </Form>
           </div>
         </div>
       </div>
