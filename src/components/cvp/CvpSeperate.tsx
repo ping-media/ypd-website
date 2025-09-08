@@ -51,7 +51,7 @@ const CvpSeperate = ({
         </div>
 
         {/* Button */}
-        <div className="w-full sm:w-auto">
+        <div className="font-lato w-full sm:w-auto">
           <Link
             href={ctaHref}
             className="btn-size w-full bg-white text-center font-medium shadow hover:bg-gray-200"

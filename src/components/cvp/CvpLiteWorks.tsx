@@ -200,21 +200,22 @@ export default function CvpLiteWorks({
         </div>
 
         {/* CTA */}
-        <div className="flex flex-col items-center gap-6">
-          {ctaLink && (
+        {ctaText && ctaLink && (
+          <div className="flex flex-col items-center gap-6">
             <Link
               href={ctaLink}
               className="btn-size btn-primary font-medium shadow-sm"
             >
               <Zap size={18} /> {ctaText}
             </Link>
-          )}
-          {ctaSubtext && (
-            <h2 className="font-red-rose text-center text-base sm:text-lg">
-              {ctaSubtext}
-            </h2>
-          )}
-        </div>
+
+            {ctaSubtext && (
+              <h2 className="font-red-rose text-center text-base sm:text-lg">
+                {ctaSubtext}
+              </h2>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
