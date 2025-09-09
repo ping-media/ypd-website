@@ -154,7 +154,7 @@ const Navbar = () => {
               href="#"
               className="btn-primary btn-size space-x-0.5 capitalize"
             >
-              <span>
+              <span className="whitespace-nowrap">
                 Create Account
                 {/* Sign up{" "}
                 <span className="hidden max-lg:inline-block xl:inline-block">

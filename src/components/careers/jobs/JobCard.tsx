@@ -23,9 +23,9 @@ export default function JobCard({ job }: { job: Job }) {
         href={job.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-muted-foreground hover:text-brand-accent flex items-center gap-1 pt-1 md:ml-4 md:shrink-0 md:p-2 md:pt-0"
+        className="text-muted-foreground hover:text-brand-accent flex items-center gap-1 md:ml-4 md:shrink-0 md:p-2"
       >
-        <ExternalLink className="h-5 w-5" />
+        <ExternalLink className="block h-5 w-5" />
         <span className="text-sm md:hidden">Apply</span>
       </a>
     </Card>

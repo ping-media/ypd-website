@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -24,6 +24,42 @@ interface NavLinksProps {
 
 const NavLinks = ({ links }: NavLinksProps) => {
   const [openSubDropdown, setOpenSubDropdown] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  // Handle sub-dropdown close with delay
+  const handleSubDropdownClose = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      setOpenSubDropdown(null);
+    }, 300); // 300ms delay - adjust as needed
+  };
+
+  // Handle sub-dropdown open and cancel any pending close
+  const handleSubDropdownOpen = (itemName: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    setOpenSubDropdown(itemName);
+  };
+
+  // Cancel close when mouse re-enters
+  const cancelClose = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  };
 
   return (
     <NavigationMenu
@@ -44,8 +80,8 @@ const NavLinks = ({ links }: NavLinksProps) => {
                     <li key={item.name} className="group relative">
                       {item.subDropdown ? (
                         <div
-                          onMouseEnter={() => setOpenSubDropdown(item.name)}
-                          onMouseLeave={() => setOpenSubDropdown(null)}
+                          onMouseEnter={() => handleSubDropdownOpen(item.name)}
+                          onMouseLeave={handleSubDropdownClose}
                           className="relative cursor-pointer"
                         >
                           {/* Parent Item */}
@@ -56,7 +92,11 @@ const NavLinks = ({ links }: NavLinksProps) => {
 
                           {/* Sub-dropdown */}
                           {openSubDropdown === item.name && (
-                            <div className="absolute top-0 left-full z-50 ml-1">
+                            <div
+                              className="absolute top-0 left-full z-50 ml-1"
+                              onMouseEnter={cancelClose}
+                              onMouseLeave={handleSubDropdownClose}
+                            >
                               <div className="min-w-[180px] rounded-md border border-gray-200 bg-white shadow-lg">
                                 <ul className="py-1">
                                   {item.subDropdown.map((subItem) => (
