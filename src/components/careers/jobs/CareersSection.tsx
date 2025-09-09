@@ -9,8 +9,8 @@ const jobs: Job[] = [
   {
     id: 1,
     title: "Frontend Developer (React / Angular)",
-    location: "India, Bengaluru",
-    flexibility: "Remote / On-Site",
+    location: "India, Delhi",
+    flexibility: "Remote",
     role: "Developer",
     link: "#",
   },
@@ -18,15 +18,15 @@ const jobs: Job[] = [
     id: 2,
     title: "Backend Developer (Node.js, Python, etc.)",
     location: "India, Bengaluru",
-    flexibility: "Remote / On-Site",
+    flexibility: "On-Site",
     role: "Developer",
     link: "#",
   },
   {
     id: 3,
     title: "Mobile App Developer (Flutter / React Native)",
-    location: "India, Bengaluru",
-    flexibility: "Remote / On-Site",
+    location: "India, Delhi",
+    flexibility: "On-Site",
     role: "Developer",
     link: "#",
   },
@@ -34,7 +34,7 @@ const jobs: Job[] = [
     id: 4,
     title: "QA Tester / Automation Engineer",
     location: "India, Bengaluru",
-    flexibility: "Remote / On-Site",
+    flexibility: "Remote",
     role: "QA",
     link: "#",
   },
@@ -53,25 +53,30 @@ export default function CareersSection({
   const [activeFilter, setActiveFilter] = useState("All Roles");
 
   const filteredJobs = jobs.filter((job) => {
+    const jobLocation = job.location.toLowerCase();
+    const jobFlexibility = job.flexibility.toLowerCase();
+    const jobRole = job.role.toLowerCase();
+
     const matchesSearch = job.title
       .toLowerCase()
       .includes(search.toLowerCase());
-    const matchesLocation = location
-      ? job.location.toLowerCase().includes(location)
-      : true;
+    const matchesLocation = location ? jobLocation.includes(location) : true;
     const matchesFlexibility = flexibility
-      ? job.flexibility.toLowerCase().includes(flexibility)
+      ? jobFlexibility.includes(flexibility)
       : true;
+
+    // 👇 Fix: Handle Remote filter specially
     const matchesFilter =
       activeFilter === "All Roles"
         ? true
-        : job.role.toLowerCase().includes(activeFilter.toLowerCase());
+        : activeFilter === "Remote"
+          ? jobFlexibility.includes("remote")
+          : jobRole.includes(activeFilter.toLowerCase());
 
     return (
       matchesSearch && matchesLocation && matchesFlexibility && matchesFilter
     );
   });
-
   return (
     <section className="flex justify-center bg-white p-4 sm:px-10 sm:py-5 lg:px-20 lg:py-10">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-8 sm:gap-12">
