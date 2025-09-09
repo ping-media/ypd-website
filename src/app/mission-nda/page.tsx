@@ -388,8 +388,9 @@ const page = () => {
               <span className="text-brand-primary relative z-10 font-semibold">
                 NDA preparation system
               </span>
-              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
-            </span>{" "}
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>
+            {""}
             built for India’s toughest defense aspirants. Full syllabus mastery,
             SSB readiness, and real-time feedbackon your terms.
           </>

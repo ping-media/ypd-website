@@ -289,7 +289,7 @@ const page = () => {
               <span className="text-brand-primary relative z-10 font-semibold">
                 YPD’s CVP Lite
               </span>
-              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
             is your first step toward real career clarity a guided, AI-powered
             self-discovery experience built for{" "}
@@ -297,7 +297,7 @@ const page = () => {
               <span className="text-brand-primary relative z-10 font-semibold">
                 Grade 7 to 12 students
               </span>
-              <span className="absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm bg-green-100"></span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>
             .
           </>

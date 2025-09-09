@@ -375,7 +375,7 @@ const page = () => {
               <span className="text-brand-primary relative z-10 font-semibold">
                 YPD’s Career Reinvention Aptitude Trainer™
               </span>
-              <span className="bg-brand-bg absolute inset-0 z-0 scale-y-110 rotate-[-2deg] rounded-sm"></span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
             is a new-age training platform that goes beyond theory and delivers
             practical aptitude-building tailored to your career stage, your

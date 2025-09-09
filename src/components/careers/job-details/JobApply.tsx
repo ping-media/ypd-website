@@ -7,7 +7,7 @@ export default function JobApply() {
       <div className="w-full md:rounded-2xl md:border md:border-gray-200 md:bg-white md:p-6 md:shadow-sm md:sm:p-10">
         {/* Heading */}
         <div className="mb-8 text-center">
-          <h2 className="font-red-rose text-2xl font-semibold sm:text-3xl">
+          <h2 className="font-red-rose text-2xl sm:text-3xl">
             Ready to Apply?
           </h2>
           <p className="text-brand-gray mt-2 text-sm sm:text-base">
@@ -15,7 +15,6 @@ export default function JobApply() {
             start the journey.
           </p>
         </div>
-
         {/* Form */}
         <CareersContactForm />
       </div>
