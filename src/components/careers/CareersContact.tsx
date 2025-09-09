@@ -228,7 +228,7 @@ export default function CareersContact() {
                                 </span>
                               </p>
                               <p className="text-xs text-gray-400">
-                                upload your Document (Max 2 MB) *
+                                upload your Resume (Max 2 MB) *
                               </p>
                             </>
                           ) : (

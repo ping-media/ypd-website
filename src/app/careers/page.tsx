@@ -1,6 +1,7 @@
 import CareersContact from "@/components/careers/CareersContact";
 import CareersFeature from "@/components/careers/CareersFeature";
 import CareersGallery from "@/components/careers/CareersGallery";
+import CareersSection from "@/components/careers/jobs/CareersSection";
 import Hero from "@/components/careers/Hero";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import {
@@ -112,6 +113,10 @@ const page = () => {
         features={features}
         ctaText="Start Your Journey Now"
         ctaLink="/#"
+      />
+      <CareersSection
+        heading="Work With Us"
+        subheading="Explore exciting opportunities and join our team."
       />
       <CareersFeature
         heading="Perks & Benefits at YPD"
