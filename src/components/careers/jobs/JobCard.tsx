@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Job } from "./JobList";
+import Link from "next/link";
 
 export default function JobCard({ job }: { job: Job }) {
   return (
@@ -19,15 +20,13 @@ export default function JobCard({ job }: { job: Job }) {
       </p>
 
       {/* External link */}
-      <a
-        href={job.link}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        href={`/careers/${job.slug}`}
         className="text-muted-foreground hover:text-brand-accent flex items-center gap-1 md:ml-4 md:shrink-0 md:p-2"
       >
         <ExternalLink className="block h-5 w-5" />
-        <span className="text-sm md:hidden">Apply</span>
-      </a>
+        <span className="text-sm md:hidden">View</span>
+      </Link>
     </Card>
   );
 }

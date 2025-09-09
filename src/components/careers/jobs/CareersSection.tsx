@@ -3,42 +3,8 @@
 import { useState } from "react";
 import JobSearchBar from "./JobSearchBar";
 import JobFilters from "./JobFilters";
-import JobList, { Job } from "./JobList";
-
-const jobs: Job[] = [
-  {
-    id: 1,
-    title: "Frontend Developer (React / Angular)",
-    location: "India, Delhi",
-    flexibility: "Remote",
-    role: "Developer",
-    link: "#",
-  },
-  {
-    id: 2,
-    title: "Backend Developer (Node.js, Python, etc.)",
-    location: "India, Bengaluru",
-    flexibility: "On-Site",
-    role: "Developer",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "Mobile App Developer (Flutter / React Native)",
-    location: "India, Delhi",
-    flexibility: "On-Site",
-    role: "Developer",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "QA Tester / Automation Engineer",
-    location: "India, Bengaluru",
-    flexibility: "Remote",
-    role: "QA",
-    link: "#",
-  },
-];
+import JobList from "./JobList";
+import { jobs } from "./jobData";
 
 export default function CareersSection({
   heading,

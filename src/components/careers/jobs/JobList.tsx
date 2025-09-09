@@ -6,9 +6,8 @@ export interface Job {
   location: string;
   flexibility: string;
   role: string;
-  link: string;
+  slug: string;
 }
-
 export default function JobList({ jobs }: { jobs: Job[] }) {
   return (
     <div className="flex w-full max-w-7xl flex-col gap-4">
