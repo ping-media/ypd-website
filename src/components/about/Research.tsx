@@ -22,24 +22,24 @@ export default function Research() {
       title: "Adaptive Learning Pathways",
       description:
         "Exploring tailored education journeys through AI-driven adaptability",
-      image: "/about/research.png",
+      image: "/about/research1.png",
     },
     {
       title: "Behavioral Science Model Research",
       description:
         "Integrating psychology and data to refine decision-making models",
-      image: "/about/research.png",
+      image: "/about/research2.png",
     },
     {
       title: "Career Futurism Studies",
       description: "Analyzing future work trends and emerging opportunities",
-      image: "/about/research.png",
+      image: "/about/research3.png",
     },
     {
       title: "Mentor-AI Synergy Development",
       description:
         "Creating advanced mentor-learner interactions powered by AI",
-      image: "/about/research.png",
+      image: "/about/research4.png",
     },
   ];
 

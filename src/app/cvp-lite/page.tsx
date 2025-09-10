@@ -121,7 +121,7 @@ const audience = [
     description:
       "CVP Lite™ is easy to run in batches, offering guided sessions and reports that fit into school schedules.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/meet.png",
   },
   {
     id: 4,
@@ -129,7 +129,7 @@ const audience = [
     description:
       "CVP Lite™ narrows options to 2–3 career paths that align with who you are and what excites you.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/guide.png",
   },
 ];
 const journeySteps = [
@@ -154,7 +154,7 @@ const useCases = [
     description:
       "CVP Lite™ helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/confusion.png",
   },
   {
     id: 2,
@@ -163,7 +163,7 @@ const useCases = [
     description:
       "CVP Lite™ narrows it down to 2–3 career matches that actually align with the student’s profile and mindset.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/options.png",
   },
   {
     id: 3,
@@ -172,7 +172,7 @@ const useCases = [
     description:
       "CVP Lite™ builds a parent-ready report that explains student choices clearly, making the family part of the decision.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/support.png",
   },
   {
     id: 4,
@@ -181,7 +181,7 @@ const useCases = [
     description:
       "CVP Lite™ helps high performers discover what excites them not just what they’re good at.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/marks.png",
   },
 ];
 const highlight = (content: string) => (

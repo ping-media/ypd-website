@@ -111,7 +111,7 @@ const audience = [
     description:
       "Aspirants aiming to clear NDA written & SSB in their first attempt with structured, mentor-led guidance.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/mission-nda/a1.png",
   },
   {
     id: 2,
@@ -119,7 +119,7 @@ const audience = [
     description:
       "Aspirants looking to improve written scores, crack OLQs, and perform stronger in SSB rounds.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/a2.png",
   },
   {
     id: 3,
@@ -127,7 +127,7 @@ const audience = [
     description:
       "Self-study students seeking a guided, adaptive prep system with expert-backed practice.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/mission-nda/a3.png",
   },
   {
     id: 4,
@@ -135,7 +135,7 @@ const audience = [
     description:
       "Affordable, high-quality preparation for aspirants from smaller towns with limited resources.",
     icon: "/cvplite/r5.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/a4.png",
   },
   {
     id: 5,
@@ -143,7 +143,7 @@ const audience = [
     description:
       "Real-time progress tracking, performance insights, and guided improvement plans",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/a5.png",
   },
 ];
 const journeySteps = [
@@ -168,7 +168,7 @@ const useCases = [
     description:
       "Mission NDA™ breaks down the syllabus, OLQs, and interview prep into simple, guided steps.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/r1.png",
   },
   {
     id: 2,
@@ -177,7 +177,7 @@ const useCases = [
     description:
       "Mission NDA™ gives you a structured, day-by-day plan for both written and SSB readiness.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/mission-nda/r2.png",
   },
   {
     id: 3,
@@ -186,7 +186,7 @@ const useCases = [
     description:
       "Our AI-mentor and ex-SSB experts guide you through every stage, with real feedback.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/r3.png",
   },
   {
     id: 4,
@@ -195,7 +195,7 @@ const useCases = [
     description:
       "Mission NDA™ pinpoints weak areas and gives targeted practice to boost your score.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/mission-nda/r4.png",
   },
 ];
 

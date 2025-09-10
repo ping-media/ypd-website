@@ -104,7 +104,7 @@ const audience = [
     description:
       "Explore your strengths, skills, and passions through AI-guided profiling. Get a clear, personalized path for streams, colleges, and future careers.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvp-advance/real.png",
   },
   {
     id: 2,
@@ -112,7 +112,7 @@ const audience = [
     description:
       "Gain research-backed insights, reports, and roadmaps that help you make informed, future-proof decisions for your child’s career journey.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvp-advance/real1.png",
   },
   {
     id: 3,
@@ -120,7 +120,7 @@ const audience = [
     description:
       "Offer students an adaptive, non-generic career clarity program that aligns with board curriculum while preparing them for real-world opportunities.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvp-advance/real2.png",
   },
   {
     id: 4,
@@ -128,7 +128,7 @@ const audience = [
     description:
       "Turn uncertainty into clarity with a guided process that transforms confusion into a confident, actionable plan for the years ahead.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvp-advance/real3.png",
   },
 ];
 const journeySteps = [
@@ -153,7 +153,7 @@ const useCases = [
     description:
       "CVP Advance™ identifies the most suitable stream using AI-driven profiling—factoring in skills, mindset, and career vision, not just peer trends.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/confusion.png",
   },
   {
     id: 2,
@@ -162,7 +162,7 @@ const useCases = [
     description:
       "CVP Advance™ filters the noise, presenting 2–3 high-fit career pathways that align with your personality, strengths, and future goals.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/options.png",
   },
   {
     id: 3,
@@ -171,7 +171,7 @@ const useCases = [
     description:
       "CVP Advance™ provides a detailed, parent-ready report that explains choices, outcomes, and learning plans—making the decision a shared journey.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/support.png",
   },
   {
     id: 4,
@@ -180,7 +180,7 @@ const useCases = [
     description:
       "CVP Advance™ helps top scorers and average students alike discover careers that excite and suit them—beyond just academic grades.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/marks.png",
   },
 ];
 
@@ -200,7 +200,7 @@ const ReviewsData = [
         exactly which internships, certifications, and projects to take.&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/cvp-advance/r1.png",
   },
   {
     id: 2,
@@ -214,7 +214,7 @@ const ReviewsData = [
         {highlight("Now, every step is purposeful.")}&quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/cvp-advance/r2.png",
   },
   {
     id: 3,
@@ -230,7 +230,7 @@ const ReviewsData = [
         —and told me how to get them.&quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/cvp-advance/r3.png",
   },
   {
     id: 4,
@@ -246,7 +246,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/cvp-advance/r4.png",
   },
   {
     id: 5,
@@ -262,7 +262,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/cvp-advance/r5.png",
   },
   {
     id: 6,
@@ -276,7 +276,7 @@ const ReviewsData = [
         {highlight("I’m applying abroad with confidence.")}&quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/cvp-advance/r6.png",
   },
   {
     id: 7,
@@ -291,7 +291,7 @@ const ReviewsData = [
         We’re now supporting him fully in pursuing Design.&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/cvp-advance/r7.png",
   },
   {
     id: 8,
@@ -305,21 +305,7 @@ const ReviewsData = [
         skill training, and placement targets.&quot;
       </>
     ),
-    image: "/cvplite/user2.png",
-  },
-  {
-    id: 9,
-    name: "Tanvi Kulkarni",
-    education: "Class 11, Nagpur",
-    text: (
-      <>
-        &quot;What impressed me most was the adaptability. I switched my target
-        role mid-way,
-        {highlight("and CVP Advance recalibrated my entire plan instantly.")} No
-        wasted effort, only a sharper path.&quot;
-      </>
-    ),
-    image: "/cvplite/user3.png",
+    image: "/cvp-advance/r8.png",
   },
 ];
 
