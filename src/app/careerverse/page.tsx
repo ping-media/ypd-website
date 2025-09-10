@@ -70,7 +70,7 @@ const audience = [
     description:
       "Skip the YouTube noise and vague advice. CareerVerse™ gives you practical, relatable simulations that match your thinking style and future goals.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/mission-nda/a3.png",
   },
   {
     id: 4,
@@ -78,7 +78,7 @@ const audience = [
     description:
       "No more guesswork or hearsay. See your child walk through actual job scenarios — and get a full report to make decisions together.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/mission-nda/a5.png",
   },
 ];
 
@@ -180,7 +180,7 @@ const ReviewsData = [
         and career direction.&quot;
       </>
     ),
-    image: "/cvplite/feedback.png",
+    image: "/careerverse/re1.png",
   },
   {
     id: 5,
@@ -193,7 +193,7 @@ const ReviewsData = [
         flexibility gave me clarity and options for the future.&quot;
       </>
     ),
-    image: "/cvplite/feedback1.png",
+    image: "/careerverse/re2.png",
   },
   {
     id: 6,
@@ -208,7 +208,7 @@ const ReviewsData = [
         — and how I can prepare right now.&quot;
       </>
     ),
-    image: "/cvplite/feedback2.png",
+    image: "/careerverse/re3.png",
   },
 ];
 

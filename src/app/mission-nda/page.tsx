@@ -247,7 +247,7 @@ const ReviewsData = [
         {highlight(" No confusion anymore.")}&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/mission-nda/re1.png",
   },
   {
     id: 2,
@@ -262,7 +262,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/mission-nda/re5.png",
   },
   {
     id: 3,
@@ -290,7 +290,7 @@ const ReviewsData = [
         {highlight(" made me practice with focus and purpose.")}&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/mission-nda/re7.png",
   },
   {
     id: 5,
@@ -318,7 +318,7 @@ const ReviewsData = [
         {highlight(" just like top academies.")}&quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/mission-nda/re6.png",
   },
 ];
 
