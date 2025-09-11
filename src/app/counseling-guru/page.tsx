@@ -122,7 +122,7 @@ const audience = [
     description:
       "Gain clarity to help your child choose the right stream, course, and career path with confidence and local job insights.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/cvplite/support.png",
   },
   {
     id: 3,
@@ -130,7 +130,7 @@ const audience = [
     description:
       "Navigate job shifts, upskilling, or complete career changes with a roadmap built for the Indian market realities.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/cvplite/guide.png",
   },
   {
     id: 4,
