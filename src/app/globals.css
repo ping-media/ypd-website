@@ -199,20 +199,20 @@ html {
   content: '';
   position: absolute;
   left: 25px;
-  top: 85px;
+  top: 83px;
   height: 83%;
   width: 2px;
   border-left: 2px dashed #666666;
   z-index: 0;
 }
 
-@media screen and (max-width: 1024px) { /* Tablet */
+/* @media screen and (min-width: 1024px) and (max-width: 1152px) { 
   .line-element::after {
-    left: 25px;
-    top: 70px;
-    height: 80%;
+    left: 25px;   
+    top: 130px;   
+    height: 80%;  
   }
-}
+} */
 
 @media screen and (max-width: 640px) { /* Mobile */
   .line-element::after {

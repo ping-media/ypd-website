@@ -61,20 +61,23 @@ const CvpSteps = ({
         </div>
 
         {/* Content */}
-        <div className="flex w-full max-w-7xl flex-col justify-between gap-4 sm:gap-10 lg:flex-row lg:gap-14">
+        <div className="flex w-full max-w-7xl flex-col gap-4 sm:gap-10 lg:flex-row lg:items-stretch lg:gap-14">
           {/* Image */}
-          <div className="flex w-full flex-shrink-0 justify-center lg:w-[526px]">
-            <Image
-              src="/step.png"
-              alt="Steps"
-              width={526}
-              height={726}
-              className="h-auto w-full max-w-[400px] object-center lg:max-w-none"
-            />
+          <div className="flex w-full items-center justify-center overflow-hidden rounded-lg lg:w-1/2">
+            <div className="relative h-[400px] w-full max-w-md sm:h-[500px] sm:max-w-lg lg:h-full lg:max-w-none">
+              <Image
+                src="/step.png"
+                alt="Steps"
+                fill
+                sizes="(max-width: 640px) 384px, (max-width: 1024px) 512px, 50vw"
+                className="object-contain lg:object-cover"
+                priority
+              />
+            </div>
           </div>
 
           {/* Steps */}
-          <div className="line-element relative flex w-full flex-col items-center gap-4 sm:gap-8 lg:w-[694px] lg:gap-10">
+          <div className="line-element relative flex w-full flex-col justify-center gap-4 sm:gap-8 lg:w-1/2 lg:gap-10">
             {steps.map((step, i) => (
               <div
                 key={i}
@@ -82,10 +85,8 @@ const CvpSteps = ({
               >
                 {/* Number + connector */}
                 <div className="relative flex flex-col items-center">
-                  {/* Number block */}
                   <div className="bg-brand-primary relative z-10 flex h-10 w-10 items-center justify-center rounded-lg text-sm text-white sm:h-12 sm:w-12 sm:text-base">
                     {step.number ?? step.id ?? i + 1}
-                    {/* Horizontal line */}
                     <div className="border-brand-gray absolute top-1/2 left-full hidden w-10 border-t-2 border-dashed sm:block"></div>
                   </div>
                 </div>
