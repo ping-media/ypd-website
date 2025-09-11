@@ -40,8 +40,18 @@ export default function CvpHero({
         }`}
       >
         {/* Text Content */}
-        <div className="flex-1 space-y-5 text-center sm:space-y-6 lg:text-left">
-          <h2 className="font-red-rose text-2xl leading-snug sm:text-3xl lg:text-[42px]">
+        <div className="flex-1 space-y-5 text-center sm:space-y-6 sm:text-left">
+          <h2 className="font-red-rose relative inline-block text-2xl leading-snug sm:text-3xl lg:text-[42px]">
+            {/* SVG positioned absolutely */}
+            <div className="absolute -top-12 -left-16 hidden h-24 w-24 lg:block">
+              <Image
+                src="/icons/top.svg"
+                alt="Decorative SVG"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+
             {title}
           </h2>
 
