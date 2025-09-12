@@ -43,7 +43,7 @@ const audience = [
     description:
       "Automate routine tasks and save hours every week, so you can focus on what really matters.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/module/1.png",
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const audience = [
     description:
       "Your data is protected with enterprise-grade security and uptime you can always count on.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/module/2.png",
   },
   {
     id: 3,
@@ -59,7 +59,7 @@ const audience = [
     description:
       "Whether you’re starting small or expanding globally, our modules grow with your organization.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/module/3.png",
   },
 ];
 const page = () => {

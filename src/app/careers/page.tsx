@@ -71,27 +71,27 @@ const careersFeatures = [
 ];
 const galleryImages = [
   {
-    src: "/growth1.png",
+    src: "/careers/1.png",
     alt: "Meeting room",
   },
   {
-    src: "/growth2.png",
+    src: "/careers/2.png",
     alt: "Multiple monitors",
   },
   {
-    src: "/growth3.png",
+    src: "/careers/3.png",
     alt: "Project success",
   },
   {
-    src: "/growth1.png",
+    src: "/careers/4.png",
     alt: "Room presentation",
   },
   {
-    src: "/growth2.png",
+    src: "/careers/5.png",
     alt: "Project details",
   },
   {
-    src: "/growth3.png",
+    src: "/careers/6.png",
     alt: "Lounge area",
   },
 ];

@@ -90,7 +90,7 @@ const useCases = [
     description:
       "CareerVerse™ lets students simulate what a day, a month, or a journey feels like in real roles — from Design Architect to Wildlife Conservationist to Blockchain Analyst. It adapts the tasks, pressure, and soft skills to the student’s profile.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/careerverse/1.png",
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ const useCases = [
     description:
       "Think Science is your stream, but hate labs? CareerVerse™ shows you how your current stream fits into 10+ roles — and if a switch or bridge path is better. It’s not about marks — it’s about mindset, interests, and practical fit.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/careerverse/2.png",
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ const useCases = [
     description:
       "Unlike static career maps, CareerVerse™ shows how different streams lead to the same career — with different skills. Explore roles like Game Developer, Business Analyst, or Social Entrepreneur from your stream’s angle.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/careerverse/3.png",
   },
   {
     id: 4,
@@ -117,7 +117,7 @@ const useCases = [
     description:
       "CareerVerse™ simulates fast-growing careers that textbooks don’t cover — like AI Ethics Researcher, Climate Risk Analyst, or Urban Mobility Planner. You don’t just read about these roles — you experience their world.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/careerverse/.png",
   },
 ];
 const highlight = (content: string) => (
