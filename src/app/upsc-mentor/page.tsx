@@ -116,7 +116,7 @@ const audience = [
     description:
       "Ready to commit to a structured plan covering Prelims, Mains, and Interview stages.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/upsc/1.png",
   },
   {
     id: 2,
@@ -124,7 +124,7 @@ const audience = [
     description:
       "Want to fix blind spots, optimize answer writing, and sharpen interview presence.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/upsc/2.png",
   },
   {
     id: 3,
@@ -132,7 +132,7 @@ const audience = [
     description:
       "Need a clear, step-by-step roadmap without wasting years on trial-and-error.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/upsc/3.png",
   },
   {
     id: 4,
@@ -140,7 +140,7 @@ const audience = [
     description:
       "Access affordable, AI-driven preparation with full syllabus coverage and strategy sessions.",
     icon: "/cvplite/r5.svg",
-    image: "/cvplite/uses.png",
+    image: "/upsc/4.png",
   },
   {
     id: 5,
@@ -148,7 +148,7 @@ const audience = [
     description:
       "Get transparent, real-time updates on milestones, performance, and readiness.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/upsc/5.png",
   },
 ];
 const journeySteps = [
@@ -173,7 +173,7 @@ const useCases = [
     description:
       "UPSC Mentor helps break down the syllabus into priority topics, aligning them with your preparation stage and exam timelines.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/upsc/r1.png",
   },
   {
     id: 2,
@@ -182,7 +182,7 @@ const useCases = [
     description:
       "UPSC Mentor provides structured answer-writing practice with evaluation rubrics mapped to UPSC standards.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/upsc/r2.png",
   },
   {
     id: 3,
@@ -191,7 +191,7 @@ const useCases = [
     description:
       "UPSC Mentor guides you in evaluating optional subjects based on scoring trends, overlap with GS papers, and personal interest.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/upsc/r3.png",
   },
   {
     id: 4,
@@ -200,7 +200,7 @@ const useCases = [
     description:
       "UPSC Mentor offers realistic mock interview simulations with panel-style feedback to build confidence and articulation.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/upsc/r4.png",
   },
 ];
 const numbersteps = [
@@ -263,7 +263,7 @@ const ReviewsData = [
         a clear strategy to follow daily.&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/upsc/re1.png",
   },
   {
     id: 2,
@@ -276,7 +276,7 @@ const ReviewsData = [
         preparation stage, not a generic schedule.”
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/upsc/re2.png",
   },
   {
     id: 3,
@@ -289,7 +289,7 @@ const ReviewsData = [
         for the Personality Test went through the roof.”
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/upsc/re3.png",
   },
   {
     id: 4,
@@ -302,7 +302,7 @@ const ReviewsData = [
         progress this closely.”
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/upsc/re4.png",
   },
   {
     id: 5,
@@ -315,7 +315,7 @@ const ReviewsData = [
         that made every hour count.”
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/upsc/re5.png",
   },
   {
     id: 6,
@@ -328,7 +328,7 @@ const ReviewsData = [
         into monthly, weekly, and daily milestones I could actually follow.”
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/upsc/re6.png",
   },
 ];
 
