@@ -163,7 +163,7 @@ const useCases = [
     description:
       "We compare roles on scope, eligibility, future growth, and your personal fit, so you choose with confidence.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/counseling-guru/r1.png",
   },
   {
     id: 2,
@@ -172,7 +172,7 @@ const useCases = [
     description:
       "We shortlist based on cutoffs, fees, scholarships, ROI, and your role plan — not random rankings.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/counseling-guru/r2.png",
   },
   {
     id: 3,
@@ -181,7 +181,7 @@ const useCases = [
     description:
       "We give parents a clear, fact-based report to bridge differences and build consensus.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/counseling-guru/r3.png",
   },
   {
     id: 4,
@@ -190,7 +190,7 @@ const useCases = [
     description:
       "We confirm your stream, role, and pathway with real eligibility checks and future readiness mapping.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/counseling-guru/r4.png",
   },
 ];
 
@@ -208,7 +208,7 @@ const ReviewsData = [
         understands both me and the market.!&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/counseling-guru/1.png",
   },
   {
     id: 2,
@@ -220,7 +220,7 @@ const ReviewsData = [
         us weeks of research.”
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/counseling-guru/2.png",
   },
   {
     id: 3,
@@ -233,7 +233,7 @@ const ReviewsData = [
         we could act on the next day.”
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/counseling-guru/3.png",
   },
 ];
 const cgFaqs = [

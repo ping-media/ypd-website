@@ -142,7 +142,7 @@ const audience = [
     description:
       "Helps graduates align course choice, university fit, and post-study work options with realistic budgets and ROI clarity.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/global-navigator/2.png",
   },
   {
     id: 3,
@@ -150,7 +150,7 @@ const audience = [
     description:
       "Cuts through the noise with data-backed comparisons, adaptive guidance, and step-by-step application support.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/global-navigator/3.png",
   },
   {
     id: 4,
@@ -158,7 +158,7 @@ const audience = [
     description:
       "Gives parents an at-a-glance view of costs, timelines, and career prospects for informed, confident decision-making.",
     icon: "/cvplite/r5.svg",
-    image: "/cvplite/uses.png",
+    image: "/global-navigator/4.png",
   },
 ];
 const journeySteps = [
@@ -183,16 +183,16 @@ const useCases = [
     description:
       "Global Navigator helps you shortlist countries that match your academic goals, budget, and lifestyle preferences — all without relying on generic rankings.     ",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/global-navigator/4.png",
   },
   {
     id: 2,
     title: "Too Many University Options",
-    quote: `“I’m not sure if I should choose the USA, UK, Canada, or Australia.”`,
+    quote: `There are so many universities, I don’t know which ones fit me.`,
     description:
       "Global Navigator helps you shortlist countries that match your academic goals, budget, and lifestyle preferences — all without relying on generic rankings.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/global-navigator/3.png",
   },
   {
     id: 3,
@@ -201,7 +201,7 @@ const useCases = [
     description:
       "Global Navigator creates a detailed report that aligns your aspirations with parental concerns — making decisions clear and confident.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/global-navigator/r3.png",
   },
   {
     id: 4,
@@ -210,7 +210,7 @@ const useCases = [
     description:
       "Global Navigator matches you with cost-effective universities and scholarship pathways that don’t compromise on quality.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/global-navigator/r4.png",
   },
 ];
 
@@ -231,7 +231,7 @@ const ReviewsData = [
         Canada!”&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/global-navigator/re1.png",
   },
   {
     id: 2,
@@ -244,7 +244,7 @@ const ReviewsData = [
         matched my budget, grades, and career goals perfectly.”
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/global-navigator/re2.png",
   },
   {
     id: 3,
@@ -257,7 +257,7 @@ const ReviewsData = [
         gave us full confidence to proceed with her UK application.”
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/global-navigator/re3.png",
   },
   {
     id: 4,
@@ -270,7 +270,7 @@ const ReviewsData = [
         list of best-fit universities and their deadlines in one dashboard.”
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/global-navigator/re4.png",
   },
   {
     id: 5,
@@ -283,7 +283,7 @@ const ReviewsData = [
         hadn’t even heard of before using Global Navigator.”
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/global-navigator/re5.png",
   },
   {
     id: 6,
@@ -297,7 +297,7 @@ const ReviewsData = [
         from SOP drafting to visa prep.”
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/global-navigator/re6.png",
   },
 ];
 
@@ -373,7 +373,7 @@ const page = () => {
         buttonLink="/global-navigator/#video"
         secondaryButtonLink="/#"
         secondaryButtonText="See How It Works"
-        image="/career-reboot/hero.png"
+        image="/global-navigator/hero.png"
         imageAlt="global navigator"
       />
       <CvpVideo

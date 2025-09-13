@@ -25,7 +25,7 @@ const reviews = [
     text: "CareerVerse™ helped me try out roles I never knew about. I thought I wanted to be an engineer, but now I’m actually planning for Urban Design! It feels real, not like reading a textbook.",
     name: "Shreya Gupta",
     education: "Grade 11, Jaipur",
-    image: "/about/c1.png",
+    image: "/career-vision/1.png",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const reviews = [
     text: "I asked about Mass Communication careers, and it didn’t give generic answers. It explained colleges, entrance exams, role types, even salary range! This is what every student needs.",
     name: "Pranav Raj",
     education: "Grade 12, Bhopal",
-    image: "/about/c2.png",
+    image: "/career-vision/2.png",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const reviews = [
     text: "I used to struggle with SSB prep. The YPD NDA mentor trained me like an officer — from OLQs to daily tasks. I feel more confident and focused now.",
     name: "Deepak Singh",
     education: "NDA Aspirant, Lucknow",
-    image: "/about/c3.png",
+    image: "/career-vision/3.png",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const reviews = [
     text: "Global Navigator showed the safest countries, best colleges, and ROI for my budget. I wish I had this before spending so much on study abroad agents.",
     name: "Aarav Menon",
     education: "UG Student, Kochi",
-    image: "/about/c4.png",
+    image: "/career-vision/4.png",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const reviews = [
     text: "The Career Vision Program helped my daughter select her stream with confidence. The family guide made it easy for us to support her choice.",
     name: "Anjali Deshmukh",
     education: "Parent, Nagpur",
-    image: "/about/c5.png",
+    image: "/career-vision/5.png",
   },
   {
     id: 6,
@@ -65,7 +65,7 @@ const reviews = [
     text: "I never imagined career clarity could be so structured. The step-by-step CVP Advance journey showed me exactly where my strengths fit.",
     name: "Raghav Sharma",
     education: "Class 12 Student, Jaipur",
-    image: "/about/c6.png",
+    image: "/career-vision/6.png",
   },
   {
     id: 7,
@@ -73,7 +73,7 @@ const reviews = [
     text: "As a Tier-2 city parent, I was worried about limited exposure. CVP gave my son clarity on future careers we had never even heard of.",
     name: "Suresh Yadav",
     education: "Parent, Lucknow",
-    image: "/about/c1.png",
+    image: "/career-vision/7.png",
   },
   {
     id: 8,
@@ -81,7 +81,7 @@ const reviews = [
     text: "The report wasn’t just test scores — it was a roadmap. It showed me my top roles, skills to build, and a 90-day plan.",
     name: "Meera Iyer",
     education: "B.Com Undergraduate, Kochi",
-    image: "/about/c2.png",
+    image: "/career-vision/8.png",
   },
   {
     id: 9,
@@ -89,7 +89,7 @@ const reviews = [
     text: "I liked how CVP balanced my child’s interest with realistic pathways. It made career discussions at home stress-free.",
     name: "Rajesh Malhotra",
     education: "Parent, Delhi",
-    image: "/about/c3.png",
+    image: "/career-vision/9.png",
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ const reviews = [
     text: "The CVP journey prepared me for both Indian and global options. It felt like a mentor guiding me personally.",
     name: "Simran Kaur",
     education: "Class 11 Student, Chandigarh",
-    image: "/about/c4.png",
+    image: "/career-vision/10.png",
   },
 ];
 
