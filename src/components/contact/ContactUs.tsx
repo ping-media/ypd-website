@@ -81,7 +81,7 @@ const ContactUs = () => {
             <div className="flex w-fit flex-col gap-2 font-sans text-sm">
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Phone className="text-brand-primary h-6 w-6" />
-                +91 8650126521
+                <a href="tel:+918650126521">+91 8650126521</a>
               </p>
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Image
@@ -90,7 +90,13 @@ const ContactUs = () => {
                   width={24}
                   height={24}
                 />
-                +91 7300688536
+                <a
+                  href="https://wa.me/917300868536"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +91 7300688536
+                </a>
               </p>
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Image
@@ -99,7 +105,9 @@ const ContactUs = () => {
                   width={24}
                   height={24}
                 />
-                support@youthpulsedigital.com
+                <a href="mailto:support@youthpulsedigital.com">
+                  support@youthpulsedigital.com
+                </a>
               </p>
             </div>
 

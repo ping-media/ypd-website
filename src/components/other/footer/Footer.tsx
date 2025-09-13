@@ -69,8 +69,8 @@ export default function Footer() {
                 alt="Email"
                 width={20}
                 height={20}
-              />{" "}
-              +91 8650126521
+              />
+              <a href="tel:+918650126521">+91 8650126521</a>
             </p>
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
@@ -81,7 +81,6 @@ export default function Footer() {
               />
               <a
                 href="https://wa.me/917300868536"
-                className="hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,10 +94,7 @@ export default function Footer() {
                 width={20}
                 height={20}
               />
-              <a
-                href="mailto:support@youthpulsedigital.com"
-                className="hover:underline"
-              >
+              <a href="mailto:support@youthpulsedigital.com">
                 support@youthpulsedigital.com
               </a>
             </p>
@@ -130,7 +126,7 @@ export default function Footer() {
                   width={20}
                   height={20}
                 />
-                +91 8650126521
+                <a href="tel:+918650126521">+91 8650126521</a>
               </p>
               <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
                 <Image
@@ -179,8 +175,8 @@ export default function Footer() {
             title="Students"
             links={[
               { label: "Career Vision Program™", href: "/career-vision" },
-              { label: "CVP lite", href: "/cvp-lite" },
-              { label: "CVP Advance", href: "/cvp-advance" },
+              { label: "CVP lite™", href: "/cvp-lite" },
+              { label: "CVP Advance™", href: "/cvp-advance" },
               { label: "CareerVerse™", href: "/careerverse" },
               { label: "Counseling Guru™", href: "/counseling-guru" },
               { label: "Global Navigator™", href: "/global-navigator" },

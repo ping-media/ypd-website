@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const socialLinks = [
-  { href: "#", src: "/icons/ig.svg", alt: "Instagram", label: "Instagram" },
-  { href: "#", src: "/icons/yt.svg", alt: "YouTube", label: "YouTube" },
-  { href: "#", src: "/icons/fb.svg", alt: "Facebook", label: "Facebook" },
-  { href: "#", src: "/icons/li.svg", alt: "LinkedIn", label: "LinkedIn" },
+  { href: "", src: "/icons/ig.svg", alt: "Instagram", label: "Instagram" },
+  { href: "", src: "/icons/yt.svg", alt: "YouTube", label: "YouTube" },
+  { href: "", src: "/icons/fb.svg", alt: "Facebook", label: "Facebook" },
+  { href: "", src: "/icons/li.svg", alt: "LinkedIn", label: "LinkedIn" },
 ];
 
 const SocialLinks = () => {

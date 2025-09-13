@@ -205,8 +205,8 @@ const PricingPage = () => {
               <option value="CVP Lite">CVP Lite™</option>
               <option value="CVP Advance">CVP Advance™</option>
               <option value="CareerVerse">CareerVerse™</option>
-              {/* <option value="Mission NDA">Mission NDA™</option> */}
-              {/* <option value="UPSC Mentor">UPSC Mentor™</option> */}
+              <option value="Mission NDA">Mission NDA™</option>
+              <option value="UPSC Mentor">UPSC Mentor™</option>
               <option value="Counselling Guru">Counselling Guru™</option>
               <option value="Global Navigator">Global Navigator™</option>
               <option value="Reboot Navigator">Reboot Navigator™</option>
