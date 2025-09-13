@@ -342,13 +342,13 @@ const page = () => {
           "Multi-stream pathways + ROI-driven decision logic",
         ]}
         ctaText="Try Counseling Guru™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpFeature
         heading="Key Features That Empower Your Career Journey"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -364,7 +364,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
       <CvpPricing
@@ -510,13 +510,13 @@ const page = () => {
             label: "Subscribe Full Access ₹1499-3499 ",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

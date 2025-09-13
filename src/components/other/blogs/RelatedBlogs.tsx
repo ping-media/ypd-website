@@ -24,7 +24,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog1.png",
-    link: "#",
+    link: "/coming-soon",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog2.png",
-    link: "#",
+    link: "/coming-soon",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog3.png",
-    link: "#",
+    link: "/coming-soon",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog2.png",
-    link: "#",
+    link: "/coming-soon",
   },
 ];
 

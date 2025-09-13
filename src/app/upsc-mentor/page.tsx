@@ -421,7 +421,7 @@ const page = () => {
         heading="Key Features That Empower Your UPSC Journey"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <Tables
         heading="Structured Journey. One Dashboard. Three Tracks."
@@ -445,14 +445,14 @@ const page = () => {
           "One-on-One Mock Panels, Real-Time Feedback, Improvement Tracking",
         ]}
         ctaText="Try UPSC Mentors™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="Why UPSC Mentor™ Is a Game Changer"
         subheading="Over a structured journey, you’ll go through"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -468,7 +468,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes UPSC success is not just about syllabus completion — it’s a guided evolution towards becoming an impactful civil servant."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Perfect for first attempt, repeat attempt, or parallel preparation with graduation."
       />
       <CvpJourney
@@ -563,13 +563,13 @@ const page = () => {
             label: "Subscribe Full Access (₹7,999 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

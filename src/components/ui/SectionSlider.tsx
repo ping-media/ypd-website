@@ -23,7 +23,7 @@ const SectionSlider: React.FC<SectionSliderProps> = ({
   children,
   buttonIcon,
   buttonText,
-  buttonHref = "#",
+  buttonHref = "/coming-soon",
 }) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);

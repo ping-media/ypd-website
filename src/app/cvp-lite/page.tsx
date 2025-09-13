@@ -324,14 +324,14 @@ const page = () => {
         heading="Key Features That Empower Your Career Journey"
         features={featuresData}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="What’s Inside"
         subheading="We don’t reveal every step online — but here’s what you’ll go through:"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaNote="Each capsule is short, engaging, and designed to unlock insights no more than 15–20 minutes each."
       />
       <WhyCvpLite
@@ -352,7 +352,7 @@ const page = () => {
           "Personalized AI-driven feedback",
         ]}
         ctaText="Try CVP Lite™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -368,7 +368,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       <CvpJourney
@@ -459,13 +459,13 @@ const page = () => {
             label: "Unlock Full Access – ₹899",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

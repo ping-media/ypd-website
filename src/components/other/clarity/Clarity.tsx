@@ -10,7 +10,7 @@ const clarityCards: ClarityCardProps[] = [
   {
     image: "/clarity2.png",
     text: "Sneak Peek",
-    href: "/#",
+    href: "/coming-soon",
     icon: "/icons/c2.svg",
   },
   {

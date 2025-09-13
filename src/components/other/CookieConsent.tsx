@@ -59,7 +59,7 @@ export default function CookieConsent() {
             {/* Buttons */}
             <div className="flex w-full flex-col items-center justify-center gap-3 text-sm sm:w-auto sm:flex-row sm:gap-5 sm:text-base lg:text-lg">
               <Link
-                href={"/#"}
+                href={"/coming-soon"}
                 className="border-brand-accent flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
               >
                 Cookies Settings

@@ -19,7 +19,7 @@ const steps = [
       "Automated notifications & reports",
     ],
     buttonText: "Inquire Now",
-    buttonLink: "/#",
+    buttonLink: "/coming-soon",
   },
   {
     title: "Hiring Module",
@@ -33,7 +33,7 @@ const steps = [
       "User Management",
     ],
     buttonText: "Inquire Now",
-    buttonLink: "/#",
+    buttonLink: "/coming-soon",
   },
 ];
 const audience = [
@@ -69,9 +69,9 @@ const page = () => {
         heading="Powerful Modules to Simplify Your Workflows"
         subheading="Choose the right tool for your needs whether it’s managing admissions & tests or streamlining hiring. Get started today."
         ctaLabel="Apply for Admission Module"
-        ctaHref="/#"
+        ctaHref="/coming-soon"
         ctaIcon={<Sparkles className="h-5 w-5 sm:h-6 sm:w-6" />}
-        secondaryCtaHref="/#"
+        secondaryCtaHref="/coming-soon"
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
@@ -100,7 +100,7 @@ const page = () => {
         }
         subheading="Select the module that fits your needs and apply today. Our team will guide you through setup."
         ctaText="Enquire For Any Module"
-        ctaHref="/#"
+        ctaHref="/coming-soon"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq />

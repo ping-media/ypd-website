@@ -48,11 +48,11 @@ const Links = [
         subDropdown: [
           { name: "Counseling Guru™", href: "/counseling-guru" },
           { name: "Global Navigator™", href: "/global-navigator" },
-          { name: "SparkPath™", href: "/#" },
-          { name: "SpecialStars™", href: "/#" },
+          { name: "SparkPath™", href: "/coming-soon" },
+          { name: "SpecialStars™", href: "/coming-soon" },
         ],
       },
-      { name: "Mentor Connect", href: "/mentor-connect" },
+      { name: "Mentor Connect", href: "/coming-soon" },
     ],
   },
   {
@@ -67,7 +67,7 @@ const Links = [
         name: "Skilled Mentors",
         subDropdown: [
           { name: "Aptitude Trainer™", href: "/crp-aptitude" },
-          { name: "Reinvention Guru™", href: "/#" },
+          { name: "Reinvention Guru™", href: "/coming-soon" },
         ],
       },
     ],
@@ -75,13 +75,13 @@ const Links = [
   {
     name: "Corporate",
     dropdown: [
-      { name: "Admission Test", href: "/#" },
-      { name: "Hiring & Onboarding", href: "/#" },
-      { name: "School / Institute OS", href: "/#" },
-      { name: "Institute Connect", href: "/#" },
-      { name: "MSME Connect", href: "/#" },
-      { name: "Corporate Connect", href: "/#" },
-      { name: "Govt Connect", href: "/#" },
+      { name: "Admission Test", href: "/coming-soon" },
+      { name: "Hiring & Onboarding", href: "/coming-soon" },
+      { name: "School / Institute OS", href: "/coming-soon" },
+      { name: "Institute Connect", href: "/coming-soon" },
+      { name: "MSME Connect", href: "/coming-soon" },
+      { name: "Corporate Connect", href: "/coming-soon" },
+      { name: "Govt Connect", href: "/coming-soon" },
     ],
   },
 ];
@@ -151,7 +151,7 @@ const Navbar = () => {
           {/* Sign-up button */}
           <div className="hidden flex-1 justify-end sm:flex">
             <Link
-              href="#"
+              href="/coming-soon"
               className="btn-primary btn-size space-x-0.5 capitalize"
             >
               <span className="whitespace-nowrap">
@@ -276,7 +276,7 @@ const Navbar = () => {
 
           <div className="hidden pt-4 max-sm:block">
             <Link
-              href="#"
+              href="/coming-soon"
               className="btn-primary btn-size block w-full text-center uppercase"
               onClick={() => setMobileOpen(false)}
             >

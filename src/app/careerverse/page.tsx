@@ -320,7 +320,7 @@ const page = () => {
           </>
         }
         buttonText="Start Program Now"
-        buttonLink="/#"
+        buttonLink="/coming-soon"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/careerverse/#video"
         image="/careerverse/hero.png"
@@ -350,14 +350,14 @@ const page = () => {
           "Asks “Can you handle a day in a hospital?”",
         ]}
         ctaText="Try CareerVerse™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="What You’ll Experience"
         subheading="Explore immersive career environments where you’ll take on real tasks, face industry scenarios, and uncover what truly excites you."
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpRealworld
         heading="CareerVerse™ Real World Use Cases"
@@ -403,7 +403,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       {/*  */}

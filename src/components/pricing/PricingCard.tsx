@@ -49,7 +49,7 @@ const PricingCard = ({
 
       {/* Button */}
       <Link
-        href={"#"}
+        href={"/coming-soon"}
         className="btn-size w-full border-gray-300 bg-green-50 font-medium hover:bg-green-100"
       >
         {priceText}

@@ -413,14 +413,14 @@ const page = () => {
         subheading="In just one structured session, you’ll explore:"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteWorks
         heading="Who is this for?"
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal — it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Hindi + Simple English  • Mobile Friendly  • Voice-guided Mentoring Coming Soon"
       />
       <CrSteps
@@ -484,7 +484,7 @@ const page = () => {
         heading="Your Progress, Your Way"
         features={crData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <WhyCvpLite
         heading="Why Choose Us?"
@@ -504,7 +504,7 @@ const page = () => {
           "AI with Emotion + Reflection",
         ]}
         ctaText="Try Reboot Navigator™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpSteps
         steps={numbersteps}
@@ -524,13 +524,13 @@ const page = () => {
             label: "Simulate Your Future Career ",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />
@@ -585,7 +585,7 @@ const page = () => {
           "Real-time dashboard metrics to monitor skill mastery, role readiness, and employability score.",
         ]}
         ctaText="Try Reboot Navigator™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <Vs
         heading="Reboot Navigator™ vs Others"

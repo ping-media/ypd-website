@@ -64,18 +64,21 @@ const Hero = () => {
           {/* Buttons */}
           <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5">
             <Link
-              href={"/#"}
+              href={"/coming-soon"}
               className="btn-transparent btn-size max-sm:w-full"
             >
               <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Student
             </Link>
-            <Link href={"/#"} className="btn-primary btn-size max-sm:w-full">
+            <Link
+              href={"/coming-soon"}
+              className="btn-primary btn-size max-sm:w-full"
+            >
               <UserRound className="h-5 w-5 sm:h-6 sm:w-6" />
               I&apos;m a Parent
             </Link>
             <Link
-              href={"/#"}
+              href={"/coming-soon"}
               className="btn-transparent btn-size max-sm:w-full"
             >
               <Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />

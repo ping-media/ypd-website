@@ -319,7 +319,7 @@ const page = () => {
         imageSrc="/cvhero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="Try Career Vision"
-        ctaHref="/#"
+        ctaHref="/coming-soon"
         ctaIcon={<Zap className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       <CvpVideo
@@ -338,7 +338,7 @@ const page = () => {
         subheading="Choosing a career is never just the student’s journey — families are part of every decision. The Career Vision Program™ bridges the gap between student aspirations and parental expectations with clarity, transparency, and confidence."
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvHero
         title="Youth Pulse Digital™ Ecosystem: Your Partner for Life"
@@ -360,7 +360,7 @@ const page = () => {
         ]}
         featuresTwoCols
         buttonText="Register Now"
-        buttonLink="/#"
+        buttonLink="/coming-soon"
         image="/cv.png"
         imageAlt="career vision"
       />

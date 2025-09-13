@@ -416,7 +416,7 @@ const page = () => {
         heading="Key Features That Power Your NDA & SSB Success"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <Tables
         heading="Structured Journey One Dashboard. Three Tracks."
@@ -436,14 +436,14 @@ const page = () => {
           "Mock interviews, GD prep, real response tracking",
         ]}
         ctaText="Try Mission NDA™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="Why Mission NDA™ Is a Game Changer"
         subheading="Prepare with strategy & planning"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -459,7 +459,7 @@ const page = () => {
         subheading="Build to ensure a focused preparation in your own space"
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Perfect Step for serious Aspirants who wants clarity over confusion"
       />
       <Tables
@@ -490,7 +490,7 @@ const page = () => {
           "Full simulation with voice & judgment paths",
         ]}
         ctaText="Try Mission NDA™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpJourney
         heading="Built by Defense Officers, Psychologists, and AI Experts"
@@ -581,13 +581,13 @@ const page = () => {
             label: "Subscribe Full Access (₹4999 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

@@ -371,7 +371,7 @@ const page = () => {
         featuresTwoCols
         buttonText="Book Your Slot Now"
         buttonLink="/global-navigator/#video"
-        secondaryButtonLink="/#"
+        secondaryButtonLink="/coming-soon"
         secondaryButtonText="See How It Works"
         image="/global-navigator/hero.png"
         imageAlt="global navigator"
@@ -386,7 +386,7 @@ const page = () => {
         heading="Key Features That Empower Your Career Decisions"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       {/*  */}
       {/* SECTION TO ADD (What Makes Global Navigator™ the First of Its Kind?) */}
@@ -411,14 +411,14 @@ const page = () => {
           "Lifetime re-access to your personalized journey",
         ]}
         ctaText="Try Global Navigator™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="Your Personalized Global Journey Powered by AI + Mentor"
         subheading="In just one structured session, you’ll explore:"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <Tables
         heading="Structured Journey. One Dashboard. Global Pathways."
@@ -448,7 +448,7 @@ const page = () => {
           "Transparent reports for families with side-by-side options and clear action plans",
         ]}
         ctaText="Try Global Navigator™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
 
       {/* SECTION TO MODIFY (Lines) */}
@@ -466,7 +466,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
 
@@ -490,13 +490,13 @@ const page = () => {
             label: "Simulate Your Future Career",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />
@@ -615,13 +615,13 @@ const page = () => {
             label: "Subscribe Full Access (₹3,499 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

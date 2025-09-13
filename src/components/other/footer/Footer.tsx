@@ -165,10 +165,10 @@ export default function Footer() {
               { label: "Pricing", href: "/pricing" },
               { label: "Careers", href: "/careers" },
               { label: "Contact Us", href: "/contact" },
-              { label: "Mentor Connect", href: "/mentor-connect" },
+              { label: "Mentor Connect", href: "/coming-soon" },
               { label: "Privacy Policy", href: "/privacy-policy" },
               { label: "Terms of Use", href: "/terms" },
-              { label: "Subscribe to Newsletters ", href: "/newsletter" },
+              { label: "Subscribe to Newsletters ", href: "/coming-soon" },
             ]}
           />
           <FooterSectionAccordion
@@ -182,9 +182,9 @@ export default function Footer() {
               { label: "Global Navigator™", href: "/global-navigator" },
               // { label: "Exam Mentors", href: "/exam-mentors" },
               // { label: "Entrance Mentors", href: "/entrance-mentors" },
-              { label: "Counseling Mentors", href: "/counseling-guru" },
-              // { label: "Creativity Lab", href: "/#" },
-              { label: "Blogs", href: "/#" },
+              { label: "Counseling Mentors", href: "/coming-soon" },
+              // { label: "Creativity Lab", href: "/coming-soon" },
+              { label: "Blogs", href: "/coming-soon" },
             ]}
           />
           <FooterSectionAccordion
@@ -199,20 +199,20 @@ export default function Footer() {
               // { label: "Reinvention Guru", href: "/reinvention-guru" },
               // { label: "Innovation Hub", href: "/innovation-hub" },
               // { label: "Pulse Nexus", href: "/pulse-nexus" },
-              { label: "Industry Expert Connect", href: "/#" },
-              { label: "Book A Demo", href: "/#" },
+              { label: "Industry Expert Connect", href: "/coming-soon" },
+              { label: "Book A Demo", href: "/coming-soon" },
             ]}
           />
           <FooterSectionAccordion
             title="Businesses"
             links={[
-              { label: "Admission Test", href: "/#" },
-              { label: "Hiring & Onboarding", href: "/#" },
+              { label: "Admission Test", href: "/coming-soon" },
+              { label: "Hiring & Onboarding", href: "/coming-soon" },
               // { label: "School / Institute OS", href: "/school-institute" },
-              { label: "Institute Connect", href: "/#" },
-              { label: "MSME Connect", href: "/#" },
-              { label: "Corporate Connect", href: "/#" },
-              { label: "Govt Connect", href: "/#" },
+              { label: "Institute Connect", href: "/coming-soon" },
+              { label: "MSME Connect", href: "/coming-soon" },
+              { label: "Corporate Connect", href: "/coming-soon" },
+              { label: "Govt Connect", href: "/coming-soon" },
               { label: "Refund Policy", href: "/cancellation-refund" },
             ]}
           />

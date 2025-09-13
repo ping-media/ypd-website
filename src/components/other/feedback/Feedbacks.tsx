@@ -78,7 +78,7 @@ const Feedbacks: React.FC = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <Link href="#" className="btn-primary btn-size">
+              <Link href="/careerverse" className="btn-primary btn-size">
                 <Search className="h-4 w-4 sm:h-5 sm:w-5" />
                 <span>Explore Career Verse™</span>
               </Link>

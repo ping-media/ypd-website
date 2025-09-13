@@ -396,7 +396,7 @@ const page = () => {
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
-        image="/cvplite/cvplite.png"
+        image="/cvp-advance/hero.png"
         imageAlt="Student learning"
       />
       <CvpVideo
@@ -409,14 +409,14 @@ const page = () => {
         heading="Key Features That Power Your CVP Advance™ Journey"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="What You'll Experience"
         subheading="Over 7 tightly curated days, you’ll go through"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaNote="All without feeling like you’re just “taking another test.”"
       />
       <WhyCvpLite
@@ -437,7 +437,7 @@ const page = () => {
           "EQ, SQ, critical thinking, and mindset mapping",
         ]}
         ctaText="Try CVP Advance™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -453,7 +453,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       <CvpJourney
@@ -541,13 +541,13 @@ const page = () => {
             label: "Unlock Full Access – ₹2499",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />

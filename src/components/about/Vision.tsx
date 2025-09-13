@@ -28,7 +28,7 @@ const Vision = () => {
               Purposeful, Personalized Journeys
             </h2>
             <Link
-              href="#"
+              href="/career-reinvention"
               className="bg-brand-primary rounded-md px-5 py-2 text-sm text-white shadow-md"
             >
               Explore YPD&apos;s Vision
@@ -46,7 +46,10 @@ const Vision = () => {
                 Purposeful, Personalized Journeys
               </h2>
             </div>
-            <Link href="#" className="btn-primary btn-size shadow-md">
+            <Link
+              href="/career-reinvention"
+              className="btn-primary btn-size shadow-md"
+            >
               Explore CRP
             </Link>
           </div>

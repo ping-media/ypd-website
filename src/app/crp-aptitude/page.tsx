@@ -383,7 +383,7 @@ const page = () => {
           </>
         }
         buttonText="Start Free"
-        buttonLink="/#"
+        buttonLink="/coming-soon"
         secondaryButtonLink="/crp-aptitude/#video"
         secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
@@ -399,7 +399,7 @@ const page = () => {
         heading="Key Features That Empower Your Career Decisions"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       {/* SECTION TO MODIFY (BUILT FOR INDIA POWERED BY AI) */}
       <CvpLiteWorks
@@ -407,14 +407,14 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpInside
         heading="What You Train On"
         subheading="Developed with workplace realities in mind"
         features={insideData}
         ctaText="Start Your Journey Today"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       {/* SECTION TO MODIFY */}
       <CvpLiteSteps
@@ -444,13 +444,13 @@ const page = () => {
             label: "Simulate Your Future Career",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/#",
+            href: "/coming-soon",
           },
           {
             label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/#",
+            href: "/coming-soon",
           },
         ]}
       />
@@ -476,7 +476,7 @@ const page = () => {
           "Revisit, retest & track improvement anytime",
         ]}
         ctaText="Try Aptitude Trainer"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CvpJourney
         heading="Built by Industry Psychologists, Skill Experts, and AI Architects"

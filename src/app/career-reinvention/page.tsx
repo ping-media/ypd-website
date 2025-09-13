@@ -146,7 +146,7 @@ const page = () => {
         imageSrc="/career-reinvention/hero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="Try Career Reinvention"
-        ctaHref="/#"
+        ctaHref="/coming-soon"
         ctaIcon={<Zap className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       {/*  */}
@@ -180,7 +180,7 @@ const page = () => {
           "Navigator + Guru → Coaches for Core Skills, Role   Cluster Skills, real scenario training.",
         ]}
         ctaText="Try the Career Verse™"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CrSuite
         heading="Your Complete Career Reinvention Suite"

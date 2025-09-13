@@ -24,9 +24,9 @@ export default function CvpHero({
   description,
   features,
   buttonText,
-  buttonLink = "#",
+  buttonLink = "/coming-soon",
   secondaryButtonText,
-  secondaryButtonLink = "#",
+  secondaryButtonLink = "/coming-soon",
   image,
   imageAlt = "Feature Image",
   reverse = false,
@@ -41,7 +41,7 @@ export default function CvpHero({
       >
         {/* Text Content */}
         <div className="flex-1 space-y-5 text-center sm:space-y-6 sm:text-left">
-          <h2 className="font-red-rose relative inline-block text-2xl leading-snug sm:text-3xl lg:text-[42px]">
+          <h2 className="font-red-rose relative inline-block text-2xl leading-snug sm:text-3xl lg:text-4xl xl:text-[42px]">
             {/* SVG positioned absolutely */}
             <div className="absolute -top-12 -left-16 hidden h-24 w-24 lg:block">
               <Image
@@ -107,7 +107,7 @@ export default function CvpHero({
               alt={imageAlt}
               width={800}
               height={600}
-              className="h-full w-full rounded-lg object-fill shadow"
+              className="h-full w-full rounded-lg object-cover"
             />
           </div>
         </div>

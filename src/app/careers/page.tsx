@@ -104,7 +104,7 @@ const page = () => {
         imageSrc="/careers/hero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="View Open Positions"
-        ctaHref="/#"
+        ctaHref="/coming-soon"
         ctaIcon={<ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       <CvpFeature
@@ -112,7 +112,7 @@ const page = () => {
         subheading="We believe in more than just jobs we create opportunities to grow, collaborate, and shape the digital future."
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/#"
+        ctaLink="/coming-soon"
       />
       <CareersSection
         heading="Work With Us"
