@@ -38,10 +38,10 @@ const Reviews: Review[] = [
   },
   {
     id: 4,
-    course: "Mission NDA™ (Aspirant)",
+    course: "Mission SSB™ (Aspirant)",
     name: "Aniket Singh",
     education: "NDA Aspirant, Patna",
-    text: "Mission NDA felt different from regular coaching. The Al mentor gave me practice capsules and feedback daily. I could track my OLOs like never before.",
+    text: "Mission SSB™ felt different from regular coaching. The Al mentor gave me practice capsules and feedback daily. I could track my OLOs like never before.",
     image: "/about/c4.png",
   },
   {

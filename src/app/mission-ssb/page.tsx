@@ -38,7 +38,7 @@ const features = [
     icon: Layers,
     title: "Adaptive Defence Training",
     description:
-      "No two aspirants are alike. Mission NDA adapts to your strengths, learning pace, and improvement areas — without following a rigid coaching template.",
+      "No two aspirants are alike. Mission SSB™ adapts to your strengths, learning pace, and improvement areas — without following a rigid coaching template.",
   },
   {
     icon: BarChart3,
@@ -94,7 +94,7 @@ const steps = [
     id: 3,
     title: "Build Your Cognitive, Emotional & OLQ Strength",
     description:
-      "Every stage of Mission NDA™ is tied to actual selection criteria — from cognitive skills and situational judgment to emotional intelligence and group dynamics. These are mapped directly to real SSB tasks like GTO, interviews, and psych tests.",
+      "Every stage of Mission SSB™ is tied to actual selection criteria — from cognitive skills and situational judgment to emotional intelligence and group dynamics. These are mapped directly to real SSB tasks like GTO, interviews, and psych tests.",
     icon: "/careerverse/s3.svg",
   },
   {
@@ -167,7 +167,7 @@ const useCases = [
     title: "Exam Pattern Confusion",
     quote: `“I’m not sure how to start NDA prep or cover SSB tasks.”`,
     description:
-      "Mission NDA™ breaks down the syllabus, OLQs, and interview prep into simple, guided steps.",
+      "Mission SSB™ breaks down the syllabus, OLQs, and interview prep into simple, guided steps.",
     icon: "/cvplite/r1.svg",
     image: "/mission-nda/r1.png",
   },
@@ -176,7 +176,7 @@ const useCases = [
     title: "Scattered Preparation",
     quote: `“I’m studying, but my approach feels random.”`,
     description:
-      "Mission NDA™ gives you a structured, day-by-day plan for both written and SSB readiness.",
+      "Mission SSB™ gives you a structured, day-by-day plan for both written and SSB readiness.",
     icon: "/cvplite/r2.svg",
     image: "/mission-nda/r2.png",
   },
@@ -194,7 +194,7 @@ const useCases = [
     title: "High Effort, Low Results",
     quote: `“I work hard but my scores don’t improve much.”`,
     description:
-      "Mission NDA™ pinpoints weak areas and gives targeted practice to boost your score.",
+      "Mission SSB™ pinpoints weak areas and gives targeted practice to boost your score.",
     icon: "/cvplite/r4.svg",
     image: "/mission-nda/r4.png",
   },
@@ -243,7 +243,7 @@ const ReviewsData = [
     education: "Class 12 Student, Lucknow",
     text: (
       <>
-        &quot;Mission NDA gave me a clear, step-by-step plan for both NDA
+        &quot;Mission SSB™ gave me a clear, step-by-step plan for both NDA
         syllabus and SSB prep.
         {highlight(" No confusion anymore.")}&quot;
       </>
@@ -273,7 +273,7 @@ const ReviewsData = [
       <>
         &quot;As a parent, I saw my son transform.
         {highlight(
-          " Mission NDA built his discipline, confidence, and clarity.",
+          " Mission SSB™ built his discipline, confidence, and clarity.",
         )}
         &quot;
       </>
@@ -286,7 +286,7 @@ const ReviewsData = [
     education: "Class 11 Student, Kochi",
     text: (
       <>
-        &quot;I had joined coaching earlier but felt lost. Mission NDA’s
+        &quot;I had joined coaching earlier but felt lost. Mission SSB™’s
         adaptive AI
         {highlight(" made me practice with focus and purpose.")}&quot;
       </>
@@ -314,7 +314,7 @@ const ReviewsData = [
     education: "Class 12 Student, Gwalior",
     text: (
       <>
-        &quot;I live in a Tier-3 town, but Mission NDA gave me access to
+        &quot;I live in a Tier-3 town, but Mission SSB™ gave me access to
         structured prep
         {highlight(" just like top academies.")}&quot;
       </>
@@ -332,7 +332,7 @@ const missionNdaFaqs = [
   {
     question: "Can I prepare fully for the NDA written exam with this?",
     answer:
-      "Yes. Mission NDA™ covers the complete syllabus with adaptive difficulty, mock tests, and targeted practice.",
+      "Yes. Mission SSB™ covers the complete syllabus with adaptive difficulty, mock tests, and targeted practice.",
   },
   {
     question: "Does this prepare me for SSB too?",
@@ -347,12 +347,12 @@ const missionNdaFaqs = [
   {
     question: "Does this work on mobile?",
     answer:
-      "Yes. Mission NDA™ is fully mobile-optimized for study, practice, and SSB simulations anywhere.",
+      "Yes. Mission SSB™ is fully mobile-optimized for study, practice, and SSB simulations anywhere.",
   },
   {
     question: "Will I get a readiness report after the session?",
     answer:
-      "Yes. You’ll receive a Mission NDA™ Readiness Report covering your syllabus coverage, OLQ profile, and SSB probability.",
+      "Yes. You’ll receive a Mission SSB™ Readiness Report covering your syllabus coverage, OLQ profile, and SSB probability.",
   },
   {
     question: "Can parents view the report too?",
@@ -362,16 +362,16 @@ const missionNdaFaqs = [
   {
     question: "Is this based on real research?",
     answer:
-      "Yes. Mission NDA™ combines official NDA syllabus mapping, SSB assessment standards, and proven OLQ frameworks.",
+      "Yes. Mission SSB™ combines official NDA syllabus mapping, SSB assessment standards, and proven OLQ frameworks.",
   },
   {
     question:
-      "Is Mission NDA™ useful if I’ve already joined another coaching?",
+      "Is Mission SSB™ useful if I’ve already joined another coaching?",
     answer:
       "Definitely. It acts as a precision supplement—pinpointing gaps and making your existing prep sharper.",
   },
   {
-    question: "What if I want deeper guidance after Mission NDA™?",
+    question: "What if I want deeper guidance after Mission SSB™?",
     answer:
       "You can upgrade to advanced mentorship, including personal mock interviews with ex-SSB officers.",
   },
@@ -382,7 +382,7 @@ const page = () => {
   return (
     <>
       <CvpHero
-        title="Mission NDA™ Crack NDA & SSB with Military Precision"
+        title="Mission SSB™ Crack NDA & SSB with Military Precision"
         subtitle={
           <>
             The only AI-powered
@@ -406,10 +406,10 @@ const page = () => {
         buttonText="Start Program Now"
         buttonLink="/program"
         image="/cvplite/mission-nda.png"
-        imageAlt="mission nda"
+        imageAlt="mission ssb"
       />
       <CvpVideo
-        heading="Step Inside the Mission NDA™ Experience"
+        heading="Step Inside the Mission SSB™ Experience"
         subheading="Take a quick look at how our AI-powered NDA journey prepares you for the Services Selection Board (SSB) with precision and discipline — from written exams to OLQ-based officer readiness. No generic tips, no outdated coaching — fully personalized, adaptive, and rooted in real SSB protocols"
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
@@ -437,11 +437,11 @@ const page = () => {
           "Real-time reflections, simulations, feedback",
           "Mock interviews, GD prep, real response tracking",
         ]}
-        ctaText="Try Mission NDA™"
+        ctaText="Try Mission SSB™"
         ctaLink="/coming-soon"
       />
       <CvpInside
-        heading="Why Mission NDA™ Is a Game Changer"
+        heading="Why Mission SSB™ Is a Game Changer"
         subheading="Prepare with strategy & planning"
         features={insideData}
         ctaText="Start Your Journey Today"
@@ -449,7 +449,7 @@ const page = () => {
       />
       <CvpLiteSteps
         heading="How it Works"
-        subheading="Mission NDA™ is a precision-driven AI mentor designed to prepare you for both the NDA written exam and the SSB interview with military-grade rigor. Its adaptive journey is built to transform raw ambition into disciplined, officer-level readiness. Here’s how your training unfolds:"
+        subheading="Mission SSB™ is a precision-driven AI mentor designed to prepare you for both the NDA written exam and the SSB interview with military-grade rigor. Its adaptive journey is built to transform raw ambition into disciplined, officer-level readiness. Here’s how your training unfolds:"
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
@@ -457,7 +457,7 @@ const page = () => {
         }}
       />
       <CvpLiteWorks
-        heading="Who Should Join Mission NDA™"
+        heading="Who Should Join Mission SSB™"
         subheading="Build to ensure a focused preparation in your own space"
         audience={audience}
         ctaText="Start Your Journey Today"
@@ -469,7 +469,7 @@ const page = () => {
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         trackTitle="Feature"
         avoidTitle="What Others Do"
-        experienceTitle="Mission NDA™ Offers"
+        experienceTitle="Mission SSB™ Offers"
         track={[
           "Real AI Reflections",
           "OLQ-Linked Progress",
@@ -491,7 +491,7 @@ const page = () => {
           "Pinpoints knowledge + personality gaps ",
           "Full simulation with voice & judgment paths",
         ]}
-        ctaText="Try Mission NDA™"
+        ctaText="Try Mission SSB™"
         ctaLink="/coming-soon"
       />
       <CvpJourney
@@ -500,7 +500,7 @@ const page = () => {
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start Mission NDA™"
+        ctaText="Start Mission SSB™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
       />
@@ -523,12 +523,12 @@ const page = () => {
       />
       <CvpImpact
         heading="Real Impact, Real Results"
-        description="Since its launch, Mission NDA™ has guided aspirants from Tier 1 to Tier 4 cities in India to prepare strategically for both NDA Written and SSB stages — with structure, precision, and zero guesswork. Students gain confidence, discipline, and readiness without feeling overwhelmed or lost."
+        description="Since its launch, Mission SSB™ has guided aspirants from Tier 1 to Tier 4 cities in India to prepare strategically for both NDA Written and SSB stages — with structure, precision, and zero guesswork. Students gain confidence, discipline, and readiness without feeling overwhelmed or lost."
         stats={[
           {
             value: "91%",
             description:
-              "of students said Mission NDA™ improved their exam & SSB readiness more than any previous coaching or self-study.",
+              "of students said Mission SSB™ improved their exam & SSB readiness more than any previous coaching or self-study.",
           },
           {
             value: "88%",
@@ -538,7 +538,7 @@ const page = () => {
           {
             value: "90%",
             description:
-              "of students said they would recommend Mission NDA™ to peers, especially those starting late or struggling to structure their preparation.",
+              "of students said they would recommend Mission SSB™ to peers, especially those starting late or struggling to structure their preparation.",
           },
         ]}
         image={{
@@ -547,7 +547,7 @@ const page = () => {
         }}
       />
       <CvpCta
-        heading="Start Your Mission NDA™ Journey"
+        heading="Start Your Mission SSB™ Journey"
         subheading="You’ve reflected. You’re ready."
         description="Now it’s time to unlock your complete NDA Written & SSB preparation plan and take your first step towards serving the nation with discipline, confidence, and officer-like qualities."
         buttons={[
@@ -572,13 +572,13 @@ const page = () => {
         heading={
           <>
             <span className="font-bold">
-              Mission NDA™ isn’t just preparation. It’s transformation
+              Mission SSB™ isn’t just preparation. It’s transformation
             </span>
           </>
         }
         subheading="If you’re ready to lead, we’re ready to train.
         With the power of data, psychology, and defense insight—welcome to the future of NDA prep."
-        ctaText="Join Mission NDA Now"
+        ctaText="Join Mission SSB Now"
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />

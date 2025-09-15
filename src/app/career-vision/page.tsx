@@ -37,7 +37,7 @@ const reviews = [
   },
   {
     id: 3,
-    heading: "Mission NDA mentor is just next level.",
+    heading: "Mission SSB™ mentor is just next level.",
     text: "I used to struggle with SSB prep. The YPD NDA mentor trained me like an officer — from OLQs to daily tasks. I feel more confident and focused now.",
     name: "Deepak Singh",
     education: "NDA Aspirant, Lucknow",
@@ -235,7 +235,7 @@ const featureSections = [
     items: [
       {
         icon: <Shield className="text-brand-primary h-12 w-12" />,
-        title: "Mission NDA",
+        title: "Mission SSB™",
         subtitle: "Grade 11–12 | Subscription",
         features: [
           "Written Exam Preparation",
@@ -245,7 +245,7 @@ const featureSections = [
           "Dynamic Progress-Based Preparation",
         ],
         ctaText: "Subscribe Now",
-        href: "/mission-nda",
+        href: "/mission-ssb",
       },
       {
         icon: <Shield className="text-brand-primary h-12 w-12" />,

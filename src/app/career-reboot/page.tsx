@@ -403,7 +403,7 @@ const page = () => {
         buttonText="Start Free"
         buttonLink="/program"
         image="/career-reboot/hero.png"
-        imageAlt="mission nda"
+        imageAlt="mission ssb"
       />
       <CvpVideo
         heading="What is Reboot Navigator?"
