@@ -119,7 +119,7 @@ const audience = [
     description:
       "Stuck in the same role for years? We help you reimagine your path with targeted upskilling and industry-ready strategies.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/career-reboot/1.png",
   },
   {
     id: 2,
@@ -127,7 +127,7 @@ const audience = [
     description:
       "In your first 3–5 years of work and feeling the fit isn’t right? We guide you to roles that align with your strengths and ambitions.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/career-reboot/2.png",
   },
   {
     id: 3,
@@ -135,7 +135,7 @@ const audience = [
     description:
       "Re-enter the workforce with updated skills, renewed confidence, and a clear market re-entry plan.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/career-reboot/3.png",
   },
   {
     id: 4,
@@ -143,7 +143,7 @@ const audience = [
     description:
       "Expand your service offerings, pivot to high-demand areas, and build long-term stability.",
     icon: "/cvplite/r5.svg",
-    image: "/cvplite/uses.png",
+    image: "/career-reboot/4.png",
   },
   {
     id: 5,
@@ -151,7 +151,7 @@ const audience = [
     description:
       "Move into supervisory, client-facing, or technical roles with a structured skill growth roadmap.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/career-reboot/5.png",
   },
 ];
 const journeySteps = [
