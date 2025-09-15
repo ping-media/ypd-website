@@ -29,6 +29,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const features = [
   {
@@ -380,6 +381,7 @@ const upscFaqs = [
 ];
 
 const page = () => {
+  const upscPricing = pricingData["UPSC Mentor™"];
   return (
     <>
       <CvpHero
@@ -494,38 +496,8 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="UPSC Mentor™ — a premium preparation experience made affordable."
-        plans={[
-          {
-            title: "Basic",
-            description: "Starter Demo",
-            price: "₹0",
-            features: [
-              "Limited Prelims & Mains Capsule Preview",
-              "Dashboard Peek",
-              "Sample Test (Prelims 10 Qs + 1 Mains Q)",
-              "No full-stage analysis or recommendations",
-              "Locked after preview; upgrades anytime",
-              "Best for aspirants who want to try before they trust",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "Full Access",
-            price: "₹7,999",
-            priceText: "Start My UPSC Journey",
-            features: [
-              "3-Month Access",
-              "Full Prelims & Mains Capsules",
-              "Complete Test Series (Prelims + Mains)",
-              "Personalized Answer Writing Feedback",
-              "Personality Test (Interview) Simulation Tracks",
-              "AI-powered performance analysis & reports",
-              "Optional 1:1 Mentor Review at additional cost",
-            ],
-            highlight: true,
-          },
-        ]}
+        subheading="Innovation that feels premium, priced for you."
+        plans={upscPricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

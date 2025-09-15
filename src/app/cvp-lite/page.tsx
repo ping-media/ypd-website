@@ -25,6 +25,7 @@ import {
   UserPlus,
 } from "lucide-react";
 import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const featuresData = [
   {
@@ -279,6 +280,8 @@ const cvpLiteFaqs = [
 ];
 
 const page = () => {
+  const cvpLitePricing = pricingData["CVP Lite™"];
+
   return (
     <>
       <CvpHero
@@ -389,39 +392,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Free Plan",
-            description: "For students starting their journey",
-            price: "₹0",
-            features: [
-              "Basic profile setup (Step 0)",
-              "Interest Preview (Step 1 – partial access)",
-              "AI summary of interest clusters",
-              "No report or stream recommendation",
-              "Locked after preview, upgrade anytime",
-              "Best for students who want to 'try before they trust.'",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "Complete your full Career Persona Journey",
-            price: "₹899",
-            priceText: "Start My Career Clarity",
-            features: [
-              "Full access",
-              "Strengths, learning style & thinking profile",
-              "Passion & fit analysis",
-              "Cognitive & ethical intelligence insights",
-              "Career direction bridge & education roadmap",
-              "Personal Action Plan",
-              "Downloadable Final Career Persona Report (Step 10)",
-              "Lifetime access via your YPD login",
-              "Built for Class 7-12 students who want trusted, structured clarity",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={cvpLitePricing.plans["one-time"] ?? []}
         footerText="Institutional Pricing Available. Please"
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

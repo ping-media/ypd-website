@@ -13,6 +13,7 @@ import Faq from "@/components/other/Faq";
 // imports for components
 import { ArrowRight, HandCoins, BriefcaseBusiness, Dna } from "lucide-react";
 import { Lightbulb, Compass, File } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const insideData = [
   { icon: BriefcaseBusiness, title: "Simulation of Real Careers" },
@@ -284,6 +285,8 @@ const careerversefaq = [
 ];
 
 const page = () => {
+  const careerVersePricing = pricingData["CareerVerse™"];
+
   return (
     <>
       <CvpHero
@@ -368,33 +371,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Basic",
-            description: "Perfect to explore and get started",
-            price: "Free",
-            priceText: "Start My Career Simulation",
-            features: [
-              "Account Creation",
-              "Dashboard View",
-              "Profile Setup",
-              "Role Selection",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "Best for Premium Experience",
-            price: "₹1,999",
-            priceText: "Start My Career Simulation",
-            features: [
-              "Account Creation",
-              "Dashboard View",
-              "Profile Setup",
-              "Simulate 3 Chosen Roles",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={careerVersePricing.plans["one-time"] ?? []}
         footerText="Institutional Pricing Available. Please"
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

@@ -16,6 +16,7 @@ import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
+import { pricingData } from "@/components/pricing/prices";
 import {
   Lightbulb,
   Compass,
@@ -351,6 +352,8 @@ const globalNavigatorFaqs = [
 ];
 
 const page = () => {
+  const globalNavPricing = pricingData["Global Navigator™"];
+
   return (
     <>
       <CvpHero
@@ -550,34 +553,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Basic",
-            description: "Starter Demo",
-            price: "₹0",
-            features: [
-              "Limited Preview",
-              "Dashboard Peek",
-              "Sample Study Capsule",
-              "No report or stream recommendation",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "One-Time Counseling Session:",
-            price: "₹3,499",
-            priceText: "Book Now",
-            features: [
-              "Full AI + mentor session,",
-              "Downloadable report",
-              "Portal access",
-              "60–90 min guided session",
-              "Your journey saved in your YPD dashboard",
-              "Optional mentor review available at additional cost",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={globalNavPricing.plans["one-time"] ?? []}
         footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

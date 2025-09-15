@@ -6,6 +6,8 @@ export interface Plan {
   price: string; // India only for now
   features: string[];
   highlight?: boolean;
+  priceText?: string;
+  period?: string;
 }
 
 export interface ProductPricing {
@@ -121,7 +123,7 @@ export const pricingData: Record<string, ProductPricing> = {
         },
         {
           title: "Premium",
-          description: "Best for focused & alternate Role Experience",
+          description: "Best for alternate Role Experience",
           price: "₹24499",
           features: [
             "Account Creation",
@@ -161,6 +163,7 @@ export const pricingData: Record<string, ProductPricing> = {
           title: "Pro",
           description: "Best for 11th–UG Students",
           price: "₹3499",
+          period:"month",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -179,6 +182,7 @@ export const pricingData: Record<string, ProductPricing> = {
           title: "Premium",
           description: "Best for 11th – Graduates",
           price: "₹5499",
+          period:"month",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -396,6 +400,8 @@ export const pricingData: Record<string, ProductPricing> = {
         title: "Pro",
         description: "Best for Starters & Micro Entrepreneurs",
         price: "₹1299",
+        period: "month",
+        priceText: "Subscribe Now",
         features: [
           "Account Creation",
           "Dashboard View",
@@ -413,6 +419,8 @@ export const pricingData: Record<string, ProductPricing> = {
         title: "Premium",
         description: "Best for Employability Skills",
         price: "₹2199",
+        period: "month",
+        priceText: "Subscribe Now",
         features: [
           "Account Creation",
           "Dashboard View",

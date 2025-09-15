@@ -25,6 +25,7 @@ import {
   UserPlus,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const features = [
   {
@@ -377,6 +378,7 @@ const missionNdaFaqs = [
 ];
 
 const page = () => {
+  const missionSSBPricing = pricingData["Mission SSB™"];
   return (
     <>
       <CvpHero
@@ -515,35 +517,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Basic",
-            description: "Starter Demo",
-            price: "₹0",
-            features: [
-              "Account Creation",
-              "Dashboard View",
-              "Profile Set Up",
-              "Learning Style Assessment",
-              "Locked Preview",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "Full Access",
-            price: "₹4,999",
-            priceText: "Start My Career Simulation",
-            features: [
-              "3-Month Access",
-              "Full Written",
-              "SSB, Interview Tracks",
-              "Track Progress",
-              "AI Mentor",
-              "Optional mentor review available at additional cost",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={missionSSBPricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ students. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

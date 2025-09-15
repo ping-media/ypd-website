@@ -14,6 +14,7 @@ import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
+import { pricingData } from "@/components/pricing/prices";
 import {
   Lightbulb,
   Compass,
@@ -362,6 +363,8 @@ const crpaptitudefaqs = [
 ];
 
 const page = () => {
+  const aptitudePricing = pricingData["Aptitude Trainer™"];
+
   return (
     <>
       <CvpHero
@@ -527,29 +530,8 @@ const page = () => {
       />
       <CvpPricing
         heading="Pricing & Access"
-        subheading="CRP Aptitude is a premium preparation experience made affordable."
-        plans={[
-          {
-            title: "Free Plan",
-            description: "First-time users",
-            price: "₹0",
-            features: ["1 Scenario", "Limited Feedback", "Basic Report"],
-          },
-          {
-            title: "Premium Plan",
-            description: "Train On 40+ Aptitudes",
-            price: "₹2,499",
-            priceText: "Book Now",
-            features: [
-              "Full Access to Tracks",
-              "Detailed Feedback",
-              "Retry Options",
-              "Full Report Export",
-              "Depending on the Premium plan",
-            ],
-            highlight: true,
-          },
-        ]}
+        subheading="Innovation that feels premium, priced for you."
+        plans={aptitudePricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

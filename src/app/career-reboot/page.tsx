@@ -28,6 +28,7 @@ import {
   GraduationCap,
 } from "lucide-react";
 import { FileText } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const insideData = [
   {
@@ -377,6 +378,8 @@ const crFaqs = [
 ];
 
 const page = () => {
+  const crPricing = pricingData["Reboot Navigator™"];
+
   return (
     <>
       <CvpHero
@@ -435,48 +438,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Free",
-            description: "Demo Capsules Only",
-            price: "₹0",
-            features: [
-              "3 demo Core Skill capsules (read-only)",
-              "Dashboard preview",
-            ],
-          },
-          {
-            title: "Pro (Recommended)",
-            description: "All Clusters, retry + reflection",
-            price: "₹1,499",
-            period: "month",
-            priceText: "Subscribe Now",
-            features: [
-              "Core Skills",
-              "Industry Skills",
-              "3 Retries per skill",
-              "Weakness Zones",
-              "AI Reflection",
-              "Summary Report",
-              "Certificate",
-            ],
-            highlight: true,
-          },
-          {
-            title: "Lite",
-            description: "Full 1 Cluster + Limited Retry",
-            price: "₹799",
-            period: "month",
-            priceText: "Start Lite",
-            features: [
-              "Core Skills",
-              "AI Reflection",
-              "1 X Retry",
-              "Progress Tracking",
-              "Report",
-            ],
-          },
-        ]}
+        plans={crPricing.plans.monthly ?? []}
         footerText="Bulk Discounts for Colleges & NGOs. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

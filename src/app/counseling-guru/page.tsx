@@ -14,6 +14,7 @@ import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
+import { pricingData } from "@/components/pricing/prices";
 import {
   Zap,
   ArrowRight,
@@ -283,6 +284,8 @@ const cgFaqs = [
 ];
 
 const page = () => {
+  const cgPricing = pricingData["Counseling Guru™"];
+
   return (
     <>
       <CvpHero
@@ -370,34 +373,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Basic",
-            description: "Starter Demo",
-            price: "₹0",
-            features: [
-              "Account Creation",
-              "Session Booking",
-              "Dashboard View",
-              "Unlock to Counseling Session with Premium Plan",
-            ],
-          },
-          {
-            title: "Premium",
-            description: "One-Time Session",
-            price: "₹1499-3499",
-            priceText: "Book My Session Now",
-            features: [
-              "Account Creation",
-              "Session Booking",
-              "Dashboard View",
-              "Decision-Making Journey",
-              "Final Summary",
-              "30-60 min guided session",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={cgPricing.plans["one-time"] ?? []}
         footerText="Bulk Discounts for Colleges & NGOs. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />

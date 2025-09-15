@@ -24,6 +24,7 @@ import {
   UserPlus,
 } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
+import { pricingData } from "@/components/pricing/prices";
 
 const features = [
   {
@@ -357,6 +358,7 @@ const cvpAdvanceFaqs = [
   },
 ];
 const page = () => {
+  const cvpAdvance = pricingData["CVP Advance™"];
   return (
     <>
       <CvpHero
@@ -474,36 +476,7 @@ const page = () => {
       <CvpPricing
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={[
-          {
-            title: "Free Plan",
-            description: "For students starting their journey",
-            price: "₹0",
-            features: [
-              "Basic profile setup (Step 0)",
-              "Interest Preview (Step 1 – partial access)",
-              "AI summary of interest clusters",
-              "No report or stream recommendation",
-              "Locked after preview, upgrade anytime",
-              "Best for students who want to 'try before they trust.'",
-            ],
-          },
-          {
-            title: "Premium Plan",
-            description: "Complete your full Career Persona Journey",
-            price: "₹2,499",
-            priceText: "Start My Career Clarity",
-            features: [
-              "Full 7-day journey",
-              "AI-driven capsules",
-              "Personalized final report",
-              "Lifetime access via your YPD login",
-              "Personal Action Plan",
-              "Optional mentor review available at additional cost",
-            ],
-            highlight: true,
-          },
-        ]}
+        plans={cvpAdvance.plans["one-time"] ?? []}
         footerText="For Institutions: Custom packages available for 50+ students. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
