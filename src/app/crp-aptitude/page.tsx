@@ -140,7 +140,7 @@ const audience = [
     description:
       "Gain clarity on your strengths in problem-solving, reasoning, and decision-making to prepare for higher studies and careers.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/crp-aptitude/1.png",
   },
   {
     id: 2,
@@ -148,7 +148,7 @@ const audience = [
     description:
       "Discover your core aptitudes, match them with workplace roles, and develop confidence in communication and adaptability.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/2.png",
   },
   {
     id: 3,
@@ -156,7 +156,7 @@ const audience = [
     description:
       "Rebuild confidence with structured aptitude sessions that highlight transferable skills and identify new opportunities.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/crp-aptitude/3.png",
   },
   {
     id: 4,
@@ -164,7 +164,7 @@ const audience = [
     description:
       "Strengthen leadership, critical thinking, and people skills with targeted aptitude exercises tailored to professional growth.",
     icon: "/cvplite/r5.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/4.png",
   },
   {
     id: 5,
@@ -172,7 +172,7 @@ const audience = [
     description:
       "Use Aptitude Trainer™ to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/5.png",
   },
 ];
 const journeySteps = [
@@ -196,7 +196,7 @@ const useCases = [
     description:
       "Aptitude Trainer™ gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/r1.png",
   },
   {
     id: 2,
@@ -204,7 +204,7 @@ const useCases = [
     description:
       "It connected my strengths to roles actually growing in India, not just generic profiles. I could see clear job relevance.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/crp-aptitude/r2.png",
   },
   {
     id: 3,
@@ -212,14 +212,14 @@ const useCases = [
     description:
       "When I struggled, it didn’t fail me. It nudged me to reflect and retry, so I improved with every step.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/r3.png",
   },
   {
     id: 4,
     title: "Aptitude map with growth clarity",
     description: "The final report showed my strengths, blind spots.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/crp-aptitude/r4.png",
   },
 ];
 
