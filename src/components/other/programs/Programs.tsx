@@ -99,6 +99,7 @@ export default function Programs() {
             {/* Right Column */}
             <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
+                key={activeProgram.image}
                 src={activeProgram.image}
                 alt={activeProgram.title}
                 fill
