@@ -26,6 +26,7 @@ export default function CvpRealworld({
   quoteOverlay = false, // default: false (quote on card)
 }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
@@ -105,7 +106,10 @@ export default function CvpRealworld({
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover transition-all duration-500"
+              className={`object-cover transition-all duration-700 ${
+                loaded ? "blur-0" : "scale-105 blur-xl"
+              }`}
+              onLoadingComplete={() => setLoaded(true)}
             />
 
             {quoteOverlay && items[activeIndex].quote && (

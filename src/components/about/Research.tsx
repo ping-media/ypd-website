@@ -45,6 +45,7 @@ export default function Research() {
 
   const [activeIndex, setActiveIndex] = useState(0);
   const activeResearch = researchData[activeIndex];
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <section className="via-brand-primary to-brand-accent flex justify-center bg-gradient-to-br from-[#5a8d50] p-4 sm:p-10 lg:p-20">
@@ -95,12 +96,16 @@ export default function Research() {
             {/* Right Column (Image + Active Description) */}
             <div className="relative min-h-[400px] flex-1 overflow-hidden rounded-lg shadow-lg">
               <Image
+                key={activeResearch.image}
                 src={activeResearch.image}
                 alt={activeResearch.title}
                 fill
                 priority
                 sizes="(max-width: 500px) 100vw, 50vw"
-                className="object-cover"
+                className={`object-cover transition-all duration-700 ${
+                  loaded ? "blur-0" : "scale-105 blur-xl"
+                }`}
+                onLoadingComplete={() => setLoaded(true)}
               />
               <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/40 p-6"></div>
             </div>

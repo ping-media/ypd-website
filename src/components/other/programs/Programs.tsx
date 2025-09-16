@@ -62,6 +62,7 @@ const programsData = [
 
 export default function Programs() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const activeProgram = programsData[activeIndex];
   const ButtonIcon = activeProgram.buttonIcon;
 
@@ -105,7 +106,10 @@ export default function Programs() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                className={`object-cover transition-all duration-700 ${
+                  loaded ? "blur-0" : "scale-105 blur-xl"
+                }`}
+                onLoadingComplete={() => setLoaded(true)}
               />
               <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/30 p-4 sm:p-6">
                 <h3 className="text-2xl font-medium text-white">

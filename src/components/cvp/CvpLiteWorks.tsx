@@ -32,6 +32,7 @@ export default function CvpLiteWorks({
 }: CvpLiteWorksProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeItem = audience[activeIndex];
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <section className="flex justify-center bg-white p-4 sm:p-10 lg:p-20">
@@ -58,7 +59,10 @@ export default function CvpLiteWorks({
                 alt={activeItem.title}
                 fill
                 priority
-                className="object-cover transition-opacity duration-500"
+                className={`object-cover transition-all duration-700 ${
+                  loaded ? "blur-0" : "scale-105 blur-xl"
+                }`}
+                onLoadingComplete={() => setLoaded(true)}
               />
             </div>
 
@@ -110,7 +114,10 @@ export default function CvpLiteWorks({
                 src={activeItem.image}
                 alt={activeItem.title}
                 fill
-                className="object-cover transition-opacity duration-500"
+                className={`object-cover transition-all duration-700 ${
+                  loaded ? "blur-0" : "scale-105 blur-xl"
+                }`}
+                onLoadingComplete={() => setLoaded(true)}
               />
             </div>
 
@@ -160,7 +167,10 @@ export default function CvpLiteWorks({
                   src={activeItem.image}
                   alt={activeItem.title}
                   fill
-                  className="object-cover transition-opacity duration-500"
+                  className={`object-cover transition-all duration-700 ${
+                    loaded ? "blur-0" : "scale-105 blur-xl"
+                  }`}
+                  onLoadingComplete={() => setLoaded(true)}
                 />
               </div>
               {audience.map((item, index) => (
