@@ -99,9 +99,11 @@ export default function CvpRealworld({
           {/* Right: Big Image with optional Quote Overlay */}
           <div className="relative h-[300px] min-h-[300px] w-full flex-1 overflow-hidden rounded-lg shadow-lg md:h-auto">
             <Image
+              key={items[activeIndex].image}
               src={items[activeIndex].image}
               alt={items[activeIndex].title}
               fill
+              priority
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-all duration-500"
             />

@@ -57,6 +57,7 @@ export default function CvpLiteWorks({
                 src={activeItem.image}
                 alt={activeItem.title}
                 fill
+                priority
                 className="object-cover transition-opacity duration-500"
               />
             </div>
