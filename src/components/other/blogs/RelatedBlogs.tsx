@@ -24,7 +24,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog1.png",
-    link: "/coming-soon",
+    link: "https://blog.ypd-dev.site/",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog2.png",
-    link: "/coming-soon",
+    link: "https://blog.ypd-dev.site/",
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog3.png",
-    link: "/coming-soon",
+    link: "https://blog.ypd-dev.site/",
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const blogs: Blog[] = [
     description:
       "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
     image: "/blog2.png",
-    link: "/coming-soon",
+    link: "https://blog.ypd-dev.site/",
   },
 ];
 
@@ -74,7 +74,11 @@ const RelatedBlogs = () => {
         <h2 className="font-red-rose text-2xl sm:text-3xl">Related Blogs</h2>
 
         {/* View All Button */}
-        <Link href="/blogs" className="btn-primary btn-size">
+        <Link
+          target="_blank"
+          href="https://blog.ypd-dev.site/"
+          className="btn-primary btn-size"
+        >
           View All
         </Link>
       </div>

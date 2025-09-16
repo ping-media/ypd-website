@@ -118,7 +118,7 @@ const useCases = [
     description:
       "CareerVerse™ simulates fast-growing careers that textbooks don’t cover — like AI Ethics Researcher, Climate Risk Analyst, or Urban Mobility Planner. You don’t just read about these roles — you experience their world.",
     icon: "/cvplite/r4.svg",
-    image: "/careerverse/.png",
+    image: "/careerverse/4.png",
   },
 ];
 const highlight = (content: string) => (
