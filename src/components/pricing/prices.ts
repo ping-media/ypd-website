@@ -108,7 +108,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Pro",
           description: "Best for focused Role Experience",
-          price: "₹21999",
+          price: "₹1999",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -124,7 +124,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for alternate Role Experience",
-          price: "₹24499",
+          price: "₹4499",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -425,7 +425,7 @@ export const pricingData: Record<string, ProductPricing> = {
           "Account Creation",
           "Dashboard View",
           "Profile Setup",
-          "18 Core + 16 Industry Cluster Skills",
+          "18 Core + 18 Industry Cluster Skills",
           "3 X Retry",
           "Progress & Weakness Tracking",
           "1 Year access",

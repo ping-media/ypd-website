@@ -64,7 +64,7 @@ const Links = [
         subDropdown: [{ name: "Reboot Navigator™", href: "/career-reboot" }],
       },
       {
-        name: "Skilled Mentors",
+        name: "Skilling Mentors",
         subDropdown: [
           { name: "Aptitude Trainer™", href: "/crp-aptitude" },
           { name: "Reinvention Guru™", href: "/coming-soon" },

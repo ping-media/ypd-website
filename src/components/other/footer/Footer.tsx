@@ -182,7 +182,6 @@ export default function Footer() {
               { label: "Global Navigator™", href: "/global-navigator" },
               // { label: "Exam Mentors", href: "/exam-mentors" },
               // { label: "Entrance Mentors", href: "/entrance-mentors" },
-              { label: "Counseling Mentors", href: "/coming-soon" },
               // { label: "Creativity Lab", href: "/coming-soon" },
               { label: "Blogs", href: "/coming-soon" },
             ]}
@@ -194,12 +193,12 @@ export default function Footer() {
                 label: "Career Reinvention Program™",
                 href: "/career-reinvention",
               },
-              { label: "Aptitude Trainer", href: "/crp-aptitude" },
-              { label: "Reboot Navigator", href: "/career-reboot" },
+              { label: "Aptitude Trainer™", href: "/crp-aptitude" },
+              { label: "Reboot Navigator™", href: "/career-reboot" },
               // { label: "Reinvention Guru", href: "/reinvention-guru" },
               // { label: "Innovation Hub", href: "/innovation-hub" },
               // { label: "Pulse Nexus", href: "/pulse-nexus" },
-              { label: "Industry Expert Connect", href: "/coming-soon" },
+              { label: "Expert Connect", href: "/coming-soon" },
               { label: "Book A Demo", href: "/coming-soon" },
             ]}
           />
