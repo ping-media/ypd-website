@@ -3,13 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import NavLinks from "@/components/other/navbar/Navlinks";
-import {
-  ArrowRight,
-  X,
-  ChevronDown,
-  ChevronRight,
-  AlignJustify,
-} from "lucide-react";
+import { X, ChevronDown, ChevronRight, AlignJustify, User } from "lucide-react";
 import Link from "next/link";
 
 const Links = [
@@ -161,7 +155,7 @@ const Navbar = () => {
                   for free{" "}
                 </span> */}
               </span>
-              <ArrowRight className="hidden xl:block" />
+              <User className="hidden xl:block" />
             </Link>
           </div>
 
