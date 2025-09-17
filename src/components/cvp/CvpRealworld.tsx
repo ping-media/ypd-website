@@ -109,7 +109,7 @@ export default function CvpRealworld({
               className={`object-cover transition-all duration-700 ${
                 loaded ? "blur-0" : "scale-105 blur-xl"
               }`}
-              onLoadingComplete={() => setLoaded(true)}
+              onLoad={() => setLoaded(true)}
             />
 
             {quoteOverlay && items[activeIndex].quote && (

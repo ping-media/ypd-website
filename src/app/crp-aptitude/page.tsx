@@ -419,7 +419,6 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
       />
-      {/* SECTION TO MODIFY */}
       <CvpLiteSteps
         heading="How It Works"
         subheading="Aptitude Trainer™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
@@ -428,6 +427,7 @@ const page = () => {
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
+        path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 83"
       />
       <CvpCta
         heading="What You'll Receive"

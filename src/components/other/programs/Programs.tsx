@@ -109,7 +109,7 @@ export default function Programs() {
                 className={`object-cover transition-all duration-700 ${
                   loaded ? "blur-0" : "scale-105 blur-xl"
                 }`}
-                onLoadingComplete={() => setLoaded(true)}
+                onLoad={() => setLoaded(true)}
               />
               <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/30 p-4 sm:p-6">
                 <h3 className="text-2xl font-medium text-white">

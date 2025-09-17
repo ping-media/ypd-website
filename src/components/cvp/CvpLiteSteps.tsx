@@ -16,6 +16,7 @@ interface StepSectionProps {
     second: string;
     others?: string[]; // extra images for >4 steps
   };
+  path?: string; // 👈 NEW prop
 }
 
 export default function StepSection({
@@ -23,6 +24,7 @@ export default function StepSection({
   subheading,
   steps,
   images,
+  path,
 }: StepSectionProps) {
   // Utility: render description
   const renderDescription = (desc: string | string[]) => {
@@ -48,9 +50,9 @@ export default function StepSection({
       key={step.id}
       className="relative flex h-full w-full items-start gap-3 sm:gap-4"
     >
-      {/* Number Circle */}
+      {/* Number Circle – only show from lg and up */}
       <div
-        className="relative z-10 mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6"
+        className="relative z-10 mt-1 hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 2xl:mt-6 2xl:flex"
         id={`step-${step.id}`}
       >
         {step.id}
@@ -94,7 +96,11 @@ export default function StepSection({
       </div>
 
       {/* Image */}
-      <div className="w-full lg:w-[55%] xl:w-[60%]">
+      <div
+        className={`w-full lg:w-[55%] xl:w-[60%] ${
+          index !== stepGroups.length - 1 ? "hidden lg:block" : ""
+        }`}
+      >
         <div className="relative aspect-[4/3] w-full sm:aspect-[3/2] lg:aspect-[4/3]">
           <Image
             src={image}
@@ -126,22 +132,15 @@ export default function StepSection({
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          {/* LG to XL screens */}
+          {/* 2XL+ screens */}
           <path
-            d="M 2 18 L 2 54 Q 2 56 4 56 L 58 56 Q 60 56 60 58 L 60 82"
-            className="lg:block xl:hidden"
+            d={
+              path ||
+              "M 1.7 18 L 1.7 54 Q 2 56 4 56 L 63 56 Q 65 56 65 58 L 65 82"
+            }
+            className="hidden 2xl:block"
             stroke="#006400"
-            strokeWidth="0.3"
-            strokeDasharray="1,0.5"
-            fill="none"
-          />
-
-          {/* XL+ screens */}
-          <path
-            d="M 2 18 L 2 54 Q 2 56 4 56 L 63 56 Q 65 56 65 58 L 65 82"
-            className="hidden xl:block"
-            stroke="#006400"
-            strokeWidth="0.3"
+            strokeWidth="0.15"
             strokeDasharray="1,0.5"
             fill="none"
           />
@@ -160,7 +159,7 @@ export default function StepSection({
         </div>
 
         {/* Sections */}
-        <div className="relative z-10 flex w-full flex-col gap-8 sm:gap-10 md:gap-16 lg:gap-24">
+        <div className="relative z-10 flex w-full flex-col gap-8 lg:gap-14 2xl:gap-24">
           {stepGroups.map((group, i) =>
             renderSection(
               group,

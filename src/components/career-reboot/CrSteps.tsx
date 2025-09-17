@@ -32,22 +32,12 @@ export default function CrSteps({
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          {/* LG to XL screens */}
-          <path
-            d="M 2 20 L 2 37 Q 2 39 4 39 L 57 39 Q 59 39 59 41 L 59 69 Q 59 71 57 71 L 4 71 Q 2 71 2 73 L 2 85"
-            className="lg:block xl:hidden"
-            stroke="#006400"
-            strokeWidth="0.3"
-            strokeDasharray="1,0.5"
-            fill="none"
-          />
-
           {/* XL+ screens */}
           <path
             d="M 2 20 L 2 36 Q 2 38 4 38 L 63 38 Q 65 38 65 40 L 65 68 Q 65 70 63 70 L 4 70 Q 2 70 2 72 L 2 83"
-            className="hidden xl:block"
+            className="hidden 2xl:block"
             stroke="#006400"
-            strokeWidth="0.3"
+            strokeWidth="0.15"
             strokeDasharray="1,0.5"
             fill="none"
           />
@@ -74,7 +64,7 @@ export default function CrSteps({
                 className="relative flex h-full w-full items-start gap-3 sm:gap-4"
               >
                 {/* Number Circle */}
-                <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6">
+                <div className="mt-1 hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6 2xl:flex">
                   {step.id}
                 </div>
 
@@ -101,7 +91,7 @@ export default function CrSteps({
           </div>
 
           {/* Image */}
-          <div className="w-full lg:w-[55%] xl:w-[60%]">
+          <div className="hidden w-full lg:block lg:w-[55%] xl:w-[60%]">
             <div className="relative aspect-[4/3] w-full sm:aspect-[3/2] lg:aspect-[4/3]">
               <Image
                 src={images.first}
@@ -124,7 +114,7 @@ export default function CrSteps({
                 className="relative flex h-full w-full items-start gap-3 sm:gap-4"
               >
                 {/* Number Circle */}
-                <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6">
+                <div className="mt-1 hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6 2xl:flex">
                   {step.id}
                 </div>
 
@@ -151,7 +141,7 @@ export default function CrSteps({
           </div>
 
           {/* Image */}
-          <div className="w-full lg:w-[55%] xl:w-[60%]">
+          <div className="hidden w-full lg:block lg:w-[55%] xl:w-[60%]">
             <div className="relative aspect-[4/3] w-full sm:aspect-[3/2] lg:aspect-[4/3]">
               <Image
                 src={images.second}
@@ -172,7 +162,7 @@ export default function CrSteps({
                 className="relative flex h-full w-full items-start gap-3 sm:gap-4"
               >
                 {/* Number Circle */}
-                <div className="mt-1 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6">
+                <div className="mt-1 hidden h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-black bg-white text-sm font-bold sm:mt-2 sm:h-12 sm:w-12 sm:text-base md:mt-4 lg:mt-6 2xl:flex">
                   {step.id}
                 </div>
 

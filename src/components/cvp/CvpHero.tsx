@@ -48,10 +48,9 @@ export default function CvpHero({
                 src="/icons/top.svg"
                 alt="Decorative SVG"
                 fill
-                objectFit="contain"
+                className="object-contain"
               />
             </div>
-
             {title}
           </h2>
 

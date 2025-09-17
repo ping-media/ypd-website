@@ -62,7 +62,7 @@ export default function CvpLiteWorks({
                 className={`object-cover transition-all duration-700 ${
                   loaded ? "blur-0" : "scale-105 blur-xl"
                 }`}
-                onLoadingComplete={() => setLoaded(true)}
+                onLoad={() => setLoaded(true)}
               />
             </div>
 
@@ -117,7 +117,7 @@ export default function CvpLiteWorks({
                 className={`object-cover transition-all duration-700 ${
                   loaded ? "blur-0" : "scale-105 blur-xl"
                 }`}
-                onLoadingComplete={() => setLoaded(true)}
+                onLoad={() => setLoaded(true)}
               />
             </div>
 
@@ -170,7 +170,7 @@ export default function CvpLiteWorks({
                   className={`object-cover transition-all duration-700 ${
                     loaded ? "blur-0" : "scale-105 blur-xl"
                   }`}
-                  onLoadingComplete={() => setLoaded(true)}
+                  onLoad={() => setLoaded(true)}
                 />
               </div>
               {audience.map((item, index) => (

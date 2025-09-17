@@ -105,7 +105,7 @@ export default function Research() {
                 className={`object-cover transition-all duration-700 ${
                   loaded ? "blur-0" : "scale-105 blur-xl"
                 }`}
-                onLoadingComplete={() => setLoaded(true)}
+                onLoad={() => setLoaded(true)}
               />
               <div className="absolute inset-0 flex flex-col justify-end gap-2 bg-black/40 p-6"></div>
             </div>

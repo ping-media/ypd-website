@@ -361,6 +361,7 @@ const page = () => {
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
+        path="M 1.7 10 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 89"
       />
       <CvpLiteWorks
         heading="Who It's For"
