@@ -177,7 +177,7 @@ const useCases = [
     description:
       "Reboot Navigator gives a skill-to-role cluster specific skills in your identified industries and guides you through real scenario based learning.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/uses.png",
+    image: "/career-reboot/r1.jpg",
   },
   {
     id: 2,
@@ -186,7 +186,7 @@ const useCases = [
     description:
       "The Career Navigator delivers targeted capsules — from industry tools to workplace communication — ensuring you close the exact gaps holding you back.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/career-reboot/r2.jpg",
   },
   {
     id: 3,
@@ -195,7 +195,7 @@ const useCases = [
     description:
       "AI-powered market mapping, emerging sectors and growing niches, along with bridge skills to help you transition without starting over.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/uses.png",
+    image: "/career-reboot/r3.jpg",
   },
   {
     id: 4,
@@ -204,7 +204,7 @@ const useCases = [
     description:
       "The Career Navigator simulations with mentor feedback restores confidence and sharpen decision-making for high-stakes workplace scenarios.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/career-reboot/r4.jpg",
   },
 ];
 const numbersteps = [
@@ -257,7 +257,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/career-reboot/re1.jpg",
   },
   {
     id: 2,
@@ -270,7 +270,7 @@ const ReviewsData = [
         {highlight("Now I’m preparing for a role in digital marketing.")}&quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/career-reboot/re2.jpg",
   },
   {
     id: 3,
@@ -283,7 +283,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/career-reboot/re3.jpg",
   },
   {
     id: 4,
@@ -298,7 +298,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/career-reboot/re4.jpg",
   },
   {
     id: 5,
@@ -313,7 +313,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/career-reboot/re5.jpg",
   },
   {
     id: 6,
@@ -326,7 +326,7 @@ const ReviewsData = [
         {highlight("to shift careers without fear of starting over.")}&quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/career-reboot/re6.jpg",
   },
 ];
 

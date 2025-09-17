@@ -240,7 +240,7 @@ const ReviewsData = [
         Now I’m building my strengths for a Product Management role!&quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/crp-aptitude/re1.jpg",
   },
   {
     id: 2,
@@ -256,7 +256,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/crp-aptitude/re2.jpg",
   },
   {
     id: 3,
@@ -270,7 +270,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/crp-aptitude/re3.jpg",
   },
   {
     id: 4,
@@ -285,7 +285,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user1.png",
+    image: "/crp-aptitude/re4.jpg",
   },
   {
     id: 5,
@@ -299,7 +299,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user2.png",
+    image: "/crp-aptitude/re5.jpg",
   },
   {
     id: 6,
@@ -315,7 +315,7 @@ const ReviewsData = [
         &quot;
       </>
     ),
-    image: "/cvplite/user3.png",
+    image: "/crp-aptitude/re6.jpg",
   },
 ];
 
