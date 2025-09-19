@@ -3,7 +3,7 @@ import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
@@ -12,18 +12,11 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+// import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
-import {
-  Lightbulb,
-  Compass,
-  File,
-  GraduationCap,
-  Zap,
-  ArrowRight,
-  UserPlus,
-} from "lucide-react";
+import { Zap, ArrowRight, UserPlus } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
+// import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
 
 const features = [
@@ -52,22 +45,22 @@ const features = [
       "Guided sessions ensure career choices are understood, supported, and future-proofed for both student and parent.",
   },
 ];
-const insideData = [
-  { icon: FileText, title: "Self-discovery & cognitive mapping" },
-  {
-    icon: Lightbulb,
-    title: "Learning style & decision-making insights",
-  },
-  {
-    icon: Compass,
-    title: "Emotional & social quotient nudges",
-  },
-  { icon: File, title: "Career-aligned simulations & feedback" },
-  {
-    icon: GraduationCap,
-    title: "AI-generated launch roadmap for top-fit roles",
-  },
-];
+// const insideData = [
+//   { icon: FileText, title: "Self-discovery & cognitive mapping" },
+//   {
+//     icon: Lightbulb,
+//     title: "Learning style & decision-making insights",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Emotional & social quotient nudges",
+//   },
+//   { icon: File, title: "Career-aligned simulations & feedback" },
+//   {
+//     icon: GraduationCap,
+//     title: "AI-generated launch roadmap for top-fit roles",
+//   },
+// ];
 const steps = [
   {
     id: 1,
@@ -413,15 +406,16 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/coming-soon"
       />
-      <CvpInside
+      {/* Both hidden as per req */}
+      {/* <CvpInside
         heading="What You'll Experience"
         subheading="Over 7 tightly curated days, you’ll go through"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
         ctaNote="All without feeling like you’re just “taking another test.”"
-      />
-      <WhyCvpLite
+      /> */}
+      {/* <WhyCvpLite
         heading="Why It Works"
         subheading="Because you shouldn’t choose your career based on guesswork or generic quizzes."
         avoidTitle="Others Offer"
@@ -440,7 +434,7 @@ const page = () => {
         ]}
         ctaText="Try CVP Advance™"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="CVP Advance™ is an in-depth career visioning journey that layers advanced profiling, skill mapping, and global role-pathway insights. It transforms clarity into an actionable, future-proof career blueprint."

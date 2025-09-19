@@ -1,10 +1,10 @@
-import Vs from "@/components/career-reboot/Vs";
+// import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
@@ -17,17 +17,15 @@ import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Tables from "@/components/mission-nda/Tables";
 import Faq from "@/components/other/Faq";
 import { pricingData } from "@/components/pricing/prices";
-import {
-  Lightbulb,
-  Compass,
-  File,
-  Zap,
-  ArrowRight,
-  UserPlus,
-  ShieldPlus,
-  Cable,
-  Blocks,
-} from "lucide-react";
+import { Zap, ArrowRight, UserPlus } from "lucide-react";
+// import {
+//   Lightbulb,
+//   Compass,
+//   File,
+//   ShieldPlus,
+//   Cable,
+//   Blocks,
+// } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
 const features = [
@@ -56,48 +54,48 @@ const features = [
       "Not a quiz or blog scrape — built on real frameworks, country data, and ex-advisor expertise.",
   },
 ];
-const insideData = [
-  {
-    icon: Brain,
-    title: "Your Admission Eligibility",
-    description: "based on academics, boards, test scores",
-  },
-  {
-    icon: Lightbulb,
-    title: "Top Courses by Country & Stream",
-    description: "AI-suggested with real rankings",
-  },
-  {
-    icon: Compass,
-    title: "Matched Universities",
-    description: "Shortlisted by intake, test fit, and cost",
-  },
-  {
-    icon: File,
-    title: "Admissions Timeline",
-    description: "SOP, LOR, deadlines, portals",
-  },
-  {
-    icon: Blocks,
-    title: "Tuition & Living Cost Estimator",
-    description: "Visual comparison by region",
-  },
-  {
-    icon: Cable,
-    title: "Scholarship Engine",
-    description: "Merit, need-based, and external funding",
-  },
-  {
-    icon: ShieldPlus,
-    title: "Student Life Snapshot",
-    description: "Safety, weather, diaspora, support",
-  },
-  {
-    icon: Lightbulb,
-    title: "Career Scope & PG Options",
-    description: "Internships, job roles, ROI",
-  },
-];
+// const insideData = [
+//   {
+//     icon: Brain,
+//     title: "Your Admission Eligibility",
+//     description: "based on academics, boards, test scores",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Top Courses by Country & Stream",
+//     description: "AI-suggested with real rankings",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Matched Universities",
+//     description: "Shortlisted by intake, test fit, and cost",
+//   },
+//   {
+//     icon: File,
+//     title: "Admissions Timeline",
+//     description: "SOP, LOR, deadlines, portals",
+//   },
+//   {
+//     icon: Blocks,
+//     title: "Tuition & Living Cost Estimator",
+//     description: "Visual comparison by region",
+//   },
+//   {
+//     icon: Cable,
+//     title: "Scholarship Engine",
+//     description: "Merit, need-based, and external funding",
+//   },
+//   {
+//     icon: ShieldPlus,
+//     title: "Student Life Snapshot",
+//     description: "Safety, weather, diaspora, support",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Career Scope & PG Options",
+//     description: "Internships, job roles, ROI",
+//   },
+// ];
 const steps = [
   {
     id: 1,
@@ -416,13 +414,14 @@ const page = () => {
         ctaText="Try Global Navigator™"
         ctaLink="/coming-soon"
       />
-      <CvpInside
+      {/* hidden as per req */}
+      {/* <CvpInside
         heading="Your Personalized Global Journey Powered by AI + Mentor"
         subheading="In just one structured session, you’ll explore:"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <Tables
         heading="Structured Journey. One Dashboard. Global Pathways."
         subheading="Because studying abroad or choosing global careers shouldn’t rely on random Google searches or expensive agents."
@@ -472,8 +471,8 @@ const page = () => {
         ctaLink="/coming-soon"
         ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
-
-      <CvpCta
+      {/*both hidden as per req */}
+      {/* <CvpCta
         heading="What You’ll Receive"
         subheading=" Built by experts. Powered by AI. Grounded in empathy."
         expandableFeatures={true}
@@ -502,8 +501,8 @@ const page = () => {
             href: "/coming-soon",
           },
         ]}
-      />
-      <Vs
+      /> */}
+      {/* <Vs
         heading="Why YPD Global Navigator™ Beats Traditional Counseling"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         leftTitle="Feature"
@@ -534,7 +533,7 @@ const page = () => {
         rightItems={["", "", "", "", ""]}
         ctaText="Try Global Navigator™"
         ctaLink="/get-started"
-      />
+      /> */}
       <CvpJourney
         heading="Built by Global Admissions Experts, Data Scientists, and AI Strategists"
         description="Youth Pulse Digital™ believes that studying abroad isn’t just a decision — it’s a guided journey toward the right fit."

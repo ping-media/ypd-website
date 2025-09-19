@@ -3,7 +3,7 @@ import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
@@ -12,7 +12,7 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+// import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 // imports for components
 import {
@@ -24,7 +24,7 @@ import {
   ArrowRight,
   UserPlus,
 } from "lucide-react";
-import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
+// import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
 
 const featuresData = [
@@ -53,22 +53,22 @@ const featuresData = [
       "This isn’t just a chatbot or quiz.Our engine uses real frameworks, real-time logic, and your real inputs not scraped suggestions or generic lists.",
   },
 ];
-const insideData = [
-  { icon: FileText, title: "Discover your true interests and strengths" },
-  {
-    icon: Lightbulb,
-    title: "Reflect on your values, preferences, and learning style",
-  },
-  {
-    icon: Compass,
-    title: "Identify career directions that align with who you are",
-  },
-  { icon: File, title: "Walk away with your Career Persona Report (PDF)" },
-  {
-    icon: GraduationCap,
-    title: "Get guidance on college subjects and stream mapping",
-  },
-];
+// const insideData = [
+//   { icon: FileText, title: "Discover your true interests and strengths" },
+//   {
+//     icon: Lightbulb,
+//     title: "Reflect on your values, preferences, and learning style",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Identify career directions that align with who you are",
+//   },
+//   { icon: File, title: "Walk away with your Career Persona Report (PDF)" },
+//   {
+//     icon: GraduationCap,
+//     title: "Get guidance on college subjects and stream mapping",
+//   },
+// ];
 const steps = [
   {
     id: 1,
@@ -329,15 +329,16 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/coming-soon"
       />
-      <CvpInside
+      {/* Both hidden as per req */}
+      {/* <CvpInside
         heading="What’s Inside"
         subheading="We don’t reveal every step online — but here’s what you’ll go through:"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
         ctaNote="Each capsule is short, engaging, and designed to unlock insights no more than 15–20 minutes each."
-      />
-      <WhyCvpLite
+      /> */}
+      {/* <WhyCvpLite
         heading="Why CVP Lite™ Works"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         avoidTitle="You’ll Avoid..."
@@ -356,7 +357,7 @@ const page = () => {
         ]}
         ctaText="Try CVP Lite™"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <CvpLiteSteps
         heading="How it Works"
         subheading="CVP Lite™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"

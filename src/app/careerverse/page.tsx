@@ -8,7 +8,7 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+// import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 // imports for components
 import { ArrowRight, HandCoins, BriefcaseBusiness, Dna } from "lucide-react";
@@ -335,7 +335,8 @@ const page = () => {
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
-      <WhyCvpLite
+      {/* hidden as per req */}
+      {/* <WhyCvpLite
         heading="Why CareerVerse™?"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         avoidTitle="Most Platforms Do This..."
@@ -354,7 +355,8 @@ const page = () => {
         ]}
         ctaText="Try CareerVerse™"
         ctaLink="/coming-soon"
-      />
+      /> */}
+      {/* CONVERT INTO HOW IT WORKS */}
       <CvpInside
         heading="What You’ll Experience"
         subheading="Explore immersive career environments where you’ll take on real tasks, face industry scenarios, and uncover what truly excites you."

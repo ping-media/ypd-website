@@ -1,9 +1,9 @@
-import Vs from "@/components/career-reboot/Vs";
-import CvpCta from "@/components/cvp/CvpCta";
+// import Vs from "@/components/career-reboot/Vs";
+// import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
@@ -15,17 +15,16 @@ import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 import { pricingData } from "@/components/pricing/prices";
-import {
-  Lightbulb,
-  Compass,
-  File,
-  Zap,
-  ArrowRight,
-  UserPlus,
-  ShieldPlus,
-  Cable,
-  Blocks,
-} from "lucide-react";
+import { Zap, ArrowRight } from "lucide-react";
+// import {
+//   Lightbulb,
+//   Compass,
+//   File,
+//   UserPlus,
+//   ShieldPlus,
+//   Cable,
+//   Blocks,
+// } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
 const features = [
@@ -54,48 +53,48 @@ const features = [
       "Not a chatbot quiz. Powered by proven aptitude models, role-fit logic, and industry data — so your guidance is grounded in facts, not scraped lists or generic advice.",
   },
 ];
-const insideData = [
-  {
-    icon: Brain,
-    title: "Decision-Making",
-    description: "based on academics, boards, test scores",
-  },
-  {
-    icon: Lightbulb,
-    title: "Process Thinking",
-    description: "AI-suggested with real rankings",
-  },
-  {
-    icon: Compass,
-    title: "Influence & Collaboration",
-    description: "Shortlisted by intake, test fit, and cost",
-  },
-  {
-    icon: File,
-    title: "Ownership & Accountability",
-    description: "SOP, LOR, deadlines, portals",
-  },
-  {
-    icon: Blocks,
-    title: "Learning Agility",
-    description: "Visual comparison by region",
-  },
-  {
-    icon: Cable,
-    title: "Adaptability & Change",
-    description: "Merit, need-based, and external funding",
-  },
-  {
-    icon: ShieldPlus,
-    title: "Conflict Handling",
-    description: "Safety, weather, diaspora, support",
-  },
-  {
-    icon: Lightbulb,
-    title: "Ethical Thinking",
-    description: "Internships",
-  },
-];
+// const insideData = [
+//   {
+//     icon: Brain,
+//     title: "Decision-Making",
+//     description: "based on academics, boards, test scores",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Process Thinking",
+//     description: "AI-suggested with real rankings",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Influence & Collaboration",
+//     description: "Shortlisted by intake, test fit, and cost",
+//   },
+//   {
+//     icon: File,
+//     title: "Ownership & Accountability",
+//     description: "SOP, LOR, deadlines, portals",
+//   },
+//   {
+//     icon: Blocks,
+//     title: "Learning Agility",
+//     description: "Visual comparison by region",
+//   },
+//   {
+//     icon: Cable,
+//     title: "Adaptability & Change",
+//     description: "Merit, need-based, and external funding",
+//   },
+//   {
+//     icon: ShieldPlus,
+//     title: "Conflict Handling",
+//     description: "Safety, weather, diaspora, support",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Ethical Thinking",
+//     description: "Internships",
+//   },
+// ];
 const steps = [
   {
     id: 1,
@@ -404,7 +403,6 @@ const page = () => {
         ctaText="Start Your Journey Now"
         ctaLink="/coming-soon"
       />
-      {/* SECTION TO MODIFY (BUILT FOR INDIA POWERED BY AI) */}
       <CvpLiteWorks
         heading="Who Can Use Aptitude Trainer?"
         subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
@@ -412,13 +410,14 @@ const page = () => {
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
       />
-      <CvpInside
+      {/* hidden as per req */}
+      {/* <CvpInside
         heading="What You Train On"
         subheading="Developed with workplace realities in mind"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <CvpLiteSteps
         heading="How It Works"
         subheading="Aptitude Trainer™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
@@ -429,7 +428,8 @@ const page = () => {
         }}
         path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 83"
       />
-      <CvpCta
+      {/* hidden as per req */}
+      {/* <CvpCta
         heading="What You'll Receive"
         subheading="Built for growth. Backed by AI. Designed for real workplace impact."
         features={[
@@ -456,7 +456,7 @@ const page = () => {
             href: "/coming-soon",
           },
         ]}
-      />
+      /> */}
       <WhyCvpLite
         heading="What Makes CRP Aptitude Trainer™ the First of Its Kind?"
         subheading="The only AI-powered aptitude system that blends workplace realities with adaptive, role-specific skill building."
@@ -491,7 +491,8 @@ const page = () => {
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
       />
-      <Vs
+      {/* hidden as per req */}
+      {/* <Vs
         heading="Aptitude Trainer™ Outperforms Generic Aptitude Tests"
         subheading="Because you shouldn’t train for skills using random questions or one-size-fits-all methods"
         leftTitle="Feature"
@@ -522,7 +523,7 @@ const page = () => {
         rightItems={["", "", "", "", ""]}
         ctaText="Try Aptitude Trainer"
         ctaLink="/get-started"
-      />
+      /> */}
       <CvpRealworld
         heading="Why It’s Different"
         subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer™ makes every step count."

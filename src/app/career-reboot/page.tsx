@@ -1,11 +1,11 @@
-import CrCards from "@/components/career-reboot/CrCards";
+// import CrCards from "@/components/career-reboot/CrCards";
 import CrSteps from "@/components/career-reboot/CrSteps";
-import Vs from "@/components/career-reboot/Vs";
+// import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
@@ -13,55 +13,53 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+// import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 import CvpSteps from "@/components/other/steps/CvpSteps";
-import {
-  Lightbulb,
-  Compass,
-  File,
-  Venus,
-  Zap,
-  ArrowRight,
-  UserPlus,
-  PersonStanding,
-  GraduationCap,
-} from "lucide-react";
-import { FileText } from "lucide-react";
+import { Zap, ArrowRight, UserPlus } from "lucide-react";
+// import {
+//   Lightbulb,
+//   Compass,
+//   File,
+//   Venus,
+//   PersonStanding,
+//   GraduationCap,
+// } from "lucide-react";
+// import { FileText } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
 
-const insideData = [
-  {
-    icon: FileText,
-    title: "Workplace Scenarios",
-    description: "Late reporting, difficult boss, SOP issues",
-  },
-  {
-    icon: Lightbulb,
-    title: "Customer Handling",
-    description: "Angry client, refund call, shop delay",
-  },
-  {
-    icon: Compass,
-    title: "Emotional Capsules",
-    description: "Burnout, confidence, work-life balance",
-  },
-  {
-    icon: File,
-    title: "Digital Capsules",
-    description: "Google tools, email, time tracking",
-  },
-  {
-    icon: Venus,
-    title: "Women-Specific ",
-    description: "Gaps, family bias, restart fears",
-  },
-  {
-    icon: PersonStanding,
-    title: "Freelancer Focus",
-    description: "Payment delays, negotiation, self-pitching",
-  },
-];
+// const insideData = [
+//   {
+//     icon: FileText,
+//     title: "Workplace Scenarios",
+//     description: "Late reporting, difficult boss, SOP issues",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Customer Handling",
+//     description: "Angry client, refund call, shop delay",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Emotional Capsules",
+//     description: "Burnout, confidence, work-life balance",
+//   },
+//   {
+//     icon: File,
+//     title: "Digital Capsules",
+//     description: "Google tools, email, time tracking",
+//   },
+//   {
+//     icon: Venus,
+//     title: "Women-Specific ",
+//     description: "Gaps, family bias, restart fears",
+//   },
+//   {
+//     icon: PersonStanding,
+//     title: "Freelancer Focus",
+//     description: "Payment delays, negotiation, self-pitching",
+//   },
+// ];
 const steps = [
   {
     id: 1,
@@ -83,35 +81,35 @@ const steps = [
     icon: "/careerverse/s3.svg",
   },
 ];
-const crData = [
-  {
-    icon: FileText,
-    title: "18+ Role Clusters",
-    description:
-      "Master diverse job skills through realistic, scenario-based training capsules.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Emotional Scenarios",
-    description: "Practice handling workplace emotions with guided Scenarios",
-  },
-  {
-    icon: Compass,
-    title: "Track via Progress Tracker",
-    description: "See real-time skill progress and completion milestones.",
-  },
-  {
-    icon: File,
-    title: "Get Completion Certificate (Lite & Pro only)",
-    description:
-      "Earn a shareable certificate after finishing all assigned capsules.",
-  },
-  {
-    icon: GraduationCap,
-    title: "AI Reflection + Journal (Pro only)",
-    description: "Receive AI Feedback and maintain a personal growth journal.",
-  },
-];
+// const crData = [
+//   {
+//     icon: FileText,
+//     title: "18+ Role Clusters",
+//     description:
+//       "Master diverse job skills through realistic, scenario-based training capsules.",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Emotional Scenarios",
+//     description: "Practice handling workplace emotions with guided Scenarios",
+//   },
+//   {
+//     icon: Compass,
+//     title: "Track via Progress Tracker",
+//     description: "See real-time skill progress and completion milestones.",
+//   },
+//   {
+//     icon: File,
+//     title: "Get Completion Certificate (Lite & Pro only)",
+//     description:
+//       "Earn a shareable certificate after finishing all assigned capsules.",
+//   },
+//   {
+//     icon: GraduationCap,
+//     title: "AI Reflection + Journal (Pro only)",
+//     description: "Receive AI Feedback and maintain a personal growth journal.",
+//   },
+// ];
 
 const audience = [
   {
@@ -411,13 +409,14 @@ const page = () => {
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
-      <CvpInside
-        heading="What You’ll Learn What You’ll Learn"
+      {/* hidden as per req */}
+      {/* <CvpInside
+        heading="What You’ll Learn"
         subheading="In just one structured session, you’ll explore:"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <CvpLiteWorks
         heading="Who is this for?"
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal — it’s a guided evolution."
@@ -442,13 +441,14 @@ const page = () => {
         footerText="Bulk Discounts for Colleges & NGOs. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      <CrCards
+      {/*both hidden as per req */}
+      {/* <CrCards
         heading="Your Progress, Your Way"
         features={crData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
-      />
-      <WhyCvpLite
+      /> */}
+      {/* <WhyCvpLite
         heading="Why Choose Us?"
         subheading="YPD doesn’t sell assessments. We deliver transformation."
         avoidTitle="Others Don’t"
@@ -467,7 +467,7 @@ const page = () => {
         ]}
         ctaText="Try Reboot Navigator™"
         ctaLink="/coming-soon"
-      />
+      /> */}
       <CvpSteps
         steps={numbersteps}
         heading="How to Start"
@@ -525,7 +525,8 @@ const page = () => {
         subheading="Career reinvention isn’t guesswork — it’s structured discovery. Reboot Navigator identifies your barriers, maps your transferable skills, and guides you into roles where you can thrive."
         items={useCases}
       />
-      <WhyCvpLite
+      {/*both hidden as per req */}
+      {/* <WhyCvpLite
         heading="Structured Journey. One Dashboard. Full Career Comeback."
         subheading="Revive your career with clarity — not guesswork. Reboot Navigator maps skills, aligns roles, and delivers industry-specific capsules in one dashboard. Track progress, unlock adaptive learning, and re-enter with confidence"
         avoidTitle="Feature"
@@ -548,8 +549,8 @@ const page = () => {
         ]}
         ctaText="Try Reboot Navigator™"
         ctaLink="/coming-soon"
-      />
-      <Vs
+      /> */}
+      {/* <Vs
         heading="Reboot Navigator™ vs Others"
         subheading="Because you shouldn’t plan your career comeback based on guesswork or generic advice."
         leftTitle="Feature"
@@ -594,7 +595,7 @@ const page = () => {
         ]}
         ctaText="Try Reboot Navigator™"
         ctaLink="/get-started"
-      />
+      /> */}
 
       <CvpImpact
         heading="Real Impact, Real Results"
@@ -617,7 +618,7 @@ const page = () => {
           },
         ]}
         image={{
-          src: "/cvplite/impact.png",
+          src: "/career-reboot/gig.jpg",
           alt: "Student and parent smiling",
         }}
       />
