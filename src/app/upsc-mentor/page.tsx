@@ -410,8 +410,8 @@ const page = () => {
         ]}
         buttonText="Start Free"
         buttonLink="/program"
-        image="/cvplite/mission-nda.png"
-        imageAlt="mission ssb"
+        image="/upsc/hero.jpg"
+        imageAlt="upsc mentor"
       />
       <CvpVideo
         heading="Step Inside the Experience of UPSC Mentor™"

@@ -124,12 +124,12 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for alternate Role Experience",
-          price: "₹4499",
+          price: "₹3999",
           features: [
             "Account Creation",
             "Dashboard View",
             "Profile Setup",
-            "Simulate & Chosen Roles",
+            "Simulate 8 Chosen Roles",
             "Career Fit Report",
             "1 Year access",
             "Built for Class 9-UG students who want clarity on career selection",

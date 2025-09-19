@@ -44,8 +44,8 @@ const Personalise = () => {
             We don’t believe in one-size-fits-all. We build personalized
             journeys that empower learners, connect them to careers, and align
             <br className="hidden md:block" />
-            with India’s future-ready mission powered by AI, guided by mentors,
-            validated by results.
+            with India’s future-ready mission—powered by AI, guided by mentors,
+            and validated by results.
           </>
         }
         cardWidth={500} // cards fit in 1280px

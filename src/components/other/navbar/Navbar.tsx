@@ -146,7 +146,7 @@ const Navbar = () => {
           <div className="hidden flex-1 justify-end sm:flex">
             <Link
               href="/coming-soon"
-              className="btn-primary btn-size space-x-0.5 capitalize"
+              className="btn-primary btn-size space-x-0.5 capitalize sm:px-4 lg:text-base"
             >
               <span className="whitespace-nowrap">
                 Create Account
@@ -155,7 +155,7 @@ const Navbar = () => {
                   for free{" "}
                 </span> */}
               </span>
-              <User className="hidden xl:block" />
+              <User className="hidden h-5 w-5 xl:block" />
             </Link>
           </div>
 

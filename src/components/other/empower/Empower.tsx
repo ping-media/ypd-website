@@ -30,7 +30,7 @@ const cardData = [
     icon: "/icons/g4.svg",
     title: "Train Educators as Mentors",
     description:
-      "Experience Your Future Before You Live It. CareerVerse™ ,India’s first AI-powered career role simulation. Not a test. Not a lecture. A real, guided journey into 'Life in a Day of a Career Role you pick.'",
+      "Join our growing network of visionary school leaders. Rethinking what guidance means in the 21st century powered by AI",
   },
   {
     icon: "/icons/g5.svg",
