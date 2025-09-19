@@ -515,6 +515,7 @@ const page = () => {
         subheading="Innovation that feels premium, priced for you."
       />
       <CvpPricing
+        currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={missionSSBPricing.plans.monthly ?? []}

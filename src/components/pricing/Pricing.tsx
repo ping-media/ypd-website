@@ -4,9 +4,14 @@ import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import PricingCard from "./PricingCard";
 import NoPlan from "./NoPlan";
-import { pricingData, BillingCycle, Plan } from "./prices";
+import { pricingData, BillingCycle, Plan, Currency } from "./prices";
+import { getPrice } from "@/lib/getPrice";
 
-const PricingPage = () => {
+interface Props {
+  currency: Currency;
+}
+
+const PricingPage = ({ currency }: Props) => {
   const [program, setProgram] = useState<string>("");
   const [billing, setBilling] = useState<BillingCycle>("one-time");
 
@@ -95,7 +100,8 @@ const PricingPage = () => {
                 key={i}
                 title={plan.title}
                 description={plan.description}
-                price={plan.price}
+                price={getPrice(plan, currency)}
+                currency={currency}
                 period={
                   billing === "monthly"
                     ? "month"

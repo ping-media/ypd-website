@@ -358,7 +358,7 @@ const page = () => {
       /> */}
       {/* CONVERT INTO HOW IT WORKS */}
       <CvpInside
-        heading="What You’ll Experience"
+        heading="How it works"
         subheading="Explore immersive career environments where you’ll take on real tasks, face industry scenarios, and uncover what truly excites you."
         features={insideData}
         ctaText="Start Your Journey Today"
@@ -371,6 +371,7 @@ const page = () => {
         quoteOverlay
       />
       <CvpPricing
+        currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={careerVersePricing.plans["one-time"] ?? []}

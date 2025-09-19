@@ -435,6 +435,7 @@ const page = () => {
         }}
       />
       <CvpPricing
+        currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={crPricing.plans.monthly ?? []}

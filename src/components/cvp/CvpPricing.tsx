@@ -4,17 +4,23 @@ import PricingCard from "../pricing/PricingCard";
 interface PricingPlan {
   title: string;
   description: string;
-  price: string;
+  price: {
+    INR: string;
+    AED: string;
+  };
   priceText?: string;
   period?: string;
   features: string[];
   highlight?: boolean;
 }
 
+type Currency = "INR" | "AED";
+
 interface CvpPricingProps {
   heading: string;
   subheading: string;
   plans: PricingPlan[];
+  currency: Currency;
   footerText?: string;
   footerLink?: {
     text: string;
@@ -25,6 +31,7 @@ interface CvpPricingProps {
 const CvpPricing = ({
   heading,
   subheading,
+  currency,
   plans,
   footerText,
   footerLink,
@@ -45,9 +52,10 @@ const CvpPricing = ({
           {plans.map((plan, index) => (
             <div key={index} className="flex w-full flex-1 flex-col sm:w-1/2">
               <PricingCard
+                currency={currency}
                 title={plan.title}
                 description={plan.description}
-                price={plan.price}
+                price={plan.price[currency]}
                 period={plan.period}
                 priceText={plan.priceText}
                 features={plan.features}

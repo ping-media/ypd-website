@@ -468,6 +468,7 @@ const page = () => {
         items={useCases}
       />
       <CvpPricing
+        currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={cvpAdvance.plans["one-time"] ?? []}

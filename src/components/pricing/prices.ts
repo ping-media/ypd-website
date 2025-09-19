@@ -1,9 +1,13 @@
 export type BillingCycle = "one-time" | "monthly" | "annually";
+export type Currency = "INR" | "AED";
 
 export interface Plan {
   title: string;
   description: string;
-  price: string; // India only for now
+  price: {
+    INR: string;
+    AED: string;
+  };
   features: string[];
   highlight?: boolean;
   priceText?: string;
@@ -27,7 +31,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Free Plan",
           description: "For students starting their journey",
-          price: "Free",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
           features: [
             "Profile setup",
             "Dashboard Preview",
@@ -38,7 +45,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Complete your full Career Persona Journey",
-          price: "₹1299",
+          price: {
+            INR: "₹1299",
+            AED: "179.00",
+          },
           features: [
             "Full access",
             "Personal Action Plan",
@@ -61,7 +71,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Free Plan",
           description: "For students starting their journey",
-          price: "Free",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
           features: [
             "Profile setup",
             "Dashboard Preview",
@@ -72,7 +85,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for career decision-making",
-          price: "₹2499",
+          price: {
+            INR: "₹2499",
+            AED: "369.00",
+          },
           features: [
             "Full access",
             "7-day deep dive Journey",
@@ -97,7 +113,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Free Plan",
           description: "Perfect to explore and get started",
-          price: "Free",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
           features: [
             "Account Creation",
             "Dashboard View",
@@ -108,7 +127,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Pro",
           description: "Best for focused Role Experience",
-          price: "₹1999",
+          price: {
+            INR: "₹1999",
+            AED: "259.00",
+          },
           features: [
             "Account Creation",
             "Dashboard View",
@@ -124,7 +146,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for alternate Role Experience",
-          price: "₹3999",
+          price: {
+            INR: "₹3999",
+            AED: "479.00",
+          },
           features: [
             "Account Creation",
             "Dashboard View",
@@ -150,7 +175,10 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Free Plan",
           description: "For starters",
-          price: "Free",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
           features: [
             "Account Creation",
             "Profile Set Up",
@@ -162,8 +190,11 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Pro",
           description: "Best for 11th–UG Students",
-          price: "₹3499",
-          period:"month",
+          price: {
+            INR: "₹3499",
+            AED: "369.00",
+          },
+          period: "month",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -181,8 +212,11 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for 11th – Graduates",
-          price: "₹5499",
-          period:"month",
+          price: {
+            INR: "₹5499",
+            AED: "549.00",
+          },
+          period: "month",
           features: [
             "Account Creation",
             "Dashboard View",
@@ -192,7 +226,7 @@ export const pricingData: Record<string, ProductPricing> = {
             "Personal Interview – AI Driven",
             "Progress & Weakness Tracking",
             "1 Year access",
-            "Email Support",    
+            "Email Support",
             "Minimum 3 Months Subscription Required",
             "Optional Human Assessor Access",
           ],
@@ -203,447 +237,475 @@ export const pricingData: Record<string, ProductPricing> = {
   },
   // ---------------- UPSC Mentor ----------------
   "UPSC Mentor™": {
-  billingTypes: ["monthly", "annually"],
-  plans: {
-    monthly: [
-      {
-        title: "Basic",
-        description: "UPSC prep foundation",
-        price: "$20",
-        features: [
-          "Daily capsules",
-          "Prelims question bank",
-          "Reflection nudges",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Structured UPSC pathway",
-        price: "$60",
-        features: [
-          "Everything in Basic",
-          "Mains framework",
-          "Essay/Interview practice",
-          "Mentor nudges",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Complete UPSC mentor",
-        price: "$120",
-        features: [
-          "Everything in Pro",
-          "Full simulation tracks",
-          "Personalized reports",
-          "Mentor sessions",
-        ],
-      },
-    ],
-    annually: [
-      {
-        title: "Basic",
-        description: "UPSC prep foundation",
-        price: "$200",
-        features: [
-          "Daily capsules",
-          "Prelims question bank",
-          "Reflection nudges",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Structured UPSC pathway",
-        price: "$600",
-        features: [
-          "Everything in Basic",
-          "Mains framework",
-          "Essay/Interview practice",
-          "Mentor nudges",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Complete UPSC mentor",
-        price: "$1,200",
-        features: [
-          "Everything in Pro",
-          "Full simulation tracks",
-          "Personalized reports",
-          "Mentor sessions",
-        ],
-      },
-    ],
+    billingTypes: ["monthly", "annually"],
+    plans: {
+      monthly: [
+        {
+          title: "Basic",
+          description: "UPSC prep foundation",
+          price: { INR: "$20", AED: "$20" },
+          features: [
+            "Daily capsules",
+            "Prelims question bank",
+            "Reflection nudges",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Structured UPSC pathway",
+          price: { INR: "$60", AED: "$60" },
+          features: [
+            "Everything in Basic",
+            "Mains framework",
+            "Essay/Interview practice",
+            "Mentor nudges",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Complete UPSC mentor",
+          price: { INR: "$120", AED: "$120" },
+          features: [
+            "Everything in Pro",
+            "Full simulation tracks",
+            "Personalized reports",
+            "Mentor sessions",
+          ],
+        },
+      ],
+      annually: [
+        {
+          title: "Basic",
+          description: "UPSC prep foundation",
+          price: { INR: "$200", AED: "$200" },
+          features: [
+            "Daily capsules",
+            "Prelims question bank",
+            "Reflection nudges",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Structured UPSC pathway",
+          price: { INR: "$600", AED: "$600" },
+          features: [
+            "Everything in Basic",
+            "Mains framework",
+            "Essay/Interview practice",
+            "Mentor nudges",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Complete UPSC mentor",
+          price: { INR: "$1200", AED: "$1200" },
+          features: [
+            "Everything in Pro",
+            "Full simulation tracks",
+            "Personalized reports",
+            "Mentor sessions",
+          ],
+        },
+      ],
+    },
   },
-},
-// ---------------- Counseling Guru ----------------
-"Counseling Guru™": {
-  billingTypes: ["one-time"],
-  plans: {
-    "one-time": [
-      {
-        title: "Free Plan",
-        description: "For Starters",
-        price: "Free",
-        features: [
-          "Account Creation",
-          "Profile Set Up",
-          "Dashboard View",
-          "Unlock Counseling Session with Pro & Premium Plans",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Best for Self-Serve Counseling Session",
-        price: "₹1499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "Career Guidance Journey",
-          "Session Report",
-          "1 Year access",
-          "Email Support",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Best for Mentor Driven Counseling Session",
-        price: "₹3499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "Session Booking",
-          "Decision-Making Journey",
-          "45 min Mentor Guided Session",
-          "Final Recommendation Report",
-          "1 Year access",
-          "Email Support",
-        ],
-        highlight: true,
-      },
-    ],
+  // ---------------- Counseling Guru ----------------
+  "Counseling Guru™": {
+    billingTypes: ["one-time"],
+    plans: {
+      "one-time": [
+        {
+          title: "Free Plan",
+          description: "For Starters",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
+          features: [
+            "Account Creation",
+            "Profile Set Up",
+            "Dashboard View",
+            "Unlock Counseling Session with Pro & Premium Plans",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Best for Self-Serve Counseling Session",
+          price: {
+            INR: "₹1499",
+            AED: "269.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "Career Guidance Journey",
+            "Session Report",
+            "1 Year access",
+            "Email Support",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Best for Mentor Driven Counseling Session",
+            price: {
+            INR: "₹3499",
+            AED: "469.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "Session Booking",
+            "Decision-Making Journey",
+            "45 min Mentor Guided Session",
+            "Final Recommendation Report",
+            "1 Year access",
+            "Email Support",
+          ],
+          highlight: true,
+        },
+      ],
+    },
   },
-},
-// ---------------- Global Navigator ----------------
-"Global Navigator™": {
-  billingTypes: ["one-time"],
-  plans: {
-    "one-time": [
-      {
-        title: "Free Plan",
-        description: "For Starters",
-        price: "Free",
-        features: [
-          "Account Creation",
-          "Profile Set Up",
-          "Dashboard View",
-          "Unlock Counseling Session with Pro & Premium Plans",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Best for Self-Serve Counseling Session",
-        price: "₹3499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "Career Guidance Journey",
-          "Session Report",
-          "1 Year access",
-          "Email Support",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Best for Mentor Driven Counseling Session",
-        price: "₹7499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "Session Booking",
-          "Global Guidance Journey",
-          "60 min Mentor Guided Session",
-          "Final Recommendation Report",
-          "1 Year access",
-          "Email Support",
-        ],
-        highlight: true,
-      },
-    ],
+  // ---------------- Global Navigator ----------------
+  "Global Navigator™": {
+    billingTypes: ["one-time"],
+    plans: {
+      "one-time": [
+        {
+          title: "Free Plan",
+          description: "For Starters",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
+          features: [
+            "Account Creation",
+            "Profile Set Up",
+            "Dashboard View",
+            "Unlock Counseling Session with Pro & Premium Plans",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Best for Self-Serve Counseling Session",
+          price: {
+            INR: "₹3499",
+            AED: "499.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "Career Guidance Journey",
+            "Session Report",
+            "1 Year access",
+            "Email Support",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Best for Mentor Driven Counseling Session",
+           price: {
+            INR: "₹7499",
+            AED: "899.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "Session Booking",
+            "Global Guidance Journey",
+            "60 min Mentor Guided Session",
+            "Final Recommendation Report",
+            "1 Year access",
+            "Email Support",
+          ],
+          highlight: true,
+        },
+      ],
+    },
   },
-},
-// ---------------- Reboot Navigator ----------------
-"Reboot Navigator™": {
-  billingTypes: ["monthly"],
-  plans: {
-    monthly: [
-      {
-        title: "Free Plan",
-        description: "For Starters",
-        price: "Free",
-        features: [
-          "Account Creation",
-          "Profile Set Up",
-          "Dashboard View",
-          "1 Core Skill Practice",
-          "Unlock Pro & Premium Plans",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Best for Starters & Micro Entrepreneurs",
-        price: "₹1299",
-        period: "month",
-        priceText: "Subscribe Now",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "18 Core Skills",
-          "1 X Retry",
-          "Progress Tracking",
-          "1 Year access",
-          "Email Support",
-          "Minimum 2 Months Subscription Required",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Best for Employability Skills",
-        price: "₹2199",
-        period: "month",
-        priceText: "Subscribe Now",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "18 Core + 18 Industry Cluster Skills",
-          "3 X Retry",
-          "Progress & Weakness Tracking",
-          "1 Year access",
-          "Email Support",
-          "Minimum 3 Months Subscription Required",
-          "Optional Industry Expert Access",
-        ],
-        highlight: true,
-      },
-    ],
+  // ---------------- Reboot Navigator ----------------
+  "Reboot Navigator™": {
+    billingTypes: ["monthly"],
+    plans: {
+      monthly: [
+        {
+          title: "Free Plan",
+          description: "For Starters",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
+          features: [
+            "Account Creation",
+            "Profile Set Up",
+            "Dashboard View",
+            "1 Core Skill Practice",
+            "Unlock Pro & Premium Plans",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Best for Starters & Micro Entrepreneurs",
+           price: {
+            INR: "₹1299",
+            AED: "169.00",
+          },
+          period: "month",
+          priceText: "Subscribe Now",
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "18 Core Skills",
+            "1 X Retry",
+            "Progress Tracking",
+            "1 Year access",
+            "Email Support",
+            "Minimum 2 Months Subscription Required",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Best for Employability Skills",
+          price: {
+            INR: "₹2199",
+            AED: "269.00",
+          },
+          period: "month",
+          priceText: "Subscribe Now",
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "18 Core + 18 Industry Cluster Skills",
+            "3 X Retry",
+            "Progress & Weakness Tracking",
+            "1 Year access",
+            "Email Support",
+            "Minimum 3 Months Subscription Required",
+            "Optional Industry Expert Access",
+          ],
+          highlight: true,
+        },
+      ],
+    },
   },
-},
-// ---------------- Aptitude Trainer ----------------
-"Aptitude Trainer™": {
-  billingTypes: ["monthly"],
-  plans: {
-    monthly: [
-      {
-        title: "Free Plan",
-        description: "For Starters",
-        price: "Free",
-        features: [
-          "Account Creation",
-          "Profile Set Up",
-          "Dashboard View",
-          "1 Aptitude Scenario",
-          "Unlock Pro & Premium Plans",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Best for Freshers & Mid Professionals",
-        price: "₹2499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "8 Core + 8 Adaptive Aptitudes",
-          "1 X Retry",
-          "Progress Tracking",
-          "1 Year access",
-          "Email Support",
-          "Minimum 2 Months Subscription Required",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Best for Mid-Senior Professionals",
-        price: "₹4499",
-        features: [
-          "Account Creation",
-          "Dashboard View",
-          "Profile Setup",
-          "8 Core + All Adaptive Aptitudes",
-          "2 X Retry",
-          "Progress & Weakness Tracking",
-          "1 Year access",
-          "Email Support",
-          "Minimum 3 Months Subscription Required",
-          "Optional Industry Expert Access",
-        ],
-        highlight: true,
-      },
-    ],
+  // ---------------- Aptitude Trainer ----------------
+  "Aptitude Trainer™": {
+    billingTypes: ["monthly"],
+    plans: {
+      monthly: [
+        {
+          title: "Free Plan",
+          description: "For Starters",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
+          features: [
+            "Account Creation",
+            "Profile Set Up",
+            "Dashboard View",
+            "1 Aptitude Scenario",
+            "Unlock Pro & Premium Plans",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Best for Freshers & Mid Professionals",
+            price: {
+            INR: "₹2499",
+            AED: "269.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "8 Core + 8 Adaptive Aptitudes",
+            "1 X Retry",
+            "Progress Tracking",
+            "1 Year access",
+            "Email Support",
+            "Minimum 2 Months Subscription Required",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Best for Mid-Senior Professionals",
+            price: {
+            INR: "₹4499",
+            AED: "399.00",
+          },
+          features: [
+            "Account Creation",
+            "Dashboard View",
+            "Profile Setup",
+            "8 Core + All Adaptive Aptitudes",
+            "2 X Retry",
+            "Progress & Weakness Tracking",
+            "1 Year access",
+            "Email Support",
+            "Minimum 3 Months Subscription Required",
+            "Optional Industry Expert Access",
+          ],
+          highlight: true,
+        },
+      ],
+    },
   },
-},
-// ---------------- Admission Test System ----------------
-"Admission Test System": {
-  billingTypes: ["monthly", "annually"],
-  plans: {
-    monthly: [
-      {
-        title: "Basic",
-        description: "Entry-level test prep",
-        price: "$10",
-        features: [
-          "Standardized MCQs",
-          "Difficulty levels",
-          "Instant scoring",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Advanced admission prep",
-        price: "$40",
-        features: [
-          "Everything in Basic",
-          "Adaptive tests",
-          "Personalized feedback",
-          "Practice reports",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Complete admission package",
-        price: "$80",
-        features: [
-          "Everything in Pro",
-          "Mentorship add-on",
-          "Skill insights",
-          "Parent dashboard",
-        ],
-      },
-    ],
-    annually: [
-      {
-        title: "Basic",
-        description: "Entry-level test prep",
-        price: "$100",
-        features: [
-          "Standardized MCQs",
-          "Difficulty levels",
-          "Instant scoring",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Advanced admission prep",
-        price: "$400",
-        features: [
-          "Everything in Basic",
-          "Adaptive tests",
-          "Personalized feedback",
-          "Practice reports",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Complete admission package",
-        price: "$800",
-        features: [
-          "Everything in Pro",
-          "Mentorship add-on",
-          "Skill insights",
-          "Parent dashboard",
-        ],
-      },
-    ],
+  // ---------------- Admission Test System ----------------
+  "Admission Test System": {
+    billingTypes: ["monthly", "annually"],
+    plans: {
+      monthly: [
+        {
+          title: "Basic",
+          description: "Entry-level test prep",
+          price: { INR: "$10", AED: "$10" },
+          features: [
+            "Standardized MCQs",
+            "Difficulty levels",
+            "Instant scoring",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Advanced admission prep",
+          price: { INR: "$40", AED: "$40" },
+          features: [
+            "Everything in Basic",
+            "Adaptive tests",
+            "Personalized feedback",
+            "Practice reports",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Complete admission package",
+          price: { INR: "$80", AED: "$80" },
+          features: [
+            "Everything in Pro",
+            "Mentorship add-on",
+            "Skill insights",
+            "Parent dashboard",
+          ],
+        },
+      ],
+      annually: [
+        {
+          title: "Basic",
+          description: "Entry-level test prep",
+          price: { INR: "$100", AED: "$100" },
+          features: [
+            "Standardized MCQs",
+            "Difficulty levels",
+            "Instant scoring",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Advanced admission prep",
+          price: { INR: "$400", AED: "$400" },
+          features: [
+            "Everything in Basic",
+            "Adaptive tests",
+            "Personalized feedback",
+            "Practice reports",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Complete admission package",
+          price: { INR: "$800", AED: "$800" },
+          features: [
+            "Everything in Pro",
+            "Mentorship add-on",
+            "Skill insights",
+            "Parent dashboard",
+          ],
+        },
+      ],
+    },
   },
-},
 
-// ---------------- Hiring & Boarding ----------------
-"Hiring & Boarding™": {
-  billingTypes: ["monthly", "annually"],
-  plans: {
-    monthly: [
-      {
-        title: "Basic",
-        description: "Simplify hiring",
-        price: "$50",
-        features: [
-          "Job-ready assessments",
-          "Candidate dashboard",
-          "Reports",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Smart hiring & onboarding",
-        price: "$120",
-        features: [
-          "Everything in Basic",
-          "Role-fit alignment",
-          "Employer dashboards",
-          "Adaptive tasks",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Enterprise talent suite",
-        price: "$250",
-        features: [
-          "Everything in Pro",
-          "AI-driven onboarding",
-          "Skill gap analytics",
-          "Dedicated support",
-        ],
-      },
-    ],
-    annually: [
-      {
-        title: "Basic",
-        description: "Simplify hiring",
-        price: "$500",
-        features: [
-          "Job-ready assessments",
-          "Candidate dashboard",
-          "Reports",
-        ],
-      },
-      {
-        title: "Pro",
-        description: "Smart hiring & onboarding",
-        price: "$1,200",
-        features: [
-          "Everything in Basic",
-          "Role-fit alignment",
-          "Employer dashboards",
-          "Adaptive tasks",
-        ],
-        highlight: true,
-      },
-      {
-        title: "Premium",
-        description: "Enterprise talent suite",
-        price: "$2,500",
-        features: [
-          "Everything in Pro",
-          "AI-driven onboarding",
-          "Skill gap analytics",
-          "Dedicated support",
-        ],
-      },
-    ],
+  // ---------------- Hiring & Boarding ----------------
+  "Hiring & Boarding™": {
+    billingTypes: ["monthly", "annually"],
+    plans: {
+      monthly: [
+        {
+          title: "Basic",
+          description: "Simplify hiring",
+          price: { INR: "$50", AED: "$50" },
+          features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
+        },
+        {
+          title: "Pro",
+          description: "Smart hiring & onboarding",
+          price: { INR: "$120", AED: "$120" },
+          features: [
+            "Everything in Basic",
+            "Role-fit alignment",
+            "Employer dashboards",
+            "Adaptive tasks",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Enterprise talent suite",
+          price: { INR: "$250", AED: "$250" },
+          features: [
+            "Everything in Pro",
+            "AI-driven onboarding",
+            "Skill gap analytics",
+            "Dedicated support",
+          ],
+        },
+      ],
+      annually: [
+        {
+          title: "Basic",
+          description: "Simplify hiring",
+          price: { INR: "$500", AED: "$500" },
+          features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
+        },
+        {
+          title: "Pro",
+          description: "Smart hiring & onboarding",
+          price: { INR: "$1200", AED: "$1200" },
+          features: [
+            "Everything in Basic",
+            "Role-fit alignment",
+            "Employer dashboards",
+            "Adaptive tasks",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Enterprise talent suite",
+          price: { INR: "$2500", AED: "$2500" },
+          features: [
+            "Everything in Pro",
+            "AI-driven onboarding",
+            "Skill gap analytics",
+            "Dedicated support",
+          ],
+        },
+      ],
+    },
   },
-},
 };

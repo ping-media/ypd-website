@@ -495,6 +495,7 @@ const page = () => {
         subheading="UPSC Mentor™ is a premium preparation experience designed for serious aspirants."
       />
       <CvpPricing
+        currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={upscPricing.plans.monthly ?? []}

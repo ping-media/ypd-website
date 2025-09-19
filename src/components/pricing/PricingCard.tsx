@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import { Currency } from "./prices";
 
 interface PricingCardProps {
   title: string;
@@ -9,6 +11,7 @@ interface PricingCardProps {
   period?: string;
   features: string[];
   highlight?: boolean;
+  currency: Currency;
 }
 
 const PricingCard = ({
@@ -16,6 +19,7 @@ const PricingCard = ({
   description,
   price,
   priceText = "Get Started",
+  currency,
   period,
   features,
   highlight = false,
@@ -37,6 +41,15 @@ const PricingCard = ({
           <p className="mb-2 text-xs sm:mb-4 sm:text-sm">{description}</p>
         </div>
         <p className="font-red-rose text-3xl sm:text-4xl lg:text-5xl">
+          {currency === "AED" && price !== "Free" && (
+            <Image
+              src="/dirham.svg"
+              alt="AED"
+              width={0}
+              height={0}
+              className="mr-1 inline-block h-[0.6em] w-auto align-baseline"
+            />
+          )}
           {price}
           {period && (
             <span className="font-red-rose text-brand-gray align-baseline text-xs sm:text-sm lg:text-base">
