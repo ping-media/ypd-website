@@ -34,7 +34,7 @@ const defaultFaqs: FAQItem[] = [
       "It’s a deeper career clarity program with adaptive tests, alternate role suggestions, and a detailed career report for student and parent alignment.",
   },
   {
-    question: "What should I choose CVP Lite or Advance?",
+    question: "What should I choose CVP Lite™ or Advance?",
     answer:
       "Lite is for early clarity on streams and roles. Advance is for detailed career options, alternates, and deeper guidance with reports.",
   },

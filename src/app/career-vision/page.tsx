@@ -135,7 +135,7 @@ const cvFaqs = [
     id: 6,
     question: "Does CVP include stream selection guidance?",
     answer:
-      "Yes. CVP Lite and above include stream and role-fit suggestions backed by aptitude and interest mapping.",
+      "Yes. CVP Lite™ and above include stream and role-fit suggestions backed by aptitude and interest mapping.",
   },
   {
     id: 7,
@@ -168,7 +168,7 @@ const featureSections = [
     items: [
       {
         icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
-        title: "CVP Lite",
+        title: "CVP Lite™",
         subtitle: "Grade 7–12 | 1–2 Days",
         features: [
           "Discover natural strengths early",

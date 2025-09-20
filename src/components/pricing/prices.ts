@@ -23,7 +23,7 @@ export interface ProductPricing {
 
 // ✅ Export the pricing data here
 export const pricingData: Record<string, ProductPricing> = {
-  // ---------------- CVP Lite ----------------
+  // ---------------- CVP Lite™ ----------------
   "CVP Lite™": {
     billingTypes: ["one-time"],
     plans: {
