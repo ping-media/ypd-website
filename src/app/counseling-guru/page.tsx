@@ -88,7 +88,7 @@ const steps = [
       "Get ranking comparisons, ROI analysis, safety insights, and alternate career plans",
     ],
 
-    icon: "/careerverse/s3.svg",
+    icon: "/careerverse/s1.svg",
   },
   {
     id: 5,
@@ -98,13 +98,13 @@ const steps = [
       "Cut-offs, funding plan, skill gaps, upskilling path, Admissions checklist",
     ],
 
-    icon: "/careerverse/s3.svg",
+    icon: "/careerverse/s4.svg",
   },
   {
     id: 6,
     title: "Summary & Revisit Access",
     description: ["Full session summary PDF", "Access your account anytime"],
-    icon: "/careerverse/s3.svg",
+    icon: "/careerverse/s2.svg",
   },
 ];
 
@@ -379,9 +379,6 @@ const page = () => {
         footerText="Bulk Discounts for Colleges & NGOs. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      {/*  */}
-      {/* SECTION TO ADD (CR VS OTHERS) */}
-      {/*  */}
       <Vs
         heading="Counseling Guru™ vs Others"
         subheading="Because you shouldn't plan your career comeback based on guesswork or generic advice."

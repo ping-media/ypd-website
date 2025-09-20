@@ -3,7 +3,7 @@ import Image from "next/image";
 interface Step {
   id: number;
   title: string;
-  description: string | string[]; // can be text or bullet points
+  description?: string | string[]; // can be text or bullet points
   icon: string;
 }
 

@@ -1,7 +1,7 @@
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
 import CvpImpact from "@/components/cvp/CvpImpact";
-import CvpInside from "@/components/cvp/CvpInside";
+// import CvpInside from "@/components/cvp/CvpInside";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
@@ -11,40 +11,66 @@ import CvpVideo from "@/components/cvp/CvpVideo";
 // import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
 // imports for components
-import { ArrowRight, HandCoins, BriefcaseBusiness, Dna } from "lucide-react";
-import { Lightbulb, Compass, File } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+// import { Lightbulb, Compass, File } from "lucide-react";
+// import { HandCoins, BriefcaseBusiness, Dna } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
+import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 
-const insideData = [
-  { icon: BriefcaseBusiness, title: "Simulation of Real Careers" },
+const steps = [
   {
-    icon: Lightbulb,
-    title: "Mentor-style AI guidance (no robotic scores)",
+    id: 1,
+    title: "Simulation & Workplace Scenarios",
+    description: [
+      "Step into real-world roles through immersive career simulations",
+      "Face workplace challenges and decision points like professionals do",
+    ],
+    icon: "/careerverse/s1.svg",
   },
   {
-    icon: Lightbulb,
-    title: "Workplace challenges & decision scenarios",
+    id: 2,
+    title: "Mentor-style AI & Skill Feedback",
+    description: [
+      "AI guides you like a mentor, not a robot with scores",
+      "Sharpen critical thinking, teamwork, and creativity with feedback",
+    ],
+    icon: "/careerverse/s2.svg",
   },
   {
-    icon: HandCoins,
-    title: "Critical thinking, feedback, team dynamics, innovation prompts",
+    id: 3,
+    title: "Final Role Fit Score & Action Plan",
+    description: [
+      "See your personalized career fit score and insights",
+      "Identify skill gaps and follow a clear action roadmap",
+    ],
+    icon: "/careerverse/s3.svg",
   },
   {
-    icon: BriefcaseBusiness,
-    title: "Final Role Fit Score + Skill Gaps + Action Plan",
+    id: 4,
+    title: "Guided Reflection Journey",
+    description: [
+      "No complex setup—just follow the guided flow",
+      "Deep reflection on choices, values, and personality",
+    ],
+    icon: "/careerverse/s4.svg",
   },
   {
-    icon: Compass,
-    title: "Fully guided. Just real reflection.",
+    id: 5,
+    title: "Pressure Test with Surprise Challenges",
+    description: [
+      "Face unexpected scenarios to assess stress handling",
+      "Learn how you perform when pushed beyond comfort",
+    ],
+    icon: "/careerverse/s2.svg",
   },
   {
-    icon: File,
-    title: "Built-in surprise trigger to assess pressure response.",
-  },
-  {
-    icon: Dna,
-    title:
-      "Emotional DNA built for Indian students  motivational, not judgmental.",
+    id: 6,
+    title: "Emotional DNA for Indian Students",
+    description: [
+      "Built with empathy for Indian learners—motivational, not judgmental",
+      "Encourages growth, confidence, and self-awareness",
+    ],
+    icon: "/careerverse/s1.svg",
   },
 ];
 
@@ -357,13 +383,24 @@ const page = () => {
         ctaLink="/coming-soon"
       /> */}
       {/* CONVERT INTO HOW IT WORKS */}
-      <CvpInside
+      {/* <CvpInside
         heading="How it works"
         subheading="Explore immersive career environments where you’ll take on real tasks, face industry scenarios, and uncover what truly excites you."
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
+      /> */}
+      <CvpLiteSteps
+        heading="How it Works"
+        subheading="We don’t reveal the full backend flow. But here’s what makes careerVerse™ unlike anything else."
+        steps={steps}
+        images={{
+          first: "/cvplite/cvplite1.png",
+          second: "/cvplite/cvplite2.png",
+        }}
+        path="M 1.7 10 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 89"
       />
+
       <CvpRealworld
         heading="CareerVerse™ Real World Use Cases"
         subheading="Career discovery is no longer about watching videos or taking a quiz — it’s about stepping into the role and living it. These are real use cases of how Indian students use CareerVerse™ to make life-changing career decisions."
