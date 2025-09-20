@@ -1,8 +1,8 @@
-import CvpCta from "@/components/cvp/CvpCta";
+// import Vs from "@/components/career-reboot/Vs";
+// import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
-import CvpImpact from "@/components/cvp/CvpImpact";
 // import CvpInside from "@/components/cvp/CvpInside";
 import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
@@ -12,179 +12,216 @@ import CvpRealworld from "@/components/cvp/CvpRealworld";
 import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
-// import WhyCvpLite from "@/components/cvp/WhyCvpLite";
+import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
-// imports for components
-import {
-  FileText,
-  Layers,
-  BarChart3,
-  Brain,
-  Zap,
-  ArrowRight,
-  UserPlus,
-} from "lucide-react";
-// import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
+import { Zap, ArrowRight } from "lucide-react";
+// import {
+//   Lightbulb,
+//   Compass,
+//   File,
+//   UserPlus,
+//   ShieldPlus,
+//   Cable,
+//   Blocks,
+// } from "lucide-react";
+import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 
-const featuresData = [
+const features = [
   {
     icon: FileText,
-    title: "Deep Clarity",
+    title: "Precise Aptitude Mapping",
     description:
-      "Discover your true career fit through a structured 10-step experience. Interest, strength, stream, and mindset all mapped clearly, all in one place.",
+      "Identify your real strengths through a structured, role-linked aptitude framework — measuring thinking style, problem-solving, communication, and adaptability in one seamless journey.",
   },
   {
     icon: Layers,
-    title: "Adaptive Journey",
+    title: "Adaptive Pathway Guidance",
     description:
-      "Every student is different so is their path.Reinvention Guru™ adjusts to your learning style, pace, and academic stage without forcing a fixed template.",
+      "Every professional’s path is unique. The CRP Aptitude Trainer™ adjusts to your career stage, role interests, and learning style without forcing a standard template.",
   },
   {
     icon: BarChart3,
-    title: "Instant Insights",
+    title: "Actionable Role Insights",
     description:
-      "No waiting, no confusion.Get your personalized Reinvention Guru™ Report the moment you finish clear, action-ready, and parent-friendly.",
+      "No fluff, no waiting. Get a mapped list of suitable roles, skill gaps, and certification recommendations the moment your session ends — practical and decision-ready.",
   },
   {
     icon: Brain,
-    title: "True AI",
+    title: "True AI + Real Frameworks",
     description:
-      "This isn’t just a chatbot or quiz.Our engine uses real frameworks, real-time logic, and your real inputs not scraped suggestions or generic lists.",
+      "Not a chatbot quiz. Powered by proven aptitude models, role-fit logic, and industry data — so your guidance is grounded in facts, not scraped lists or generic advice.",
   },
 ];
 // const insideData = [
-//   { icon: FileText, title: "Discover your true interests and strengths" },
+//   {
+//     icon: Brain,
+//     title: "Decision-Making",
+//     description: "based on academics, boards, test scores",
+//   },
 //   {
 //     icon: Lightbulb,
-//     title: "Reflect on your values, preferences, and learning style",
+//     title: "Process Thinking",
+//     description: "AI-suggested with real rankings",
 //   },
 //   {
 //     icon: Compass,
-//     title: "Identify career directions that align with who you are",
+//     title: "Influence & Collaboration",
+//     description: "Shortlisted by intake, test fit, and cost",
 //   },
-//   { icon: File, title: "Walk away with your Career Persona Report (PDF)" },
 //   {
-//     icon: GraduationCap,
-//     title: "Get guidance on college subjects and stream mapping",
+//     icon: File,
+//     title: "Ownership & Accountability",
+//     description: "SOP, LOR, deadlines, portals",
+//   },
+//   {
+//     icon: Blocks,
+//     title: "Learning Agility",
+//     description: "Visual comparison by region",
+//   },
+//   {
+//     icon: Cable,
+//     title: "Adaptability & Change",
+//     description: "Merit, need-based, and external funding",
+//   },
+//   {
+//     icon: ShieldPlus,
+//     title: "Conflict Handling",
+//     description: "Safety, weather, diaspora, support",
+//   },
+//   {
+//     icon: Lightbulb,
+//     title: "Ethical Thinking",
+//     description: "Internships",
 //   },
 // ];
 const steps = [
   {
     id: 1,
-    title: "Discover Your Career Energy",
+    title: "Select your focus area",
     description:
-      "Through ultra-personalized guided reflections, scenarios, questions, and early vision exploration, you begin to surface hidden interests, skills, and thought patterns, absolutely in a private space with no Judgment.",
+      "Choose whether you want to strengthen problem-solving, communication, decision-making, leadership, or customer-facing aptitudes.",
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Captures Your Learning Style and Thinking Style",
+    title: "Get targeted tasks",
     description:
-      "Adaptive insights help you understand how you absorb, process, and reflect on career-related information — mapping your personal preferences aligned with your passion & interests.",
+      "Receive curated challenges and micro-scenarios mapped to real workplace contexts, aligned with your chosen focus.",
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Celebrate Your Personalized Reinvention Guru™ Report",
+    title: "Build aptitudes step by step",
     description:
-      "Once your Reinvention Guru™ journey is complete, you will be emailed your Career Pathway Report within a short while.",
-    icon: "/careerverse/s4.svg",
+      "Engage in scenario-based exercises — from logic puzzles to role-simulations — designed to sharpen your specific aptitude.",
+    icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Connects Your Cognitive profile, Emotional & Social Quotient",
+    title: "Practice, reflect, and retry",
     description:
-      "Each Step in Reinvention Guru™ is connected and works in closed-loop, unlike static Psychometric assessments — all dynamically linked to your real passion, interests & strengths, as well to the reflections & journals making it the only active assessment available.",
+      "Review your performance, reflect on your responses, and retry with adaptive variations until you gain mastery.",
+    icon: "/careerverse/s4.svg",
+  },
+  {
+    id: 5,
+    title: "Receive a personalized aptitude map",
+    description:
+      "Get a structured summary highlighting your aptitudes, growth areas",
     icon: "/careerverse/s3.svg",
   },
 ];
 const audience = [
   {
     id: 1,
-    title: "Students in Class 7–12 thinking about stream/college fit",
+    title: "Students building foundational skills",
     description:
-      "Reinvention Guru™ helps match your strengths, interests, and learning style to the right stream and future study options—without peer or family pressure.",
+      "Gain clarity on your strengths in problem-solving, reasoning, and decision-making to prepare for higher studies and careers.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/cvpworks.png",
+    image: "/crp-aptitude/1.png",
   },
   {
     id: 2,
-    title: "Parents who want to guide their children confidently",
+    title: "Early professionals shaping careers",
     description:
-      "Reinvention Guru™ provides a clear, parent-friendly report so you can support choices with facts, not guesswork.",
+      "Discover your core aptitudes, match them with workplace roles, and develop confidence in communication and adaptability.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/uses.png",
+    image: "/crp-aptitude/2.png",
   },
   {
     id: 3,
-    title: "Schools looking for a structured but flexible clarity tool",
+    title: "People returning to work after a breaks",
     description:
-      "Reinvention Guru™ is easy to run in batches, offering guided sessions and reports that fit into school schedules.",
+      "Rebuild confidence with structured aptitude sessions that highlight transferable skills and identify new opportunities.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/meet.png",
+    image: "/crp-aptitude/3.png",
   },
   {
     id: 4,
-    title: "Any student unsure about “what comes next”",
+    title: "Team leaders and aspiring managers",
     description:
-      "Reinvention Guru™ narrows options to 2–3 career paths that align with who you are and what excites you.",
+      "Strengthen leadership, critical thinking, and people skills with targeted aptitude exercises tailored to professional growth.",
+    icon: "/cvplite/r5.svg",
+    image: "/crp-aptitude/4.png",
+  },
+  {
+    id: 5,
+    title: " Anyone seeking role clarity and growth",
+    description:
+      "Use Aptitude Trainer™ to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/guide.png",
+    image: "/crp-aptitude/5.png",
   },
 ];
 const journeySteps = [
   {
     id: "01",
-    text: "Reinvention Guru™ doesn’t throw options at you. It walks with you, helping you unlock who you are, how you think, how you dream, and where your natural strengths want to grow.",
+    text: "20+ years of combined psychometric testing & workplace skill research",
   },
   {
     id: "02",
-    text: "Through human-structured AI conversations, reflective journaling moments, and dynamic career mapping, we help you build not just a choice  but a vision.",
+    text: "AI that adapts to your aptitude profile, powered by industry-leading frameworks",
   },
   {
     id: "03",
-    text: "Every step is designed to be warm, personalized, and structured ensuring that you don’t just explore careers randomly but architect your future thoughtfully, courageously, and joyfully.",
+    text: "Real-world skill mapping, targeted improvement plans, measurable growth",
   },
 ];
 const useCases = [
   {
     id: 1,
-    title: "Stream Confusion",
-    quote: `"I don’t know if I should take Science, Commerce, or Arts."`,
+    title: "Real-world practice, not theory",
     description:
-      "Reinvention Guru™ helps students identify their ideal stream based on interests, strengths, and thinking style not peer pressure.",
+      "Aptitude Trainer™ gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
     icon: "/cvplite/r1.svg",
-    image: "/cvplite/confusion.png",
+    image: "/crp-aptitude/r1.png",
   },
   {
     id: 2,
-    title: "Too Many Options",
-    quote: `"There are too many career paths I’m lost."`,
+    title: "Contextualized for Indian professionals",
     description:
-      "Reinvention Guru™ narrows it down to 2–3 career matches that actually align with the student’s profile and mindset.",
+      "It connected my strengths to roles actually growing in India, not just generic profiles. I could see clear job relevance.",
     icon: "/cvplite/r2.svg",
-    image: "/cvplite/options.png",
+    image: "/crp-aptitude/r2.png",
   },
   {
     id: 3,
-    title: "Parent Support Needed",
-    quote: `"I’m the first in my family aiming for higher studies."`,
+    title: "Adaptive tasks with retry & reflection",
     description:
-      "Reinvention Guru™ builds a parent-ready report that explains student choices clearly, making the family part of the decision.",
+      "When I struggled, it didn’t fail me. It nudged me to reflect and retry, so I improved with every step.",
     icon: "/cvplite/r3.svg",
-    image: "/cvplite/support.png",
+    image: "/crp-aptitude/r3.png",
   },
   {
     id: 4,
-    title: "Marks ≠ Clarity",
-    quote: `"I score well but still don’t know what fits me."`,
-    description:
-      "Reinvention Guru™ helps high performers discover what excites them not just what they’re good at.",
+    title: "Aptitude map with growth clarity",
+    description: "The final report showed my strengths, blind spots.",
     icon: "/cvplite/r4.svg",
-    image: "/cvplite/marks.png",
+    image: "/crp-aptitude/r4.png",
   },
 ];
+
 const highlight = (content: string) => (
   <span className="rounded bg-[#ebf3eb] px-1">{content}</span>
 );
@@ -192,275 +229,329 @@ const ReviewsData = [
   {
     id: 1,
     name: "Rishabh Mehta",
-    education: "Class 11 Student, Nagpur",
+    education: "Final Year B.Com, Nagpur",
     text: (
       <>
-        I Never Thought Career Guidance Could Feel So Personal. The{" "}
+        &quot;I never thought skill training could be this personal.
         {highlight(
-          "AI Mentor Actually Made Me Think Deeper Like A Real Teacher",
+          " The AI Mentor made me see why I solve problems the way I do.",
         )}{" "}
-        I Finally Figured Out Why I Enjoy Solving Logic Puzzles!
+        Now I’m building my strengths for a Product Management role!&quot;
       </>
     ),
-    image: "/cvplite/feedback.png",
+    image: "/crp-aptitude/re1.jpg",
   },
   {
     id: 2,
-    name: "Sangeeta Raghavan",
-    education: "Parent, Bengaluru",
+    name: "Rohit Sharma",
+    education: "Patna",
     text: (
       <>
-        {highlight("We Were Overwhelmed With Career Choices For Our Daughter")}.
-        Reinvention Guru™ Helped Us Match Her Creative Side With Real Job
-        Paths.
+        &quot;I’ve tried online courses before but nothing matched this
+        real-time feedback.
+        {highlight(
+          " It’s like having a mentor who tracks my growth and keeps me on track every day.",
+        )}
+        &quot;
       </>
     ),
-    image: "/cvplite/feedback1.png",
+    image: "/crp-aptitude/re2.jpg",
   },
   {
     id: 3,
-    name: "Priyank Joshi",
-    education: "B.Com Final Year, Jaipur",
+    name: "Priyanka Joshi",
+    education: "Parent, Nashik",
     text: (
       <>
-        &quot;The Emotional Intelligence part opened my eyes
-        {highlight(
-          "it’s not just marks, it's mindset. I now have a clear action plan",
-        )}
-        to build the skills my dream job actually needs. Total game-changer!
+        &quot;Aptitude Trainer™ showed my daughter exactly where she needed to
+        improve.
+        {highlight(" Her confidence in interviews has grown in just a month.")}
+        &quot;
       </>
     ),
-    image: "/cvplite/feedback2.png",
+    image: "/crp-aptitude/re3.jpg",
+  },
+  {
+    id: 4,
+    name: "Aditi Verma",
+    education: "MBA Student, Pune",
+    text: (
+      <>
+        &quot;The sessions felt like a personal coach was guiding me.
+        {highlight(
+          " I now know which roles suit my strengths and where I need to sharpen my skills.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/crp-aptitude/re4.jpg",
+  },
+  {
+    id: 5,
+    name: "Sandeep Rao",
+    education: "B.Tech Final Year, Hyderabad",
+    text: (
+      <>
+        &quot;In just two weeks, the trainer helped me move from vague career
+        ideas to a clear action plan.
+        {highlight(" I’ve already started applying for targeted internships.")}
+        &quot;
+      </>
+    ),
+    image: "/crp-aptitude/re5.jpg",
+  },
+  {
+    id: 6,
+    name: "Neha Singh",
+    education: "Job Seeker, Delhi",
+    text: (
+      <>
+        &quot;The AI didn’t just test me — it explained every result and how to
+        improve.
+        {highlight(
+          " I feel more prepared for both corporate tests and real work challenges.",
+        )}
+        &quot;
+      </>
+    ),
+    image: "/crp-aptitude/re6.jpg",
   },
 ];
-const cvpLiteFaqs = [
+
+const crpaptitudefaqs = [
   {
-    question: "What is Reinvention Guru™?",
+    question: "Is this just another aptitude test?",
     answer:
-      "It’s YPD’s entry-level program that helps students in Classes 7–12 choose the right stream and career direction.",
+      "No. Aptitude Trainer™ is not a one-time test. It’s a guided practice system with real-world scenarios, reflection, and retry options.",
   },
   {
-    question: "Who should use Reinvention Guru™?",
+    question: "Will I get a personalized report?",
     answer:
-      "Students facing confusion between Science, Commerce, Arts, or multiple career options, and parents seeking clarity.",
+      "Yes. At the end, you receive an aptitude map showing your strengths, blind spots, and growth pathways.",
   },
   {
-    question: "What do I get at the end of Reinvention Guru™?",
+    question: "Does this help in real jobs?",
     answer:
-      "A personalized Career Persona Report to make data backed decisions.",
+      "Absolutely. The exercises are linked to workplace skills like decision-making, leadership, and communication — not abstract puzzles.",
   },
   {
-    question: "How is Reinvention Guru™ different from Advance?",
+    question: "Can working professionals use it too?",
     answer:
-      "Lite gives core stream/career clarity. Advance is deeper assessments, cognitive skills, and future pathways.",
+      "Yes. Whether you’re a student, mid-career, or returning professional, the tool adapts tasks to your context.",
   },
   {
-    question: "Does Reinvention Guru™ include aptitude testing?",
+    question: "What if I struggle in some tasks?",
     answer:
-      "Yes. It includes guided aptitude assessments, learning style insights, interest & passion mapping.",
+      "That’s part of the design. You can reflect, retry, and improve until you build confidence.",
   },
   {
-    question: "How much time does it take?",
-    answer: "1–2 sessions, typically completed within 1–2 days.",
+    question: "Is this research-backed?",
+    answer:
+      "Yes. It’s built on YPD’s validated aptitude frameworks, aligned with employability skills and role-readiness.",
   },
   {
-    question: "Can parents also see the results?",
+    question: "Can parents or mentors view my results?",
     answer:
-      "Yes. Career Persona Report help families make clear and confident choices.",
+      "If you choose, your report can be shared with parents or mentors for guidance discussions.",
   },
   {
-    question: "Is Reinvention Guru™ useful if I already know my stream?",
+    question: "What if I want deeper career direction after this?",
     answer:
-      "Yes. It validates your choice and shows alternate career options you may not have considered.",
-  },
-  {
-    question: "What makes Reinvention Guru™ unique?",
-    answer:
-      "It’s not just a test — it’s an adaptive, AI + mentor guided journey built for Indian students.",
+      "Aptitude Trainer™ connects smoothly to other YPD programs like Reboot Navigator, Reinvention Guru, or Real Mentors & Industry Experts.",
   },
 ];
 
 const page = () => {
-  const cvpLitePricing = pricingData["CVP Lite™"];
+  const aptitudePricing = pricingData["Aptitude Trainer™"];
 
   return (
     <>
       <CvpHero
-        title="Start Your Career Clarity Journey in Just a Few Hours"
+        title="India’s First AI-Powered Career Trainer for Real-Life Success"
         subtitle={
           <>
+            If you&apos;ve ever felt stuck, overlooked, or underprepared for
+            career growth, this is built for you. YPD’s Career Reinvention
+            Aptitude Trainer™
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                YPD’s Reinvention Guru™
+                YPD’s Career Reinvention Aptitude Trainer™
               </span>
               <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
-            is your first step toward real career clarity a guided, AI-powered
-            self-discovery experience built for{" "}
-            <span className="relative inline-block px-1">
-              <span className="text-brand-primary relative z-10 font-semibold">
-                Grade 7 to 12 students
-              </span>
-              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
-            </span>
-            .
+            is a new-age training platform that goes beyond theory and delivers
+            practical aptitude-building tailored to your career stage, your
+            role, and your goals.
           </>
         }
-        features={[
-          "Guided, adaptive career journey",
-          "Move from uncertainty to clarity",
-          "No overwhelm or pressure",
-          "Built on YPD’s trusted frameworks",
-          "A powerful starting for every learner",
-        ]}
-        buttonText="Start Program Now"
+        buttonText="Start Free"
         buttonLink="/coming-soon"
-        secondaryButtonText="See How It Works"
         secondaryButtonLink="/reinvention-guru/#works"
-        image="/cvplite/cvplite.png"
-        imageAlt="Student learning"
+        secondaryButtonText="See How It Works"
+        image="/career-reboot/hero.png"
+        imageAlt="crp aptitude"
       />
       <CvpVideo
-        heading="Step Inside the Experience of Reinvention Guru™"
-        subheading="Take a quick look at how our AI-driven journey helps you discover your interests, passions, your choices and maps it with potential career pathways, not static, not generic — all personalized & adaptive"
+        heading="Step Inside the Experience of CRP Aptitude Trainer™"
+        subheading="Take a quick look at how our AI-powered, step-locked journey measures your professional aptitudes, maps them to real-world roles, and guides you with skill gap advice and targeted learning plans — all adaptive, all personal, never generic."
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
       <CvpFeature
-        heading="Key Features That Empower Your Career Journey"
-        features={featuresData}
+        heading="Key Features That Empower Your Career Decisions"
+        features={features}
         ctaText="Start Your Journey Now"
         ctaLink="/coming-soon"
       />
-      {/* Both hidden as per req */}
+      <CvpLiteWorks
+        heading="Who Can Use Aptitude Trainer?"
+        subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
+        audience={audience}
+        ctaText="Start Your Journey Today"
+        ctaLink="/coming-soon"
+      />
+      {/* hidden as per req */}
       {/* <CvpInside
-        heading="What’s Inside"
-        subheading="We don’t reveal every step online — but here’s what you’ll go through:"
+        heading="What You Train On"
+        subheading="Developed with workplace realities in mind"
         features={insideData}
         ctaText="Start Your Journey Today"
         ctaLink="/coming-soon"
-        ctaNote="Each capsule is short, engaging, and designed to unlock insights no more than 15–20 minutes each."
-      /> */}
-      {/* <WhyCvpLite
-        heading="Why Reinvention Guru™ Works"
-        subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
-        avoidTitle="You’ll Avoid..."
-        experienceTitle="You’ll Experience..."
-        avoid={[
-          "Stressful tests or irrelevant questions",
-          "Random career suggestions",
-          "Outdated dashboards with static reports",
-          "One-size-fits-all career lists",
-        ]}
-        experience={[
-          "A guided, reflection-based journey",
-          "A real sense of self + direction",
-          "An engaging capsule-based interface",
-          "Personalized AI-driven feedback",
-        ]}
-        ctaText="Try Reinvention Guru™"
-        ctaLink="/coming-soon"
       /> */}
       <CvpLiteSteps
-        heading="How it Works"
-        subheading="Reinvention Guru™ is a structured entry level Career Clarity product for a lite walk-through of your career choices, it’s adaptive journey is crafted to transform raw career curiosity into structured career clarity. Here’s a glimpse of your guided experience"
+        heading="How It Works"
+        subheading="Aptitude Trainer™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
+        path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 83"
       />
-      <CvpLiteWorks
-        heading="Who Can Use This?"
-        subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
-        audience={audience}
-        ctaText="Start Your Journey Today"
+      {/* hidden as per req */}
+      {/* <CvpCta
+        heading="What You'll Receive"
+        subheading="Built for growth. Backed by AI. Designed for real workplace impact."
+        features={[
+          "Personalized Aptitude Profile",
+          "Aptitude Mapping Scenario",
+          "Skill-Building Task Suggestions",
+          "Scenario-Based Practice Modules",
+          "Progress Dashboard",
+          "Session Revisit Access",
+          "Final Aptitude Development Report",
+          "One-on-One Mentor Feedback",
+        ]}
+        buttons={[
+          {
+            label: "Simulate Your Future Career",
+            icon: <Zap size={18} />,
+            variant: "primary",
+            href: "/coming-soon",
+          },
+          {
+            label: "Request a Demo",
+            icon: <UserPlus size={18} />,
+            variant: "outline",
+            href: "/coming-soon",
+          },
+        ]}
+      /> */}
+      <WhyCvpLite
+        heading="What Makes CRP Aptitude Trainer™ the First of Its Kind?"
+        subheading="The only AI-powered aptitude system that blends workplace realities with adaptive, role-specific skill building."
+        avoidTitle="Old-Style Aptitude Testing"
+        experienceTitle="YPD CRP Aptitude Trainer™"
+        avoid={[
+          "One-time static test with generic report",
+          "Only measures basic IQ or reasoning",
+          "No real-world application mapping",
+          "Fixed question sets, no adaptivity",
+          "No guidance on skill improvement",
+          "No progress tracking or re-testing",
+        ]}
+        experience={[
+          "AI-powered & mentor-backed adaptive journey",
+          "Covers 50+ workplace-relevant aptitudes",
+          "Links results to real job roles & growth paths",
+          "Adaptive, scenario-based simulations",
+          "Actionable skill-building plan with resources",
+          "Revisit, retest & track improvement anytime",
+        ]}
+        ctaText="Try Aptitude Trainer"
         ctaLink="/coming-soon"
-        ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       <CvpJourney
-        heading="Why This Journey is Unique"
-        description="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
+        heading="Built by Industry Psychologists, Skill Experts, and AI Architects"
+        description="Youth Pulse Digital™ believes that aptitude mastery is not just a score — it’s a growth journey."
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start Reinvention Guru™"
+        ctaText="Start Aptitude Trainer"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
       />
+      {/* hidden as per req */}
+      {/* <Vs
+        heading="Aptitude Trainer™ Outperforms Generic Aptitude Tests"
+        subheading="Because you shouldn’t train for skills using random questions or one-size-fits-all methods"
+        leftTitle="Feature"
+        midLeftTitle="Generic Test"
+        midRightTitle="Edtech Platforms"
+        rightTitle="CRP Aptitude Trainer™"
+        leftItems={[
+          "Neutral, role-specific skill focus",
+          "Al-powered adaptive testing",
+          "Indian + global workplace alignment",
+          "One-time setup + lifetime access",
+          "Test + Insights + Improvement Plan ",
+        ]}
+        midLeftItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+        ]}
+        midRightItems={[
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+          { label: "No", type: "cross" },
+        ]}
+        rightItems={["", "", "", "", ""]}
+        ctaText="Try Aptitude Trainer"
+        ctaLink="/get-started"
+      /> */}
       <CvpRealworld
-        heading="Real World Use Cases"
-        subheading="Career clarity isn’t a quiz result — it’s the first real conversation with your future."
+        heading="Why It’s Different"
+        subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer™ makes every step count."
         items={useCases}
       />
       <CvpPricing
         currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
-        plans={cvpLitePricing.plans["one-time"] ?? []}
-        footerText="Institutional Pricing Available. Please"
+        plans={aptitudePricing.plans.monthly ?? []}
+        footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      <CvpImpact
-        heading="Real Impact, Real Results"
-        description="Since its pilot rollout in early 2023, Youth Pulse Digital™ has empowered over 2,000 students from Tier 1 to Tier 4 cities across India to gain their first real sense of career clarity without pressure, without jargon, and without bias."
-        stats={[
-          {
-            value: "93%",
-            description:
-              "of students said Reinvention Guru™ helped them understand their own interests better than any school-level career lecture or test.",
-          },
-          {
-            value: "89%",
-            description:
-              "of parents reported feeling more confident supporting their child’s stream or college decisions after seeing the final report.",
-          },
-          {
-            value: "92%",
-            description:
-              "of students said they would recommend Reinvention Guru™ to their juniors, cousins, or friends especially those who feel lost or under pressure.",
-          },
-        ]}
-        image={{
-          src: "/cvplite/impact.png",
-          alt: "Student and parent smiling",
-        }}
-      />
-      <CvpCta
-        heading="Start Your Career Vision Journey"
-        subheading="You’ve reflected. You’re ready."
-        description="Now it’s time to unlock your personalized career vision and take your first step into a future built with clarity, confidence, and purpose."
-        buttons={[
-          {
-            label: "Unlock Full Access – ₹899",
-            icon: <Zap size={18} />,
-            variant: "primary",
-            href: "/coming-soon",
-          },
-          {
-            label: "Create Account Now",
-            icon: <UserPlus size={18} />,
-            variant: "outline",
-            href: "/coming-soon",
-          },
-        ]}
-      />
-      <CvpSecurity />
-      <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Reinvention Guru™</span> → Your Gateway
-            to Future-Ready Decision-Making
+            <span className="font-bold">Start Your Reinvention Today</span>
           </>
         }
-        subheading="Because when you know what fits, you grow with purpose."
-        ctaText="Start Your Career Journey Today"
+        subheading="The world is changing fast. Don’t wait to be left behind. Take control of your learning, your career, and your future."
+        ctaText="Get Started Now "
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <Faq faqs={cvpLiteFaqs} />
+      <CvpSecurity />
+      <CvpFeedback reviews={ReviewsData} />
+      <Faq faqs={crpaptitudefaqs} imglink="/faq1.png" />
     </>
   );
 };
