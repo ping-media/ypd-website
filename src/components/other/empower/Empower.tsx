@@ -24,7 +24,7 @@ const cardData = [
     icon: "/icons/ai4.svg",
     title: "Find Your Best-Fit Career",
     description:
-      "Identify your interest with CVP Lite, Decide with CVP Advance",
+      "Identify your interest with CVP Lite™, Decide with CVP Advance",
   },
   {
     icon: "/icons/g4.svg",

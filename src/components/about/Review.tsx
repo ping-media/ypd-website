@@ -14,10 +14,10 @@ interface Review {
 const Reviews: Review[] = [
   {
     id: 1,
-    course: "CVP Lite (Class 10 Student)",
+    course: "CVP Lite™ (Class 10 Student)",
     name: "Ritika Sharma",
     education: "Class 10, Jaipur",
-    text: "I was always confused between Science and Commerce. CVP Lite helped me see my real strengths, not just my marks. Today, I'm much more confident about choosing my stream.",
+    text: "I was always confused between Science and Commerce. CVP Lite™ helped me see my real strengths, not just my marks. Today, I'm much more confident about choosing my stream.",
     image: "/about/c1.png",
   },
   {

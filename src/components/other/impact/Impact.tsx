@@ -6,7 +6,7 @@ const cardData = [
     icon: "/icons/ai4.svg",
     title: "Student Guidance in Action",
     description:
-      "Career Clarity with CVP Lite or CVP Advance helping students to make smarter decisions, make the right choices, understand the alternatives.",
+      "Career Clarity with CVP Lite™ or CVP Advance helping students to make smarter decisions, make the right choices, understand the alternatives.",
   },
   {
     icon: "/icons/ai5.svg",
