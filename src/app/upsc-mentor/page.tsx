@@ -410,6 +410,8 @@ const page = () => {
         ]}
         buttonText="Start Free"
         buttonLink="/program"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/upsc-mentor/#works"
         image="/upsc/hero.jpg"
         imageAlt="upsc mentor"
       />

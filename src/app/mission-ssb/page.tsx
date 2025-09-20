@@ -467,7 +467,7 @@ const page = () => {
         ctaSubtext="Perfect Step for serious Aspirants who wants clarity over confusion"
       />
       <Tables
-        heading="Structured Journey One Dashboard. Three Tracks."
+        heading="Smarter SSB Prep with Actions Evaluated"
         subheading="Because you shouldn't choose your career based on guesswork or generic quizzes."
         trackTitle="Feature"
         avoidTitle="What Others Do"

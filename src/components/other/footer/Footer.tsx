@@ -183,7 +183,7 @@ export default function Footer() {
               // { label: "Exam Mentors", href: "/exam-mentors" },
               // { label: "Entrance Mentors", href: "/entrance-mentors" },
               // { label: "Creativity Lab", href: "/coming-soon" },
-              { label: "Blogs", href: "/coming-soon" },
+              { label: "Blogs", href: "https://blog.ypd-dev.site" },
             ]}
           />
           <FooterSectionAccordion

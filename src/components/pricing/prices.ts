@@ -351,7 +351,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for Mentor Driven Counseling Session",
-            price: {
+          price: {
             INR: "₹3499",
             AED: "469.00",
           },
@@ -411,7 +411,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for Mentor Driven Counseling Session",
-           price: {
+          price: {
             INR: "₹7499",
             AED: "899.00",
           },
@@ -454,7 +454,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Pro",
           description: "Best for Starters & Micro Entrepreneurs",
-           price: {
+          price: {
             INR: "₹1299",
             AED: "169.00",
           },
@@ -522,7 +522,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Pro",
           description: "Best for Freshers & Mid Professionals",
-            price: {
+          price: {
             INR: "₹2499",
             AED: "269.00",
           },
@@ -542,7 +542,7 @@ export const pricingData: Record<string, ProductPricing> = {
         {
           title: "Premium",
           description: "Best for Mid-Senior Professionals",
-            price: {
+          price: {
             INR: "₹4499",
             AED: "399.00",
           },
@@ -557,6 +557,63 @@ export const pricingData: Record<string, ProductPricing> = {
             "Email Support",
             "Minimum 3 Months Subscription Required",
             "Optional Industry Expert Access",
+          ],
+          highlight: true,
+        },
+      ],
+    },
+  },
+  // ---------------- Reinvention Guru ----------------
+  "Reinvention Guru™": {
+    billingTypes: ["monthly"],
+    plans: {
+      monthly: [
+        {
+          title: "Free Plan",
+          description: "For Starters",
+          price: {
+            INR: "Free",
+            AED: "Free",
+          },
+          features: [
+            "Profile Setup & Domain Selection",
+            "Access to 1 domain (1 theme)",
+            "Dashboard overview",
+            "Upgrade path to Pro & Premium",
+          ],
+        },
+        {
+          title: "Pro",
+          description: "Best for Learners & Professionals",
+          price: {
+            INR: "₹3499",
+            AED: "$0",
+          },
+          features: [
+            "Full Profile & Persona Creation",
+            "All domains & 5 themes unlocked",
+            "Step-locked training workflow",
+            "AI Mentor Feedback",
+            "Progress Tracking & Streak Badges",
+            "Portfolio-ready outcome snapshots",
+          ],
+          highlight: true,
+        },
+        {
+          title: "Premium",
+          description: "Best for Mid-Senior Professionals & Leaders",
+          price: {
+            INR: "₹5499",
+            AED: "$0",
+          },
+          features: [
+            "All 10 domains & themes unlocked",
+            "Advanced leadership scenarios",
+            "Cross-domain connections",
+            "AI Mentor Feedback",
+            "Personalized growth tasks + resource links",
+            "Reinvention Index + Peer Benchmark view",
+            "Shareable Certificate",
           ],
           highlight: true,
         },

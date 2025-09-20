@@ -30,27 +30,27 @@ import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 const features = [
   {
     icon: FileText,
-    title: "Precise Aptitude Mapping",
+    title: "Structured Reinvention Framework",
     description:
-      "Identify your real strengths through a structured, role-linked aptitude framework — measuring thinking style, problem-solving, communication, and adaptability in one seamless journey.",
+      "Not another skilling video. Every domain follows a fixed, step-locked delivery — from context mapping to challenge scenarios — ensuring depth, not shortcuts.",
   },
   {
     icon: Layers,
-    title: "Adaptive Pathway Guidance",
+    title: "Personalized to Your Persona",
     description:
-      "Every professional’s path is unique. The CRP Aptitude Trainer™ adjusts to your career stage, role interests, and learning style without forcing a standard template.",
+      "Whether you’re on a break, switching industries, freelancing, or battling burnout — the mentor adapts guidance to your exact career context.",
   },
   {
     icon: BarChart3,
-    title: "Actionable Role Insights",
+    title: "Real Industry Role Mapping",
     description:
-      "No fluff, no waiting. Get a mapped list of suitable roles, skill gaps, and certification recommendations the moment your session ends — practical and decision-ready.",
+      "Your reinvention links directly to industry clusters and emerging roles. Each session ends with decision-ready insights, not abstract advice.",
   },
   {
     icon: Brain,
-    title: "True AI + Real Frameworks",
+    title: "Skill Gap → Action Plan",
     description:
-      "Not a chatbot quiz. Powered by proven aptitude models, role-fit logic, and industry data — so your guidance is grounded in facts, not scraped lists or generic advice.",
+      "Every gap identified is paired with actionable tasks, resources, and progress tracking — making your reinvention measurable, not wishful.",
   },
 ];
 // const insideData = [
@@ -100,44 +100,51 @@ const steps = [
     id: 1,
     title: "Select your focus area",
     description:
-      "Choose whether you want to strengthen problem-solving, communication, decision-making, leadership, or customer-facing aptitudes.",
+      "Start by choosing the domain most relevant to you — Bias Awareness, Critical Thinking, Ownership, Communication, Technical, or others.",
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Get targeted tasks",
+    title: "Begin a step-locked journey",
     description:
-      "Receive curated challenges and micro-scenarios mapped to real workplace contexts, aligned with your chosen focus.",
+      "Each theme follows a flow: What → Why → Where → How → Challenge.",
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Build aptitudes step by step",
+    title: "Learn through scenarios & tasks",
     description:
-      "Engage in scenario-based exercises — from logic puzzles to role-simulations — designed to sharpen your specific aptitude.",
+      "Work on real workplace situations — short cases, checklists, Q&As, MCQs, and slider reflections — all mapped to your persona and role.",
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Practice, reflect, and retry",
+    title: "Receive AI mentor feedback",
     description:
-      "Review your performance, reflect on your responses, and retry with adaptive variations until you gain mastery.",
+      "Get scored insights with clear strengths, gaps, and a Reinvention Index. Feedback adapts to your career stage and cultural context.",
     icon: "/careerverse/s4.svg",
   },
   {
     id: 5,
-    title: "Receive a personalized aptitude map",
+    title: "Translate gaps into action plans",
     description:
-      "Get a structured summary highlighting your aptitudes, growth areas",
+      "Every gap is paired with concrete next steps — workplace tasks, mini-projects, or leadership challenges — plus curated resources.",
+    icon: "/careerverse/s3.svg",
+  },
+  {
+    id: 6,
+    title: "Track progress & earn badges",
+    description:
+      "Monitor your growth with completion % and streaks. Unlock domain badges (e.g., Bias Breaker, Critical Thinker), a Reinvention Index, and portfolio-ready proof.",
     icon: "/careerverse/s3.svg",
   },
 ];
 const audience = [
   {
     id: 1,
-    title: "Students building foundational skills",
+    title: "Students building future-ready skills",
     description:
-      "Gain clarity on your strengths in problem-solving, reasoning, and decision-making to prepare for higher studies and careers.",
+      "Strengthen problem-solving, decision-making, and self-awareness to prepare for higher studies and career choices.",
     icon: "/cvplite/r1.svg",
     image: "/crp-aptitude/1.png",
   },
@@ -145,7 +152,7 @@ const audience = [
     id: 2,
     title: "Early professionals shaping careers",
     description:
-      "Discover your core aptitudes, match them with workplace roles, and develop confidence in communication and adaptability.",
+      "Discover your core aptitudes, map them to workplace roles, and gain confidence in adaptability and communication.",
     icon: "/cvplite/r2.svg",
     image: "/crp-aptitude/2.png",
   },
@@ -153,7 +160,7 @@ const audience = [
     id: 3,
     title: "People returning to work after a breaks",
     description:
-      "Rebuild confidence with structured aptitude sessions that highlight transferable skills and identify new opportunities.",
+      "Rebuild confidence with structured sessions that highlight transferable skills and new opportunities.",
     icon: "/cvplite/r3.svg",
     image: "/crp-aptitude/3.png",
   },
@@ -161,7 +168,7 @@ const audience = [
     id: 4,
     title: "Team leaders and aspiring managers",
     description:
-      "Strengthen leadership, critical thinking, and people skills with targeted aptitude exercises tailored to professional growth.",
+      "Sharpen leadership, critical thinking, and ownership through targeted exercises for career growth.",
     icon: "/cvplite/r5.svg",
     image: "/crp-aptitude/4.png",
   },
@@ -169,7 +176,7 @@ const audience = [
     id: 5,
     title: " Anyone seeking role clarity and growth",
     description:
-      "Use Aptitude Trainer™ to go beyond certifications — uncover what truly drives you and align it with future-ready roles.",
+      "Go beyond certifications to uncover what drives you — and align it with future-ready career paths.",
     icon: "/cvplite/r4.svg",
     image: "/crp-aptitude/5.png",
   },
@@ -177,15 +184,15 @@ const audience = [
 const journeySteps = [
   {
     id: "01",
-    text: "20+ years of combined psychometric testing & workplace skill research",
+    text: "20+ years of workplace skill research and aptitude testing, adapted to India’s diverse career realities.",
   },
   {
     id: "02",
-    text: "AI that adapts to your aptitude profile, powered by industry-leading frameworks",
+    text: "An adaptive mentor that adjusts every step to your persona, career stage, and learning style never one-size-fits-all.",
   },
   {
     id: "03",
-    text: "Real-world skill mapping, targeted improvement plans, measurable growth",
+    text: "Direct linkage of aptitudes to industry roles, skill gaps, and growth plans — ensuring measurable employability, not abstract scores.",
   },
 ];
 const useCases = [
@@ -193,7 +200,7 @@ const useCases = [
     id: 1,
     title: "Real-world practice, not theory",
     description:
-      "Aptitude Trainer™ gave me workplace-style challenges — from problem-solving cases to communication drills. It felt real, not abstract.",
+      "Every module uses workplace-inspired cases and challenge scenarios — moving beyond abstract quizzes to problem-solving you can apply immediately.",
     icon: "/cvplite/r1.svg",
     image: "/crp-aptitude/r1.png",
   },
@@ -201,7 +208,7 @@ const useCases = [
     id: 2,
     title: "Contextualized for Indian professionals",
     description:
-      "It connected my strengths to roles actually growing in India, not just generic profiles. I could see clear job relevance.",
+      "Designed around India’s cultural tiers, industry clusters, and real career pathways — not borrowed global benchmarks.",
     icon: "/cvplite/r2.svg",
     image: "/crp-aptitude/r2.png",
   },
@@ -209,14 +216,15 @@ const useCases = [
     id: 3,
     title: "Adaptive tasks with retry & reflection",
     description:
-      "When I struggled, it didn’t fail me. It nudged me to reflect and retry, so I improved with every step.",
+      "Retry exercises, track progress, and reflect on feedback in a secure self-serve space — no judgment, just growth.",
     icon: "/cvplite/r3.svg",
     image: "/crp-aptitude/r3.png",
   },
   {
     id: 4,
     title: "Aptitude map with growth clarity",
-    description: "The final report showed my strengths, blind spots.",
+    description:
+      "End every journey with a personalized portfolio that highlights strengths, gaps, and next steps toward employability.",
     icon: "/cvplite/r4.svg",
     image: "/crp-aptitude/r4.png",
   },
@@ -318,70 +326,80 @@ const ReviewsData = [
   },
 ];
 
-const crpaptitudefaqs = [
+const reinventionGuruFaqs = [
   {
-    question: "Is this just another aptitude test?",
+    question:
+      "How is Reinvention Guru™ different from YPD Aptitude Trainer™?",
     answer:
-      "No. Aptitude Trainer™ is not a one-time test. It’s a guided practice system with real-world scenarios, reflection, and retry options.",
+      "YPD Aptitude Trainer™ develops 50+ global standard aptitudes essential for growth anywhere in the world. Reinvention Guru™, however, goes deeper — working through personas and domains contextualized to Indian industry clusters and workplace realities. It doesn’t just build aptitudes; it connects them to roles, sectors, and reinvention journeys tailored for the Indian career landscape.",
   },
   {
-    question: "Will I get a personalized report?",
+    question: "Is this only for students?",
     answer:
-      "Yes. At the end, you receive an aptitude map showing your strengths, blind spots, and growth pathways.",
+      "No. Reinvention Guru™ adapts to multiple personas: students building foundational skills, early professionals shaping careers, people returning after breaks, career switchers & freelancers, and team leaders or aspiring managers. Each persona gets a contextualized journey with relevant scenarios and action plans.",
   },
   {
-    question: "Does this help in real jobs?",
+    question: "What kind of skills will I actually build?",
     answer:
-      "Absolutely. The exercises are linked to workplace skills like decision-making, leadership, and communication — not abstract puzzles.",
+      "Beyond reasoning or IQ, you’ll work on 10 learning domains: Bias Awareness, Critical Thinking, Strategic Thinking, Organization & Ownership, Communication & Leadership, Technical Acumen, Digital Proficiency, Financial Literacy, Innovation Mindset, and Industry-Specific Skills — each ending with a portfolio-ready proof of progress.",
   },
   {
-    question: "Can working professionals use it too?",
+    question: "Will this really help in my job or career switch?",
     answer:
-      "Yes. Whether you’re a student, mid-career, or returning professional, the tool adapts tasks to your context.",
+      "Yes. Each domain is mapped to real workplace roles and Indian industry clusters. You’ll practice with case studies, scenarios, and reflection tasks that focus on employability skills, not just theory.",
   },
   {
-    question: "What if I struggle in some tasks?",
+    question: "What if I’m weak in some areas?",
     answer:
-      "That’s part of the design. You can reflect, retry, and improve until you build confidence.",
+      "The system is built with a reflection loop. Each theme includes challenge scenarios, mentor feedback, and targeted action plans to help you improve steadily.",
+  },
+  {
+    question: "Is this like watching video lectures?",
+    answer:
+      "Not at all. Unlike most EdTech platforms that rely on pre-recorded videos, Reinvention Guru™ is interactive and adaptive — with quizzes, scenarios, reflections, and feedback loops. It’s self-paced but never passive.",
+  },
+  {
+    question: "Will I get a certificate or proof?",
+    answer:
+      "Yes. Completion of domains unlocks badges, a Reinvention Score, and a portfolio-ready report that you can share on LinkedIn or with employers.",
+  },
+  {
+    question: "Is this private? Who will see my results?",
+    answer:
+      "It’s a secure self-serve space. No peers or managers can view your progress unless you choose to share your reports with parents, mentors, or employers.",
+  },
+  {
+    question: "How much time does it take?",
+    answer:
+      "Each domain typically takes 2–4 hours depending on your tier (Lite, Pro, Expert). You can go at your own pace — either in short bursts or focused sessions.",
   },
   {
     question: "Is this research-backed?",
     answer:
-      "Yes. It’s built on YPD’s validated aptitude frameworks, aligned with employability skills and role-readiness.",
-  },
-  {
-    question: "Can parents or mentors view my results?",
-    answer:
-      "If you choose, your report can be shared with parents or mentors for guidance discussions.",
-  },
-  {
-    question: "What if I want deeper career direction after this?",
-    answer:
-      "Aptitude Trainer™ connects smoothly to other YPD programs like Reboot Navigator, Reinvention Guru, or Real Mentors & Industry Experts.",
+      "Yes. Reinvention Guru™ is built on 20+ years of industry expertise, with AI-driven personalization and Indian workplace contextualization — something global benchmarks and video courses don’t offer.",
   },
 ];
 
 const page = () => {
-  const aptitudePricing = pricingData["Aptitude Trainer™"];
+  const rgPricing = pricingData["Reinvention Guru™"];
 
   return (
     <>
       <CvpHero
-        title="India’s First AI-Powered Career Trainer for Real-Life Success"
+        title="India’s First AI Career Reinvention Mentor for Professionals"
         subtitle={
           <>
-            If you&apos;ve ever felt stuck, overlooked, or underprepared for
-            career growth, this is built for you. YPD’s Career Reinvention
-            Aptitude Trainer™
+            Unlock practical skill training to overcome career blocks, build
+            resilience, and thrive in fast- changing industries. Whether you’re
+            stuck, returning after a break, or switching paths,
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                YPD’s Career Reinvention Aptitude Trainer™
+                YPD’s Reinvention Guru™
               </span>
               <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
-            is a new-age training platform that goes beyond theory and delivers
-            practical aptitude-building tailored to your career stage, your
-            role, and your goals.
+            delivers domain-wise, persona-based training tailored to your role,
+            goals, and growth stage.
           </>
         }
         buttonText="Start Free"
@@ -389,22 +407,22 @@ const page = () => {
         secondaryButtonLink="/reinvention-guru/#works"
         secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
-        imageAlt="crp aptitude"
+        imageAlt="reinvention guru"
       />
       <CvpVideo
-        heading="Step Inside the Experience of CRP Aptitude Trainer™"
-        subheading="Take a quick look at how our AI-powered, step-locked journey measures your professional aptitudes, maps them to real-world roles, and guides you with skill gap advice and targeted learning plans — all adaptive, all personal, never generic."
+        heading="Step Inside Your Reinvention Guru™ Journey"
+        subheading="See how each step personalizes the experience, maps them to roles, and unlocks personalized tasks."
         videoId="ScMzIvxBSi4"
         thumbnail="/video.png"
       />
       <CvpFeature
-        heading="Key Features That Empower Your Career Decisions"
+        heading="Key Features That Empower Your Reinvention"
         features={features}
-        ctaText="Start Your Journey Now"
+        ctaText="Start Your Reinvention Now"
         ctaLink="/coming-soon"
       />
       <CvpLiteWorks
-        heading="Who Can Use Aptitude Trainer?"
+        heading="Who Can Use Reinvention Guru™?"
         subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
         audience={audience}
         ctaText="Start Your Journey Today"
@@ -420,13 +438,13 @@ const page = () => {
       /> */}
       <CvpLiteSteps
         heading="How It Works"
-        subheading="Aptitude Trainer™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
+        subheading="Reinvention Guru™ guides you step-by-step to sharpen skills, practice scenarios, and map your growth."
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
-        path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 83"
+        path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 88"
       />
       {/* hidden as per req */}
       {/* <CvpCta
@@ -458,36 +476,34 @@ const page = () => {
         ]}
       /> */}
       <WhyCvpLite
-        heading="What Makes CRP Aptitude Trainer™ the First of Its Kind?"
+        heading="Why Reinvention Guru™ is First of Its Kind"
         subheading="The only AI-powered aptitude system that blends workplace realities with adaptive, role-specific skill building."
-        avoidTitle="Old-Style Aptitude Testing"
-        experienceTitle="YPD CRP Aptitude Trainer™"
+        avoidTitle="Typical EdTech"
+        experienceTitle="Reinvention Guru™ Difference"
         avoid={[
-          "One-time static test with generic report",
-          "Only measures basic IQ or reasoning",
-          "No real-world application mapping",
-          "Fixed question sets, no adaptivity",
-          "No guidance on skill improvement",
-          "No progress tracking or re-testing",
+          "Herd-based, one-size-fits-all video modules",
+          "Imported benchmarks, disconnected from Indian realities",
+          "Passive learning, little space for critical thinking",
+          "Focused on theory, not employability outcomes",
+          "Judgment-heavy — performance compared, not nurtured",
         ]}
         experience={[
-          "AI-powered & mentor-backed adaptive journey",
-          "Covers 50+ workplace-relevant aptitudes",
-          "Links results to real job roles & growth paths",
-          "Adaptive, scenario-based simulations",
-          "Actionable skill-building plan with resources",
-          "Revisit, retest & track improvement anytime",
+          "Every learner follows their own reinvention path, not a mass template",
+          "Workplace challenges, cultural tiers, and industry clusters mapped to real roles",
+          "Reflective exercises, challenge scenarios, and adaptive problem-solving",
+          "Moving beyond rote to entrepreneurial and creative capacity",
+          "No peers watching, no bias, no judgment; growth happens at your own pace",
         ]}
-        ctaText="Try Aptitude Trainer"
+        ctaText="Try Reinvention Guru™"
         ctaLink="/coming-soon"
       />
       <CvpJourney
-        heading="Built by Industry Psychologists, Skill Experts, and AI Architects"
-        description="Youth Pulse Digital™ believes that aptitude mastery is not just a score — it’s a growth journey."
+        heading="Built by Experts, Grounded in Real Workplaces"
+        description="Reinvention Guru™ blends psychology, industry expertise, and AI architecture into one growth system."
         steps={journeySteps}
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
-        ctaText="Start Aptitude Trainer"
+        ctaText="Start with Reinvention Guru™"
         ctaHref="/start"
         ctaIcon={<Zap size={18} />}
       />
@@ -526,14 +542,14 @@ const page = () => {
       /> */}
       <CvpRealworld
         heading="Why It’s Different"
-        subheading="Skill growth isn’t a test score — it’s a guided journey. Aptitude Trainer™ makes every step count."
+        subheading="Reinvention Guru™ isn’t about testing what you know — it’s about transforming how you grow."
         items={useCases}
       />
       <CvpPricing
         currency="INR"
         heading="Pricing & Access"
-        subheading="Innovation that feels premium, priced for you."
-        plans={aptitudePricing.plans.monthly ?? []}
+        subheading="Innovation that feels premium, proof for you."
+        plans={rgPricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
@@ -544,14 +560,14 @@ const page = () => {
             <span className="font-bold">Start Your Reinvention Today</span>
           </>
         }
-        subheading="The world is changing fast. Don’t wait to be left behind. Take control of your learning, your career, and your future."
+        subheading="Don’t get left behind in a fast-changing workplace. Reinvention Guru™ gives you a secure, step-locked journey to build employability skills, critical thinking, and innovative mindset — all at your own pace."
         ctaText="Get Started Now "
         ctaHref="/start"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpSecurity />
       <CvpFeedback reviews={ReviewsData} />
-      <Faq faqs={crpaptitudefaqs} imglink="/faq1.png" />
+      <Faq faqs={reinventionGuruFaqs} imglink="/faq1.png" />
     </>
   );
 };

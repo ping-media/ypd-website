@@ -61,7 +61,7 @@ const Links = [
         name: "Skilling Mentors",
         subDropdown: [
           { name: "Aptitude Trainer™", href: "/crp-aptitude" },
-          { name: "Reinvention Guru™", href: "/coming-soon" },
+          { name: "Reinvention Guru™", href: "/reinvention-guru" },
         ],
       },
     ],

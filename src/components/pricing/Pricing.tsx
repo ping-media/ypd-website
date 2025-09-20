@@ -28,7 +28,7 @@ const PricingPage = ({ currency }: Props) => {
     <section className="flex w-full justify-center p-4 pb-4 sm:px-10 sm:pb-10 lg:px-20 lg:pb-20">
       <div className="flex w-full max-w-[1440px] flex-col items-center gap-6 sm:gap-10">
         {/* Program Selector */}
-        <div className="flex w-full max-w-7xl flex-col items-center gap-4">
+        <div className="flex w-full max-w-2xl flex-col items-center gap-4">
           <h2 className="font-red-rose text-center text-2xl sm:text-3xl">
             Select Your Program
           </h2>
@@ -45,11 +45,11 @@ const PricingPage = ({ currency }: Props) => {
                   setBilling(firstBilling);
                 }
               }}
-              className="text-brand-gray w-full appearance-none rounded-lg border border-gray-300 p-3 pr-10"
+              className="text-brand-gray w-full cursor-pointer appearance-none rounded-lg border border-gray-300 p-3 pr-10"
             >
-              <option value="">Select Program</option>
+              <option>Select Program</option>
               {Object.keys(pricingData).map((key) => (
-                <option key={key} value={key}>
+                <option className="cursor-pointer" key={key} value={key}>
                   {key}
                 </option>
               ))}

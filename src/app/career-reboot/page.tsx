@@ -401,7 +401,7 @@ const page = () => {
         buttonText="Start Free"
         buttonLink="/coming-soon"
         secondaryButtonText="See How It Works"
-        secondaryButtonLink="/career-reboot/#works"
+        secondaryButtonLink="/career-reboot/#work"
         image="/career-reboot/hero.png"
         imageAlt="mission ssb"
       />
