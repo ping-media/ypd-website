@@ -405,6 +405,8 @@ const page = () => {
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/mission-ssb/#works"
         image="/cvplite/mission-nda.png"
         imageAlt="mission ssb"
       />

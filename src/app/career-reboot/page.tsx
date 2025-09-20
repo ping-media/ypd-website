@@ -399,7 +399,9 @@ const page = () => {
           "For first-job seekers, career re-starters & freelancers",
         ]}
         buttonText="Start Free"
-        buttonLink="/program"
+        buttonLink="/coming-soon"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/career-reboot/#works"
         image="/career-reboot/hero.png"
         imageAlt="mission ssb"
       />

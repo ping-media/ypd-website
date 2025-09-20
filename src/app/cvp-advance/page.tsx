@@ -391,6 +391,8 @@ const page = () => {
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/cvp-advance/#works"
         image="/cvp-advance/hero.png"
         imageAlt="Student learning"
       />

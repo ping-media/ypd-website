@@ -351,7 +351,7 @@ const page = () => {
         buttonText="Start Program Now"
         buttonLink="/coming-soon"
         secondaryButtonText="See How It Works"
-        secondaryButtonLink="/careerverse/#video"
+        secondaryButtonLink="/careerverse/#works"
         image="/careerverse/hero.png"
         imageAlt="Student learning"
       />

@@ -314,6 +314,8 @@ const page = () => {
         ]}
         buttonText="Start Program Now"
         buttonLink="/program"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/cvp-lite/#works"
         image="/cvplite/cvplite.png"
         imageAlt="Student learning"
       />

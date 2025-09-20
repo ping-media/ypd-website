@@ -314,7 +314,9 @@ const page = () => {
           "A powerful starting for every learner",
         ]}
         buttonText="Start Program Now"
-        buttonLink="/program"
+        buttonLink="/coming-soon"
+        secondaryButtonText="See How It Works"
+        secondaryButtonLink="/reinvention-guru/#works"
         image="/cvplite/cvplite.png"
         imageAlt="Student learning"
       />

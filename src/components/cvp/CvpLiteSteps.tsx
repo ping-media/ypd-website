@@ -124,7 +124,10 @@ export default function StepSection({
   const allImages = [images.first, images.second, ...(images.others || [])];
 
   return (
-    <section className="flex justify-center bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-10 lg:px-10 lg:py-16 xl:px-20 xl:py-20">
+    <section
+      id="works"
+      className="flex justify-center bg-white px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-10 lg:px-10 lg:py-16 xl:px-20 xl:py-20"
+    >
       <div className="font-lato relative flex w-full max-w-[1440px] flex-col items-center gap-8 text-center sm:gap-10 md:gap-12 lg:gap-16">
         {/* Dashed connecting line - hidden on mobile, visible on lg+ */}
         <svg

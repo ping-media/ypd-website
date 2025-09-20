@@ -371,8 +371,8 @@ const page = () => {
         features={["UG & PG", "USA", "UK", "Canada", "Australia", "Everywhere"]}
         featuresTwoCols
         buttonText="Book Your Slot Now"
-        buttonLink="/global-navigator/#video"
-        secondaryButtonLink="/coming-soon"
+        buttonLink="/coming-soon"
+        secondaryButtonLink="/global-navigator/#works"
         secondaryButtonText="See How It Works"
         image="/global-navigator/hero.png"
         imageAlt="global navigator"

@@ -313,9 +313,9 @@ const page = () => {
         ]}
         featuresTwoCols
         buttonText="Book Your Slot Now"
-        buttonLink="/program"
+        buttonLink="/coming-soon"
         secondaryButtonText="See How It Works"
-        secondaryButtonLink="/counseling-guru/#video"
+        secondaryButtonLink="/counseling-guru/#works"
         image="/career-reboot/hero.png"
         imageAlt="counseling guru"
       />

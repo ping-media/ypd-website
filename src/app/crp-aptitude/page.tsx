@@ -386,7 +386,7 @@ const page = () => {
         }
         buttonText="Start Free"
         buttonLink="/coming-soon"
-        secondaryButtonLink="/crp-aptitude/#video"
+        secondaryButtonLink="/crp-aptitude/#works"
         secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
         imageAlt="crp aptitude"
