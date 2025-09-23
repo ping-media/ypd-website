@@ -69,9 +69,9 @@ const Links = [
   {
     name: "Corporate",
     dropdown: [
-      { name: "Admission Test", href: "/coming-soon" },
-      { name: "Hiring & Onboarding", href: "/coming-soon" },
-      { name: "School / Institute OS", href: "/coming-soon" },
+      { name: "Admission Test", href: "/admission" },
+      { name: "Hiring & Onboarding", href: "/hiring" },
+      { name: "School / Institute OS", href: "/school-os" },
       // { name: "Institute Connect", href: "/coming-soon" },
       // { name: "MSME Connect", href: "/coming-soon" },
       // { name: "Corporate Connect", href: "/coming-soon" },

@@ -5,13 +5,13 @@ import CareersSection from "@/components/careers/jobs/CareersSection";
 import Hero from "@/components/careers/Hero";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import {
-  ArrowLeft,
   BarChart3,
   Brain,
   Briefcase,
   FileText,
   Layers,
   Lightbulb,
+  ScanEye,
   Users,
 } from "lucide-react";
 
@@ -105,7 +105,7 @@ const page = () => {
         imageAlt="Youth Pulse Digital"
         ctaLabel="View Open Positions"
         ctaHref="/coming-soon"
-        ctaIcon={<ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6" />}
+        ctaIcon={<ScanEye className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       <CvpFeature
         heading="Why Join YPD?"

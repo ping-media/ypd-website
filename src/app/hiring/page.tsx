@@ -1,11 +1,62 @@
+import CareersContact from "@/components/careers/CareersContact";
+import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import Hero from "@/components/module/Hero";
 import Modules from "@/components/module/Modules";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Brain,
+  BriefcaseBusiness,
+  FileText,
+  Layers,
+  Sparkles,
+} from "lucide-react";
+
+const features = [
+  {
+    icon: FileText,
+    title: "Job Posting & Tracking",
+    description:
+      "Publish openings quickly and track applications in real time — no lost CVs or messy email trails.",
+  },
+  {
+    icon: Layers,
+    title: "Smart Shortlisting",
+    description:
+      "Evaluate applicants with structured criteria, ensuring only the best-fit profiles move forward.",
+  },
+  {
+    icon: BarChart3,
+    title: "Schedule & Feedback",
+    description:
+      "Automate interview slots, reminders, and feedback sharing to speed up decision-making.",
+  },
+  {
+    icon: Brain,
+    title: "Activity Log",
+    description:
+      "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
+  },
+];
 
 const steps = [
+  {
+    title: "Hiring Module",
+    subtitle:
+      "Recruit smarter with streamlined workflows that bring the best talent to your organization.",
+    features: [
+      "Job posting & application tracking",
+      "Candidate evaluation & shortlisting",
+      "Interview scheduling & feedback",
+      "Activity Log",
+      "User Management",
+    ],
+    buttonText: "Inquire Now",
+    buttonLink: "/coming-soon",
+  },
   {
     title: "Admission & Test Module",
     subtitle:
@@ -17,20 +68,6 @@ const steps = [
       "Fees Management",
       "Activity Log",
       "Automated notifications & reports",
-    ],
-    buttonText: "Inquire Now",
-    buttonLink: "/coming-soon",
-  },
-  {
-    title: "Hiring Module",
-    subtitle:
-      "Recruit smarter with streamlined workflows that bring the best talent to your organization.",
-    features: [
-      "Job posting & application tracking",
-      "Candidate evaluation & shortlisting",
-      "Interview scheduling & feedback",
-      "Activity Log",
-      "User Management",
     ],
     buttonText: "Inquire Now",
     buttonLink: "/coming-soon",
@@ -66,8 +103,8 @@ const page = () => {
   return (
     <>
       <Hero
-        heading="Powerful Modules to Simplify Your Workflows"
-        subheading="Choose the right tool for your needs whether it’s managing admissions & tests or streamlining hiring. Get started today."
+        heading="A Smarter Way to Recruit, Hire, and Onboard Talent"
+        subheading="From job postings to candidate shortlisting, interviews, and onboarding, streamline your entire hiring journey with tools built for growing organizations."
         ctaLabel="Apply for Admission Module"
         ctaHref="/coming-soon"
         ctaIcon={<Sparkles className="h-5 w-5 sm:h-6 sm:w-6" />}
@@ -76,6 +113,13 @@ const page = () => {
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
         secondaryCtaLabel="Apply for Hiring Module"
+      />
+
+      <CvpFeature
+        heading="Key Features That Empower Your Career Decisions"
+        features={features}
+        ctaText="Start Your Journey Now"
+        ctaLink="/coming-soon"
       />
       <Modules
         heading="How it Works"
@@ -99,9 +143,13 @@ const page = () => {
           </>
         }
         subheading="Select the module that fits your needs and apply today. Our team will guide you through setup."
-        ctaText="Enquire For Any Module"
+        ctaText="Inquire For Any Module"
         ctaHref="/coming-soon"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+      />
+      <CareersContact
+        headline="Your Dream Role Might Be Next!"
+        subheading="We’re building a team of passionate problem-solvers. Share your CV and let’s explore where you fit best."
       />
       <Faq />
     </>

@@ -204,7 +204,7 @@ export default function CareersContactForm() {
                         <span className="text-gray-500">or Drag and Drop</span>
                       </p>
                       <p className="text-xs text-gray-400">
-                        upload your Resume (Max 2 MB) *
+                        upload your Document (Max 2 MB) *
                       </p>
                     </>
                   ) : (
