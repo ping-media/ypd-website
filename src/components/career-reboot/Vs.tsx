@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import { CheckSquare, XSquare, Zap } from "lucide-react";
 import Link from "next/link";
 
@@ -166,7 +167,7 @@ export default function Vs({
         {/* CTA */}
         {ctaText && ctaLink && (
           <Link
-            href={ctaLink}
+            href={`${BASE_URL}${ctaLink}`}
             className="btn-size btn-primary mx-auto font-medium shadow-sm"
           >
             <Zap size={18} /> {ctaText}

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Zap } from "lucide-react";
+import { BASE_URL } from "@/lib/url";
 
 export interface AudienceItem {
   id: number;
@@ -214,7 +215,7 @@ export default function CvpLiteWorks({
         {ctaText && ctaLink && (
           <div className="flex flex-col items-center gap-6">
             <Link
-              href={ctaLink}
+              href={`${BASE_URL}${ctaLink}`}
               className="btn-size btn-primary font-medium shadow-sm"
             >
               <Zap size={18} /> {ctaText}

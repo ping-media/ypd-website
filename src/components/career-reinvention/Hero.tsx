@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BASE_URL } from "@/lib/url";
 
 interface HeroProps {
   heading: string;
@@ -46,7 +47,10 @@ export default function Hero({
         </div>
 
         {/* CTA Button */}
-        <Link href={ctaHref} className="btn-primary btn-size max-sm:w-full">
+        <Link
+          href={`${BASE_URL}${ctaHref}`}
+          className="btn-primary btn-size max-sm:w-full"
+        >
           {ctaIcon && <span className="mr-2">{ctaIcon}</span>}
           {ctaLabel}
         </Link>

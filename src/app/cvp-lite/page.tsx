@@ -313,7 +313,7 @@ const page = () => {
           "A powerful starting for every learner",
         ]}
         buttonText="Start Program Now"
-        buttonLink="/program"
+        buttonLink="/cvp-lite"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/cvp-lite/#works"
         image="/cvplite/cvplite.png"
@@ -329,7 +329,7 @@ const page = () => {
         heading="Key Features That Empower Your Career Journey"
         features={featuresData}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink="/cvp-lite"
       />
       {/* Both hidden as per req */}
       {/* <CvpInside
@@ -374,7 +374,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/cvp-lite"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       <CvpJourney
@@ -384,7 +384,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start CVP Lite™"
-        ctaHref="/start"
+        ctaHref="/cvp-lite"
         ctaIcon={<Zap size={18} />}
       />
       <CvpRealworld
@@ -434,13 +434,13 @@ const page = () => {
             label: "Unlock Full Access – ₹899",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/coming-soon",
+            href: "/cvp-lite",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/coming-soon",
+            href: "/auth/sign-up",
           },
         ]}
       />
@@ -456,7 +456,7 @@ const page = () => {
         }
         subheading="Because when you know what fits, you grow with purpose."
         ctaText="Start Your Career Journey Today"
-        ctaHref="/start"
+        ctaHref="/cvp-lite"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={cvpLiteFaqs} />

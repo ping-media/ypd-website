@@ -390,7 +390,7 @@ const page = () => {
           "A powerful starting for every learner",
         ]}
         buttonText="Start Program Now"
-        buttonLink="/program"
+        buttonLink="/cvp-advance"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/cvp-advance/#works"
         image="/cvp-advance/hero.png"
@@ -406,7 +406,7 @@ const page = () => {
         heading="Key Features That Power Your CVP Advance™ Journey"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink="/cvp-advance"
       />
       {/* Both hidden as per req */}
       {/* <CvpInside
@@ -451,7 +451,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/cvp-advance"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       <CvpJourney
@@ -461,7 +461,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start CVP Advance™"
-        ctaHref="/start"
+        ctaHref="/cvp-advance"
         ctaIcon={<Zap size={18} />}
       />
       <CvpRealworld
@@ -511,13 +511,13 @@ const page = () => {
             label: "Unlock Full Access – ₹2499",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/coming-soon",
+            href: "/cvp-advance",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/coming-soon",
+            href: "/auth/sign-up",
           },
         ]}
       />
@@ -532,7 +532,7 @@ const page = () => {
         }
         subheading="This isn’t psychometric rehash. This is future-ready, emotionally intelligent career building in just one week."
         ctaText="Start My 7-Day Journey"
-        ctaHref="/start"
+        ctaHref="/cvp-advance"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={cvpAdvanceFaqs} />

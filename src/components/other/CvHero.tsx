@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import { BriefcaseBusiness, Sparkles, SquareCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,7 +74,10 @@ export default function CvHero({
           {/* ✅ Buttons Section */}
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
             {buttonText && (
-              <Link href={buttonLink} className="btn-size btn-primary shadow">
+              <Link
+                href={`${BASE_URL}${buttonLink}`}
+                className="btn-size btn-primary shadow"
+              >
                 <Sparkles className="h-5 w-5" />
                 {buttonText}
               </Link>

@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import { Zap } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -102,7 +103,7 @@ function renderCard(f: Feature, i: number) {
       </div>
       {/* CTA */}
       <Link
-        href={f.href}
+        href={`${BASE_URL}${f.href}`}
         className="btn-size btn-primary mt-6 flex items-center justify-center gap-2"
       >
         <Zap size={18} className="text-white" />

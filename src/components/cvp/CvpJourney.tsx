@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,7 +80,7 @@ const CvpJourney = ({
         {/* CTA */}
         <div className="flex flex-col items-center gap-6">
           <Link
-            href={ctaHref}
+            href={`${BASE_URL}${ctaHref}`}
             className="btn-size btn-primary font-medium shadow-sm"
           >
             {ctaIcon}

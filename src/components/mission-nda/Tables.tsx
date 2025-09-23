@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import { CheckSquare, Zap } from "lucide-react";
 import Link from "next/link";
 
@@ -117,7 +118,7 @@ export default function Tables({
         {/* CTA */}
         {ctaText && ctaLink && (
           <Link
-            href={ctaLink}
+            href={`${BASE_URL}${ctaLink}`}
             className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 mx-auto flex items-center justify-center gap-2 rounded-lg border px-4 py-3 text-sm font-medium text-white shadow-sm transition-colors sm:px-5 sm:py-3.5 sm:text-base lg:text-lg"
           >
             <Zap size={18} /> {ctaText}

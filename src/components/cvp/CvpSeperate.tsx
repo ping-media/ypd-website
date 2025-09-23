@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { BASE_URL } from "@/lib/url";
 
 interface CvpSeperateProps {
   bgImage: string;
@@ -53,14 +54,14 @@ const CvpSeperate = ({
         {/* Button */}
         <div className="font-lato w-full sm:w-auto">
           <Link
-            href={ctaHref}
+            href={`${BASE_URL}${ctaHref}`}
             className="btn-size w-full bg-white text-center font-medium shadow hover:bg-gray-200"
           >
             {ctaText}
             {ctaIcon}
           </Link>
           {subtext && (
-            <p className="mt-4 text-sm text-white sm:text-base">{subtext}</p>
+            <p className="text-s m mt-4 text-white sm:text-base">{subtext}</p>
           )}
         </div>
       </div>

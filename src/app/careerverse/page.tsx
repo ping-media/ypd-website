@@ -349,7 +349,7 @@ const page = () => {
           </>
         }
         buttonText="Start Program Now"
-        buttonLink="/coming-soon"
+        buttonLink="/careerverse"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/careerverse/#works"
         image="/careerverse/hero.png"
@@ -420,7 +420,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/careerverse"
         ctaSubtext="Perfect first step before college, entrance exams, or big decisions."
       />
       {/*  */}
@@ -464,7 +464,7 @@ const page = () => {
         }
         subheading="Because when you know what fits, you grow with purpose."
         ctaText="Start Your Career Journey Today"
-        ctaHref="/start"
+        ctaHref="/careerverse"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={careerversefaq} />

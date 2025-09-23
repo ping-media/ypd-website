@@ -313,7 +313,7 @@ const page = () => {
         ]}
         featuresTwoCols
         buttonText="Book Your Slot Now"
-        buttonLink="/coming-soon"
+        buttonLink="/counseling-guru"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/counseling-guru/#works"
         image="/career-reboot/hero.png"
@@ -345,13 +345,13 @@ const page = () => {
           "Multi-stream pathways + ROI-driven decision logic",
         ]}
         ctaText="Try Counseling Guru™"
-        ctaLink="/coming-soon"
+        ctaLink="/counseling-guru"
       />
       <CvpFeature
         heading="Key Features That Empower Your Career Journey"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink="/counseling-guru"
       />
       <CvpLiteSteps
         heading="How it Works"
@@ -368,7 +368,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/counseling-guru"
         ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
       <CvpPricing
@@ -419,7 +419,7 @@ const page = () => {
           "+ Product Reaccess",
         ]}
         ctaText="Try Counseling Guru™"
-        ctaLink="/get-started"
+        ctaLink="/counseling-guru"
       />
       <CvpImpact
         heading="Real Impact, Real Results"
@@ -456,7 +456,7 @@ const page = () => {
         subtext="Start Light, Upgrade Anytime"
         subheading="Choose Casual Mode at checkout to. explore a preview journey. Get basic stream guidance, sample role mapping, and budget insights.Then upgrade to unlock full report, college list, and personal mentorship."
         ctaText="SneakPeak View"
-        ctaHref="/start"
+        ctaHref=""
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpFeedback reviews={ReviewsData} />
@@ -467,7 +467,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start Counseling Guru™"
-        ctaHref="/start"
+        ctaHref="/counseling-guru"
         ctaIcon={<Zap size={18} />}
         footerText="Try our 7-day exploration into Career Pathway for deeper insights into Career Pathways."
       />
@@ -485,13 +485,13 @@ const page = () => {
             label: "Subscribe Full Access ₹1499-3499 ",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/coming-soon",
+            href: "/counseling-guru",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/coming-soon",
+            href: "/auth/sign-up",
           },
         ]}
       />

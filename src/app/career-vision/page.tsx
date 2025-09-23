@@ -218,7 +218,7 @@ const featureSections = [
         subtitle: "Grade 10 | Subject Mastery",
         features: ["Focused guidance", "Exam strategies"],
         ctaText: "Join Now",
-        href: "/coming-soon",
+        href: "/cbse-10",
       },
       {
         icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
@@ -226,7 +226,7 @@ const featureSections = [
         subtitle: "Grade 12 | Subject Mastery",
         features: ["Stream-specific support", "Exam prep roadmaps"],
         ctaText: "Join Now",
-        href: "/coming-soon",
+        href: "/cbse-12",
       },
     ],
   },
@@ -245,7 +245,7 @@ const featureSections = [
           "Dynamic Progress-Based Preparation",
         ],
         ctaText: "Subscribe Now",
-        href: "/coming-soon",
+        href: "/mission-ssb",
       },
       {
         icon: <Shield className="text-brand-primary h-12 w-12" />,
@@ -257,7 +257,7 @@ const featureSections = [
           "Strategy coaching",
         ],
         ctaText: "Join Now",
-        href: "/coming-soon",
+        href: "/upsc-mentor",
       },
     ],
   },
@@ -319,7 +319,7 @@ const page = () => {
         imageSrc="/cvhero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="Try Career Vision"
-        ctaHref="/coming-soon"
+        ctaHref="/career-vision"
         ctaIcon={<Zap className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       <CvpVideo
@@ -338,7 +338,7 @@ const page = () => {
         subheading="Choosing a career is never just the student’s journey — families are part of every decision. The Career Vision Program™ bridges the gap between student aspirations and parental expectations with clarity, transparency, and confidence."
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink=""
       />
       <CvHero
         title="Youth Pulse Digital™ Ecosystem: Your Partner for Life"
@@ -360,7 +360,7 @@ const page = () => {
         ]}
         featuresTwoCols
         buttonText="Register Now"
-        buttonLink="/coming-soon"
+        buttonLink=""
         image="/cv.png"
         imageAlt="career vision"
       />
@@ -373,7 +373,7 @@ const page = () => {
         }
         subheading="Let’s start your real journey back to the career you deserve. Powered by Youth Pulse Digital™. Personalized. Practical. Proven."
         ctaText="Start Now"
-        ctaHref="/start"
+        ctaHref="/"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <UserSay

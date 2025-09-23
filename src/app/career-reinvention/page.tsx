@@ -146,7 +146,7 @@ const page = () => {
         imageSrc="/career-reinvention/hero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="Try Career Reinvention"
-        ctaHref="/coming-soon"
+        ctaHref="/career-reinvention"
         ctaIcon={<Zap className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       {/*  */}
@@ -180,7 +180,7 @@ const page = () => {
           "Navigator + Guru → Coaches for Core Skills, Role   Cluster Skills, real scenario training.",
         ]}
         ctaText="Try the Career Verse™"
-        ctaLink="/coming-soon"
+        ctaLink="/career-reinvention"
       />
       <CrSuite
         heading="Your Complete Career Reinvention Suite"
@@ -196,8 +196,8 @@ const page = () => {
           </>
         }
         subheading="Let’s start your real journey back to the career you deserve. Powered by Youth Pulse Digital™. Personalized. Practical. Proven."
-        ctaText="Enquire Now"
-        ctaHref="/start"
+        ctaText="Inquire Now"
+        ctaHref="/career-reinvention"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <UserSay

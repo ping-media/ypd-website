@@ -2,6 +2,7 @@
 import { ReactNode, useState } from "react";
 import { SquareCheck, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { BASE_URL } from "@/lib/url";
 
 interface ButtonProps {
   label: string;
@@ -108,7 +109,7 @@ export default function CvpCta({
         <div className="mt-4 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-stretch">
           {buttons.map((btn, index) => (
             <Link
-              href={btn.href}
+              href={`${BASE_URL}${btn.href}`}
               key={index}
               className={`btn-size flex cursor-pointer items-center justify-center gap-2 px-4 py-2 font-medium whitespace-nowrap ${
                 btn.variant === "primary"

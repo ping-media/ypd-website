@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/lib/url";
 import { Zap } from "lucide-react";
 import Link from "next/link";
 
@@ -57,7 +58,7 @@ const CvpFeature = ({
         {ctaText && ctaLink && (
           <div className="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
             <Link
-              href={ctaLink}
+              href={`${BASE_URL}${ctaLink}`}
               className="btn-size btn-primary font-medium shadow-sm"
             >
               <Zap size={18} /> {ctaText}

@@ -371,7 +371,7 @@ const page = () => {
         features={["UG & PG", "USA", "UK", "Canada", "Australia", "Everywhere"]}
         featuresTwoCols
         buttonText="Book Your Slot Now"
-        buttonLink="/coming-soon"
+        buttonLink="/global-navigator"
         secondaryButtonLink="/global-navigator/#works"
         secondaryButtonText="See How It Works"
         image="/global-navigator/hero.png"
@@ -387,11 +387,8 @@ const page = () => {
         heading="Key Features That Empower Your Career Decisions"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink="/global-navigator"
       />
-      {/*  */}
-      {/* SECTION TO ADD (What Makes Global Navigator™ the First of Its Kind?) */}
-      {/*  */}
       <WhyCvpLite
         heading="What Makes Global Navigator™ the First of Its Kind?"
         subheading="The only career + college guidance system that blends global knowledge with Indian student realities."
@@ -412,7 +409,7 @@ const page = () => {
           "Lifetime re-access to your personalized journey",
         ]}
         ctaText="Try Global Navigator™"
-        ctaLink="/coming-soon"
+        ctaLink="/global-navigator"
       />
       {/* hidden as per req */}
       {/* <CvpInside
@@ -450,7 +447,7 @@ const page = () => {
           "Transparent reports for families with side-by-side options and clear action plans",
         ]}
         ctaText="Try Global Navigator™"
-        ctaLink="/coming-soon"
+        ctaLink="/global-navigator"
       />
 
       {/* SECTION TO MODIFY (Lines) */}
@@ -468,7 +465,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/global-navigator"
         ctaSubtext="Whether you're aiming for Ivy League or a safe, affordable global degree this session will show you all your real options."
       />
       {/*both hidden as per req */}
@@ -541,7 +538,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start Global Navigator™"
-        ctaHref="/start"
+        ctaHref="/global-navigator"
         ctaIcon={<Zap size={18} />}
       />
       <CvpRealworld
@@ -591,13 +588,13 @@ const page = () => {
             label: "Subscribe Full Access (₹3,499 onwards)",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/coming-soon",
+            href: "/global-navigator",
           },
           {
             label: "Create Account Now",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/coming-soon",
+            href: "/auth/sign-up",
           },
         ]}
       />
@@ -612,7 +609,7 @@ const page = () => {
         }
         subheading="YPD Global Navigator™ isn’t just about applying abroad it’s about choosing the right path for who you are, what you value, and where you want to go."
         ctaText="SneakPeak View"
-        ctaHref="/start"
+        ctaHref="/"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq faqs={globalNavigatorFaqs} />
