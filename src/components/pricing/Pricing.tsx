@@ -3,7 +3,6 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 import PricingCard from "./PricingCard";
-import NoPlan from "./NoPlan";
 import { pricingData, BillingCycle, Plan, Currency } from "./prices";
 import { getPrice } from "@/lib/getPrice";
 
@@ -12,8 +11,12 @@ interface Props {
 }
 
 const PricingPage = ({ currency }: Props) => {
-  const [program, setProgram] = useState<string>("");
-  const [billing, setBilling] = useState<BillingCycle>("one-time");
+  // Set first product as default
+  const firstProductKey = Object.keys(pricingData)[0];
+  const [program, setProgram] = useState<string>(firstProductKey);
+  const [billing, setBilling] = useState<BillingCycle>(
+    firstProductKey ? pricingData[firstProductKey].billingTypes[0] : "one-time",
+  );
 
   const product = program ? pricingData[program] : null;
 
@@ -40,14 +43,13 @@ const PricingPage = ({ currency }: Props) => {
                 setProgram(selected);
 
                 if (selected) {
-                  // ✅ pick product’s first billing type automatically
+                  // ✅ pick product's first billing type automatically
                   const firstBilling = pricingData[selected].billingTypes[0];
                   setBilling(firstBilling);
                 }
               }}
               className="text-brand-gray w-full cursor-pointer appearance-none rounded-lg border border-gray-300 p-3 pr-10"
             >
-              <option>Select Program</option>
               {Object.keys(pricingData).map((key) => (
                 <option className="cursor-pointer" key={key} value={key}>
                   {key}
@@ -84,39 +86,35 @@ const PricingPage = ({ currency }: Props) => {
           </div>
         )}
 
-        {/* Pricing Cards OR Fallback */}
-        {program && availablePlans.length > 0 ? (
-          <div
-            className={`grid gap-4 sm:mt-6 sm:gap-6 ${
-              availablePlans.length === 1
-                ? "grid-cols-1 justify-center"
-                : availablePlans.length === 2
-                  ? "w-full max-w-6xl grid-cols-1 justify-center sm:grid-cols-2"
-                  : "w-full max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-            }`}
-          >
-            {availablePlans.map((plan, i) => (
-              <PricingCard
-                key={i}
-                title={plan.title}
-                description={plan.description}
-                price={getPrice(plan, currency)}
-                currency={currency}
-                period={
-                  billing === "monthly"
-                    ? "month"
-                    : billing === "annually"
-                      ? "year"
-                      : undefined
-                }
-                highlight={plan.highlight}
-                features={plan.features}
-              />
-            ))}
-          </div>
-        ) : (
-          <NoPlan />
-        )}
+        {/* Pricing Cards */}
+        <div
+          className={`grid gap-4 sm:mt-6 sm:gap-6 ${
+            availablePlans.length === 1
+              ? "grid-cols-1 justify-center"
+              : availablePlans.length === 2
+                ? "w-full max-w-6xl grid-cols-1 justify-center sm:grid-cols-2"
+                : "w-full max-w-6xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          }`}
+        >
+          {availablePlans.map((plan, i) => (
+            <PricingCard
+              key={i}
+              title={plan.title}
+              description={plan.description}
+              price={getPrice(plan, currency)}
+              currency={currency}
+              period={
+                billing === "monthly"
+                  ? "month"
+                  : billing === "annually"
+                    ? "year"
+                    : undefined
+              }
+              highlight={plan.highlight}
+              features={plan.features}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

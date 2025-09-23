@@ -104,7 +104,7 @@ const page = () => {
         imageSrc="/careers/hero.png"
         imageAlt="Youth Pulse Digital"
         ctaLabel="View Open Positions"
-        ctaHref="/coming-soon"
+        ctaHref="/careers#jobs"
         ctaIcon={<ScanEye className="h-5 w-5 sm:h-6 sm:w-6" />}
       />
       <CvpFeature
