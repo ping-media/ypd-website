@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import ProgramCard from "./ProgramCard";
 import Link from "next/link";
+import { BASE_URL } from "@/lib/url";
 
 const programsData = [
   {
@@ -21,7 +22,7 @@ const programsData = [
       "A self-paced experience to discover career inclinations, build early self-awareness, and align choices without pressure. Ideal for high school clarity & parent alignment.",
     image: "/lite.png",
     buttonText: "Start CVP Lite",
-    buttonLink: "/coming-soon",
+    buttonLink: "/cvp-lite",
     icon: GraduationCap,
     buttonIcon: GraduationCap,
   },
@@ -32,7 +33,7 @@ const programsData = [
       "Mentor-led guidance, deep assessments, skill mapping, and career alignment tools for students building toward internships or early direction clarity.",
     image: "/advance.png",
     buttonText: "Start CVP Advance",
-    buttonLink: "/coming-soon",
+    buttonLink: "/cvp-advance",
     icon: Rocket,
     buttonIcon: Compass,
   },
@@ -43,7 +44,7 @@ const programsData = [
       "Whether you're exploring streams or deciding between placements and higher studies — CareerVerse™ meets you where you are, and guides you forward with confidence.",
     image: "/professional.png",
     buttonText: "Start CareerVerse™",
-    buttonLink: "/coming-soon",
+    buttonLink: "/careerverse",
     icon: Briefcase,
     buttonIcon: Target,
   },
@@ -54,7 +55,7 @@ const programsData = [
       "For those at a pivot point — leverage the Reinvention Framework™ to reassess your value, reposition your skillset, and relaunch into a more aligned future role.",
     image: "/reinvention.png",
     buttonText: "Start CRP",
-    buttonLink: "/coming-soon",
+    buttonLink: "/career-reinvention",
     icon: RefreshCw,
     buttonIcon: RefreshCw,
   },
@@ -119,7 +120,7 @@ export default function Programs() {
                   {activeProgram.description}
                 </p>
                 <Link
-                  href={activeProgram.buttonLink}
+                  href={`${BASE_URL}${activeProgram.buttonLink}`}
                   className="btn-primary btn-size mt-2 flex cursor-pointer items-center justify-center gap-2"
                 >
                   {ButtonIcon && <ButtonIcon size={24} />}

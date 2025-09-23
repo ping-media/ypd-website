@@ -5,6 +5,7 @@ import Image from "next/image";
 import NavLinks from "@/components/other/navbar/Navlinks";
 import { X, ChevronDown, ChevronRight, AlignJustify, User } from "lucide-react";
 import Link from "next/link";
+import { BASE_URL } from "@/lib/url";
 
 const Links = [
   { name: "Home", href: "/" },
@@ -145,7 +146,7 @@ const Navbar = () => {
           {/* Sign-up button */}
           <div className="hidden flex-1 justify-end sm:flex">
             <Link
-              href="/coming-soon"
+              href={`${BASE_URL}/auth/sign-up`}
               className="btn-primary btn-size space-x-0.5 capitalize sm:px-4 lg:text-base"
             >
               <span className="whitespace-nowrap">
@@ -220,7 +221,7 @@ const Navbar = () => {
                               {item.name}
                               <ChevronRight
                                 size={16}
-                                className={`transition-transform ${
+                                className={`transit ion-transform ${
                                   openSubDropdown === item.name
                                     ? "rotate-90"
                                     : ""
@@ -270,7 +271,7 @@ const Navbar = () => {
 
           <div className="hidden pt-4 max-sm:block">
             <Link
-              href="/coming-soon"
+              href={`${BASE_URL}/auth/sign-up`}
               className="btn-primary btn-size block w-full text-center uppercase"
               onClick={() => setMobileOpen(false)}
             >

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { UserRound } from "lucide-react";
 import Image from "next/image";
+import { BASE_URL } from "@/lib/url";
 
 const Seperate = () => {
   return (
@@ -24,7 +25,7 @@ const Seperate = () => {
 
         {/* Button */}
         <div className="flex w-full justify-start lg:w-auto">
-          <Link href="/coming-soon" className="text-lato btn-primary btn-size">
+          <Link href={BASE_URL} className="text-lato btn-primary btn-size">
             <UserRound size={24} />
             <span>Start My Personalized Path</span>
           </Link>
