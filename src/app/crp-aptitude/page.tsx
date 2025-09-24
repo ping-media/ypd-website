@@ -385,7 +385,7 @@ const page = () => {
           </>
         }
         buttonText="Start Free"
-        buttonLink="/coming-soon"
+        buttonLink="/crp-aptitude"
         secondaryButtonLink="/crp-aptitude/#works"
         secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
@@ -401,14 +401,14 @@ const page = () => {
         heading="Key Features That Empower Your Career Decisions"
         features={features}
         ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        ctaLink="/crp-aptitude"
       />
       <CvpLiteWorks
         heading="Who Can Use Aptitude Trainer?"
         subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/crp-aptitude"
       />
       {/* hidden as per req */}
       {/* <CvpInside
@@ -479,7 +479,7 @@ const page = () => {
           "Revisit, retest & track improvement anytime",
         ]}
         ctaText="Try Aptitude Trainer"
-        ctaLink="/coming-soon"
+        ctaLink="/crp-aptitude"
       />
       <CvpJourney
         heading="Built by Industry Psychologists, Skill Experts, and AI Architects"
@@ -488,7 +488,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start Aptitude Trainer"
-        ctaHref="/start"
+        ctaHref="/crp-aptitude"
         ctaIcon={<Zap size={18} />}
       />
       {/* hidden as per req */}
@@ -546,7 +546,7 @@ const page = () => {
         }
         subheading="The world is changing fast. Don’t wait to be left behind. Take control of your learning, your career, and your future."
         ctaText="Get Started Now "
-        ctaHref="/start"
+        ctaHref="/crp-aptitude"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpSecurity />

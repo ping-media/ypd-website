@@ -399,7 +399,7 @@ const page = () => {
           "For first-job seekers, career re-starters & freelancers",
         ]}
         buttonText="Start Free"
-        buttonLink="/coming-soon"
+        buttonLink="/career-reboot"
         secondaryButtonText="See How It Works"
         secondaryButtonLink="/career-reboot/#work"
         image="/career-reboot/hero.png"
@@ -424,7 +424,7 @@ const page = () => {
         subheading="Youth Pulse Digital™ believes that career clarity is not just a goal — it’s a guided evolution."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/career-reboot"
         ctaSubtext="Hindi + Simple English  • Mobile Friendly  • Voice-guided Mentoring Coming Soon"
       />
       <CrSteps
@@ -489,13 +489,15 @@ const page = () => {
             label: "Simulate Your Future Career ",
             icon: <Zap size={18} />,
             variant: "primary",
-            href: "/coming-soon",
+            href: "/career-reboot",
+            external: true,
           },
           {
             label: "Request a Demo",
             icon: <UserPlus size={18} />,
             variant: "outline",
-            href: "/coming-soon",
+            href: "/contact",
+            external: false,
           },
         ]}
       />
@@ -509,7 +511,7 @@ const page = () => {
         }
         subheading="Works on all browsers | No app download needed"
         ctaText="Start Your Career Reboot"
-        ctaHref="/start"
+        ctaHref="/career-reboot"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpJourney
@@ -519,7 +521,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start Reboot Navigator™"
-        ctaHref="/start"
+        ctaHref="/career-reboot"
         ctaIcon={<Zap size={18} />}
         footerText="Try our Reboot Navigator™ a 7-day intensive to design your next career chapter with clarity and confidence."
       />

@@ -403,7 +403,7 @@ const page = () => {
           </>
         }
         buttonText="Start Free"
-        buttonLink="/coming-soon"
+        buttonLink="/reinvention-guru"
         secondaryButtonLink="/reinvention-guru/#works"
         secondaryButtonText="See How It Works"
         image="/career-reboot/hero.png"
@@ -419,14 +419,14 @@ const page = () => {
         heading="Key Features That Empower Your Reinvention"
         features={features}
         ctaText="Start Your Reinvention Now"
-        ctaLink="/coming-soon"
+        ctaLink="/reinvention-guru"
       />
       <CvpLiteWorks
         heading="Who Can Use Reinvention Guru™?"
         subheading="Youth Pulse Digital™ believes that understanding your aptitudes is not just about tests — it’s about building real skills that shape your future."
         audience={audience}
         ctaText="Start Your Journey Today"
-        ctaLink="/coming-soon"
+        ctaLink="/reinvention-guru"
       />
       {/* hidden as per req */}
       {/* <CvpInside
@@ -495,7 +495,7 @@ const page = () => {
           "No peers watching, no bias, no judgment; growth happens at your own pace",
         ]}
         ctaText="Try Reinvention Guru™"
-        ctaLink="/coming-soon"
+        ctaLink="/reinvention-guru"
       />
       <CvpJourney
         heading="Built by Experts, Grounded in Real Workplaces"
@@ -504,7 +504,7 @@ const page = () => {
         imageSrc="/cvplite/journey.png"
         imageAlt="CVP Journey"
         ctaText="Start with Reinvention Guru™"
-        ctaHref="/start"
+        ctaHref="/reinvention-guru"
         ctaIcon={<Zap size={18} />}
       />
       {/* hidden as per req */}
@@ -562,7 +562,7 @@ const page = () => {
         }
         subheading="Don’t get left behind in a fast-changing workplace. Reinvention Guru™ gives you a secure, step-locked journey to build employability skills, critical thinking, and innovative mindset — all at your own pace."
         ctaText="Get Started Now "
-        ctaHref="/start"
+        ctaHref="/reinvention-guru"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <CvpSecurity />
