@@ -410,7 +410,7 @@ const page = () => {
       <CvpPricing
         currency="INR"
         heading="Pricing & Access"
-        subheading="Innovation that feels premium, priced for you."
+        subheading="Innovation that feels premium, made affordable for you."
         plans={careerVersePricing.plans["one-time"] ?? []}
         footerText="Institutional Pricing Available. Please"
         footerLink={{ text: "Contact Us", href: "/contact" }}

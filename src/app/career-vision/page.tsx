@@ -13,7 +13,7 @@ import {
   Compass,
   GraduationCap,
   Handshake,
-  Shield,
+  // Shield,
   Users,
   Zap,
 } from "lucide-react";

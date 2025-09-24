@@ -128,7 +128,7 @@ export const pricingData: Record<string, ProductPricing> = {
           title: "Pro",
           description: "Best for focused Role Experience",
           price: {
-            INR: "₹1999",
+            INR: "₹1499",
             AED: "259.00",
           },
           features: [
@@ -147,7 +147,7 @@ export const pricingData: Record<string, ProductPricing> = {
           title: "Premium",
           description: "Best for alternate Role Experience",
           price: {
-            INR: "₹3999",
+            INR: "₹2499",
             AED: "479.00",
           },
           features: [
