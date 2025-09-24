@@ -9,7 +9,7 @@ interface ButtonProps {
   icon?: ReactNode;
   variant?: "primary" | "outline";
   href: string;
-  external: boolean;
+  external?: boolean;
 }
 
 interface CvpCtaProps {
@@ -110,7 +110,9 @@ export default function CvpCta({
         <div className="mt-4 flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:items-stretch">
           {buttons.map((btn, index) => (
             <Link
-              href={btn.external ? `${BASE_URL}${btn.href}` : btn.href}
+              href={
+                (btn.external ?? true) ? `${BASE_URL}${btn.href}` : btn.href
+              }
               key={index}
               className={`btn-size flex cursor-pointer items-center justify-center gap-2 px-4 py-2 font-medium whitespace-nowrap ${
                 btn.variant === "primary"

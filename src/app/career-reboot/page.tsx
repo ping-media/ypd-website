@@ -490,7 +490,6 @@ const page = () => {
             icon: <Zap size={18} />,
             variant: "primary",
             href: "/career-reboot",
-            external: true,
           },
           {
             label: "Request a Demo",
