@@ -9,7 +9,7 @@ import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import Tables from "@/components/mission-nda/Tables";
@@ -548,7 +548,8 @@ const page = () => {
           },
         ]}
       />
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"

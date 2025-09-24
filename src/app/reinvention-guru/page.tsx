@@ -9,7 +9,7 @@ import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -142,41 +142,41 @@ const steps = [
 const audience = [
   {
     id: 1,
-    title: "Students building future-ready skills",
+    title: "Career Switchers",
     description:
-      "Strengthen problem-solving, decision-making, and self-awareness to prepare for higher studies and career choices.",
+      "For professionals moving across industries — guided by themes like Bias Awareness and Critical Thinking to reframe old assumptions.",
     icon: "/cvplite/r1.svg",
     image: "/crp-aptitude/1.png",
   },
   {
     id: 2,
-    title: "Early professionals shaping careers",
+    title: "Mid-Career Stagnators",
     description:
-      "Discover your core aptitudes, map them to workplace roles, and gain confidence in adaptability and communication.",
+      "For those stuck in repetitive roles — using Strategic Thinking and Innovation themes to unlock growth.",
     icon: "/cvplite/r2.svg",
     image: "/crp-aptitude/2.png",
   },
   {
     id: 3,
-    title: "People returning to work after a breaks",
+    title: "Burnout Recovery Professionals",
     description:
-      "Rebuild confidence with structured sessions that highlight transferable skills and new opportunities.",
+      "For individuals drained by toxic work cultures — entering through themes like Productivity Bias and Decision Fatigue to rebuild clarity.",
     icon: "/cvplite/r3.svg",
     image: "/crp-aptitude/3.png",
   },
   {
     id: 4,
-    title: "Team leaders and aspiring managers",
+    title: "Workforce Returnees",
     description:
-      "Sharpen leadership, critical thinking, and ownership through targeted exercises for career growth.",
+      "For those re-entering after a career break — starting with Organization & Ownership to restore confidence and role readiness.",
     icon: "/cvplite/r5.svg",
     image: "/crp-aptitude/4.png",
   },
   {
     id: 5,
-    title: " Anyone seeking role clarity and growth",
+    title: "Freelancers & Aspiring Leaders",
     description:
-      "Go beyond certifications to uncover what drives you — and align it with future-ready career paths.",
+      "For independent workers and team leads — focusing on Communication, Leadership, and Industry Role alignment to scale impact.",
     icon: "/cvplite/r4.svg",
     image: "/crp-aptitude/5.png",
   },
@@ -565,7 +565,8 @@ const page = () => {
         ctaHref="/reinvention-guru"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <CvpFeedback reviews={ReviewsData} />
       <Faq faqs={reinventionGuruFaqs} imglink="/faq1.png" />
     </>

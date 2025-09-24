@@ -1,4 +1,4 @@
-import CvpCta from "@/components/cvp/CvpCta";
+// import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
 import CvpHero from "@/components/cvp/CvpHero";
@@ -9,12 +9,13 @@ import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 // import WhyCvpLite from "@/components/cvp/WhyCvpLite";
 import Faq from "@/components/other/Faq";
-import { Zap, ArrowRight, UserPlus } from "lucide-react";
+import { Zap, ArrowRight } from "lucide-react";
+// import { UserPlus } from "lucide-react";
 import { FileText, Layers, BarChart3, Brain } from "lucide-react";
 // import { Lightbulb, Compass, File, GraduationCap } from "lucide-react";
 import { pricingData } from "@/components/pricing/prices";
@@ -502,7 +503,8 @@ const page = () => {
           alt: "Student and parent smiling",
         }}
       />
-      <CvpCta
+      {/* hidden */}
+      {/* <CvpCta
         heading="Start Your Career Vision Journey"
         subheading="You’ve reflected. You’re ready."
         description="Now it’s time to unlock your personalized career vision and take your first step into a future built with clarity, confidence, and purpose."
@@ -520,8 +522,9 @@ const page = () => {
             href: "/auth/sign-up",
           },
         ]}
-      />
-      <CvpSecurity />
+      /> */}
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <CvpFeedback reviews={ReviewsData} />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"

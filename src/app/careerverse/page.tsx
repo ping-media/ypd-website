@@ -5,7 +5,7 @@ import CvpImpact from "@/components/cvp/CvpImpact";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 // import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -426,7 +426,8 @@ const page = () => {
       {/*  */}
       {/* SECTION TO ADD (STILL CURIOUS?) */}
       {/*  */}
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <CvpImpact
         heading="Real Impact, Real Results"
         description="CareerVerse™ isn’t about information — it’s about transformation. Built for Indian students to step into the real world of careers before making decisions that shape their future."

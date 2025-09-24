@@ -209,58 +209,58 @@ const featureSections = [
       },
     ],
   },
-  {
-    sectionTitle: "Exam Mentors",
-    items: [
-      {
-        icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
-        title: "CBSE 10th Mentor",
-        subtitle: "Grade 10 | Subject Mastery",
-        features: ["Focused guidance", "Exam strategies"],
-        ctaText: "Join Now",
-        href: "/cbse-10",
-      },
-      {
-        icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
-        title: "CBSE 12th Mentor",
-        subtitle: "Grade 12 | Subject Mastery",
-        features: ["Stream-specific support", "Exam prep roadmaps"],
-        ctaText: "Join Now",
-        href: "/cbse-12",
-      },
-    ],
-  },
-  {
-    sectionTitle: "Entrance Mentors",
-    items: [
-      {
-        icon: <Shield className="text-brand-primary h-12 w-12" />,
-        title: "Mission SSB™",
-        subtitle: "Grade 11–12 | Subscription",
-        features: [
-          "Written Exam Preparation",
-          "Officer-Like Qualities DNA",
-          "Real SSB Simulation",
-          "Mindset + Response Conditioning",
-          "Dynamic Progress-Based Preparation",
-        ],
-        ctaText: "Subscribe Now",
-        href: "/mission-ssb",
-      },
-      {
-        icon: <Shield className="text-brand-primary h-12 w-12" />,
-        title: "UPSC Mentor",
-        subtitle: "Post UG | Civil Services",
-        features: [
-          "UPSC prep structure",
-          "Answer writing",
-          "Strategy coaching",
-        ],
-        ctaText: "Join Now",
-        href: "/upsc-mentor",
-      },
-    ],
-  },
+  // {
+  //   sectionTitle: "Exam Mentors",
+  //   items: [
+  //     {
+  //       icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
+  //       title: "CBSE 10th Mentor",
+  //       subtitle: "Grade 10 | Subject Mastery",
+  //       features: ["Focused guidance", "Exam strategies"],
+  //       ctaText: "Join Now",
+  //       href: "/cbse-10",
+  //     },
+  //     {
+  //       icon: <BookOpenCheck className="text-brand-primary h-12 w-12" />,
+  //       title: "CBSE 12th Mentor",
+  //       subtitle: "Grade 12 | Subject Mastery",
+  //       features: ["Stream-specific support", "Exam prep roadmaps"],
+  //       ctaText: "Join Now",
+  //       href: "/cbse-12",
+  //     },
+  //   ],
+  // },
+  // {
+  //   sectionTitle: "Entrance Mentors",
+  //   items: [
+  //     {
+  //       icon: <Shield className="text-brand-primary h-12 w-12" />,
+  //       title: "Mission SSB™",
+  //       subtitle: "Grade 11–12 | Subscription",
+  //       features: [
+  //         "Written Exam Preparation",
+  //         "Officer-Like Qualities DNA",
+  //         "Real SSB Simulation",
+  //         "Mindset + Response Conditioning",
+  //         "Dynamic Progress-Based Preparation",
+  //       ],
+  //       ctaText: "Subscribe Now",
+  //       href: "/mission-ssb",
+  //     },
+  //     {
+  //       icon: <Shield className="text-brand-primary h-12 w-12" />,
+  //       title: "UPSC Mentor",
+  //       subtitle: "Post UG | Civil Services",
+  //       features: [
+  //         "UPSC prep structure",
+  //         "Answer writing",
+  //         "Strategy coaching",
+  //       ],
+  //       ctaText: "Join Now",
+  //       href: "/upsc-mentor",
+  //     },
+  //   ],
+  // },
   {
     sectionTitle: "Counseling Mentors",
     items: [

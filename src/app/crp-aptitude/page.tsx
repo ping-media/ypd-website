@@ -9,7 +9,7 @@ import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -549,7 +549,8 @@ const page = () => {
         ctaHref="/crp-aptitude"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <CvpFeedback reviews={ReviewsData} />
       <Faq faqs={crpaptitudefaqs} imglink="/faq1.png" />
     </>

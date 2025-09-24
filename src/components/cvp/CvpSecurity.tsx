@@ -10,48 +10,48 @@ interface SecurityItem {
 
 const items: SecurityItem[] = [
   {
-    icon: "/cvplite/1.png",
-    title: "Soc 2 Certified",
-    desc: "Independently Audited for top-tier Security and Privacy",
+    icon: "/cvplite/2.png",
+    title: "GDPR-Aligned Privacy",
+    desc: "Built to respect global student/parent data rights.",
   },
   {
-    icon: "/cvplite/2.png",
-    title: "GDPR Compliance",
-    desc: "Privacy built to meet EU regulations",
+    icon: "/cvplite/1.png",
+    title: "SOC2 Certified",
+    desc: "Enterprise-grade security trusted by schools & partners.",
   },
   {
     icon: "/cvplite/3.png",
-    title: "HIPAA Compliant",
-    desc: "Complete protection for healthcare organizations",
+    title: "COPPA-Inspired Student Safety",
+    desc: "Aligned with child & student data protection best practices.",
   },
   {
     icon: "/cvplite/4.png",
-    title: "PCI-DSS Certified",
-    desc: "Process your Payment Certified to Securely handle and information.",
+    title: "Controlled Data Access",
+    desc: "Users decide what to share.",
   },
   {
     icon: (
       <ShieldCheck className="text-brand-primary h-8 w-8 sm:h-10 sm:w-10" />
     ),
-    title: "Access & Permission",
-    desc: "Control Who gets access with robust permission and two factor authentication",
+    title: " Encryption Everywhere",
+    desc: "All reports and sessions encrypted in transit & at rest.",
   },
   {
     icon: <Lock className="text-brand-primary h-8 w-8 sm:h-10 sm:w-10" />,
-    title: "Encryption Everywhere",
-    desc: "Your data is encrypted in transit and reset.",
+    title: "Ethical AI Framework",
+    desc: "Transparent, bias-checked, and clone-proof insights.",
   },
   {
     icon: (
       <BrainCircuit className="text-brand-primary h-8 w-8 sm:h-10 sm:w-10" />
     ),
-    title: "Proprietary AI",
-    desc: "Complete protection for healthcare organizations",
+    title: "No Ads, No Hidden Tracking",
+    desc: "YPD platforms are ad-free, with zero third-party tracking.",
   },
   {
     icon: <Database className="text-brand-primary h-8 w-8 sm:h-10 sm:w-10" />,
-    title: "Data Storage",
-    desc: "AWS Encrypted Servers",
+    title: "Data Stored in India (with Global Redundancy)",
+    desc: "Primary data hosted on secure, encrypted servers in India with global backups",
   },
 ];
 

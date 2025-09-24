@@ -431,7 +431,7 @@ const page = () => {
         description="Now it’s time to unlock your personalized career vision and take your first step into a future built with clarity, confidence, and purpose."
         buttons={[
           {
-            label: "Unlock Full Access – ₹899",
+            label: "Unlock Full Access – ₹1299",
             icon: <Zap size={18} />,
             variant: "primary",
             href: "/cvp-lite",

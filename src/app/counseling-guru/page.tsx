@@ -1,4 +1,4 @@
-import Vs from "@/components/career-reboot/Vs";
+// import Vs from "@/components/career-reboot/Vs";
 import CvpCta from "@/components/cvp/CvpCta";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpFeedback from "@/components/cvp/CvpFeedback";
@@ -9,7 +9,7 @@ import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -379,7 +379,7 @@ const page = () => {
         footerText="Bulk Discounts for Colleges & NGOs. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
       />
-      <Vs
+      {/* <Vs
         heading="Counseling Guru™ vs Others"
         subheading="Because you shouldn't plan your career comeback based on guesswork or generic advice."
         leftTitle="Feature"
@@ -420,7 +420,7 @@ const page = () => {
         ]}
         ctaText="Try Counseling Guru™"
         ctaLink="/counseling-guru"
-      />
+      /> */}
       <CvpImpact
         heading="Real Impact, Real Results"
         description="Since its launch, Counseling Guru™ has guided students, parents, and professionals from Tier 1 to Tier 4 cities in India to make confident career and education choices—without jargon, pressure, or guesswork."
@@ -495,7 +495,8 @@ const page = () => {
           },
         ]}
       />
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <Faq faqs={cgFaqs} />
     </>
   );

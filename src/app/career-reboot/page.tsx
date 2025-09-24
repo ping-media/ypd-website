@@ -10,7 +10,7 @@ import CvpJourney from "@/components/cvp/CvpJourney";
 import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
 import CvpPricing from "@/components/cvp/CvpPricing";
 import CvpRealworld from "@/components/cvp/CvpRealworld";
-import CvpSecurity from "@/components/cvp/CvpSecurity";
+// import CvpSecurity from "@/components/cvp/CvpSecurity";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import CvpVideo from "@/components/cvp/CvpVideo";
 // import WhyCvpLite from "@/components/cvp/WhyCvpLite";
@@ -522,7 +522,6 @@ const page = () => {
         ctaText="Start Reboot Navigator™"
         ctaHref="/career-reboot"
         ctaIcon={<Zap size={18} />}
-        footerText="Try our Reboot Navigator™ a 7-day intensive to design your next career chapter with clarity and confidence."
       />
       <CvpRealworld
         heading="Real World Use Cases"
@@ -626,7 +625,8 @@ const page = () => {
           alt: "Student and parent smiling",
         }}
       />
-      <CvpSecurity />
+      {/* removed */}
+      {/* <CvpSecurity /> */}
       <Faq faqs={crFaqs} imglink="/faq1.png" />
     </>
   );

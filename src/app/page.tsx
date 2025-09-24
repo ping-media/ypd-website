@@ -7,13 +7,13 @@ import Hero from "@/components/other/hero/Hero";
 import Impact from "@/components/other/impact/Impact";
 import Partners from "@/components/other/partners/Partners";
 import Offering from "@/components/other/offerings/Offering";
-import Program from "@/components/other/programs/Programs";
+// import Program from "@/components/other/programs/Programs";
 import CvpSteps from "@/components/other/steps/CvpSteps";
 import UniquePedagogy from "@/components/other/unique/UniquePedagogy";
 import Accreditation from "@/components/other/accredits/Accreditation";
 import Growth from "@/components/other/growth/Growth";
 import Empower from "@/components/other/empower/Empower";
-import Personalise from "@/components/other/personalise/Personalise";
+// import Personalise from "@/components/other/personalise/Personalise";
 import Seperate from "@/components/other/Seperate";
 // import News from "@/components/other/news/News";
 import RelatedBlogs from "@/components/other/blogs/RelatedBlogs";
@@ -22,6 +22,7 @@ import Seperate2 from "@/components/other/Seperate2";
 // import Brands from "@/components/other/Brands";
 import VideoPreview from "@/components/other/VideoPreview";
 import Faq from "@/components/other/Faq";
+import CvpSecurity from "@/components/cvp/CvpSecurity";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
       <Clarity />
       <Benchmark />
       <UniquePedagogy />
-      <Program />
+      {/* <Program /> hidden */}
       <Offering />
       <CvpSteps />
       <Decision />
@@ -42,10 +43,11 @@ export default function Home() {
       <Accreditation />
       <Growth />
       <Empower />
-      <Personalise />
+      {/* <Personalise /> hidden */}
       <Seperate />
       {/* <News /> */}
       <RelatedBlogs />
+      <CvpSecurity />
       {/* <Testimonials /> Removed */}
       <Seperate2 />
       {/* <Brands /> Hidden for now */}
