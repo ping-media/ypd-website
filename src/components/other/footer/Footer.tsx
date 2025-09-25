@@ -203,7 +203,7 @@ export default function Footer() {
             ]}
           />
           <FooterSectionAccordion
-            title="Businesses"
+            title="Corporate"
             links={[
               { label: "Admission Test", href: "/admission" },
               { label: "Hiring & Onboarding", href: "/hiring" },

@@ -39,7 +39,6 @@ const ContactUs = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
-    // Handle form submission here
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -52,7 +51,11 @@ const ContactUs = () => {
       const data = await res.json();
 
       if (data.success) {
-        alert("Message sent successfully!");
+        alert(
+          "🙏 Thank You for Connecting with Youth Pulse Digital™ \n\n" +
+            "✅Your Request Has Been Received.\n\n" +
+            "We’ve received your application / demo request and our team will connect with you within 48 hours to confirm the next steps.",
+        );
         form.reset();
       } else {
         alert("Failed to send message. Try again.");

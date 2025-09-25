@@ -448,7 +448,7 @@ const page = () => {
           "Structured Answer Templates, Daily Writing Feedback, Role-Aligned Notes",
           "One-on-One Mock Panels, Real-Time Feedback, Improvement Tracking",
         ]}
-        ctaText="Try UPSC Mentors™"
+        ctaText="Try UPSC Mentor™"
         ctaLink="/coming-soon"
       />
       <CvpInside
