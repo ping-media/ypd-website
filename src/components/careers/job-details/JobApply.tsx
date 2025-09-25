@@ -2,7 +2,7 @@ import CareersContactForm from "@/components/careers/CareersContactForm";
 
 export default function JobApply() {
   return (
-    <section className="bg-white">
+    <section id="job" className="bg-white">
       {/* Container is only applied for md+ screens */}
       <div className="w-full md:rounded-2xl md:border md:border-gray-200 md:bg-white md:p-6 md:shadow-sm md:sm:p-10">
         {/* Heading */}

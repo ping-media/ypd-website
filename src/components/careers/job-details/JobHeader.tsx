@@ -6,6 +6,7 @@ import {
   ShareIcon,
 } from "lucide-react";
 import { JobDetails } from "@/components/careers/jobs/jobData";
+import Link from "next/link";
 
 export default function JobHeader({ job }: { job: JobDetails }) {
   return (
@@ -37,9 +38,11 @@ export default function JobHeader({ job }: { job: JobDetails }) {
 
         {/* Right */}
         <div className="mt-2 flex items-center gap-2 sm:mt-0 sm:gap-3">
-          <button className="bg-brand-primary hover:bg-brand-primary/90 h-11 cursor-pointer rounded-lg border border-gray-300 px-5 text-sm font-medium whitespace-nowrap text-white transition-colors sm:text-base">
-            Apply Now
-          </button>
+          <Link href={`${job.slug}#job`}>
+            <button className="bg-brand-primary hover:bg-brand-primary/90 h-11 cursor-pointer rounded-lg border border-gray-300 px-5 text-sm font-medium whitespace-nowrap text-white transition-colors sm:text-base">
+              Apply Now
+            </button>
+          </Link>
           <button className="flex h-11 w-11 items-center justify-center rounded-lg border border-gray-300 transition-colors hover:bg-gray-50">
             <BookmarkIcon className="text-brand-gray h-6 w-6 cursor-pointer" />
           </button>
