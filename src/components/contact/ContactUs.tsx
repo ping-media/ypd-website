@@ -17,7 +17,7 @@ import * as z from "zod";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
-  lastName: z.string().optional(),
+  lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(1, "Subject is required"),
   message: z.string().min(1, "Message is required"),
@@ -37,9 +37,30 @@ const ContactUs = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     console.log(values);
     // Handle form submission here
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+        form.reset();
+      } else {
+        alert("Failed to send message. Try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong.");
+    }
   };
 
   return (

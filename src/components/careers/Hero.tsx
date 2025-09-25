@@ -40,7 +40,7 @@ export default function Hero({
         </div>
 
         {/* Hero Image */}
-        <div className="relative h-[320px] w-full overflow-hidden rounded-3xl shadow-md sm:h-[420px] lg:h-[500px]">
+        <div className="relative h-[320px] w-full max-w-7xl overflow-hidden rounded-3xl shadow-md sm:h-[420px] lg:h-[500px]">
           <Image
             src={imageSrc}
             alt={imageAlt}
