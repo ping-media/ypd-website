@@ -46,7 +46,11 @@ export default function Step4({ register, control }: Step4Props) {
                 "Not Comfortable",
               ].map((opt) => (
                 <div key={opt} className="flex items-center gap-2">
-                  <RadioGroupItem value={opt} id={opt} />
+                  <RadioGroupItem
+                    value={opt}
+                    id={opt}
+                    className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-accent cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+                  />
                   <Label htmlFor={opt} className="cursor-pointer">
                     {opt}
                   </Label>
@@ -64,10 +68,10 @@ export default function Step4({ register, control }: Step4Props) {
           control={control}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2">
+              <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
               </SelectContent>
@@ -83,10 +87,10 @@ export default function Step4({ register, control }: Step4Props) {
           control={control}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2">
+              <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Select Hours" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="cursor-pointer">
                 <SelectItem value="12">12 hrs</SelectItem>
                 <SelectItem value="15">15 hrs</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
@@ -103,10 +107,10 @@ export default function Step4({ register, control }: Step4Props) {
           control={control}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2">
+              <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Remote / Hybrid / In-Person" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="cursor-pointer">
                 <SelectItem value="Remote">Remote</SelectItem>
                 <SelectItem value="Hybrid">Hybrid</SelectItem>
                 <SelectItem value="In-Person">In-Person</SelectItem>

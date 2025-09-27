@@ -33,7 +33,7 @@ export default function Step3({ register, control }: Step3Props) {
                 />
               )}
             />
-            <span>{subj}</span>
+            <span className="cursor-pointer">{subj}</span>
           </div>
         ))}
       </div>
@@ -44,10 +44,10 @@ export default function Step3({ register, control }: Step3Props) {
         control={control}
         render={({ field }) => (
           <Select onValueChange={field.onChange} value={field.value}>
-            <SelectTrigger className="mt-2">
+            <SelectTrigger className="mt-2 cursor-pointer">
               <SelectValue placeholder="Select Industry" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent className="cursor-pointer">
               {[
                 "IT",
                 "Healthcare",
@@ -79,7 +79,7 @@ export default function Step3({ register, control }: Step3Props) {
                 />
               )}
             />
-            <span>{skill}</span>
+            <span className="cursor-pointer">{skill}</span>
           </div>
         ))}
       </div>
@@ -99,7 +99,7 @@ export default function Step3({ register, control }: Step3Props) {
                 />
               )}
             />
-            <span>{grade}</span>
+            <span className="cursor-pointer">{grade}</span>
           </div>
         ))}
       </div>

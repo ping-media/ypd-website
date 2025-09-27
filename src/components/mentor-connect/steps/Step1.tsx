@@ -17,37 +17,67 @@ interface Step1Props {
 export default function Step1({ register }: Step1Props) {
   return (
     <div className="space-y-4">
-      <Label>Full Name</Label>
-      <Input {...register("fullName")} placeholder="John Doe" />
+      <div>
+        <Label>Full Name</Label>
+        <Input
+          {...register("fullName")}
+          placeholder="John Doe"
+          className="mt-2"
+        />
+      </div>
 
-      <Label>Gender</Label>
-      <Select {...register("gender")}>
-        <SelectTrigger>
-          <SelectValue placeholder="Select Gender" />
-        </SelectTrigger>
-        <SelectContent>
-          {["Male", "Female"].map((g) => (
-            <SelectItem key={g} value={g}>
-              {g}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
+      <div>
+        <Label>Gender</Label>
+        <Select {...register("gender")}>
+          <SelectTrigger className="mt-2 cursor-pointer">
+            <SelectValue placeholder="Select Gender" />
+          </SelectTrigger>
+          <SelectContent>
+            {["Male", "Female"].map((g) => (
+              <SelectItem key={g} value={g}>
+                {g}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
 
-      <Label>Date of Birth</Label>
-      <Input type="date" {...register("dob")} />
+      <div>
+        <Label>Date of Birth</Label>
+        <Input
+          type="date"
+          {...register("dob")}
+          className="mt-2 cursor-pointer"
+        />
+      </div>
 
-      <Label>Contact Number</Label>
-      <Input type="tel" {...register("contact")} />
+      <div>
+        <Label>Contact Number</Label>
+        <Input type="tel" {...register("contact")} className="mt-2" />
+      </div>
 
-      <Label>Email Address</Label>
-      <Input type="email" {...register("email")} />
+      <div>
+        <Label>Email Address</Label>
+        <Input type="email" {...register("email")} className="mt-2" />
+      </div>
 
-      <Label>Current Location</Label>
-      <Input {...register("location")} placeholder="City, Country" />
+      <div>
+        <Label>Current Location</Label>
+        <Input
+          {...register("location")}
+          placeholder="City, Country"
+          className="mt-2"
+        />
+      </div>
 
-      <Label>Nationality</Label>
-      <Input {...register("nationality")} placeholder="Country" />
+      <div>
+        <Label>Nationality</Label>
+        <Input
+          {...register("nationality")}
+          placeholder="Country"
+          className="mt-2"
+        />
+      </div>
     </div>
   );
 }

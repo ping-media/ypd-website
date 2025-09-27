@@ -155,14 +155,19 @@ export default function MentorForm({
 
           <DialogFooter className="mt-4 flex justify-between">
             {step > 1 && (
-              <Button variant="outline" type="button" onClick={prevStep}>
+              <Button
+                className="cursor-pointer"
+                variant="outline"
+                type="button"
+                onClick={prevStep}
+              >
                 Back
               </Button>
             )}
 
             {step < totalSteps ? (
               <Button
-                className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 border"
+                className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 cursor-pointer border"
                 type="button"
                 onClick={nextStep}
               >
@@ -170,7 +175,7 @@ export default function MentorForm({
               </Button>
             ) : (
               <Button
-                className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 border"
+                className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 cursor-pointer border"
                 type="submit"
               >
                 Submit Application

@@ -26,10 +26,10 @@ export default function Step5({ register, control }: Step5Props) {
           control={control}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2">
+              <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
               </SelectContent>
@@ -45,10 +45,10 @@ export default function Step5({ register, control }: Step5Props) {
           control={control}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2">
+              <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
               </SelectContent>
@@ -63,7 +63,7 @@ export default function Step5({ register, control }: Step5Props) {
           type="file"
           {...register("idProof")}
           accept=".pdf,.jpg,.png"
-          className="mt-2"
+          className="mt-2 cursor-pointer"
         />
       </div>
 
@@ -79,7 +79,10 @@ export default function Step5({ register, control }: Step5Props) {
                 onCheckedChange={field.onChange}
                 className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
               />
-              <Label htmlFor="declaration" className="text-sm leading-relaxed">
+              <Label
+                htmlFor="declaration"
+                className="cursor-pointer text-sm leading-relaxed"
+              >
                 I hereby declare that the information provided is true and
                 accurate. I understand that joining Mentor Connect requires
                 commitment to YPD's values, ethical use of AI, and
