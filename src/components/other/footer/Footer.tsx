@@ -198,8 +198,8 @@ export default function Footer() {
               // { label: "Reinvention Guru", href: "/reinvention-guru" },
               // { label: "Innovation Hub", href: "/innovation-hub" },
               // { label: "Pulse Nexus", href: "/pulse-nexus" },
-              { label: "Expert Connect", href: "/coming-soon" },
-              { label: "Book A Demo", href: "/coming-soon" },
+              { label: "Expert Connect", href: "/expert-connect" },
+              { label: "Book A Demo", href: "/book-demo" },
             ]}
           />
           <FooterSectionAccordion
@@ -208,10 +208,10 @@ export default function Footer() {
               { label: "Admission Test", href: "/admission" },
               { label: "Hiring & Onboarding", href: "/hiring" },
               { label: "School / Institute OS", href: "/school-os" },
-              { label: "Institute Connect", href: "/coming-soon" },
+              { label: "Institute Connect", href: "/institute-connect" },
               { label: "MSME Connect", href: "/coming-soon" },
               { label: "Corporate Connect", href: "/coming-soon" },
-              { label: "Govt Connect", href: "/coming-soon" },
+              { label: "Govt Connect", href: "/govt-connect" },
               { label: "Refund Policy", href: "/cancellation-refund" },
             ]}
           />

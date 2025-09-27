@@ -1,7 +1,7 @@
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
-import GetStartedModalTrigger from "@/components/mentor-connect/GetStartedModalTrigger";
+import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
 import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
 import {
@@ -39,55 +39,59 @@ const features = [
       "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
   },
 ];
-const mentorSteps = [
+const expertSteps = [
   {
     id: 1,
-    title: "Welcome & Orientation",
+    title: "Welcome Industry Leaders",
     description: [
-      "Join Youth Pulse Digital’s Mentor Connect program",
-      "Understand the vision: AI + Human mentorship, not traditional EdTech",
+      "Hear directly from YPD about the vision and purpose of Industry Expert Connect",
+      "Understand how your expertise helps bridge the employability gap for students",
+      "Learn how to guide students with practical insights and innovation mindset",
     ],
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Training & Tools",
+    title: "Your Role as an Industry Expert",
     description: [
-      "Get trained in AI-based mentorship & ethical AI use",
-      "Access YPD’s proprietary products, frameworks & resources",
-      "Receive device support (laptop/tablet) if required",
+      "Dedicate a few hours per month for live sessions/webinars",
+      "Share knowledge, trends, and stories from your industry",
+      "Interact with students in a real, relatable, and grounded way",
+      "Support learners in building critical thinking, problem solving & innovation skills",
     ],
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Mentorship Delivery",
+    title: "Training & Support from YPD",
     description: [
-      "Work with students (Grade 5 & above) across streams",
-      "Use guided mentorship journeys enriched with AI-driven tools",
-      "Focus on career exploration, skill-building & confidence growth",
+      "Receive training & orientation in AI-supported delivery and student engagement",
+      "Get access to YPD’s digital tools & platforms for seamless session delivery",
+      "Guidance in structuring your session for maximum student impact",
+      "Fair remuneration for each session delivered",
     ],
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Engagement & Commitment",
+    title: "Flexible Commitment",
     description: [
-      "Work flexibly 12–15 hours per week",
-      "Engage students through structured journeys",
-      "Operate under NDA for trust & IP protection",
+      "Contribute 2–4 hours per month for structured webinars or guest sessions",
+      "Sessions are virtual-first — participate from anywhere",
+      "Focus on impact over hours; your lived expertise benefits students most",
     ],
     icon: "/careerverse/s4.svg",
   },
   {
     id: 5,
-    title: "Impact & Growth",
+    title: "Why Join Expert Connect?",
     description: [
-      "Earn while delivering measurable student impact",
-      "Shape the future of critical thinking, problem solving & innovation",
-      "Join a community of educators & industry experts",
+      "Make a real difference for aspiring candidates at the grassroots level",
+      "Influence the next generation’s career choices with practical insights",
+      "Be part of a pioneering education movement blending industry and AI-powered learning",
+      "Gain recognition as a thought leader shaping India’s future workforce",
     ],
-    icon: "/careerverse/s2.svg",
+    icon: "/careerverse/s1.svg",
   },
 ];
 
@@ -95,11 +99,11 @@ const page = () => {
   return (
     <>
       <Hero
-        heading="Join the Future of Mentorship with Youth Pulse Digital"
-        subheading="Connect students with the right mentors, schedule sessions, track progress, and measure impact, all in one powerful platform."
+        heading="Become an Industry Expert with Youth Pulse Digital"
+        subheading="Share your real-world experience, guide students across grades 9–PG, conduct live sessions/webinars, and shape the next generation’s skills, mindset, and career choices."
         ctaComponent={<GetStartedModalTrigger />}
         secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/mentor-connect#works"
+        secondaryCtaHref="/expert-connect#works"
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
@@ -113,12 +117,12 @@ const page = () => {
       <CvpLiteSteps
         heading="Empower the Next Generation with Your Expertise"
         subheading="Collaborate with Youth Pulse Digital to guide students through hyper-personalized journeys that blend your expertise with AI innovation."
-        steps={mentorSteps}
+        steps={expertSteps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
-        path="M 1.7 12 L 1.7 32 Q 1.7 37 6.7 37 L 60 37 Q 65 37 65 42 L 65 65 Q 65 70 60 70 L 7 70 Q 2 70 1.7 75 L 1.7 83"
+        path="M 1.7 11 L 1.7 37 Q 1.7 40 4.7 40 L 62 40 Q 65 40 65 43 L 65 69 Q 65 72 62 72 L 4.7 72 Q 1.7 72 1.7 75 L 1.7 81"
       />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"

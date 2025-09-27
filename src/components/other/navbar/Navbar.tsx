@@ -47,7 +47,7 @@ const Links = [
           { name: "SpecialStars™", href: "/coming-soon" },
         ],
       },
-      { name: "Mentor Connect", href: "/coming-soon" },
+      { name: "Mentor Connect", href: "/mentor-connect" },
     ],
   },
   {
