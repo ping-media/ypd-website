@@ -85,7 +85,7 @@ export default function Step5({ register, control }: Step5Props) {
               >
                 I hereby declare that the information provided is true and
                 accurate. I understand that joining Mentor Connect requires
-                commitment to YPD's values, ethical use of AI, and
+                commitment to YPD&apos;s values, ethical use of AI, and
                 confidentiality standards.
               </Label>
             </div>
