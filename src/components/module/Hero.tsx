@@ -1,15 +1,26 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 
+// interface HeroProps {
+//   heading: string;
+//   subheading: string;
+//   ctaLabel: string;
+//   ctaHref: string;
+//   ctaIcon?: ReactNode;
+//   secondaryCtaLabel?: string;
+//   secondaryCtaHref?: string;
+//   secondaryCtaIcon?: ReactNode;
+// }
 interface HeroProps {
   heading: string;
   subheading: string;
-  ctaLabel: string;
-  ctaHref: string;
+  ctaLabel?: string;
+  ctaHref?: string;
   ctaIcon?: ReactNode;
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
   secondaryCtaIcon?: ReactNode;
+  ctaComponent?: ReactNode; // new prop
 }
 
 export default function Hero({
@@ -21,6 +32,7 @@ export default function Hero({
   secondaryCtaLabel,
   secondaryCtaHref,
   secondaryCtaIcon,
+  ctaComponent,
 }: HeroProps) {
   return (
     <section className="p flex justify-center bg-gradient-to-t from-green-50 to-white p-4 sm:p-10 lg:p-20">
@@ -37,10 +49,14 @@ export default function Hero({
 
         {/* CTA Buttons */}
         <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8">
-          <Link href={ctaHref} className="btn-primary btn-size">
-            {ctaIcon && <span className="mr-2">{ctaIcon}</span>}
-            {ctaLabel}
-          </Link>
+          {ctaComponent ? (
+            ctaComponent
+          ) : (
+            <Link href={ctaHref || "#"} className="btn-primary btn-size">
+              {ctaIcon && <span className="mr-2">{ctaIcon}</span>}
+              {ctaLabel}
+            </Link>
+          )}
 
           {secondaryCtaLabel && secondaryCtaHref && (
             <Link href={secondaryCtaHref} className="btn-size btn-transparent">
