@@ -111,8 +111,8 @@ const page = () => {
         ctaLink="/coming-soon"
       />
       <CvpLiteSteps
-        heading="Empower the Next Generation with Your Expertise"
-        subheading="Collaborate with Youth Pulse Digital to guide students through hyper-personalized journeys that blend your expertise with AI innovation."
+        heading="Inspire and Guide the Next Generation of Learners"
+        subheading="Join Youth Pulse Digital as a mentor to provide students with personalized guidance, career insights, and skill-building sessions that shape their future."
         steps={mentorSteps}
         images={{
           first: "/cvplite/cvplite1.png",

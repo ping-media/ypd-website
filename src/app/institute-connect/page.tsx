@@ -1,7 +1,7 @@
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
-import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
+import GetStartedModalTrigger from "@/components/institute-connect/GetStartedModalTrigger";
 import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
 import {
@@ -39,57 +39,56 @@ const features = [
       "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
   },
 ];
-const expertSteps = [
+const InstituteSteps = [
   {
     id: 1,
-    title: "Welcome Industry Leaders",
+    title: "Why Institute Connect?",
     description: [
-      "Hear directly from YPD about the vision and purpose of Industry Expert Connect",
-      "Understand how your expertise helps bridge the employability gap for students",
-      "Learn how to guide students with practical insights and innovation mindset",
+      "Small and mid-sized institutes face barriers like outdated methods, limited resources, and low exposure to AI.",
+      "YPD Institute Connect helps you adopt AI-powered tools, prepare students with future-ready skills, empower teachers, and stand out as an AI-forward institute.",
     ],
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Your Role as an Industry Expert",
+    title: "What YPD Offers Institutes",
     description: [
-      "Dedicate a few hours per month for live sessions/webinars",
-      "Share knowledge, trends, and stories from your industry",
-      "Interact with students in a real, relatable, and grounded way",
-      "Support learners in building critical thinking, problem solving & innovation skills",
+      "Access AI-driven learning and mentoring tools",
+      "Teacher training in AI-based pedagogy and ethical use",
+      "Custom Career Vision & Reinvention Programs",
+      "Support for real-world, experiential learning",
+      "Global opportunities for students to connect with mentors and industry experts",
     ],
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Training & Support from YPD",
+    title: "Who Can Join?",
     description: [
-      "Receive training & orientation in AI-supported delivery and student engagement",
-      "Get access to YPD’s digital tools & platforms for seamless session delivery",
-      "Guidance in structuring your session for maximum student impact",
-      "Fair remuneration for each session delivered",
+      "Small and mid-sized schools, colleges, and coaching centers",
+      "Institutes looking to differentiate themselves from traditional competitors",
+      "Leaders who want to embrace AI early and guide their faculty and students with confidence",
     ],
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Flexible Commitment",
+    title: "Commitment & Model",
     description: [
-      "Contribute 2–4 hours per month for structured webinars or guest sessions",
-      "Sessions are virtual-first — participate from anywhere",
-      "Focus on impact over hours; your lived expertise benefits students most",
+      "Flexible partnership models tailored to institute needs",
+      "Ongoing support from YPD’s academic and technical teams",
+      "Clear focus: build future-ready students and AI-ready institutions",
     ],
     icon: "/careerverse/s4.svg",
   },
   {
     id: 5,
-    title: "Why Join Expert Connect?",
+    title: "Why Partner with YPD?",
     description: [
-      "Make a real difference for aspiring candidates at the grassroots level",
-      "Influence the next generation’s career choices with practical insights",
-      "Be part of a pioneering education movement blending industry and AI-powered learning",
-      "Gain recognition as a thought leader shaping India’s future workforce",
+      "Be among the early adopters of AI-driven education",
+      "Deliver unique, student-centered mentorship journeys no one else offers",
+      "Build a reputation for innovation, impact, and employability outcomes",
+      "Join a network of forward-looking institutes across India and beyond",
     ],
     icon: "/careerverse/s1.svg",
   },
@@ -99,11 +98,11 @@ const page = () => {
   return (
     <>
       <Hero
-        heading="Become an Industry Expert with Youth Pulse Digital"
-        subheading="Share your real-world experience, guide students across grades 9–PG, conduct live sessions/webinars, and shape the next generation’s skills, mindset, and career choices."
+        heading="Revolutionize Learning with YPD Institute Connect"
+        subheading="Collaborate with schools and colleges to integrate AI-driven learning, guide students across grades, and equip them with critical skills, innovation mindset, and career readiness."
         ctaComponent={<GetStartedModalTrigger />}
         secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/expert-connect#works"
+        secondaryCtaHref="/institute-connect#works"
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
@@ -115,9 +114,9 @@ const page = () => {
         ctaLink="/coming-soon"
       />
       <CvpLiteSteps
-        heading="Shape the Future by Sharing Your Expertise"
-        subheading="Join Youth Pulse Digital to mentor students, conduct live sessions, and provide real-world guidance that equips learners with critical skills and career insights."
-        steps={expertSteps}
+        heading="Building Future-Ready Institutes with AI and Mentorship"
+        subheading="YPD Institute Connect empowers schools and colleges with AI-driven learning tools, teacher training, and industry mentorship to prepare students with critical future skills."
+        steps={InstituteSteps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",

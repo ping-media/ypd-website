@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Control, UseFormRegister } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -11,53 +11,43 @@ import {
   DialogTitle,
   DialogClose,
 } from "@/components/ui/dialog";
+
+// Steps
 import Step1 from "./steps/Step1";
 import Step2 from "./steps/Step2";
 import Step3 from "./steps/Step3";
-import Step4 from "./steps/Step4";
-import Step5 from "./steps/Step5";
 
-// Form Data interface
+// --- Form Data Interface ---
 export interface FormData {
+  // Section 1: Organization Details
+  organizationName: string;
+  organizationType: string;
+  location: string;
+  website?: string;
+
+  // Section 2: Contact Person
   fullName: string;
-  gender: string;
+  designation: string;
   contactNumber: string;
   emailAddress: string;
-  location: string;
-  nationality: string;
-  linkedInProfile?: string;
 
-  currentRole: string;
-  organizationName: string;
-  totalExperience: number;
-  keySectors: Record<string, boolean>;
-  cv?: FileList;
-
-  expertiseAreas: Record<string, boolean>;
-  sessionTopics: string;
-  gradesComfortable: Record<string, boolean>;
-  preferredSessionType: string;
-
-  reasonToJoin: string;
-  hoursPerMonth: string;
-  comfortableWithTools: string;
-  openToGuidelines: string;
-
-  ndaConsent: string;
-  recordingConsent: string;
-  idProof?: FileList;
+  // Section 3: Demo Preferences + Declaration
+  interestedSolutions: Record<string, boolean>;
+  preferredDemoMode: string;
+  preferredTimeSlots: Record<string, boolean>;
+  expectedParticipants: Record<string, boolean>;
   declaration: boolean;
 }
 
-interface ExpertConnectModalProps {
+interface DemoRequestModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export default function ExpertConnectForm({
+export default function DemoRequestForm({
   isOpen,
   onClose,
-}: ExpertConnectModalProps) {
+}: DemoRequestModalProps) {
   const [step, setStep] = useState(1);
 
   const {
@@ -67,36 +57,37 @@ export default function ExpertConnectForm({
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      keySectors: {
-        IT: false,
-        Finance: false,
-        Healthcare: false,
-        Manufacturing: false,
-        Education: false,
-        Design: false,
-        Others: false,
+      interestedSolutions: {
+        "Admission Test System": false,
+        "Hiring & Onboarding System": false,
+        "School/Institute OS": false,
+        "Counseling Guru B2B": false,
+        "Global Navigator B2B": false,
+        "CVP Lite B2B": false,
+        "CVP Advance B2B": false,
+        "CareerVerse B2B": false,
+        "Reboot Navigator B2B": false,
+        "Aptitude Trainer B2B": false,
+        "Reinvention Guru B2B": false,
+        "Smart Consulting": false,
+        Other: false,
       },
-      expertiseAreas: {
-        "AI/ML": false,
-        "Renewable Energy": false,
-        "Finance & Markets": false,
-        "Creative Arts": false,
-        "Supply Chain": false,
-        "Social Impact": false,
-        Others: false,
+      preferredDemoMode: "Online",
+      preferredTimeSlots: {
+        Morning: false,
+        Afternoon: false,
+        Evening: false,
       },
-      gradesComfortable: {
-        "9–10": false,
-        "11–12": false,
-        UG: false,
-        PG: false,
-        "Early Professionals": false,
+      expectedParticipants: {
+        "1-5": false,
+        "5-10": false,
+        "10+": false,
       },
       declaration: false,
     },
   });
 
-  const totalSteps = 5;
+  const totalSteps = 3;
 
   const nextStep = (e?: React.MouseEvent) => {
     e?.preventDefault();
@@ -110,10 +101,11 @@ export default function ExpertConnectForm({
 
   const onSubmit = (data: FormData) => {
     if (!data.declaration) {
-      alert("⚠️ Please accept the declaration before submitting.");
+      alert("⚠️ Please confirm your declaration before submitting.");
       return;
     }
-    console.log("✅ Expert Connect Form Data:", data);
+
+    console.log("✅ Demo Request Form Data:", data);
     onClose();
     setStep(1);
   };
@@ -123,13 +115,9 @@ export default function ExpertConnectForm({
       case 1:
         return <Step1 register={register} />;
       case 2:
-        return <Step2 register={register} control={control} />;
+        return <Step2 register={register} />;
       case 3:
         return <Step3 register={register} control={control} />;
-      case 4:
-        return <Step4 register={register} control={control} />;
-      case 5:
-        return <Step5 register={register} control={control} />;
       default:
         return <Step1 register={register} />;
     }
@@ -139,7 +127,7 @@ export default function ExpertConnectForm({
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-h-[80vh] max-w-2xl overflow-y-auto p-6">
         <DialogHeader className="mb-4">
-          <DialogTitle>Expert Connect Application</DialogTitle>
+          <DialogTitle>Demo Request Form</DialogTitle>
           <DialogClose className="absolute top-4 right-4" />
           <p className="text-muted-foreground mt-1 text-sm">
             Step {step} of {totalSteps}
@@ -151,11 +139,15 @@ export default function ExpertConnectForm({
 
           <DialogFooter className="mt-4 flex justify-between">
             {step > 1 && (
-              <Button variant="outline" type="button" onClick={prevStep}>
+              <Button
+                variant="outline"
+                type="button"
+                onClick={prevStep}
+                className="cursor-pointer"
+              >
                 Back
               </Button>
             )}
-
             {step < totalSteps ? (
               <Button
                 type="button"
@@ -169,7 +161,7 @@ export default function ExpertConnectForm({
                 type="submit"
                 className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90 cursor-pointer border"
               >
-                Submit Application
+                Submit Request
               </Button>
             )}
           </DialogFooter>

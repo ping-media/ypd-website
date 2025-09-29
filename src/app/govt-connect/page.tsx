@@ -1,7 +1,7 @@
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
-import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
+import GetStartedModalTrigger from "@/components/govt-connect/GetStartedModalTrigger";
 import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
 import {
@@ -39,59 +39,45 @@ const features = [
       "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
   },
 ];
-const expertSteps = [
+const govtSteps = [
   {
     id: 1,
-    title: "Welcome Industry Leaders",
+    title: "Why Govt Connect?",
     description: [
-      "Hear directly from YPD about the vision and purpose of Industry Expert Connect",
-      "Understand how your expertise helps bridge the employability gap for students",
-      "Learn how to guide students with practical insights and innovation mindset",
+      "Government programs often follow one-size-fits-all models, lack personalization, and struggle to deliver measurable outcomes.",
+      "Govt Connect uses AI + human mentorship to create personalized journeys, emphasize critical thinking.",
     ],
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Your Role as an Industry Expert",
+    title: "What YPD Offers Govt Partners",
     description: [
-      "Dedicate a few hours per month for live sessions/webinars",
-      "Share knowledge, trends, and stories from your industry",
-      "Interact with students in a real, relatable, and grounded way",
-      "Support learners in building critical thinking, problem solving & innovation skills",
+      "Tailored employability & entrepreneurship modules aligned with government schemes.",
+      "AI-driven gap analysis and personalized training.",
+      "Scalable mentorship and access to Industry Expert & Mentor Connect.",
     ],
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Training & Support from YPD",
+    title: "Who Can Join?",
     description: [
-      "Receive training & orientation in AI-supported delivery and student engagement",
-      "Get access to YPD’s digital tools & platforms for seamless session delivery",
-      "Guidance in structuring your session for maximum student impact",
-      "Fair remuneration for each session delivered",
+      "Government departments and skill development missions.",
+      "State- and district-level training agencies.",
+      "Public-private partnerships and NGOs funded by government skilling budgets.",
     ],
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Flexible Commitment",
+    title: "Why Partner with YPD?",
     description: [
-      "Contribute 2–4 hours per month for structured webinars or guest sessions",
-      "Sessions are virtual-first — participate from anywhere",
-      "Focus on impact over hours; your lived expertise benefits students most",
+      "Ensure funds translate into real outcomes for candidates.",
+      "Deliver localized, effective, and scalable training.",
+      "Reach Tier 2–4 learners and build a future-ready workforce aligned with India’s growth.",
     ],
     icon: "/careerverse/s4.svg",
-  },
-  {
-    id: 5,
-    title: "Why Join Expert Connect?",
-    description: [
-      "Make a real difference for aspiring candidates at the grassroots level",
-      "Influence the next generation’s career choices with practical insights",
-      "Be part of a pioneering education movement blending industry and AI-powered learning",
-      "Gain recognition as a thought leader shaping India’s future workforce",
-    ],
-    icon: "/careerverse/s1.svg",
   },
 ];
 
@@ -99,11 +85,11 @@ const page = () => {
   return (
     <>
       <Hero
-        heading="Become an Industry Expert with Youth Pulse Digital"
-        subheading="Share your real-world experience, guide students across grades 9–PG, conduct live sessions/webinars, and shape the next generation’s skills, mindset, and career choices."
+        heading="Partner with YPD to Deliver Effective Government Skilling Programs"
+        subheading="Design and implement outcome-focused training, leverage AI-driven insights, and provide mentorship to ensure measurable impact and future-ready beneficiaries across regions."
         ctaComponent={<GetStartedModalTrigger />}
         secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/expert-connect#works"
+        secondaryCtaHref="/msme-connect#works"
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
@@ -115,14 +101,14 @@ const page = () => {
         ctaLink="/coming-soon"
       />
       <CvpLiteSteps
-        heading="Shape the Future by Sharing Your Expertise"
-        subheading="Join Youth Pulse Digital to mentor students, conduct live sessions, and provide real-world guidance that equips learners with critical skills and career insights."
-        steps={expertSteps}
+        heading="Empowering Government Programs with Outcome-Driven Training"
+        subheading="YPD Govt Connect helps government bodies deliver personalized, scalable, and accountable skilling initiatives for students, jobseekers, and micro-entrepreneurs using AI-supported tools and mentorship."
+        steps={govtSteps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
-        path="M 1.7 11 L 1.7 37 Q 1.7 40 4.7 40 L 62 40 Q 65 40 65 43 L 65 69 Q 65 72 62 72 L 4.7 72 Q 1.7 72 1.7 75 L 1.7 81"
+        path="M 1.7 17 L 1.7 54 Q 2 56 4 56 L 63 56 Q 65 56 65 58 L 65 83"
       />
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"

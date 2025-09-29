@@ -1,7 +1,7 @@
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
-import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
+import GetStartedModalTrigger from "@/components/msme-connect/GetStartedModalTrigger";
 import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
 import {
@@ -39,57 +39,53 @@ const features = [
       "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
   },
 ];
-const expertSteps = [
+const msmeSteps = [
   {
     id: 1,
-    title: "Welcome Industry Leaders",
+    title: "Why MSME Connect?",
     description: [
-      "Hear directly from YPD about the vision and purpose of Industry Expert Connect",
-      "Understand how your expertise helps bridge the employability gap for students",
-      "Learn how to guide students with practical insights and innovation mindset",
+      "MSMEs often struggle with fresh hires lacking workplace readiness and the need for ongoing staff upskilling.",
+      "YPD MSME Connect helps you upskill employees, make fresh hires efficient and workplace-ready, foster critical thinking & problem-solving, and build a future-ready workforce.",
     ],
     icon: "/careerverse/s1.svg",
   },
   {
     id: 2,
-    title: "Your Role as an Industry Expert",
+    title: "What YPD Offers MSMEs",
     description: [
-      "Dedicate a few hours per month for live sessions/webinars",
-      "Share knowledge, trends, and stories from your industry",
-      "Interact with students in a real, relatable, and grounded way",
-      "Support learners in building critical thinking, problem solving & innovation skills",
+      "Comprehensive training in employability, adaptability, digital literacy, and workplace behavior.",
+      "Onboarding programs for fresh hires, workshops on problem-solving & innovation, intrapreneurship frameworks, and AI-enabled tools for scalable, effective learning.",
     ],
     icon: "/careerverse/s2.svg",
   },
   {
     id: 3,
-    title: "Training & Support from YPD",
+    title: "Who Can Join?",
     description: [
-      "Receive training & orientation in AI-supported delivery and student engagement",
-      "Get access to YPD’s digital tools & platforms for seamless session delivery",
-      "Guidance in structuring your session for maximum student impact",
-      "Fair remuneration for each session delivered",
+      "Micro, small, and mid-sized enterprises in any sector",
+      "MSMEs looking to make their workforce more professional and future-ready",
+      "Founders and HR leaders wanting to bridge the gap between academic skills and workplace demands",
     ],
     icon: "/careerverse/s3.svg",
   },
   {
     id: 4,
-    title: "Flexible Commitment",
+    title: "Flexible Commitment & Model",
     description: [
-      "Contribute 2–4 hours per month for structured webinars or guest sessions",
-      "Sessions are virtual-first — participate from anywhere",
-      "Focus on impact over hours; your lived expertise benefits students most",
+      "Choose programs that fit your enterprise’s size and needs",
+      "Engagement hours are lightweight but high-impact",
+      "Support for both online delivery and blended learning formats",
     ],
     icon: "/careerverse/s4.svg",
   },
   {
     id: 5,
-    title: "Why Join Expert Connect?",
+    title: "Why Partner with YPD?",
     description: [
-      "Make a real difference for aspiring candidates at the grassroots level",
-      "Influence the next generation’s career choices with practical insights",
-      "Be part of a pioneering education movement blending industry and AI-powered learning",
-      "Gain recognition as a thought leader shaping India’s future workforce",
+      "Reduce time and cost spent on training fresh hires",
+      "Improve productivity, responsibility, and ownership in teams",
+      "Create a culture of innovation and problem-solving in your enterprise",
+      "Position your business as a future-ready MSME in a changing economy",
     ],
     icon: "/careerverse/s1.svg",
   },
@@ -99,11 +95,11 @@ const page = () => {
   return (
     <>
       <Hero
-        heading="Become an Industry Expert with Youth Pulse Digital"
-        subheading="Share your real-world experience, guide students across grades 9–PG, conduct live sessions/webinars, and shape the next generation’s skills, mindset, and career choices."
+        heading="Partner with YPD to Upskill MSME Teams"
+        subheading="Guide employees with practical insights, conduct training sessions, and help build critical skills, innovation, and workplace readiness for a future-ready workforce."
         ctaComponent={<GetStartedModalTrigger />}
         secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/expert-connect#works"
+        secondaryCtaHref="/msme-connect#works"
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
@@ -115,9 +111,9 @@ const page = () => {
         ctaLink="/coming-soon"
       />
       <CvpLiteSteps
-        heading="Shape the Future by Sharing Your Expertise"
-        subheading="Join Youth Pulse Digital to mentor students, conduct live sessions, and provide real-world guidance that equips learners with critical skills and career insights."
-        steps={expertSteps}
+        heading="Empowering MSMEs with Skilled and Future-Ready Teams"
+        subheading="YPD MSME Connect equips enterprises with practical employability training, onboarding programs, and AI-supported learning tools to build a productive, innovative, and future-ready workforce."
+        steps={msmeSteps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
