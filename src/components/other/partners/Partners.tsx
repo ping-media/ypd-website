@@ -6,19 +6,31 @@ const partnersData = [
     image: "/partners1.png",
     title: "School Connect",
     buttonText: "Join Now",
-    href: "/coming-soon",
+    href: "/institute-connect",
+  },
+  {
+    image: "/partners6.png",
+    title: "Mentor Connect",
+    buttonText: "Join Now",
+    href: "/mentor-connect",
+  },
+  {
+    image: "/partners7.png",
+    title: "Expert Connect",
+    buttonText: "Join Now",
+    href: "/expert-connect",
   },
   {
     image: "/partners2.png",
     title: "College Connect",
     buttonText: "Join Now",
-    href: "/coming-soon",
+    href: "/institute-connect",
   },
   {
     image: "/partners3.png",
     title: "MSME Connect",
     buttonText: "Join Now",
-    href: "/coming-soon",
+    href: "/msme-connect",
   },
   {
     image: "/partners4.png",
@@ -29,18 +41,6 @@ const partnersData = [
   {
     image: "/partners5.png",
     title: "Parent Connect",
-    buttonText: "Join Now",
-    href: "/coming-soon",
-  },
-  {
-    image: "/partners6.png",
-    title: "Mentor Connect",
-    buttonText: "Join Now",
-    href: "/coming-soon",
-  },
-  {
-    image: "/partners7.png",
-    title: "Expert Connect",
     buttonText: "Join Now",
     href: "/coming-soon",
   },

@@ -165,10 +165,13 @@ export default function Footer() {
               { label: "Pricing", href: "/pricing" },
               { label: "Careers", href: "/careers" },
               { label: "Contact Us", href: "/contact" },
-              { label: "Mentor Connect", href: "/coming-soon" },
+              { label: "Mentor Connect", href: "/mentor-connect" },
               { label: "Privacy Policy", href: "/privacy-policy" },
               { label: "Terms of Use", href: "/terms" },
-              { label: "Subscribe to Newsletters ", href: "/coming-soon" },
+              {
+                label: "Subscribe to Newsletters ",
+                href: "/https://blog.ypd-dev.site",
+              },
             ]}
           />
           <FooterSectionAccordion
@@ -209,8 +212,8 @@ export default function Footer() {
               { label: "Hiring & Onboarding", href: "/hiring" },
               { label: "School / Institute OS", href: "/school-os" },
               { label: "Institute Connect", href: "/institute-connect" },
-              { label: "MSME Connect", href: "/coming-soon" },
-              { label: "Corporate Connect", href: "/coming-soon" },
+              { label: "MSME Connect", href: "/msme-connect" },
+              { label: "Corporate Connect", href: "/corporate-connect" },
               { label: "Govt Connect", href: "/govt-connect" },
               { label: "Refund Policy", href: "/cancellation-refund" },
             ]}

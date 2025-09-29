@@ -5,6 +5,7 @@ import Navbar from "@/components/other/navbar/Navbar";
 import Footer from "@/components/other/footer/Footer";
 import CookieConsent from "@/components/other/CookieConsent";
 import ContactFloating from "@/components/other/ContactFloating";
+import PinGate from "@/components/PinGate";
 
 // Custom fonts
 const lato = Lato({
@@ -43,13 +44,15 @@ export default function RootLayout({
       <body
         className={` ${lato.variable} ${poppins.variable} ${redRose.variable} antialiased`}
       >
-        <Navbar />
-        {children}
+        <PinGate>
+          <Navbar />
+          {children}
 
-        <Footer />
-        {/* <CookieConsent /> */}
+          <Footer />
+          {/* <CookieConsent /> */}
 
-        <ContactFloating />
+          <ContactFloating />
+        </PinGate>
       </body>
     </html>
   );
