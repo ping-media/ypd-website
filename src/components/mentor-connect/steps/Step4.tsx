@@ -1,3 +1,5 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -8,31 +10,38 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 import { FormData } from "../MentorForm";
 
-interface Step4Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step4() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step4({ register, control }: Step4Props) {
   return (
     <div className="space-y-4">
+      {/* Why Join */}
       <div>
         <Label>Why do you want to join YPD Mentor Connect?</Label>
         <Textarea
-          {...register("whyJoin")}
+          {...register("whyJoin", { required: "This field is required" })}
           placeholder="Your answer..."
           className="mt-2"
         />
+        {errors.whyJoin && (
+          <p className="mt-1 text-sm text-red-500">{errors.whyJoin.message}</p>
+        )}
       </div>
 
+      {/* AI Comfort */}
       <div>
         <Label>Comfort with AI tools in teaching/mentorship</Label>
         <Controller
           name="aiComfort"
           control={control}
+          rules={{ required: "Please select your comfort level" }}
           render={({ field }) => (
             <RadioGroup
               value={field.value}
@@ -59,15 +68,22 @@ export default function Step4({ register, control }: Step4Props) {
             </RadioGroup>
           )}
         />
+        {errors.aiComfort && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.aiComfort.message}
+          </p>
+        )}
       </div>
 
+      {/* Training Consent */}
       <div>
         <Label>Open to training in ethical AI usage & YPD pedagogy?</Label>
         <Controller
           name="trainingConsent"
           control={control}
+          rules={{ required: "Please select an option" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
@@ -78,15 +94,22 @@ export default function Step4({ register, control }: Step4Props) {
             </Select>
           )}
         />
+        {errors.trainingConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.trainingConsent.message}
+          </p>
+        )}
       </div>
 
+      {/* Weekly Commitment */}
       <div>
         <Label>Preferred Weekly Commitment</Label>
         <Controller
           name="weeklyCommit"
           control={control}
+          rules={{ required: "Please select weekly commitment" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Select Hours" />
               </SelectTrigger>
@@ -98,15 +121,22 @@ export default function Step4({ register, control }: Step4Props) {
             </Select>
           )}
         />
+        {errors.weeklyCommit && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.weeklyCommit.message}
+          </p>
+        )}
       </div>
 
+      {/* Preferred Mode */}
       <div>
         <Label>Preferred Mode</Label>
         <Controller
           name="mode"
           control={control}
+          rules={{ required: "Please select preferred mode" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Remote / Hybrid / In-Person" />
               </SelectTrigger>
@@ -118,6 +148,9 @@ export default function Step4({ register, control }: Step4Props) {
             </Select>
           )}
         />
+        {errors.mode && (
+          <p className="mt-1 text-sm text-red-500">{errors.mode.message}</p>
+        )}
       </div>
     </div>
   );

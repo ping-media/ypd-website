@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${lato.variable} ${poppins.variable} ${redRose.variable} antialiased`}
+        className={`${lato.variable} ${poppins.variable} ${redRose.variable} antialiased`}
       >
         <PinGate>
           <Navbar />
