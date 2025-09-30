@@ -83,6 +83,7 @@ export default function Step1() {
           <Controller
             name="countryCode"
             control={control}
+            defaultValue="+91"
             rules={{ required: "Select country code" }}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>

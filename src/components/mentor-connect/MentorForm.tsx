@@ -238,7 +238,7 @@ export default function MentorForm({
               setStep(1);
               onClose();
             }}
-            className="bg-brand-primary hover:bg-brand-primary/90 mt-6"
+            className="bg-brand-primary hover:bg-brand-primary/90 mt-6 cursor-pointer"
           >
             Close
           </Button>

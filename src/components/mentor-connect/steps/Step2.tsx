@@ -69,7 +69,7 @@ export default function Step2() {
           {...register("experienceDetails", {
             required: "Please describe your previous experience",
           })}
-          placeholder="Yes/No + Details"
+          placeholder="Yes or No, then briefly describe your relevant experience"
           className="mt-2"
         />
         {errors.experienceDetails && (

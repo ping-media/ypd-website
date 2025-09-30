@@ -100,6 +100,21 @@ export default function Step3() {
                   "Finance",
                   "Creative Arts",
                   "Engineering",
+                  "Education",
+                  "Retail",
+                  "Hospitality",
+                  "Manufacturing",
+                  "Construction",
+                  "Telecommunications",
+                  "Transportation",
+                  "Energy & Utilities",
+                  "Agriculture",
+                  "Legal Services",
+                  "Media & Entertainment",
+                  "Consulting",
+                  "Real Estate",
+                  "Government",
+                  "Other",
                 ].map((item) => (
                   <SelectItem key={item} value={item}>
                     {item}

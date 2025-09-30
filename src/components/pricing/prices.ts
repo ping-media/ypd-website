@@ -168,149 +168,149 @@ export const pricingData: Record<string, ProductPricing> = {
   },
 
   // ---------------- Mission SSB ----------------
-  "Mission SSB™": {
-    billingTypes: ["monthly"],
-    plans: {
-      monthly: [
-        {
-          title: "Free Plan",
-          description: "For starters",
-          price: {
-            INR: "Free",
-            AED: "Free",
-          },
-          features: [
-            "Account Creation",
-            "Profile Set Up",
-            "Dashboard View",
-            "1 OIR Test",
-            "Unlock Pro & Premium Plans",
-          ],
-        },
-        {
-          title: "Pro",
-          description: "Best for 11th–UG Students",
-          price: {
-            INR: "₹3499",
-            AED: "369.00",
-          },
-          period: "month",
-          features: [
-            "Account Creation",
-            "Dashboard View",
-            "Profile Setup",
-            "Written Exam",
-            "SSB Preparation",
-            "Progress Tracking",
-            "1 Year access",
-            "Email Support",
-            "Minimum 2 Months Subscription Required",
-            "Optional Human Assessor Access",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Best for 11th – Graduates",
-          price: {
-            INR: "₹5499",
-            AED: "549.00",
-          },
-          period: "month",
-          features: [
-            "Account Creation",
-            "Dashboard View",
-            "Profile Setup",
-            "Written Exam",
-            "SSB Preparation",
-            "Personal Interview – AI Driven",
-            "Progress & Weakness Tracking",
-            "1 Year access",
-            "Email Support",
-            "Minimum 3 Months Subscription Required",
-            "Optional Human Assessor Access",
-          ],
-          highlight: true,
-        },
-      ],
-    },
-  },
+  // "Mission SSB™": {
+  //   billingTypes: ["monthly"],
+  //   plans: {
+  //     monthly: [
+  //       {
+  //         title: "Free Plan",
+  //         description: "For starters",
+  //         price: {
+  //           INR: "Free",
+  //           AED: "Free",
+  //         },
+  //         features: [
+  //           "Account Creation",
+  //           "Profile Set Up",
+  //           "Dashboard View",
+  //           "1 OIR Test",
+  //           "Unlock Pro & Premium Plans",
+  //         ],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Best for 11th–UG Students",
+  //         price: {
+  //           INR: "₹3499",
+  //           AED: "369.00",
+  //         },
+  //         period: "month",
+  //         features: [
+  //           "Account Creation",
+  //           "Dashboard View",
+  //           "Profile Setup",
+  //           "Written Exam",
+  //           "SSB Preparation",
+  //           "Progress Tracking",
+  //           "1 Year access",
+  //           "Email Support",
+  //           "Minimum 2 Months Subscription Required",
+  //           "Optional Human Assessor Access",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Best for 11th – Graduates",
+  //         price: {
+  //           INR: "₹5499",
+  //           AED: "549.00",
+  //         },
+  //         period: "month",
+  //         features: [
+  //           "Account Creation",
+  //           "Dashboard View",
+  //           "Profile Setup",
+  //           "Written Exam",
+  //           "SSB Preparation",
+  //           "Personal Interview – AI Driven",
+  //           "Progress & Weakness Tracking",
+  //           "1 Year access",
+  //           "Email Support",
+  //           "Minimum 3 Months Subscription Required",
+  //           "Optional Human Assessor Access",
+  //         ],
+  //         highlight: true,
+  //       },
+  //     ],
+  //   },
+  // },
   // ---------------- UPSC Mentor ----------------
-  "UPSC Mentor™": {
-    billingTypes: ["monthly", "annually"],
-    plans: {
-      monthly: [
-        {
-          title: "Basic",
-          description: "UPSC prep foundation",
-          price: { INR: "$20", AED: "$20" },
-          features: [
-            "Daily capsules",
-            "Prelims question bank",
-            "Reflection nudges",
-          ],
-        },
-        {
-          title: "Pro",
-          description: "Structured UPSC pathway",
-          price: { INR: "$60", AED: "$60" },
-          features: [
-            "Everything in Basic",
-            "Mains framework",
-            "Essay/Interview practice",
-            "Mentor nudges",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Complete UPSC mentor",
-          price: { INR: "$120", AED: "$120" },
-          features: [
-            "Everything in Pro",
-            "Full simulation tracks",
-            "Personalized reports",
-            "Mentor sessions",
-          ],
-        },
-      ],
-      annually: [
-        {
-          title: "Basic",
-          description: "UPSC prep foundation",
-          price: { INR: "$200", AED: "$200" },
-          features: [
-            "Daily capsules",
-            "Prelims question bank",
-            "Reflection nudges",
-          ],
-        },
-        {
-          title: "Pro",
-          description: "Structured UPSC pathway",
-          price: { INR: "$600", AED: "$600" },
-          features: [
-            "Everything in Basic",
-            "Mains framework",
-            "Essay/Interview practice",
-            "Mentor nudges",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Complete UPSC mentor",
-          price: { INR: "$1200", AED: "$1200" },
-          features: [
-            "Everything in Pro",
-            "Full simulation tracks",
-            "Personalized reports",
-            "Mentor sessions",
-          ],
-        },
-      ],
-    },
-  },
+  // "UPSC Mentor™": {
+  //   billingTypes: ["monthly", "annually"],
+  //   plans: {
+  //     monthly: [
+  //       {
+  //         title: "Basic",
+  //         description: "UPSC prep foundation",
+  //         price: { INR: "$20", AED: "$20" },
+  //         features: [
+  //           "Daily capsules",
+  //           "Prelims question bank",
+  //           "Reflection nudges",
+  //         ],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Structured UPSC pathway",
+  //         price: { INR: "$60", AED: "$60" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Mains framework",
+  //           "Essay/Interview practice",
+  //           "Mentor nudges",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Complete UPSC mentor",
+  //         price: { INR: "$120", AED: "$120" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "Full simulation tracks",
+  //           "Personalized reports",
+  //           "Mentor sessions",
+  //         ],
+  //       },
+  //     ],
+  //     annually: [
+  //       {
+  //         title: "Basic",
+  //         description: "UPSC prep foundation",
+  //         price: { INR: "$200", AED: "$200" },
+  //         features: [
+  //           "Daily capsules",
+  //           "Prelims question bank",
+  //           "Reflection nudges",
+  //         ],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Structured UPSC pathway",
+  //         price: { INR: "$600", AED: "$600" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Mains framework",
+  //           "Essay/Interview practice",
+  //           "Mentor nudges",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Complete UPSC mentor",
+  //         price: { INR: "$1200", AED: "$1200" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "Full simulation tracks",
+  //           "Personalized reports",
+  //           "Mentor sessions",
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // },
   // ---------------- Counseling Guru ----------------
   "Counseling Guru™": {
     billingTypes: ["one-time"],

@@ -114,8 +114,15 @@ export default function Step4() {
                 <SelectValue placeholder="Select Hours" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
+                <SelectItem value="4">4 hrs</SelectItem>
+                <SelectItem value="5">5 hrs</SelectItem>
+                <SelectItem value="6">6 hrs</SelectItem>
+                <SelectItem value="7">7 hrs</SelectItem>
+                <SelectItem value="8">8 hrs</SelectItem>
+                <SelectItem value="9">9 hrs</SelectItem>
+                <SelectItem value="10">10 hrs</SelectItem>
+                <SelectItem value="11">11 hrs</SelectItem>
                 <SelectItem value="12">12 hrs</SelectItem>
-                <SelectItem value="15">15 hrs</SelectItem>
                 <SelectItem value="Other">Other</SelectItem>
               </SelectContent>
             </Select>
