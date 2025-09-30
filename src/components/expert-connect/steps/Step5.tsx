@@ -1,7 +1,9 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import {
   Select,
   SelectTrigger,
@@ -11,14 +13,16 @@ import {
 } from "@/components/ui/select";
 import { FormData } from "../ExpertForm";
 
-interface Step5Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step5() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step5({ register, control }: Step5Props) {
   return (
     <div className="space-y-6">
+      {/* NDA Consent */}
       <div>
         <Label>
           Are you willing to sign a Non-Disclosure Agreement (NDA) with YPD?
@@ -26,8 +30,9 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="ndaConsent"
           control={control}
+          rules={{ required: "Please select an option" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
@@ -38,8 +43,14 @@ export default function Step5({ register, control }: Step5Props) {
             </Select>
           )}
         />
+        {errors.ndaConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.ndaConsent.message}
+          </p>
+        )}
       </div>
 
+      {/* Recording Consent */}
       <div>
         <Label>
           Are you open to your sessions being recorded for student learning
@@ -48,8 +59,9 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="recordingConsent"
           control={control}
+          rules={{ required: "Please select an option" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Yes/No" />
               </SelectTrigger>
@@ -60,31 +72,42 @@ export default function Step5({ register, control }: Step5Props) {
             </Select>
           )}
         />
+        {errors.recordingConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.recordingConsent.message}
+          </p>
+        )}
       </div>
 
+      {/* ID Proof Upload */}
       <div>
         <Label>
-          Upload a valid ID Proof (Aadhaar / Passport / Driver’s License)
+          Upload a valid ID Proof (Aadhaar / Passport / Driver&apos;s License)
         </Label>
         <Input
           type="file"
-          {...register("idProof")}
+          {...register("idProof", { required: "ID Proof is required" })}
           accept=".pdf,.jpg,.jpeg,.png"
           className="mt-2 cursor-pointer"
         />
+        {errors.idProof && (
+          <p className="mt-1 text-sm text-red-500">{errors.idProof.message}</p>
+        )}
       </div>
 
+      {/* Declaration */}
       <div>
         <Controller
           name="declaration"
           control={control}
+          rules={{ required: "You must agree to the declaration" }}
           render={({ field }) => (
             <div className="mt-2 flex items-start gap-2">
               <Checkbox
                 id="declaration"
-                checked={field.value}
+                checked={field.value || false}
                 onCheckedChange={field.onChange}
-                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
               />
               <Label
                 htmlFor="declaration"
@@ -98,6 +121,11 @@ export default function Step5({ register, control }: Step5Props) {
             </div>
           )}
         />
+        {errors.declaration && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.declaration.message}
+          </p>
+        )}
       </div>
     </div>
   );

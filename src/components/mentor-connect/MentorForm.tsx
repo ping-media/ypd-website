@@ -135,8 +135,19 @@ export default function MentorForm({
         const subjects = getValues("subjects");
         const skills = getValues("skills");
         const grades = getValues("grades");
+        const industry = getValues("industry");
 
         let hasError = false;
+
+        if (!industry || industry.trim() === "") {
+          setError("industry", {
+            type: "manual",
+            message: "Please select an industry",
+          });
+          hasError = true;
+        } else {
+          clearErrors("industry");
+        }
 
         if (!hasAtLeastOneSelected(subjects)) {
           setError("subjects", {

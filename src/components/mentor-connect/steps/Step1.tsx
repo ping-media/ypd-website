@@ -135,6 +135,7 @@ export default function Step1() {
               message: "Enter a valid email address",
             },
           })}
+          placeholder="example@mail.com"
           className="mt-2"
         />
         {errors.email && (
