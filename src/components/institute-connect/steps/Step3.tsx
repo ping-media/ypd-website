@@ -1,69 +1,126 @@
-import { Label } from "@/components/ui/label";
+"use client";
+
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 import { FormData } from "../InstituteForm";
 
-interface Step3Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step3() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step3({ register, control }: Step3Props) {
+  const streamOptions = [
+    "Science",
+    "Commerce",
+    "Humanities",
+    "Vocational",
+    "Others",
+  ];
+
   return (
     <div className="space-y-4">
+      {/* Student Strength */}
       <div>
-        <Label>Student Strength (total + per grade/stream)</Label>
+        <Label>Student Strength</Label>
         <Input
-          {...register("studentStrength")}
-          placeholder="500 (Grade-wise: 5–12)"
+          type="number"
+          placeholder="Enter number of students"
+          {...register("studentStrength", {
+            required: "Student strength is required",
+          })}
           className="mt-2"
         />
+        {errors.studentStrength && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.studentStrength.message}
+          </p>
+        )}
       </div>
 
+      {/* Streams */}
       <div>
-        <Label>Streams / Programs Offered</Label>
-        <div className="mt-2 grid grid-cols-2 gap-2">
-          {Object.keys(control._defaultValues.streams!).map((stream) => (
-            <div key={stream} className="flex items-center gap-2">
-              <Controller
-                name={`streams.${stream}`}
-                control={control}
-                render={({ field }) => (
+        <Label>Streams Offered</Label>
+        <div className="mt-2 flex flex-col space-y-2">
+          {streamOptions.map((stream) => (
+            <Controller
+              key={stream}
+              name={`streams.${stream}`}
+              control={control}
+              render={({ field }) => (
+                <div className="flex items-center space-x-2">
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                )}
-              />
-              <span className="cursor-pointer">{stream}</span>
-            </div>
+                  <span>{stream}</span>
+                </div>
+              )}
+            />
           ))}
         </div>
+        {/* Validation error for streams */}
+        {errors.streams && typeof errors.streams.message === "string" && (
+          <p className="mt-1 text-sm text-red-500">{errors.streams.message}</p>
+        )}
       </div>
 
+      {/* Number of Teachers */}
       <div>
-        <Label>Number of Teachers / Faculty</Label>
-        <Input {...register("numTeachers")} placeholder="50" className="mt-2" />
-      </div>
-
-      <div>
-        <Label>Current Use of Technology in Classrooms</Label>
+        <Label>Number of Teachers</Label>
         <Input
-          {...register("currentTech")}
-          placeholder="Projectors, Smart Boards, LMS, etc."
+          type="number"
+          placeholder="Enter number of teachers"
+          {...register("numTeachers", {
+            required: "Number of teachers is required",
+          })}
           className="mt-2"
         />
+        {errors.numTeachers && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.numTeachers.message}
+          </p>
+        )}
       </div>
 
+      {/* Current Technology */}
       <div>
-        <Label>Previous Exposure to AI / EdTech tools</Label>
+        <Label>Current Technology Used</Label>
         <Input
-          {...register("previousAIExposure")}
-          placeholder="Yes/No + Details"
+          type="text"
+          placeholder="E.g., LMS, AI Tools"
+          {...register("currentTech", {
+            required: "Current technology is required",
+          })}
           className="mt-2"
         />
+        {errors.currentTech && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.currentTech.message}
+          </p>
+        )}
+      </div>
+
+      {/* Previous AI Exposure */}
+      <div>
+        <Label>Previous AI Exposure</Label>
+        <Input
+          type="text"
+          placeholder="E.g., AI workshops, courses"
+          {...register("previousAIExposure", {
+            required: "Previous AI exposure is required",
+          })}
+          className="mt-2"
+        />
+        {errors.previousAIExposure && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.previousAIExposure.message}
+          </p>
+        )}
       </div>
     </div>
   );
