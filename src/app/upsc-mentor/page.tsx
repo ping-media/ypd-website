@@ -496,14 +496,14 @@ const page = () => {
         heading="Your Mission, Broken Down"
         subheading="UPSC Mentor™ is a premium preparation experience designed for serious aspirants."
       />
-      <CvpPricing
+      {/* <CvpPricing
         currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={upscPricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ aspirants. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
-      />
+      /> */}
       <CvpImpact
         heading="Real Impact, Real Results"
         description="Since its early 2024 pilot, Youth Pulse Digital™ UPSC Mentor™ has supported aspirants from Tier 1 to Tier 4 cities in building exam-ready skills for Prelims, Mains, and the Interview stage—removing guesswork, over-reliance on coaching, and preparation fatigue."

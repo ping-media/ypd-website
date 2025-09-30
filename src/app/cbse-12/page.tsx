@@ -516,14 +516,14 @@ const page = () => {
         heading="Your Mission, Broken Down"
         subheading="Innovation that feels premium, priced for you."
       />
-      <CvpPricing
+      {/* <CvpPricing
         currency="INR"
         heading="Pricing & Access"
         subheading="Innovation that feels premium, priced for you."
         plans={missionSSBPricing.plans.monthly ?? []}
         footerText="For Institutions: Custom packages available for 50+ students. Please "
         footerLink={{ text: "Contact Us", href: "/contact" }}
-      />
+      /> */}
       <CvpImpact
         heading="Real Impact, Real Results"
         description="Since its launch, Mission SSB™ has guided aspirants from Tier 1 to Tier 4 cities in India to prepare strategically for both NDA Written and SSB stages — with structure, precision, and zero guesswork. Students gain confidence, discipline, and readiness without feeling overwhelmed or lost."

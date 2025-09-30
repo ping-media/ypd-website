@@ -168,6 +168,7 @@ export const pricingData: Record<string, ProductPricing> = {
   },
 
   // ---------------- Mission SSB ----------------
+  
   // "Mission SSB™": {
   //   billingTypes: ["monthly"],
   //   plans: {
@@ -236,6 +237,7 @@ export const pricingData: Record<string, ProductPricing> = {
   //   },
   // },
   // ---------------- UPSC Mentor ----------------
+
   // "UPSC Mentor™": {
   //   billingTypes: ["monthly", "annually"],
   //   plans: {
@@ -311,6 +313,7 @@ export const pricingData: Record<string, ProductPricing> = {
   //     ],
   //   },
   // },
+
   // ---------------- Counseling Guru ----------------
   "Counseling Guru™": {
     billingTypes: ["one-time"],
@@ -621,148 +624,150 @@ export const pricingData: Record<string, ProductPricing> = {
     },
   },
   // ---------------- Admission Test System ----------------
-  "Admission Test System": {
-    billingTypes: ["monthly", "annually"],
-    plans: {
-      monthly: [
-        {
-          title: "Basic",
-          description: "Entry-level test prep",
-          price: { INR: "$10", AED: "$10" },
-          features: [
-            "Standardized MCQs",
-            "Difficulty levels",
-            "Instant scoring",
-          ],
-        },
-        {
-          title: "Pro",
-          description: "Advanced admission prep",
-          price: { INR: "$40", AED: "$40" },
-          features: [
-            "Everything in Basic",
-            "Adaptive tests",
-            "Personalized feedback",
-            "Practice reports",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Complete admission package",
-          price: { INR: "$80", AED: "$80" },
-          features: [
-            "Everything in Pro",
-            "Mentorship add-on",
-            "Skill insights",
-            "Parent dashboard",
-          ],
-        },
-      ],
-      annually: [
-        {
-          title: "Basic",
-          description: "Entry-level test prep",
-          price: { INR: "$100", AED: "$100" },
-          features: [
-            "Standardized MCQs",
-            "Difficulty levels",
-            "Instant scoring",
-          ],
-        },
-        {
-          title: "Pro",
-          description: "Advanced admission prep",
-          price: { INR: "$400", AED: "$400" },
-          features: [
-            "Everything in Basic",
-            "Adaptive tests",
-            "Personalized feedback",
-            "Practice reports",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Complete admission package",
-          price: { INR: "$800", AED: "$800" },
-          features: [
-            "Everything in Pro",
-            "Mentorship add-on",
-            "Skill insights",
-            "Parent dashboard",
-          ],
-        },
-      ],
-    },
-  },
+
+  // "Admission Test System": {
+  //   billingTypes: ["monthly", "annually"],
+  //   plans: {
+  //     monthly: [
+  //       {
+  //         title: "Basic",
+  //         description: "Entry-level test prep",
+  //         price: { INR: "$10", AED: "$10" },
+  //         features: [
+  //           "Standardized MCQs",
+  //           "Difficulty levels",
+  //           "Instant scoring",
+  //         ],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Advanced admission prep",
+  //         price: { INR: "$40", AED: "$40" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Adaptive tests",
+  //           "Personalized feedback",
+  //           "Practice reports",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Complete admission package",
+  //         price: { INR: "$80", AED: "$80" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "Mentorship add-on",
+  //           "Skill insights",
+  //           "Parent dashboard",
+  //         ],
+  //       },
+  //     ],
+  //     annually: [
+  //       {
+  //         title: "Basic",
+  //         description: "Entry-level test prep",
+  //         price: { INR: "$100", AED: "$100" },
+  //         features: [
+  //           "Standardized MCQs",
+  //           "Difficulty levels",
+  //           "Instant scoring",
+  //         ],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Advanced admission prep",
+  //         price: { INR: "$400", AED: "$400" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Adaptive tests",
+  //           "Personalized feedback",
+  //           "Practice reports",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Complete admission package",
+  //         price: { INR: "$800", AED: "$800" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "Mentorship add-on",
+  //           "Skill insights",
+  //           "Parent dashboard",
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // },
 
   // ---------------- Hiring & Boarding ----------------
-  "Hiring & Boarding™": {
-    billingTypes: ["monthly", "annually"],
-    plans: {
-      monthly: [
-        {
-          title: "Basic",
-          description: "Simplify hiring",
-          price: { INR: "$50", AED: "$50" },
-          features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
-        },
-        {
-          title: "Pro",
-          description: "Smart hiring & onboarding",
-          price: { INR: "$120", AED: "$120" },
-          features: [
-            "Everything in Basic",
-            "Role-fit alignment",
-            "Employer dashboards",
-            "Adaptive tasks",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Enterprise talent suite",
-          price: { INR: "$250", AED: "$250" },
-          features: [
-            "Everything in Pro",
-            "AI-driven onboarding",
-            "Skill gap analytics",
-            "Dedicated support",
-          ],
-        },
-      ],
-      annually: [
-        {
-          title: "Basic",
-          description: "Simplify hiring",
-          price: { INR: "$500", AED: "$500" },
-          features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
-        },
-        {
-          title: "Pro",
-          description: "Smart hiring & onboarding",
-          price: { INR: "$1200", AED: "$1200" },
-          features: [
-            "Everything in Basic",
-            "Role-fit alignment",
-            "Employer dashboards",
-            "Adaptive tasks",
-          ],
-          highlight: true,
-        },
-        {
-          title: "Premium",
-          description: "Enterprise talent suite",
-          price: { INR: "$2500", AED: "$2500" },
-          features: [
-            "Everything in Pro",
-            "AI-driven onboarding",
-            "Skill gap analytics",
-            "Dedicated support",
-          ],
-        },
-      ],
-    },
-  },
+
+  // "Hiring & Boarding": {
+  //   billingTypes: ["monthly", "annually"],
+  //   plans: {
+  //     monthly: [
+  //       {
+  //         title: "Basic",
+  //         description: "Simplify hiring",
+  //         price: { INR: "$50", AED: "$50" },
+  //         features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Smart hiring & onboarding",
+  //         price: { INR: "$120", AED: "$120" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Role-fit alignment",
+  //           "Employer dashboards",
+  //           "Adaptive tasks",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Enterprise talent suite",
+  //         price: { INR: "$250", AED: "$250" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "AI-driven onboarding",
+  //           "Skill gap analytics",
+  //           "Dedicated support",
+  //         ],
+  //       },
+  //     ],
+  //     annually: [
+  //       {
+  //         title: "Basic",
+  //         description: "Simplify hiring",
+  //         price: { INR: "$500", AED: "$500" },
+  //         features: ["Job-ready assessments", "Candidate dashboard", "Reports"],
+  //       },
+  //       {
+  //         title: "Pro",
+  //         description: "Smart hiring & onboarding",
+  //         price: { INR: "$1200", AED: "$1200" },
+  //         features: [
+  //           "Everything in Basic",
+  //           "Role-fit alignment",
+  //           "Employer dashboards",
+  //           "Adaptive tasks",
+  //         ],
+  //         highlight: true,
+  //       },
+  //       {
+  //         title: "Premium",
+  //         description: "Enterprise talent suite",
+  //         price: { INR: "$2500", AED: "$2500" },
+  //         features: [
+  //           "Everything in Pro",
+  //           "AI-driven onboarding",
+  //           "Skill gap analytics",
+  //           "Dedicated support",
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // },
 };
