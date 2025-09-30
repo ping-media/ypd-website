@@ -1,6 +1,8 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { FormData } from "../DemoForm";
 import {
   Select,
@@ -10,12 +12,12 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 
-interface Step3Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step3() {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step3({ register, control }: Step3Props) {
   const solutions = [
     "Admission Test System",
     "Hiring & Onboarding System",
@@ -33,7 +35,6 @@ export default function Step3({ register, control }: Step3Props) {
   ];
 
   const timeSlots = ["Morning", "Afternoon", "Evening"];
-
   const participantsOptions = ["1-5", "5-10", "10+"];
 
   return (
@@ -49,6 +50,7 @@ export default function Step3({ register, control }: Step3Props) {
               <Controller
                 name={`interestedSolutions.${solution}`}
                 control={control}
+                defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
                     checked={field.value}
@@ -69,15 +71,24 @@ export default function Step3({ register, control }: Step3Props) {
         <Controller
           name="preferredDemoMode"
           control={control}
+          rules={{ required: "Please select demo mode" }}
+          defaultValue=""
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Online" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="Online">Online</SelectItem>
-              </SelectContent>
-            </Select>
+            <>
+              <Select value={field.value} onValueChange={field.onChange}>
+                <SelectTrigger className="mt-2 cursor-pointer">
+                  <SelectValue placeholder="Select Mode" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Online">Online</SelectItem>
+                </SelectContent>
+              </Select>
+              {errors.preferredDemoMode && (
+                <p className="mt-1 text-sm text-red-500">
+                  {errors.preferredDemoMode.message}
+                </p>
+              )}
+            </>
           )}
         />
       </div>
@@ -91,6 +102,7 @@ export default function Step3({ register, control }: Step3Props) {
               <Controller
                 name={`preferredTimeSlots.${slot}`}
                 control={control}
+                defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
                     checked={field.value}
@@ -114,6 +126,7 @@ export default function Step3({ register, control }: Step3Props) {
               <Controller
                 name={`expectedParticipants.${option}`}
                 control={control}
+                defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
                     checked={field.value}
@@ -133,13 +146,15 @@ export default function Step3({ register, control }: Step3Props) {
         <Controller
           name="declaration"
           control={control}
+          rules={{ required: "You must confirm your declaration" }}
+          defaultValue={false}
           render={({ field }) => (
             <div className="mt-2 flex items-start gap-2">
               <Checkbox
                 id="declaration"
                 checked={field.value}
                 onCheckedChange={field.onChange}
-                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
               />
               <Label
                 htmlFor="declaration"
@@ -151,6 +166,11 @@ export default function Step3({ register, control }: Step3Props) {
             </div>
           )}
         />
+        {errors.declaration && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.declaration.message}
+          </p>
+        )}
       </div>
     </div>
   );
