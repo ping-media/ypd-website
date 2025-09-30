@@ -1,7 +1,7 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
-import { FormData } from "../GovtForm";
 import {
   Select,
   SelectTrigger,
@@ -9,13 +9,15 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { useFormContext, Controller } from "react-hook-form";
+import { FormData } from "../GovtForm";
 
-interface Step5Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step5() {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step5({ register, control }: Step5Props) {
   return (
     <div className="space-y-6">
       {/* MoU / Agreement Consent */}
@@ -24,10 +26,11 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="mouConsent"
           control={control}
+          rules={{ required: "Please select Yes or No" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Yes">Yes</SelectItem>
@@ -36,6 +39,11 @@ export default function Step5({ register, control }: Step5Props) {
             </Select>
           )}
         />
+        {errors.mouConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.mouConsent.message}
+          </p>
+        )}
       </div>
 
       {/* Tracking Consent */}
@@ -47,10 +55,11 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="trackingConsent"
           control={control}
+          rules={{ required: "Please select Yes or No" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Yes">Yes</SelectItem>
@@ -59,6 +68,11 @@ export default function Step5({ register, control }: Step5Props) {
             </Select>
           )}
         />
+        {errors.trackingConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.trackingConsent.message}
+          </p>
+        )}
       </div>
 
       {/* Declaration */}
@@ -66,13 +80,14 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="declaration"
           control={control}
+          rules={{ required: "You must accept the declaration to proceed" }}
           render={({ field }) => (
             <div className="mt-2 flex items-start gap-2">
               <Checkbox
                 id="declaration"
                 checked={field.value}
                 onCheckedChange={field.onChange}
-                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
               />
               <Label
                 htmlFor="declaration"
@@ -86,6 +101,11 @@ export default function Step5({ register, control }: Step5Props) {
             </div>
           )}
         />
+        {errors.declaration && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.declaration.message}
+          </p>
+        )}
       </div>
     </div>
   );

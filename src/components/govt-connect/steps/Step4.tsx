@@ -1,7 +1,7 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
-import { FormData } from "../GovtForm";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   Select,
@@ -10,13 +10,17 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { useFormContext, Controller } from "react-hook-form";
+import { FormData } from "../GovtForm";
+import { Input } from "@/components/ui/input";
 
-interface Step4Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step4() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step4({ register, control }: Step4Props) {
   const outcomes = [
     "Employability Skills",
     "Critical Thinking & Problem Solving",
@@ -33,16 +37,23 @@ export default function Step4({ register, control }: Step4Props) {
     "Other",
   ];
 
+  const timelineOptions = ["Immediate", "3 months", "6 months"];
+
   return (
     <div className="space-y-6">
       {/* How YPD Can Add Value */}
       <div>
         <Label>How can YPD add value to your initiatives?</Label>
         <Textarea
-          {...register("valueAdd")}
+          {...register("valueAdd", {
+            required: "Please describe how YPD can add value",
+          })}
           placeholder="Your answer..."
           className="mt-2"
         />
+        {errors.valueAdd && (
+          <p className="mt-1 text-sm text-red-500">{errors.valueAdd.message}</p>
+        )}
       </div>
 
       {/* Important Outcomes */}
@@ -52,22 +63,29 @@ export default function Step4({ register, control }: Step4Props) {
         </Label>
         <div className="grid grid-cols-2 gap-2">
           {outcomes.map((area) => (
-            <div key={area} className="flex items-center gap-2">
-              <Controller
-                name={`importantOutcomes.${area}`}
-                control={control}
-                render={({ field }) => (
+            <Controller
+              key={area}
+              name={`importantOutcomes.${area}`}
+              control={control}
+              render={({ field }) => (
+                <div className="flex items-center gap-2">
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                )}
-              />
-              <span className="cursor-pointer">{area}</span>
-            </div>
+                  <span>{area}</span>
+                </div>
+              )}
+            />
           ))}
         </div>
+        {errors.importantOutcomes &&
+          typeof errors.importantOutcomes.message === "string" && (
+            <p className="mt-1 text-sm text-red-500">
+              {errors.importantOutcomes.message}
+            </p>
+          )}
       </div>
 
       {/* Preferred Collaboration Model */}
@@ -76,6 +94,7 @@ export default function Step4({ register, control }: Step4Props) {
         <Controller
           name="collaborationModel"
           control={control}
+          rules={{ required: "Please select a collaboration model" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
               <SelectTrigger className="mt-2 cursor-pointer">
@@ -91,17 +110,29 @@ export default function Step4({ register, control }: Step4Props) {
             </Select>
           )}
         />
+        {errors.collaborationModel && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.collaborationModel.message}
+          </p>
+        )}
       </div>
 
       {/* Average Candidates / Batch */}
       <div>
         <Label>Average Number of Candidates Per Batch</Label>
-        <input
+        <Input
           type="number"
-          {...register("employeesPerBatch")}
+          {...register("employeesPerBatch", {
+            required: "Please enter number of candidates per batch",
+          })}
           placeholder="Number of candidates"
-          className="mt-2 w-full rounded border px-3 py-2"
+          className="mt-2"
         />
+        {errors.employeesPerBatch && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.employeesPerBatch.message}
+          </p>
+        )}
       </div>
 
       {/* Expected Start Timeline */}
@@ -110,19 +141,27 @@ export default function Step4({ register, control }: Step4Props) {
         <Controller
           name="expectedTimeline"
           control={control}
+          rules={{ required: "Please select expected start timeline" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Immediate / 3 months / 6 months" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Immediate">Immediate</SelectItem>
-                <SelectItem value="3 months">3 months</SelectItem>
-                <SelectItem value="6 months">6 months</SelectItem>
+                {timelineOptions.map((option) => (
+                  <SelectItem key={option} value={option}>
+                    {option}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
         />
+        {errors.expectedTimeline && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.expectedTimeline.message}
+          </p>
+        )}
       </div>
     </div>
   );

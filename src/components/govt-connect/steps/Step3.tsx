@@ -1,15 +1,18 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { FormData } from "../GovtForm";
 
-interface Step3Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step3() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step3({ register, control }: Step3Props) {
   const challenges = [
     "One-size-fits-all training",
     "Lack of employability outcomes",
@@ -32,10 +35,17 @@ export default function Step3({ register, control }: Step3Props) {
       <div>
         <Label>Current Skilling / Upskilling Programs</Label>
         <Input
-          {...register("currentPrograms")}
+          {...register("currentPrograms", {
+            required: "Current programs are required",
+          })}
           placeholder="Brief description of programs"
           className="mt-2"
         />
+        {errors.currentPrograms && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.currentPrograms.message}
+          </p>
+        )}
       </div>
 
       {/* Target Beneficiary Groups */}
@@ -43,20 +53,21 @@ export default function Step3({ register, control }: Step3Props) {
         <Label>Target Beneficiary Groups</Label>
         <div className="mt-2 grid grid-cols-2 gap-2">
           {beneficiaries.map((b) => (
-            <div key={b} className="flex items-center gap-2">
-              <Controller
-                name={`targetGroups.${b}`}
-                control={control}
-                render={({ field }) => (
+            <Controller
+              key={b}
+              name={`targetGroups.${b}`}
+              control={control}
+              render={({ field }) => (
+                <div className="flex items-center gap-2">
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                )}
-              />
-              <span className="cursor-pointer">{b}</span>
-            </div>
+                  <span>{b}</span>
+                </div>
+              )}
+            />
           ))}
         </div>
       </div>
@@ -65,10 +76,17 @@ export default function Step3({ register, control }: Step3Props) {
       <div>
         <Label>Annual Training Budget Allocated</Label>
         <Input
-          {...register("annualBudget")}
+          {...register("annualBudget", {
+            required: "Annual budget is required",
+          })}
           placeholder="Amount or Range"
           className="mt-2"
         />
+        {errors.annualBudget && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.annualBudget.message}
+          </p>
+        )}
       </div>
 
       {/* Average Candidates Trained */}
@@ -76,10 +94,17 @@ export default function Step3({ register, control }: Step3Props) {
         <Label>Average Number of Candidates Trained Per Year</Label>
         <Input
           type="number"
-          {...register("avgCandidatesTrained")}
+          {...register("avgCandidatesTrained", {
+            required: "Average candidates trained is required",
+          })}
           placeholder="100"
           className="mt-2"
         />
+        {errors.avgCandidatesTrained && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.avgCandidatesTrained.message}
+          </p>
+        )}
       </div>
 
       {/* Key Challenges */}
@@ -87,20 +112,21 @@ export default function Step3({ register, control }: Step3Props) {
         <Label>Key Challenges Faced in Implementation</Label>
         <div className="mt-2 grid grid-cols-2 gap-2">
           {challenges.map((challenge) => (
-            <div key={challenge} className="flex items-center gap-2">
-              <Controller
-                name={`keyChallenges.${challenge}`}
-                control={control}
-                render={({ field }) => (
+            <Controller
+              key={challenge}
+              name={`keyChallenges.${challenge}`}
+              control={control}
+              render={({ field }) => (
+                <div className="flex items-center gap-2">
                   <Checkbox
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                )}
-              />
-              <span className="cursor-pointer">{challenge}</span>
-            </div>
+                  <span>{challenge}</span>
+                </div>
+              )}
+            />
           ))}
         </div>
       </div>
