@@ -37,7 +37,7 @@ const Decision = () => {
         gap={20}
         buttonIcon={<UsersRound size={20} />}
         buttonText="Explore Counseling Guru™"
-        buttonHref="/counselling-guru"
+        buttonHref="/counseling-guru"
       >
         {cardData.map((item, index) => (
           <DecisionCard key={index} image={item.image} heading={item.heading} />

@@ -65,6 +65,7 @@ const Links = [
           { name: "Reinvention Guru™", href: "/reinvention-guru" },
         ],
       },
+      { name: "Expert Connect", href: "/expert-connect" },
     ],
   },
   {
@@ -73,10 +74,11 @@ const Links = [
       { name: "Admission Test", href: "/admission" },
       { name: "Hiring & Onboarding", href: "/hiring" },
       { name: "School / Institute OS", href: "/school-os" },
-      // { name: "Institute Connect", href: "/coming-soon" },
-      // { name: "MSME Connect", href: "/coming-soon" },
-      // { name: "Corporate Connect", href: "/coming-soon" },
-      // { name: "Govt Connect", href: "/coming-soon" },
+      { name: "Institute Connect", href: "/institute-connect" },
+      { name: "MSME Connect", href: "/msme-connect" },
+      { name: "Corporate Connect", href: "/coming-soon" },
+      { name: "Govt Connect", href: "/govt-connect" },
+      { name: "Book A Demo", href: "/book-demo" },
     ],
   },
 ];

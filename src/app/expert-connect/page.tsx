@@ -1,44 +1,10 @@
-import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
 import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import {
-  ArrowRight,
-  BarChart3,
-  Brain,
-  BriefcaseBusiness,
-  FileText,
-  Layers,
-} from "lucide-react";
+import { ArrowRight, BriefcaseBusiness } from "lucide-react";
 
-const features = [
-  {
-    icon: FileText,
-    title: "Job Posting & Tracking",
-    description:
-      "Publish openings quickly and track applications in real time — no lost CVs or messy email trails.",
-  },
-  {
-    icon: Layers,
-    title: "Smart Shortlisting",
-    description:
-      "Evaluate applicants with structured criteria, ensuring only the best-fit profiles move forward.",
-  },
-  {
-    icon: BarChart3,
-    title: "Schedule & Feedback",
-    description:
-      "Automate interview slots, reminders, and feedback sharing to speed up decision-making.",
-  },
-  {
-    icon: Brain,
-    title: "Activity Log",
-    description:
-      "Every action — from posting a role to sending an offer — is tracked for full visibility and compliance.",
-  },
-];
 const expertSteps = [
   {
     id: 1,
@@ -107,12 +73,6 @@ const page = () => {
         secondaryCtaIcon={
           <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
         }
-      />
-      <CvpFeature
-        heading="Key Features That Empower Your Career Decisions"
-        features={features}
-        ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
       />
       <CvpLiteSteps
         heading="Shape the Future by Sharing Your Expertise"
