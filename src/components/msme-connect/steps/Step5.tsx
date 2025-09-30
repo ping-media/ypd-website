@@ -1,7 +1,7 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
-import { FormData } from "../MsmeForm";
 import {
   Select,
   SelectTrigger,
@@ -9,13 +9,19 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { Controller, useFormContext } from "react-hook-form";
+import { FormData } from "../MsmeForm";
 
-interface Step5Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step5() {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step5({ register, control }: Step5Props) {
+  const weeklyCommitments = ["2-4", "5-8", "Other"];
+  const budgetOptions = ["Low", "Medium", "High"];
+  const yesNoOptions = ["Yes", "No"];
+
   return (
     <div className="space-y-6">
       {/* Weekly Commitment */}
@@ -24,19 +30,27 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="weeklyCommitment"
           control={control}
+          rules={{ required: "Please select weekly commitment" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="2–4 / 5–8 / Other" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="2-4">2–4</SelectItem>
-                <SelectItem value="5-8">5–8</SelectItem>
-                <SelectItem value="Other">Other</SelectItem>
+                {weeklyCommitments.map((w) => (
+                  <SelectItem key={w} value={w}>
+                    {w}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
         />
+        {errors.weeklyCommitment && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.weeklyCommitment.message}
+          </p>
+        )}
       </div>
 
       {/* Budget Readiness */}
@@ -45,19 +59,27 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="budgetReadiness"
           control={control}
+          rules={{ required: "Please select budget readiness" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
                 <SelectValue placeholder="Low / Medium / High" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Low">Low</SelectItem>
-                <SelectItem value="Medium">Medium</SelectItem>
-                <SelectItem value="High">High</SelectItem>
+                {budgetOptions.map((b) => (
+                  <SelectItem key={b} value={b}>
+                    {b}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
         />
+        {errors.budgetReadiness && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.budgetReadiness.message}
+          </p>
+        )}
       </div>
 
       {/* AI Tools Consent */}
@@ -68,18 +90,27 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="adoptAITools"
           control={control}
+          rules={{ required: "Please select an option" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Yes">Yes</SelectItem>
-                <SelectItem value="No">No</SelectItem>
+                {yesNoOptions.map((option) => (
+                  <SelectItem key={option} value={option}>
+                    {option}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
         />
+        {errors.adoptAITools && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.adoptAITools.message}
+          </p>
+        )}
       </div>
 
       {/* NDA Consent */}
@@ -90,18 +121,27 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="ndaConsent"
           control={control}
+          rules={{ required: "Please select an option" }}
           render={({ field }) => (
-            <Select onValueChange={field.onChange} value={field.value}>
+            <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="Yes">Yes</SelectItem>
-                <SelectItem value="No">No</SelectItem>
+                {yesNoOptions.map((option) => (
+                  <SelectItem key={option} value={option}>
+                    {option}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           )}
         />
+        {errors.ndaConsent && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.ndaConsent.message}
+          </p>
+        )}
       </div>
 
       {/* Declaration */}
@@ -109,13 +149,14 @@ export default function Step5({ register, control }: Step5Props) {
         <Controller
           name="declaration"
           control={control}
+          rules={{ required: "You must accept the declaration" }}
           render={({ field }) => (
             <div className="mt-2 flex items-start gap-2">
               <Checkbox
                 id="declaration"
                 checked={field.value}
                 onCheckedChange={field.onChange}
-                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
               />
               <Label
                 htmlFor="declaration"
@@ -129,6 +170,11 @@ export default function Step5({ register, control }: Step5Props) {
             </div>
           )}
         />
+        {errors.declaration && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.declaration.message}
+          </p>
+        )}
       </div>
     </div>
   );

@@ -1,15 +1,18 @@
+"use client";
+
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Controller, UseFormRegister, Control } from "react-hook-form";
+import { Controller, useFormContext } from "react-hook-form";
 import { FormData } from "../MsmeForm";
 
-interface Step3Props {
-  register: UseFormRegister<FormData>;
-  control: Control<FormData>;
-}
+export default function Step3() {
+  const {
+    register,
+    control,
+    formState: { errors },
+  } = useFormContext<FormData>();
 
-export default function Step3({ register, control }: Step3Props) {
   const roles = [
     "Sales",
     "Operations",
@@ -19,7 +22,6 @@ export default function Step3({ register, control }: Step3Props) {
     "Marketing",
     "Others",
   ];
-
   const trainingMethods = ["In-house", "External Trainers", "None", "Other"];
 
   return (
@@ -29,10 +31,17 @@ export default function Step3({ register, control }: Step3Props) {
         <Label>Total Number of Employees</Label>
         <Input
           type="number"
-          {...register("totalEmployees")}
+          {...register("totalEmployees", {
+            required: "Total employees is required",
+          })}
           placeholder="100"
           className="mt-2"
         />
+        {errors.totalEmployees && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.totalEmployees.message}
+          </p>
+        )}
       </div>
 
       {/* Fresh Hires */}
@@ -40,10 +49,17 @@ export default function Step3({ register, control }: Step3Props) {
         <Label>Number of Fresh Hires in Last 12 Months</Label>
         <Input
           type="number"
-          {...register("freshHiresLast12Months")}
+          {...register("freshHiresLast12Months", {
+            required: "Number of fresh hires is required",
+          })}
           placeholder="10"
           className="mt-2"
         />
+        {errors.freshHiresLast12Months && (
+          <p className="mt-1 text-sm text-red-500">
+            {errors.freshHiresLast12Months.message}
+          </p>
+        )}
       </div>
 
       {/* Key Roles */}
@@ -57,7 +73,7 @@ export default function Step3({ register, control }: Step3Props) {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
-                    checked={field.value}
+                    checked={field.value || false}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
@@ -80,7 +96,7 @@ export default function Step3({ register, control }: Step3Props) {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
-                    checked={field.value}
+                    checked={field.value || false}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
