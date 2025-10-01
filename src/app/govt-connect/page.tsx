@@ -56,7 +56,7 @@ const page = () => {
           <>
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                YPD Govt Connect™
+                YPD Govt Connect
               </span>
               <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
