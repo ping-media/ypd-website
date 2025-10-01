@@ -35,7 +35,7 @@ export default function Hero({
   ctaComponent,
 }: HeroProps) {
   return (
-    <section className="p flex justify-center bg-gradient-to-t from-green-50 to-white p-4 sm:p-10 lg:p-20">
+    <section className="flex justify-center bg-gradient-to-t from-green-50 to-white p-4 sm:p-10 lg:p-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
         {/* Heading */}
         <div className="flex w-full max-w-6xl flex-col items-center justify-between gap-4">

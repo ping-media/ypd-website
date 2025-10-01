@@ -1,9 +1,9 @@
+import CvpHero from "@/components/cvp/CvpHero";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/mentor-connect/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const mentorSteps = [
   {
@@ -60,15 +60,35 @@ const mentorSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Join the Future of Mentorship with Youth Pulse Digital"
-        subheading="Connect students with the right mentors, schedule sessions, track progress, and measure impact, all in one powerful platform."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/mentor-connect#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Welcome Mentors, Teachers & Industry Experts"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                YPD Global Navigator™
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            is built on something unique: a pool of Human Mentors trained to
+            work with AI. This isn’t traditional EdTech it&apos;s a new way of
+            mentoring students. It blends real-time AI insights with expert
+            human mentorship to craft a personalized roadmap for your global
+            higher education dreams.
+          </>
         }
+        features={[
+          "Hyper-personalized to each student’s journey",
+          "Contextually correct for real-world challenges",
+          "Experiential in design, not rote-based",
+          "Globally connected, bringing the world into the classroom",
+          "Focused on Critical Thinking, Problem Solving & Innovation",
+        ]}
+        ctaComponent={<GetStartedModalTrigger />}
+        secondaryButtonLink="/mentor-connect#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="mentor connect"
       />
       <CvpLiteSteps
         heading="Inspire and Guide the Next Generation of Learners"
@@ -84,13 +104,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">Join YPD Mentor Connect</span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="If you are a teacher, mentor, or industry expert passionate about guiding students, apply now to be part of a new generation shaping the future of learning with AI-powered mentorship."
+        ctaText="Apply Now"
+        ctaHref="/mentor-connect#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
       <Faq />
     </>

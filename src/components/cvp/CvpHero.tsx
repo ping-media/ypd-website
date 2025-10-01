@@ -11,12 +11,13 @@ interface CvpHeroProps {
   features?: string[];
   buttonText?: string;
   buttonLink?: string;
-  secondaryButtonText?: string; // ✅ new optional button text
-  secondaryButtonLink?: string; // ✅ new optional button link
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
   image: string;
   imageAlt?: string;
   reverse?: boolean;
   featuresTwoCols?: boolean;
+  ctaComponent?: ReactNode; // new prop
 }
 
 export default function CvpHero({
@@ -32,9 +33,13 @@ export default function CvpHero({
   imageAlt = "Feature Image",
   reverse = false,
   featuresTwoCols = false,
+  ctaComponent,
 }: CvpHeroProps) {
   return (
-    <div className="font-lato mx-auto flex max-w-[1440px] flex-col gap-8 px-4 py-6 sm:gap-12 sm:px-10 sm:py-10 lg:gap-16 lg:px-20">
+    <div
+      id="form"
+      className="font-lato mx-auto flex max-w-[1440px] flex-col gap-8 px-4 py-6 sm:gap-12 sm:px-10 sm:py-10 lg:gap-16 lg:px-20"
+    >
       <div
         className={`flex w-full flex-col items-center gap-6 sm:gap-10 md:flex-row lg:gap-20 ${
           reverse ? "lg:flex-row-reverse" : ""
@@ -80,15 +85,17 @@ export default function CvpHero({
 
           {/* ✅ Buttons Section */}
           <div className="flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-            {buttonText && (
-              <Link
-                href={`${BASE_URL}${buttonLink}`}
-                className="btn-size btn-primary shadow"
-              >
-                <Sparkles className="h-5 w-5" />
-                {buttonText}
-              </Link>
-            )}
+            {ctaComponent
+              ? ctaComponent
+              : buttonText && (
+                  <Link
+                    href={`${BASE_URL}${buttonLink}`}
+                    className="btn-size btn-primary shadow"
+                  >
+                    <Sparkles className="h-5 w-5" />
+                    {buttonText}
+                  </Link>
+                )}
 
             {secondaryButtonText && (
               <Link
