@@ -213,7 +213,7 @@ export default function DemoBookForm({ isOpen, onClose }: DemoBookModalProps) {
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-h-[80vh] max-w-2xl overflow-y-auto p-6">
         <DialogHeader className="mb-4">
-          <DialogTitle>Book a Demo</DialogTitle>
+          <DialogTitle>Demo Application</DialogTitle>
           <DialogClose className="absolute top-4 right-4" />
           <Progress value={(step / totalSteps) * 100} className="mt-2 h-2" />
         </DialogHeader>

@@ -1,9 +1,9 @@
+import CvpHero from "@/components/cvp/CvpHero";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/govt-connect/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const govtSteps = [
   {
@@ -50,15 +50,35 @@ const govtSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Partner with YPD to Deliver Effective Government Skilling Programs"
-        subheading="Design and implement outcome-focused training, leverage AI-driven insights, and provide mentorship to ensure measurable impact and future-ready beneficiaries across regions."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/msme-connect#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Partner with YPD to Deliver Effective Government Skilling Programs"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                YPD Govt Connect™
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            brings a new-age AI + Human mentorship model to government skilling
+            programs. It creates hyper-personalized training journeys, focuses
+            on critical thinking, problem solving, and innovation, and ensures
+            successful implementation even in Tier 2–4 cities and rural belts
+            using AI-powered tools to measure progress and ensure
+            accountability.
+          </>
         }
+        features={[
+          "Creates hyper-personalized training journeys for students, jobseekers, and micro-entrepreneurs",
+          "Focuses on critical thinking, problem solving, and innovation, not just theory",
+          "Ensures implementation success, even in Tier 2–4 cities and rural belts",
+          "Uses AI-powered tools to measure progress and ensure accountability",
+        ]}
+        ctaComponent={<GetStartedModalTrigger />}
+        secondaryButtonLink="/govt-connect#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="government connect"
       />
 
       <CvpLiteSteps
@@ -75,13 +95,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">Join YPD Govt Connect</span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="If your organization is looking to transform skilling initiatives into measurable employability outcomes, apply now to make every rupee of training spend count."
+        ctaText="Apply Now"
+        ctaHref="/govt-connect#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
       <Faq />
     </>

@@ -1,16 +1,6 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 
-// interface HeroProps {
-//   heading: string;
-//   subheading: string;
-//   ctaLabel: string;
-//   ctaHref: string;
-//   ctaIcon?: ReactNode;
-//   secondaryCtaLabel?: string;
-//   secondaryCtaHref?: string;
-//   secondaryCtaIcon?: ReactNode;
-// }
 interface HeroProps {
   heading: string;
   subheading: string;

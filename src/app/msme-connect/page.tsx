@@ -1,9 +1,9 @@
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/msme-connect/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import CvpHero from "@/components/cvp/CvpHero";
 
 const msmeSteps = [
   {
@@ -60,17 +60,35 @@ const msmeSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Partner with YPD to Upskill MSME Teams"
-        subheading="Guide employees with practical insights, conduct training sessions, and help build critical skills, innovation, and workplace readiness for a future-ready workforce."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/msme-connect#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Partner with YPD to Upskill MSME Teams"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                YPD MSME Connect
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            helps MSMEs build a future-ready workforce. From making fresh hires
+            workplace-ready to upskilling existing staff, YPD MSME Connect
+            focuses on critical thinking, problem-solving, and innovation
+            skills, enabling teams to stay competitive and thrive in a dynamic
+            market.
+          </>
         }
+        features={[
+          "Upskill employees with employability skills beyond technical know-how",
+          "Make fresh hires efficient, responsible, and workplace-ready",
+          "Develop critical thinking, problem-solving, and innovation skills in teams",
+          "Support MSMEs in building a sustainable, future-ready workforce",
+        ]}
+        ctaComponent={<GetStartedModalTrigger />}
+        secondaryButtonLink="/msme-connect#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="msme connect"
       />
-
       <CvpLiteSteps
         heading="Empowering MSMEs with Skilled and Future-Ready Teams"
         subheading="YPD MSME Connect equips enterprises with practical employability training, onboarding programs, and AI-supported learning tools to build a productive, innovative, and future-ready workforce."
@@ -85,13 +103,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">Join YPD MSME Connect</span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="If your enterprise is ready to strengthen its workforce and embrace AI-enabled training, apply now to make your team future-ready."
+        ctaText="Apply Now"
+        ctaHref="/msme-connect#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
       <Faq />
     </>

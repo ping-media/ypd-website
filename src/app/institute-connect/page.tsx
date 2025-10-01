@@ -1,9 +1,9 @@
+import CvpHero from "@/components/cvp/CvpHero";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/institute-connect/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const InstituteSteps = [
   {
@@ -63,16 +63,36 @@ const InstituteSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Revolutionize Learning with YPD Institute Connect"
-        subheading="Collaborate with schools and colleges to integrate AI-driven learning, guide students across grades, and equip them with critical skills, innovation mindset, and career readiness."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/institute-connect#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Revolutionize Learning with YPD Institute Connect"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                Youth Pulse Digital
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            partners with institutes to bring AI-ready learning to students.
+            Adopt AI-powered tools without heavy cost or complexity, prepare
+            students for the future of work with critical skills, and empower
+            your teachers with AI-enabled mentorship methods. Stand out as an
+            AI-forward institute in your region.
+          </>
         }
+        features={[
+          "Adopt AI-powered learning tools without heavy cost or complexity",
+          "Prepare your students for critical skills: Problem Solving, Critical Thinking, Innovation",
+          "Empower your teachers with AI-enabled mentorship methods",
+          "Stand out as an AI-forward institute in your region",
+        ]}
+        ctaComponent={<GetStartedModalTrigger />}
+        secondaryButtonLink="/institute-connect#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="institute connect"
       />
+
       <CvpLiteSteps
         heading="Building Future-Ready Institutes with AI and Mentorship"
         subheading="YPD Institute Connect empowers schools and colleges with AI-driven learning tools, teacher training, and industry mentorship to prepare students with critical future skills."
@@ -87,12 +107,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">
+              Learn More About Institute Connect
+            </span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="Partner with Youth Pulse Digital to bring AI-ready learning to your students, empower teachers with AI-enabled mentorship, and stand out as an AI-forward institute in your region."
+        ctaText="Apply Now"
+        ctaHref="/institute-connect/#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
       <Faq />

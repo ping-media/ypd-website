@@ -66,7 +66,7 @@ const page = () => {
           <>
             <span className="relative inline-block px-1">
               <span className="text-brand-primary relative z-10 font-semibold">
-                YPD Global Navigator™
+                YPD Mentor Connect
               </span>
               <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
             </span>{" "}
@@ -109,7 +109,7 @@ const page = () => {
         }
         subheading="If you are a teacher, mentor, or industry expert passionate about guiding students, apply now to be part of a new generation shaping the future of learning with AI-powered mentorship."
         ctaText="Apply Now"
-        ctaHref="/mentor-connect#form"
+        ctaHref="/mentor-connect"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
         external={false}
       />

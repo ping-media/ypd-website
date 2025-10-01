@@ -1,9 +1,9 @@
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/book-demo/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import CvpHero from "@/components/cvp/CvpHero";
 
 const demoSteps = [
   {
@@ -50,16 +50,35 @@ const demoSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Request a Demo and Experience YPD’s Full Suite of Solutions Firsthand"
-        subheading="Connect with our team to explore how YPD’s AI-powered tools and outcome-driven training solutions can help your organization, institute, or enterprise deliver measurable impact. Schedule a demo and see our solutions in action."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/book-demo#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="See Learning and Upskilling Like Never Before"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                Experience the YPD Difference
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            Take a closer look at how YPD transforms learning and workforce
+            upskilling. Our demo sessions are designed to show you the real
+            impact of our unique blend of AI-driven tools and human mentorship,
+            helping your organization achieve measurable results.
+          </>
         }
+        features={[
+          "How YPD’s AI-powered tools personalize learning journeys",
+          "The role of Human + AI mentorship in improving outcomes",
+          "Practical use cases for students, employees, or beneficiaries",
+          "How YPD ensures real impact, not just training hours",
+        ]}
+        ctaComponent={<GetStartedModalTrigger label="Book Your Demo" />}
+        secondaryButtonLink="/book-demo#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="book a demo"
       />
+
       <CvpLiteSteps
         heading="Request a Demo and See YPD Solutions in Action"
         subheading="Book a personalized demo to explore how YPD’s AI-powered tools and mentorship can transform learning, upskilling, and workforce readiness for your organization. Experience firsthand the impact of tailored solutions for institutes, MSMEs, and government programs."
@@ -74,13 +93,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">Schedule a Personalized Demo</span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="Have questions or want to learn more? Give us your query and our team will get in touch to schedule a personalized demo for you."
+        ctaText="Get Started"
+        ctaHref="/book-demo#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
       <Faq />
     </>

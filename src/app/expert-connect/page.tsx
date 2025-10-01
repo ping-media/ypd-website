@@ -1,9 +1,9 @@
+import CvpHero from "@/components/cvp/CvpHero";
 import CvpLiteSteps from "@/components/cvp/CvpLiteSteps";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
 import GetStartedModalTrigger from "@/components/expert-connect/GetStartedModalTrigger";
-import Hero from "@/components/module/Hero";
 import Faq from "@/components/other/Faq";
-import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const expertSteps = [
   {
@@ -64,16 +64,38 @@ const expertSteps = [
 const page = () => {
   return (
     <>
-      <Hero
-        heading="Become an Industry Expert with Youth Pulse Digital"
-        subheading="Share your real-world experience, guide students across grades 9–PG, conduct live sessions/webinars, and shape the next generation’s skills, mindset, and career choices."
-        ctaComponent={<GetStartedModalTrigger />}
-        secondaryCtaLabel="How It Works"
-        secondaryCtaHref="/expert-connect#works"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Welcome Industry Leaders"
+        subtitle={
+          <>
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                YPD Expert Connect
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>{" "}
+            is built on something unique: a platform where professionals from
+            across sectors dedicate time to guide students. This isn’t
+            traditional EdTech it’s a new way of connecting the real world with
+            learning. Experts conduct live sessions, share practical insights
+            beyond textbooks, and help students develop the skills, behaviors,
+            and innovation mindset needed to thrive globally.
+          </>
         }
+        features={[
+          "Bring practical insights from industries textbooks and curricula miss",
+          "Guide students to develop real-world skills, behaviors, and innovation mindset",
+          "Bridge the employability gap for young learners",
+          "Connect students directly with industry leaders and thought experts",
+          "Conduct live topic sessions & webinars with students (Grade 9 onwards, including UG/PG)",
+        ]}
+        ctaComponent={<GetStartedModalTrigger />}
+        secondaryButtonLink="/expert-connect#works"
+        secondaryButtonText="How It Works"
+        image="/global-navigator/hero.png"
+        imageAlt="expert connect"
       />
+
       <CvpLiteSteps
         heading="Shape the Future by Sharing Your Expertise"
         subheading="Join Youth Pulse Digital to mentor students, conduct live sessions, and provide real-world guidance that equips learners with critical skills and career insights."
@@ -88,13 +110,14 @@ const page = () => {
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Learn More About YPD</span>
+            <span className="font-bold">Join YPD Expert Connect</span>
           </>
         }
-        subheading="Discover our vision, mission, and how we are reshaping mentorship by blending human expertise with AI-powered tools."
-        ctaText="Explore About Us"
-        ctaHref="/about"
+        subheading="If you are an Industry Professional passionate about sharing knowledge and shaping the future of young India, apply now to inspire students where it matters most at the start of their journey."
+        ctaText="Apply Now"
+        ctaHref="/expert-connect#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
       <Faq />
     </>
