@@ -4,7 +4,18 @@ import { sendMail } from "@/lib/mail/sendMail";
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { firstName, lastName, email, subject, message, newsletter } = body;
+    const {
+      firstName,
+      lastName,
+      email,
+      countryCode,
+      phone,
+      subject,
+      message,
+      newsletter,
+    } = body;
+    // merge phone for display
+    const number = `${countryCode} ${phone}`;
 
     await sendMail({
       to: process.env.TO_EMAIL!,
@@ -13,6 +24,7 @@ export async function POST(req: Request) {
         <h2>Contact Form Submission</h2>
         <p><b>Name:</b> ${firstName} ${lastName || ""}</p>
         <p><b>Email:</b> ${email}</p>
+        <p><b>Phone:</b> ${number}</p>
         <p><b>Subject:</b> ${subject}</p>
         <p><b>Message:</b><br/>${message}</p>
         <p><b>Newsletter Signup:</b> ${newsletter ? "Yes" : "No"}</p>
@@ -20,7 +32,7 @@ export async function POST(req: Request) {
       replyTo: email, // so you can reply directly to user
     });
 
-    console.log("Form submission:", body); 
+    console.log("Form submission:", body);
 
     return NextResponse.json({ success: true });
   } catch (error) {

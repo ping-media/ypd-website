@@ -11,14 +11,24 @@ import {
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import SocialLinks from "../other/SocialLinks";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
+import { useState } from "react";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
   lastName: z.string().min(1, "Last name is required"),
   email: z.string().email("Please enter a valid email address"),
+  countryCode: z.string().min(1, "Code is required"),
+  phone: z.string().regex(/^\d{10}$/, "Must be 10 digits"),
   subject: z.string().min(1, "Subject is required"),
   message: z.string().min(1, "Message is required"),
   newsletter: z.boolean().default(false),
@@ -31,6 +41,8 @@ const ContactUs = () => {
       firstName: "",
       lastName: "",
       email: "",
+      countryCode: "+91",
+      phone: "",
       subject: "",
       message: "",
       newsletter: false,
@@ -66,6 +78,29 @@ const ContactUs = () => {
     }
   };
 
+  // Toggle Address
+  const [activeTab, setActiveTab] = useState<"kolkata" | "dubai">("kolkata");
+
+  const headOffice = (
+    <>
+      Youth Pulse Digital Pvt Ltd <br />
+      Astra Tower, ASO-501, Action Area-IIC, <br />
+      New Town, Kolkata-700161, West Bengal <br />
+      CIN: U62010WB2025PTC281468 <br />
+      GST: 19AACCY0548C1ZG
+    </>
+  );
+
+  const dubaiOffice = (
+    <>
+      YPD Technology Services – FZCO <br />
+      IFZA Business Park, Building A1 <br />
+      Dubai Digital Park, Dubai Silicon Oasis <br />
+      Dubai, United Arab Emirates <br />
+      Trade License Number: 70804
+    </>
+  );
+
   return (
     <section className="flex justify-center bg-white p-4 sm:px-10 lg:px-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
@@ -90,15 +125,46 @@ const ContactUs = () => {
             </h3>
 
             {/* Address Card */}
-            <div className="border-brand-primary bg-brand-gray/10 max-w-lg rounded-xl border-2 p-6">
-              <h4 className="font-poppins mb-2 font-medium">India Location</h4>
+            <div className="border-brand-accent from-brand-primary/95 via-brand-primary/85 to-brand-primary/95 max-w-lg rounded-xl border bg-gradient-to-br p-6 text-white shadow-xl backdrop-blur-sm">
+              {/* Tabs */}
+              <div className="mb-4 flex gap-4">
+                <button
+                  className={`cursor-pointer rounded-full px-3 py-1 font-medium ${
+                    activeTab === "kolkata"
+                      ? "bg-white/20 text-white"
+                      : "text-white/70 transition hover:text-white"
+                  }`}
+                  onClick={() => setActiveTab("kolkata")}
+                >
+                  Regd Head Office
+                </button>
+                <button
+                  className={`cursor-pointer rounded-full px-3 py-1 font-medium ${
+                    activeTab === "dubai"
+                      ? "bg-white/20 text-white"
+                      : "text-white/70 transition hover:text-white"
+                  }`}
+                  onClick={() => setActiveTab("dubai")}
+                >
+                  Regd Office
+                </button>
+              </div>
+
+              {/* Address */}
+              <p className="font-sans text-sm leading-relaxed">
+                {activeTab === "kolkata" ? headOffice : dubaiOffice}
+              </p>
+
+              {/* <h4 className="font-poppins mb-2 text-lg font-semibold">
+                India Location
+              </h4>
               <p className="font-sans text-sm leading-relaxed">
                 Youth Pulse Digital Pvt Ltd <br />
                 Astra Tower, ASO-501, Action Area-IIC, <br />
                 New Town, Kolkata-700161, West Bengal <br />
                 CIN: U62010WB2025PTC281468 <br />
                 GST: 19AACCY0548C1ZG
-              </p>
+              </p> */}
             </div>
 
             {/* Contact Info */}
@@ -170,7 +236,7 @@ const ContactUs = () => {
                       <FormItem className="flex-1">
                         <FormControl>
                           <Input
-                            placeholder="Last Name"
+                            placeholder="Last Name*"
                             className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
                             {...field}
                           />
@@ -198,7 +264,58 @@ const ContactUs = () => {
                     </FormItem>
                   )}
                 />
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={() => (
+                    <div>
+                      <div className="flex gap-2">
+                        {/* Country Code Select */}
+                        <Controller
+                          name="countryCode"
+                          control={form.control}
+                          render={({ field }) => (
+                            <Select
+                              value={field.value}
+                              onValueChange={field.onChange}
+                            >
+                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-24 rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
+                                <SelectValue placeholder="+91" />
+                              </SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="+91">+91</SelectItem>
+                                <SelectItem value="+1">+1</SelectItem>
+                                <SelectItem value="+44">+44</SelectItem>
+                                <SelectItem value="+971">+971</SelectItem>
+                                <SelectItem value="+65">+65</SelectItem>
+                              </SelectContent>
+                            </Select>
+                          )}
+                        />
 
+                        {/* Phone Input */}
+                        <FormControl>
+                          <Input
+                            type="tel"
+                            {...form.register("phone")}
+                            placeholder="9876543210"
+                            className="focus:ring-brand-accent/40 focus:border-brand-accent h-12 flex-1 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                            inputMode="numeric"
+                            maxLength={10}
+                            onInput={(e) => {
+                              const target = e.target as HTMLInputElement;
+                              target.value = target.value
+                                .replace(/\D/g, "")
+                                .slice(0, 10);
+                            }}
+                          />
+                        </FormControl>
+                      </div>
+
+                      <FormMessage />
+                    </div>
+                  )}
+                />
                 <FormField
                   control={form.control}
                   name="subject"
