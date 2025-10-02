@@ -57,7 +57,7 @@ export default function CookieConsent() {
                 href={"/#"}
                 className="btn-size btn-primary cursor-pointer max-sm:w-full"
               >
-                Cookies Settings
+                Necessary Cookies Only
               </Link>
               <button
                 onClick={() => handleConsent("accepted")}
