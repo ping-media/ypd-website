@@ -76,7 +76,7 @@ const Links = [
       { name: "School / Institute OS", href: "/school-os" },
       { name: "Institute Connect", href: "/institute-connect" },
       { name: "MSME Connect", href: "/msme-connect" },
-      { name: "Corporate Connect", href: "/coming-soon" },
+      { name: "Corporate Connect", href: "/corporate-connect" },
       { name: "Govt Connect", href: "/govt-connect" },
       { name: "Book A Demo", href: "/book-demo" },
     ],
