@@ -53,6 +53,7 @@ export interface FormData {
   // Section 5: Compliance & Declaration
   ndaConsent: string;
   facultyTrainingConsent: string;
+  dataConsent?: boolean;
   declaration: boolean;
 
   // Optional: for file uploads or attachments
@@ -89,6 +90,7 @@ export default function InstituteConnectForm({
         "Exposure to Global Mentors & Experts": false,
         "Differentiation from Competitor Institutes": false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });
