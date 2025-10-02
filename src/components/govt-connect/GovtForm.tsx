@@ -93,7 +93,6 @@ export default function GovtConnectForm({
         Other: false,
       },
       dataConsent: false,
-
       declaration: false,
     },
   });

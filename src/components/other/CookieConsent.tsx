@@ -7,23 +7,19 @@ import Link from "next/link";
 export default function CookieConsent() {
   const [show, setShow] = useState(false);
 
-  // Show banner only if no choice stored
   useEffect(() => {
     if (!localStorage.getItem("cookieConsent")) {
       setShow(true);
     }
   }, []);
 
-  // Unified handler for accept/reject
   const handleConsent = (choice: "accepted" | "rejected") => {
     localStorage.setItem("cookieConsent", choice);
     setShow(false);
 
     if (choice === "accepted") {
-      // ✅ Place analytics/init scripts here
       console.log("Cookies accepted");
     } else {
-      // 🚫 Block analytics/clear cookies here
       console.log("Cookies rejected");
     }
   };
@@ -33,9 +29,8 @@ export default function CookieConsent() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 z-50 w-full border-t bg-white px-20 pt-4 pb-8 shadow-lg">
+    <div className="fixed bottom-0 left-0 z-50 w-full border-t bg-white px-4 pt-4 pb-8 shadow-lg sm:px-8 lg:px-20">
       <div className="mx-auto max-w-7xl text-sm">
-        {/* Wrap everything */}
         <div className="flex flex-col gap-4">
           {/* Close button */}
           <div className="flex justify-end">
@@ -59,20 +54,20 @@ export default function CookieConsent() {
             {/* Buttons */}
             <div className="flex w-full flex-col items-center justify-center gap-3 text-sm sm:w-auto sm:flex-row sm:gap-5 sm:text-base lg:text-lg">
               <Link
-                href={"/coming-soon"}
-                className="border-brand-accent flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 hover:bg-green-100 sm:w-auto sm:px-5 sm:py-3.5"
+                href={"/#"}
+                className="btn-size btn-primary cursor-pointer max-sm:w-full"
               >
                 Cookies Settings
               </Link>
               <button
                 onClick={() => handleConsent("accepted")}
-                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
+                className="btn-size btn-primary w-full cursor-pointer sm:w-auto"
               >
                 Accept All
               </button>
               <button
                 onClick={() => handleConsent("rejected")}
-                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
+                className="btn-size btn-primary w-full cursor-pointer sm:w-auto"
               >
                 Reject All Cookies
               </button>
