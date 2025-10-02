@@ -66,13 +66,13 @@ export default function CookieConsent() {
               </Link>
               <button
                 onClick={() => handleConsent("accepted")}
-                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
+                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
               >
                 Accept All
               </button>
               <button
                 onClick={() => handleConsent("rejected")}
-                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
+                className="text-brand-fg bg-brand-primary border-brand-accent hover:bg-brand-primary/90 flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg border px-4 py-3 sm:w-auto sm:px-5 sm:py-3.5"
               >
                 Reject All Cookies
               </button>
