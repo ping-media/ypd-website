@@ -122,7 +122,6 @@ const page = () => {
         ctaLink="/coming-soon"
       />
       <Modules
-        heading="How it Works"
         subheading="The UPSC Mentor™ is a structured, AI-powered preparation journey covering Prelims, Mains, and Interview stages. It blends syllabus mastery, real-time performance analytics, and role-based personality readiness to help aspirants approach the exam with precision, clarity, and officer-like confidence. Here’s a glimpse of your guided experience:"
         steps={steps}
         images={{
