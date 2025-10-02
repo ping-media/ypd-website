@@ -279,15 +279,14 @@ const ContactUs = () => {
                               value={field.value}
                               onValueChange={field.onChange}
                             >
-                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-24 rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
+                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-24 cursor-pointer rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
                                 <SelectValue placeholder="+91" />
                               </SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="+91">+91</SelectItem>
-                                <SelectItem value="+1">+1</SelectItem>
-                                <SelectItem value="+44">+44</SelectItem>
-                                <SelectItem value="+971">+971</SelectItem>
-                                <SelectItem value="+65">+65</SelectItem>
+                                <SelectItem value="+91">IND +91</SelectItem>
+                                <SelectItem value="+1">USA +1</SelectItem>
+                                <SelectItem value="+44">UK +44</SelectItem>
+                                <SelectItem value="+61">AUS +61</SelectItem>
                               </SelectContent>
                             </Select>
                           )}

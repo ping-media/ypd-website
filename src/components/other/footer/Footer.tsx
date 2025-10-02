@@ -43,6 +43,65 @@ const FooterSectionAccordion = ({ title, links }: SectionProps) => {
   );
 };
 
+// ✅ Reusable Office Address Component
+function OfficeAddress() {
+  const [activeTab, setActiveTab] = useState<"kolkata" | "dubai">("kolkata");
+
+  const headOffice = (
+    <>
+      Youth Pulse Digital Pvt Ltd <br />
+      Astra Tower, ASO-501, Action Area-IIC, <br />
+      New Town, Kolkata-700161, West Bengal <br />
+      CIN: U62010WB2025PTC281468 <br />
+      GST: 19AACCY0548C1ZG
+    </>
+  );
+
+  const dubaiOffice = (
+    <>
+      YPD Technology Services – FZCO <br />
+      IFZA Business Park, Building A1 <br />
+      Dubai Digital Park, Dubai Silicon Oasis <br />
+      Dubai, United Arab Emirates <br />
+      Trade License Number: 70804
+    </>
+  );
+
+  return (
+    <div>
+      {/* Small inline toggle */}
+      <div className="mb-2 flex gap-3">
+        <button
+          className={`cursor-pointer text-sm font-medium whitespace-nowrap ${
+            activeTab === "kolkata"
+              ? "text-white"
+              : "text-white/60 transition hover:text-white"
+          }`}
+          onClick={() => setActiveTab("kolkata")}
+        >
+          Regd Head Office
+        </button>
+        <span className="text-white/40">|</span>
+        <button
+          className={`cursor-pointer text-sm font-medium whitespace-nowrap ${
+            activeTab === "dubai"
+              ? "text-white"
+              : "text-white/60 transition hover:text-white"
+          }`}
+          onClick={() => setActiveTab("dubai")}
+        >
+          Regd Office
+        </button>
+      </div>
+
+      {/* Address */}
+      <p className="text-sm leading-relaxed text-white">
+        {activeTab === "kolkata" ? headOffice : dubaiOffice}
+      </p>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
     <footer className="bg-[#003000] bg-[radial-gradient(ellipse_at_top,#D1D38C33_10%,#003000_40%)] font-sans text-white">
@@ -52,14 +111,15 @@ export default function Footer() {
           <h2 className="font-poppins text-base font-medium">
             Youth Pulse Digital™
           </h2>
-          <p className="text-sm font-medium">Regd Office</p>
+          {/* <p className="text-sm font-medium">Regd Office</p>
           <p className="text-sm text-white">
             Youth Pulse Digital Pvt Ltd <br />
             Astra Tower, ASO-501, Action Area-IIC, <br />
             New Town, Kolkata-700161, West Bengal <br />
             CIN: U62010WB2025PTC281468 <br />
             GST: 19AACCY0548C1ZG
-          </p>
+          </p> */}
+          <OfficeAddress />
 
           <div className="space-y-5 text-white">
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
@@ -108,14 +168,15 @@ export default function Footer() {
             <h2 className="font-poppins text-base font-medium">
               Youth Pulse Digital™
             </h2>
-            <p className="text-sm font-medium">Regd Office</p>
+            {/* <p className="text-sm font-medium">Regd Office</p>
             <p className="text-sm text-white">
               Youth Pulse Digital Pvt Ltd <br />
               Astra Tower, ASO-501, Action Area-IIC, <br />
               New Town, Kolkata-700161, West Bengal <br />
               CIN: U62010WB2025PTC281468 <br />
               GST: 19AACCY0548C1ZG
-            </p>
+            </p> */}
+            <OfficeAddress />
 
             <div className="space-y-5 text-white">
               <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
