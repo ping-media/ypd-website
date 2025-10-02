@@ -52,6 +52,9 @@ export default function Step3() {
                 <SelectItem value="Above ₹10 Crores">
                   Above ₹10 Crores
                 </SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}

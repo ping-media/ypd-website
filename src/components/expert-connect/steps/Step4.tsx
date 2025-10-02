@@ -78,11 +78,14 @@ export default function Step4() {
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}
@@ -107,11 +110,14 @@ export default function Step4() {
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
               <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}

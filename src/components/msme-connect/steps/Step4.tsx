@@ -30,7 +30,7 @@ export default function Step4() {
     "Other",
   ];
 
-  const deliveryModes = ["Online", "Blended", "On-site"];
+  const deliveryModes = ["Online", "Blended (Online / Offline)", "On-site"];
   const timelines = ["Immediate", "3 months", "6 months"];
 
   return (

@@ -35,6 +35,9 @@ export default function Step5() {
                 <SelectItem value="Low">Low</SelectItem>
                 <SelectItem value="Medium">Medium</SelectItem>
                 <SelectItem value="High">High</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}
@@ -61,6 +64,9 @@ export default function Step5() {
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}
@@ -89,6 +95,9 @@ export default function Step5() {
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}
@@ -100,9 +109,32 @@ export default function Step5() {
         )}
       </div>
 
-      {/* Declaration */}
+      {/* Data Consent (Optional) */}
       <div className="border-t border-gray-200 pt-4">
-        <h4 className="mb-3 text-base font-semibold">Declaration</h4>
+        <Controller
+          name="dataConsent"
+          control={control}
+          render={({ field }) => (
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="dataConsent"
+                checked={field.value}
+                onCheckedChange={field.onChange}
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+              />
+              <Label
+                htmlFor="dataConsent"
+                className="cursor-pointer text-sm leading-relaxed"
+              >
+                I acknowledge and consent to the handling of my information.
+              </Label>
+            </div>
+          )}
+        />
+      </div>
+
+      {/* Declaration */}
+      <div>
         <Controller
           name="declaration"
           control={control}

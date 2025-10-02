@@ -51,6 +51,7 @@ export interface FormData {
   budgetAllocationReadiness: string;
   coBrandedReports: string;
   partnershipAgreement: string;
+  dataConsent?: boolean;
   declaration: boolean;
 }
 
@@ -81,6 +82,7 @@ export default function CorporateConnectForm({
         "Career Reinvention Program™ (CRP) – Early/Mid-Career Professionals": false,
         "Both Programs": false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });

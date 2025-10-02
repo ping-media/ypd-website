@@ -19,8 +19,8 @@ export default function Step5() {
   } = useFormContext<FormData>();
 
   const weeklyCommitments = ["2-4", "5-8", "Other"];
-  const budgetOptions = ["Low", "Medium", "High"];
-  const yesNoOptions = ["Yes", "No"];
+  const budgetOptions = ["Low", "Medium", "High", "Prefer Not To Answer"];
+  const yesNoOptions = ["Yes", "No", "Prefer Not To Answer"];
 
   return (
     <div className="space-y-6">
@@ -142,6 +142,30 @@ export default function Step5() {
             {errors.ndaConsent.message}
           </p>
         )}
+      </div>
+
+      {/* Data Consent (Optional) */}
+      <div className="border-t border-gray-200 pt-4">
+        <Controller
+          name="dataConsent"
+          control={control}
+          render={({ field }) => (
+            <div className="flex items-start gap-2">
+              <Checkbox
+                id="dataConsent"
+                checked={field.value}
+                onCheckedChange={field.onChange}
+                className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
+              />
+              <Label
+                htmlFor="dataConsent"
+                className="cursor-pointer text-sm leading-relaxed"
+              >
+                I acknowledge and consent to the handling of my information.
+              </Label>
+            </div>
+          )}
+        />
       </div>
 
       {/* Declaration */}

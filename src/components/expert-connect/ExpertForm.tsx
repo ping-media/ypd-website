@@ -48,6 +48,7 @@ export interface FormData {
   ndaConsent: string;
   recordingConsent: string;
   idProof?: FileList;
+  dataConsent?: boolean;
   declaration: boolean;
 }
 
@@ -92,6 +93,7 @@ export default function ExpertConnectForm({
         PG: false,
         "Early Professionals": false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });

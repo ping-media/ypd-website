@@ -34,6 +34,7 @@ export interface FormData {
   preferredDemoMode: string;
   preferredTimeSlots: Record<string, boolean>;
   expectedParticipants: Record<string, boolean>;
+  dataConsent: boolean;
   declaration: boolean;
 }
 
@@ -76,6 +77,7 @@ export default function DemoBookForm({ isOpen, onClose }: DemoBookModalProps) {
         "5-10": false,
         "10+": false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });

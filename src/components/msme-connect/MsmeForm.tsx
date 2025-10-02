@@ -56,6 +56,7 @@ export interface FormData {
   budgetReadiness: string;
   adoptAITools: string;
   ndaConsent: string;
+  dataConsent?: boolean;
   declaration: boolean;
 
   // Optional attachments
@@ -101,6 +102,7 @@ export default function MSMEConnectForm({
         "Digital Skills & AI Awareness": false,
         Other: false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });

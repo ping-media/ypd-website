@@ -48,6 +48,7 @@ export interface FormData {
 
   mouConsent: string;
   trackingConsent: string;
+  dataConsent?: boolean;
   declaration: boolean;
 
   documents?: FileList;
@@ -91,6 +92,8 @@ export default function GovtConnectForm({
         DigitalLiteracy: false,
         Other: false,
       },
+      dataConsent: false,
+
       declaration: false,
     },
   });

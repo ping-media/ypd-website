@@ -90,6 +90,9 @@ export default function Step4() {
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
                 <SelectItem value="No">No</SelectItem>
+                <SelectItem value="Prefer Not To Answer">
+                  Prefer Not To Answer
+                </SelectItem>
               </SelectContent>
             </Select>
           )}

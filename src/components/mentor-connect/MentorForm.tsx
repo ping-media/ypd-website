@@ -45,6 +45,7 @@ export interface FormData {
   ndaConsent: string;
   toolsConsent: string;
   idProof: FileList;
+  dataConsent?: boolean;
   declaration: boolean;
 }
 
@@ -89,6 +90,7 @@ export default function MentorForm({
         UG: false,
         PG: false,
       },
+      dataConsent: false,
       declaration: false,
     },
   });
