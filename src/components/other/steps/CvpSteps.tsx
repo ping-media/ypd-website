@@ -50,7 +50,10 @@ const CvpSteps = ({
   subheading = "YPD doesn&apos;t just assess. It takes you through a 360° mapping process through its framework, Trained AI Mentors, Active User participation using adaptive & personalized journey to build what truly fits you.",
 }: CvpStepsProps) => {
   return (
-    <div className="font-lato flex justify-center bg-[#FAFAFA] p-4 sm:p-10 lg:p-20">
+    <div
+      id="works"
+      className="font-lato flex justify-center bg-[#FAFAFA] p-4 sm:p-10 lg:p-20"
+    >
       <div className="flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-10 lg:gap-14">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center gap-4 text-center">

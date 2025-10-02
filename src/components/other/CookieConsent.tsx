@@ -53,12 +53,12 @@ export default function CookieConsent() {
 
             {/* Buttons */}
             <div className="flex w-full flex-col items-center justify-center gap-3 text-sm sm:w-auto sm:flex-row sm:gap-5 sm:text-base lg:text-lg">
-              <Link
-                href={"/#"}
+              <button
+                onClick={() => handleConsent("accepted")}
                 className="btn-size btn-primary cursor-pointer max-sm:w-full"
               >
                 Necessary Cookies Only
-              </Link>
+              </button>
               <button
                 onClick={() => handleConsent("accepted")}
                 className="btn-size btn-primary w-full cursor-pointer sm:w-auto"

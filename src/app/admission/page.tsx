@@ -1,157 +1,199 @@
-import CareersContact from "@/components/careers/CareersContact";
 import CvpFeature from "@/components/cvp/CvpFeature";
-import CvpLiteWorks from "@/components/cvp/CvpLiteWorks";
+import CvpHero from "@/components/cvp/CvpHero";
 import CvpSeperate from "@/components/cvp/CvpSeperate";
-import Hero from "@/components/module/Hero";
 import Modules from "@/components/module/Modules";
 import Faq from "@/components/other/Faq";
-import {
-  ArrowRight,
-  Bell,
-  BriefcaseBusiness,
-  Calendar,
-  CreditCard,
-  FileText,
-  Sparkles,
-} from "lucide-react";
+import CvpSteps from "@/components/other/steps/CvpSteps";
+import { ArrowRight, Bell, Calendar, CreditCard, FileText } from "lucide-react";
 
 const features = [
   {
     icon: FileText,
-    title: "Unified Admissions",
-    description:
-      "Manage inquiries, applications, and enrollments in one seamless flow.",
+    title: "Schools",
+    description: "Board-aligned tests (CBSE, ICSE, IB, State Boards).",
   },
   {
     icon: Calendar,
-    title: "Smart Testing",
-    description:
-      "Automate exam scheduling, conduct assessments, and publish results instantly.",
+    title: "Colleges",
+    description: "Entrance screening, document handling, interview scheduling.",
   },
   {
     icon: CreditCard,
-    title: "Integrated Fee Management",
-    description:
-      "Simplify payments with invoicing, tracking, and secure online transactions.",
+    title: "Private Institutes",
+    description: " Admission tests for professional/vocational programs.",
   },
   {
     icon: Bell,
-    title: "Reports & Notifications",
-    description:
-      "Generate detailed reports and send real-time updates to students, parents, and staff.",
+    title: "Multi-Branch Groups",
+    description: "Centralized dashboards with branch-wise workflows.",
   },
 ];
 
 const steps = [
   {
-    title: "Admission & Test Module",
-    subtitle:
-      "From applications to assessments, manage the entire student journey in one place.",
+    title: "For Students & Parents",
     features: [
-      "Admission Module",
-      "Online application management",
-      "Smart test scheduling & results",
-      "Fees Management",
-      "Activity Log",
-      "Automated notifications & reports",
+      "Seamless Registration → OTP/email login, multilingual options",
+      "Adaptive Online Tests → Board/stream/subject aligned, difficulty-based.",
+      "Transparent Journey → Track application → test → interview → final admission.",
+      "Documents in One Place → Upload certificates, mark sheets, ID proofs.",
+      "Instant Updates → Test tokens, results, and interview calls via Dashboard/SMS/email.",
     ],
     buttonText: "Inquire Now",
-    buttonLink: "/coming-soon",
+    buttonLink: "/contact",
   },
   {
-    title: "Hiring Module",
-    subtitle:
-      "Recruit smarter with streamlined workflows that bring the best talent to your organization.",
+    title: "For Institutions",
     features: [
-      "Job posting & application tracking",
-      "Candidate evaluation & shortlisting",
-      "Interview scheduling & feedback",
-      "Activity Log",
-      "User Management",
+      "Custom Test Designer → Create question banks by board/stream/grade/subject.",
+      "Application Lifecycle Manager → From form submission to final seat confirmation.",
+      "Interview & Counseling Scheduler → Allocate slots, reschedule, send reminders.",
+      "Scholarship & Quota Logic → Auto-apply score-based scholarships and quotas.",
+      "Analytics Dashboard → Admission funnel, test performance, seat conversion.",
     ],
     buttonText: "Inquire Now",
-    buttonLink: "/coming-soon",
+    buttonLink: "/contact",
   },
 ];
-const audience = [
+
+const admissionSteps = [
   {
     id: 1,
-    title: "Speed up your workflows",
-    description:
-      "Automate routine tasks and save hours every week, so you can focus on what really matters.",
-    icon: "/cvplite/r1.svg",
-    image: "/module/1.png",
+    title: "Register & Pay",
+    description: "Students/parents sign up with OTP/email.",
   },
   {
     id: 2,
-    title: "Secure & reliable system",
-    description:
-      "Your data is protected with enterprise-grade security and uptime you can always count on.",
-    icon: "/cvplite/r2.svg",
-    image: "/module/2.png",
+    title: "Apply",
+    description: "Submit application and upload required documents.",
   },
   {
     id: 3,
-    title: "Scalable for your needs",
+    title: "Test",
     description:
-      "Whether you’re starting small or expanding globally, our modules grow with your organization.",
-    icon: "/cvplite/r3.svg",
-    image: "/module/3.png",
+      "Secure token-based online test, randomized for each student, delivered through the platform.",
+  },
+  {
+    id: 4,
+    title: "Interview",
+    description:
+      "Institutions schedule and manage interviews digitally, ensuring every interview is organized and tracked within the platform.",
+  },
+  {
+    id: 5,
+    title: "Decide",
+    description:
+      "Auto-generated reports, offer letters, and admission confirmations",
+  },
+];
+
+const admissionFaqs = [
+  {
+    question: "Which boards and exams are supported?",
+    answer:
+      "The YPD Admission Test System™ currently supports CBSE, ICSE, State Boards, IB, IGCSE, and American/British curricula from Pre-Nursery up to Class 12. For higher education, the same engine can be configured for college entrance, vocational, and institute-specific admission tests with board/stream/subject-aligned MCQs.",
+  },
+  {
+    question: "Can colleges use this for entrance exams?",
+    answer:
+      "Yes. While built for K–12 schools, the system is designed as a multi-tenant SaaS product. Colleges and private institutes can configure custom test banks, admission workflows, and interview scheduling — whether for undergraduate entry, professional programs, or vocational courses.",
+  },
+  {
+    question: "How secure are the tests?",
+    answer:
+      "Tests are delivered via token-based secure access, randomized per student, and once a test is started, the version is locked for that user. Data is stored with role-based permissions, complete audit trails, and compliance with GDPR/state education guidelines. The platform also supports offline fallback to handle poor connectivity.",
+  },
+  {
+    question: "Can parents/students track status online?",
+    answer:
+      "Yes. Every applicant receives a personalized dashboard with:\n• Application status tracker\n• Test history and results\n• Document upload & verification status\n• Interview slot updates\n• Notifications for shortlist, offer letters, and re-submissions.",
+  },
+  {
+    question: "Can institutes set custom scholarship cutoffs?",
+    answer:
+      "Yes. Institutes can configure quota categories and score-based scholarships directly in the admin panel. Category-wise cutoffs, auto-triggers for scholarships, and notification alerts for parents are built into the Test Config & Scholarship Management module.",
+  },
+  {
+    question: "What reporting options are available?",
+    answer:
+      "The system auto-generates branded PDFs for:\n• Application summary reports\n• Test score reports\n• Interview slot confirmations\n• Offer letters with admission terms\nAdmins have access to live dashboards for applications per grade/stream, test performance breakdowns, interview slot utilization, and conversion ratios (applied → shortlisted → admitted).",
+  },
+  {
+    question:
+      "Is this suitable for Tier 2/3 institutions with low tech support?",
+    answer:
+      "Yes. The system is lightweight, mobile-first, and progressive-web-app enabled. It works even on low bandwidth and includes offline test capability. Affordable pricing tiers are designed to make it accessible for schools and colleges in Tier 2/3 cities.",
+  },
+  {
+    question: "Does it support multiple campuses?",
+    answer:
+      "Yes. Being a multi-tenant SaaS platform, each school or campus operates with an isolated code and its own branded dashboard. Multi-branch groups can centrally monitor applications, tests, and admissions across campuses.",
   },
 ];
 const page = () => {
   return (
     <>
-      <Hero
-        heading="End-to-End Admissions and Testing, All in One Place"
-        subheading="Simplify applications, manage assessments, track fees, and keep every student, parent, and staff member connected through one integrated platform."
-        ctaLabel="Apply for Admission Module"
-        ctaHref="/coming-soon"
-        ctaIcon={<Sparkles className="h-5 w-5 sm:h-6 sm:w-6" />}
-        secondaryCtaHref="/coming-soon"
-        secondaryCtaIcon={
-          <BriefcaseBusiness className="h-5 w-5 sm:h-6 sm:w-6" />
+      <CvpHero
+        title="Admissions Made Smarter. Testing Made Simpler."
+        subtitle={
+          <>
+            A multi-tenant digital admission system for{" "}
+            <span className="relative inline-block px-1">
+              <span className="text-brand-primary relative z-10 font-semibold">
+                Schools, Colleges, and Institutes
+              </span>
+              <span className="absolute right-0 bottom-0 left-0 z-0 h-1/3 translate-y-[-10%] rounded-b-xs bg-green-200"></span>
+            </span>
+            . From application intake to board/stream/subject-aligned online
+            tests, document verification, interviews, and final admissions — all
+            in one seamless platform.
+          </>
         }
-        secondaryCtaLabel="Apply for Hiring Module"
-      />
-
-      <CvpFeature
-        heading="Key Features That Empower Your Career Decisions"
-        features={features}
-        ctaText="Start Your Journey Now"
-        ctaLink="/coming-soon"
+        features={[
+          "Schools → Board-aligned tests (CBSE, ICSE, IB, State Boards).",
+          "Colleges → Entrance screening, document handling, interview scheduling.",
+          "Private Institutes → Admission tests for professional/vocational programs.",
+          "	Multi-Branch Groups → Centralized dashboards with branch-wise workflows.",
+        ]}
+        buttonText="Request Demo"
+        buttonLink="/book-demo"
+        secondaryButtonText="How it works"
+        secondaryButtonLink="/admission#works"
+        image="/careerverse/hero.png"
+        imageAlt="Digital admission platform illustration"
+        external={false}
       />
       <Modules
-        heading="How it Works"
-        subheading="The UPSC Mentor™ is a structured, AI-powered preparation journey covering Prelims, Mains, and Interview stages. It blends syllabus mastery, real-time performance analytics, and role-based personality readiness to help aspirants approach the exam with precision, clarity, and officer-like confidence. Here’s a glimpse of your guided experience:"
         steps={steps}
         images={{
           first: "/cvplite/cvplite1.png",
           second: "/cvplite/cvplite2.png",
         }}
       />
-      <CvpLiteWorks
-        heading="Built for Growth, Designed for Ease"
-        subheading="Our modules combine simplicity and power helping you focus on results, not manual work."
-        audience={audience}
+      <CvpSteps
+        steps={admissionSteps}
+        heading="A Simple, Transparent 5-Step Journey"
+        subheading=" Everything is tracked. Nothing slips through the cracks."
       />
+      <CvpFeature
+        heading="Built to Work With Your Systems"
+        features={features}
+      />
+
       <CvpSeperate
         bgImage="/cvplite/cvpbg.svg"
         heading={
           <>
-            <span className="font-bold">Ready to Get Started?</span>
+            <span className="font-bold">Ready to Simplify Admissions?</span>
           </>
         }
-        subheading="Select the module that fits your needs and apply today. Our team will guide you through setup."
-        ctaText="Inquire For Any Module"
-        ctaHref="/coming-soon"
+        subheading="Choose the YPD Admission System™ module that fits your institution — from application intake to online tests, interviews, and final admissions. Our team will guide you through setup and onboarding."
+        ctaText="Request Demo"
+        ctaHref="/book-demo"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
+        external={false}
       />
-      <CareersContact
-        headline="Still Searching for the Right Exam?"
-        subheading="Tell us your goal, we’ll guide you to the most relevant resources for your journey."
-      />
-      <Faq />
+      <Faq faqs={admissionFaqs} />
     </>
   );
 };

@@ -13,7 +13,6 @@ interface Step {
 }
 
 interface ModulesProps {
-  heading: string;
   subheading?: string;
   steps: Step[];
   images: {
@@ -23,7 +22,7 @@ interface ModulesProps {
   };
 }
 
-export default function Modules({ heading, steps, images }: ModulesProps) {
+export default function Modules({ steps, images }: ModulesProps) {
   // Render one step card
   const renderStepCard = (step: Step) => (
     <div
@@ -102,7 +101,7 @@ export default function Modules({ heading, steps, images }: ModulesProps) {
                   <div className="relative aspect-[4/3] w-full sm:aspect-[3/2] lg:aspect-[4/3]">
                     <Image
                       src={allImages[i % allImages.length]}
-                      alt={`${heading} preview ${i + 1}`}
+                      alt={`preview ${i + 1}`}
                       fill
                       className="rounded-2xl object-fill shadow-md sm:rounded-3xl lg:rounded-4xl"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 55vw, 60vw"

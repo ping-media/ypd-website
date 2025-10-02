@@ -18,6 +18,7 @@ interface CvpHeroProps {
   reverse?: boolean;
   featuresTwoCols?: boolean;
   ctaComponent?: ReactNode; // new prop
+  external?: boolean;
 }
 
 export default function CvpHero({
@@ -34,7 +35,10 @@ export default function CvpHero({
   reverse = false,
   featuresTwoCols = false,
   ctaComponent,
+  external,
 }: CvpHeroProps) {
+  // Determine full href based on external flag
+  const fullHref = external === false ? buttonLink : `${BASE_URL}${buttonLink}`;
   return (
     <div
       id="form"
@@ -88,10 +92,7 @@ export default function CvpHero({
             {ctaComponent
               ? ctaComponent
               : buttonText && (
-                  <Link
-                    href={`${BASE_URL}${buttonLink}`}
-                    className="btn-size btn-primary shadow"
-                  >
+                  <Link href={fullHref} className="btn-size btn-primary shadow">
                     <Sparkles className="h-5 w-5" />
                     {buttonText}
                   </Link>

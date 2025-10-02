@@ -24,7 +24,7 @@ const CvpFeature = ({
   subheading,
 }: CvpFeatureProps) => {
   return (
-    <section className="flex justify-center bg-white p-4 sm:px-10 sm:py-5 lg:px-20 lg:py-10">
+    <section className="flex justify-center bg-white p-4 sm:px-10 sm:py-5 lg:px-20 lg:py-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-8 sm:gap-12">
         {/* Heading */}
         <div className="flex max-w-7xl flex-col items-center justify-between gap-4 text-center">
