@@ -259,7 +259,7 @@ export default function Footer() {
               },
               { label: "Aptitude Trainer™", href: "/crp-aptitude" },
               { label: "Reboot Navigator™", href: "/career-reboot" },
-              { label: "Reinvention Guru", href: "/reinvention-guru" },
+              { label: "Reinvention Guru™", href: "/reinvention-guru" },
               // { label: "Innovation Hub", href: "/innovation-hub" },
               // { label: "Pulse Nexus", href: "/pulse-nexus" },
               { label: "Expert Connect", href: "/expert-connect" },
