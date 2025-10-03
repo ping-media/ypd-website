@@ -22,6 +22,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/ui/select";
+import { countryCodes } from "@/config/formFieldsData";
 
 const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2 MB
 
@@ -142,18 +143,20 @@ export default function CareersContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Select
-                    value={field.value}
-                    onValueChange={(val) => field.onChange(val)}
-                  >
+                  <Select onValueChange={(val) => field.onChange(val)}>
                     <SelectTrigger className="text-muted-foreground rounded-lg border border-gray-300 px-3">
-                      <SelectValue placeholder="Code" />
+                      <SelectValue placeholder="IND +91">
+                        {field.value &&
+                          countryCodes.find((c) => c.value === field.value)
+                            ?.label}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="IND">IND +91</SelectItem>
-                      <SelectItem value="USA">USA +1</SelectItem>
-                      <SelectItem value="UK">UK +44</SelectItem>
-                      <SelectItem value="AUS">AUS +61</SelectItem>
+                      {countryCodes.map((code) => (
+                        <SelectItem key={code.value} value={code.value}>
+                          {code.label} {code.country}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </FormControl>

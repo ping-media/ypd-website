@@ -22,6 +22,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import { useState } from "react";
+import { countryCodes } from "@/config/formFieldsData";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -304,14 +305,23 @@ const ContactUs = () => {
                               value={field.value}
                               onValueChange={field.onChange}
                             >
-                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-24 cursor-pointer rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
-                                <SelectValue placeholder="+91" />
+                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-28 cursor-pointer rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
+                                <SelectValue placeholder="+91">
+                                  {field.value &&
+                                    countryCodes.find(
+                                      (c) => c.value === field.value,
+                                    )?.label}
+                                </SelectValue>
                               </SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="+91">IND +91</SelectItem>
-                                <SelectItem value="+1">USA +1</SelectItem>
-                                <SelectItem value="+44">UK +44</SelectItem>
-                                <SelectItem value="+61">AUS +61</SelectItem>
+                                {countryCodes.map((code) => (
+                                  <SelectItem
+                                    key={code.value}
+                                    value={code.value}
+                                  >
+                                    {code.label} {code.country}
+                                  </SelectItem>
+                                ))}
                               </SelectContent>
                             </Select>
                           )}

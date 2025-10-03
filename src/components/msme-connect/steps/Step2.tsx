@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { countryCodes } from "@/config/formFieldsData";
 
 export default function Step2() {
   const {
@@ -83,13 +84,18 @@ export default function Step2() {
             rules={{ required: "Select country code" }}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="w-24">
-                  <SelectValue placeholder="+91" />
+                <SelectTrigger className="w-28 px-2">
+                  <SelectValue placeholder="+91">
+                    {field.value &&
+                      countryCodes.find((c) => c.value === field.value)?.label}
+                  </SelectValue>
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="+91">+91</SelectItem>
-                  <SelectItem value="+1">+1</SelectItem>
-                  <SelectItem value="+44">+44</SelectItem>
+                  {countryCodes.map((code) => (
+                    <SelectItem key={code.value} value={code.value}>
+                      {code.label} {code.country}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             )}
