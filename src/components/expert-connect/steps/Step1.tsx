@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/select";
 import { Controller, useFormContext } from "react-hook-form";
 import { FormData } from "../ExpertForm";
-import { countryCodes } from "@/config/formFieldsData";
+import { countries, countryCodes } from "@/config/formFieldsData";
 
 export default function Step1() {
   const {
@@ -164,36 +164,7 @@ export default function Step1() {
                 <SelectValue placeholder="Select Country" />
               </SelectTrigger>
               <SelectContent className="max-h-64">
-                {[
-                  "Afghanistan",
-                  "Argentina",
-                  "Australia",
-                  "Bangladesh",
-                  "Brazil",
-                  "Canada",
-                  "China",
-                  "France",
-                  "Germany",
-                  "India",
-                  "Indonesia",
-                  "Italy",
-                  "Japan",
-                  "Mexico",
-                  "Nepal",
-                  "Netherlands",
-                  "New Zealand",
-                  "Pakistan",
-                  "Russia",
-                  "Saudi Arabia",
-                  "Singapore",
-                  "South Africa",
-                  "Sri Lanka",
-                  "United Arab Emirates",
-                  "United Kingdom",
-                  "United States",
-                  "Vietnam",
-                  "Other",
-                ].map((country) => (
+                {countries.map((country) => (
                   <SelectItem key={country} value={country}>
                     {country}
                   </SelectItem>
