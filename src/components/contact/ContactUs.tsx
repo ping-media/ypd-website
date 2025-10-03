@@ -101,6 +101,23 @@ const ContactUs = () => {
     </>
   );
 
+  const contacts = {
+    kolkata: {
+      phone: { display: "+91 8650126521", href: "tel:+918650126521" },
+      whatsapp: {
+        display: "+91 7300688536",
+        href: "https://wa.me/917300868536",
+      },
+    },
+    dubai: {
+      phone: { display: "+971 55 7470097", href: "tel:+971557470097" },
+      whatsapp: {
+        display: "+971 55 7470097",
+        href: "https://wa.me/971557470097",
+      },
+    },
+  };
+
   return (
     <section className="flex justify-center bg-white p-4 sm:px-10 lg:px-20">
       <div className="font-lato flex w-full max-w-[1440px] flex-col items-center justify-center gap-4 sm:gap-14">
@@ -168,11 +185,17 @@ const ContactUs = () => {
             </div>
 
             {/* Contact Info */}
+            {/* Contact Info */}
             <div className="flex w-fit flex-col gap-2 font-sans text-sm">
+              {/* Phone */}
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Phone className="text-brand-primary h-6 w-6" />
-                <a href="tel:+918650126521">+91 8650126521</a>
+                <a href={contacts[activeTab].phone.href}>
+                  {contacts[activeTab].phone.display}
+                </a>
               </p>
+
+              {/* WhatsApp */}
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Image
                   src="/icons/wa.svg"
@@ -181,13 +204,15 @@ const ContactUs = () => {
                   height={24}
                 />
                 <a
-                  href="https://wa.me/917300868536"
+                  href={contacts[activeTab].whatsapp.href}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  +91 7300688536
+                  {contacts[activeTab].whatsapp.display}
                 </a>
               </p>
+
+              {/* Email (same for both) */}
               <p className="flex cursor-pointer items-center gap-2 hover:opacity-60">
                 <Image
                   src="/icons/gmail.svg"

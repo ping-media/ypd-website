@@ -67,9 +67,26 @@ function OfficeAddress() {
     </>
   );
 
+  const contacts = {
+    kolkata: {
+      phone: { display: "+91 8650126521", href: "tel:+918650126521" },
+      whatsapp: {
+        display: "+91 7300868536",
+        href: "https://wa.me/917300868536",
+      },
+    },
+    dubai: {
+      phone: { display: "+971 55 7470097", href: "tel:+971557470097" },
+      whatsapp: {
+        display: "+971 55 7470097",
+        href: "https://wa.me/971557470097",
+      },
+    },
+  };
+
   return (
     <div>
-      {/* Small inline toggle */}
+      {/* Toggle Tabs */}
       <div className="mb-2 flex gap-3">
         <button
           className={`cursor-pointer text-sm font-medium whitespace-nowrap ${
@@ -98,6 +115,38 @@ function OfficeAddress() {
       <p className="text-sm leading-relaxed text-white">
         {activeTab === "kolkata" ? headOffice : dubaiOffice}
       </p>
+
+      {/* Contact Info (changes with tab) */}
+      <div className="mt-4 space-y-5 text-white">
+        <p className="flex items-center gap-2 text-sm hover:opacity-60">
+          <Image
+            className="invert"
+            src="/icons/phone.svg"
+            alt="Phone"
+            width={20}
+            height={20}
+          />
+          <a href={contacts[activeTab].phone.href}>
+            {contacts[activeTab].phone.display}
+          </a>
+        </p>
+        <p className="flex items-center gap-2 text-sm hover:opacity-60">
+          <Image src="/icons/wa.svg" alt="WhatsApp" width={20} height={20} />
+          <a
+            href={contacts[activeTab].whatsapp.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {contacts[activeTab].whatsapp.display}
+          </a>
+        </p>
+        <p className="flex items-center gap-2 text-sm hover:opacity-60">
+          <Image src="/icons/gmail.svg" alt="Email" width={20} height={20} />
+          <a href="mailto:support@youthpulsedigital.com">
+            support@youthpulsedigital.com
+          </a>
+        </p>
+      </div>
     </div>
   );
 }
@@ -120,8 +169,7 @@ export default function Footer() {
             GST: 19AACCY0548C1ZG
           </p> */}
           <OfficeAddress />
-
-          <div className="space-y-5 text-white">
+          {/* <div className="space-y-5 text-white">
             <p className="flex items-center gap-2 text-sm hover:opacity-60">
               <Image
                 className="invert"
@@ -158,7 +206,7 @@ export default function Footer() {
                 support@youthpulsedigital.com
               </a>
             </p>
-          </div>
+          </div> */}
           <SocialLinks />
         </div>
 
@@ -177,45 +225,6 @@ export default function Footer() {
               GST: 19AACCY0548C1ZG
             </p> */}
             <OfficeAddress />
-
-            <div className="space-y-5 text-white">
-              <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
-                <Image
-                  className="invert"
-                  src="/icons/phone.svg"
-                  alt="Phone"
-                  width={20}
-                  height={20}
-                />
-                <a href="tel:+918650126521">+91 8650126521</a>
-              </p>
-              <p className="flex cursor-pointer items-center gap-2 text-sm hover:opacity-60">
-                <Image
-                  src="/icons/wa.svg"
-                  alt="WhatsApp"
-                  width={20}
-                  height={20}
-                />
-                <a
-                  href="https://wa.me/917300868536"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  +91 7300868536
-                </a>
-              </p>
-              <p className="flex items-center gap-2 text-sm hover:opacity-60">
-                <Image
-                  src="/icons/gmail.svg"
-                  alt="Email"
-                  width={20}
-                  height={20}
-                />
-                <a href="mailto:support@youthpulsedigital.com">
-                  support@youthpulsedigital.com
-                </a>
-              </p>
-            </div>
             <SocialLinks />
           </div>
           <FooterSectionAccordion
