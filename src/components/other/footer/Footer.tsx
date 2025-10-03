@@ -269,7 +269,7 @@ export default function Footer() {
           <FooterSectionAccordion
             title="Corporate"
             links={[
-              { label: "Admission Test", href: "/admission" },
+              { label: "Admission System", href: "/admission" },
               { label: "Hiring & Onboarding", href: "/hiring" },
               { label: "School / Institute OS", href: "/school-os" },
               { label: "Institute Connect", href: "/institute-connect" },

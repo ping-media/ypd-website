@@ -5,6 +5,7 @@ import Modules from "@/components/module/Modules";
 import Faq from "@/components/other/Faq";
 import CvpSteps from "@/components/other/steps/CvpSteps";
 import { ArrowRight, Bell, Calendar, CreditCard, FileText } from "lucide-react";
+import GetStartedModalTrigger from "@/components/book-demo/GetStartedModalTrigger";
 
 const features = [
   {
@@ -155,8 +156,7 @@ const page = () => {
           "Private Institutes → Admission tests for professional/vocational programs.",
           "	Multi-Branch Groups → Centralized dashboards with branch-wise workflows.",
         ]}
-        buttonText="Request Demo"
-        buttonLink="/book-demo"
+        ctaComponent={<GetStartedModalTrigger label="Request Demo" />}
         secondaryButtonText="How it works"
         secondaryButtonLink="/admission#works"
         image="/careerverse/hero.png"
@@ -189,7 +189,7 @@ const page = () => {
         }
         subheading="Choose the YPD Admission System™ module that fits your institution — from application intake to online tests, interviews, and final admissions. Our team will guide you through setup and onboarding."
         ctaText="Request Demo"
-        ctaHref="/book-demo"
+        ctaHref="/admission#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
         external={false}
       />

@@ -71,7 +71,7 @@ const Links = [
   {
     name: "Corporate",
     dropdown: [
-      { name: "Admission Test", href: "/admission" },
+      { name: "Admission System", href: "/admission" },
       { name: "Hiring & Onboarding", href: "/hiring" },
       { name: "School / Institute OS", href: "/school-os" },
       { name: "Institute Connect", href: "/institute-connect" },
