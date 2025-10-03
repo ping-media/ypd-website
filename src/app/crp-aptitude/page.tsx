@@ -388,7 +388,7 @@ const page = () => {
         buttonLink="/crp-aptitude"
         secondaryButtonLink="/crp-aptitude/#works"
         secondaryButtonText="See How It Works"
-        image="/career-reboot/hero.png"
+        image="/crp-aptitude/hero.jpg"
         imageAlt="crp aptitude"
       />
       <CvpVideo

@@ -77,7 +77,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger />}
         secondaryButtonLink="/govt-connect#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/govt.jpg"
         imageAlt="government connect"
       />
 

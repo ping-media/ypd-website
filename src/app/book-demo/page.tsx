@@ -75,7 +75,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger label="Book Your Demo" />}
         secondaryButtonLink="/book-demo#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/demo.jpg"
         imageAlt="book a demo"
       />
 

@@ -89,7 +89,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger />}
         secondaryButtonLink="/institute-connect#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/institute.jpg"
         imageAlt="institute connect"
       />
 

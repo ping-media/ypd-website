@@ -86,7 +86,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger />}
         secondaryButtonLink="/msme-connect#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/msme.jpg"
         imageAlt="msme connect"
       />
       <CvpLiteSteps

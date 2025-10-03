@@ -159,7 +159,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger label="Request Demo" />}
         secondaryButtonText="How it works"
         secondaryButtonLink="/admission#works"
-        image="/careerverse/hero.png"
+        image="/admission.jpg"
         imageAlt="Digital admission platform illustration"
         external={false}
       />

@@ -169,7 +169,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger label="Book a Demo" />}
         secondaryButtonText="How it works"
         secondaryButtonLink="/hiring#works"
-        image="/careerverse/hero.png"
+        image="/connect/hiring.jpg"
         imageAlt="HR dashboard and candidate status timeline illustration"
         external={false}
       />
