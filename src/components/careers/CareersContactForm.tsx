@@ -28,9 +28,15 @@ const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2 MB
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
-  email: z.string().min(1, "Email is required").email("Enter a valid email"),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address"),
   countryCode: z.string().min(1, "Country code is required"),
-  phone: z.string().min(6, "Phone number is required"),
+  phone: z
+    .string()
+    .min(1, "Phone number is required")
+    .regex(/^\d{10}$/, "Must be 10 digits"),
   description: z.string().optional(),
   resume: z
     .any()
@@ -43,6 +49,7 @@ const formSchema = z.object({
 
 export default function CareersContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [file, setFile] = useState<File | null>(null);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -50,7 +57,7 @@ export default function CareersContactForm() {
     defaultValues: {
       name: "",
       email: "",
-      countryCode: "IND",
+      countryCode: "+91",
       phone: "",
       description: "",
       resume: null,
@@ -68,6 +75,7 @@ export default function CareersContactForm() {
       }
       setFile(uploadedFile);
       form.setValue("resume", uploadedFile, { shouldValidate: true });
+      form.clearErrors("resume");
     },
     [form],
   );
@@ -86,10 +94,35 @@ export default function CareersContactForm() {
     console.log(values);
     await new Promise((resolve) => setTimeout(resolve, 2000)); // simulate API
     setIsSubmitting(false);
+    setIsSubmitted(true);
     form.reset();
     setFile(null);
-    alert("Form submitted!");
+
+    // Reset back to form after 4 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 4000);
   };
+
+  // Show success message after submission
+  if (isSubmitted) {
+    return (
+      <div className="flex min-h-[600px] flex-col items-center justify-center space-y-4 text-center">
+        <div className="text-6xl">🙏</div>
+        <h3 className="text-brand-primary text-2xl font-semibold">
+          Thank You for Connecting with Youth Pulse Digital™
+        </h3>
+        <div className="text-5xl">✅</div>
+        <p className="text-lg font-medium text-green-600">
+          Your Request Has Been Received.
+        </p>
+        <p className="mx-auto max-w-md text-gray-600">
+          We&apos;ve received your application and our team will connect with
+          you within 48 hours.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <Form {...form}>
@@ -143,9 +176,12 @@ export default function CareersContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Select onValueChange={(val) => field.onChange(val)}>
-                    <SelectTrigger className="text-muted-foreground rounded-lg border border-gray-300 px-3">
-                      <SelectValue placeholder="IND +91">
+                  <Select
+                    value={field.value}
+                    onValueChange={(val) => field.onChange(val)}
+                  >
+                    <SelectTrigger className="text-muted-foreground h-12 w-28 rounded-lg border border-gray-300 px-3">
+                      <SelectValue placeholder="+91">
                         {field.value &&
                           countryCodes.find((c) => c.value === field.value)
                             ?.label}
@@ -174,9 +210,18 @@ export default function CareersContactForm() {
                 <FormControl>
                   <Input
                     type="tel"
-                    placeholder="12345 67890 *"
+                    placeholder="9876543210"
                     className="h-12 rounded-lg border border-gray-300"
+                    inputMode="numeric"
+                    maxLength={10}
                     {...field}
+                    onInput={(e) => {
+                      const target = e.target as HTMLInputElement;
+                      target.value = target.value
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+                      field.onChange(target.value);
+                    }}
                   />
                 </FormControl>
                 <FormMessage />
@@ -194,7 +239,7 @@ export default function CareersContactForm() {
               <FormControl>
                 <div
                   {...getRootProps()}
-                  className={`flex flex-col items-center justify-center rounded-lg border border-dashed border-gray-300 p-6 text-center transition ${
+                  className={`flex cursor-pointer flex-col items-center justify-center rounded-lg border border-dashed border-gray-300 p-6 text-center transition ${
                     isDragActive ? "border-green-600 bg-green-50" : ""
                   }`}
                 >
@@ -224,8 +269,9 @@ export default function CareersContactForm() {
                           e.stopPropagation();
                           setFile(null);
                           form.setValue("resume", null);
+                          form.clearErrors("resume");
                         }}
-                        className="text-red-500 hover:text-red-700"
+                        className="cursor-pointer text-red-500 hover:text-red-700"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>

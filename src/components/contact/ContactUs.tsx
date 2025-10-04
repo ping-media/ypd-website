@@ -36,6 +36,8 @@ const formSchema = z.object({
 });
 
 const ContactUs = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -64,12 +66,13 @@ const ContactUs = () => {
       const data = await res.json();
 
       if (data.success) {
-        alert(
-          "🙏 Thank You for Connecting with Youth Pulse Digital™ \n\n" +
-            "✅Your Request Has Been Received.\n\n" +
-            "We’ve received your application / demo request and our team will connect with you within 48 hours to confirm the next steps.",
-        );
+        setIsSubmitted(true);
         form.reset();
+
+        // Reset back to form after 4 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 4000);
       } else {
         alert("Failed to send message. Try again.");
       }
@@ -172,20 +175,8 @@ const ContactUs = () => {
               <p className="font-sans text-sm leading-relaxed">
                 {activeTab === "kolkata" ? headOffice : dubaiOffice}
               </p>
-
-              {/* <h4 className="font-poppins mb-2 text-lg font-semibold">
-                India Location
-              </h4>
-              <p className="font-sans text-sm leading-relaxed">
-                Youth Pulse Digital Pvt Ltd <br />
-                Astra Tower, ASO-501, Action Area-IIC, <br />
-                New Town, Kolkata-700161, West Bengal <br />
-                CIN: U62010WB2025PTC281468 <br />
-                GST: 19AACCY0548C1ZG
-              </p> */}
             </div>
 
-            {/* Contact Info */}
             {/* Contact Info */}
             <div className="flex w-fit flex-col gap-2 font-sans text-sm">
               {/* Phone */}
@@ -233,194 +224,212 @@ const ContactUs = () => {
 
           {/* Right Section - Form */}
           <div className="w-full lg:w-1/2">
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="font-lato flex flex-col gap-4"
-              >
-                <div className="flex gap-4">
-                  <FormField
-                    control={form.control}
-                    name="firstName"
-                    render={({ field }) => (
-                      <FormItem className="flex-1">
-                        <FormControl>
-                          <Input
-                            placeholder="First Name*"
-                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="lastName"
-                    render={({ field }) => (
-                      <FormItem className="flex-1">
-                        <FormControl>
-                          <Input
-                            placeholder="Last Name*"
-                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="Email*"
-                          className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="phone"
-                  render={() => (
-                    <div>
-                      <div className="flex gap-2">
-                        {/* Country Code Select */}
-                        <Controller
-                          name="countryCode"
-                          control={form.control}
-                          render={({ field }) => (
-                            <Select
-                              value={field.value}
-                              onValueChange={field.onChange}
-                            >
-                              <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-28 cursor-pointer rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
-                                <SelectValue placeholder="+91">
-                                  {field.value &&
-                                    countryCodes.find(
-                                      (c) => c.value === field.value,
-                                    )?.label}
-                                </SelectValue>
-                              </SelectTrigger>
-                              <SelectContent>
-                                {countryCodes.map((code) => (
-                                  <SelectItem
-                                    key={code.value}
-                                    value={code.value}
-                                  >
-                                    {code.label} {code.country}
-                                  </SelectItem>
-                                ))}
-                              </SelectContent>
-                            </Select>
-                          )}
-                        />
-
-                        {/* Phone Input */}
-                        <FormControl>
-                          <Input
-                            type="tel"
-                            {...form.register("phone")}
-                            placeholder="9876543210"
-                            className="focus:ring-brand-accent/40 focus:border-brand-accent h-12 flex-1 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                            inputMode="numeric"
-                            maxLength={10}
-                            onInput={(e) => {
-                              const target = e.target as HTMLInputElement;
-                              target.value = target.value
-                                .replace(/\D/g, "")
-                                .slice(0, 10);
-                            }}
-                          />
-                        </FormControl>
-                      </div>
-
-                      <FormMessage />
-                    </div>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="subject"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          placeholder="Subject*"
-                          className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Questions or Message*"
-                          className="focus:border-brand-accent focus:ring-brand-accent/40 min-h-[150px] rounded-md border border-gray-300 bg-gray-100 py-3 focus:ring-2 sm:px-4"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                {/* Checkbox */}
-                <FormField
-                  control={form.control}
-                  name="newsletter"
-                  render={({ field }) => (
-                    <FormItem>
-                      <div className="flex items-center gap-2">
-                        <FormControl>
-                          <input
-                            type="checkbox"
-                            id="newsletter"
-                            className="accent-brand-primary h-4 w-4 rounded border-gray-300"
-                            checked={field.value}
-                            onChange={field.onChange}
-                          />
-                        </FormControl>
-                        <label
-                          htmlFor="newsletter"
-                          className="text-brand-gray text-sm"
-                        >
-                          Sign up for news and updates
-                        </label>
-                      </div>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="btn-size btn-primary shadow-sm"
+            {isSubmitted ? (
+              <div className="flex min-h-[600px] flex-col items-center justify-center space-y-4 text-center">
+                <div className="text-6xl">🙏</div>
+                <h3 className="text-brand-primary text-2xl font-semibold">
+                  Thank You for Connecting with Youth Pulse Digital™
+                </h3>
+                <div className="text-5xl">✅</div>
+                <p className="text-lg font-medium text-green-600">
+                  Your Request Has Been Received.
+                </p>
+                <p className="mx-auto max-w-md text-gray-600">
+                  We&apos;ve received your application / demo request and our
+                  team will connect with you within 48 hours to confirm the next
+                  steps.
+                </p>
+              </div>
+            ) : (
+              <Form {...form}>
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="font-lato flex flex-col gap-4"
                 >
-                  Send
-                </button>
-              </form>
-            </Form>
+                  <div className="flex gap-4">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem className="flex-1">
+                          <FormControl>
+                            <Input
+                              placeholder="First Name*"
+                              className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem className="flex-1">
+                          <FormControl>
+                            <Input
+                              placeholder="Last Name*"
+                              className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            placeholder="Email*"
+                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={() => (
+                      <div>
+                        <div className="flex gap-2">
+                          {/* Country Code Select */}
+                          <Controller
+                            name="countryCode"
+                            control={form.control}
+                            render={({ field }) => (
+                              <Select
+                                value={field.value}
+                                onValueChange={field.onChange}
+                              >
+                                <SelectTrigger className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 w-28 cursor-pointer rounded-md border border-gray-300 bg-gray-100 px-2 focus:ring-2">
+                                  <SelectValue placeholder="+91">
+                                    {field.value &&
+                                      countryCodes.find(
+                                        (c) => c.value === field.value,
+                                      )?.label}
+                                  </SelectValue>
+                                </SelectTrigger>
+                                <SelectContent>
+                                  {countryCodes.map((code) => (
+                                    <SelectItem
+                                      key={code.value}
+                                      value={code.value}
+                                    >
+                                      {code.label} {code.country}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
+                            )}
+                          />
+
+                          {/* Phone Input */}
+                          <FormControl>
+                            <Input
+                              type="tel"
+                              {...form.register("phone")}
+                              placeholder="9876543210"
+                              className="focus:ring-brand-accent/40 focus:border-brand-accent h-12 flex-1 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                              inputMode="numeric"
+                              maxLength={10}
+                              onInput={(e) => {
+                                const target = e.target as HTMLInputElement;
+                                target.value = target.value
+                                  .replace(/\D/g, "")
+                                  .slice(0, 10);
+                              }}
+                            />
+                          </FormControl>
+                        </div>
+
+                        <FormMessage />
+                      </div>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder="Subject*"
+                            className="focus:border-brand-accent focus:ring-brand-accent/40 h-12 rounded-md border border-gray-300 bg-gray-100 focus:ring-2 sm:px-4"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Questions or Message*"
+                            className="focus:border-brand-accent focus:ring-brand-accent/40 min-h-[150px] rounded-md border border-gray-300 bg-gray-100 py-3 focus:ring-2 sm:px-4"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Checkbox */}
+                  <FormField
+                    control={form.control}
+                    name="newsletter"
+                    render={({ field }) => (
+                      <FormItem>
+                        <div className="flex items-center gap-2">
+                          <FormControl>
+                            <input
+                              type="checkbox"
+                              id="newsletter"
+                              className="accent-brand-primary h-4 w-4 rounded border-gray-300"
+                              checked={field.value}
+                              onChange={field.onChange}
+                            />
+                          </FormControl>
+                          <label
+                            htmlFor="newsletter"
+                            className="text-brand-gray text-sm"
+                          >
+                            Sign up for news and updates
+                          </label>
+                        </div>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="btn-size btn-primary cursor-pointer shadow-sm"
+                  >
+                    Send
+                  </button>
+                </form>
+              </Form>
+            )}
           </div>
         </div>
       </div>

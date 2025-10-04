@@ -168,7 +168,7 @@ const page = () => {
         buttonLink="/career-mirror?pro"
         secondaryButtonText="Book Premium 60 mins"
         secondaryButtonLink="/career-mirror?premium"
-        image="/global-navigator/hero.png"
+        image="/career-mirror/hero.jpg"
         secondaryExternal={true}
       />
       <CvpFeature
