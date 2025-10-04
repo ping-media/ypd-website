@@ -770,4 +770,42 @@ export const pricingData: Record<string, ProductPricing> = {
   //     ],
   //   },
   // },
+  
+  // ---------------- Career Mirror™ ----------------
+  "Career Mirror™": {
+    billingTypes: ["one-time"],
+    plans: {
+      "one-time": [
+        {
+          title: "Pro",
+          description: "Quick clarity on one career role",
+          price: {
+            INR: "₹1,499",
+            AED: "—", // need AED pricing
+          },
+          features: [
+            "30 mins session",
+            "Role check with focused clarity",
+            "5 personalized actions",
+            "24-hour report delivery",
+          ],
+        },
+        {
+          title: "Premium",
+          description: "Deeper guidance or multiple queries",
+          price: {
+            INR: "₹2,499",
+            AED: "—", // need AED pricing 
+          },
+          features: [
+            "60 mins session",
+            "Role insights and skill mapping",
+            "Pathways with 7–10 personalized actions",
+            "24-hour report delivery",
+          ],
+          highlight: true,
+        },
+      ],
+    },
+  },
 };

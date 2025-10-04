@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const PIN = process.env.NEXT_PUBLIC_PIN ?? "12345"; // PIN can be stored in .env.local
+const PIN = process.env.NEXT_PUBLIC_PIN ?? "12345";
 const STORAGE_KEY = "pin-unlocked-v1";
 
 export default function PinGate({ children }: { children: React.ReactNode }) {
@@ -10,14 +10,16 @@ export default function PinGate({ children }: { children: React.ReactNode }) {
   const [pin, setPin] = useState("");
 
   useEffect(() => {
-    const unlocked = sessionStorage.getItem(STORAGE_KEY);
-    if (unlocked === "true") setAuthenticated(true);
+    const unlocked = localStorage.getItem(STORAGE_KEY);
+    if (unlocked === "true") {
+      setAuthenticated(true);
+    }
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (pin === PIN) {
-      sessionStorage.setItem(STORAGE_KEY, "true");
+      localStorage.setItem(STORAGE_KEY, "true");
       setAuthenticated(true);
     } else {
       alert("Wrong PIN");

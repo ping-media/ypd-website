@@ -19,6 +19,7 @@ interface CvpHeroProps {
   featuresTwoCols?: boolean;
   ctaComponent?: ReactNode; // new prop
   external?: boolean;
+  secondaryExternal?: boolean;
 }
 
 export default function CvpHero({
@@ -36,9 +37,14 @@ export default function CvpHero({
   featuresTwoCols = false,
   ctaComponent,
   external,
+  secondaryExternal,
 }: CvpHeroProps) {
   // Determine full href based on external flag
   const fullHref = external === false ? buttonLink : `${BASE_URL}${buttonLink}`;
+  const secondaryFullHref =
+    secondaryExternal === true
+      ? `${BASE_URL}${secondaryButtonLink}`
+      : secondaryButtonLink;
   return (
     <div
       id="form"
@@ -100,7 +106,7 @@ export default function CvpHero({
 
             {secondaryButtonText && (
               <Link
-                href={secondaryButtonLink}
+                href={secondaryFullHref}
                 className="btn-size btn-transparent shadow"
               >
                 <BriefcaseBusiness className="h-5 w-5" />
