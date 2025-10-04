@@ -7,11 +7,12 @@ interface CvpSeperateProps {
   bgImage: string;
   heading: React.ReactNode; // allow JSX or plain text
   subheading?: React.ReactNode; // optional
-  ctaText: string;
-  ctaHref: string;
+  ctaText?: string;
+  ctaHref?: string;
   ctaIcon?: React.ReactNode;
   subtext?: string;
   external?: boolean; // new prop
+  ctaButton?: React.ReactNode;
 }
 
 const CvpSeperate = ({
@@ -23,6 +24,7 @@ const CvpSeperate = ({
   ctaIcon,
   subtext,
   external,
+  ctaButton,
 }: CvpSeperateProps) => {
   // Determine full href based on external flag
   const fullHref = external === false ? ctaHref : `${BASE_URL}${ctaHref}`;
@@ -57,13 +59,17 @@ const CvpSeperate = ({
 
         {/* Button */}
         <div className="font-lato w-full sm:w-auto">
-          <Link
-            href={fullHref}
-            className="btn-size w-full bg-white text-center font-medium shadow hover:bg-gray-200"
-          >
-            {ctaText}
-            {ctaIcon}
-          </Link>
+          {ctaButton ? (
+            ctaButton
+          ) : (
+            <Link
+              href={fullHref || "#"}
+              className="btn-size w-full bg-white text-center font-medium shadow hover:bg-gray-200"
+            >
+              {ctaText}
+              {ctaIcon}
+            </Link>
+          )}
           {subtext && (
             <p className="text-s m mt-4 text-white sm:text-base">{subtext}</p>
           )}

@@ -6,6 +6,7 @@ import Faq from "@/components/other/Faq";
 import CvpSteps from "@/components/other/steps/CvpSteps";
 import { ArrowRight, Bell, Calendar, CreditCard, FileText } from "lucide-react";
 import GetStartedModalTrigger from "@/components/book-demo/GetStartedModalTrigger";
+import GetStartedButton from "@/components/book-demo/GetStartedModalTrigger";
 
 const features = [
   {
@@ -188,10 +189,14 @@ const page = () => {
           </>
         }
         subheading="Choose the YPD Admission System™ module that fits your institution — from application intake to online tests, interviews, and final admissions. Our team will guide you through setup and onboarding."
-        ctaText="Request Demo"
-        ctaHref="/admission#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
         external={false}
+        ctaButton={
+          <GetStartedButton
+            label="Simplify Your Admissions"
+            className="btn-size flex w-full cursor-pointer items-center justify-center gap-2 bg-white text-center font-medium shadow hover:bg-gray-200"
+          />
+        }
       />
       <Faq faqs={admissionFaqs} />
     </>

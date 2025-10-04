@@ -1,3 +1,4 @@
+import GetStartedButton from "@/components/book-demo/GetStartedModalTrigger";
 import GetStartedModalTrigger from "@/components/book-demo/GetStartedModalTrigger";
 import CvpFeature from "@/components/cvp/CvpFeature";
 import CvpHero from "@/components/cvp/CvpHero";
@@ -166,8 +167,8 @@ const page = () => {
           "Multi-Campus / Multi-Site Groups → Central oversight with site-wise execution.",
           "Same reliable flow across roles → Admin Head, Coordinator, Principal (or Owner/HR for MSMEs), Candidate.",
         ]}
-        ctaComponent={<GetStartedModalTrigger label="Book a Demo" />}
-        secondaryButtonText="How it works"
+        ctaComponent={<GetStartedModalTrigger label="Book A Demo" />}
+        secondaryButtonText="How It Works"
         secondaryButtonLink="/hiring#works"
         image="/connect/hiring.jpg"
         imageAlt="HR dashboard and candidate status timeline illustration"
@@ -201,10 +202,14 @@ const page = () => {
           </>
         }
         subheading="Whether you're a school, institute, or a small business — bring predictability to hiring and pre-join training with one simple system. Our team will help you set it up step by step."
-        ctaText="Book a Demo"
-        ctaHref="/hiring#form"
         ctaIcon={<ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />}
         external={false}
+        ctaButton={
+          <GetStartedButton
+            label="Book A Demo"
+            className="btn-size flex w-full cursor-pointer items-center justify-center gap-2 bg-white text-center font-medium shadow hover:bg-gray-200"
+          />
+        }
       />
       <Faq faqs={hiringFaqs} />
     </>
