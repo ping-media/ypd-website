@@ -65,13 +65,16 @@ export default function Step3() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`subject-${subj}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{subj}</span>
+              <label htmlFor={`subject-${subj}`} className="cursor-pointer">
+                {subj}
+              </label>
             </div>
           ))}
         </div>
@@ -90,7 +93,7 @@ export default function Step3() {
           control={control}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Industry" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
@@ -142,13 +145,16 @@ export default function Step3() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`skills.${skill}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{skill}</span>
+              <label htmlFor={`skills.${skill}`} className="cursor-pointer">
+                {skill}
+              </label>
             </div>
           ))}
         </div>
@@ -170,13 +176,16 @@ export default function Step3() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`grades.${grade}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{grade}</span>
+              <label htmlFor={`grades.${grade}`} className="cursor-pointer">
+                {grade}
+              </label>
             </div>
           ))}
         </div>

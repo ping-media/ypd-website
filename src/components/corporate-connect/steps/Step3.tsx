@@ -1,6 +1,5 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -32,7 +31,7 @@ export default function Step3() {
           rules={{ required: "Annual CSR budget is required" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Budget Range" />
               </SelectTrigger>
               <SelectContent>
@@ -74,16 +73,22 @@ export default function Step3() {
           {csrFocusOptions.map((focus) => (
             <Controller
               key={focus}
-              name={`csrFocusAreas.${focus}`}
+              name={`csrFocusAreas.${focus}` as const}
               control={control}
               render={({ field }) => (
                 <div className="flex items-center space-x-2">
                   <Checkbox
+                    id={`csrFocusAreas.${focus}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                  <span>{focus}</span>
+                  <label
+                    htmlFor={`csrFocusAreas.${focus}`}
+                    className="cursor-pointer"
+                  >
+                    {focus}
+                  </label>
                 </div>
               )}
             />
@@ -107,7 +112,7 @@ export default function Step3() {
           rules={{ required: "Number of beneficiaries is required" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Range" />
               </SelectTrigger>
               <SelectContent>

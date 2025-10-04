@@ -48,16 +48,22 @@ export default function Step3() {
           {streamOptions.map((stream) => (
             <Controller
               key={stream}
-              name={`streams.${stream}`}
+              name={`streams.${stream}` as const}
               control={control}
               render={({ field }) => (
                 <div className="flex items-center space-x-2">
                   <Checkbox
+                    id={`streams.${stream}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                  <span>{stream}</span>
+                  <label
+                    htmlFor={`streams.${stream}`}
+                    className="cursor-pointer"
+                  >
+                    {stream}
+                  </label>
                 </div>
               )}
             />

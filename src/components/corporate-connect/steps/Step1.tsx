@@ -43,7 +43,7 @@ export default function Step1() {
           rules={{ required: "Industry sector is required" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Industry Sector" />
               </SelectTrigger>
               <SelectContent>
@@ -85,7 +85,7 @@ export default function Step1() {
           rules={{ required: "Establishment year is required" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Year" />
               </SelectTrigger>
               <SelectContent>

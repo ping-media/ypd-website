@@ -55,16 +55,22 @@ export default function Step3() {
           {beneficiaries.map((b) => (
             <Controller
               key={b}
-              name={`targetGroups.${b}`}
+              name={`targetGroups.${b}` as const}
               control={control}
               render={({ field }) => (
                 <div className="flex items-center gap-2">
                   <Checkbox
+                    id={`targetGroups.${b}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                  <span>{b}</span>
+                  <label
+                    htmlFor={`targetGroups.${b}`}
+                    className="cursor-pointer"
+                  >
+                    {b}
+                  </label>
                 </div>
               )}
             />
@@ -114,16 +120,22 @@ export default function Step3() {
           {challenges.map((challenge) => (
             <Controller
               key={challenge}
-              name={`keyChallenges.${challenge}`}
+              name={`keyChallenges.${challenge}` as const}
               control={control}
               render={({ field }) => (
                 <div className="flex items-center gap-2">
                   <Checkbox
+                    id={`keyChallenges.${challenge}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                  <span>{challenge}</span>
+                  <label
+                    htmlFor={`keyChallenges.${challenge}`}
+                    className="cursor-pointer"
+                  >
+                    {challenge}
+                  </label>
                 </div>
               )}
             />

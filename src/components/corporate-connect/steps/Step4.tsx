@@ -32,8 +32,8 @@ export default function Step4() {
           {...register("reasonToJoin", {
             required: "This field is required",
             minLength: {
-              value: 50,
-              message: "Please provide at least 50 characters",
+              value: 30,
+              message: "Please provide at least 30 characters",
             },
           })}
           placeholder="Describe your organization's interest in partnering with YPD for CSR initiatives..."
@@ -54,17 +54,23 @@ export default function Step4() {
           {programOptions.map((program) => (
             <div key={program} className="flex items-start gap-2">
               <Controller
-                name={`programsToSupport.${program}`}
+                name={`programsToSupport.${program}` as const}
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`programsToSupport.${program}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 mt-1 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer text-sm">{program}</span>
+              <label
+                htmlFor={`programsToSupport.${program}`}
+                className="cursor-pointer text-sm"
+              >
+                {program}
+              </label>
             </div>
           ))}
         </div>
@@ -84,7 +90,7 @@ export default function Step4() {
           rules={{ required: "Please select target beneficiaries" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Target Group" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
@@ -120,7 +126,7 @@ export default function Step4() {
           rules={{ required: "Please select a delivery model" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Delivery Model" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">

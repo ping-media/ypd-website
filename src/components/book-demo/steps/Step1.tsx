@@ -47,7 +47,7 @@ export default function Step1() {
           rules={{ required: "Organization type is required" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Type" />
               </SelectTrigger>
               <SelectContent>

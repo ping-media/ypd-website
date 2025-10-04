@@ -31,8 +31,8 @@ export default function Step5() {
           rules={{ required: "Please select an option" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
@@ -60,8 +60,8 @@ export default function Step5() {
           rules={{ required: "Please select an option" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>

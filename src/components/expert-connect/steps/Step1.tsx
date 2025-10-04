@@ -44,7 +44,7 @@ export default function Step1() {
           rules={{ required: "Please select gender" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Gender" />
               </SelectTrigger>
               <SelectContent>
@@ -160,7 +160,7 @@ export default function Step1() {
           rules={{ required: "Please select nationality" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Country" />
               </SelectTrigger>
               <SelectContent className="max-h-64">

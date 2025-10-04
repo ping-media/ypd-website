@@ -65,16 +65,22 @@ export default function Step4() {
           {outcomes.map((area) => (
             <Controller
               key={area}
-              name={`importantOutcomes.${area}`}
+              name={`importantOutcomes.${area}` as const}
               control={control}
               render={({ field }) => (
                 <div className="flex items-center gap-2">
                   <Checkbox
+                    id={`importantOutcomes.${area}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
-                  <span>{area}</span>
+                  <label
+                    htmlFor={`importantOutcomes.${area}`}
+                    className="cursor-pointer"
+                  >
+                    {area}
+                  </label>
                 </div>
               )}
             />
@@ -97,7 +103,7 @@ export default function Step4() {
           rules={{ required: "Please select a collaboration model" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Pilot / State-wide rollout / Scheme-aligned / Other" />
               </SelectTrigger>
               <SelectContent>
@@ -144,7 +150,7 @@ export default function Step4() {
           rules={{ required: "Please select expected start timeline" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Immediate / 3 months / 6 months" />
               </SelectTrigger>
               <SelectContent>

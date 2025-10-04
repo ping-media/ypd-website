@@ -91,13 +91,19 @@ export default function Step2() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`keySectors.${sector}`}
                     checked={field.value || false}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300"
                   />
                 )}
               />
-              <span className="cursor-pointer">{sector}</span>
+              <label
+                htmlFor={`keySectors.${sector}`}
+                className="cursor-pointer"
+              >
+                {sector}
+              </label>
             </div>
           ))}
         </div>

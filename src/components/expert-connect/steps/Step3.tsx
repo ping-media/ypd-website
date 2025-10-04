@@ -52,13 +52,19 @@ export default function Step3() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`expertiseAreas.${area}`}
                     checked={field.value || false}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300"
                   />
                 )}
               />
-              <span className="cursor-pointer">{area}</span>
+              <label
+                htmlFor={`expertiseAreas.${area}`}
+                className="cursor-pointer"
+              >
+                {area}
+              </label>
             </div>
           ))}
         </div>
@@ -95,13 +101,19 @@ export default function Step3() {
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`gradesComfortable.${grade}`}
                     checked={field.value || false}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300"
                   />
                 )}
               />
-              <span className="cursor-pointer">{grade}</span>
+              <label
+                htmlFor={`gradesComfortable.${grade}`}
+                className="cursor-pointer"
+              >
+                {grade}
+              </label>
             </div>
           ))}
         </div>
@@ -121,7 +133,7 @@ export default function Step3() {
           rules={{ required: "This field is required" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Webinar / Panel Discussion / Guest Lecture" />
               </SelectTrigger>
               <SelectContent>

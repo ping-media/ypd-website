@@ -48,18 +48,24 @@ export default function Step3() {
           {solutions.map((solution) => (
             <div key={solution} className="flex items-center gap-2">
               <Controller
-                name={`interestedSolutions.${solution}`}
+                name={`interestedSolutions.${solution}` as const}
                 control={control}
                 defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
+                    id={`interestedSolutions.${solution}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{solution}</span>
+              <label
+                htmlFor={`interestedSolutions.${solution}`}
+                className="cursor-pointer"
+              >
+                {solution}
+              </label>
             </div>
           ))}
         </div>
@@ -76,7 +82,7 @@ export default function Step3() {
           render={({ field }) => (
             <>
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="mt-2 cursor-pointer">
+                <SelectTrigger className="mt-2 w-full cursor-pointer">
                   <SelectValue placeholder="Select Mode" />
                 </SelectTrigger>
                 <SelectContent>
@@ -100,18 +106,24 @@ export default function Step3() {
           {timeSlots.map((slot) => (
             <div key={slot} className="flex items-center gap-2">
               <Controller
-                name={`preferredTimeSlots.${slot}`}
+                name={`preferredTimeSlots.${slot}` as const}
                 control={control}
                 defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
+                    id={`preferredTimeSlots.${slot}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{slot}</span>
+              <label
+                htmlFor={`preferredTimeSlots.${slot}`}
+                className="cursor-pointer"
+              >
+                {slot}
+              </label>
             </div>
           ))}
         </div>
@@ -124,18 +136,24 @@ export default function Step3() {
           {participantsOptions.map((option) => (
             <div key={option} className="flex items-center gap-2">
               <Controller
-                name={`expectedParticipants.${option}`}
+                name={`expectedParticipants.${option}` as const}
                 control={control}
                 defaultValue={false}
                 render={({ field }) => (
                   <Checkbox
+                    id={`expectedParticipants.${option}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{option}</span>
+              <label
+                htmlFor={`expectedParticipants.${option}`}
+                className="cursor-pointer"
+              >
+                {option}
+              </label>
             </div>
           ))}
         </div>

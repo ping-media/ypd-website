@@ -47,7 +47,7 @@ export default function Step4() {
           rules={{ required: "Please select hours per month" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="2 / 3 / 4+" />
               </SelectTrigger>
               <SelectContent>
@@ -77,7 +77,7 @@ export default function Step4() {
           rules={{ required: "Please select an option" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>
@@ -109,7 +109,7 @@ export default function Step4() {
           rules={{ required: "Please select an option" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent>

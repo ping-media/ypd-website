@@ -84,8 +84,8 @@ export default function Step4() {
           rules={{ required: "Please select an option" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
-                <SelectValue placeholder="Yes/No" />
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
+                <SelectValue placeholder="Yes / No" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
                 <SelectItem value="Yes">Yes</SelectItem>
@@ -113,7 +113,7 @@ export default function Step4() {
           rules={{ required: "Please select weekly commitment" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Select Hours" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
@@ -147,7 +147,7 @@ export default function Step4() {
           rules={{ required: "Please select preferred mode" }}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Remote / Hybrid / In-Person" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">

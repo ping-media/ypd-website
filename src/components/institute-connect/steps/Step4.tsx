@@ -53,17 +53,20 @@ export default function Step4() {
           {focusAreas.map((area) => (
             <div key={area} className="flex items-center gap-2">
               <Controller
-                name={`focusAreas.${area}`}
+                name={`focusAreas.${area}` as const}
                 control={control}
                 render={({ field }) => (
                   <Checkbox
+                    id={`focusAreas.${area}`}
                     checked={field.value}
                     onCheckedChange={field.onChange}
                     className="data-[state=checked]:bg-brand-primary data-[state=checked]:border-brand-primary hover:data-[state=checked]:bg-brand-primary/90 cursor-pointer border border-gray-300 data-[state=checked]:text-white"
                   />
                 )}
               />
-              <span className="cursor-pointer">{area}</span>
+              <label htmlFor={`focusAreas.${area}`} className="cursor-pointer">
+                {area}
+              </label>
             </div>
           ))}
         </div>
@@ -83,7 +86,7 @@ export default function Step4() {
           rules={{ required: "Please select a start timeline" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Immediate / 3 months / 6 months / Other" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
@@ -129,7 +132,7 @@ export default function Step4() {
           rules={{ required: "Please select a budget readiness" }}
           render={({ field }) => (
             <Select onValueChange={field.onChange} value={field.value}>
-              <SelectTrigger className="mt-2 cursor-pointer">
+              <SelectTrigger className="mt-2 w-full cursor-pointer">
                 <SelectValue placeholder="Low / Medium / High" />
               </SelectTrigger>
               <SelectContent className="cursor-pointer">
