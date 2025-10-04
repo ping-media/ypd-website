@@ -92,7 +92,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger />}
         secondaryButtonLink="/expert-connect#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/expert.jpg"
         imageAlt="expert connect"
       />
 

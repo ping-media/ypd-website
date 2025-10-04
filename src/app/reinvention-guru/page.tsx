@@ -406,7 +406,7 @@ const page = () => {
         buttonLink="/reinvention-guru"
         secondaryButtonLink="/reinvention-guru/#works"
         secondaryButtonText="See How It Works"
-        image="/career-reboot/hero.png"
+        image="/reinvention-guru/hero.jpg"
         imageAlt="reinvention guru"
       />
       <CvpVideo

@@ -87,7 +87,7 @@ const page = () => {
         ctaComponent={<GetStartedModalTrigger />}
         secondaryButtonLink="/mentor-connect#works"
         secondaryButtonText="How It Works"
-        image="/global-navigator/hero.png"
+        image="/connect/mentor.jpg"
         imageAlt="mentor connect"
       />
       <CvpLiteSteps
