@@ -235,7 +235,6 @@ export default function Footer() {
               { label: "Pricing", href: "/pricing" },
               { label: "Careers", href: "/careers" },
               { label: "Contact Us", href: "/contact" },
-              { label: "Mentor Connect", href: "/mentor-connect" },
               { label: "Privacy Policy", href: "/privacy-policy" },
               { label: "Terms of Use", href: "/terms" },
               {
@@ -253,6 +252,7 @@ export default function Footer() {
               { label: "CareerVerse™", href: "/careerverse" },
               { label: "Counseling Guru™", href: "/counseling-guru" },
               { label: "Global Navigator™", href: "/global-navigator" },
+              { label: "Career Mirror™", href: "/career-mirror" },
               // { label: "Exam Mentors", href: "/exam-mentors" },
               // { label: "Entrance Mentors", href: "/entrance-mentors" },
               // { label: "Creativity Lab", href: "/coming-soon" },
@@ -271,6 +271,7 @@ export default function Footer() {
               { label: "Reinvention Guru™", href: "/reinvention-guru" },
               // { label: "Innovation Hub", href: "/innovation-hub" },
               // { label: "Pulse Nexus", href: "/pulse-nexus" },
+              { label: "Mentor Connect", href: "/mentor-connect" },
               { label: "Expert Connect", href: "/expert-connect" },
               { label: "Book A Demo", href: "/book-demo" },
             ]}

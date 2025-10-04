@@ -47,7 +47,7 @@ const Links = [
           { name: "SpecialStars™", href: "/coming-soon" },
         ],
       },
-      { name: "Mentor Connect", href: "/mentor-connect" },
+      { name: "Career Mirror™", href: "/career-mirror" },
     ],
   },
   {
@@ -65,6 +65,7 @@ const Links = [
           { name: "Reinvention Guru™", href: "/reinvention-guru" },
         ],
       },
+      { name: "Mentor Connect", href: "/mentor-connect" },
       { name: "Expert Connect", href: "/expert-connect" },
     ],
   },
