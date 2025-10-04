@@ -45,6 +45,9 @@ interface DemoBookModalProps {
 
 export default function DemoBookForm({ isOpen, onClose }: DemoBookModalProps) {
   const [step, setStep] = useState(1);
+
+  const [isLoading, setIsLoading] = useState(false);
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const totalSteps = 3;
 
@@ -160,14 +163,38 @@ export default function DemoBookForm({ isOpen, onClose }: DemoBookModalProps) {
     setStep((prev) => Math.max(prev - 1, 1));
   };
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = async (data: FormData) => {
     if (!data.declaration) {
       alert("⚠️ Please accept the declaration before submitting.");
       return;
     }
+
     console.log("✅ Demo Book Form Data:", data);
-    reset();
-    setIsSubmitted(true);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/demo-booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        reset();
+        setIsSubmitted(true);
+      } else {
+        alert("❌ Failed to submit demo request. Please try again.");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ An error occurred. Please try again later.");
+      setIsLoading(false);
+    }
   };
 
   const renderCurrentStep = () => {
@@ -244,8 +271,9 @@ export default function DemoBookForm({ isOpen, onClose }: DemoBookModalProps) {
                   <Button
                     className="bg-brand-primary border-brand-accent hover:bg-brand-primary/90"
                     type="submit"
+                    disabled={isLoading}
                   >
-                    Submit Demo Request
+                    {isLoading ? "Submitting..." : "Submit Demo Request"}
                   </Button>
                 )}
               </DialogFooter>

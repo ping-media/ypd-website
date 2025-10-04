@@ -92,16 +92,46 @@ export default function CareersContactForm() {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
     console.log(values);
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // simulate API
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    form.reset();
-    setFile(null);
 
-    // Reset back to form after 4 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-    }, 4000);
+    try {
+      // Create FormData to handle file upload
+      const formData = new FormData();
+      formData.append("name", values.name);
+      formData.append("email", values.email);
+      formData.append("countryCode", values.countryCode);
+      formData.append("phone", values.phone);
+      if (values.description) {
+        formData.append("description", values.description);
+      }
+      if (values.resume) {
+        formData.append("resume", values.resume);
+      }
+
+      const response = await fetch("/api/careers-contact", {
+        method: "POST",
+        body: formData, // Note: Don't set Content-Type header, let browser set it with boundary
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        form.reset();
+        setFile(null);
+
+        // Reset back to form after 4 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 4000);
+      } else {
+        alert("❌ Failed to submit application. Please try again.");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ An error occurred. Please try again later.");
+      setIsSubmitting(false);
+    }
   };
 
   // Show success message after submission
@@ -306,7 +336,7 @@ export default function CareersContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="btn-size btn-primary"
+          className="btn-size btn-primary cursor-pointer"
         >
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>
