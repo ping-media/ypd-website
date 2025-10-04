@@ -75,7 +75,6 @@ const RelatedBlogs = () => {
 
         {/* View All Button */}
         <Link
-          target="_blank"
           href="https://blog.ypd-dev.site/"
           className="btn-primary btn-size"
         >

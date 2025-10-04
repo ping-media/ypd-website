@@ -239,7 +239,7 @@ export default function Footer() {
               { label: "Terms of Use", href: "/terms" },
               {
                 label: "Subscribe to Newsletters ",
-                href: "/https://blog.ypd-dev.site",
+                href: "https://blog.ypd-dev.site",
               },
             ]}
           />

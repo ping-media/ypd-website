@@ -36,14 +36,14 @@ const partnersData = [
     image: "/partners4.png",
     title: "Corporate Connect",
     buttonText: "Join Now",
-    href: "/coming-soon",
+    href: "/corporate-connect",
   },
-  {
-    image: "/partners5.png",
-    title: "Parent Connect",
-    buttonText: "Join Now",
-    href: "/coming-soon",
-  },
+  // {
+  //   image: "/partners5.png",
+  //   title: "Parent Connect",
+  //   buttonText: "Join Now",
+  //   href: "/coming-soon",
+  // },
 ];
 
 const Partners = () => {
